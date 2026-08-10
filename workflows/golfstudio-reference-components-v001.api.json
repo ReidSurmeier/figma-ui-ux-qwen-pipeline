@@ -1,0 +1,215 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "golfstudio-approved-baseline.png"
+    }
+  },
+  "10": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 25,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 91,
+      "x": 199,
+      "y": 44
+    }
+  },
+  "11": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/scale-to-fit",
+      "images": [
+        "10",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 123,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 155,
+      "x": 4,
+      "y": 253
+    }
+  },
+  "13": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/club-library",
+      "images": [
+        "12",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 123,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 307,
+      "x": 163,
+      "y": 253
+    }
+  },
+  "15": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/swing-graph",
+      "images": [
+        "14",
+        0
+      ]
+    }
+  },
+  "16": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 26,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 77,
+      "x": 393,
+      "y": 350
+    }
+  },
+  "17": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/animate-button",
+      "images": [
+        "16",
+        0
+      ]
+    }
+  },
+  "18": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 21,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 224,
+      "x": 174,
+      "y": 378
+    }
+  },
+  "19": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/bottom-tabs",
+      "images": [
+        "18",
+        0
+      ]
+    }
+  },
+  "2": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 17,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 466,
+      "x": 4,
+      "y": 3
+    }
+  },
+  "3": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/title-bar",
+      "images": [
+        "2",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 20,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 466,
+      "x": 4,
+      "y": 21
+    }
+  },
+  "5": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/menu-bar",
+      "images": [
+        "4",
+        0
+      ]
+    }
+  },
+  "6": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 25,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 101,
+      "x": 10,
+      "y": 44
+    }
+  },
+  "7": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/toolbar-transport",
+      "images": [
+        "6",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "height": 25,
+      "image": [
+        "1",
+        0
+      ],
+      "width": 66,
+      "x": 132,
+      "y": 44
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "golf-ui/reference-components/v001/toolbar-zoom",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  }
+}

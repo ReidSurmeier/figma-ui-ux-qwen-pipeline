@@ -1,5 +1,9 @@
 # GolfStudio interactive prototype v001
 
+Status: superseded by v002. This run proved interaction wiring, but its visual
+reconstruction is not an acceptable Fidelity Check result because it redrew the
+Reference Screen.
+
 ## Outcome
 
 The approved exact-preservation golf-club Assembly is now an editable,

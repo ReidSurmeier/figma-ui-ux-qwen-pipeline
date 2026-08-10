@@ -1,0 +1,18 @@
+{
+  "kind": "Reference Component Extraction",
+  "method": "lossless ComfyUI ImageCrop nodes; no generative redraw",
+  "reference": {
+    "file": "../../runs/golf-club-assembly-v003/image-01.png",
+    "sha256": "1386229c8dd5f3d804751aebf20fa051904939f844aa512322ae6faa20fd6160"
+  },
+  "workflow": {
+    "file": "../../../workflows/golfstudio-reference-components-v001.api.json",
+    "sha256": "773f02353de67d7d4200f73388df2482a7840743cdf0b09b931cc4c7bf9600a7",
+    "comfyui_prompt_id": "5805051e-9e85-46e2-bd4b-7d78f74ea7ec"
+  },
+  "fidelity": {
+    "toolbar_transport_absolute_error_pixels": 0,
+    "animate_button_absolute_error_pixels": 0,
+    "test": "Every retained component is compared with its exact source crop."
+  }
+}

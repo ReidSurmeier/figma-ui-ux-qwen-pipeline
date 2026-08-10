@@ -32,6 +32,32 @@
       "impact": "10:93",
       "followThrough": "10:169"
     },
-    "flowName": "GolfStudio Swing Sequence"
+    "flowName": "GolfStudio Swing Sequence",
+    "status": "superseded by golfstudio-exact-interactive-v002 because v001 redrew the Reference Screen"
+  },
+  "golfstudio-exact-interactive-v002": {
+    "projectId": "637562440",
+    "fileKey": "TWPIEIOVyLjDEnlzWLcnIw",
+    "editorType": "figma",
+    "url": "https://www.figma.com/design/TWPIEIOVyLjDEnlzWLcnIw",
+    "rootNodeId": "7:2",
+    "pages": {
+      "source": "0:1",
+      "components": "6:2",
+      "prototype": "6:3",
+      "fidelityContract": "6:4"
+    },
+    "prototypeFrames": {
+      "address": "7:2",
+      "backswing": "7:4",
+      "impact": "7:6",
+      "followThrough": "7:8"
+    },
+    "components": {
+      "exactSwingState": "6:9",
+      "interactionHotspot": "6:10"
+    },
+    "flowName": "GolfStudio Exact Swing Sequence",
+    "status": "current"
   }
 }

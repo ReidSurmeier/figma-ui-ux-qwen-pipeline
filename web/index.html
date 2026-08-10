@@ -2,116 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="assets/pivot.svg" type="image/svg+xml" />
-    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
-    <meta name="color-scheme" content="light" />
-    <title>GolfStudio — Club Motion Lab</title>
+    <meta name="viewport" content="width=474, initial-scale=1" />
+    <title>GolfStudio — Interactive Replica</title>
+    <link rel="icon" href="assets/golfstudio-club-sprite.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
   </head>
   <body>
-    <main class="stage">
-      <section class="golfstudio" aria-label="GolfStudio Club Motion Lab" data-phase="address">
-        <header class="title-bar">
-          <strong>GolfStudio — Club Motion Lab</strong>
-          <span class="window-control" aria-hidden="true">—</span>
-          <span class="window-control" aria-hidden="true">□</span>
-          <span class="window-control" aria-hidden="true">×</span>
-        </header>
+    <main class="golfstudio" data-phase="address" data-playing="false" aria-label="GolfStudio interactive replica">
+      <img
+        class="approved-baseline"
+        src="assets/golfstudio-approved-baseline.png"
+        width="474"
+        height="403"
+        alt="Approved GolfStudio assembly derived from the PlantStudio reference"
+      />
 
-        <nav class="menu-bar" aria-label="Application menu">
-          <span>File</span><span>Edit</span><span>View</span><span>Swing</span>
-          <span>Club</span><span>Analyze</span><span>Help</span>
-        </nav>
+      <div class="motion-composite" aria-hidden="true">
+        <img class="clean-plate" src="assets/golfstudio-club-clean-plate.png" width="474" height="403" alt="" />
+        <img id="motion-club" class="club-sprite" src="assets/golfstudio-club-sprite.png" width="37" height="165" alt="" />
+      </div>
 
-        <div class="toolbar" aria-label="Swing transport">
-          <button class="desktop-button icon-button" type="button" data-action="PREVIOUS" aria-label="Previous phase">◀</button>
-          <button class="desktop-button" type="button" data-action="PLAY">Play</button>
-          <button class="desktop-button" type="button" data-action="PAUSE">Pause</button>
-          <button class="desktop-button icon-button" type="button" data-action="NEXT" aria-label="Next phase">▶</button>
-          <button class="desktop-button" type="button" data-action="RESET">Reset</button>
-          <span class="toolbar-spacer"></span>
-          <label class="club-select-label">
-            <span class="sr-only">Active club</span>
-            <select id="club-select" aria-label="Active club">
-              <option>7 Iron</option>
-              <option>Driver</option>
-              <option>Pitching Wedge</option>
-            </select>
-          </label>
+      <div class="exact-copy" aria-hidden="true">
+        <div class="title-copy">GolfStudio - Library of golf clubs (11 clubs)</div>
+        <div class="menu-copy">Club</div>
+
+        <div class="club-library">
+          <div class="library-row is-selected">7 iron</div>
+          <div class="library-row">6 iron</div>
+          <div class="library-row">5 iron</div>
+          <div class="library-row">4 iron</div>
+          <div class="library-row">3 wood</div>
+          <div class="library-row">driver</div>
+          <div class="library-row">putter</div>
         </div>
 
-        <div class="content">
-          <section class="swing-scene" aria-labelledby="scene-heading">
-            <h1 id="scene-heading">SWING PLANE / ADDRESS</h1>
-            <p id="scene-subheading" class="scene-subheading">7 IRON&nbsp; • &nbsp;SQUARE FACE&nbsp; • &nbsp;NEUTRAL PATH</p>
-            <img class="swing-plane" src="assets/swing-plane-guide.svg" alt="" />
-            <img id="motion-club" class="motion-club" src="assets/motion-club.svg" alt="Animated 7 iron" />
-            <img class="ball" src="assets/ball.svg" alt="Golf ball" />
-            <img class="impact-target" src="assets/impact-target.png" alt="" />
-            <img class="pivot" src="assets/pivot.svg" alt="" />
-            <p class="scene-note">club motion is native + editable</p>
-          </section>
-
-          <aside class="inspector" aria-label="Swing controls">
-            <div class="tabs" role="tablist" aria-label="Inspector view">
-              <button type="button" role="tab" aria-selected="true" data-tab="swing">Swing</button>
-              <button type="button" role="tab" aria-selected="false" data-tab="club">Club</button>
-              <button type="button" role="tab" aria-selected="false" data-tab="data">Data</button>
-            </div>
-
-            <section class="tab-panel" role="tabpanel" data-panel="swing">
-              <h2 id="phase-label">ADDRESS</h2>
-              <dl class="metrics">
-                <div><dt>Club speed</dt><dd id="metric-speed">0 mph</dd></div>
-                <div><dt>Face angle</dt><dd id="metric-face">Square</dd></div>
-                <div><dt>Path</dt><dd id="metric-path">Neutral</dd></div>
-                <div><dt>Tempo</dt><dd>3 : 1</dd></div>
-              </dl>
-            </section>
-
-            <section class="tab-panel" role="tabpanel" data-panel="club" hidden>
-              <h2>7 IRON</h2>
-              <dl class="metrics">
-                <div><dt>Loft</dt><dd>34°</dd></div>
-                <div><dt>Lie</dt><dd>62.5°</dd></div>
-                <div><dt>Length</dt><dd>37 in</dd></div>
-                <div><dt>Shaft</dt><dd>Stiff</dd></div>
-              </dl>
-            </section>
-
-            <section class="tab-panel" role="tabpanel" data-panel="data" hidden>
-              <h2>CAPTURE</h2>
-              <dl class="metrics">
-                <div><dt>Samples</dt><dd>240 Hz</dd></div>
-                <div><dt>Frames</dt><dd>4 key</dd></div>
-                <div><dt>Plane</dt><dd>On</dd></div>
-                <div><dt>Quality</dt><dd>Exact</dd></div>
-              </dl>
-            </section>
-
-            <div class="timeline-wrap">
-              <input id="timeline" type="range" min="0" max="100" value="0" aria-label="Swing timeline" />
-              <div class="timeline-labels" aria-hidden="true"><span>0</span><span>32</span><span>58</span><span>100%</span></div>
-            </div>
-
-            <p id="phase-status" class="phase-status" aria-live="polite">Ready at address. Press Play to begin the Swing Sequence.</p>
-
-            <div class="inspector-transport">
-              <button class="desktop-button icon-button" type="button" data-action="PREVIOUS" aria-label="Previous phase">◀</button>
-              <button class="desktop-button play-button" type="button" data-action="PLAY">Play</button>
-              <button class="desktop-button icon-button" type="button" data-action="NEXT" aria-label="Next phase">▶</button>
-            </div>
-            <button class="desktop-button reset-button" type="button" data-action="RESET">Reset swing</button>
-            <p class="keyboard-help">Space: play/pause&nbsp;&nbsp; ← →: step</p>
-          </aside>
+        <div class="graph-title">7 iron</div>
+        <div class="graph-y-label">% speed</div>
+        <div class="graph-x-label">swing time (ms)</div>
+        <div class="swing-readout">
+          <span id="readout-phase">Address</span>
+          <span id="readout-progress">0%</span>
+          <span id="readout-speed">0 mph</span>
         </div>
+        <div class="tab-copy tab-swing">Swing</div>
+        <div class="timeline-marker" aria-hidden="true"></div>
+      </div>
 
-        <footer class="status-bar">
-          <span id="status-summary">Address&nbsp; | &nbsp;0%&nbsp; | &nbsp;Ready&nbsp; | &nbsp;7 Iron</span>
-          <span>Interactive prototype</span>
-        </footer>
-      </section>
+      <div class="controls">
+        <button class="hotspot toolbar-previous" type="button" data-action="PREVIOUS" aria-label="Previous swing phase"></button>
+        <button class="hotspot toolbar-play" type="button" data-action="PLAY" aria-label="Play swing"></button>
+        <button class="hotspot toolbar-next" type="button" data-action="NEXT" aria-label="Next swing phase"></button>
+        <button class="hotspot toolbar-reset" type="button" data-action="RESET" aria-label="Reset swing"></button>
+        <button class="hotspot animate-button" type="button" data-action="PLAY" aria-label="Animate swing"></button>
+        <button class="hotspot tab-hitbox tab-swing-hitbox" type="button" data-tab="swing" aria-pressed="true" aria-label="Swing tab"></button>
+        <button class="hotspot tab-hitbox tab-rotation-hitbox" type="button" data-tab="rotation" aria-pressed="false" aria-label="Rotation tab"></button>
+        <button class="hotspot tab-hitbox tab-parameters-hitbox" type="button" data-tab="parameters" aria-pressed="false" aria-label="Parameters tab"></button>
+        <button class="hotspot tab-hitbox tab-parts-hitbox" type="button" data-tab="parts" aria-pressed="false" aria-label="Parts tab"></button>
+        <input id="timeline" class="timeline-input" type="range" min="0" max="100" value="0" aria-label="Swing timeline" />
+      </div>
+
+      <p id="live-status" class="visually-hidden" aria-live="polite">Address, 0 percent, ready.</p>
     </main>
     <script type="module" src="src/app.mjs"></script>
   </body>

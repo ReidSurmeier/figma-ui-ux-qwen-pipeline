@@ -1,0 +1,11 @@
+{
+  "title-bar": [4, 3, 466, 17],
+  "menu-bar": [4, 21, 466, 20],
+  "toolbar-transport": [10, 44, 101, 25],
+  "toolbar-zoom": [132, 44, 66, 25],
+  "scale-to-fit": [199, 44, 91, 25],
+  "club-library": [4, 253, 155, 123],
+  "swing-graph": [163, 253, 307, 123],
+  "animate-button": [393, 350, 77, 26],
+  "bottom-tabs": [174, 378, 224, 21]
+}

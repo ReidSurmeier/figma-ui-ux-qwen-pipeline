@@ -18,10 +18,13 @@ specifications.
 
 Use one four-phase Swing Sequence in both Figma and application code:
 
-1. `address` at 0%, -18 degrees, x=139, y=55;
-2. `backswing` at 32%, -68 degrees, x=180, y=52;
-3. `impact` at 58%, 6 degrees, x=191, y=55;
-4. `follow-through` at 100%, 54 degrees, x=112, y=39.
+1. `address` at 0%, 0 degrees, x=0, y=0;
+2. `backswing` at 32%, -24 degrees, x=-7, y=-4;
+3. `impact` at 58%, 6 degrees, x=2, y=0;
+4. `follow-through` at 100%, 32 degrees, x=12, y=-8.
+
+The x/y values are offsets from the approved 37×165 club object region, not
+absolute coordinates in a replacement layout.
 
 Play moves through the ordered phases. Pause stops at the current phase. Step
 backward, step forward, reset, and timeline seek are deterministic transitions.

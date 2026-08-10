@@ -45,26 +45,43 @@ loopback alias.
 8. Rebuild labels, layout, controls, and animation as native Figma and web
    elements.
 
-## Interactive GolfStudio prototype
+## Exact interactive GolfStudio prototype
 
-The finished interaction design lives in a separate Figma Design file:
-[GolfStudio Interactive Prototype — v001](https://www.figma.com/design/BweTGtmOCkm1su78vJOEiO).
-Open the `03 Prototype` page and present the `GolfStudio Swing Sequence` flow
-from the Address frame. Play, pause, previous, next, and reset are wired across
-four Smart Animate states; `02 Components` contains the reusable controls and
-timeline variants, and `04 Interaction Spec` records the behavior contract.
+The current deliverable is the separate Figma Design file
+[GolfStudio Exact Interactive Replica — v002](https://www.figma.com/design/TWPIEIOVyLjDEnlzWLcnIw).
+Open `03 Exact Prototype`, select Address (`7:2`), and present the
+`GolfStudio Exact Swing Sequence` flow. The four 474×403 states preserve the
+approved Assembly rather than reconstructing its Windows chrome. Exact-position
+transport and timeline hotspots provide the interactions, while `02 Exact
+Components` contains reusable raster state variants and the hotspot component.
 
-The working browser replica is in [`web/`](web/). Run and test it with:
+The earlier v001 file is superseded: it matched the canvas dimensions but
+redrew the entire interface, producing normalized RMSE 0.313 and changing every
+pixel. v002 instead gates fidelity with a browser screenshot test that requires
+zero changed pixels outside declared golf text, graph, and club-motion regions.
+
+The working hybrid Interactive Replica is in [`web/`](web/). Run and test it with:
 
 ```bash
 npm --prefix web test
 npm --prefix web run serve
 ```
 
-Then open `http://localhost:4173`. The range input, tabs, club selector,
-transport controls, Space key, and arrow keys are functional. The club motion
-uses the same four state values as the Figma prototype and honors reduced-motion
-preferences.
+Then open `http://localhost:4173`. The range input, transport controls, Space
+key, and arrow keys are functional. The approved v003 Assembly is the visible
+baseline. Club motion uses a deterministic clean plate and isolated club sprite;
+controls are accessible DOM hit targets aligned over exact source pixels.
+
+Extract exact reusable source components through ComfyUI without redrawing
+their small text or borders:
+
+```bash
+python3 -m qwen_ui_pipeline component-workflow \
+  --reference-filename golfstudio-approved-baseline.png \
+  --components examples/golfstudio-reference-components-v001.json \
+  --filename-prefix golf-ui/reference-components/v001 \
+  --output workflows/golfstudio-reference-components-v001.api.json
+```
 
 Compile and inspect a brief:
 
@@ -111,4 +128,4 @@ timeout or ambiguous error that could create duplicate billing.
 See [the run evaluation](docs/runs/golf-club-object-v001-v003.md) and
 [the prompting method](docs/research/qwen-image-3-prompt-method.md). The final
 Figma-to-code handoff and verification record is in
-[the interactive prototype run](docs/runs/golfstudio-interactive-v001.md).
+[the exact interactive prototype run](docs/runs/golfstudio-exact-interactive-v002.md).

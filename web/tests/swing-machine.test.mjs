@@ -12,10 +12,10 @@ test("the Swing Sequence preserves the approved four-phase contract", () => {
   assert.deepEqual(
     SWING_PHASES.map(({ id, progress, angle, x, y }) => ({ id, progress, angle, x, y })),
     [
-      { id: "address", progress: 0, angle: -18, x: 139, y: 55 },
-      { id: "backswing", progress: 32, angle: -68, x: 180, y: 52 },
-      { id: "impact", progress: 58, angle: 6, x: 191, y: 55 },
-      { id: "follow-through", progress: 100, angle: 54, x: 112, y: 39 },
+      { id: "address", progress: 0, angle: 0, x: 0, y: 0 },
+      { id: "backswing", progress: 32, angle: -24, x: -7, y: -4 },
+      { id: "impact", progress: 58, angle: 6, x: 2, y: 0 },
+      { id: "follow-through", progress: 100, angle: 32, x: 12, y: -8 },
     ],
   );
 });
