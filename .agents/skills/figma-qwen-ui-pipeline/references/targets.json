@@ -13,5 +13,25 @@
       "contactSheet": "4:147",
       "exactAssembly": "6:146"
     }
+  },
+  "golfstudio-interactive-v001": {
+    "projectId": "637562440",
+    "fileKey": "BweTGtmOCkm1su78vJOEiO",
+    "editorType": "figma",
+    "url": "https://www.figma.com/design/BweTGtmOCkm1su78vJOEiO",
+    "rootNodeId": "6:2",
+    "pages": {
+      "reference": "0:1",
+      "components": "2:2",
+      "prototype": "2:3",
+      "interactionSpec": "2:4"
+    },
+    "prototypeFrames": {
+      "address": "6:2",
+      "backswing": "10:17",
+      "impact": "10:93",
+      "followThrough": "10:169"
+    },
+    "flowName": "GolfStudio Swing Sequence"
   }
 }

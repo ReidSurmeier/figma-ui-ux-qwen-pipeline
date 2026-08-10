@@ -45,6 +45,27 @@ loopback alias.
 8. Rebuild labels, layout, controls, and animation as native Figma and web
    elements.
 
+## Interactive GolfStudio prototype
+
+The finished interaction design lives in a separate Figma Design file:
+[GolfStudio Interactive Prototype — v001](https://www.figma.com/design/BweTGtmOCkm1su78vJOEiO).
+Open the `03 Prototype` page and present the `GolfStudio Swing Sequence` flow
+from the Address frame. Play, pause, previous, next, and reset are wired across
+four Smart Animate states; `02 Components` contains the reusable controls and
+timeline variants, and `04 Interaction Spec` records the behavior contract.
+
+The working browser replica is in [`web/`](web/). Run and test it with:
+
+```bash
+npm --prefix web test
+npm --prefix web run serve
+```
+
+Then open `http://localhost:4173`. The range input, tabs, club selector,
+transport controls, Space key, and arrow keys are functional. The club motion
+uses the same four state values as the Figma prototype and honors reduced-motion
+preferences.
+
 Compile and inspect a brief:
 
 ```bash
@@ -88,4 +109,6 @@ timeout or ambiguous error that could create duplicate billing.
   its contact sheet, and the exact-preservation v003 assembly respectively.
 
 See [the run evaluation](docs/runs/golf-club-object-v001-v003.md) and
-[the prompting method](docs/research/qwen-image-3-prompt-method.md).
+[the prompting method](docs/research/qwen-image-3-prompt-method.md). The final
+Figma-to-code handoff and verification record is in
+[the interactive prototype run](docs/runs/golfstudio-interactive-v001.md).
