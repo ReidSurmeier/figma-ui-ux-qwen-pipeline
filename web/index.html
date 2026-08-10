@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=474, initial-scale=1" />
-    <title>GolfStudio — Interactive Replica</title>
+    <title>GolfStudio — Complete Interactive Replica</title>
     <link rel="icon" href="assets/golfstudio-club-sprite.png" type="image/png" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
   </head>
   <body>
-    <main class="golfstudio" data-phase="address" data-playing="false" aria-label="GolfStudio interactive replica">
+    <main
+      class="golfstudio"
+      data-phase="address"
+      data-playing="false"
+      data-panel="swing"
+      data-tool="select"
+      data-window-mode="normal"
+      aria-label="GolfStudio complete interactive replica"
+    >
       <img
         class="approved-baseline"
         src="assets/golfstudio-approved-baseline.png"
@@ -18,26 +25,22 @@
         alt="Approved GolfStudio assembly derived from the PlantStudio reference"
       />
 
-      <div class="motion-composite" aria-hidden="true">
-        <img class="clean-plate" src="assets/golfstudio-club-clean-plate.png" width="474" height="403" alt="" />
-        <img id="motion-club" class="club-sprite" src="assets/golfstudio-club-sprite.png" width="37" height="165" alt="" />
+      <div class="canvas-viewport" aria-label="Golf club presentation canvas">
+        <div class="canvas-stage">
+          <img class="clean-plate" src="assets/golfstudio-club-clean-plate.png" width="474" height="403" alt="" />
+          <img id="motion-club" class="club-sprite" src="assets/golfstudio-club-sprite.png" width="37" height="165" alt="" />
+        </div>
       </div>
 
       <div class="exact-copy" aria-hidden="true">
         <div class="title-copy">GolfStudio - Library of golf clubs (11 clubs)</div>
+        <div class="maximized-badge">Maximized</div>
         <div class="menu-copy">Club</div>
+        <div class="zoom-readout" id="zoom-readout">128%</div>
 
-        <div class="club-library">
-          <div class="library-row is-selected">7 iron</div>
-          <div class="library-row">6 iron</div>
-          <div class="library-row">5 iron</div>
-          <div class="library-row">4 iron</div>
-          <div class="library-row">3 wood</div>
-          <div class="library-row">driver</div>
-          <div class="library-row">putter</div>
-        </div>
+        <div class="club-library" id="club-library-copy"></div>
 
-        <div class="graph-title">7 iron</div>
+        <div class="graph-title" id="graph-club-title">7 iron</div>
         <div class="graph-y-label">% speed</div>
         <div class="graph-x-label">swing time (ms)</div>
         <div class="swing-readout">
@@ -45,25 +48,154 @@
           <span id="readout-progress">0%</span>
           <span id="readout-speed">0 mph</span>
         </div>
+        <div class="age-copy" id="age-copy">36</div>
         <div class="tab-copy tab-swing">Swing</div>
         <div class="timeline-marker" aria-hidden="true"></div>
       </div>
 
+      <div class="region-mask toolbar-mask" aria-hidden="true"></div>
+      <div class="region-mask library-mask" aria-hidden="true"></div>
+      <div class="region-mask graph-mask" aria-hidden="true"></div>
+
+      <section class="alternate-panel rotation-panel" aria-label="Rotation view">
+        <div class="panel-heading">Club rotation</div>
+        <label for="rotation-slider">Face angle</label>
+        <input id="rotation-slider" type="range" min="-45" max="45" value="0" data-parameter="rotation" />
+        <output id="rotation-output">0°</output>
+        <div class="panel-meter"><span id="rotation-meter"></span></div>
+      </section>
+
+      <section class="alternate-panel parameters-panel" aria-label="Parameters view">
+        <div class="panel-heading">Swing parameters</div>
+        <label for="loft-slider">Loft</label>
+        <input id="loft-slider" type="range" min="8" max="64" value="34" data-parameter="loft" />
+        <output id="loft-output">34°</output>
+        <label for="tempo-slider">Tempo</label>
+        <input id="tempo-slider" type="range" min="40" max="120" value="72" data-parameter="tempo" />
+        <output id="tempo-output">72 bpm</output>
+      </section>
+
+      <section class="alternate-panel parts-panel" aria-label="Parts view">
+        <div class="panel-heading">Club parts</div>
+        <label for="head-select">Head</label>
+        <select id="head-select" data-part="head">
+          <option>cavity back</option><option>blade</option><option>hybrid</option>
+        </select>
+        <label for="shaft-select">Shaft</label>
+        <select id="shaft-select" data-part="shaft">
+          <option>regular</option><option>stiff</option><option>senior</option>
+        </select>
+        <label for="grip-select">Grip</label>
+        <select id="grip-select" data-part="grip">
+          <option>standard</option><option>midsize</option><option>oversize</option>
+        </select>
+      </section>
+
+      <nav class="menu-headings" aria-label="Application menu">
+        <button data-menu="file" style="--x: 6px; --w: 24px">File</button>
+        <button data-menu="edit" style="--x: 31px; --w: 28px">Edit</button>
+        <button data-menu="club" style="--x: 61px; --w: 38px">Club</button>
+        <button data-menu="layout" style="--x: 100px; --w: 38px">Layout</button>
+        <button data-menu="options" style="--x: 139px; --w: 44px">Options</button>
+        <button data-menu="window" style="--x: 184px; --w: 45px">Window</button>
+        <button data-menu="help" style="--x: 230px; --w: 30px">Help</button>
+      </nav>
+
+      <div class="menu-popup file-menu" data-popup="file" role="menu">
+        <button role="menuitem" data-command="new">New swing<span>Ctrl+N</span></button>
+        <button role="menuitem" data-command="open">Open session…<span>Ctrl+O</span></button>
+        <button role="menuitem" data-command="save">Save snapshot<span>Ctrl+S</span></button>
+        <hr />
+        <button role="menuitem" data-command="close">Exit</button>
+      </div>
+      <div class="menu-popup edit-menu" data-popup="edit" role="menu">
+        <button role="menuitem" data-command="undo">Undo<span>Ctrl+Z</span></button>
+        <button role="menuitem" data-command="reset-values">Reset values</button>
+        <button role="menuitem" data-command="copy-metrics">Copy metrics</button>
+      </div>
+      <div class="menu-popup club-menu" data-popup="club" role="menu"></div>
+      <div class="menu-popup layout-menu" data-popup="layout" role="menu">
+        <button role="menuitemcheckbox" data-region="library">✓ Club library</button>
+        <button role="menuitemcheckbox" data-region="graph">✓ Analysis panel</button>
+        <button role="menuitemcheckbox" data-region="toolbar">✓ Toolbar</button>
+      </div>
+      <div class="menu-popup options-menu" data-popup="options" role="menu">
+        <button role="menuitemcheckbox" data-command="reduced-motion">Reduced motion</button>
+        <button role="menuitem" data-command="fit">Scale to Fit</button>
+      </div>
+      <div class="menu-popup window-menu" data-popup="window" role="menu">
+        <button role="menuitem" data-window="minimized">Minimize</button>
+        <button role="menuitem" data-window="maximized">Maximize</button>
+        <button role="menuitem" data-window="presentation">Presentation view<span>F11</span></button>
+      </div>
+      <div class="menu-popup help-menu" data-popup="help" role="menu">
+        <button role="menuitem" data-dialog="controls">Controls</button>
+        <button role="menuitem" data-dialog="about">About GolfStudio</button>
+      </div>
+
       <div class="controls">
+        <button class="hotspot window-minimize" type="button" data-window="minimized" aria-label="Minimize GolfStudio"></button>
+        <button class="hotspot window-maximize" type="button" data-window="maximized" aria-label="Maximize GolfStudio"></button>
+        <button class="hotspot window-close" type="button" data-dialog="close" aria-label="Close GolfStudio"></button>
+
+        <button class="hotspot toolbar-select" type="button" data-tool="select" aria-label="Select tool"></button>
+        <button class="hotspot toolbar-pan" type="button" data-tool="pan" aria-label="Pan tool"></button>
+        <button class="hotspot toolbar-rotate" type="button" data-tool="rotate" aria-label="Rotate tool"></button>
+        <button class="hotspot toolbar-zoom" type="button" data-tool="zoom" aria-label="Zoom tool"></button>
+        <select id="zoom-select" class="zoom-select" aria-label="Zoom percentage">
+          <option value="64">64%</option><option value="100">100%</option>
+          <option value="128" selected>128%</option><option value="200">200%</option><option value="256">256%</option>
+        </select>
+        <button class="hotspot scale-to-fit" type="button" data-ui-action="SCALE_TO_FIT" aria-label="Scale to Fit"></button>
+
         <button class="hotspot toolbar-previous" type="button" data-action="PREVIOUS" aria-label="Previous swing phase"></button>
         <button class="hotspot toolbar-play" type="button" data-action="PLAY" aria-label="Play swing"></button>
         <button class="hotspot toolbar-next" type="button" data-action="NEXT" aria-label="Next swing phase"></button>
         <button class="hotspot toolbar-reset" type="button" data-action="RESET" aria-label="Reset swing"></button>
         <button class="hotspot animate-button" type="button" data-action="PLAY" aria-label="Animate swing"></button>
-        <button class="hotspot tab-hitbox tab-swing-hitbox" type="button" data-tab="swing" aria-pressed="true" aria-label="Swing tab"></button>
-        <button class="hotspot tab-hitbox tab-rotation-hitbox" type="button" data-tab="rotation" aria-pressed="false" aria-label="Rotation tab"></button>
-        <button class="hotspot tab-hitbox tab-parameters-hitbox" type="button" data-tab="parameters" aria-pressed="false" aria-label="Parameters tab"></button>
-        <button class="hotspot tab-hitbox tab-parts-hitbox" type="button" data-tab="parts" aria-pressed="false" aria-label="Parts tab"></button>
+
+        <div id="canvas-control" class="canvas-control" aria-label="Interactive golf canvas" tabindex="0"></div>
+        <div id="library-buttons" class="library-buttons"></div>
+        <input id="library-scroll" class="library-scroll" type="range" min="0" max="4" value="0" orient="vertical" aria-label="Scroll club library" />
+
+        <input id="age-input" class="age-input" type="number" min="1" max="120" value="36" aria-label="Club age in days" />
+        <button class="hotspot age-up" type="button" data-age-step="1" aria-label="Increase age"></button>
+        <button class="hotspot age-down" type="button" data-age-step="-1" aria-label="Decrease age"></button>
+
+        <button class="hotspot tab-hitbox tab-swing-hitbox" type="button" data-tab="swing" aria-pressed="true">Swing</button>
+        <button class="hotspot tab-hitbox tab-rotation-hitbox" type="button" data-tab="rotation" aria-pressed="false">Rotation</button>
+        <button class="hotspot tab-hitbox tab-parameters-hitbox" type="button" data-tab="parameters" aria-pressed="false">Parameters</button>
+        <button class="hotspot tab-hitbox tab-parts-hitbox" type="button" data-tab="parts" aria-pressed="false">Parts</button>
         <input id="timeline" class="timeline-input" type="range" min="0" max="100" value="0" aria-label="Swing timeline" />
+      </div>
+
+      <input id="session-file" type="file" accept="application/json" hidden />
+
+      <div class="dialog-backdrop" aria-hidden="true">
+        <section class="dialog-window" role="dialog" aria-modal="true" aria-labelledby="dialog-title">
+          <div class="dialog-titlebar" id="dialog-title">GolfStudio</div>
+          <div class="dialog-body" id="dialog-body"></div>
+          <div class="dialog-actions" id="dialog-actions"></div>
+        </section>
+      </div>
+
+      <div class="window-state-screen minimized-screen">
+        <button type="button" data-window="normal">Restore GolfStudio</button>
+      </div>
+      <div class="window-state-screen closed-screen">
+        <div>GolfStudio session closed.</div>
+        <button type="button" data-window="normal">Reopen GolfStudio</button>
+      </div>
+      <div class="presentation-screen">
+        <div class="presentation-canvas">
+          <img src="assets/golfstudio-club-clean-plate.png" width="474" height="403" alt="" />
+          <img class="presentation-club" src="assets/golfstudio-club-sprite.png" width="37" height="165" alt="" />
+        </div>
+        <button type="button" data-window="normal">Exit presentation <kbd>Esc</kbd></button>
       </div>
 
       <p id="live-status" class="visually-hidden" aria-live="polite">Address, 0 percent, ready.</p>
     </main>
-    <script type="module" src="src/app.mjs"></script>
+    <script type="module" src="src/app.mjs?v=complete-controls-v5"></script>
   </body>
 </html>

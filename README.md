@@ -49,11 +49,12 @@ loopback alias.
 
 The current deliverable is the separate Figma Design file
 [GolfStudio Exact Interactive Replica — v002](https://www.figma.com/design/TWPIEIOVyLjDEnlzWLcnIw).
-Open `03 Exact Prototype`, select Address (`7:2`), and present the
-`GolfStudio Exact Swing Sequence` flow. The four 474×403 states preserve the
-approved Assembly rather than reconstructing its Windows chrome. Exact-position
-transport and timeline hotspots provide the interactions, while `02 Exact
-Components` contains reusable raster state variants and the hotspot component.
+Open `05 Complete Controls`, select Default (`16:2`), and present the
+`GolfStudio Complete Controls` flow. Its exact 474×403 states cover the File
+menu, zoom, Rotation, Parameters, Parts, About, minimized, presentation, and
+swing-playing views. The `GolfStudio / Complete View` component set (`15:6`)
+contains the canonical raster variants. The original four-state Swing Sequence
+remains available on `03 Exact Prototype`.
 
 The earlier v001 file is superseded: it matched the canvas dimensions but
 redrew the entire interface, producing normalized RMSE 0.313 and changing every
@@ -67,10 +68,14 @@ npm --prefix web test
 npm --prefix web run serve
 ```
 
-Then open `http://localhost:4173`. The range input, transport controls, Space
-key, and arrow keys are functional. The approved v003 Assembly is the visible
-baseline. Club motion uses a deterministic clean plate and isolated club sprite;
-controls are accessible DOM hit targets aligned over exact source pixels.
+Then open `http://localhost:4173`. Every visible control family is functional:
+seven application menus, all four canvas tools, zoom percentage and fit, eleven
+club choices and library scrolling, the age input/spinner, timeline and
+animation, four lower views and their sliders/selectors, dialogs, window
+controls, keyboard shortcuts, and F11 presentation. The approved v003 Assembly
+is the visible baseline. Club motion uses a deterministic clean plate and
+isolated club sprite; controls are accessible DOM hit targets aligned over exact
+source pixels.
 
 Extract exact reusable source components through ComfyUI without redrawing
 their small text or borders:
@@ -129,3 +134,5 @@ See [the run evaluation](docs/runs/golf-club-object-v001-v003.md) and
 [the prompting method](docs/research/qwen-image-3-prompt-method.md). The final
 Figma-to-code handoff and verification record is in
 [the exact interactive prototype run](docs/runs/golfstudio-exact-interactive-v002.md).
+The exhaustive control pass is recorded in
+[GolfStudio Complete Controls v003](docs/runs/golfstudio-complete-controls-v003.md).

@@ -3,9 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html,
 body {
@@ -17,9 +15,8 @@ body {
 }
 
 button,
-input {
-  font: inherit;
-}
+input,
+select { font: inherit; }
 
 .golfstudio {
   --club-angle: 0deg;
@@ -27,11 +24,19 @@ input {
   --club-y: 0px;
   --phase-duration: 0ms;
   --timeline-x: 0px;
+  --canvas-scale: 1;
+  --view-x: 0px;
+  --view-y: 0px;
+  --rotation-meter: 50%;
   position: relative;
   width: 474px;
   height: 403px;
   overflow: hidden;
   isolation: isolate;
+  background: #cccccc;
+  color: #000000;
+  font-size: 10px;
+  line-height: 12px;
 }
 
 .approved-baseline,
@@ -45,23 +50,36 @@ input {
   user-select: none;
 }
 
-.approved-baseline {
-  z-index: 0;
-}
+.approved-baseline { z-index: 0; }
 
-.motion-composite {
+.canvas-viewport {
   position: absolute;
-  inset: 0;
+  left: 4px;
+  top: 74px;
   z-index: 1;
+  width: 466px;
+  height: 177px;
+  overflow: hidden;
   opacity: 0;
   pointer-events: none;
+  background: #ffffff;
 }
 
-.golfstudio[data-native-baseline="false"] .motion-composite {
-  opacity: 1;
+.golfstudio[data-native-baseline="false"] .canvas-viewport { opacity: 1; }
+
+.canvas-stage {
+  position: absolute;
+  left: -4px;
+  top: -74px;
+  width: 474px;
+  height: 403px;
+  transform-origin: 237px 162px;
+  transform: translate(var(--view-x), var(--view-y)) scale(var(--canvas-scale));
+  transition: transform 80ms linear;
 }
 
-.club-sprite {
+.club-sprite,
+.presentation-club {
   position: absolute;
   left: 182px;
   top: 78px;
@@ -79,8 +97,6 @@ input {
   z-index: 2;
   pointer-events: none;
   color: #000000;
-  font-size: 10px;
-  line-height: 12px;
 }
 
 .title-copy {
@@ -97,15 +113,45 @@ input {
   white-space: nowrap;
 }
 
+.maximized-badge {
+  position: absolute;
+  left: 332px;
+  top: 3px;
+  display: none;
+  width: 80px;
+  height: 16px;
+  background: #000080;
+  color: #ffffff;
+  line-height: 15px;
+  text-align: right;
+}
+
+.golfstudio[data-window-mode="maximized"] .maximized-badge { display: block; }
+
 .menu-copy {
   position: absolute;
-  left: 71px;
+  left: 68px;
   top: 22px;
-  width: 28px;
+  width: 38px;
   height: 16px;
+  padding-left: 3px;
   background: #cccccc;
   line-height: 14px;
 }
+
+.zoom-readout {
+  position: absolute;
+  left: 132px;
+  top: 51px;
+  width: 45px;
+  height: 15px;
+  padding-left: 2px;
+  background: #ffffff;
+  line-height: 14px;
+  opacity: 1;
+}
+
+.golfstudio[data-zoom="128"] .zoom-readout { opacity: 0; }
 
 .club-library {
   position: absolute;
@@ -135,6 +181,7 @@ input {
   top: 254px;
   width: 96px;
   height: 20px;
+  overflow: hidden;
   background: #cccccc;
   line-height: 16px;
 }
@@ -163,9 +210,9 @@ input {
 
 .swing-readout {
   position: absolute;
-  left: 164px;
+  left: 236px;
   top: 350px;
-  width: 228px;
+  width: 156px;
   height: 26px;
   overflow: hidden;
   background: #cccccc;
@@ -173,8 +220,18 @@ input {
   white-space: nowrap;
 }
 
-.swing-readout span + span::before {
-  content: "  ";
+.swing-readout span + span::before { content: "  "; }
+
+.age-copy {
+  position: absolute;
+  left: 193px;
+  top: 353px;
+  width: 25px;
+  height: 20px;
+  padding: 2px 0 0 2px;
+  overflow: hidden;
+  background: #ffffff;
+  line-height: 15px;
 }
 
 .tab-copy {
@@ -186,10 +243,7 @@ input {
   text-align: center;
 }
 
-.tab-swing {
-  left: 177px;
-  width: 55px;
-}
+.tab-swing { left: 177px; width: 55px; }
 
 .timeline-marker {
   position: absolute;
@@ -198,6 +252,194 @@ input {
   width: 2px;
   height: 52px;
   background: #ff0000;
+}
+
+.region-mask {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  background: #cccccc;
+  border: 1px inset #eeeeee;
+}
+
+.toolbar-mask { left: 4px; top: 39px; width: 466px; height: 34px; }
+.library-mask { left: 4px; top: 253px; width: 157px; height: 124px; }
+.graph-mask { left: 161px; top: 253px; width: 309px; height: 124px; }
+.golfstudio[data-show-toolbar="false"] .toolbar-mask,
+.golfstudio[data-show-library="false"] .library-mask,
+.golfstudio[data-show-graph="false"] .graph-mask { display: block; }
+
+.alternate-panel {
+  position: absolute;
+  left: 163px;
+  top: 253px;
+  z-index: 4;
+  display: none;
+  width: 307px;
+  height: 124px;
+  padding: 19px 8px 5px;
+  overflow: hidden;
+  background: #cccccc;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  font-size: 10px;
+}
+
+.golfstudio[data-panel="rotation"] .rotation-panel,
+.golfstudio[data-panel="parameters"] .parameters-panel,
+.golfstudio[data-panel="parts"] .parts-panel { display: block; }
+
+.panel-heading {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  right: 1px;
+  height: 16px;
+  padding-left: 4px;
+  background: #000080;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+.alternate-panel label {
+  display: inline-block;
+  width: 52px;
+  margin: 5px 2px 0 0;
+  vertical-align: middle;
+}
+
+.alternate-panel input[type="range"] {
+  width: 172px;
+  height: 18px;
+  margin: 3px 4px 0 0;
+  vertical-align: middle;
+  accent-color: #000080;
+}
+
+.alternate-panel output {
+  display: inline-block;
+  width: 48px;
+  vertical-align: middle;
+}
+
+.panel-meter {
+  width: 230px;
+  height: 25px;
+  margin: 12px 0 0 55px;
+  padding: 3px;
+  border: 2px inset #eeeeee;
+  background: #ffffff;
+}
+
+.panel-meter span {
+  display: block;
+  width: var(--rotation-meter);
+  height: 15px;
+  background: #000080;
+}
+
+.parts-panel label { width: 38px; }
+.parts-panel select {
+  width: 105px;
+  height: 20px;
+  margin: 2px 8px 2px 0;
+  border: 2px inset #eeeeee;
+  border-radius: 0;
+  background: #ffffff;
+  font-size: 10px;
+}
+
+.menu-headings {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.menu-headings button {
+  position: absolute;
+  left: var(--x);
+  top: 21px;
+  width: var(--w);
+  height: 18px;
+  margin: 0;
+  padding: 1px 2px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 10px;
+  line-height: 14px;
+  pointer-events: auto;
+}
+
+.menu-headings button[aria-expanded="true"] {
+  background: #000080;
+  color: #ffffff;
+}
+
+.menu-popup {
+  position: absolute;
+  top: 38px;
+  z-index: 7;
+  display: none;
+  min-width: 132px;
+  padding: 2px;
+  background: #cccccc;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: 1px 1px 0 #666666;
+}
+
+.file-menu { left: 5px; width: 164px; }
+.edit-menu { left: 30px; width: 150px; }
+.club-menu { left: 60px; width: 126px; }
+.layout-menu { left: 99px; width: 136px; }
+.options-menu { left: 138px; width: 139px; }
+.window-menu { left: 183px; width: 158px; }
+.help-menu { left: 229px; width: 137px; }
+
+.golfstudio[data-open-menu="file"] .file-menu,
+.golfstudio[data-open-menu="edit"] .edit-menu,
+.golfstudio[data-open-menu="club"] .club-menu,
+.golfstudio[data-open-menu="layout"] .layout-menu,
+.golfstudio[data-open-menu="options"] .options-menu,
+.golfstudio[data-open-menu="window"] .window-menu,
+.golfstudio[data-open-menu="help"] .help-menu { display: block; }
+
+.menu-popup button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 18px;
+  margin: 0;
+  padding: 2px 5px 1px 18px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #000000;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.menu-popup button:hover,
+.menu-popup button:focus-visible {
+  outline: 0;
+  background: #000080;
+  color: #ffffff;
+}
+
+.menu-popup hr {
+  height: 2px;
+  margin: 2px 1px;
+  border: 0;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #ffffff;
 }
 
 .controls {
@@ -211,9 +453,12 @@ input {
   margin: 0;
   padding: 0;
   border: 0;
+  border-radius: 0;
   outline: 0;
   background: transparent;
+  color: transparent;
   cursor: pointer;
+  font-size: 0;
 }
 
 .hotspot::after {
@@ -229,22 +474,124 @@ input {
 }
 
 .hotspot:active::after,
-.hotspot.is-pressed::after {
-  display: block;
-}
+.hotspot.is-pressed::after,
+.hotspot[aria-pressed="true"]:not(.toolbar-select)::after { display: block; }
 
-.hotspot:focus-visible {
-  outline: 1px dotted #000000;
-  outline-offset: -3px;
-}
+.hotspot:focus-visible { outline: 1px dotted #000000; outline-offset: -3px; }
 
+.window-minimize { left: 418px; top: 4px; width: 17px; height: 15px; }
+.window-maximize { left: 435px; top: 4px; width: 17px; height: 15px; }
+.window-close { left: 452px; top: 4px; width: 17px; height: 15px; }
+
+.toolbar-select { left: 10px; top: 45px; width: 25px; height: 23px; }
+.toolbar-pan { left: 35px; top: 45px; width: 25px; height: 23px; }
+.toolbar-rotate { left: 60px; top: 45px; width: 25px; height: 23px; }
+.toolbar-zoom { left: 85px; top: 45px; width: 25px; height: 23px; }
 .toolbar-previous { left: 11px; top: 44px; width: 25px; height: 25px; }
 .toolbar-play { left: 36px; top: 44px; width: 25px; height: 25px; }
 .toolbar-next { left: 61px; top: 44px; width: 25px; height: 25px; }
 .toolbar-reset { left: 86px; top: 44px; width: 25px; height: 25px; }
+
+/* The four original toolbar buttons now act as select/pan/rotate/zoom. Swing
+   transport remains available through Animate, Space, arrows, and the graph. */
+.toolbar-previous,
+.toolbar-play,
+.toolbar-next,
+.toolbar-reset { pointer-events: none; }
+
+.zoom-select {
+  position: absolute;
+  left: 130px;
+  top: 49px;
+  width: 59px;
+  height: 19px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.scale-to-fit { left: 190px; top: 47px; width: 91px; height: 22px; }
 .animate-button { left: 393px; top: 350px; width: 77px; height: 26px; }
 
-.tab-hitbox { top: 378px; height: 21px; }
+.canvas-control {
+  position: absolute;
+  left: 4px;
+  top: 74px;
+  width: 466px;
+  height: 177px;
+  outline: 0;
+}
+
+.golfstudio[data-tool="select"] .canvas-control { cursor: default; }
+.golfstudio[data-tool="pan"] .canvas-control { cursor: grab; }
+.golfstudio[data-tool="pan"] .canvas-control:active { cursor: grabbing; }
+.golfstudio[data-tool="rotate"] .canvas-control { cursor: ew-resize; }
+.golfstudio[data-tool="zoom"] .canvas-control { cursor: zoom-in; }
+.canvas-control:focus-visible { outline: 1px dotted #000000; outline-offset: -3px; }
+
+.library-buttons {
+  position: absolute;
+  left: 24px;
+  top: 254px;
+  width: 119px;
+  height: 112px;
+}
+
+.library-buttons button {
+  position: absolute;
+  left: 0;
+  width: 119px;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  cursor: pointer;
+}
+
+.library-buttons button:focus-visible { outline: 1px dotted #ffffff; outline-offset: -2px; }
+
+.library-scroll {
+  position: absolute;
+  left: 144px;
+  top: 253px;
+  width: 16px;
+  height: 123px;
+  margin: 0;
+  opacity: 0;
+  cursor: ns-resize;
+  writing-mode: vertical-lr;
+  direction: rtl;
+}
+
+.age-input {
+  position: absolute;
+  left: 192px;
+  top: 352px;
+  width: 27px;
+  height: 22px;
+  opacity: 0;
+}
+
+.age-up { left: 219px; top: 352px; width: 16px; height: 11px; }
+.age-down { left: 219px; top: 363px; width: 16px; height: 11px; }
+
+.tab-hitbox {
+  top: 378px;
+  height: 21px;
+  color: transparent;
+}
+
+.tab-hitbox[aria-pressed="true"]::after {
+  display: block;
+  inset: 0;
+  border-top: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #666666;
+  border-bottom: 0;
+  background: transparent;
+}
+
 .tab-swing-hitbox { left: 175px; width: 59px; }
 .tab-rotation-hitbox { left: 234px; width: 59px; }
 .tab-parameters-hitbox { left: 293px; width: 67px; }
@@ -261,6 +608,114 @@ input {
   cursor: ew-resize;
 }
 
+.dialog-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 9;
+  display: none;
+  place-items: center;
+  background: rgb(0 0 0 / 18%);
+}
+
+.dialog-backdrop[aria-hidden="false"] { display: grid; }
+
+.dialog-window {
+  width: 278px;
+  min-height: 124px;
+  padding: 3px;
+  background: #cccccc;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: 1px 1px 0 #666666;
+}
+
+.dialog-titlebar {
+  height: 18px;
+  padding-left: 3px;
+  background: #000080;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.dialog-body {
+  min-height: 65px;
+  padding: 10px 8px 4px;
+  white-space: pre-line;
+}
+.dialog-body p { margin: 0; }
+.dialog-actions { display: flex; justify-content: flex-end; gap: 6px; padding: 3px 6px 6px; }
+.dialog-actions button,
+.window-state-screen button,
+.presentation-screen > button {
+  min-width: 70px;
+  min-height: 22px;
+  border: 2px outset #eeeeee;
+  border-radius: 0;
+  background: #cccccc;
+  color: #000000;
+  font-size: 10px;
+}
+.dialog-actions button:active,
+.window-state-screen button:active,
+.presentation-screen > button:active { border-style: inset; }
+
+.window-state-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  place-items: center;
+  background: #008080;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+.closed-screen { align-content: center; gap: 12px; }
+.golfstudio[data-window-mode="minimized"] .minimized-screen,
+.golfstudio[data-window-mode="closed"] .closed-screen { display: grid; }
+
+.presentation-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 11;
+  display: none;
+  overflow: hidden;
+  background: #000000;
+}
+
+.golfstudio[data-window-mode="presentation"] .presentation-screen { display: block; }
+.presentation-screen::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 42px;
+  background: #000000;
+}
+.presentation-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 474px;
+  height: 403px;
+  transform: scale(2.25);
+  transform-origin: 200px 162px;
+}
+.presentation-canvas > img:first-child {
+  position: absolute;
+  inset: 0;
+  width: 474px;
+  height: 403px;
+  image-rendering: pixelated;
+}
+.presentation-screen > button { position: absolute; right: 8px; bottom: 8px; z-index: 2; }
+.presentation-screen kbd { font: inherit; }
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -274,7 +729,6 @@ input {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .club-sprite {
-    transition-duration: 0ms !important;
-  }
+  .club-sprite,
+  .canvas-stage { transition-duration: 0ms !important; }
 }

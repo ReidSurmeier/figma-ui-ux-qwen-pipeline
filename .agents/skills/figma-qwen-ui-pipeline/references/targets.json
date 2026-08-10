@@ -40,12 +40,13 @@
     "fileKey": "TWPIEIOVyLjDEnlzWLcnIw",
     "editorType": "figma",
     "url": "https://www.figma.com/design/TWPIEIOVyLjDEnlzWLcnIw",
-    "rootNodeId": "7:2",
+    "rootNodeId": "16:2",
     "pages": {
       "source": "0:1",
       "components": "6:2",
       "prototype": "6:3",
-      "fidelityContract": "6:4"
+      "fidelityContract": "6:4",
+      "completeControls": "14:2"
     },
     "prototypeFrames": {
       "address": "7:2",
@@ -55,9 +56,23 @@
     },
     "components": {
       "exactSwingState": "6:9",
-      "interactionHotspot": "6:10"
+      "interactionHotspot": "6:10",
+      "completeView": "15:6"
     },
-    "flowName": "GolfStudio Exact Swing Sequence",
-    "status": "current"
+    "completePrototypeFrames": {
+      "default": "16:2",
+      "fileMenu": "16:4",
+      "zoom200": "16:6",
+      "rotation": "16:8",
+      "parameters": "16:10",
+      "parts": "16:12",
+      "about": "16:14",
+      "minimized": "16:16",
+      "presentation": "16:18",
+      "swingPlaying": "17:2"
+    },
+    "flowName": "GolfStudio Complete Controls",
+    "swingFlowName": "GolfStudio Exact Swing Sequence",
+    "status": "current expanded complete-controls prototype"
   }
 }
