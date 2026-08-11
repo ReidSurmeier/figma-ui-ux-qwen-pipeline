@@ -11,7 +11,8 @@
     "golfUiNodes": {
       "selectedRender": "4:146",
       "contactSheet": "4:147",
-      "exactAssembly": "6:146"
+      "exactAssembly": "6:146",
+      "completeWorkingUi": "15:163"
     }
   },
   "golfstudio-interactive-v001": {
