@@ -75,7 +75,7 @@ select { font: inherit; }
   height: 403px;
   transform-origin: 237px 162px;
   transform: translate(var(--view-x), var(--view-y)) scale(var(--canvas-scale));
-  transition: transform 80ms linear;
+  transition: none;
 }
 
 .club-sprite,
@@ -87,7 +87,7 @@ select { font: inherit; }
   height: 165px;
   transform-origin: 50% 82%;
   transform: translate(var(--club-x), var(--club-y)) rotate(var(--club-angle));
-  transition: transform var(--phase-duration) linear;
+  transition: none;
   image-rendering: pixelated;
 }
 
@@ -285,6 +285,8 @@ select { font: inherit; }
   border-right: 1px solid #666666;
   border-bottom: 1px solid #666666;
   font-size: 10px;
+  /* Keep the original Animate button reachable in every lower-panel view. */
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 75% 78%, 75% 100%, 0 100%);
 }
 
 .golfstudio[data-panel="rotation"] .rotation-panel,
@@ -312,11 +314,52 @@ select { font: inherit; }
 }
 
 .alternate-panel input[type="range"] {
+  appearance: none;
   width: 172px;
   height: 18px;
   margin: 3px 4px 0 0;
+  padding: 0;
   vertical-align: middle;
-  accent-color: #000080;
+  background: transparent;
+  cursor: ew-resize;
+}
+
+.alternate-panel input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  border-top: 1px solid #666666;
+  border-left: 1px solid #666666;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 0;
+  background: #999999;
+}
+
+.alternate-panel input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 11px;
+  height: 18px;
+  margin-top: -8px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  border-radius: 0;
+  background: #cccccc;
+}
+
+.alternate-panel input[type="range"]::-moz-range-track {
+  height: 2px;
+  border: 1px inset #eeeeee;
+  border-radius: 0;
+  background: #999999;
+}
+
+.alternate-panel input[type="range"]::-moz-range-thumb {
+  width: 7px;
+  height: 14px;
+  border: 2px outset #eeeeee;
+  border-radius: 0;
+  background: #cccccc;
 }
 
 .alternate-panel output {
@@ -403,6 +446,7 @@ select { font: inherit; }
 .options-menu { left: 138px; width: 139px; }
 .window-menu { left: 183px; width: 158px; }
 .help-menu { left: 229px; width: 137px; }
+.zoom-menu { left: 130px; top: 68px; width: 59px; min-width: 59px; }
 
 .golfstudio[data-open-menu="file"] .file-menu,
 .golfstudio[data-open-menu="edit"] .edit-menu,
@@ -410,7 +454,10 @@ select { font: inherit; }
 .golfstudio[data-open-menu="layout"] .layout-menu,
 .golfstudio[data-open-menu="options"] .options-menu,
 .golfstudio[data-open-menu="window"] .window-menu,
-.golfstudio[data-open-menu="help"] .help-menu { display: block; }
+.golfstudio[data-open-menu="help"] .help-menu,
+.golfstudio[data-open-menu="zoom"] .zoom-menu { display: block; }
+
+.zoom-menu button { padding-left: 5px; }
 
 .menu-popup button {
   display: flex;
@@ -511,6 +558,19 @@ select { font: inherit; }
 
 .scale-to-fit { left: 190px; top: 47px; width: 91px; height: 22px; }
 .animate-button { left: 393px; top: 350px; width: 77px; height: 26px; }
+
+.animate-button[aria-pressed="true"]::before {
+  content: "Stop";
+  position: absolute;
+  inset: 2px;
+  display: grid;
+  place-items: center;
+  border: 2px inset #eeeeee;
+  background: #cccccc;
+  color: #000000;
+  font-size: 10px;
+  line-height: 12px;
+}
 
 .canvas-control {
   position: absolute;

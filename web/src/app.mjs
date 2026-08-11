@@ -24,7 +24,7 @@ const query = new URLSearchParams(window.location.search);
 const staticCapture = query.get("static") === "1";
 
 let swingState = query.has("phase")
-  ? { phase: getSwingPhase(query.get("phase")).id, playing: false }
+  ? { phase: getSwingPhase(query.get("phase")).id, playing: query.get("playing") === "1" }
   : createSwingState();
 let uiState = createUIState();
 let uiHistory = [];
@@ -38,6 +38,11 @@ function applyQueryState() {
   if (query.has("zoom")) uiState = reduceUI(uiState, { type: "SET_ZOOM", zoom: query.get("zoom") });
   if (query.has("age")) uiState = reduceUI(uiState, { type: "SET_AGE", age: query.get("age") });
   if (query.has("club")) uiState = reduceUI(uiState, { type: "SELECT_CLUB", club: query.get("club") });
+  for (const parameter of ["rotation", "loft", "tempo"]) {
+    if (query.has(parameter)) {
+      uiState = reduceUI(uiState, { type: "SET_PARAMETER", name: parameter, value: query.get(parameter) });
+    }
+  }
   if (query.has("window")) uiState = reduceUI(uiState, { type: "SET_WINDOW_MODE", mode: query.get("window") });
   if (query.has("dialog")) uiState = reduceUI(uiState, { type: "OPEN_DIALOG", dialog: query.get("dialog") });
 }
@@ -96,6 +101,7 @@ function renderDialog() {
     about: ["About GolfStudio", "GolfStudio 1.0\nReference-preserving swing visualizer."],
     controls: ["GolfStudio controls", "Menus, toolbar tools, zoom, club library, age spinner, graph timeline, and all four analysis tabs are interactive. Space plays; arrow keys step; F11 opens presentation."],
     close: ["Close GolfStudio", "Close the current GolfStudio session?"],
+    "open-file": ["Open session", "Choose a GolfStudio JSON session file.\nSimulated in the Figma prototype; native in the browser build."],
   };
   const [heading, copy] = dialogCopy[uiState.dialog] || ["GolfStudio", ""];
   title.textContent = heading;
@@ -138,7 +144,7 @@ function render() {
   root.style.setProperty("--club-angle", `${phase.angle + uiState.parameters.rotation}deg`);
   root.style.setProperty("--club-x", `${phase.x}px`);
   root.style.setProperty("--club-y", `${phase.y}px`);
-  root.style.setProperty("--phase-duration", reduceMotion ? "0ms" : `${phase.duration}ms`);
+  root.style.setProperty("--phase-duration", "0ms");
   root.style.setProperty("--timeline-x", `${phase.progress * 2.63}px`);
   root.style.setProperty("--canvas-scale", String(uiState.zoom / 128));
   root.style.setProperty("--view-x", `${uiState.viewOffset.x}px`);
@@ -163,7 +169,10 @@ function render() {
   document.querySelector("#tempo-slider").value = String(uiState.parameters.tempo);
   for (const select of document.querySelectorAll("[data-part]")) select.value = uiState.parts[select.dataset.part];
 
-  for (const button of document.querySelectorAll('[data-action="PLAY"]')) button.setAttribute("aria-pressed", String(swingState.playing));
+  for (const button of document.querySelectorAll('[data-action="PLAY"]')) {
+    button.setAttribute("aria-pressed", String(swingState.playing));
+    button.setAttribute("aria-label", swingState.playing ? "Stop swing" : "Animate swing");
+  }
   for (const button of document.querySelectorAll("button[data-tool]")) button.setAttribute("aria-pressed", String(button.dataset.tool === uiState.tool));
   for (const tab of document.querySelectorAll("[data-tab]")) tab.setAttribute("aria-pressed", String(tab.dataset.tab === uiState.panel));
 
@@ -234,7 +243,11 @@ function handleCommand(command) {
   }
 }
 
-for (const button of document.querySelectorAll("[data-action]")) button.onclick = () => dispatchSwing({ type: button.dataset.action });
+for (const button of document.querySelectorAll("[data-action]")) {
+  button.onclick = () => dispatchSwing({
+    type: button.dataset.action === "PLAY" && swingState.playing ? "PAUSE" : button.dataset.action,
+  });
+}
 for (const button of document.querySelectorAll("[data-menu]")) button.onclick = () => dispatchUI({ type: "TOGGLE_MENU", menu: button.dataset.menu }, { record: false });
 for (const button of document.querySelectorAll("button[data-tool]")) button.onclick = () => dispatchUI({ type: "SET_TOOL", tool: button.dataset.tool });
 for (const button of document.querySelectorAll("[data-tab]")) button.onclick = () => dispatchUI({ type: "SET_PANEL", panel: button.dataset.tab });
@@ -250,6 +263,9 @@ for (const button of document.querySelectorAll("[data-region]")) button.onclick 
 for (const button of document.querySelectorAll("[data-age-step]")) button.onclick = () => dispatchUI({ type: "STEP_AGE", delta: button.dataset.ageStep });
 for (const input of document.querySelectorAll("[data-parameter]")) input.addEventListener("input", () => dispatchUI({ type: "SET_PARAMETER", name: input.dataset.parameter, value: input.value }));
 for (const select of document.querySelectorAll("[data-part]")) select.addEventListener("change", () => dispatchUI({ type: "SET_PART", name: select.dataset.part, value: select.value }));
+for (const button of document.querySelectorAll("[data-zoom-option]")) {
+  button.addEventListener("click", () => dispatchUI({ type: "SET_ZOOM", zoom: button.dataset.zoomOption }));
+}
 
 document.querySelector('[data-popup="club"]').replaceChildren(...CLUBS.map((club) => {
   const button = document.createElement("button");

@@ -45,16 +45,17 @@ loopback alias.
 8. Rebuild labels, layout, controls, and animation as native Figma and web
    elements.
 
-## Exact interactive GolfStudio prototype
+## Tested interactive GolfStudio prototype
 
 The current deliverable is the separate Figma Design file
-[GolfStudio Exact Interactive Replica — v002](https://www.figma.com/design/TWPIEIOVyLjDEnlzWLcnIw).
-Open `05 Complete Controls`, select Default (`16:2`), and present the
-`GolfStudio Complete Controls` flow. Its exact 474×403 states cover the File
-menu, zoom, Rotation, Parameters, Parts, About, minimized, presentation, and
-swing-playing views. The `GolfStudio / Complete View` component set (`15:6`)
-contains the canonical raster variants. The original four-state Swing Sequence
-remains available on `03 Exact Prototype`.
+[GolfStudio Complete Interactive Replica](https://www.figma.com/design/LY8R5xSUKGJJ6UEEuCpzPJ).
+Open `03 Prototype`, select `V004 / Default` (`7:2`), and present the
+`GolfStudio Complete Controls` flow. Its 26 reachable 474×403 states cover File
+and simulated Open, Scale choices, putter and driver selection, classic
+trackbar positions, Parts, About, minimized, presentation, timeline states,
+and an interruptible swing sequence. The
+`GolfStudio / Tested Interaction View V004` component set (`18:27`) contains
+the verified raster variants.
 
 The earlier v001 file is superseded: it matched the canvas dimensions but
 redrew the entire interface, producing normalized RMSE 0.313 and changing every
@@ -135,4 +136,4 @@ See [the run evaluation](docs/runs/golf-club-object-v001-v003.md) and
 Figma-to-code handoff and verification record is in
 [the exact interactive prototype run](docs/runs/golfstudio-exact-interactive-v002.md).
 The exhaustive control pass is recorded in
-[GolfStudio Complete Controls v003](docs/runs/golfstudio-complete-controls-v003.md).
+[GolfStudio tested interactions v004](docs/runs/golfstudio-interaction-v004.md).

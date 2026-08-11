@@ -27,7 +27,8 @@
       "stateMatrix": "5:4"
     },
     "components": {
-      "completeView": "6:12"
+      "completeView": "6:12",
+      "testedInteractionViewV004": "18:27"
     },
     "prototypeFrames": {
       "default": "7:2",
@@ -42,7 +43,32 @@
       "swingPlaying": "7:20"
     },
     "flowName": "GolfStudio Complete Controls",
-    "status": "current standalone project file"
+    "testedPrototypeV004": {
+      "default": "7:2",
+      "fileMenu": "19:3",
+      "fileDialogSimulated": "19:5",
+      "scaleMenu": "19:7",
+      "zoom200": "19:9",
+      "clubMenu": "19:11",
+      "putter": "19:13",
+      "driver": "19:15",
+      "rotationLow": "19:17",
+      "rotationReference": "19:19",
+      "rotationHigh": "19:21",
+      "parametersReference": "19:23",
+      "loftLow": "19:25",
+      "loftHigh": "19:27",
+      "tempoLow": "19:29",
+      "tempoHigh": "19:31",
+      "playingAddress": "19:33",
+      "playingBackswing": "19:35",
+      "playingImpact": "19:37",
+      "finishPaused": "19:39",
+      "backswingPaused": "19:41",
+      "impactPaused": "19:43"
+    },
+    "flowName": "GolfStudio Complete Controls",
+    "status": "current standalone project file with tested v004 flow"
   },
   "golfstudio-interactive-v001": {
     "projectId": "637562440",

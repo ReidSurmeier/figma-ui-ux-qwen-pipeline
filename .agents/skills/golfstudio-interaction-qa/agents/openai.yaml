@@ -1,0 +1,4 @@
+interface:
+  display_name: "GolfStudio Interaction QA"
+  short_description: "Test every GolfStudio control before signoff"
+  default_prompt: "Use $golfstudio-interaction-qa to audit the browser and Figma prototype control by control."
