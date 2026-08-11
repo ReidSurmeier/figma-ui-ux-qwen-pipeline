@@ -26,6 +26,7 @@ function parseArgs(argv) {
   const options = {
     headless: true,
     timeoutMs: 30_000,
+    waitForLogin: false,
     profileDir: path.join(os.homedir(), ".local", "state", "golfstudio-embed-qa", "chrome-profile"),
     out: null,
   };
@@ -33,6 +34,7 @@ function parseArgs(argv) {
   for (let index = 0; index < argv.length; index += 1) {
     const arg = argv[index];
     if (arg === "--headed") options.headless = false;
+    else if (arg === "--wait-for-login") options.waitForLogin = true;
     else if (arg === "--timeout-ms") options.timeoutMs = Number(argv[++index]);
     else if (arg === "--profile-dir") options.profileDir = path.resolve(argv[++index]);
     else if (arg === "--out") options.out = path.resolve(argv[++index]);
@@ -120,8 +122,11 @@ async function run() {
     let timedOut = false;
     try {
       await page.waitForFunction(
-        () => ["READY", "AUTH_REQUIRED"].includes(document.querySelector("[role=status]")?.textContent),
-        undefined,
+        (waitForLogin) => {
+          const currentStatus = document.querySelector("[role=status]")?.textContent;
+          return waitForLogin ? currentStatus === "READY" : ["READY", "AUTH_REQUIRED"].includes(currentStatus);
+        },
+        options.waitForLogin,
         { timeout: options.timeoutMs },
       );
     } catch (error) {
