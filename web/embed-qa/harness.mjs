@@ -30,7 +30,6 @@ if (!clientId) {
   iframe.title = "GolfStudio v004 interactive prototype";
   iframe.src = embedUrl.toString();
   iframe.allowFullscreen = true;
-  embedMount.append(iframe);
   controls.hidden = false;
   eventPanel.hidden = false;
   status.textContent = "WAITING_FOR_FIGMA";
@@ -70,4 +69,6 @@ if (!clientId) {
       currentNode.textContent = `Current node: ${message.data.presentedNodeId}`;
     }
   });
+
+  embedMount.append(iframe);
 }

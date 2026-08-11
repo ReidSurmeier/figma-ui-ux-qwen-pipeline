@@ -29,7 +29,7 @@ Figma file: <https://www.figma.com/design/LY8R5xSUKGJJ6UEEuCpzPJ>
 | Rotation, loft, and tempo | PASS: pointer drags, keyboard steps, independent values, and immediate updates | PASS for discrete low/reference/high track clicks; continuous drag belongs to browser |
 | Animate and Stop | PASS: visible frames advance, Stop freezes, replay works | PASS structurally: three timed frames, Stop on every playing frame, instant transitions |
 | UI remains usable while playing | PASS: File and Parts controls remain usable during playback | PASS structurally: File and tabs exist on every playing frame |
-| Figma Present operation | N/A | UNAVAILABLE: the HTTPS Embed QA harness is deployed and credential injection works, but the Figma OAuth app has not yet registered the harness origin, so no Embed event is emitted |
+| Figma Present operation | N/A | UNAVAILABLE: the HTTPS origin is registered and `LOGIN_SCREEN_SHOWN` is observed, but the dedicated QA browser profile is not authenticated for the private file |
 
 The live Figma structural audit found 26 active frames, 203 valid destination
 edges, three `AFTER_TIMEOUT` triggers, zero missing destinations, zero
@@ -63,10 +63,17 @@ Run the gate through Bitwarden's host-encrypted injection path:
 
 Exit `0` means `READY`, exit `2` means the origin works but browser
 authentication is required, exit `3` means the origin or Embed event surface
-remains unavailable, and exit `4` is a runner error. On 2026-08-11 the live
-result was exit `3`: `WAITING_FOR_FIGMA` with zero events. The result remains
-`UNAVAILABLE` until the allowed origin is saved in Figma and the runner emits
+remains unavailable, and exit `4` is a runner error. After the allowed origin
+was saved on 2026-08-11, the live result was exit `2`: `AUTH_REQUIRED` with one
+observed `LOGIN_SCREEN_SHOWN` event. This confirms the origin, Embed client ID,
+and event channel are working. The result remains `UNAVAILABLE` until the
+dedicated browser profile is logged into Figma and the runner emits
 `INITIAL_LOAD`.
+
+For the one-time authenticated profile setup, run the same command with
+`--headed --timeout-ms 300000`, log into Figma inside the opened embed, then
+rerun headless. The profile is stored outside Git under
+`~/.local/state/golfstudio-embed-qa/chrome-profile`.
 
 The red-green browser work also caught and fixed three real defects: Open left
 its menu expanded, timeline Arrow Right could remain stuck on Impact, and the

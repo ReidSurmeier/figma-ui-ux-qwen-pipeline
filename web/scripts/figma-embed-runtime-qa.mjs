@@ -104,13 +104,18 @@ async function run() {
     );
 
     const page = context.pages()[0] ?? (await context.newPage());
+    const cdp = await context.newCDPSession(page);
+    await cdp.send("Network.enable");
+    await cdp.send("Network.setCacheDisabled", { cacheDisabled: true });
     const figmaResponses = [];
     page.on("response", (response) => {
       const url = new URL(response.url());
       if (!url.hostname.endsWith("figma.com")) return;
       figmaResponses.push({ host: url.hostname, path: url.pathname, status: response.status() });
     });
-    await page.goto(HARNESS_URL, { waitUntil: "domcontentloaded" });
+    const runUrl = new URL(HARNESS_URL);
+    runUrl.searchParams.set("qa-run", Date.now().toString());
+    await page.goto(runUrl.toString(), { waitUntil: "domcontentloaded" });
 
     let timedOut = false;
     try {

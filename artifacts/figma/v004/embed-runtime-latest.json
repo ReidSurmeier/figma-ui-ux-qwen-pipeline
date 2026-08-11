@@ -1,0 +1,97 @@
+{
+  "outcome": "AUTH_REQUIRED",
+  "status": "AUTH_REQUIRED",
+  "currentNode": null,
+  "events": [
+    {
+      "type": "LOGIN_SCREEN_SHOWN",
+      "presentedNodeId": null
+    }
+  ],
+  "messageMetadata": [
+    {
+      "origin": "https://www.figma.com",
+      "payloadKind": "string",
+      "payloadLength": 18,
+      "keys": [],
+      "type": null,
+      "knownTokens": [
+        "LOGIN_SCREEN_SHOWN"
+      ]
+    }
+  ],
+  "figmaResponses": [
+    {
+      "host": "embed.figma.com",
+      "path": "/proto/LY8R5xSUKGJJ6UEEuCpzPJ/GolfStudio-v004",
+      "status": 302
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/embed/interstitial",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/webpack-artifacts/assets/embed_interstitial-079ddfd998d31bc3.min.js.br",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/webpack-artifacts/assets/embed_interstitial-52cd2f7ea545f74c.min.css.br",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/webpack-artifacts/assets/embed_interstitial-342eacce6aee0512.min.en.json.br",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/api/figment-proxy/page",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/api/figment-proxy/page",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/proto/LY8R5xSUKGJJ6UEEuCpzPJ/GolfStudio-v004",
+      "status": 404
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/api/figment-proxy/monitor",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/embed/interstitial",
+      "status": 302
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/proto/LY8R5xSUKGJJ6UEEuCpzPJ/GolfStudio-v004",
+      "status": 404
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/webpack-artifacts/assets/404-1f3e078137d01b47.min.js.br",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/webpack-artifacts/assets/404-b75296d554071d50.min.css.br",
+      "status": 200
+    },
+    {
+      "host": "www.figma.com",
+      "path": "/webpack-artifacts/assets/404-f1b46e4b65466b30.min.en.json.br",
+      "status": 200
+    }
+  ],
+  "harnessUrl": "https://reidsurmeier.github.io/qwen-image-ui-pipeline/embed-qa/",
+  "checkedAt": "2026-08-11T21:49:40.779Z"
+}
