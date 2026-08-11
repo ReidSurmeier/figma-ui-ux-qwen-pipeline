@@ -73,6 +73,28 @@ test("Figma login screen fails the runtime gate", async ({ page }) => {
   await expect(page.getByRole("log")).toContainText("LOGIN_SCREEN_SHOWN");
 });
 
+test("Figma bare-string login event fails the runtime gate", async ({ page }) => {
+  await page.route("https://embed.figma.com/**", (route) =>
+    route.fulfill({ status: 200, contentType: "text/html", body: "<!doctype html><title>Figma stub</title>" }),
+  );
+  await page.addInitScript(() => {
+    sessionStorage.setItem("golfstudio.embed.clientId", "test-public-client-id");
+  });
+  await page.goto("/embed-qa/");
+
+  await page.evaluate(() => {
+    window.dispatchEvent(
+      new MessageEvent("message", {
+        origin: "https://www.figma.com",
+        data: "LOGIN_SCREEN_SHOWN",
+      }),
+    );
+  });
+
+  await expect(page.getByRole("status")).toHaveText("AUTH_REQUIRED");
+  await expect(page.getByRole("log")).toContainText("LOGIN_SCREEN_SHOWN");
+});
+
 test("presented node changes are exposed as runtime evidence", async ({ page }) => {
   await page.route("https://embed.figma.com/**", (route) =>
     route.fulfill({ status: 200, contentType: "text/html", body: "<!doctype html><title>Figma stub</title>" }),

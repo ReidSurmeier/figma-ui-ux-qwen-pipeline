@@ -60,12 +60,56 @@ async function run() {
   try {
     await context.addInitScript(
       ({ origin, storageKey, value }) => {
-        if (location.origin === origin) sessionStorage.setItem(storageKey, value);
+        if (location.origin !== origin) return;
+        sessionStorage.setItem(storageKey, value);
+        window.__golfstudioEmbedMessageMetadata = [];
+        window.addEventListener(
+          "message",
+          (event) => {
+            let parsed = event.data;
+            if (typeof event.data === "string") {
+              try {
+                parsed = JSON.parse(event.data);
+              } catch {
+                parsed = null;
+              }
+            }
+            window.__golfstudioEmbedMessageMetadata.push({
+              origin: event.origin,
+              payloadKind: Array.isArray(event.data) ? "array" : typeof event.data,
+              payloadLength: typeof event.data === "string" ? event.data.length : null,
+              keys:
+                parsed && typeof parsed === "object" && !Array.isArray(parsed)
+                  ? Object.keys(parsed).sort()
+                  : [],
+              type: typeof parsed?.type === "string" ? parsed.type : null,
+              knownTokens:
+                typeof event.data === "string"
+                  ? [
+                      "INITIAL_LOAD",
+                      "LOGIN_SCREEN_SHOWN",
+                      "PASSWORD_SCREEN_SHOWN",
+                      "PRESENTED_NODE_CHANGED",
+                      "NEW_STATE",
+                      "ready",
+                      "resize",
+                    ].filter((token) => event.data.includes(token))
+                  : [],
+            });
+          },
+          { capture: true },
+        );
       },
       { origin: HARNESS_ORIGIN, storageKey: CLIENT_ID_STORAGE_KEY, value: clientId },
     );
 
     const page = context.pages()[0] ?? (await context.newPage());
+    const figmaResponses = [];
+    page.on("response", (response) => {
+      const url = new URL(response.url());
+      if (!url.hostname.endsWith("figma.com")) return;
+      figmaResponses.push({ host: url.hostname, path: url.pathname, status: response.status() });
+    });
     await page.goto(HARNESS_URL, { waitUntil: "domcontentloaded" });
 
     let timedOut = false;
@@ -87,6 +131,7 @@ async function run() {
         type,
         presentedNodeId: data?.presentedNodeId ?? null,
       })),
+      messageMetadata: window.__golfstudioEmbedMessageMetadata ?? [],
     }));
 
     const outcome = timedOut
@@ -101,6 +146,8 @@ async function run() {
       status: state.status,
       currentNode: state.currentNode === "—" ? null : state.currentNode,
       events: state.events,
+      messageMetadata: state.messageMetadata,
+      figmaResponses: figmaResponses.slice(-50),
       harnessUrl: HARNESS_URL,
       checkedAt: new Date().toISOString(),
     };

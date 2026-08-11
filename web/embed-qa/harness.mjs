@@ -45,25 +45,29 @@ if (!clientId) {
   }
 
   window.addEventListener("message", (event) => {
-    if (event.origin !== "https://www.figma.com" || typeof event.data?.type !== "string") return;
+    const message =
+      typeof event.data === "string"
+        ? { type: event.data, data: null }
+        : event.data;
+    if (event.origin !== "https://www.figma.com" || typeof message?.type !== "string") return;
 
-    events.push({ type: event.data.type, data: event.data.data ?? null });
+    events.push({ type: message.type, data: message.data ?? null });
     const item = document.createElement("li");
-    item.textContent = event.data.type;
+    item.textContent = message.type;
     eventLog.append(item);
 
-    if (event.data.type === "INITIAL_LOAD") {
+    if (message.type === "INITIAL_LOAD") {
       status.textContent = "READY";
       for (const button of controls.querySelectorAll("button")) button.disabled = false;
     }
 
-    if (event.data.type === "LOGIN_SCREEN_SHOWN") {
+    if (message.type === "LOGIN_SCREEN_SHOWN") {
       status.textContent = "AUTH_REQUIRED";
       for (const button of controls.querySelectorAll("button")) button.disabled = true;
     }
 
-    if (event.data.type === "PRESENTED_NODE_CHANGED" && event.data.data?.presentedNodeId) {
-      currentNode.textContent = `Current node: ${event.data.data.presentedNodeId}`;
+    if (message.type === "PRESENTED_NODE_CHANGED" && message.data?.presentedNodeId) {
+      currentNode.textContent = `Current node: ${message.data.presentedNodeId}`;
     }
   });
 }
