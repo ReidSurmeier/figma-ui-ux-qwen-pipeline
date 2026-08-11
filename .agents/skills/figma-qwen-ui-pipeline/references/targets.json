@@ -11,9 +11,38 @@
     "golfUiNodes": {
       "selectedRender": "4:146",
       "contactSheet": "4:147",
-      "exactAssembly": "6:146",
-      "completeWorkingUi": "15:163"
+      "exactAssembly": "6:146"
     }
+  },
+  "golfstudio-complete-standalone-v003": {
+    "projectId": "637562440",
+    "fileKey": "LY8R5xSUKGJJ6UEEuCpzPJ",
+    "editorType": "figma",
+    "url": "https://www.figma.com/design/LY8R5xSUKGJJ6UEEuCpzPJ",
+    "rootNodeId": "1:2",
+    "pages": {
+      "finalUi": "0:1",
+      "components": "5:2",
+      "prototype": "5:3",
+      "stateMatrix": "5:4"
+    },
+    "components": {
+      "completeView": "6:12"
+    },
+    "prototypeFrames": {
+      "default": "7:2",
+      "fileMenu": "7:4",
+      "zoom200": "7:6",
+      "rotation": "7:8",
+      "parameters": "7:10",
+      "parts": "7:12",
+      "about": "7:14",
+      "minimized": "7:16",
+      "presentation": "7:18",
+      "swingPlaying": "7:20"
+    },
+    "flowName": "GolfStudio Complete Controls",
+    "status": "current standalone project file"
   },
   "golfstudio-interactive-v001": {
     "projectId": "637562440",
