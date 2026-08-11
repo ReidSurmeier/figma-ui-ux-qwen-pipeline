@@ -99,3 +99,26 @@ test("presented node changes are exposed as runtime evidence", async ({ page }) 
     .poll(() => page.evaluate(() => window.__golfstudioEmbedQa.events.at(-1)?.data?.presentedNodeId))
     .toBe("19:3");
 });
+
+test("events from untrusted origins cannot change the runtime gate", async ({ page }) => {
+  await page.route("https://embed.figma.com/**", (route) =>
+    route.fulfill({ status: 200, contentType: "text/html", body: "<!doctype html><title>Figma stub</title>" }),
+  );
+  await page.addInitScript(() => {
+    sessionStorage.setItem("golfstudio.embed.clientId", "test-public-client-id");
+  });
+  await page.goto("/embed-qa/");
+
+  await page.evaluate(() => {
+    window.dispatchEvent(
+      new MessageEvent("message", {
+        origin: "https://attacker.invalid",
+        data: { type: "INITIAL_LOAD" },
+      }),
+    );
+  });
+
+  await expect(page.getByRole("status")).toHaveText("WAITING_FOR_FIGMA");
+  await expect(page.getByRole("button", { name: "Restart" })).toBeDisabled();
+  await expect(page.getByRole("log")).toBeEmpty();
+});
