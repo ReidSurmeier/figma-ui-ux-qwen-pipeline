@@ -132,7 +132,7 @@
         <button role="menuitem" data-dialog="controls">Controls</button>
         <button role="menuitem" data-dialog="about">About GolfStudio</button>
       </div>
-      <div class="menu-popup zoom-menu" data-popup="zoom" role="listbox" aria-label="Zoom percentage options">
+      <div id="zoom-options" class="menu-popup zoom-menu" data-popup="zoom" role="listbox" aria-label="Zoom percentage options">
         <button role="option" data-zoom-option="64">64%</button>
         <button role="option" data-zoom-option="100">100%</button>
         <button role="option" data-zoom-option="128">128%</button>
@@ -149,16 +149,19 @@
         <button class="hotspot toolbar-pan" type="button" data-tool="pan" aria-label="Pan tool"></button>
         <button class="hotspot toolbar-rotate" type="button" data-tool="rotate" aria-label="Rotate tool"></button>
         <button class="hotspot toolbar-zoom" type="button" data-tool="zoom" aria-label="Zoom tool"></button>
-        <select id="zoom-select" class="zoom-select" aria-label="Zoom percentage">
-          <option value="64">64%</option><option value="100">100%</option>
-          <option value="128" selected>128%</option><option value="200">200%</option><option value="256">256%</option>
-        </select>
+        <button
+          id="zoom-select"
+          class="zoom-select"
+          type="button"
+          role="combobox"
+          aria-label="Zoom percentage"
+          aria-controls="zoom-options"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          data-menu="zoom"
+        >128%</button>
         <button class="hotspot scale-to-fit" type="button" data-ui-action="SCALE_TO_FIT" aria-label="Scale to Fit"></button>
 
-        <button class="hotspot toolbar-previous" type="button" data-action="PREVIOUS" aria-label="Previous swing phase"></button>
-        <button class="hotspot toolbar-play" type="button" data-action="PLAY" aria-label="Play swing"></button>
-        <button class="hotspot toolbar-next" type="button" data-action="NEXT" aria-label="Next swing phase"></button>
-        <button class="hotspot toolbar-reset" type="button" data-action="RESET" aria-label="Reset swing"></button>
         <button class="hotspot animate-button" type="button" data-action="PLAY" aria-label="Animate swing"></button>
 
         <div id="canvas-control" class="canvas-control" aria-label="Interactive golf canvas" tabindex="0"></div>
@@ -204,6 +207,6 @@
       <p id="live-status" class="visually-hidden" aria-live="polite">Address, 0 percent, ready.</p>
     </main>
     <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
-    <script type="module" src="src/app.mjs?v=complete-controls-v5"></script>
+    <script type="module" src="src/app.mjs?v=complete-controls-v8"></script>
   </body>
 </html>

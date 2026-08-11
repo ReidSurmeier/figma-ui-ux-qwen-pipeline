@@ -534,17 +534,6 @@ select { font: inherit; }
 .toolbar-pan { left: 35px; top: 45px; width: 25px; height: 23px; }
 .toolbar-rotate { left: 60px; top: 45px; width: 25px; height: 23px; }
 .toolbar-zoom { left: 85px; top: 45px; width: 25px; height: 23px; }
-.toolbar-previous { left: 11px; top: 44px; width: 25px; height: 25px; }
-.toolbar-play { left: 36px; top: 44px; width: 25px; height: 25px; }
-.toolbar-next { left: 61px; top: 44px; width: 25px; height: 25px; }
-.toolbar-reset { left: 86px; top: 44px; width: 25px; height: 25px; }
-
-/* The four original toolbar buttons now act as select/pan/rotate/zoom. Swing
-   transport remains available through Animate, Space, arrows, and the graph. */
-.toolbar-previous,
-.toolbar-play,
-.toolbar-next,
-.toolbar-reset { pointer-events: none; }
 
 .zoom-select {
   position: absolute;
@@ -552,6 +541,11 @@ select { font: inherit; }
   top: 49px;
   width: 59px;
   height: 19px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   opacity: 0;
   cursor: pointer;
 }

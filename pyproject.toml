@@ -13,3 +13,6 @@ qwen-ui-pipeline = "qwen_ui_pipeline.cli:main"
 
 [tool.setuptools.packages.find]
 include = ["qwen_ui_pipeline*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]

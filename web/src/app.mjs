@@ -74,17 +74,21 @@ function renderLibrary() {
 }
 
 function renderMenus() {
+  const regionLabels = { library: "Club library", graph: "Analysis panel", toolbar: "Toolbar" };
   for (const heading of document.querySelectorAll("[data-menu]")) {
     heading.setAttribute("aria-expanded", String(heading.dataset.menu === uiState.openMenu));
   }
   for (const regionButton of document.querySelectorAll("[data-region]")) {
     const visible = uiState.visibleRegions[regionButton.dataset.region];
-    regionButton.textContent = `${visible ? "✓" : "  "} ${regionButton.dataset.region === "graph" ? "Analysis panel" : regionButton.dataset.region[0].toUpperCase() + regionButton.dataset.region.slice(1)}`;
+    regionButton.textContent = `${visible ? "✓" : "  "} ${regionLabels[regionButton.dataset.region]}`;
     regionButton.setAttribute("aria-checked", String(visible));
   }
   const motionButton = document.querySelector('[data-command="reduced-motion"]');
   motionButton.textContent = `${uiState.reducedMotion ? "✓" : "  "} Reduced motion`;
   motionButton.setAttribute("aria-checked", String(uiState.reducedMotion));
+  for (const option of document.querySelectorAll("[data-zoom-option]")) {
+    option.setAttribute("aria-selected", String(Number(option.dataset.zoomOption) === uiState.zoom));
+  }
 }
 
 function renderDialog() {
@@ -153,7 +157,7 @@ function render() {
 
   timeline.value = String(phase.progress);
   libraryScroll.value = String(uiState.libraryStart);
-  zoomSelect.value = String(uiState.zoom);
+  zoomSelect.textContent = `${uiState.zoom}%`;
   document.querySelector("#zoom-readout").textContent = `${uiState.zoom}%`;
   ageInput.value = String(uiState.age);
   document.querySelector("#age-copy").textContent = String(uiState.age);
@@ -223,7 +227,10 @@ function saveSnapshot() {
 function handleCommand(command) {
   switch (command) {
     case "new": resetSession(); break;
-    case "open": sessionFile.click(); break;
+    case "open":
+      dispatchUI({ type: "TOGGLE_MENU", menu: uiState.openMenu }, { record: false });
+      sessionFile.click();
+      break;
     case "save": saveSnapshot(); break;
     case "close": dispatchUI({ type: "OPEN_DIALOG", dialog: "close" }); break;
     case "undo": {
@@ -277,8 +284,13 @@ document.querySelector('[data-popup="club"]').replaceChildren(...CLUBS.map((club
 }));
 
 timeline.addEventListener("input", () => dispatchSwing({ type: "SEEK", progress: Number(timeline.value) }));
+timeline.addEventListener("keydown", (event) => {
+  const action = { ArrowLeft: "PREVIOUS", ArrowRight: "NEXT" }[event.key];
+  if (!action) return;
+  event.preventDefault();
+  dispatchSwing({ type: action });
+});
 libraryScroll.addEventListener("input", () => dispatchUI({ type: "SCROLL_LIBRARY", start: libraryScroll.value }));
-zoomSelect.addEventListener("change", () => dispatchUI({ type: "SET_ZOOM", zoom: zoomSelect.value }));
 document.querySelector('[data-ui-action="SCALE_TO_FIT"]').addEventListener("click", () => dispatchUI({ type: "SCALE_TO_FIT" }));
 ageInput.addEventListener("change", () => dispatchUI({ type: "SET_AGE", age: ageInput.value }));
 
@@ -333,6 +345,19 @@ window.addEventListener("keydown", (event) => {
   if (event.ctrlKey || event.metaKey) {
     const command = { n: "new", o: "open", s: "save", z: "undo" }[event.key.toLowerCase()];
     if (command) { event.preventDefault(); handleCommand(command); }
+    return;
+  }
+  if (uiState.openMenu === "zoom" && ["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+    event.preventDefault();
+    const options = [...document.querySelectorAll('[data-popup="zoom"] [role="option"]')];
+    const focused = options.indexOf(document.activeElement);
+    const selected = options.findIndex((option) => option.getAttribute("aria-selected") === "true");
+    let next = focused >= 0 ? focused : selected;
+    if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = options.length - 1;
+    else if (event.key === "ArrowDown") next = Math.min(options.length - 1, next + 1);
+    else next = Math.max(0, next - 1);
+    options[next]?.focus();
     return;
   }
   if (event.target instanceof HTMLInputElement || event.target instanceof HTMLSelectElement) return;

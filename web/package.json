@@ -3,7 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/*.test.mjs",
-    "serve": "python3 -m http.server 4173 --directory ."
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:unit": "node --test tests/*.test.mjs",
+    "test:e2e": "playwright test",
+    "serve": "python3 -m http.server 4173 --bind 10.255.255.254 --directory ."
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1"
   }
 }
