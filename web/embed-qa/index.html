@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; frame-src https://embed.figma.com https://www.figma.com; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <title>GolfStudio Figma Embed QA</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./harness.mjs"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">GolfStudio v004</p>
+        <h1>Figma Embed QA</h1>
+        <p id="status" role="status" aria-live="polite">BOOTING</p>
+      </header>
+
+      <section id="configuration-required" hidden>
+        <h2>Configuration required</h2>
+        <p>Inject the Figma Embed API client ID to begin QA.</p>
+      </section>
+
+      <section id="embed-mount" aria-label="Embedded GolfStudio prototype"></section>
+
+      <section id="controls" aria-label="Prototype controls" hidden>
+        <button type="button" data-message="NAVIGATE_BACKWARD" disabled>Previous</button>
+        <button type="button" data-message="RESTART" disabled>Restart</button>
+        <button type="button" data-message="NAVIGATE_FORWARD" disabled>Next</button>
+      </section>
+
+      <section id="event-panel" hidden>
+        <h2>Figma event transcript</h2>
+        <p id="current-node">Current node: —</p>
+        <ol id="event-log" role="log" aria-live="polite"></ol>
+      </section>
+    </main>
+  </body>
+</html>
