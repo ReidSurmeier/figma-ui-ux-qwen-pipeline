@@ -2,7 +2,7 @@ name: Deploy GolfStudio Embed QA
 
 on:
   push:
-    branches: [golf-ui-pipeline]
+    branches: [main]
     paths:
       - ".github/workflows/deploy-embed-qa-pages.yml"
       - "web/**"

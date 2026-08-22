@@ -5,7 +5,7 @@ import { pathToFileURL } from "node:url";
 
 import { chromium } from "playwright";
 
-const HARNESS_URL = "https://reidsurmeier.github.io/qwen-image-ui-pipeline/embed-qa/";
+const HARNESS_URL = "https://reidsurmeier.github.io/figma-ui-ux-qwen-pipeline/embed-qa/";
 const HARNESS_ORIGIN = new URL(HARNESS_URL).origin;
 const CLIENT_ID_STORAGE_KEY = "golfstudio.embed.clientId";
 

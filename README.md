@@ -1,4 +1,4 @@
-# Qwen UI pipeline
+# Figma UI/UX Qwen Pipeline
 
 A reference-preserving UI workflow built around Qwen Image 3 Pro, ComfyUI,
 Figma/FigJam, and deterministic application code.

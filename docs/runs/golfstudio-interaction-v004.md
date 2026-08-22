@@ -40,7 +40,7 @@ sharing settings or authentication state were changed to manufacture a pass.
 ## Embed API runtime gate
 
 The credential-free harness is deployed at
-<https://reidsurmeier.github.io/qwen-image-ui-pipeline/embed-qa/>. GitHub Pages
+<https://reidsurmeier.github.io/figma-ui-ux-qwen-pipeline/embed-qa/>. GitHub Pages
 is configured for HTTPS and the deployed `harness.mjs` checksum matches the
 committed file. The Figma OAuth app must list this exact allowed origin:
 
