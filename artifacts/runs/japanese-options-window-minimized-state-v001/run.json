@@ -1,0 +1,47 @@
+{
+  "status": "selected",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "prompt_id": "6340905d-4b06-46c1-b843-95cb7927a50a",
+  "duration_ms": 81895,
+  "reference_sha256": "a89550a02883f34dcc0d993089c8bc6869fccc741680b9e98d24535ef3ae8e77",
+  "brief": "../../../briefs/japanese-rpg-options-v001/options-window-minimized-state-v001.json",
+  "brief_sha256": "772b8e63f86b00e72061b90917763afc2d0c58ee01b347434050d66a35960298",
+  "workflow": "../../../workflows/japanese-options-window-minimized-state-v001.api.json",
+  "workflow_sha256": "f575baeae44640382fcebecce6b3c3cb4b9ecf21f6c6f40258a96ddb6c4555f8",
+  "failed_pre_generation_attempts": [
+    {
+      "prompt_id": "d9529a9e-974d-4bac-82c3-7861e726a7b9",
+      "provider": "openrouter",
+      "reason": "unsupported aspect_ratio source",
+      "billed_generation": false
+    },
+    {
+      "prompt_id": "556d6b71-d555-4ee8-a702-15237ec91c12",
+      "provider": "openrouter",
+      "reason": "routed provider rejected aspect_ratio 20:9",
+      "billed_generation": false
+    },
+    {
+      "prompt_id": "896ac039-963c-4560-a665-9f045f31903f",
+      "provider": "openrouter",
+      "reason": "HTTP 402 insufficient credits",
+      "billed_generation": false
+    }
+  ],
+  "outputs": [
+    { "file": "v001_00001_.png", "sha256": "96776cef24f924c45d6f5c0556de4f4927f8808e4af4f041eb9b9f60b4233154" },
+    { "file": "v001_00002_.png", "sha256": "9a2e620ddb4fe4f5dd5f02a4348f8f20d4500d056c6793652dda2edf9f438437" },
+    { "file": "v001_00003_.png", "sha256": "6515c551b6b87bb5e6834c62405505ef0c6462814a198812b24e3234a6a24f83" },
+    { "file": "v001_00004_.png", "sha256": "0fa74d54a66629170983d78c37b9df2637aed2d9cf64552aeb20d3f50790a1b6" }
+  ],
+  "selection": {
+    "candidate": "v001_00003_.png",
+    "reason": "only candidate with a complete compact right endcap, blank editable title surface, and no body or pseudo-text remnants",
+    "measured_donor_bounds": [0, 0, 779, 63],
+    "assembly": "../../../scripts/assemble_japanese_options_minimized_state.sh",
+    "asset": "selected-minimized-plate.png",
+    "asset_sha256": "90c62e4cdc779f0bcdb11966833c32fa48752c2ed82582aca1e864b952d47631",
+    "asset_size": [180, 18]
+  }
+}

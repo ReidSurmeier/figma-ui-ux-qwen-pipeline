@@ -1,0 +1,14 @@
+{
+  "aspect_ratio": "2:1",
+  "input_references": [
+    {
+      "image_url": "[recorded separately]",
+      "type": "image_url"
+    }
+  ],
+  "model": "qwen/qwen-image-3-pro",
+  "n": 2,
+  "prompt": "[TASK]\nRecover clean background surfaces behind the exact Options-window title-bar foreground and vertical-tab text while preserving the title-bar gradient, frame, and tab silhouettes.\n\n[REFERENCE ROLE]\nReference image 1 is authoritative. This is a bounded removal pass, never a redesigned window.\n\n[PRESERVATION INVARIANTS]\n- Do not alter BGM, Effect, Skin, footer, body, tabs shapes, title-bar geometry, or outer frame.\n- Do not move, crop, rescale, smooth, modernize, or reinterpret the source.\n\n[CANVAS AND LAYOUT]\n- Return only the same window crop.\n- Edit the title-bar foreground at y=2..17 and the text inside the two vertical tabs at x=13..37, y=20..94; preserve all body controls.\n\n[REGION EDITS]\n- REGION: title-bar foreground\n  CHANGE: Remove the left round icon, exact Japanese \u30aa\u30d7\u30b7\u30e7\u30f3 title text, minimize icon, and close button. Continue the local blue title-bar gradient and thin chrome beneath them.\n  PRESERVE: title-bar height; gradient progression; outer frame; bottom rule\n- REGION: vertical-tab text\n  CHANGE: Remove only option and info letters. Keep both tab silhouettes, borders, selected fills, and overlap geometry.\n  PRESERVE: tab outlines; tab fills; body border\n\n[STYLE SYSTEM]\n- Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot.\n\n[ASSET RULES]\n- No title text, title icon, window-button icon, or vertical-tab letters remain.\n- Do not invent replacement objects.\n\n[NEGATIVE CONSTRAINTS]\n- No redesign, gibberish, duplicated controls, modern chrome, or changes outside the bounded foreground areas.\n\n[QUALITY GATE]\n- Title bar is a continuous source-style gradient with original geometry.\n- Tab shapes remain but carry no letters.\n- All body and footer controls remain unchanged.",
+  "resolution": "1K",
+  "seed": 22082615
+}

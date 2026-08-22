@@ -1,7 +1,7 @@
 # Engineer interactivity over the approved Reference Screen
 
-Status: accepted on 2026-08-10. Supersedes the visual-reconstruction approach
-used by GolfStudio prototype v001.
+Status: superseded by ADR 0008 on 2026-08-22. Retained as the historical
+decision for GolfStudio prototype v002-v004.
 
 ## Context
 

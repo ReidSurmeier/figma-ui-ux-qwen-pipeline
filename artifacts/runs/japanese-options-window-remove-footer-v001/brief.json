@@ -1,0 +1,47 @@
+{
+  "asset_rules": [
+    "No letters, Japanese glyphs, pseudo-text, checkbox squares, or check marks remain in the footer band.",
+    "Invent no replacement content."
+  ],
+  "canvas": [
+    "Return only the same window crop.",
+    "Edit approximately x=7..266 and y=98..120 at source scale; preserve the separator, body, title, tabs, and frame."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No redesign, gibberish, duplicated controls, added decoration, or changes outside the footer."
+  ],
+  "objective": "Surgically remove all footer-row foreground controls and text from the exact Japanese Options-window crop and reconstruct only the empty light-grey footer band.",
+  "output": {
+    "aspect_ratio": "2:1",
+    "count": 2,
+    "resolution": "1K",
+    "seed": 22082614
+  },
+  "preservation_invariants": [
+    "Do not alter the title, tabs, BGM, Effect, Skin, body, outer frame, or footer geometry.",
+    "Do not modernize, move, rescale, or smooth the source."
+  ],
+  "provider": "openrouter",
+  "quality_checks": [
+    "Footer is an empty continuous light-grey band.",
+    "Everything above the footer matches the reference."
+  ],
+  "reference_role": "Reference image 1 is authoritative. Preserve every feature above the footer region.",
+  "regions": [
+    {
+      "change": "Remove the opaque checkbox and label, Japanese \u30b9\u30ca\u30c3\u30d7 text, attack checkbox and label, skill checkbox and label, and item checkbox and label. Continue the original light-grey band and horizontal separator beneath them.",
+      "name": "footer foreground",
+      "preserve": [
+        "footer band height",
+        "outer border",
+        "horizontal separator",
+        "everything above y=98"
+      ]
+    }
+  ],
+  "style": [
+    "Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot."
+  ]
+}

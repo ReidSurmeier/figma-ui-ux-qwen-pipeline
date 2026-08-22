@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "openrouter",
+  "objective": "Recover clean background surfaces behind the exact Options-window title-bar foreground and vertical-tab text while preserving the title-bar gradient, frame, and tab silhouettes.",
+  "reference_role": "Reference image 1 is authoritative. This is a bounded removal pass, never a redesigned window.",
+  "canvas": ["Return only the same window crop.", "Edit the title-bar foreground at y=2..17 and the text inside the two vertical tabs at x=13..37, y=20..94; preserve all body controls."],
+  "regions": [
+    {"name": "title-bar foreground", "change": "Remove the left round icon, exact Japanese オプション title text, minimize icon, and close button. Continue the local blue title-bar gradient and thin chrome beneath them.", "preserve": ["title-bar height", "gradient progression", "outer frame", "bottom rule"]},
+    {"name": "vertical-tab text", "change": "Remove only option and info letters. Keep both tab silhouettes, borders, selected fills, and overlap geometry.", "preserve": ["tab outlines", "tab fills", "body border"]}
+  ],
+  "preservation_invariants": ["Do not alter BGM, Effect, Skin, footer, body, tabs shapes, title-bar geometry, or outer frame.", "Do not move, crop, rescale, smooth, modernize, or reinterpret the source."],
+  "asset_rules": ["No title text, title icon, window-button icon, or vertical-tab letters remain.", "Do not invent replacement objects."],
+  "negative_constraints": ["No redesign, gibberish, duplicated controls, modern chrome, or changes outside the bounded foreground areas."],
+  "style": ["Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot."],
+  "exact_copy": [],
+  "quality_checks": ["Title bar is a continuous source-style gradient with original geometry.", "Tab shapes remain but carry no letters.", "All body and footer controls remain unchanged."],
+  "output": {"resolution": "1K", "aspect_ratio": "2:1", "count": 2, "seed": 22082615}
+}

@@ -1,0 +1,39 @@
+{
+  "outputs": [
+    {
+      "bytes": 394848,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "f70f50db25771500f907abf05e4f536b1ec3158c9c4750c0b25586749f6e476e"
+    },
+    {
+      "bytes": 421129,
+      "file": "image-02.png",
+      "media_type": "image/png",
+      "sha256": "eb1558647680c103ad0379456fbde4cccad1480f3d837ce30eb0610683e96aec"
+    }
+  ],
+  "provenance": {
+    "prompt_id": null,
+    "provider": "openrouter"
+  },
+  "usage": {
+    "completion_tokens": 8350,
+    "completion_tokens_details": {
+      "image_tokens": 8350,
+      "reasoning_tokens": 0
+    },
+    "cost": 0.083,
+    "cost_details": {
+      "upstream_inference_completions_cost": 0.08,
+      "upstream_inference_cost": 0.083,
+      "upstream_inference_prompt_cost": 0.003
+    },
+    "is_byok": false,
+    "prompt_tokens": 447,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 8797
+  }
+}

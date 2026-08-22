@@ -4,6 +4,10 @@ __pycache__/
 .pytest_cache/
 .scratch/
 node_modules/
+prototype/dist/
+prototype/playwright-report/
+prototype/test-results/
+prototype/*.tsbuildinfo
 web/artifacts/playwright/
 web/playwright-report/
 web/test-results/

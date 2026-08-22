@@ -1,0 +1,84 @@
+{
+  "asset_rules": [
+    "Exactly one clean Options-window plate and no surrounding game UI.",
+    "No readable or pseudo-readable text, letters, numbers, symbols, checkbox marks, slider marks, dropdown arrows, or button icons may remain.",
+    "Do not invent replacement controls, labels, decoration, logos, panels, or content."
+  ],
+  "canvas": [
+    "Preserve the source aspect ratio exactly and return only the same Options-window crop with no added margin or surrounding application screenshot.",
+    "Render at 1120 by 488 pixels, exactly four times the source dimensions, so the result can be reduced to 280 by 122 for comparison.",
+    "Every removed foreground object must be replaced by the local surface that logically continues beneath it: title-bar gradient, flat white body, light-grey panel band, or existing separator geometry."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No modern rounded cards, soft shadows, glass effects, gradients other than the original title bar, modern typography, glossy buttons, antialiased redesign, or enlarged chrome.",
+    "No gibberish text, ghosted text, partial glyphs, checkbox remnants, slider remnants, dropdown remnants, duplicated tabs, extra buttons, or new icons.",
+    "No full-screen Japanese game screenshot, magenta application background, neighboring windows, chat UI, inventory UI, or status UI."
+  ],
+  "objective": "Create a clean-plate asset from the exact Japanese Options-window crop. Remove every text glyph and every interactive foreground control while reconstructing only the newly exposed window surfaces. Keep the window shell, dimensions, geometry, palette, separators, title-bar gradient, beveled borders, vertical tab shapes, and late-1990s raster character unchanged.",
+  "output": {
+    "aspect_ratio": "source",
+    "count": 4,
+    "resolution": "1K",
+    "seed": 22082601,
+    "size": "1120*488"
+  },
+  "preservation_invariants": [
+    "Keep the exact window rectangle, crop, outer frame, title-bar height, blue title-bar gradient, body panels, vertical-tab outlines, horizontal separators, bottom band, one-pixel borders, highlights, shadows, and corner geometry in their original positions.",
+    "Keep the original Windows-era low-resolution raster appearance, limited grey-blue palette, hard pixel-scale edges, subtle dithering, and source-scale proportions.",
+    "Do not move, scale, crop, rotate, perspective-warp, modernize, smooth, upscale-stylize, or reinterpret the window.",
+    "The result must be suitable as the background Clean Plate beneath independently reassembled source-pixel components."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "At source size, the outer window silhouette, title-bar geometry, tab geometry, body separators, bottom band, and palette align with the reference crop.",
+    "No text or interactive foreground pixels remain anywhere on the plate.",
+    "The plate provides plausible continuous backgrounds beneath every removed source component without introducing new visual language."
+  ],
+  "reference_role": "Reference image 1 is the authoritative 280 by 122 pixel crop of the Japanese Options window. It defines the exact crop, geometry, palette, line weights, bevels, gradients, pixel density, and raster style. This is a removal and background-reconstruction pass, not a redesign.",
+  "regions": [
+    {
+      "change": "Remove the Japanese title text and all three title-bar icons or buttons. Continue the original blue title-bar gradient and one-pixel chrome beneath them.",
+      "name": "title bar foreground",
+      "preserve": [
+        "title-bar height and gradient",
+        "outer frame and top corners",
+        "bottom title-bar rule"
+      ]
+    },
+    {
+      "change": "Remove the vertical option and info text only. Keep both tab silhouettes, borders, selected and unselected fills, and their exact overlap with the body panel.",
+      "name": "vertical tabs",
+      "preserve": [
+        "tab outlines",
+        "selected-tab geometry",
+        "unselected-tab geometry"
+      ]
+    },
+    {
+      "change": "Remove the BGM, Effect, and Skin labels; both complete slider controls including arrows, tracks, and thumbs; both on checkboxes and on labels; and the complete Skin dropdown field and arrow button. Reconstruct the flat white body and any uninterrupted panel borders behind them.",
+      "name": "main control body",
+      "preserve": [
+        "body bounds",
+        "left tab-to-body border",
+        "bottom body separator",
+        "all unoccupied white spacing"
+      ]
+    },
+    {
+      "change": "Remove every bottom-row checkbox and every bottom-row label, including opaque, the Japanese skin label, attack, skill, and item. Reconstruct the original light-grey band, horizontal highlight lines, and uninterrupted background.",
+      "name": "bottom option band",
+      "preserve": [
+        "band height",
+        "horizontal separators",
+        "outer bottom frame"
+      ]
+    }
+  ],
+  "style": [
+    "Authentic source-matched Japanese late-1990s or early-2000s desktop-game UI screenshot.",
+    "Crisp pixel-scale chrome, pale grey-blue bevels, thin hard rules, restrained dithering, and no contemporary design language.",
+    "This is an empty background plate, not a new interface."
+  ]
+}

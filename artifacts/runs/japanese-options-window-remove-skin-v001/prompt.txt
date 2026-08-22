@@ -1,0 +1,32 @@
+[TASK]
+Surgically remove only the complete Skin row foreground from the exact Japanese Options-window crop and reconstruct the white panel beneath it.
+
+[REFERENCE ROLE]
+Reference image 1 is authoritative. Preserve every feature outside the Skin-row region.
+
+[PRESERVATION INVARIANTS]
+- Do not alter anything outside the Skin row.
+- Do not move, scale, crop, smooth, modernize, or reinterpret the source.
+
+[CANVAS AND LAYOUT]
+- Return only the same window crop.
+- Edit approximately x=28..266 and y=68..96 at source scale; preserve title, tabs, BGM, Effect, footer, and frame.
+
+[REGION EDITS]
+- REGION: Skin row only
+  CHANGE: Remove the Skin label and the entire dropdown including field border, fill, arrow button, and arrow. Continue the white body surface beneath them.
+  PRESERVE: all content outside this row; left body border; footer separator
+
+[STYLE SYSTEM]
+- Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot.
+
+[ASSET RULES]
+- No text, pseudo-text, field edge, dropdown button, or arrow remains in the recovered row.
+- Invent no replacement content.
+
+[NEGATIVE CONSTRAINTS]
+- No redesign, gibberish, duplicated controls, modern chrome, or changes outside the bounded row.
+
+[QUALITY GATE]
+- Skin row is uninterrupted white panel surface.
+- All other source controls remain visually unchanged.

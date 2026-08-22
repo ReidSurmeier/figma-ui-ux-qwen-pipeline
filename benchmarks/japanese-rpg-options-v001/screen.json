@@ -1,0 +1,114 @@
+{
+  "schema_version": "0.1-draft",
+  "screen_id": "japanese-rpg-options-v001",
+  "status": "frozen-reference",
+  "reference": {
+    "path": "reference.png",
+    "format": "png",
+    "width": 849,
+    "height": 564,
+    "color_type": "rgba8",
+    "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308"
+  },
+  "regions": {
+    "options-window": {
+      "source_bounds": {
+        "x": 345,
+        "y": 182,
+        "width": 280,
+        "height": 122
+      },
+      "reference_path": "regions/options-window/reference.png",
+      "reference_sha256": "a89550a02883f34dcc0d993089c8bc6869fccc741680b9e98d24535ef3ae8e77",
+      "clean_plate_brief": "../../briefs/japanese-rpg-options-v001/options-window-clean-plate-v001.json"
+    }
+  },
+  "source": {
+    "system": "figjam",
+    "file_key": "v6Rah44MTgZcEE4oSJro1v",
+    "node_id": "1:2",
+    "node_name": "Step 1 v2 / Option window dragged",
+    "url": "https://www.figma.com/board/v6Rah44MTgZcEE4oSJro1v/Quen-Image-Pro?node-id=1-2",
+    "exported_at": "2026-08-22"
+  },
+  "locale": "ja",
+  "study_scope": {
+    "classification": "internal-study",
+    "rights_status": "user-confirmed-for-both-reference-images",
+    "public_release_clearance": "not-required-for-current-scope"
+  },
+  "exact_copy_status": "source-japanese-verbatim",
+  "localization_policy": {
+    "primary_mode": "source-japanese-only",
+    "translation_in_first_tracer": false,
+    "korean_assets_in_first_tracer": false
+  },
+  "behavior_policy": {
+    "primary_interactions": [
+      "movable-window-panels",
+      "functional-buttons",
+      "continuous-sliders"
+    ],
+    "unknown_behavior": "theme-consistent-inference",
+    "inferred_behavior_status": "needs_review",
+    "modern-redesign_allowed": false
+  },
+  "fidelity_contract": {
+    "mode": "region-specific",
+    "full_screen_pixel_identity_required": false,
+    "full_screen_reference_underlay_allowed": false,
+    "exact_copy_required": true,
+    "geometry_required": true,
+    "independent_raster_assets": "strict-region-comparison",
+    "native_editable_text": "bounded-rendering-tolerance",
+    "numeric_thresholds": "needs_review"
+  },
+  "test_order": 1,
+  "tracer_candidate": {
+    "control": "options-dialog-bgm-slider",
+    "status": "accepted",
+    "prototype_scope": "options-window-only",
+    "visual_reconstruction": {
+      "method": "qwen-assisted-layer-decomposition",
+      "resting_state_target": "pixel-identical-to-source-window-crop",
+      "full_reference_underlay_allowed": false,
+      "japanese_text_representation": "isolated-source-raster-layer",
+      "clean_plate_provider": "qwen-image-3-pro",
+      "foreground_isolation": "bounded-crop-plus-clean-plate-difference"
+    },
+    "required_interactions": [
+      "drag-window",
+      "activate-visible-tabs",
+      "drag-bgm-slider",
+      "drag-effect-slider",
+      "increment-and-decrement-both-sliders",
+      "toggle-bgm-checkbox",
+      "toggle-effect-checkbox",
+      "open-and-select-skin-dropdown",
+      "toggle-every-visible-checkbox",
+      "activate-every-visible-button"
+    ],
+    "component_boundary": "one-coherent-component",
+    "editable_nested_layers": [
+      "label",
+      "track",
+      "thumb",
+      "decrement-button",
+      "increment-button",
+      "on-off-control"
+    ],
+    "movement_contract": "moving the component root preserves internal alignment and behavior"
+  },
+  "observed_test_pressure": [
+    "dense-overlapping-windows",
+    "small-icons",
+    "inventory-grids",
+    "progress-meters",
+    "audio-sliders",
+    "selector",
+    "checkboxes",
+    "buttons",
+    "scrolling",
+    "z-order"
+  ]
+}

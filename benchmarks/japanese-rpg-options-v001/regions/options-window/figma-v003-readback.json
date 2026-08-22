@@ -1,0 +1,111 @@
+{
+  "schema_version": "0.1",
+  "checked_at": "2026-08-22",
+  "status": "generated-tested-awaiting-human-acceptance",
+  "supersedes": "figma-v002-readback.json",
+  "figma_file_key": "v0bBUYUtCz88dfG2IMgho4",
+  "figma_url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4",
+  "nodes": {
+    "default": "23:2",
+    "info": "23:48",
+    "minimized": "23:98",
+    "default_info_tab": "23:41",
+    "default_minimize": "23:6",
+    "info_option_tab": "23:87",
+    "info_minimize": "23:52",
+    "minimized_restore": "23:102",
+    "minimized_hidden_container": "23:106"
+  },
+  "root_image_hashes": {
+    "default": "af5336e1e5f53ab2704531b91d686eb2ae38f60f",
+    "info": "af5336e1e5f53ab2704531b91d686eb2ae38f60f",
+    "minimized": "3dc4b5a7f7e12054527c8bf4e9d312ad858b508b"
+  },
+  "layer_image_hashes": {
+    "title_text": "577a734e026b8043517697474e260ac78837a01d",
+    "checkbox_off": "07fdc791a86e301aebe4e3705a7918e4864e6bb8",
+    "checkbox_on": "197a787043a1f2720cffac8f6cc2fa4116956930",
+    "on_label": "ddbac7937d2233d90d841bc3d69107e9eb37c750",
+    "footer_checkbox_off": "d2c04ca76bbc9d0a7974c4ef9083afbea85126d4",
+    "footer_checkbox_on": "2a9286bb425a0378a05452fac443590415953b17"
+  },
+  "local_asset_hashes": {
+    "on_label": "835b0d0573107d64d48ad567c18af8a1673d51d7aea698fc253c391bcb2a1624",
+    "footer_checkbox_off": "87c6a778899243e8ae01705564c77599d2d7d284a32ecb8ea357d7280dd8dd01",
+    "footer_checkbox_on": "b8185cf329159a12ad177629bc27ceb315eab105811227233d64e1f191c205cf"
+  },
+  "geometry": {
+    "default": [0, 0, 280, 122],
+    "info": [0, 0, 280, 122],
+    "minimized": [0, 0, 180, 18],
+    "title_text": [16, 4, 54, 11],
+    "bgm_checkbox": [237, 24, 11, 11],
+    "effect_checkbox": [237, 43, 11, 11],
+    "bgm_on_label": [248, 22, 22, 15],
+    "effect_on_label": [248, 41, 22, 15],
+    "footer_opaque_checkbox": [11, 102, 11, 11],
+    "footer_attack_checkbox": [112, 102, 11, 11],
+    "footer_skill_checkbox": [163, 102, 11, 11],
+    "footer_item_checkbox": [204, 102, 11, 11],
+    "minimized_restore": [151, 0, 14, 18],
+    "minimized_close": [166, 0, 13, 18]
+  },
+  "pixel_contracts": {
+    "on_label_alpha_bounds": "11x6+0+5",
+    "on_label_dark_pixels": 29,
+    "on_label_blank_gap_column_x": 247,
+    "footer_checkbox_alpha_bounds": "10x10+0+0",
+    "footer_checkbox_dead_pixel_row_y": 101,
+    "footer_checkbox_dead_pixel_count": 0
+  },
+  "prototype_reactions": {
+    "default_info_destination": "23:48",
+    "default_minimize_destination": "23:98",
+    "info_option_destination": "23:2",
+    "info_minimize_destination": "23:98",
+    "minimized_restore_action": "BACK",
+    "tab_transition": "SMART_ANIMATE",
+    "tab_duration_seconds": 0.12,
+    "minimize_transition": "SMART_ANIMATE",
+    "minimize_duration_seconds": 0.208
+  },
+  "font_readback": {
+    "inferred_japanese": "DotGothic16 Regular",
+    "source_authored_japanese": "transparent source-locked bitmap layers"
+  },
+  "minimized_endpoint": {
+    "model": "qwen/qwen-image-3-pro",
+    "provider": "alibaba",
+    "prompt_id": "6340905d-4b06-46c1-b843-95cb7927a50a",
+    "container_visible": false,
+    "changed_pixels_from_reference_crop": 2876
+  },
+  "exports": {
+    "default": {
+      "path": "figma-editable-v003.png",
+      "sha256": "6c869331dcd68a4d48f00254f1f207df2d7b56dcf2cdb95b195dac92df24d4a7",
+      "normalized_mae_to_reference": 0.021746,
+      "title_boundary_normalized_mae": 0.012948
+    },
+    "info": {
+      "path": "figma-info-v003.png",
+      "sha256": "8d27e3ca95d2a94d400ecfc5a6898b12c2c0f62bfbdb782842fbf69b3e04d32f"
+    },
+    "minimized": {
+      "path": "figma-minimized-v003.png",
+      "sha256": "68551fb3e3b60b0101a9a15b7fb122e52ad255d5f5049e6ea1f483c5e006cde1",
+      "normalized_mae_to_runtime": 0.00000685871
+    },
+    "runtime_default": {
+      "path": "runtime-visual-v003.png",
+      "sha256": "7a21eed18028e31c25345d1a6882fc35c19f8a0b979bd8d0e71ebc3f7982301c",
+      "normalized_mae_to_reference": 0.0211503,
+      "normalized_mae_to_figma": 0.000840145
+    },
+    "runtime_minimized": {
+      "path": "runtime-minimized-v003.png",
+      "sha256": "a8210eaf9370fac5a6fad2efdd471a3e028864e5a17a827f15cfc91f88fadd89"
+    }
+  },
+  "remote_live_audit_command": "npm --prefix prototype run test:figma-live"
+}

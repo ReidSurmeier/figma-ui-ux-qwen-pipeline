@@ -1,0 +1,134 @@
+{
+  "schema_version": "0.1",
+  "checked_at": "2026-08-22",
+  "status": "generated-tested-awaiting-human-acceptance",
+  "supersedes": "figma-v003-readback.json",
+  "figma_file_key": "v0bBUYUtCz88dfG2IMgho4",
+  "figma_url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4",
+  "nodes": {
+    "default": "27:3",
+    "info": "27:49",
+    "minimized": "27:99",
+    "default_minimize": "27:7",
+    "default_option_visual": "27:38",
+    "default_info_visual": "27:42",
+    "default_option_hotspot": "27:145",
+    "default_info_hotspot": "27:146",
+    "bgm_thumb": "27:46",
+    "effect_thumb": "27:48",
+    "info_minimize": "27:53",
+    "info_option_visual": "27:88",
+    "info_info_visual": "27:92",
+    "info_option_hotspot": "27:149",
+    "info_info_hotspot": "27:151",
+    "minimized_restore": "27:103",
+    "minimized_hidden_container": "27:107",
+    "slider_thumb_shelf_asset": "27:2"
+  },
+  "root_image_hashes": {
+    "default": "af5336e1e5f53ab2704531b91d686eb2ae38f60f",
+    "info": "af5336e1e5f53ab2704531b91d686eb2ae38f60f",
+    "minimized": "3dc4b5a7f7e12054527c8bf4e9d312ad858b508b"
+  },
+  "layer_image_hashes": {
+    "title_text": "577a734e026b8043517697474e260ac78837a01d",
+    "checkbox_off": "07fdc791a86e301aebe4e3705a7918e4864e6bb8",
+    "checkbox_on": "197a787043a1f2720cffac8f6cc2fa4116956930",
+    "on_label": "ddbac7937d2233d90d841bc3d69107e9eb37c750",
+    "slider_thumb": "db5c12df3af4686d6c0db1535853811e303b4bd9",
+    "footer_checkbox_off": "d2c04ca76bbc9d0a7974c4ef9083afbea85126d4",
+    "footer_checkbox_on": "2a9286bb425a0378a05452fac443590415953b17"
+  },
+  "local_asset_hashes": {
+    "on_label": "1c19122640498cb58c318dd96a3d53f95acd897257c5f5824d121412db65370d",
+    "slider_thumb": "eba23e28904c538f45bfc71c8d9a7096bd02d4b262d1c69292a872d6992b1061",
+    "footer_checkbox_off": "3cabbe6c65bf6319a7f9c00a771226cd5e8024b4bcf89c6c20e77a0b1b77424b",
+    "footer_checkbox_on": "0d326c9928683dff1cb2fa74343912e336d69b2df2e0626e21eaac79ea6fc0d2"
+  },
+  "geometry": {
+    "default": [0, 0, 280, 122],
+    "info": [0, 0, 280, 122],
+    "minimized": [0, 0, 180, 18],
+    "title_text": [16, 4, 54, 11],
+    "bgm_checkbox": [237, 24, 11, 11],
+    "effect_checkbox": [237, 43, 11, 11],
+    "bgm_on_label": [248, 22, 22, 15],
+    "effect_on_label": [248, 41, 22, 15],
+    "bgm_thumb": [163.54, 22, 15, 15],
+    "effect_thumb": [136.56, 47, 15, 15],
+    "slider_track_center_endpoints": [83, 225],
+    "default_option_hotspot": [5, 18, 14, 37],
+    "default_info_hotspot": [5, 55, 14, 40],
+    "footer_opaque_checkbox": [11, 102, 11, 11],
+    "footer_attack_checkbox": [112, 102, 11, 11],
+    "footer_skill_checkbox": [163, 102, 11, 11],
+    "footer_item_checkbox": [204, 102, 11, 11],
+    "minimized_restore": [151, 0, 14, 18],
+    "minimized_close": [166, 0, 13, 18]
+  },
+  "pixel_contracts": {
+    "on_label_alpha_bounds": "11x6+0+5",
+    "on_label_dark_pixels": 29,
+    "on_label_blank_gap_column_x": 247,
+    "slider_thumb_alpha_bounds": "8x9+5+2",
+    "slider_thumb_opaque": false,
+    "slider_native_thumb_visible": false,
+    "footer_checkbox_alpha_bounds": "10x10+0+0",
+    "footer_checkbox_dead_pixel_row_y": 101,
+    "footer_checkbox_dead_pixel_count": 0,
+    "tab_visual_overlap_preserved": true,
+    "tab_hit_regions_overlap_pixels": 0,
+    "tab_boundary_y": 55
+  },
+  "prototype_reactions": {
+    "visual_tab_reaction_count": 0,
+    "default_info_hotspot_destination": "27:49",
+    "default_minimize_destination": "27:99",
+    "info_option_hotspot_destination": "27:3",
+    "info_minimize_destination": "27:99",
+    "minimized_restore_action": "BACK",
+    "tab_transition": "SMART_ANIMATE",
+    "tab_duration_seconds": 0.12,
+    "minimize_transition": "SMART_ANIMATE",
+    "minimize_duration_seconds": 0.208
+  },
+  "font_readback": {
+    "inferred_japanese": "DotGothic16 Regular",
+    "source_authored_japanese": "transparent source-locked bitmap layers"
+  },
+  "minimized_endpoint": {
+    "model": "qwen/qwen-image-3-pro",
+    "provider": "alibaba",
+    "prompt_id": "6340905d-4b06-46c1-b843-95cb7927a50a",
+    "container_visible": false,
+    "changed_pixels_from_reference_crop": 2876
+  },
+  "exports": {
+    "default": {
+      "path": "figma-editable-v004.png",
+      "sha256": "c3ff6f806217e06c5865352d555a8ae7326e2f471eccd8a93cca40dc3821fed1",
+      "normalized_mae_to_reference": 0.0214752,
+      "title_boundary_normalized_mae": 0.012948
+    },
+    "info": {
+      "path": "figma-info-v004.png",
+      "sha256": "8d27e3ca95d2a94d400ecfc5a6898b12c2c0f62bfbdb782842fbf69b3e04d32f"
+    },
+    "minimized": {
+      "path": "figma-minimized-v004.png",
+      "sha256": "68551fb3e3b60b0101a9a15b7fb122e52ad255d5f5049e6ea1f483c5e006cde1",
+      "normalized_mae_to_runtime": 0.00000685871
+    },
+    "runtime_default": {
+      "path": "runtime-visual-v004.png",
+      "sha256": "6c4d5560f24ffbc89bac7d655a61cdacd9eb9e6c92145f86817e7a8bd17f6177",
+      "normalized_mae_to_reference": 0.0206077,
+      "normalized_mae_to_figma": 0.00106263
+    },
+    "runtime_minimized": {
+      "path": "runtime-minimized-v004.png",
+      "sha256": "a8210eaf9370fac5a6fad2efdd471a3e028864e5a17a827f15cfc91f88fadd89"
+    }
+  },
+  "remote_live_audit_command": "npm --prefix prototype run test:figma-live"
+}

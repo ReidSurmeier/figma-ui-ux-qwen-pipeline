@@ -1,0 +1,39 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "openrouter",
+  "objective": "Perform one surgical removal pass on the exact Japanese Options-window crop: remove only the complete Effect row foreground and reconstruct the flat white panel surface beneath it.",
+  "reference_role": "Reference image 1 is authoritative. Preserve the full 280 by 122 crop and every feature outside the named Effect-row region.",
+  "canvas": [
+    "Return the same Options-window crop with no margin or surrounding game UI.",
+    "The editable source-scale region is approximately x=28..266 and y=43..69. Do not alter the title bar, tabs, BGM row, Skin row, footer, or frame."
+  ],
+  "regions": [
+    {
+      "name": "Effect row only",
+      "change": "Remove the Effect text, left arrow, complete slider track and thumb, right arrow, checked checkbox, check mark, and on text. Continue the flat white body surface beneath them.",
+      "preserve": ["all pixels and objects outside this row", "white panel tone", "left panel border"]
+    }
+  ],
+  "preservation_invariants": [
+    "Everything outside the Effect-row region remains visually identical in position, content, scale, palette, and raster character.",
+    "Do not move, scale, crop, smooth, modernize, or reinterpret the window.",
+    "Do not remove or change BGM, Skin, footer controls, title, title-bar buttons, or tabs."
+  ],
+  "asset_rules": [
+    "The recovered Effect region contains no letters, pseudo-text, arrows, track, thumb, checkbox, check mark, or on label.",
+    "Do not invent replacement content."
+  ],
+  "negative_constraints": ["No redesign, gibberish, duplicated controls, modern chrome, or changes outside the bounded Effect row."],
+  "style": ["Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot."],
+  "exact_copy": [],
+  "quality_checks": [
+    "At source size, the Effect row is uninterrupted white body surface.",
+    "BGM, Skin, footer, title, tabs, and outer geometry match the reference."
+  ],
+  "output": {
+    "resolution": "1K",
+    "aspect_ratio": "2:1",
+    "count": 4,
+    "seed": 22082612
+  }
+}

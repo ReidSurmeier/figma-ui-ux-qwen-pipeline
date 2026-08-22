@@ -1,0 +1,44 @@
+{
+  "created": 1787421482,
+  "data": [
+    {
+      "bytes": 433545,
+      "media_type": "image/png",
+      "sha256": "387adcbd4e7c40e1b0051cb97278345c404fe9c6ac754e741cf4f5f7a8511d25"
+    },
+    {
+      "bytes": 427225,
+      "media_type": "image/png",
+      "sha256": "1d33aa93b36731f5922b463aad33b80b54157c5962c2ca2478c70109ff0fa4fd"
+    },
+    {
+      "bytes": 411454,
+      "media_type": "image/png",
+      "sha256": "b662e6c151c688642617984b6ee37ccb3c2c55f29d5ce567466fa0ac3162b5dc"
+    },
+    {
+      "bytes": 406805,
+      "media_type": "image/png",
+      "sha256": "4d4f8d05e056b9a41c42bdc0acbaa06b9a6321a2e48652601c31481d268920b6"
+    }
+  ],
+  "usage": {
+    "completion_tokens": 16700,
+    "completion_tokens_details": {
+      "image_tokens": 16700,
+      "reasoning_tokens": 0
+    },
+    "cost": 0.163,
+    "cost_details": {
+      "upstream_inference_completions_cost": 0.16,
+      "upstream_inference_cost": 0.163,
+      "upstream_inference_prompt_cost": 0.003
+    },
+    "is_byok": false,
+    "prompt_tokens": 675,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 17375
+  }
+}

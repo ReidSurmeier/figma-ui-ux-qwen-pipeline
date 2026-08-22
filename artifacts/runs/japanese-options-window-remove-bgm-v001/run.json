@@ -1,0 +1,36 @@
+{
+  "outputs": [
+    {
+      "bytes": 289636,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "51c39dbd48142edb22ca12235a57bf881077c1f098e63e8b0221d9fc64bd34a3"
+    },
+    {
+      "bytes": 271895,
+      "file": "image-02.png",
+      "media_type": "image/png",
+      "sha256": "d488674adef5c3cf5e9f8f08706db52d6efb480b6abfd93b76dfb0dceafc5b2e"
+    },
+    {
+      "bytes": 337231,
+      "file": "image-03.png",
+      "media_type": "image/png",
+      "sha256": "06a8f6cf40d6a6e785afeec187b677481462af4ce042d54a2b4f716fa2a73933"
+    },
+    {
+      "bytes": 370491,
+      "file": "image-04.png",
+      "media_type": "image/png",
+      "sha256": "0646e8886e8698f625bb65e35e85b3c8f9cebe94dd2a4d8ff8a64cb2ad5603c7"
+    }
+  ],
+  "provenance": {
+    "figma_file_key": null,
+    "prompt_id": "edea2188-c321-4940-9b0b-f14528075b1f",
+    "provider": "alibaba",
+    "reference_sha256": "a89550a02883f34dcc0d993089c8bc6869fccc741680b9e98d24535ef3ae8e77",
+    "source_url": "https://www.figma.com/board/v6Rah44MTgZcEE4oSJro1v/Quen-Image-Pro"
+  },
+  "usage": {}
+}

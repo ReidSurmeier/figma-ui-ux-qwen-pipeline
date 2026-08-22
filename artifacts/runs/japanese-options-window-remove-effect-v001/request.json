@@ -1,0 +1,14 @@
+{
+  "aspect_ratio": "2:1",
+  "input_references": [
+    {
+      "image_url": "[recorded separately]",
+      "type": "image_url"
+    }
+  ],
+  "model": "qwen/qwen-image-3-pro",
+  "n": 4,
+  "prompt": "[TASK]\nPerform one surgical removal pass on the exact Japanese Options-window crop: remove only the complete Effect row foreground and reconstruct the flat white panel surface beneath it.\n\n[REFERENCE ROLE]\nReference image 1 is authoritative. Preserve the full 280 by 122 crop and every feature outside the named Effect-row region.\n\n[PRESERVATION INVARIANTS]\n- Everything outside the Effect-row region remains visually identical in position, content, scale, palette, and raster character.\n- Do not move, scale, crop, smooth, modernize, or reinterpret the window.\n- Do not remove or change BGM, Skin, footer controls, title, title-bar buttons, or tabs.\n\n[CANVAS AND LAYOUT]\n- Return the same Options-window crop with no margin or surrounding game UI.\n- The editable source-scale region is approximately x=28..266 and y=43..69. Do not alter the title bar, tabs, BGM row, Skin row, footer, or frame.\n\n[REGION EDITS]\n- REGION: Effect row only\n  CHANGE: Remove the Effect text, left arrow, complete slider track and thumb, right arrow, checked checkbox, check mark, and on text. Continue the flat white body surface beneath them.\n  PRESERVE: all pixels and objects outside this row; white panel tone; left panel border\n\n[STYLE SYSTEM]\n- Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot.\n\n[ASSET RULES]\n- The recovered Effect region contains no letters, pseudo-text, arrows, track, thumb, checkbox, check mark, or on label.\n- Do not invent replacement content.\n\n[NEGATIVE CONSTRAINTS]\n- No redesign, gibberish, duplicated controls, modern chrome, or changes outside the bounded Effect row.\n\n[QUALITY GATE]\n- At source size, the Effect row is uninterrupted white body surface.\n- BGM, Skin, footer, title, tabs, and outer geometry match the reference.",
+  "resolution": "1K",
+  "seed": 22082612
+}

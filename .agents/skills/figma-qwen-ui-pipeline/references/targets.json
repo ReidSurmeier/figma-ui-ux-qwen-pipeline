@@ -1,4 +1,27 @@
 {
+  "qwen-image-pro-test-board": {
+    "fileKey": "v6Rah44MTgZcEE4oSJro1v",
+    "editorType": "figjam",
+    "url": "https://www.figma.com/board/v6Rah44MTgZcEE4oSJro1v/Quen-Image-Pro",
+    "rootNodeId": "0:1",
+    "testProjects": {
+      "japaneseRpgOptions": {
+        "nodeId": "1:2",
+        "name": "Step 1 v2 / Option window dragged",
+        "exportWidth": 849,
+        "exportHeight": 564,
+        "observedSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308"
+      },
+      "koreanGallery": {
+        "nodeId": "1:6",
+        "name": "ui/arena/reid-surmeier/korean-twitch-white-chrome-empty-bar/v002",
+        "exportWidth": 672,
+        "exportHeight": 484,
+        "observedSha256": "6ed33ff9b3cbe3f50ea1773bbb4d45a7cde1f655774d0a75d17a066aa5384f34"
+      }
+    },
+    "status": "two benchmark source nodes inspected and exported as immutable fixtures on 2026-08-22"
+  },
   "draw-over-software-board": {
     "projectId": "637562440",
     "fileKey": "WoDxYYenXVCLjiQD8nL3V7",
@@ -130,5 +153,61 @@
     "flowName": "GolfStudio Complete Controls",
     "swingFlowName": "GolfStudio Exact Swing Sequence",
     "status": "current expanded complete-controls prototype"
+  },
+  "japanese-options-window-v002": {
+    "fileKey": "v0bBUYUtCz88dfG2IMgho4",
+    "editorType": "figma",
+    "url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4",
+    "rootNodeId": "16:48",
+    "pageId": "0:1",
+    "prototypeFrames": {
+      "default": "16:48",
+      "info": "16:94",
+      "minimized": "16:144"
+    },
+    "assetShelf": {
+      "cleanPlate": "14:2",
+      "titleText": "14:3",
+      "checkboxOn": "14:4",
+      "footerCheckboxOn": "14:5",
+      "checkboxOff": "14:6",
+      "minimizedPlate": "14:7",
+      "footerCheckboxOff": "14:8"
+    },
+    "status": "corrected additive v002 review states with live MCP audit"
+  },
+  "japanese-options-window-v003": {
+    "fileKey": "v0bBUYUtCz88dfG2IMgho4",
+    "editorType": "figma",
+    "url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4",
+    "rootNodeId": "23:2",
+    "pageId": "0:1",
+    "prototypeFrames": {
+      "default": "23:2",
+      "info": "23:48",
+      "minimized": "23:98"
+    },
+    "assetShelf": {
+      "onLabel": "22:3",
+      "footerCheckboxOff": "22:2",
+      "footerCheckboxOn": "22:4"
+    },
+    "status": "additive v003 review states with clean footer crops and source-locked on-label spacing"
+  },
+  "japanese-options-window-v004": {
+    "fileKey": "v0bBUYUtCz88dfG2IMgho4",
+    "editorType": "figma",
+    "url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4",
+    "rootNodeId": "27:3",
+    "pageId": "0:1",
+    "prototypeFrames": {
+      "default": "27:3",
+      "info": "27:49",
+      "minimized": "27:99"
+    },
+    "assetShelf": {
+      "sliderThumb": "27:2"
+    },
+    "status": "additive v004 review states with exact tab hotspots and transparent full-travel slider thumb"
   }
 }

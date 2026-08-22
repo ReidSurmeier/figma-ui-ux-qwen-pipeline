@@ -1,0 +1,185 @@
+{
+  "schema_version": "0.1-draft",
+  "screen_id": "japanese-rpg-options-v001",
+  "region_id": "options-window",
+  "status": "tested-tracer-awaiting-human-acceptance",
+  "reference": {
+    "path": "regions/options-window/reference.png",
+    "sha256": "a89550a02883f34dcc0d993089c8bc6869fccc741680b9e98d24535ef3ae8e77",
+    "width": 280,
+    "height": 122,
+    "visible_runtime_underlay": false
+  },
+  "qwen": {
+    "model": "qwen/qwen-image-3-pro",
+    "providers_used": ["alibaba", "openrouter"],
+    "openrouter_role": "same-model fallback and bounded edit provider",
+    "run_glob": "../../artifacts/runs/japanese-options-window-*",
+    "clean_plate": {
+      "path": "../../prototype/public/assets/japanese-options-v001/clean-plate.png",
+      "sha256": "d8907eb229e290443c6b7c5a11498e5e40592c7c3e46d12cd962a37e31ca03b7"
+    }
+  },
+  "assets": {
+    "component_manifest": "regions/options-window/components.json",
+    "directory": "../../prototype/public/assets/japanese-options-v001/components",
+    "representation": "independent source-locked PNG layers",
+    "state_assets": {
+      "option_inactive": "../../prototype/public/assets/japanese-options-v001/components/tab-option-inactive.png",
+      "info_selected": "../../prototype/public/assets/japanese-options-v001/components/tab-info-selected.png",
+      "slider_thumb": "../../prototype/public/assets/japanese-options-v001/components/slider-thumb.png",
+      "minimized_title_background": "../../prototype/public/assets/japanese-options-v001/components/minimized-plate.png",
+      "tab_provenance": "regions/options-window/tab-state-provenance.json",
+      "minimized_provenance": "regions/options-window/minimized-state-provenance.json"
+    }
+  },
+  "figma": {
+    "file_key": "v0bBUYUtCz88dfG2IMgho4",
+    "file_url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4",
+    "reference_capture_node_id": "2:2",
+    "historical_v001_state_node_ids": {
+      "default": "4:2",
+      "info": "7:2",
+      "minimized_crop_failure": "11:3"
+    },
+    "editable_assembly_node_id": "27:3",
+    "editable_info_state_node_id": "27:49",
+    "editable_minimized_state_node_id": "27:99",
+    "live_readback": "regions/options-window/figma-v004-readback.json",
+    "nodes": {
+      "bgm_thumb_value_62": "27:46",
+      "effect_thumb_value_43": "27:48",
+      "option_tab_visual": "27:38",
+      "info_tab_visual": "27:42",
+      "option_tab_hotspot": "27:145",
+      "info_tab_hotspot": "27:146",
+      "info_state_option_tab_visual": "27:88",
+      "info_state_option_tab_hotspot": "27:149",
+      "default_minimize": "27:7",
+      "info_state_minimize": "27:53",
+      "minimized_restore": "27:103",
+      "minimized_hidden_container": "27:107",
+      "slider_thumb_shelf_asset": "27:2"
+    },
+    "prototype_reactions": {
+      "default_info_to_info_state": 1,
+      "info_state_option_to_default": 1,
+      "default_minimize_to_minimized_state": 1,
+      "info_minimize_to_minimized_state": 1,
+      "minimized_restore_back": 1,
+      "transition": "SMART_ANIMATE",
+      "tab_duration_seconds": 0.12,
+      "minimize_duration_seconds": 0.208
+    },
+    "info_state_readback": {
+      "width": 280,
+      "height": 122,
+      "sha256": "8d27e3ca95d2a94d400ecfc5a6898b12c2c0f62bfbdb782842fbf69b3e04d32f",
+      "font": "DotGothic16 Regular",
+      "text": "情報はありません"
+    },
+    "minimized_state_readback": {
+      "width": 180,
+      "height": 18,
+      "sha256": "68551fb3e3b60b0101a9a15b7fb122e52ad255d5f5049e6ea1f483c5e006cde1",
+      "wsl_changed_pixels": 17,
+      "normalized_mae_to_wsl": 0.00000685871,
+      "title_background_image_hash": "3dc4b5a7f7e12054527c8bf4e9d312ad858b508b",
+      "qwen_prompt_id": "6340905d-4b06-46c1-b843-95cb7927a50a"
+    },
+    "export": {
+      "path": "regions/options-window/figma-editable-v004.png",
+      "sha256": "c3ff6f806217e06c5865352d555a8ae7326e2f471eccd8a93cca40dc3821fed1",
+      "normalized_mae_to_reference": 0.0214752,
+      "title_boundary_normalized_mae": 0.012948,
+      "normalized_mae_to_runtime": 0.00106263
+    }
+  },
+  "runtime": {
+    "directory": "../../prototype",
+    "slider_min": 0,
+    "slider_max": 100,
+    "slider_step": 1,
+    "slider_visual_thumb_center_endpoints": [83, 225],
+    "slider_visual_thumb_asset": "../../prototype/public/assets/japanese-options-v001/components/slider-thumb.png",
+    "slider_native_thumb_visible": false,
+    "bgm_default": 62,
+    "effect_default": 43,
+    "inferred_text_font": "DotGothic16 Regular",
+    "inferred_text_font_asset": "../../prototype/public/fonts/DotGothic16-Regular.ttf",
+    "inferred_text_font_sha256": "155da8f318553c11d9dffc2affbc7c2114c6a46f9740bcf639ed5568af92be71",
+    "drag_constraint": "complete window remains inside viewport",
+    "minimize_transition": {
+      "from_width": 280,
+      "to_width": 180,
+      "from_height": 122,
+      "to_height": 18,
+      "duration_ms": 208,
+      "steps": 13,
+      "body_feedback": "six-step fade",
+      "body_unmounts_after_height_transition": true,
+      "endpoint_asset": "../../prototype/public/assets/japanese-options-v001/components/minimized-plate.png",
+      "endpoint_source": "Qwen Image 3 Pro Render Pass 6340905d-4b06-46c1-b843-95cb7927a50a"
+    },
+    "pointer_down_feedback": [
+      "arrow",
+      "window_button",
+      "tab",
+      "skin_combobox",
+      "skin_option"
+    ],
+    "visual_export": {
+      "path": "regions/options-window/runtime-visual-v004.png",
+      "sha256": "6c4d5560f24ffbc89bac7d655a61cdacd9eb9e6c92145f86817e7a8bd17f6177",
+      "normalized_mae_to_reference": 0.0206077,
+      "visual_gate_max_mae": 0.03
+    }
+  },
+  "verification": {
+    "unit_tests": 13,
+    "end_to_end_flows": 23,
+    "slider_drag_requires_more_than_four_distinct_values": true,
+    "slider_thumb_reaches_source_center_endpoints": true,
+    "slider_thumb_is_transparent_source_delta": true,
+    "tab_hit_regions_do_not_overlap": true,
+    "tab_boundary_pixel_mapping_verified": true,
+    "figma_flattened_range_layers": 0,
+    "all_required_figma_nodes_present": true,
+    "figma_default_and_info_states_have_distinct_readback_hashes": true,
+    "figma_tab_reactions_read_back": true,
+    "figma_minimize_reactions_read_back": true,
+    "figma_info_text_uses_shared_pixel_font": true,
+    "figma_minimized_state_matches_wsl_changed_pixels": 17,
+    "figma_minimized_state_normalized_mae_to_wsl": 0.00000685871,
+    "console_errors_in_complete_flow": 0,
+    "state_persists_across_tabs_and_minimize": true,
+    "dropdown_is_app_owned_listbox": true,
+    "pointer_down_frames_are_visually_distinct": true,
+    "dragged_window_is_viewport_contained": true,
+    "inferred_japanese_text_uses_pixel_font": true,
+    "skin_geometry_is_font_metric_independent": true,
+    "text_regions_do_not_overflow_or_overlap_dropdown_arrow": true,
+    "title_geometry": [
+      16,
+      4,
+      54,
+      11
+    ],
+    "title_boundary_normalized_mae": 0.0129426,
+    "title_boundary_max_normalized_mae": 0.015,
+    "checkbox_state_assets_transparent": true,
+    "checkbox_visible_anchor_stable": true,
+    "bottom_checkbox_dead_pixel_row_is_clear": true,
+    "bottom_checkbox_visible_footprints_are_source_locked": true,
+    "on_label_gap_column_is_clear": true,
+    "on_label_complete_dark_pixel_count": 29,
+    "figma_checkbox_anchors": {
+      "bgm": [237, 24, 11, 11],
+      "effect": [237, 43, 11, 11]
+    },
+    "figma_live_mcp_audit": "npm --prefix prototype run test:figma-live",
+    "minimized_reference_crop_changed_pixels": 3240,
+    "minimize_and_restore_have_more_than_four_distinct_heights": true,
+    "minimize_and_restore_have_more_than_four_distinct_widths": true
+  }
+}

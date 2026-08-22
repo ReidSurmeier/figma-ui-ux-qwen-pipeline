@@ -1,0 +1,28 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "japanese-ui/options-window-reference-v001.png"
+    }
+  },
+  "2": {
+    "class_type": "QwenImage3Render",
+    "inputs": {
+      "edit_brief_json": "{\"asset_rules\": [\"Exactly one empty 180 by 18 minimized title-bar surface at the top-left.\", \"No readable text, pseudo-text, icons, buttons, controls, body, shadows, or extra windows.\", \"The result is a minimized-state background donor, not a complete flattened interactive screen.\"], \"canvas\": [\"Return the same 1120 by 488 output canvas, exactly four times the 280 by 122 reference.\", \"Place the 4x minimized donor at x=0 y=0 with source-scale bounds 180 by 18. Fill everything below y=18 and right of x=180 with a flat neutral white review field containing no UI remnants.\", \"The minimized bar must have its own complete right edge at x=179; do not leave it visually open or imply that more window continues off-canvas.\"], \"exact_copy\": [], \"model\": \"qwen/qwen-image-3-pro\", \"negative_constraints\": [\"No simple 280 by 18 crop, no clipped body, no squeezed full window, and no unchanged full-width title bar.\", \"No modern rounded card, soft shadow, glass effect, large radius, glossy control, macOS chrome, or mobile styling.\", \"No Japanese gibberish, letters, symbols, checkbox marks, slider marks, dropdown arrows, title buttons, or body remnants.\"], \"objective\": \"Create a coherent minimized-state chrome donor for the exact Japanese Options window. Recompose the full 280-pixel window into a compact 180 by 18 pixel title bar at the top-left; this must look like a deliberately minimized late-1990s Japanese game window, never like the top of the full window was merely cropped.\", \"output\": {\"aspect_ratio\": \"source\", \"count\": 4, \"resolution\": \"1K\", \"seed\": 22082631, \"size\": \"1120*488\"}, \"preservation_invariants\": [\"Keep the exact source pixel scale, palette family, hard aliased edges, one-pixel line weights, and magenta-over-blue window chrome.\", \"The minimized bar begins at x=0 y=0 and ends at x=179 y=17, with a resolved left corner, continuous title surface, dark bottom rule, and resolved right endcap.\", \"Do not retain, crop, squash, or ghost any BGM, Effect, Skin, tab, slider, dropdown, checkbox, footer, or body pixels.\", \"Do not include title glyphs, title icon, minimize icon, close icon, or pseudo-text; those remain separate editable elements in Assembly.\"], \"provider\": \"alibaba\", \"quality_checks\": [\"At source scale, the bar is exactly 180 by 18 and has complete left, right, top, and bottom chrome.\", \"The blue surface is continuous beneath the future editable title and button layers.\", \"Pixels outside the compact minimized donor contain no surviving interface content.\", \"The result reads as a newly resolved minimized state in the original Japanese UI theme, not a crop.\"], \"reference_role\": \"Reference image 1 is the authoritative 280 by 122 pixel Japanese Options window. It defines the palette, pixel density, magenta outer chrome, blue title gradient, hard one-pixel rules, and Windows-era raster character.\", \"regions\": [{\"change\": \"Remove the complete body and recompose the title chrome as a compact 180 by 18 minimized bar. Continue the source blue gradient across the compact width and terminate it with source-matched magenta and dark one-pixel right and bottom edges.\", \"name\": \"minimized window chrome\", \"preserve\": [\"top-left chrome geometry\", \"magenta top rules\", \"blue title-bar palette\", \"pixel-scale hard edges\"]}], \"style\": [\"Authentic source-matched Japanese late-1990s or early-2000s desktop-game UI raster screenshot.\", \"Crisp pixel-scale chrome, pale blue title surface, restrained dithering, square geometry, and no contemporary design language.\"]}",
+      "reference_images": [
+        "1",
+        0
+      ]
+    }
+  },
+  "3": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "japanese-ui/options-window-minimized/v001",
+      "images": [
+        "2",
+        0
+      ]
+    }
+  }
+}

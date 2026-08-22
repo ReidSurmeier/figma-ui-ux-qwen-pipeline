@@ -1,0 +1,34 @@
+[TASK]
+Perform one surgical removal pass on the exact Japanese Options-window crop: remove only the complete BGM row foreground and reconstruct the flat white panel surface beneath it. This is background recovery, not a redesign.
+
+[REFERENCE ROLE]
+Reference image 1 is authoritative. Preserve the full 280 by 122 crop and every pixel-scale feature outside the named BGM-row region.
+
+[PRESERVATION INVARIANTS]
+- Everything outside the BGM-row region remains visually identical in position, content, scale, palette, and late-1990s raster character.
+- Do not move, scale, crop, smooth, modernize, redraw, or reinterpret the window.
+- Do not remove or change Effect, Skin, footer controls, Japanese title text, title-bar buttons, or vertical-tab text.
+
+[CANVAS AND LAYOUT]
+- Return the same Options-window crop at exactly 1120 by 488 pixels, four times the source dimensions, with no margin or surrounding game UI.
+- The editable source-scale region is approximately x=28..266 and y=19..45. Do not alter the title bar, vertical tabs, Effect row, Skin row, footer, or outer frame.
+
+[REGION EDITS]
+- REGION: BGM row only
+  CHANGE: Remove the BGM text, left arrow, complete slider track and thumb, right arrow, empty checkbox, and on text. Continue the surrounding flat white body surface beneath all removed foreground pixels.
+  PRESERVE: white panel tone and subtle source texture; left panel border and tab geometry; all content above y=19 and below y=45
+
+[STYLE SYSTEM]
+- Authentic source-matched Japanese desktop-game UI screenshot with crisp pixel-scale chrome and restrained dithering.
+
+[ASSET RULES]
+- The recovered BGM region contains no letters, pseudo-text, arrows, track, thumb, checkbox, check mark, or on label.
+- Do not invent any replacement object or decoration.
+
+[NEGATIVE CONSTRAINTS]
+- No modern UI, rounded card, soft shadow, glass effect, new text, gibberish, duplicated controls, or altered window chrome.
+- No changes outside the bounded BGM row.
+
+[QUALITY GATE]
+- At source size, the BGM-row region is an uninterrupted continuation of the white body surface.
+- Effect, Skin, footer, title, tabs, frame, and window geometry match the reference.

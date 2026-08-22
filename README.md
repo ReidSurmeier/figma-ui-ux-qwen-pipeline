@@ -45,6 +45,57 @@ loopback alias.
 8. Rebuild labels, layout, controls, and animation as native Figma and web
    elements.
 
+## Componentized Japanese Options tracer
+
+The first completed tracer removes the full-screen reference underlay from the
+Japanese Options window. Figma Design owns independently editable bitmap layers;
+Qwen Image 3 Pro supplies independent raster assets when native construction
+cannot preserve the source appearance; the WSL-hosted application owns
+continuous behavior and complete user flows; Git stores the shared manifest,
+provenance, and executable test contracts.
+
+The current additive review state is [Japanese Options Window v004 tab-map-slider-clean](https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4?node-id=27-3).
+The v001 through v003 frames remain beside it as failure history. v004 retains
+the title, checkbox, and generated-minimize remediations; separates the source's
+overlapping tab artwork from exact non-overlapping hit regions; and replaces
+the opaque slider crop/native inset with a transparent source-derived thumb
+that reaches both track endpoints.
+The executable prototype is in [`prototype/`](prototype/). From WSL, run
+`npm --prefix prototype run dev:mac`, then open port `4175` on this machine's
+Tailscale address from the Mac. Run the full local acceptance stack with:
+
+```bash
+npm --prefix prototype run test:all
+npm --prefix prototype run test:figma-live
+# or run both layers:
+npm --prefix prototype run test:all:live
+```
+
+That command runs unit tests, a production build, source/provider/asset and
+temporal-rendering contracts, twenty-three Playwright user flows, and a direct-
+Chrome visual comparison. Temporal coverage includes pointer-down appearance,
+viewport-contained dragging, pixel-font/text bounds, exact header placement,
+fixed checkbox silhouettes, a zero-pixel contamination row above every footer
+checkbox, the source gap before each complete `on` glyph, the thirteen-step
+width/height minimize/restore transition, exact tab-boundary clicks, full slider
+endpoint travel without an opaque grey donor rectangle, and proof that the
+Qwen-generated minimized endpoint is not a crop.
+The visual gate uses direct headless Chrome plus ImageMagick, independently of
+the Playwright user-flow test. See the
+[v004 tab and slider remediation record](docs/runs/japanese-options-window-tab-slider-remediation-v004.md),
+[v003 checkbox remediation record](docs/runs/japanese-options-window-checkbox-remediation-v003.md),
+[v002 remediation record](docs/runs/japanese-options-window-visual-remediation-v002.md),
+[v001 historical run record](docs/runs/japanese-options-window-componentized-v001.md), and
+[design manifest](benchmarks/japanese-rpg-options-v001/design-manifest.json).
+
+See the [componentized reconstruction implementation draft](docs/implementation/componentized-reconstruction.md),
+[ADR 0008](docs/adr/0008-separate-editable-design-authority-from-executable-wsl-runtime.md),
+and [ADR 0009](docs/adr/0009-use-layered-contracts-for-executable-prototype-qa.md).
+
+The GolfStudio implementation below is retained as evidence for the older
+reference-underlay architecture, not as the target architecture for new
+screens.
+
 ## Tested interactive GolfStudio prototype
 
 The current deliverable is the separate Figma Design file

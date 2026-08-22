@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nRemove only the Japanese title text \u30aa\u30d7\u30b7\u30e7\u30f3 from the exact title bar and reconstruct the original blue gradient beneath those glyphs. Change nothing else.\n\n[REFERENCE ROLE]\nReference image 1 is the exact authoritative 280 by 122 Japanese Options-window crop.\n\n[PRESERVATION INVARIANTS]\n- Every pixel-scale object outside the title-glyph rectangle remains visually identical in position, scale, content, and palette.\n- Keep the exact title-bar gradient progression and late-1990s raster character.\n\n[CANVAS AND LAYOUT]\n- Return the same crop at exactly 1120 by 488 pixels, four times the source dimensions.\n- The only editable source-scale rectangle is x=16..72 and y=1..17.\n\n[REGION EDITS]\n- REGION: Japanese title glyphs only\n  CHANGE: Erase the complete \u30aa\u30d7\u30b7\u30e7\u30f3 title lettering and continue the locally varying blue title-bar gradient behind each removed pixel.\n  PRESERVE: left round icon; minimize icon; close button; title-bar border; all tabs and body controls\n\n[STYLE SYSTEM]\n- Exact source-matched Japanese desktop-game UI screenshot.\n\n[ASSET RULES]\n- No Japanese title glyph or pseudo-text remains inside the rectangle.\n- Do not remove, redraw, or move any icon or window button.\n\n[NEGATIVE CONSTRAINTS]\n- No global redraw, modernization, smoothing, gibberish, new text, changed controls, changed crop, or altered geometry.\n\n[QUALITY GATE]\n- At source size, x=16..72 and y=1..17 is a continuous local title-bar gradient.\n- Everything outside that rectangle matches the reference."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 4,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22082616,
+    "size": "1120*488",
+    "watermark": false
+  }
+}

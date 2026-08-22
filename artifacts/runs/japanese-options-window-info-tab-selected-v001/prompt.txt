@@ -1,0 +1,43 @@
+[TASK]
+Create the exact alternate tab-selection state for the Japanese Options window: option becomes inactive and info becomes selected. Change only the two vertical tab surfaces and their existing lettering.
+
+[REFERENCE ROLE]
+Reference image 1 is the authoritative default 280 by 122 Options-window crop. It shows option selected and info inactive. Preserve it exactly except for reversing those two selection states.
+
+[PRESERVATION INVARIANTS]
+- Every pixel outside x=5..19 and y=18..95 remains visually identical in content, position, palette, and geometry.
+- Do not alter the title bar, Japanese title, window buttons, BGM, Effect, Skin, footer, clean surfaces, outer magenta frame, or crop.
+- Do not move, resize, rotate, smooth, modernize, or replace either tab.
+
+[CANVAS AND LAYOUT]
+- Return only the same Options-window crop with the same geometry, scale, and surrounding pixels.
+- The only editable source-scale region is the two-tab strip at x=5..19 and y=18..95.
+
+[REGION EDITS]
+- REGION: option tab inactive state
+  CHANGE: Keep the exact vertical word option, tab bounds, and pixel placement, but render this tab with the same pale grey inactive fill, grey lettering, bevel, and border language used by the reference info tab.
+  PRESERVE: option spelling; vertical text geometry; 14 by 39 pixel bounds; shared left border
+- REGION: info tab selected state
+  CHANGE: Keep the exact vertical word info, tab bounds, and pixel placement, but render this tab as the active white tab with dark lettering and the same open-right-edge selected treatment used by the reference option tab.
+  PRESERVE: info spelling; vertical text geometry; 14 by 40 pixel bounds; overlap with option tab
+
+[EXACT COPY]
+- upper vertical tab: "option"
+- lower vertical tab: "info"
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese late-1990s desktop-game raster UI.
+- Hard pixel-scale edges, one-pixel bevels, pale grey-white fills, and restrained source dithering.
+
+[ASSET RULES]
+- Both original words remain correctly spelled and legible at source scale.
+- Exactly one tab is visibly selected: info. Exactly one tab is visibly inactive: option.
+
+[NEGATIVE CONSTRAINTS]
+- No new text, gibberish, translated text, icons, controls, highlights, panels, or decoration.
+- No global redraw, antialiased modernization, rounded UI, soft shadow, glass effect, or changed body content.
+
+[QUALITY GATE]
+- At 280 by 122, option reads as the grey inactive tab and info reads as the white selected tab.
+- The two original vertical words remain exact and the rest of the window is unchanged.
+- The selected info tab remains visually connected to the body panel rather than appearing blank.

@@ -1,0 +1,49 @@
+{
+  "asset_rules": [
+    "No Japanese title glyph or pseudo-text remains inside the rectangle.",
+    "Do not remove, redraw, or move any icon or window button."
+  ],
+  "canvas": [
+    "Return the same crop at exactly 1120 by 488 pixels, four times the source dimensions.",
+    "The only editable source-scale rectangle is x=16..72 and y=1..17."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No global redraw, modernization, smoothing, gibberish, new text, changed controls, changed crop, or altered geometry."
+  ],
+  "objective": "Remove only the Japanese title text \u30aa\u30d7\u30b7\u30e7\u30f3 from the exact title bar and reconstruct the original blue gradient beneath those glyphs. Change nothing else.",
+  "output": {
+    "aspect_ratio": "source",
+    "count": 4,
+    "resolution": "1K",
+    "seed": 22082616,
+    "size": "1120*488"
+  },
+  "preservation_invariants": [
+    "Every pixel-scale object outside the title-glyph rectangle remains visually identical in position, scale, content, and palette.",
+    "Keep the exact title-bar gradient progression and late-1990s raster character."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "At source size, x=16..72 and y=1..17 is a continuous local title-bar gradient.",
+    "Everything outside that rectangle matches the reference."
+  ],
+  "reference_role": "Reference image 1 is the exact authoritative 280 by 122 Japanese Options-window crop.",
+  "regions": [
+    {
+      "change": "Erase the complete \u30aa\u30d7\u30b7\u30e7\u30f3 title lettering and continue the locally varying blue title-bar gradient behind each removed pixel.",
+      "name": "Japanese title glyphs only",
+      "preserve": [
+        "left round icon",
+        "minimize icon",
+        "close button",
+        "title-bar border",
+        "all tabs and body controls"
+      ]
+    }
+  ],
+  "style": [
+    "Exact source-matched Japanese desktop-game UI screenshot."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "name": "japanese-options-componentized-prototype",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 10.255.255.254 --port 4174",
+    "dev:mac": "vite --host 100.103.164.128 --port 4175 --strictPort",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:visual": "bash scripts/visual-check.sh",
+    "test:contracts": "bash scripts/contract-check.sh",
+    "test:figma-live": "bash scripts/figma-live-check.sh",
+    "test:all": "npm test && npm run build && npm run test:contracts && npm run test:e2e && npm run test:visual",
+    "test:all:live": "npm run test:all && npm run test:figma-live"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.62.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@testing-library/user-event": "14.6.6",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.1.0",
+    "jsdom": "30.0.1",
+    "typescript": "7.0.2",
+    "vite": "8.2.2",
+    "vitest": "4.1.11"
+  }
+}

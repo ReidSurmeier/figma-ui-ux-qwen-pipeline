@@ -1,0 +1,32 @@
+[TASK]
+Remove only the Japanese title text オプション from the exact title bar and reconstruct the original blue gradient beneath those glyphs. Change nothing else.
+
+[REFERENCE ROLE]
+Reference image 1 is the exact authoritative 280 by 122 Japanese Options-window crop.
+
+[PRESERVATION INVARIANTS]
+- Every pixel-scale object outside the title-glyph rectangle remains visually identical in position, scale, content, and palette.
+- Keep the exact title-bar gradient progression and late-1990s raster character.
+
+[CANVAS AND LAYOUT]
+- Return the same crop at exactly 1120 by 488 pixels, four times the source dimensions.
+- The only editable source-scale rectangle is x=16..72 and y=1..17.
+
+[REGION EDITS]
+- REGION: Japanese title glyphs only
+  CHANGE: Erase the complete オプション title lettering and continue the locally varying blue title-bar gradient behind each removed pixel.
+  PRESERVE: left round icon; minimize icon; close button; title-bar border; all tabs and body controls
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese desktop-game UI screenshot.
+
+[ASSET RULES]
+- No Japanese title glyph or pseudo-text remains inside the rectangle.
+- Do not remove, redraw, or move any icon or window button.
+
+[NEGATIVE CONSTRAINTS]
+- No global redraw, modernization, smoothing, gibberish, new text, changed controls, changed crop, or altered geometry.
+
+[QUALITY GATE]
+- At source size, x=16..72 and y=1..17 is a continuous local title-bar gradient.
+- Everything outside that rectangle matches the reference.

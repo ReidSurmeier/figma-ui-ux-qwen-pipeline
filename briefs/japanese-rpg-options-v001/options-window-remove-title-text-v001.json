@@ -1,0 +1,15 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "objective": "Remove only the Japanese title text オプション from the exact title bar and reconstruct the original blue gradient beneath those glyphs. Change nothing else.",
+  "reference_role": "Reference image 1 is the exact authoritative 280 by 122 Japanese Options-window crop.",
+  "canvas": ["Return the same crop at exactly 1120 by 488 pixels, four times the source dimensions.", "The only editable source-scale rectangle is x=16..72 and y=1..17."],
+  "regions": [{"name": "Japanese title glyphs only", "change": "Erase the complete オプション title lettering and continue the locally varying blue title-bar gradient behind each removed pixel.", "preserve": ["left round icon", "minimize icon", "close button", "title-bar border", "all tabs and body controls"]}],
+  "preservation_invariants": ["Every pixel-scale object outside the title-glyph rectangle remains visually identical in position, scale, content, and palette.", "Keep the exact title-bar gradient progression and late-1990s raster character."],
+  "asset_rules": ["No Japanese title glyph or pseudo-text remains inside the rectangle.", "Do not remove, redraw, or move any icon or window button."],
+  "negative_constraints": ["No global redraw, modernization, smoothing, gibberish, new text, changed controls, changed crop, or altered geometry."],
+  "style": ["Exact source-matched Japanese desktop-game UI screenshot."],
+  "exact_copy": [],
+  "quality_checks": ["At source size, x=16..72 and y=1..17 is a continuous local title-bar gradient.", "Everything outside that rectangle matches the reference."],
+  "output": {"resolution": "1K", "size": "1120*488", "aspect_ratio": "source", "count": 4, "seed": 22082616}
+}

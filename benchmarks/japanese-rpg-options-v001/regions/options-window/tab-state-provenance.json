@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1-draft",
+  "source_assets": {
+    "option_selected": "../../../../prototype/public/assets/japanese-options-v001/components/tab-option.png",
+    "info_inactive": "../../../../prototype/public/assets/japanese-options-v001/components/tab-info.png"
+  },
+  "qwen_attempt": {
+    "model": "qwen/qwen-image-3-pro",
+    "provider": "openrouter",
+    "run": "../../../../artifacts/runs/japanese-options-window-info-tab-selected-v001",
+    "cost_usd": 0.163,
+    "status": "rejected",
+    "reasons": [
+      "tab-height drift",
+      "duplicated or retained prior tab state",
+      "exact-copy lettering distortion"
+    ]
+  },
+  "promoted_assets": {
+    "option_inactive": {
+      "path": "../../../../prototype/public/assets/japanese-options-v001/components/tab-option-inactive.png",
+      "method": "source-locked palette-role transform",
+      "sha256": "e1f0be9717cfdeb14f625e96d95a5fc876d47795fe176dc3c2586e967248a5f2"
+    },
+    "info_selected": {
+      "path": "../../../../prototype/public/assets/japanese-options-v001/components/tab-info-selected.png",
+      "method": "source-locked palette-role transform",
+      "sha256": "7961a58c0113ac129605029178d754ed4e208932bba0e148b1a1fe0214e782c0"
+    }
+  },
+  "invariants": [
+    "source dimensions unchanged",
+    "source lettering geometry unchanged",
+    "source tab bounds unchanged",
+    "only active and inactive palette roles change"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1",
+  "checked_at": "2026-08-22",
+  "status": "generated-tested-awaiting-human-acceptance",
+  "figma_file_key": "v0bBUYUtCz88dfG2IMgho4",
+  "figma_url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4",
+  "nodes": {
+    "default": "16:48",
+    "info": "16:94",
+    "minimized": "16:144",
+    "default_info_tab": "16:87",
+    "default_minimize": "16:52",
+    "info_option_tab": "16:133",
+    "info_minimize": "16:98",
+    "minimized_restore": "16:148",
+    "minimized_hidden_container": "16:152"
+  },
+  "root_image_hashes": {
+    "default": "af5336e1e5f53ab2704531b91d686eb2ae38f60f",
+    "info": "af5336e1e5f53ab2704531b91d686eb2ae38f60f",
+    "minimized": "3dc4b5a7f7e12054527c8bf4e9d312ad858b508b"
+  },
+  "layer_image_hashes": {
+    "title_text": "577a734e026b8043517697474e260ac78837a01d",
+    "checkbox_off": "07fdc791a86e301aebe4e3705a7918e4864e6bb8",
+    "checkbox_on": "197a787043a1f2720cffac8f6cc2fa4116956930"
+  },
+  "geometry": {
+    "default": [0, 0, 280, 122],
+    "info": [0, 0, 280, 122],
+    "minimized": [0, 0, 180, 18],
+    "title_text": [16, 4, 54, 11],
+    "bgm_checkbox": [237, 24, 11, 11],
+    "effect_checkbox": [237, 43, 11, 11],
+    "minimized_restore": [151, 0, 14, 18],
+    "minimized_close": [166, 0, 13, 18]
+  },
+  "prototype_reactions": {
+    "default_info_destination": "16:94",
+    "default_minimize_destination": "16:144",
+    "info_option_destination": "16:48",
+    "info_minimize_destination": "16:144",
+    "minimized_restore_action": "BACK",
+    "tab_transition": "SMART_ANIMATE",
+    "tab_duration_seconds": 0.12,
+    "minimize_transition": "SMART_ANIMATE",
+    "minimize_duration_seconds": 0.208
+  },
+  "font_readback": {
+    "inferred_japanese": "DotGothic16 Regular",
+    "source_authored_japanese": "transparent source-locked bitmap layers"
+  },
+  "minimized_endpoint": {
+    "model": "qwen/qwen-image-3-pro",
+    "provider": "alibaba",
+    "prompt_id": "6340905d-4b06-46c1-b843-95cb7927a50a",
+    "container_visible": false,
+    "changed_pixels_from_reference_crop": 2876
+  },
+  "exports": {
+    "default": {
+      "path": "figma-editable-v002.png",
+      "sha256": "f1fd8d662bf711380cfcf169e31759cf28ece4df1357782f37e995027793cf43",
+      "normalized_mae_to_reference": 0.0235342,
+      "title_boundary_normalized_mae": 0.012948
+    },
+    "info": {
+      "path": "figma-info-v002.png",
+      "sha256": "8d27e3ca95d2a94d400ecfc5a6898b12c2c0f62bfbdb782842fbf69b3e04d32f"
+    },
+    "minimized": {
+      "path": "figma-minimized-v002.png",
+      "sha256": "68551fb3e3b60b0101a9a15b7fb122e52ad255d5f5049e6ea1f483c5e006cde1",
+      "normalized_mae_to_runtime": 0.00000685871
+    },
+    "runtime_default": {
+      "path": "runtime-visual-v002.png",
+      "sha256": "1aa9e8828981aa031e574c7c259341052c96cd8200c968841440cc1f7c5b68d7",
+      "normalized_mae_to_reference": 0.0222747,
+      "normalized_mae_to_figma": 0.00216165
+    },
+    "runtime_minimized": {
+      "path": "runtime-minimized-v002.png",
+      "sha256": "a8210eaf9370fac5a6fad2efdd471a3e028864e5a17a827f15cfc91f88fadd89"
+    }
+  },
+  "remote_live_audit_command": "npm --prefix prototype run test:figma-live"
+}

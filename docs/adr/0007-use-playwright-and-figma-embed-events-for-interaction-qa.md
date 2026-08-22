@@ -1,6 +1,6 @@
 # Use Playwright and Figma Embed events for interaction QA
 
-Status: accepted on 2026-08-11.
+Status: superseded by ADR 0009 on 2026-08-22.
 
 ## Context
 

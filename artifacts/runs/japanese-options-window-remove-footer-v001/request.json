@@ -1,0 +1,14 @@
+{
+  "aspect_ratio": "2:1",
+  "input_references": [
+    {
+      "image_url": "[recorded separately]",
+      "type": "image_url"
+    }
+  ],
+  "model": "qwen/qwen-image-3-pro",
+  "n": 2,
+  "prompt": "[TASK]\nSurgically remove all footer-row foreground controls and text from the exact Japanese Options-window crop and reconstruct only the empty light-grey footer band.\n\n[REFERENCE ROLE]\nReference image 1 is authoritative. Preserve every feature above the footer region.\n\n[PRESERVATION INVARIANTS]\n- Do not alter the title, tabs, BGM, Effect, Skin, body, outer frame, or footer geometry.\n- Do not modernize, move, rescale, or smooth the source.\n\n[CANVAS AND LAYOUT]\n- Return only the same window crop.\n- Edit approximately x=7..266 and y=98..120 at source scale; preserve the separator, body, title, tabs, and frame.\n\n[REGION EDITS]\n- REGION: footer foreground\n  CHANGE: Remove the opaque checkbox and label, Japanese \u30b9\u30ca\u30c3\u30d7 text, attack checkbox and label, skill checkbox and label, and item checkbox and label. Continue the original light-grey band and horizontal separator beneath them.\n  PRESERVE: footer band height; outer border; horizontal separator; everything above y=98\n\n[STYLE SYSTEM]\n- Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot.\n\n[ASSET RULES]\n- No letters, Japanese glyphs, pseudo-text, checkbox squares, or check marks remain in the footer band.\n- Invent no replacement content.\n\n[NEGATIVE CONSTRAINTS]\n- No redesign, gibberish, duplicated controls, added decoration, or changes outside the footer.\n\n[QUALITY GATE]\n- Footer is an empty continuous light-grey band.\n- Everything above the footer matches the reference.",
+  "resolution": "1K",
+  "seed": 22082614
+}

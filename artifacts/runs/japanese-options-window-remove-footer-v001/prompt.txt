@@ -1,0 +1,32 @@
+[TASK]
+Surgically remove all footer-row foreground controls and text from the exact Japanese Options-window crop and reconstruct only the empty light-grey footer band.
+
+[REFERENCE ROLE]
+Reference image 1 is authoritative. Preserve every feature above the footer region.
+
+[PRESERVATION INVARIANTS]
+- Do not alter the title, tabs, BGM, Effect, Skin, body, outer frame, or footer geometry.
+- Do not modernize, move, rescale, or smooth the source.
+
+[CANVAS AND LAYOUT]
+- Return only the same window crop.
+- Edit approximately x=7..266 and y=98..120 at source scale; preserve the separator, body, title, tabs, and frame.
+
+[REGION EDITS]
+- REGION: footer foreground
+  CHANGE: Remove the opaque checkbox and label, Japanese スナップ text, attack checkbox and label, skill checkbox and label, and item checkbox and label. Continue the original light-grey band and horizontal separator beneath them.
+  PRESERVE: footer band height; outer border; horizontal separator; everything above y=98
+
+[STYLE SYSTEM]
+- Authentic source-matched Japanese late-1990s desktop-game UI raster screenshot.
+
+[ASSET RULES]
+- No letters, Japanese glyphs, pseudo-text, checkbox squares, or check marks remain in the footer band.
+- Invent no replacement content.
+
+[NEGATIVE CONSTRAINTS]
+- No redesign, gibberish, duplicated controls, added decoration, or changes outside the footer.
+
+[QUALITY GATE]
+- Footer is an empty continuous light-grey band.
+- Everything above the footer matches the reference.

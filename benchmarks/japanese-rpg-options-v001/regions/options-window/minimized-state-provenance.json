@@ -1,0 +1,28 @@
+{
+  "state_id": "options-window-minimized-v001",
+  "status": "generated-tested-awaiting-human-acceptance",
+  "representation": "Qwen-generated background donor plus independently editable exact title, icon, and window-button layers",
+  "render_pass": {
+    "model": "qwen/qwen-image-3-pro",
+    "provider": "alibaba",
+    "prompt_id": "6340905d-4b06-46c1-b843-95cb7927a50a",
+    "run": "../../../../artifacts/runs/japanese-options-window-minimized-state-v001/run.json",
+    "selected_candidate": "../../../../artifacts/runs/japanese-options-window-minimized-state-v001/v001_00003_.png",
+    "selected_candidate_sha256": "6515c551b6b87bb5e6834c62405505ef0c6462814a198812b24e3234a6a24f83"
+  },
+  "promoted_asset": {
+    "path": "../../../../prototype/public/assets/japanese-options-v001/components/minimized-plate.png",
+    "sha256": "90c62e4cdc779f0bcdb11966833c32fa48752c2ed82582aca1e864b952d47631",
+    "width": 180,
+    "height": 18,
+    "reference_crop_changed_pixels": 3240
+  },
+  "behavior_contract": {
+    "from": [280, 122],
+    "to": [180, 18],
+    "duration_ms": 208,
+    "steps": 13,
+    "body_feedback": "six-step fade before unmount",
+    "restore": "reverse the same transition and preserve application state"
+  }
+}

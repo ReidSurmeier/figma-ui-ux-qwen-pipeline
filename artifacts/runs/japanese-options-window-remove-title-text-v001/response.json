@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "bytes": 378913,
+      "media_type": "image/png",
+      "sha256": "d2d209b4f1978c56bd7e649c634f44623713a8e9eb50fc7659c818fa91f92e2e"
+    },
+    {
+      "bytes": 355155,
+      "media_type": "image/png",
+      "sha256": "d61a30604b8ef43befe6c7a0264c2db42b55dc0d81519a9bad1bd9b2b4e88b8c"
+    },
+    {
+      "bytes": 402448,
+      "media_type": "image/png",
+      "sha256": "3c1fa5622d8eb7b78c15e3b2d0c5ea6a025bca72f34b49ff57274956fc176c2a"
+    },
+    {
+      "bytes": 392497,
+      "media_type": "image/png",
+      "sha256": "7ba336966fed3eb80e9e40efdea2349f1865ecb6a4f28d2bfe4847c8a7e6d1a6"
+    }
+  ]
+}

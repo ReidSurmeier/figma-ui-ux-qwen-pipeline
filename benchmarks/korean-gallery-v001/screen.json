@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1-draft",
+  "screen_id": "korean-gallery-v001",
+  "status": "frozen-reference",
+  "reference": {
+    "path": "reference.png",
+    "format": "png",
+    "width": 672,
+    "height": 484,
+    "color_type": "rgba8",
+    "sha256": "6ed33ff9b3cbe3f50ea1773bbb4d45a7cde1f655774d0a75d17a066aa5384f34"
+  },
+  "source": {
+    "system": "figjam",
+    "file_key": "v6Rah44MTgZcEE4oSJro1v",
+    "node_id": "1:6",
+    "node_name": "ui/arena/reid-surmeier/korean-twitch-white-chrome-empty-bar/v002",
+    "url": "https://www.figma.com/board/v6Rah44MTgZcEE4oSJro1v/Quen-Image-Pro?node-id=1-6",
+    "exported_at": "2026-08-22"
+  },
+  "locale": "ko",
+  "study_scope": {
+    "classification": "internal-study",
+    "rights_status": "user-confirmed-for-both-reference-images",
+    "public_release_clearance": "not-required-for-current-scope"
+  },
+  "exact_copy_status": "needs_review",
+  "behavior_policy": {
+    "primary_interactions": [
+      "movable-window-panels",
+      "functional-buttons",
+      "scrolling-and-selection-controls"
+    ],
+    "unknown_behavior": "theme-consistent-inference",
+    "inferred_behavior_status": "needs_review",
+    "modern-redesign_allowed": false
+  },
+  "test_order": 2,
+  "tracer_candidate": {
+    "control": "gallery-scroll-and-category-selection",
+    "status": "proposed"
+  },
+  "observed_test_pressure": [
+    "application-chrome",
+    "category-buttons",
+    "repeated-gallery-cells",
+    "photographic-content-isolation",
+    "scrolling",
+    "decorative-background-separation"
+  ]
+}
