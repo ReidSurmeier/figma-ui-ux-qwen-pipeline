@@ -185,3 +185,12 @@ Menus whose screenshot does not reveal external outcomes are tested only to the
 authorized local boundary: exact row ownership, exclusive settled selection,
 and reversal to ready. A label such as Exit to Windows does not authorize the
 prototype or the test agent to invent an operating-system side effect.
+
+Spatial containment is not semantic ownership. A source control may sit outside
+its window and remain fixed while that window is dragged. Such satellite
+controls declare `data-control-owner` with the stable window ID. Runtime
+manifest capture and correction replay query both descendants of the window and
+controls with that owner, so spatial separation cannot make a button disappear
+from coverage. The locked journey also proves that close removes the window and
+its satellites together and that the authorized reopening path restores the
+complete set.

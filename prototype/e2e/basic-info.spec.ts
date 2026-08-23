@@ -231,7 +231,7 @@ test("every Basic Info page control declares and reaches its source-approved des
     const target = page.locator(`[data-window-id="${destination}"]`);
     await expect(target).toBeVisible();
     expect(Number(await target.evaluate((element) => getComputedStyle(element).zIndex))).toBeGreaterThan(Number(await basic.evaluate((element) => getComputedStyle(element).zIndex)));
-    if (view) await expect(target.getByRole("button", { name: "友達", exact: true })).toHaveAttribute("aria-pressed", "true");
+    if (view) await expect(target.getByRole("tab", { name: "友達", exact: true })).toHaveAttribute("aria-selected", "true");
     const invariantAfter = await basic.locator(invariantIds.map((id) => `[data-component-id="${id}"]`).join(",")).evaluateAll((nodes) => nodes.map((node) => {
       const bounds = node.getBoundingClientRect();
       return { id: node.getAttribute("data-component-id"), bounds: [bounds.x, bounds.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
@@ -254,7 +254,7 @@ test("friend opens the visible Party friends destination instead of only self-se
 
   await basic.getByRole("button", { name: "friend", exact: true }).click();
   const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
-  await expect(party.getByRole("button", { name: "友達", exact: true })).toHaveAttribute("aria-pressed", "true");
+  await expect(party.getByRole("tab", { name: "友達", exact: true })).toHaveAttribute("aria-selected", "true");
   expect(Number(await party.evaluate((element) => getComputedStyle(element).zIndex))).toBeGreaterThan(Number(await basic.evaluate((element) => getComputedStyle(element).zIndex)));
 });
 

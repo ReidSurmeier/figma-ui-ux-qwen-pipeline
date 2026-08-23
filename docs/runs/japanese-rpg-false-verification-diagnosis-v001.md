@@ -132,6 +132,25 @@ or return destination is fabricated. The isolated replay reports four controls,
 four contracted, four contract-passed, zero uncontracted, and no correction
 failures.
 
+## Party satellite-ownership tracer
+
+The initial isolated Party replay reported 13 controls and zero contracts. It
+missed Back, Next, and Sell entirely because the buttons are correctly fixed on
+the desktop outside the draggable Party window, while the generic inventory
+queried only DOM descendants of the window. This was a QA-boundary defect: the
+same source requirement that kept the controls spatially separate also made
+them invisible to verification.
+
+The three controls now declare `data-control-owner="party"`. Runtime manifest
+capture and correction replay combine descendants with these explicitly owned
+satellites without pretending they are children for layout or dragging. A
+dedicated locked test traverses all five members, five tools, and two source
+tabs; checks reversible and keyboard state transfer; proves Back, Next, and
+Sell remain fixed while Party moves; and proves close/reopen removes and
+restores the complete group. The corrected isolated replay reports 16 controls,
+16 contracted, 16 contract-passed, zero uncontracted, and no correction
+failures.
+
 ## First RED tracer
 
 `remaining-source-windows.spec.ts` now includes:

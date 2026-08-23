@@ -3090,6 +3090,36 @@
             "width": 77,
             "height": 20
           }
+        },
+        {
+          "id": "party-action-0",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/action-0.png",
+          "geometry": {
+            "x": 170,
+            "y": -20,
+            "width": 41,
+            "height": 20
+          }
+        },
+        {
+          "id": "party-action-1",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/action-1.png",
+          "geometry": {
+            "x": 170,
+            "y": 3,
+            "width": 41,
+            "height": 20
+          }
+        },
+        {
+          "id": "party-action-2",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/action-2.png",
+          "geometry": {
+            "x": 170,
+            "y": 26,
+            "width": 41,
+            "height": 20
+          }
         }
       ],
       "controls": [
@@ -3205,7 +3235,7 @@
         },
         {
           "id": "友達",
-          "role": "button",
+          "role": "tab",
           "geometry": {
             "x": 3,
             "y": 135,
@@ -3215,11 +3245,41 @@
         },
         {
           "id": "パーティー",
-          "role": "button",
+          "role": "tab",
           "geometry": {
             "x": 80,
             "y": 135,
             "width": 77,
+            "height": 20
+          }
+        },
+        {
+          "id": "back",
+          "role": "button",
+          "geometry": {
+            "x": 170,
+            "y": -20,
+            "width": 41,
+            "height": 20
+          }
+        },
+        {
+          "id": "next",
+          "role": "button",
+          "geometry": {
+            "x": 170,
+            "y": 3,
+            "width": 41,
+            "height": 20
+          }
+        },
+        {
+          "id": "sell",
+          "role": "button",
+          "geometry": {
+            "x": 170,
+            "y": 26,
+            "width": 41,
             "height": 20
           }
         }

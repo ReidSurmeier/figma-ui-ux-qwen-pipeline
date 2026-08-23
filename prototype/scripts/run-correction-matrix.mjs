@@ -43,6 +43,10 @@ const figmaEvidence = await exists(figmaMarker)
   : null;
 
 const controlsSelector = "button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled])";
+const controlsForWindowSelector = (windowId) => controlsSelector.split(", ").flatMap((selector) => [
+  `[data-window-id="${windowId}"] ${selector}`,
+  `[data-control-owner="${windowId}"] ${selector}`,
+]).join(", ");
 const reports = [];
 const titlelessWindows = new Set(["quickbar", "bottom-bar", "notification"]);
 const irregularWindows = new Set(["quickbar", "bottom-bar", "notification"]);
@@ -89,9 +93,9 @@ function result(promptId, verdict, artifact, metrics, note) {
 }
 
 async function snapshotState(page, windowId, controlIndex) {
-  return page.evaluate(({ windowId, controlIndex, controlsSelector }) => {
+  return page.evaluate(({ windowId, controlIndex, controlsSelector, ownedControlsSelector }) => {
     const root = document.querySelector(`[data-window-id="${windowId}"]`);
-    const control = root?.querySelectorAll(controlsSelector)[controlIndex];
+    const control = document.querySelectorAll(ownedControlsSelector)[controlIndex];
     const outputs = root ? [...root.querySelectorAll("output,[role=status]")].map((node) => node.textContent?.trim() ?? "") : [];
     if (!(control instanceof HTMLElement)) return { missing: true, outputs };
     const input = control instanceof HTMLInputElement ? { checked: control.checked, value: control.value } : {};
@@ -104,13 +108,14 @@ async function snapshotState(page, windowId, controlIndex) {
       ...input,
       outputs,
     };
-  }, { windowId, controlIndex, controlsSelector });
+  }, { windowId, controlIndex, controlsSelector, ownedControlsSelector: controlsForWindowSelector(windowId) });
 }
 
 async function probeControls(page, windowId, windowDir) {
   await page.goto(baseUrl, { waitUntil: "networkidle" });
   const root = page.locator(`[data-window-id="${windowId}"]`);
-  const descriptors = await root.locator(controlsSelector).evaluateAll((nodes) => nodes.map((node, index) => ({
+  const ownedControlsSelector = controlsForWindowSelector(windowId);
+  const descriptors = await page.locator(ownedControlsSelector).evaluateAll((nodes) => nodes.map((node, index) => ({
     index,
     label: node.getAttribute("aria-label") || node.textContent?.trim() || `${node.tagName.toLowerCase()}-${index}`,
     tag: node.tagName.toLowerCase(),
@@ -122,7 +127,7 @@ async function probeControls(page, windowId, windowDir) {
   for (const descriptor of descriptors) {
     await page.goto(baseUrl, { waitUntil: "networkidle" });
     const window = await activateWindow(page, windowId);
-    const control = window.locator(controlsSelector).nth(descriptor.index);
+    const control = page.locator(ownedControlsSelector).nth(descriptor.index);
     if (!(await control.isVisible())) {
       probes.push({ ...descriptor, skipped: "not-visible" });
       continue;

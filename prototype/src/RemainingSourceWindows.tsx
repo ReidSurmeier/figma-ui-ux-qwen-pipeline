@@ -168,27 +168,37 @@ export function PartySourceWindow({ zIndex, onActivate, open, onClose, tab, onTa
   const [status, setStatus] = useState("");
   const names = ["SakumaRiri", "Sebas'", "ANRI(砂漠の都市モロク)", "Show_A", "Ayanalshizuka"];
   const assetRoot = `${root}/party`;
+  const moveMember = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const current = member ?? 0;
+    const next = event.key === "Home" ? 0 : event.key === "End" ? names.length - 1 : event.key === "ArrowDown" ? (current + 1) % names.length : (current - 1 + names.length) % names.length;
+    setMember(next);
+    setStatus(`${names[next]} を選択`);
+  };
   return <>
     <SourceWindow id="party" title="パーティー (Riri-Soft)" initialPosition={{ x: 568, y: 370 }} width={160} height={154} titleWidth={125} titleTop={4} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closeRight={1} closeTop={3} open={open} onClose={onClose}>
-      {names.map((name, row) => {
+      <div id="party-member-list" className="party-source-member-list" role="listbox" aria-label="パーティーメンバー" aria-activedescendant={member === null ? undefined : `party-member-option-${member}`} tabIndex={0} onKeyDown={moveMember}>{names.map((name, row) => {
         const selected = member === row;
         const rowFile = row === 0 && !selected
           ? `${assetRoot}/components/member-row-0-unselected`
           : row !== 0 && selected
             ? `${assetRoot}/components/member-row-${row}-selected`
             : `${assetRoot}/components/member-${row}`;
-        return <button key={name} type="button" role="option" className="party-source-member" aria-label={name} aria-selected={selected} style={{ top: 19 + row * 19 }} onClick={() => { const next = selected ? null : row; setMember(next); setStatus(next === null ? `${name} の選択を解除` : `${name} を選択`); }}>
+        return <button key={name} id={`party-member-option-${row}`} type="button" role="option" tabIndex={-1} className="party-source-member" aria-label={name} aria-selected={selected} data-visual-component={`party-member-${row}`} style={{ top: 19 + row * 19 }} onClick={() => { const next = selected ? null : row; setMember(next); setStatus(next === null ? `${name} の選択を解除` : `${name} を選択`); }}>
           <SourceRaster id={`party-member-${row}`} file={rowFile} style={{ inset: 0 }} />
         </button>;
-      })}
-      {[0, 1, 2, 3, 4].map((column) => <button key={column} type="button" className="party-source-tool" aria-label={`パーティーツール ${column + 1}`} aria-pressed={status === `tool ${column + 1}`} style={{ left: 4 + column * 29 }} onClick={() => setStatus(`tool ${column + 1}`)}><SourceRaster id={`party-tool-${column}`} file={`${assetRoot}/components/tool-${column}`} style={{ inset: 0 }} /></button>)}
-      <button type="button" className="party-source-tab party-source-tab--friends" aria-label="友達" aria-pressed={tab === "friends"} onClick={() => onTabChange("friends")}><SourceRaster id="party-friends" file={`${assetRoot}/components/friends`} style={{ inset: 0 }} /></button>
-      <button type="button" className="party-source-tab party-source-tab--party" aria-label="パーティー" aria-pressed={tab === "party"} onClick={() => onTabChange("party")}><SourceRaster id="party-party-tab" file={`${assetRoot}/components/party-tab`} style={{ inset: 0 }} /></button>
+      })}</div>
+      {[0, 1, 2, 3, 4].map((column) => <button key={column} type="button" className="party-source-tool" aria-label={`パーティーツール ${column + 1}`} aria-pressed={status === `tool ${column + 1}`} data-visual-component={`party-tool-${column}`} style={{ left: 4 + column * 29 }} onClick={() => setStatus((current) => current === `tool ${column + 1}` ? "" : `tool ${column + 1}`)}><SourceRaster id={`party-tool-${column}`} file={`${assetRoot}/components/tool-${column}`} style={{ inset: 0 }} /></button>)}
+      <div className="party-source-tabs" role="tablist" aria-label="パーティービュー">
+        <button type="button" role="tab" className="party-source-tab party-source-tab--friends" aria-label="友達" aria-selected={tab === "friends"} aria-controls="party-member-list" data-visual-component="party-friends" onClick={() => onTabChange("friends")} onKeyDown={(event) => { if (event.key === "ArrowRight") { event.preventDefault(); onTabChange("party"); } }}><SourceRaster id="party-friends" file={`${assetRoot}/components/friends`} style={{ inset: 0 }} /></button>
+        <button type="button" role="tab" className="party-source-tab party-source-tab--party" aria-label="パーティー" aria-selected={tab === "party"} aria-controls="party-member-list" data-visual-component="party-party-tab" onClick={() => onTabChange("party")} onKeyDown={(event) => { if (event.key === "ArrowLeft") { event.preventDefault(); onTabChange("friends"); } }}><SourceRaster id="party-party-tab" file={`${assetRoot}/components/party-tab`} style={{ inset: 0 }} /></button>
+      </div>
       <output className="sr-only" role="status">{status || `${page + 1}/2`}</output>
     </SourceWindow>
-    <div className="party-source-external-actions" role="group" aria-label="パーティー外部操作" style={{ zIndex }}>
-      {["back", "next", "sell"].map((label, row) => <button key={label} type="button" className="party-source-action" aria-label={label} aria-pressed={status.startsWith(label)} style={{ top: row * 23 }} onClick={() => { if (label === "back") setPage(0); if (label === "next") setPage(1); setStatus(`${label} ${label === "sell" ? (member === null ? "選択なし" : names[member]) : `${label === "next" ? 2 : 1}/2`}`); }}><SourceRaster id={`party-action-${row}`} file={`${assetRoot}/components/action-${row}`} style={{ inset: 0 }} /></button>)}
-    </div>
+    {open !== false && <div className="party-source-external-actions" role="group" aria-label="パーティー外部操作" data-control-owner="party" style={{ zIndex }}>
+      {["back", "next", "sell"].map((label, row) => <button key={label} type="button" className="party-source-action" aria-label={label} aria-pressed={status.startsWith(label)} data-visual-component={`party-action-${row}`} style={{ top: row * 23 }} onClick={() => { if (label === "back") setPage(0); if (label === "next") setPage(1); setStatus(`${label} ${label === "sell" ? (member === null ? "選択なし" : names[member]) : `${label === "next" ? 2 : 1}/2`}`); }}><SourceRaster id={`party-action-${row}`} file={`${assetRoot}/components/action-${row}`} style={{ inset: 0 }} /></button>)}
+    </div>}
   </>;
 }
 

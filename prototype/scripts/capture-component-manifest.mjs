@@ -24,6 +24,11 @@ export async function captureRuntimeComponentManifest(page) {
     };
 
     const cleanPlate = window.dataset.cleanPlate;
+    const ownedRoots = [...document.querySelectorAll(`[data-control-owner="${CSS.escape(window.dataset.windowId)}"]`)];
+    const ownedNodes = (selector) => [
+      ...window.querySelectorAll(selector),
+      ...ownedRoots.flatMap((root) => [...root.querySelectorAll(selector)]),
+    ];
     return {
       id: window.dataset.windowId,
       ariaLabel: window.getAttribute("aria-label"),
@@ -34,12 +39,12 @@ export async function captureRuntimeComponentManifest(page) {
         height: Math.round(root.height * 100) / 100,
       },
       ...(cleanPlate ? { cleanPlate } : {}),
-      components: [...window.querySelectorAll("[data-component-id]")].map((node) => ({
+      components: ownedNodes("[data-component-id]").map((node) => ({
         id: node.dataset.componentId,
         assetPath: assetPath(node),
         geometry: relative(node),
       })).filter(({ assetPath: path }) => path),
-      controls: [...window.querySelectorAll("button, input, [role=tab], [role=option]")]
+      controls: ownedNodes("button, input, [role=tab], [role=option]")
         .filter((node) => node.getBoundingClientRect().width > 0 && node.getBoundingClientRect().height > 0)
         .map((node, index) => ({
           id: node.getAttribute("aria-label") || node.textContent?.trim().replace(/\s+/g, " ") || `control-${index}`,

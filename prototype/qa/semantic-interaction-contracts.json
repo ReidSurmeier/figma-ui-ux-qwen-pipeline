@@ -63,7 +63,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info page control declares and reaches its source-approved destination",
-        "sha256": "b207bb6b0946d94174f7c6444e9c9647a0283c0f0951ccca77487915392672bd"
+        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -123,7 +123,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-        "sha256": "b207bb6b0946d94174f7c6444e9c9647a0283c0f0951ccca77487915392672bd"
+        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -167,7 +167,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
-        "sha256": "b207bb6b0946d94174f7c6444e9c9647a0283c0f0951ccca77487915392672bd"
+        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1066,6 +1066,64 @@
           "rule": "the Japanese title remains byte-identical through every action transition"
         }
       ]
+    },
+    {
+      "id": "party-member-selection-v001",
+      "window_id": "party",
+      "control_label_patterns": ["^(SakumaRiri|Sebas'|ANRI\\(砂漠の都市モロク\\)|Show_A|Ayanalshizuka)$"],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Every Party member is a reachable listbox option with exclusive reversible selection",
+        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+      },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 370, 160, 154] },
+      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["Every source Party member is a listbox option with exclusive selection and same-member reversal."] },
+      "gesture": "trusted pointer clicks visit every member and clear the selected member",
+      "expected_region_changes": [{ "component_id_pattern": "party-member-*", "rule": "exactly one member owns selection or the list returns to no selection" }],
+      "invariant_regions": [{ "component_ids": ["party-title-icon", "party-title-text"], "rule": "the Japanese title remains unchanged" }]
+    },
+    {
+      "id": "party-tools-reversible-v001",
+      "window_id": "party",
+      "control_label_patterns": ["^パーティーツール [1-5]$"],
+      "test": { "file": "e2e/party-source.spec.ts", "title": "Party tools and source tabs transfer state and support keyboard traversal", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 370, 160, 154] },
+      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["All five source tool targets transfer one selected state and toggle back to neutral."] },
+      "gesture": "trusted pointer clicks visit all five tools and clear the final tool",
+      "expected_region_changes": [{ "component_id_pattern": "party-tool-*", "rule": "only the current tool owns pressed state and can return to neutral" }],
+      "invariant_regions": [{ "component_ids": ["all party member rows"], "rule": "tool state does not change member selection" }]
+    },
+    {
+      "id": "party-view-tabs-v001",
+      "window_id": "party",
+      "control_labels": ["友達", "パーティー"],
+      "test": { "file": "e2e/party-source.spec.ts", "title": "Party tools and source tabs transfer state and support keyboard traversal", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 370, 160, 154] },
+      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["The source Friends and Party controls expose real tab semantics with horizontal keyboard traversal."] },
+      "gesture": "keyboard ArrowLeft and ArrowRight transfer the selected tab",
+      "expected_region_changes": [{ "component_ids": ["party-friends", "party-party-tab"], "rule": "exactly one source tab owns aria-selected" }],
+      "invariant_regions": [{ "component_ids": ["party-title-icon", "party-title-text"], "rule": "tab traversal preserves the title" }]
+    },
+    {
+      "id": "party-satellite-actions-v001",
+      "window_id": "party",
+      "control_labels": ["back", "next", "sell"],
+      "test": { "file": "e2e/party-source.spec.ts", "title": "Party satellite actions stay fixed while Party moves and expose exact ownership", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 350, 211, 174] },
+      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["The fixed back, next, and sell strip belongs to Party QA while remaining anchored outside the movable window."] },
+      "gesture": "trusted pointer drag moves Party followed by trusted next and back clicks",
+      "expected_region_changes": [{ "component_ids": ["party-action-0", "party-action-1", "party-action-2"], "rule": "satellites report exact page or selected-member actions" }],
+      "invariant_regions": [{ "component_ids": ["party external action group"], "rule": "the complete satellite group bounding box remains fixed during Party drag" }]
+    },
+    {
+      "id": "party-close-and-reopen-v001",
+      "window_id": "party",
+      "control_labels": ["パーティー (Riri-Soft)を閉じる"],
+      "test": { "file": "e2e/party-source.spec.ts", "title": "Party close removes satellites and Basic Info friend restores the complete destination", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 350, 211, 174] },
+      "gesture": "trusted pointer close removes Party and satellites, then Basic Info friend restores both",
+      "expected_region_changes": [{ "window_id": "party", "rule": "the main window and owned satellite controls close and reopen together" }],
+      "invariant_regions": [{ "component_ids": ["all Party and satellite components"], "rule": "reopen restores the complete owned destination" }]
     }
   ]
 }

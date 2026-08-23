@@ -174,6 +174,12 @@ Use a layered QA system with one responsibility per layer:
 42. Menu actions without authorized external destinations stop at reversible
     local selection feedback. They must not fabricate operating-system exits or
     navigation, and clicking the selected action again restores the ready state.
+43. Controls that are visually outside a window but semantically belong to it
+    declare `data-control-owner` with the stable window ID. Correction replay,
+    runtime manifests, and control coverage include those satellite controls in
+    the owner's inventory. They may remain fixed while the window moves when the
+    source requires it, but closing and reopening the owner must remove and
+    restore the complete control set.
 
 ## Consequences
 
