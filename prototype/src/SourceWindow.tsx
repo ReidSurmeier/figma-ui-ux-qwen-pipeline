@@ -104,10 +104,10 @@ export function SourceWindow({ id, title, initialPosition, width, height, titleW
       >
         <SourceRaster id={`${id}-title-icon`} file={`${assetRoot}/components/title-icon`} style={{ left: 3, top: titleTop, width: 13, height: 13 }} />
         <SourceRaster id={`${id}-title-text`} file={`${assetRoot}/components/title-text`} style={{ left: titleTextLeft, top: titleTop, width: titleWidth, height: 13 }} />
-        {minimizable && <button type="button" className="source-window__button source-window__button--minimize" style={{ right: minimizeRight }} aria-label={`${title}を最小化`} aria-expanded={!minimized} onClick={() => setMinimized((value) => !value)}>
+        {minimizable && <button type="button" className="source-window__button source-window__button--minimize" style={{ right: minimizeRight }} aria-label={`${title}を最小化`} aria-expanded={!minimized} data-minimize-endpoint={`${assetRoot}/minimized-plate.png`} onClick={() => setMinimized((value) => !value)}>
           <SourceRaster id={`${id}-minimize`} file={`${assetRoot}/components/minimize`} style={{ left: 0, top: minimizeTop, width: 14, height: 15 }} />
         </button>}
-        {closable && <button type="button" className="source-window__button source-window__button--close" style={{ right: closeRight }} aria-label={`${title}を閉じる`} onClick={() => onClose ? onClose() : setLocallyOpen(false)}>
+        {closable && <button type="button" className="source-window__button source-window__button--close" style={{ right: closeRight }} aria-label={`${title}を閉じる`} data-close-window={id} onClick={() => onClose ? onClose() : setLocallyOpen(false)}>
           <SourceRaster id={`${id}-close`} file={`${assetRoot}/components/close`} style={{ left: 0, top: closeTop, width: 13, height: 15 }} />
         </button>}
       </header>

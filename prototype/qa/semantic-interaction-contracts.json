@@ -202,6 +202,142 @@
           "rule": "title component geometry and bitmap authority remain unchanged in the compact endpoint"
         }
       ]
+    },
+    {
+      "id": "status-complete-increment-inventory-v001",
+      "window_id": "status",
+      "control_labels": [
+        "Strを上げる",
+        "Agiを上げる",
+        "Vitを上げる",
+        "Dexを上げる",
+        "Lukを上げる"
+      ],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
+        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "gesture": "trusted pointer click on every one of the five source-visible 11 by 11 increment hitboxes",
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "status-primary-row-0",
+            "status-primary-row-1",
+            "status-primary-row-2",
+            "status-primary-row-4",
+            "status-primary-row-5"
+          ],
+          "rule": "each click changes only its local value field and exposes the matching semantic status"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "status-derived-row-0",
+            "status-derived-row-1",
+            "status-derived-row-2",
+            "status-derived-row-3",
+            "status-derived-row-4",
+            "status-derived-row-5"
+          ],
+          "rule": "the clicked row label, complete derived column, and every other stat row remain pixel-identical"
+        }
+      ]
+    },
+    {
+      "id": "status-generated-minimize-v001",
+      "window_id": "status",
+      "control_labels": [
+        "ステータスを最小化"
+      ],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
+        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores the complete Status window."
+        ]
+      },
+      "gesture": "trusted pointer click minimizes with complete transition sampling and a second pointer click restores",
+      "expected_region_changes": [
+        {
+          "component_id": "status-minimized-plate",
+          "rule": "more than four geometry steps settle at the generated 180 by 18 endpoint and restore to 280 by 126"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "status-title-icon",
+            "status-title-text"
+          ],
+          "rule": "title component geometry and bitmap authority remain unchanged in the compact endpoint"
+        }
+      ]
+    },
+    {
+      "id": "status-close-and-reopen-v001",
+      "window_id": "status",
+      "control_labels": [
+        "ステータスを閉じる"
+      ],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "status close removes the window and Basic Info restores the same independent destination",
+        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "gesture": "trusted pointer click closes Status and a trusted Basic Info status click restores it without reload",
+      "expected_region_changes": [
+        {
+          "window_id": "status",
+          "rule": "the Status region is removed after close and becomes visible again through its source navigation control"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "all status runtime components"
+          ],
+          "rule": "the restored window has the exact pre-close geometry and ordered independent component inventory"
+        }
+      ]
     }
   ]
 }

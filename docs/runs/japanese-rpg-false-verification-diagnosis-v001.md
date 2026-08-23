@@ -406,6 +406,25 @@ reopens its closed destination without reload. The locked navigation contract
 hash was refreshed only after this complete journey passed, demonstrating that
 new method requirements demote earlier green evidence instead of being waived.
 
+## Status complete-control tracer
+
+The prior Status browser test exercised only `Strを上げる`; generic replay had
+no semantic contracts for the other source-visible controls. A source-locked
+inventory now declares the exact five 11 by 11 buttons—Str, Agi, Vit, Dex, and
+Luk—and deliberately rejects an invented Int increment. Each trusted click
+changes only its local value field while its label, the complete derived column,
+and every other stat row remain pixel-identical. The first isolated replay
+promoted exactly those five controls and left minimize/close red.
+
+Status minimize now declares its generated endpoint, exposes more than four
+geometry steps, preserves title components, settles at 180 by 18, and restores
+to 280 by 126. Status close removes the region; the source Basic Info status
+control restores the exact geometry and ordered component inventory without
+reload. The next isolated replay reports 7 enabled controls, 7 contracted,
+7 contract-passed, zero uncontracted, and no correction failures. As with Basic
+Info, this is browser/correction completion pending the separate fresh Figma
+parity gate.
+
 The same full-coverage run found a correction-runner race at the Options close
 button: the control removed its window between visibility and screenshot calls.
 The runner now waits for activation repaint, retries transiently detached idle

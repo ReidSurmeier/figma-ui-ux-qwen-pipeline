@@ -112,3 +112,9 @@ open → close → reopen from the originating control. The shared desktop owns
 destination visibility so reopening does not depend on reloading or remounting
 the application. Introducing this reversal checkpoint demotes any previously
 passing destination contract until its locked test hash and replay are fresh.
+
+Sibling controls are inventoried from the source explicitly, including source
+absences. For Status this means five 11 by 11 increment controls and no invented
+Int increment. Each sibling must change only its own local value region while
+all other rows and the derived column remain pixel-identical. One working Str
+button cannot grant Agi, Vit, Dex, or Luk by association.
