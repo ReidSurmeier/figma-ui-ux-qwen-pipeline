@@ -145,6 +145,17 @@ Use a layered QA system with one responsibility per layer:
     navigation state reveals them, while a locked dynamic-family journey must
     still visit every page and exercise every descendant. DOM presence is not
     evidence that a user or an agent can activate a control.
+35. Every raster-backed discrete control declares the visual component it owns.
+    Dynamic-family tests verify exact source geometry, exclusive state transfer,
+    and invariant neighboring regions for every member; one generic click that
+    changes the whole window cannot grant the family.
+36. The default unit suite validates every committed semantic test-file hash,
+    not only contracts selected for the current correction replay. Any edit to
+    a locked file fails all stale references immediately, so an isolated green
+    window cannot conceal drift in another window's evidence.
+37. Prefer one semantic test file per reconstructed window. This keeps evidence
+    locks local, prevents unrelated sibling tests from invalidating a reviewed
+    contract, and lets the global lock gate name the exact window that drifted.
 
 ## Consequences
 

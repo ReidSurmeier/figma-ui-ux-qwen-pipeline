@@ -8,9 +8,9 @@
         "クイックスロット位置"
       ],
       "test": {
-        "file": "e2e/remaining-source-windows.spec.ts",
+        "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
-        "sha256": "9fdaa6b46454a8f2141024d016619fc8b94b00442f253945ef09b18a7c862434"
+        "sha256": "c96e74e2a3dcbddc78427fa1344fd6f0a4b0583c25e488f600d846d645354f50"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -771,6 +771,134 @@
         {
           "component_ids": ["all skills runtime components"],
           "rule": "each restored Skills window has the complete independent component inventory"
+        }
+      ]
+    },
+    {
+      "id": "equipment-every-row-selection-v001",
+      "window_id": "equipment",
+      "control_label_patterns": ["^(左|右)装備 [1-5]$"],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
+        "sha256": "91491836b869776b726e518ea3a4f02550bd6f2f8a2eccb0514ba50696281d44"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [0, 385, 280, 152]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Each extracted left and right Equipment row is independently selectable through its exact source column without claiming the avatar gap."]
+      },
+      "gesture": "trusted pointer clicks visit all ten exact Equipment row targets",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "equipment-(left|right)-*",
+          "rule": "only the clicked row owns selection and reports its exact side and row"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["equipment-title-icon", "equipment-title-text", "equipment-avatar"],
+          "rule": "the Japanese title and non-interactive avatar remain byte-identical throughout selection"
+        }
+      ]
+    },
+    {
+      "id": "equipment-generated-minimize-v001",
+      "window_id": "equipment",
+      "control_labels": ["装備アイテムを最小化"],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
+        "sha256": "91491836b869776b726e518ea3a4f02550bd6f2f8a2eccb0514ba50696281d44"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [0, 385, 280, 152]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["The source-visible minimize control transitions to the separately generated compact Equipment endpoint and restores exactly."]
+      },
+      "gesture": "trusted pointer click minimizes with complete transition sampling and a second pointer click restores",
+      "expected_region_changes": [
+        {
+          "component_id": "equipment-minimized-plate",
+          "rule": "more than four geometry steps settle at 180 by 18 and restore exactly to 280 by 152"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["equipment-title-icon", "equipment-title-text"],
+          "rule": "the generated compact state preserves the Japanese title authority"
+        }
+      ]
+    },
+    {
+      "id": "equipment-close-and-reopen-v001",
+      "window_id": "equipment",
+      "control_labels": ["装備アイテムを閉じる"],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Equipment close removes the window and Basic Info restores its complete destination",
+        "sha256": "91491836b869776b726e518ea3a4f02550bd6f2f8a2eccb0514ba50696281d44"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [0, 385, 280, 152]
+      },
+      "gesture": "trusted pointer click closes Equipment and a trusted Basic Info equip click restores it without reload",
+      "expected_region_changes": [
+        {
+          "window_id": "equipment",
+          "rule": "Equipment is removed and restored through its source navigation control"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["all equipment runtime components"],
+          "rule": "the restored window has exact 280 by 152 geometry and all 15 independent components"
+        }
+      ]
+    },
+    {
+      "id": "bottom-bar-reversible-navigation-v001",
+      "window_id": "bottom-bar",
+      "control_labels": ["前のスロット", "次のスロット"],
+      "test": {
+        "file": "e2e/bottom-bar-source.spec.ts",
+        "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
+        "sha256": "c96e74e2a3dcbddc78427fa1344fd6f0a4b0583c25e488f600d846d645354f50"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [0, 538, 600, 21]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["The source-visible previous and next controls traverse slot state reversibly while preserving the independent slider and Japanese title."]
+      },
+      "gesture": "trusted pointer clicks run previous to next and next to previous reversal journeys",
+      "expected_region_changes": [
+        {
+          "component_ids": ["bottom-bar-previous", "bottom-bar-next"],
+          "rule": "only the directional control for the current signed slot owns settled pressed feedback and both routes return to neutral"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["bottom-bar-title-icon", "bottom-bar-title-text", "bottom-bar-rail", "bottom-bar-thumb"],
+          "rule": "the complete first 580 pixels remain byte-identical after both reversal journeys"
         }
       ]
     }

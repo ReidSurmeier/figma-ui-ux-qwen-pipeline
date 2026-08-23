@@ -143,3 +143,20 @@ them. The semantic family test then traverses every page and clicks every member
 This avoids both failure modes: granting hidden siblings by resemblance and
 blindly clicking clipped DOM nodes whose apparent pixel response comes from an
 overlap or z-order change.
+
+Discrete raster controls declare `data-visual-component` just as continuous
+controls declare their visual thumbs. Family tests use that mapping to check the
+exact hit rectangle, transfer exclusive state through every sibling, and lock
+adjacent non-interactive regions. For Equipment, left and right rows stop at the
+avatar boundaries; an avatar pixel is never accepted as row-button evidence.
+
+Semantic test locks are globally checked by the default unit suite. The check
+groups every contract by test file, rejects conflicting hashes, computes the
+current file hash, and fails on any stale lock even when that window is absent
+from the selected correction replay. A focused green report therefore cannot
+silently leave another window's executable evidence obsolete.
+
+High-risk windows keep their locked semantic journeys in dedicated test files.
+This limits the hash blast radius: adding an Equipment assertion cannot stale a
+Bottom Bar contract merely because both once lived in a generic remaining-
+windows suite.

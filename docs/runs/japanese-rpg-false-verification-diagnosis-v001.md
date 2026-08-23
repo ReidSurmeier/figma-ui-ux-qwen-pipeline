@@ -211,6 +211,25 @@ and restores to a byte-identical expanded window. These are now locked as an
 Equipment-specific browser contract; no speculative minimize visual change was
 made.
 
+The later isolated semantic replay found 12 enabled controls, zero contracts,
+and no direct generic activity failure. That result still could not prove row
+mapping: every row merely changed some whole-window pixels. Each of the ten row
+buttons now names its owned raster through `data-visual-component`; a locked
+family journey checks all left and right source rectangles, transfers exclusive
+selection, and holds title plus avatar pixels invariant. Separate lifecycle
+contracts sample more than four generated minimize geometries and restore exact
+expanded pixels, then close and reopen Equipment through Basic Info with all 15
+independent components. The isolated replay now reports 12 contracted,
+12 contract-passed, zero uncontracted, and no correction failures.
+
+During this Equipment checkpoint, a repository-wide lock audit found that the
+Bottom Bar semantic contract still named an older hash of its shared browser
+test file. All ordinary tests had remained green because hash validation ran
+only for correction-selected windows. A new default unit gate now validates
+every semantic test lock and rejects conflicting hashes for the same file. It
+failed RED on the stale Bottom Bar lock. Bottom Bar evidence now lives in its
+own locked test file so unrelated remaining-window assertions cannot stale it.
+
 ## Compact Info threshold and geometry tracer
 
 Compact Info passed only because its normalized MAE ceiling was `0.200`, while
@@ -360,13 +379,14 @@ requirements from that evidence. It does not read `true` values from the
 contract file. A changed test file, changed source image, missing test, failed
 gesture, absent expected region, or absent invariant region fails the contract.
 
-In the isolated Bottom Bar replay, `クイックスロット位置` changed from
-`uncontracted-evidence` to `contract-passed`. `前のスロット` and
-`次のスロット` remain explicitly uncontracted, so the window and command stay
-red. Every report now includes counts and exact labels for contracted, passed,
-failed-contract, and uncontracted controls. This is the intended tracer-bullet
-behavior: coverage grows one reviewed interaction at a time without promoting
-adjacent controls by association.
+The first isolated Bottom Bar replay promoted only `クイックスロット位置`;
+`前のスロット` and `次のスロット` remained explicitly uncontracted, keeping
+the window red. The completed follow-up maps all three controls to their owned
+rasters. A dedicated real-pointer journey proves both slider endpoints and
+another runs previous to next and next to previous, returning to neutral while
+the title, rail, and slider remain byte-identical. The new isolated replay
+reports three controls, three contracted, three contract-passed, zero
+uncontracted, and no correction failures.
 
 ## Basic Info destination tracer
 

@@ -1,3 +1,7 @@
+import { createHash } from "node:crypto";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+
 import { describe, expect, it } from "vitest";
 
 import { evaluateSemanticInteractionContract, semanticContractForControl } from "../scripts/semantic-interaction-contract.mjs";
@@ -29,6 +33,20 @@ const passedReport = {
 };
 
 describe("semantic interaction contracts", () => {
+  it("keeps every committed semantic test lock current in the default suite", () => {
+    const manifest = JSON.parse(readFileSync(resolve(process.cwd(), "qa/semantic-interaction-contracts.json"), "utf8"));
+    const expectedByFile = new Map<string, string>();
+    for (const locked of manifest.contracts) {
+      const prior = expectedByFile.get(locked.test.file);
+      if (prior) expect(locked.test.sha256, `conflicting locks for ${locked.test.file}`).toBe(prior);
+      expectedByFile.set(locked.test.file, locked.test.sha256);
+    }
+    for (const [file, expected] of expectedByFile) {
+      const actual = createHash("sha256").update(readFileSync(resolve(process.cwd(), file))).digest("hex");
+      expect(actual, `${file} changed without refreshing every semantic contract`).toBe(expected);
+    }
+  });
+
   it("matches one locked semantic contract to a dynamic control-label family", () => {
     const dynamic = {
       windowId: "inventory",
