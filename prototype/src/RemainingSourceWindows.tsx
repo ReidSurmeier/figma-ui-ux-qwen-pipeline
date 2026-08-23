@@ -74,7 +74,6 @@ export function EquipmentSourceWindow({ zIndex, onActivate }: WindowProps) {
 }
 
 export function ChatSourceWindow({ zIndex, onActivate }: WindowProps) {
-  const [tab, setTab] = useState<"チャット" | "メッセージ">("チャット");
   const [topic, setTopic] = useState("");
   const [room, setRoom] = useState("チャットルーム");
   const [roomOpen, setRoomOpen] = useState(false);
@@ -83,8 +82,7 @@ export function ChatSourceWindow({ zIndex, onActivate }: WindowProps) {
   const assetRoot = `${root}/chat`;
   return (
     <SourceWindow id="chat" title="チャットルーム" initialPosition={{ x: 285, y: 279 }} width={280} height={120} titleWidth={45} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closable={false} dragHandleStyle={{ width: 60 }}>
-      <div className="chat-source-tabs" role="tablist" aria-label="メッセージ表示"><button role="tab" aria-selected={tab === "チャット"} onClick={() => setTab("チャット")}>チャット</button><button role="tab" aria-selected={tab === "メッセージ"} onClick={() => setTab("メッセージ")}>メッセージ</button></div>
-      {tab === "メッセージ" ? <div className="chat-source-message" role="tabpanel">受信メッセージはありません</div> : <div role="tabpanel">
+      <div>
         <SourceRaster id="chat-topic-label" file={`${assetRoot}/components/topic-label`} style={{ left: 3, top: 26, width: 41, height: 19 }} /><SourceRaster id="chat-topic-field" file={`${assetRoot}/components/topic-field`} style={{ left: 44, top: 26, width: 232, height: 19 }} />
         <SourceRaster id="chat-people" file={`${assetRoot}/components/people`} style={{ left: 3, top: 45, width: 133, height: 20 }} /><SourceRaster id="chat-room" file={`${assetRoot}/components/room`} style={{ left: 136, top: 45, width: 140, height: 20 }} />
         <SourceRaster id="chat-security" file={`${assetRoot}/components/security`} style={{ left: 3, top: 65, width: 131, height: 20 }} />
@@ -102,7 +100,7 @@ export function ChatSourceWindow({ zIndex, onActivate }: WindowProps) {
         <input className="chat-source-privacy chat-source-privacy--private" type="radio" name="privacy" aria-label="非公開" checked={privacy === "非公開"} onChange={() => setPrivacy("非公開")} />
         <button className="chat-source-ok" type="button" aria-label="OK" onClick={() => setStatus(`${privacy} ${room}「${topic}」を作成しました`)}><SourceRaster id="chat-ok" file={`${assetRoot}/components/ok`} style={{ inset: 0 }} /></button>
         <button className="chat-source-cancel" type="button" aria-label="cancel" onClick={() => { setTopic(""); setStatus("キャンセルしました"); }}><SourceRaster id="chat-cancel" file={`${assetRoot}/components/cancel`} style={{ inset: 0 }} /></button>
-      </div>}
+      </div>
       <output className="chat-source-status" role="status">{status}</output>
     </SourceWindow>
   );

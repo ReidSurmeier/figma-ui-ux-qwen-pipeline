@@ -147,10 +147,6 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .equipment-source-avatar[data-turn="2"] .source-raster { transform: scaleX(-1); }
 .equipment-source-avatar[data-turn="3"] .source-raster { transform: scaleX(-1) translateX(1px); filter: brightness(0.92); }
 
-.chat-source-tabs { position: absolute; z-index: 8; left: 62px; top: 0; display: flex; height: 18px; }
-.chat-source-tabs button { height: 18px; padding: 0 7px; border: 1px solid #8799ac; background: #dce8ef; color: #173a61; font-size: 9px; }
-.chat-source-tabs button[aria-selected="true"] { background: #fff; box-shadow: inset 0 -2px #77a9ca; }
-.chat-source-message { position: absolute; z-index: 4; left: 3px; top: 25px; width: 274px; height: 57px; padding: 18px 7px; border: 1px solid #b8c1ca; background: #fff; color: #17324e; font-size: 10px; text-align: center; }
 .chat-source-topic, .chat-source-privacy { position: absolute; z-index: 7; opacity: 0.002; }
 .chat-source-privacy { top: 66px; width: 16px; height: 18px; margin: 0; }
 .chat-source-privacy--public { left: 43px; }

@@ -55,18 +55,12 @@ test("every visible source window is an independent movable region", async ({ pa
   }
 });
 
-test("the message tab and chat form expose complete settled interaction states", async ({ page }) => {
+test("the single Chat window exposes its complete settled form without invented tabs", async ({ page }) => {
   await page.goto("/");
 
   const chat = page.getByRole("region", { name: "チャットルーム" });
-  // The source composition intentionally starts with Options overlapping Chat.
-  // Activating any exposed Chat pixel raises the complete panel before its tab flow.
   await chat.evaluate((element) => element.dispatchEvent(new PointerEvent("pointerdown", { bubbles: true })));
-  await chat.getByRole("tab", { name: "メッセージ" }).click();
-  await expect(chat.getByRole("tab", { name: "メッセージ" })).toHaveAttribute("aria-selected", "true");
-  await expect(chat.getByRole("tabpanel")).toContainText("受信メッセージはありません");
-
-  await chat.getByRole("tab", { name: "チャット" }).click();
+  await expect(chat.getByRole("tab")).toHaveCount(0);
   await chat.getByRole("textbox", { name: "トピック" }).fill("内部テスト");
   await chat.getByRole("combobox", { name: "ルーム" }).click();
   await chat.getByRole("listbox", { name: "ルーム" }).getByRole("option", { name: "パーティー" }).click();
