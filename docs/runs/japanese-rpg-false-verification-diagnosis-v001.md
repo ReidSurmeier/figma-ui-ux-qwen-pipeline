@@ -221,3 +221,17 @@ exact source coordinates. The browser gate asserts those bounds and that the
 Notification region exposes no button. A future next-message interaction must
 first supply explicit behavior authority and a source-fitting second message
 state.
+
+## Bottom Bar real-gesture tracer
+
+The visible Bottom Bar thumb occupies x=98..105 at its source endpoint, but the
+opacity-hidden range input began at x=102. Its first four pixels therefore did
+not belong to the slider. Programmatic `.fill()` tests still passed and could
+move the thumb to both endpoints, reproducing the same automation-bypasses-
+gesture failure as the native dropdown probes.
+
+The range hit area now begins at x=98 and ends immediately before the two
+source navigation buttons at x=580. The browser asserts all sampled pixels
+across the visible thumb resolve to the range input, then performs real pointer
+drags to x=570 and back to x=98. Both the input value and independent raster
+thumb must reach exact 100/0 endpoints.

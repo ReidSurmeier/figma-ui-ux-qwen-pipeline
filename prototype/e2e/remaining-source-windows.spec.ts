@@ -359,6 +359,36 @@ test("Notification keeps independent message layers without inventing a next hot
   }
 });
 
+test("Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag", async ({ page }) => {
+  await page.goto("/");
+  const bottomBar = page.getByRole("region", { name: "クイックスロットバー" });
+  const slider = bottomBar.getByRole("slider", { name: "クイックスロット位置" });
+  const thumb = bottomBar.locator(".bottom-bar-source-thumb");
+  await slider.fill("0");
+  const initialThumb = await thumb.boundingBox();
+  if (!initialThumb) throw new Error("Bottom Bar thumb geometry is unavailable");
+  const owners = await page.evaluate(({ x, y, width, height }) => [0, 3, width - 1].map((offset) => document
+    .elementFromPoint(x + offset, y + height / 2)
+    ?.closest('input[type="range"]')?.getAttribute("aria-label") ?? null), initialThumb);
+  expect(owners).toEqual(["クイックスロット位置", "クイックスロット位置", "クイックスロット位置"]);
+
+  await page.mouse.move(initialThumb.x + initialThumb.width / 2, initialThumb.y + initialThumb.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(initialThumb.x + 476, initialThumb.y + initialThumb.height / 2, { steps: 24 });
+  await page.mouse.up();
+  await expect(slider).toHaveValue("100");
+  await expect(thumb).toHaveCSS("left", "570px");
+
+  const finalThumb = await thumb.boundingBox();
+  if (!finalThumb) throw new Error("Bottom Bar final thumb geometry is unavailable");
+  await page.mouse.move(finalThumb.x + finalThumb.width / 2, finalThumb.y + finalThumb.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(initialThumb.x + 4, initialThumb.y + initialThumb.height / 2, { steps: 24 });
+  await page.mouse.up();
+  await expect(slider).toHaveValue("0");
+  await expect(thumb).toHaveCSS("left", "98px");
+});
+
 test("source-baked selection is visibly cleared before another option is promoted", async ({ page }) => {
   await page.goto("/");
 
