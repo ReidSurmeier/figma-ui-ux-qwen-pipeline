@@ -27,6 +27,14 @@ Reference authority
 
 Every correction-replay finding is promoted to a reproducible test before implementation changes. This prevents a reviewer from repeatedly reporting the same class of defect in prose without teaching the pipeline how to catch it.
 
+Generic browser probes are evidence collectors, not verdicts. A hash change,
+ARIA change, pointer-down effect, or preselected control is recorded as
+`uncontracted-evidence` and fails closed. An interaction can pass only when its
+source-specific contract proves all four of these facts: the real gesture path
+ran, the intended visible region changed, declared invariant regions remained
+stable, and the behavior/state is source-approved. This prevents a decorative
+filter or hidden status string from promoting an otherwise dead control.
+
 ## Required evidence per window
 
 - immutable reference identity and crop geometry;

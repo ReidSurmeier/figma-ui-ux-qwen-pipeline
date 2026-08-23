@@ -4,6 +4,8 @@ import { access, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium } from "playwright";
 
+import { classifyInteractionProbe } from "./classify-interaction-probe.mjs";
+
 const prototypeDir = resolve(import.meta.dirname, "..");
 const repoDir = resolve(prototypeDir, "..");
 const baseUrl = process.env.CORRECTION_MATRIX_URL ?? "http://10.255.255.254:4174/";
@@ -132,8 +134,8 @@ async function probeControls(page, windowId, windowDir) {
     const visualDown = downHash !== idleHash;
     const visualSettled = settledHash !== idleHash;
     const alreadySelected = beforeState.ariaPressed === "true" || beforeState.ariaSelected === "true";
-    const passed = visualDown || visualSettled || stateChanged || alreadySelected;
-    const probe = { ...descriptor, idleHash, downHash, settledHash, visualDown, visualSettled, stateChanged, alreadySelected, passed, beforeState, afterState };
+    const classification = classifyInteractionProbe({ visualDown, visualSettled, stateChanged, alreadySelected });
+    const probe = { ...descriptor, idleHash, downHash, settledHash, visualDown, visualSettled, stateChanged, alreadySelected, ...classification, beforeState, afterState };
     probes.push(probe);
     if (!passed) {
       await mkdir(failuresDir, { recursive: true });
