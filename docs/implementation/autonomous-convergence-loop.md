@@ -173,3 +173,10 @@ state an asserted precondition instead of a timing guess. The full browser suite
 uses at most six workers against the single Vite asset server: a 12-worker run
 reproduced incomplete Inventory rasters and false transparent-region changes,
 while the bounded run completed with stable source MAE and invariants.
+
+Transactional controls are tested as a state machine rather than independent
+clicks. Prerequisites are disabled in the public interface, each transition has
+settled feedback, changing the selected item invalidates old confirmation, and
+both commit and cancel return to a clean initial state. The semantic contract
+still executes gated controls that are absent from the default enabled-control
+probe.

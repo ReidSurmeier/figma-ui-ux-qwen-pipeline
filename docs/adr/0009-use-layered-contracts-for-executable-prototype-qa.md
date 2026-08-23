@@ -167,6 +167,10 @@ Use a layered QA system with one responsibility per layer:
     asset server. Higher cold-page concurrency produced incomplete raster
     captures and false MAE or invariant failures; throughput cannot outrank
     deterministic evidence.
+41. Multi-step actions expose prerequisites as real disabled states and lock the
+    complete forward and reversal journey. A confirm control cannot succeed
+    before selection, changing selection invalidates prior confirmation, and
+    commit or cancel returns the transaction to a clean state.
 
 ## Consequences
 

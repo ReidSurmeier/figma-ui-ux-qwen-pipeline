@@ -967,6 +967,72 @@
           "rule": "cancel restores form state without changing the Japanese title or submit control"
         }
       ]
+    },
+    {
+      "id": "exchange-every-item-selection-v001",
+      "window_id": "exchange",
+      "control_label_patterns": ["^交換アイテム (?:[1-9]|1[0-6])$"],
+      "test": {
+        "file": "e2e/exchange-source.spec.ts",
+        "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
+        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 399, 280, 120]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Each of the 16 extracted Exchange cells is independently selectable through its exact source grid target."]
+      },
+      "gesture": "trusted pointer clicks visit all 16 Exchange item cells",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "exchange-item-*",
+          "rule": "only the clicked cell owns selection and reports its exact Japanese item number"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["exchange-title-icon", "exchange-title-text", "exchange-summary"],
+          "rule": "the title and complete summary bars remain byte-identical through all 16 selections"
+        }
+      ]
+    },
+    {
+      "id": "exchange-confirm-trade-cancel-v001",
+      "window_id": "exchange",
+      "control_labels": ["OK", "trade", "cancel"],
+      "test": {
+        "file": "e2e/exchange-source.spec.ts",
+        "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
+        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 399, 280, 120]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["OK requires an item, Trade requires confirmation, and both Trade and cancel restore a clean reversible Exchange transaction."]
+      },
+      "gesture": "trusted pointer clicks execute select to OK to Trade and select to OK to cancel journeys",
+      "expected_region_changes": [
+        {
+          "component_ids": ["exchange-ok", "exchange-trade", "exchange-cancel"],
+          "rule": "selection enables OK, confirmation enables Trade, and Trade or cancel clears selection plus disables both gated actions"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["exchange-title-icon", "exchange-title-text", "exchange-summary"],
+          "rule": "transaction actions do not replace the source title or summary bars"
+        }
+      ]
     }
   ]
 }

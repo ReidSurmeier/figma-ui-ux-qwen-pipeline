@@ -107,6 +107,18 @@ the expected adjacent item buttons. This is retained as the Playwright contract
 `Exchange preserves its source summary bars and exact adjacent item hit
 boundaries`; no speculative Exchange visual repair was made.
 
+The later isolated semantic replay found 18 default enabled controls and zero
+contracts. Whole-window activity could not prove exact cell ownership or the
+transaction chain, and OK was incorrectly enabled before an item existed. All
+16 cells now declare their owned raster and a locked family journey checks exact
+34 by 34 grid geometry, exclusive selection, and invariant title/summary bars.
+OK is disabled until selection, changing selection invalidates confirmation,
+and Trade remains disabled until OK. Separate forward and reversal journeys
+prove both Trade and cancel clear selection, disable the gated actions, and
+settle exact Japanese status. The corrected default replay sees 17 currently
+enabled controls (16 cells plus cancel), all 17 contracted and passed; the
+locked browser test additionally executes the gated OK and Trade controls.
+
 ## First RED tracer
 
 `remaining-source-windows.spec.ts` now includes:
