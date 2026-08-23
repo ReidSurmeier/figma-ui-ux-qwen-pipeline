@@ -68,10 +68,27 @@ test("the message tab and chat form expose complete settled interaction states",
 
   await chat.getByRole("tab", { name: "チャット" }).click();
   await chat.getByRole("textbox", { name: "トピック" }).fill("内部テスト");
-  await chat.getByRole("combobox", { name: "ルーム" }).selectOption("パーティー");
+  await chat.getByRole("combobox", { name: "ルーム" }).click();
+  await chat.getByRole("listbox", { name: "ルーム" }).getByRole("option", { name: "パーティー" }).click();
   await chat.getByRole("radio", { name: "非公開" }).check();
   await chat.getByRole("button", { name: "OK" }).click();
   await expect(chat.getByRole("status")).toContainText("非公開 パーティー「内部テスト」を作成しました");
+});
+
+test("the Chat room dropdown is application-owned and visibly operable", async ({ page }) => {
+  await page.goto("/");
+  const chat = page.getByRole("region", { name: "チャットルーム" });
+  await chat.dispatchEvent("pointerdown");
+  const room = chat.getByRole("combobox", { name: "ルーム" });
+
+  await expect(room).toHaveAttribute("aria-expanded", "false");
+  await room.click();
+  await expect(room).toHaveAttribute("aria-expanded", "true");
+  const listbox = chat.getByRole("listbox", { name: "ルーム" });
+  await expect(listbox).toBeVisible();
+  await listbox.getByRole("option", { name: "パーティー" }).click();
+  await expect(room).toHaveAttribute("aria-expanded", "false");
+  await expect(room).toContainText("パーティー");
 });
 
 test("dense Japanese labels do not overflow their independently movable components", async ({ page }) => {
