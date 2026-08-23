@@ -1,6 +1,6 @@
 import { type CSSProperties, type PointerEvent, useRef, useState } from "react";
 
-type BasicInfoWindowProps = { zIndex: number; onActivate: (id: string) => void; onNavigate: (id: string) => void };
+type BasicInfoWindowProps = { zIndex: number; onActivate: (id: string) => void; onNavigate: (id: string, view?: string) => void };
 type Point = { x: number; y: number };
 
 const assetRoot = "/assets/japanese-rpg-v001/basic-info/components";
@@ -10,8 +10,8 @@ function Raster({ id, file, style, className = "" }: { id: string; file?: string
 }
 
 const pages = [
-  ["status", "status", 207, 22], ["option", "options", 244, 22], ["items", "inventory", 207, 47], ["equip", "equipment", 244, 47],
-  ["skill", "skills", 207, 72], ["map", null, 244, 72], ["chat", "chat", 207, 97], ["friend", null, 244, 97],
+  ["status", "status", undefined, 207, 22], ["option", "options", undefined, 244, 22], ["items", "inventory", undefined, 207, 47], ["equip", "equipment", undefined, 244, 47],
+  ["skill", "skills", undefined, 207, 72], ["map", null, undefined, 244, 72], ["chat", "chat", undefined, 207, 97], ["friend", "party", "friends", 244, 97],
 ] as const;
 
 export function BasicInfoWindow({ zIndex, onActivate, onNavigate }: BasicInfoWindowProps) {
@@ -81,7 +81,7 @@ export function BasicInfoWindow({ zIndex, onActivate, onNavigate }: BasicInfoWin
           <Raster id="sp-track" file="meter-track" style={{ left: 111, top: 43, width: 86, height: 11 }} />
           <Raster id="sp-thumb" style={{ left: 111 + (86 - 34) * sp / 100, top: 43, width: 34, height: 11 }} className="basic-info-thumb" />
           <input className="basic-info-slider basic-info-slider--sp" aria-label="SP" type="range" min="0" max="100" step="1" value={sp} onInput={(event) => setSp(event.currentTarget.valueAsNumber)} onChange={(event) => setSp(event.currentTarget.valueAsNumber)} />
-          {pages.map(([name, target, left, top]) => (
+          {pages.map(([name, target, view, left, top]) => (
             <button
               key={name}
               type="button"
@@ -92,7 +92,7 @@ export function BasicInfoWindow({ zIndex, onActivate, onNavigate }: BasicInfoWin
               onClick={() => {
                 setPage(name);
                 setStatus(`${name} を開きました`);
-                if (target) onNavigate(target);
+                if (target) onNavigate(target, view);
               }}
             ><span data-component-id={`page-${name}`} aria-hidden="true" /></button>
           ))}

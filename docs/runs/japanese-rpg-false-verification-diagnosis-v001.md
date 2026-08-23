@@ -346,3 +346,34 @@ red. Every report now includes counts and exact labels for contracted, passed,
 failed-contract, and uncontracted controls. This is the intended tracer-bullet
 behavior: coverage grows one reviewed interaction at a time without promoting
 adjacent controls by association.
+
+## Basic Info destination tracer
+
+The existing page-button test covered six buttons but silently omitted `map`
+and `friend`. Browser reproduction showed both clicks changed only Basic Info:
+the window raised itself, the button filter changed, and the hidden status text
+claimed the destination opened. No other window changed z-order. The complete
+pixel difference remained inside Basic Info (`map` 66 by 68 at `[0,0]`,
+`friend` 69 by 95 at `[0,0]`).
+
+Two public-interface acceptance tests were observed RED independently. Friend
+must activate the existing Party window and its source `友達` tab. Map must
+expose a visible draggable `マップ` region, not a filter or hidden message. The
+Friend repair now routes through Desktop-owned navigation state and passes.
+Map remains an executable expected failure with an explicit Qwen-state
+requirement; it cannot silently turn green until a real destination is added.
+
+The same full-coverage run found a correction-runner race at the Options close
+button: the control removed its window between visibility and screenshot calls.
+The runner now waits for activation repaint, retries transiently detached idle
+locators, and uses a one-second atomic settled screenshot with a control-vicinity
+fallback for deliberately closed windows. An isolated 17-control Options replay
+now completes and exits red for semantic coverage rather than crashing.
+
+Combining the 14 completed full-run reports with the repaired isolated Options
+report inventories 145 enabled controls (the disabled Exchange `trade` button
+is intentionally excluded). Only the Bottom Bar slider is presently
+source-contract-passed; 144 controls remain named and uncontracted. Compact
+Info and Notification contain no controls and pass their applicable visual and
+geometry prompts. No other window is eligible for verification from this
+coverage result.

@@ -94,3 +94,24 @@ test("basic info page buttons activate their corresponding independent source wi
     expect(targetZ, `${name} must bring ${targetName} in front of 基本情報`).toBeGreaterThan(basicZ);
   }
 });
+
+test("friend opens the visible Party friends destination instead of only self-selecting Basic Info", async ({ page }) => {
+  await page.goto("/");
+  const basic = page.getByRole("region", { name: "基本情報" });
+
+  await basic.getByRole("button", { name: "friend", exact: true }).click();
+  const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
+  await expect(party.getByRole("button", { name: "友達", exact: true })).toHaveAttribute("aria-pressed", "true");
+  expect(Number(await party.evaluate((element) => getComputedStyle(element).zIndex))).toBeGreaterThan(Number(await basic.evaluate((element) => getComputedStyle(element).zIndex)));
+});
+
+test("map opens a visible movable destination instead of only self-selecting Basic Info", async ({ page }) => {
+  test.fail(true, "RED: no source-themed Map destination exists yet; repair requires a reviewed Qwen state rather than another filter-only response");
+  await page.goto("/");
+  const basic = page.getByRole("region", { name: "基本情報" });
+  await basic.getByRole("button", { name: "map", exact: true }).click();
+  const map = page.getByRole("region", { name: "マップ", exact: true });
+  await expect(map).toBeVisible();
+  await expect(map.locator("[data-drag-handle]")).toBeVisible();
+  expect(Number(await map.evaluate((element) => getComputedStyle(element).zIndex))).toBeGreaterThan(Number(await basic.evaluate((element) => getComputedStyle(element).zIndex)));
+});

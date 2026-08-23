@@ -59,8 +59,23 @@ const artifactReference = (path) => relative(repoDir, path).split(sep).join("/")
 async function activateWindow(page, windowId) {
   const window = page.locator(`[data-window-id="${windowId}"]`);
   await window.dispatchEvent("pointerdown");
-  await page.waitForTimeout(0);
+  await page.evaluate(() => new Promise((resolveFrame) => requestAnimationFrame(() => requestAnimationFrame(resolveFrame))));
+  await window.waitFor({ state: "visible" });
   return window;
+}
+
+async function screenshotStable(locator, retries = 2, timeout = 30_000) {
+  let failure;
+  for (let attempt = 0; attempt <= retries; attempt += 1) {
+    try {
+      return await locator.screenshot({ timeout });
+    } catch (error) {
+      failure = error;
+      if (!/not attached|detached/i.test(String(error)) || attempt === retries) throw error;
+      await locator.page().waitForTimeout(16);
+    }
+  }
+  throw failure;
 }
 
 function donorPinkBoundaryPixels(path) {
@@ -126,7 +141,7 @@ async function probeControls(page, windowId, windowDir) {
       continue;
     }
     const beforeState = await snapshotState(page, windowId, descriptor.index);
-    const idle = await window.screenshot();
+    const idle = await screenshotStable(window);
     let down = idle;
 
     if (descriptor.tag === "input" && descriptor.type === "range") {
@@ -150,9 +165,13 @@ async function probeControls(page, windowId, windowDir) {
 
     await page.waitForTimeout(260);
     const afterState = await snapshotState(page, windowId, descriptor.index);
-    const settled = await window.isVisible().catch(() => false)
-      ? await window.screenshot()
-      : await page.screenshot({ clip: { x: Math.max(0, box.x - 8), y: Math.max(0, box.y - 8), width: Math.max(20, box.width + 16), height: Math.max(20, box.height + 16) } });
+    let settled;
+    try {
+      settled = await screenshotStable(window, 0, 1_000);
+    } catch (error) {
+      if (!/not attached|detached|not visible|Timeout/i.test(String(error))) throw error;
+      settled = await page.screenshot({ clip: { x: Math.max(0, box.x - 8), y: Math.max(0, box.y - 8), width: Math.max(20, box.width + 16), height: Math.max(20, box.height + 16) } });
+    }
     const idleHash = sha(idle);
     const downHash = sha(down);
     const settledHash = sha(settled);

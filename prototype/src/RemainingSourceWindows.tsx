@@ -143,10 +143,9 @@ export function GameMenuSourceWindow({ zIndex, onActivate }: WindowProps) {
   return <SourceWindow id="game-menu" title="ゲームメニュー" initialPosition={{ x: 626, y: 182 }} width={222} height={133} titleWidth={128} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closable={false}>{labels.map((label, row) => <button key={label} type="button" className="game-menu-source-action" aria-pressed={selected === row} aria-label={label} style={{ top: 29 + row * 25 }} onClick={() => setSelected(row)}><SourceRaster id={`game-menu-action-${row}`} file={`${assetRoot}/components/action-${row}`} style={{ inset: 0 }} /></button>)}<output className="sr-only" role="status">{selected >= 0 ? labels[selected] : "menu ready"}</output></SourceWindow>;
 }
 
-export function PartySourceWindow({ zIndex, onActivate }: WindowProps) {
+export function PartySourceWindow({ zIndex, onActivate, tab, onTabChange }: WindowProps & { tab: "friends" | "party"; onTabChange: (tab: "friends" | "party") => void }) {
   const [member, setMember] = useState<number | null>(0);
   const [page, setPage] = useState(0);
-  const [tab, setTab] = useState<"friends" | "party">("party");
   const [status, setStatus] = useState("");
   const names = ["SakumaRiri", "Sebas'", "ANRI(砂漠の都市モロク)", "Show_A", "Ayanalshizuka"];
   const assetRoot = `${root}/party`;
@@ -164,8 +163,8 @@ export function PartySourceWindow({ zIndex, onActivate }: WindowProps) {
         </button>;
       })}
       {[0, 1, 2, 3, 4].map((column) => <button key={column} type="button" className="party-source-tool" aria-label={`パーティーツール ${column + 1}`} aria-pressed={status === `tool ${column + 1}`} style={{ left: 4 + column * 29 }} onClick={() => setStatus(`tool ${column + 1}`)}><SourceRaster id={`party-tool-${column}`} file={`${assetRoot}/components/tool-${column}`} style={{ inset: 0 }} /></button>)}
-      <button type="button" className="party-source-tab party-source-tab--friends" aria-label="友達" aria-pressed={tab === "friends"} onClick={() => setTab("friends")}><SourceRaster id="party-friends" file={`${assetRoot}/components/friends`} style={{ inset: 0 }} /></button>
-      <button type="button" className="party-source-tab party-source-tab--party" aria-label="パーティー" aria-pressed={tab === "party"} onClick={() => setTab("party")}><SourceRaster id="party-party-tab" file={`${assetRoot}/components/party-tab`} style={{ inset: 0 }} /></button>
+      <button type="button" className="party-source-tab party-source-tab--friends" aria-label="友達" aria-pressed={tab === "friends"} onClick={() => onTabChange("friends")}><SourceRaster id="party-friends" file={`${assetRoot}/components/friends`} style={{ inset: 0 }} /></button>
+      <button type="button" className="party-source-tab party-source-tab--party" aria-label="パーティー" aria-pressed={tab === "party"} onClick={() => onTabChange("party")}><SourceRaster id="party-party-tab" file={`${assetRoot}/components/party-tab`} style={{ inset: 0 }} /></button>
       <output className="sr-only" role="status">{status || `${page + 1}/2`}</output>
     </SourceWindow>
     <div className="party-source-external-actions" role="group" aria-label="パーティー外部操作" style={{ zIndex }}>
