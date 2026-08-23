@@ -14,7 +14,7 @@
     { "id": "exchange", "title": "交換ウィンドウ: ANRI", "bounds": [285, 399, 280, 120], "status": "reconstruction" },
     { "id": "game-menu", "title": "ゲームメニュー", "bounds": [626, 182, 222, 133], "status": "reconstruction", "occluded_by": ["skills"] },
     { "id": "compact-info", "title": "簡易情報", "bounds": [568, 314, 281, 35], "status": "reconstruction" },
-    { "id": "party", "title": "パーティー (Riri-Soft)", "bounds": [568, 349, 210, 154], "status": "reconstruction", "shape": "160-wide party panel plus three source action buttons" },
+    { "id": "party", "title": "パーティー (Riri-Soft)", "bounds": [568, 370, 160, 154], "status": "reconstruction", "shape": "independent 160-wide party window", "external_controls": ["back", "next", "sell"] },
     { "id": "quickbar", "title": "クイックスロット", "bounds": [736, 430, 112, 94], "status": "reconstruction" },
     { "id": "bottom-bar", "title": "クイックスロットバー", "bounds": [0, 538, 600, 21], "status": "reconstruction" },
     { "id": "notification", "title": "通知", "bounds": [604, 523, 245, 41], "status": "reconstruction" }

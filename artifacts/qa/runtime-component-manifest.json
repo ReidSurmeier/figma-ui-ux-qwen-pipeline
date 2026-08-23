@@ -1044,26 +1044,6 @@
           }
         },
         {
-          "id": "stats",
-          "role": "button",
-          "geometry": {
-            "x": 3,
-            "y": 18,
-            "width": 17,
-            "height": 54
-          }
-        },
-        {
-          "id": "info",
-          "role": "button",
-          "geometry": {
-            "x": 3,
-            "y": 72,
-            "width": 17,
-            "height": 54
-          }
-        },
-        {
           "id": "Strを上げる",
           "role": "button",
           "geometry": {
@@ -2159,26 +2139,6 @@
       ],
       "controls": [
         {
-          "id": "チャット",
-          "role": "tab",
-          "geometry": {
-            "x": 62,
-            "y": 0,
-            "width": 52.02,
-            "height": 18
-          }
-        },
-        {
-          "id": "メッセージ",
-          "role": "tab",
-          "geometry": {
-            "x": 114.02,
-            "y": 0,
-            "width": 61.02,
-            "height": 18
-          }
-        },
-        {
           "id": "トピック",
           "role": "input",
           "geometry": {
@@ -2186,6 +2146,16 @@
             "y": 27,
             "width": 228,
             "height": 17
+          }
+        },
+        {
+          "id": "ルーム",
+          "role": "combobox",
+          "geometry": {
+            "x": 181,
+            "y": 55,
+            "width": 92,
+            "height": 16
           }
         },
         {
@@ -2775,8 +2745,8 @@
       "ariaLabel": "パーティー (Riri-Soft)",
       "geometry": {
         "x": 568,
-        "y": 349,
-        "width": 210,
+        "y": 370,
+        "width": 160,
         "height": 154
       },
       "cleanPlate": "/assets/japanese-rpg-v001/party/clean-plate.png",
@@ -2805,7 +2775,7 @@
           "id": "party-close",
           "assetPath": "/assets/japanese-rpg-v001/party/components/close.png",
           "geometry": {
-            "x": 96,
+            "x": 146,
             "y": 3,
             "width": 13,
             "height": 15
@@ -2859,36 +2829,6 @@
             "y": 95,
             "width": 154,
             "height": 19
-          }
-        },
-        {
-          "id": "party-action-0",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/action-0.png",
-          "geometry": {
-            "x": 170,
-            "y": 1,
-            "width": 41,
-            "height": 20
-          }
-        },
-        {
-          "id": "party-action-1",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/action-1.png",
-          "geometry": {
-            "x": 170,
-            "y": 24,
-            "width": 41,
-            "height": 20
-          }
-        },
-        {
-          "id": "party-action-2",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/action-2.png",
-          "geometry": {
-            "x": 170,
-            "y": 47,
-            "width": 41,
-            "height": 20
           }
         },
         {
@@ -2967,7 +2907,7 @@
           "id": "パーティー (Riri-Soft)を閉じる",
           "role": "button",
           "geometry": {
-            "x": 96,
+            "x": 146,
             "y": 0,
             "width": 13,
             "height": 18
@@ -3021,36 +2961,6 @@
             "y": 95,
             "width": 154,
             "height": 19
-          }
-        },
-        {
-          "id": "back",
-          "role": "button",
-          "geometry": {
-            "x": 170,
-            "y": 1,
-            "width": 41,
-            "height": 20
-          }
-        },
-        {
-          "id": "next",
-          "role": "button",
-          "geometry": {
-            "x": 170,
-            "y": 24,
-            "width": 41,
-            "height": 20
-          }
-        },
-        {
-          "id": "sell",
-          "role": "button",
-          "geometry": {
-            "x": 170,
-            "y": 47,
-            "width": 41,
-            "height": 20
           }
         },
         {

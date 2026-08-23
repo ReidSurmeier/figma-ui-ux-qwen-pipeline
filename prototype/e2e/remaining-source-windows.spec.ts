@@ -7,7 +7,7 @@ const windows = [
   { name: "チャットルーム", id: "chat", minimumComponents: 10 },
   { name: "交換ウィンドウ: ANRI", id: "exchange", minimumComponents: 20 },
   { name: "ゲームメニュー", id: "game-menu", minimumComponents: 6 },
-  { name: "パーティー (Riri-Soft)", id: "party", minimumComponents: 16 },
+  { name: "パーティー (Riri-Soft)", id: "party", minimumComponents: 15 },
   { name: "クイックスロット", id: "quickbar", minimumComponents: 3 },
   { name: "簡易情報", id: "compact-info", minimumComponents: 5 },
   { name: "クイックスロットバー", id: "bottom-bar", minimumComponents: 4 },
@@ -57,7 +57,7 @@ test("remaining source windows expose meaningful reversible user flows", async (
 
   const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
   await party.getByRole("option", { name: /Sebas/ }).click();
-  await party.getByRole("button", { name: "next" }).click();
+  await page.getByRole("group", { name: "パーティー外部操作" }).getByRole("button", { name: "next" }).click();
   await expect(party.getByRole("status")).toContainText("2/2");
 
   const quickbar = page.getByRole("region", { name: "クイックスロット", exact: true });
@@ -189,4 +189,27 @@ test("source-baked selection is visibly cleared before another option is promote
   await inventory.getByRole("button", { name: "equip", exact: true }).click();
   expect((await sourceTab.screenshot()).equals(tabBefore)).toBe(false);
   await expect(inventory.locator('.inventory-source-tab[aria-pressed="true"]')).toHaveCount(1);
+});
+
+test("dragging Party leaves the source-external back next sell strip anchored", async ({ page }) => {
+  await page.goto("/");
+  const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
+  const next = page.getByRole("button", { name: "next", exact: true });
+  const handle = party.locator("[data-drag-handle]");
+  const partyBefore = await party.boundingBox();
+  const nextBefore = await next.boundingBox();
+  const handleBox = await handle.boundingBox();
+  if (!partyBefore || !nextBefore || !handleBox) throw new Error("Party ownership geometry is unavailable");
+
+  await page.mouse.move(handleBox.x + 80, handleBox.y + 8);
+  await page.mouse.down();
+  await page.mouse.move(handleBox.x + 110, handleBox.y + 28, { steps: 8 });
+  await page.mouse.up();
+
+  const partyAfter = await party.boundingBox();
+  const nextAfter = await next.boundingBox();
+  expect(partyAfter?.x).toBe(partyBefore.x + 30);
+  expect(partyAfter?.y).toBe(partyBefore.y + 20);
+  expect(nextAfter).toEqual(nextBefore);
+  await expect(party.getByRole("button", { name: /^(back|next|sell)$/ })).toHaveCount(0);
 });
