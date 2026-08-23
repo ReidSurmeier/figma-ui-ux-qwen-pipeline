@@ -76,8 +76,6 @@ test("remaining source windows expose meaningful reversible user flows", async (
   const equipment = page.getByRole("region", { name: "装備アイテム" });
   await equipment.getByRole("button", { name: "右装備 3" }).click();
   await expect(equipment.getByRole("button", { name: "右装備 3" })).toHaveAttribute("aria-pressed", "true");
-  await equipment.getByRole("button", { name: "キャラクターを回転" }).click();
-  await expect(equipment.getByRole("button", { name: "キャラクターを回転" })).toHaveAttribute("data-turn", "1");
 
   const exchange = page.getByRole("region", { name: "交換ウィンドウ: ANRI" });
   await exchange.getByRole("button", { name: "交換アイテム 7" }).click();
@@ -251,7 +249,7 @@ test("Equipment rows and avatar own exact non-overlapping source columns", async
   const bounds = await equipment.boundingBox();
   if (!bounds) throw new Error("Equipment geometry is unavailable");
   const left = equipment.getByRole("button", { name: "左装備 1" });
-  const avatar = equipment.getByRole("button", { name: "キャラクターを回転" });
+  const avatar = equipment.locator('[data-component-id="equipment-avatar"]');
   const right = equipment.getByRole("button", { name: "右装備 1" });
 
   expect(await left.boundingBox()).toMatchObject({ x: bounds.x + 4, width: 105 });
@@ -264,7 +262,20 @@ test("Equipment rows and avatar own exact non-overlapping source columns", async
     document.elementFromPoint(x + 169, y + 31)?.closest("button")?.getAttribute("aria-label"),
     document.elementFromPoint(x + 170, y + 31)?.closest("button")?.getAttribute("aria-label"),
   ], bounds);
-  expect(owners).toEqual(["左装備 1", "キャラクターを回転", "キャラクターを回転", "右装備 1"]);
+  expect(owners).toEqual(["左装備 1", undefined, undefined, "右装備 1"]);
+});
+
+test("Equipment preserves its avatar component without inventing a rotation hotspot", async ({ page }) => {
+  await page.goto("/");
+  const equipment = page.getByRole("region", { name: "装備アイテム" });
+  const avatar = equipment.locator('[data-component-id="equipment-avatar"]');
+  await expect(avatar).toBeVisible();
+  await expect(equipment.getByRole("button", { name: "キャラクターを回転" })).toHaveCount(0);
+  const bounds = await avatar.boundingBox();
+  if (!bounds) throw new Error("Equipment avatar geometry is unavailable");
+  expect(await page.evaluate(({ x, y, width, height }) => document
+    .elementFromPoint(x + width / 2, y + height / 2)
+    ?.closest("button")?.getAttribute("aria-label") ?? null, bounds)).toBeNull();
 });
 
 test("compact HP and SP remain source-faithful readouts rather than invisible sliders", async ({ page }) => {

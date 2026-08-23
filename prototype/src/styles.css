@@ -138,10 +138,7 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 
 .equipment-source-row { position: absolute; z-index: 4; width: 106px; height: 29px; padding: 0; border: 0; background: transparent; }
 .equipment-source-row[aria-pressed="true"] { outline: 1px solid #5b8bb6; outline-offset: -1px; filter: brightness(0.83) saturate(1.2); }
-.equipment-source-avatar { position: absolute; z-index: 4; left: 109px; top: 18px; width: 61px; height: 134px; padding: 0; border: 0; background: transparent; }
-.equipment-source-avatar[data-turn="1"] .source-raster { transform: translateX(1px); filter: brightness(0.92); }
-.equipment-source-avatar[data-turn="2"] .source-raster { transform: scaleX(-1); }
-.equipment-source-avatar[data-turn="3"] .source-raster { transform: scaleX(-1) translateX(1px); filter: brightness(0.92); }
+.equipment-source-avatar { z-index: 4; }
 
 .chat-source-topic, .chat-source-privacy { position: absolute; z-index: 7; opacity: 0.002; }
 .chat-source-privacy { top: 66px; width: 16px; height: 18px; margin: 0; }

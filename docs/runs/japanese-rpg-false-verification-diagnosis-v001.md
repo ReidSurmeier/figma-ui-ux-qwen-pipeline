@@ -171,3 +171,13 @@ x=4..108, the avatar owns x=109..169, and right rows own x=170..275. The gate
 asserts the three DOM rectangles and probes the integer pixels on both shared
 boundaries with `elementFromPoint`; it does not rely on center clicks or forced
 activation.
+
+The central character preview had a second false contract. The screenshot does
+not identify it as a button and no authority defines a rotate gesture, but the
+runtime wrapped it in a hidden `キャラクターを回転` button. Its four alleged
+states were only one-pixel translations, mirroring, and brightness filters;
+the test passed by reading `data-turn`. The hotspot and synthetic states are
+removed. The avatar remains an independent raster component, and the runtime
+now proves that its center does not resolve to a button. A future rotation flow
+requires explicit behavior authority and source-fitting Qwen state assets
+before it can be introduced.
