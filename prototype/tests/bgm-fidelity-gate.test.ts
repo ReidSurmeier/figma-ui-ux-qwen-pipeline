@@ -36,14 +36,28 @@ describe("BGM and Effect canonical fidelity gate", () => {
     expect(verdict.failures).toContain("largest-local-defect");
   });
 
-  it("does not preserve historical verified status for windows below BGM fidelity", async () => {
+  it("permits verified siblings only after the BGM floor and correction replay pass", async () => {
     const contract = await loadBgmFidelityContract(resolve(".."));
     const registry = JSON.parse(await readFile(resolve("..", "prototype/qa/window-verification.json"), "utf8")) as {
-      windows: Array<{ id: string; status: string }>;
+      windows: Array<{
+        id: string;
+        status: string;
+        deterministic_gates: string;
+        correction_replay: { status: string };
+        bgm_fidelity: { status: string };
+      }>;
     };
 
     for (const id of contract.requiredWindows.filter((windowId) => windowId !== contract.benchmarkWindow)) {
-      expect(registry.windows.find((window) => window.id === id)?.status).not.toBe("verified");
+      const window = registry.windows.find((entry) => entry.id === id);
+      expect(window).toBeDefined();
+      if (window?.status === "verified") {
+        expect(window.deterministic_gates).toBe("pass");
+        expect(window.correction_replay.status).toBe("pass");
+        expect(window.bgm_fidelity.status).toBe("benchmark-pass");
+      } else {
+        expect(window?.status).toBe("revision-required");
+      }
     }
   });
 });
