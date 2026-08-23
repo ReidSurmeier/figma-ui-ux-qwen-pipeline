@@ -305,3 +305,20 @@ overnight loop cannot report a green command for a red audit summary.
 For a fast runner self-test, `CORRECTION_MATRIX_WINDOW_IDS` accepts a
 comma-separated source-window subset and rejects unknown ids. Omitting it still
 runs the full 15-window overnight matrix.
+
+## Runtime-manifest freshness gate
+
+The first semantic-contract tracer found that the Figma input manifest was
+stale even after the runtime repairs. It still declared the broken Bottom Bar
+slider hitbox at x=102/width=478 instead of x=98/width=482, omitted all Skills
+page-two component and control instances, and retained the old 106-pixel
+Equipment left-row width. A Figma build from that file would reproduce geometry
+that the browser tests had already corrected.
+
+Manifest capture is now a shared browser function used by both the capture CLI
+and an E2E freshness gate. The committed artifact must be deep-equal to a fresh
+849 by 564 browser capture before the suite passes. The refreshed manifest
+records 15 windows and 205 component instances, including the corrected Bottom
+Bar, Skills, Equipment, and Compact Info geometry. This makes runtime-to-Figma
+handoff drift independently detectable instead of trusting a previously
+generated JSON file.

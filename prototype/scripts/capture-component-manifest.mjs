@@ -1,16 +1,11 @@
 import { mkdir, writeFile } from "node:fs/promises";
+import { dirname, resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import { chromium } from "playwright";
 
-const output = new URL("../../artifacts/qa/runtime-component-manifest.json", import.meta.url);
-await mkdir(new URL("../../artifacts/qa/", import.meta.url), { recursive: true });
-
-const browser = await chromium.launch({ headless: true, executablePath: "/usr/bin/google-chrome" });
-try {
-  const page = await browser.newPage({ viewport: { width: 849, height: 564 }, deviceScaleFactor: 1 });
-  await page.goto("http://10.255.255.254:4174/", { waitUntil: "networkidle" });
+export async function captureRuntimeComponentManifest(page) {
   await page.evaluate(() => document.fonts.ready);
-
-  const manifest = await page.locator("[data-window-id]").evaluateAll((windows) => windows.map((window) => {
+  const windows = await page.locator("[data-window-id]").evaluateAll((nodes) => nodes.map((window) => {
     const root = window.getBoundingClientRect();
     const relative = (node) => {
       const bounds = node.getBoundingClientRect();
@@ -42,7 +37,7 @@ try {
         id: node.dataset.componentId,
         assetPath: assetPath(node),
         geometry: relative(node),
-      })).filter(({ assetPath }) => assetPath),
+      })).filter(({ assetPath: path }) => path),
       controls: [...window.querySelectorAll("button, input, [role=tab], [role=option]")]
         .filter((node) => node.getBoundingClientRect().width > 0 && node.getBoundingClientRect().height > 0)
         .map((node, index) => ({
@@ -53,8 +48,27 @@ try {
     };
   }));
 
-  await writeFile(output, `${JSON.stringify({ schemaVersion: "1.0", canvas: { width: 849, height: 564 }, windows: manifest }, null, 2)}\n`);
-  process.stdout.write(`captured ${manifest.length} windows and ${manifest.reduce((sum, window) => sum + window.components.length, 0)} component instances\n`);
-} finally {
-  await browser.close();
+  return {
+    schemaVersion: "1.0",
+    canvas: { width: 849, height: 564 },
+    windows,
+  };
 }
+
+async function main() {
+  const prototypeDir = resolve(import.meta.dirname, "..");
+  const output = resolve(prototypeDir, "../artifacts/qa/runtime-component-manifest.json");
+  await mkdir(dirname(output), { recursive: true });
+  const browser = await chromium.launch({ headless: true, executablePath: "/usr/bin/google-chrome" });
+  try {
+    const page = await browser.newPage({ viewport: { width: 849, height: 564 }, deviceScaleFactor: 1 });
+    await page.goto(process.env.COMPONENT_MANIFEST_URL ?? "http://10.255.255.254:4174/", { waitUntil: "networkidle" });
+    const manifest = await captureRuntimeComponentManifest(page);
+    await writeFile(output, `${JSON.stringify(manifest, null, 2)}\n`);
+    process.stdout.write(`captured ${manifest.windows.length} windows and ${manifest.windows.reduce((sum, window) => sum + window.components.length, 0)} component instances\n`);
+  } finally {
+    await browser.close();
+  }
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) await main();
