@@ -7,6 +7,7 @@ import { chromium } from "playwright";
 import { classifyInteractionProbe } from "./classify-interaction-probe.mjs";
 import { correctionMatrixOutputConfig, selectedCorrectionMatrixWindows } from "./correction-matrix-config.mjs";
 import { rangeGesturePoint } from "./range-gesture-geometry.mjs";
+import { executeSemanticInteractionContracts } from "./semantic-interaction-contract.mjs";
 
 const prototypeDir = resolve(import.meta.dirname, "..");
 const repoDir = resolve(prototypeDir, "..");
@@ -17,12 +18,25 @@ const registryInputPath = resolve(prototypeDir, "qa/window-verification.json");
 const registry = JSON.parse(await readFile(registryInputPath, "utf8"));
 const manifest = JSON.parse(await readFile(resolve(repoDir, "artifacts/qa/runtime-component-manifest.json"), "utf8"));
 const windowDefinitions = selectedCorrectionMatrixWindows(manifest.windows, process.env.CORRECTION_MATRIX_WINDOW_IDS);
+const selectedWindowIds = new Set(windowDefinitions.map(({ id }) => id));
+const semanticManifest = JSON.parse(await readFile(resolve(prototypeDir, "qa/semantic-interaction-contracts.json"), "utf8"));
+const semanticContracts = semanticManifest.contracts.filter(({ window_id }) => selectedWindowIds.has(window_id));
 const figmaMarker = resolve(repoDir, "artifacts/qa/figma-correction-matrix-v003.json");
 const sha = (value) => createHash("sha256").update(value).digest("hex");
 const exists = async (path) => access(path).then(() => true, () => false);
 const browser = await chromium.launch({ headless: true, executablePath: "/usr/bin/google-chrome" });
 await rm(evidenceRoot, { recursive: true, force: true });
 await mkdir(evidenceRoot, { recursive: true });
+const semanticRun = executeSemanticInteractionContracts({ contracts: semanticContracts, prototypeDir, repoDir });
+await writeFile(resolve(evidenceRoot, "semantic-contract-playwright.json"), `${JSON.stringify(semanticRun.report, null, 2)}\n`);
+const semanticByControl = new Map();
+for (const evaluation of semanticRun.evaluations) {
+  for (const label of evaluation.controlLabels) {
+    const key = `${evaluation.windowId}::${label}`;
+    if (semanticByControl.has(key)) throw new Error(`Duplicate semantic interaction contract for ${key}`);
+    semanticByControl.set(key, evaluation);
+  }
+}
 const sourceContracts = ["contract-check.sh", "remaining-window-contract.sh"].map((script) => {
   const outcome = spawnSync("bash", [resolve(prototypeDir, "scripts", script)], { cwd: prototypeDir, encoding: "utf8" });
   return {
@@ -146,8 +160,9 @@ async function probeControls(page, windowId, windowDir) {
     const visualDown = downHash !== idleHash;
     const visualSettled = settledHash !== idleHash;
     const alreadySelected = beforeState.ariaPressed === "true" || beforeState.ariaSelected === "true";
-    const classification = classifyInteractionProbe({ visualDown, visualSettled, stateChanged, alreadySelected });
-    const probe = { ...descriptor, idleHash, downHash, settledHash, visualDown, visualSettled, stateChanged, alreadySelected, ...classification, beforeState, afterState };
+    const semanticContract = semanticByControl.get(`${windowId}::${descriptor.label}`) ?? null;
+    const classification = classifyInteractionProbe({ visualDown, visualSettled, stateChanged, alreadySelected }, semanticContract?.requirements);
+    const probe = { ...descriptor, idleHash, downHash, settledHash, visualDown, visualSettled, stateChanged, alreadySelected, semanticContract, ...classification, beforeState, afterState };
     probes.push(probe);
     if (!classification.passed) {
       await mkdir(failuresDir, { recursive: true });
@@ -316,7 +331,33 @@ try {
     const minimize = await sampleMinimize(page, windowId);
     const checkboxes = await probeCheckboxes(page, windowId);
     const failures = controls.filter((control) => control.passed === false || control.failure);
-    const trace = { windowId, requests: [...new Set(requests)], consoleErrors, geometry, controls, ranges, minimize, checkboxes, donorPinkBoundary, sourceContracts };
+    const controlCoverage = {
+      total: controls.length,
+      contracted: controls.filter(({ semanticContract }) => semanticContract).length,
+      contractPassed: controls.filter(({ classification }) => classification === "contract-passed").length,
+      contractFailed: controls.filter(({ classification }) => classification === "contract-failed").map(({ label }) => label),
+      uncontracted: controls.filter(({ classification }) => classification === "uncontracted-evidence").map(({ label }) => label),
+    };
+    const trace = {
+      windowId,
+      requests: [...new Set(requests)],
+      consoleErrors,
+      geometry,
+      controls,
+      ranges,
+      minimize,
+      checkboxes,
+      donorPinkBoundary,
+      sourceContracts,
+      controlCoverage,
+      semanticContractRun: {
+        status: semanticRun.status,
+        error: semanticRun.error,
+        command: semanticRun.command,
+        report: artifactReference(resolve(evidenceRoot, "semantic-contract-playwright.json")),
+      },
+      semanticContracts: semanticRun.evaluations,
+    };
     const tracePath = resolve(windowDir, "trace.json");
     const traceReference = artifactReference(tracePath);
     await writeFile(tracePath, `${JSON.stringify(trace, null, 2)}\n`);
@@ -365,11 +406,11 @@ try {
         "tab-boundary-mapping": { tabsPass },
         "slider-full-endpoint-and-grey-block": { ranges },
         "continuous-motion-not-four-frames": { ranges },
-        "settled-button-effects": { controlCount: controls.length, failures: failures.map(({ label }) => label) },
+        "settled-button-effects": { controlCount: controls.length, failures: failures.map(({ label }) => label), controlCoverage },
         "drag-cutoff-and-z-order": geometry.drag,
         "text-overlap-and-pixel-aesthetic": { overflow: geometry.textOverflow },
         "figma-link-and-page-parity": { figmaSynced, requiredMarker: "artifacts/qa/figma-correction-matrix-v003.json" },
-        "complete-user-flow-not-screenshot-only": { controlCount: controls.length, failures: failures.map(({ label }) => label), consoleErrors },
+        "complete-user-flow-not-screenshot-only": { controlCount: controls.length, failures: failures.map(({ label }) => label), controlCoverage, consoleErrors },
         "interaction-animation-source-fit": { minimize, ranges, discreteControlFailures: failures.map(({ label }) => label) },
       };
       let verdict = "pass";
@@ -416,6 +457,7 @@ try {
         "artifacts/qa/figma-desktop-audit-v001.json",
         "artifacts/qa/figma-correction-matrix-v003.json",
       ],
+      control_coverage: controlCoverage,
       results,
     };
     const reportPath = resolve(reportRoot, windowId, "correction-replay-v003.json");
@@ -430,7 +472,7 @@ try {
         : "revision-required";
     registryWindow.deterministic_gates = overall;
     registryWindow.correction_replay = { status: overall, report: reportReference };
-    reports.push({ windowId, overall, failures: results.filter(({ verdict }) => verdict === "fail").map(({ prompt_id }) => prompt_id) });
+    reports.push({ windowId, overall, controlCoverage, failures: results.filter(({ verdict }) => verdict === "fail").map(({ prompt_id }) => prompt_id) });
     await page.close();
   }
 } finally {

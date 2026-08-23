@@ -376,6 +376,12 @@ test("Bottom Bar slider owns its complete visible thumb and reaches both endpoin
   const bottomBar = page.getByRole("region", { name: "クイックスロットバー" });
   const slider = bottomBar.getByRole("slider", { name: "クイックスロット位置" });
   const thumb = bottomBar.locator(".bottom-bar-source-thumb");
+  const bounds = await bottomBar.boundingBox();
+  if (!bounds) throw new Error("Bottom Bar source geometry is unavailable");
+  const titleInvariant = { x: bounds.x, y: bounds.y, width: 96, height: 21 };
+  const navigationInvariant = { x: bounds.x + 580, y: bounds.y, width: 20, height: 21 };
+  const titleBefore = await page.screenshot({ clip: titleInvariant });
+  const navigationBefore = await page.screenshot({ clip: navigationInvariant });
   await slider.fill("0");
   const initialThumb = await thumb.boundingBox();
   if (!initialThumb) throw new Error("Bottom Bar thumb geometry is unavailable");
@@ -399,6 +405,8 @@ test("Bottom Bar slider owns its complete visible thumb and reaches both endpoin
   await page.mouse.up();
   await expect(slider).toHaveValue("0");
   await expect(thumb).toHaveCSS("left", "98px");
+  expect((await page.screenshot({ clip: titleInvariant })).equals(titleBefore), "slider motion altered the source title region").toBe(true);
+  expect((await page.screenshot({ clip: navigationInvariant })).equals(navigationBefore), "slider motion altered the source navigation buttons").toBe(true);
 });
 
 test("Quickbar preserves its unfocused source state and exact slot geometry", async ({ page }) => {

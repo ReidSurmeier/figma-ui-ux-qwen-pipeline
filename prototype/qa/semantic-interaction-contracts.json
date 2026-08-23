@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "contracts": [
+    {
+      "id": "bottom-bar-slider-real-drag-v001",
+      "window_id": "bottom-bar",
+      "control_labels": [
+        "クイックスロット位置"
+      ],
+      "test": {
+        "file": "e2e/remaining-source-windows.spec.ts",
+        "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
+        "sha256": "9fdaa6b46454a8f2141024d016619fc8b94b00442f253945ef09b18a7c862434"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          538,
+          600,
+          21
+        ]
+      },
+      "gesture": "pointer-drag 24 steps in both directions with exact endpoint readback",
+      "expected_region_changes": [
+        {
+          "component_id": "bottom-bar-thumb",
+          "rule": "moves from x=98 to x=570 and returns to x=98"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "bottom-bar-title-icon",
+            "bottom-bar-title-text"
+          ],
+          "rule": "title pixels remain byte-identical"
+        },
+        {
+          "component_ids": [
+            "bottom-bar-previous",
+            "bottom-bar-next"
+          ],
+          "rule": "navigation pixels remain byte-identical"
+        }
+      ]
+    }
+  ]
+}

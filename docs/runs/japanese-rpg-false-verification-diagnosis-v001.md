@@ -322,3 +322,27 @@ records 15 windows and 205 component instances, including the corrected Bottom
 Bar, Skills, Equipment, and Compact Info geometry. This makes runtime-to-Figma
 handoff drift independently detectable instead of trusting a previously
 generated JSON file.
+
+## First executable semantic-contract tracer
+
+The Bottom Bar slider is the first generic probe allowed to pass. Its contract
+locks five independent facts:
+
+1. the exact Playwright test title and SHA-256 of its complete source file;
+2. a passing real pointer-drag test in both directions;
+3. the exact source screenshot SHA-256 and bottom-bar crop `[0,538,600,21]`;
+4. the expected moving thumb region and exact 98/570/98 endpoints; and
+5. byte-stable title and navigation-button invariant regions.
+
+The correction runner executes the locked test and derives the four semantic
+requirements from that evidence. It does not read `true` values from the
+contract file. A changed test file, changed source image, missing test, failed
+gesture, absent expected region, or absent invariant region fails the contract.
+
+In the isolated Bottom Bar replay, `クイックスロット位置` changed from
+`uncontracted-evidence` to `contract-passed`. `前のスロット` and
+`次のスロット` remain explicitly uncontracted, so the window and command stay
+red. Every report now includes counts and exact labels for contracted, passed,
+failed-contract, and uncontracted controls. This is the intended tracer-bullet
+behavior: coverage grows one reviewed interaction at a time without promoting
+adjacent controls by association.
