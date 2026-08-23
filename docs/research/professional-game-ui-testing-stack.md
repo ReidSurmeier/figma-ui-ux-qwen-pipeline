@@ -9,8 +9,9 @@ one screenshot tool to prove everything.
 
 | Layer | Selected tool | What it proves | What it cannot prove |
 | --- | --- | --- | --- |
-| WSL executable prototype | Playwright plus the BGM fidelity gate | Real pointer, keyboard, drag and scroll paths; stable captures; exact source-relative and hit-surface checks | Godot scene-tree behavior or packaged-build behavior |
+| WSL executable prototype | Godot Stagehand v0.4.0 | Real running-scene input, node discovery, screenshots, visual diffs, record/replay, JSON/JUnit/RPC evidence | It does not define the source-specific behavior oracle for us |
 | Godot scene integration | GdUnit4 Scene Runner | Input events, actions, signals, frame progression, scene state and CI-readable reports | Native golden-image comparison is not yet available |
+| Web-export parity | Playwright plus the BGM fidelity gate | Browser loading, Web-specific input mapping, stable canvas capture, and source-relative comparison | Godot scene-tree signals and native packaged-build behavior |
 | Packaged-build smoke | Airtest, when an export exists | Black-box image-located taps, swipes and visible-result assertions without engine injection | Exact component ownership and internal state invariants |
 
 ## Why another browser framework is not the answer
@@ -21,10 +22,15 @@ WebdriverIO, or another driver would pass the same broken assertions. The new
 gate changes the oracle: a click must belong to the complete visible surface,
 produce a source-authorized result, preserve declared invariants, and reverse.
 
-## Godot adoption boundary
+## Godot adoption
 
-Add GdUnit4 only when the first real Godot scene exists. Each reconstructed
-window should become a scene or component with a benchmark journey that:
+The first real Godot scene now exists. Stagehand v0.4.0 was tested against the
+actual 4.7.2 project under WSL/Xvfb and successfully launched the scene,
+discovered Controls, injected input, captured frames, and emitted JSON, JUnit,
+RPC trace, and engine logs. This is the runtime correction-replay layer.
+
+Add GdUnit4 as the deterministic engine-native layer. Each reconstructed window
+should become a scene or component with a benchmark journey that:
 
 1. loads through Scene Runner;
 2. dispatches mouse or keyboard input through the public interface;
@@ -35,8 +41,10 @@ window should become a scene or component with a benchmark journey that:
 
 GdUnit4 supports scene input simulation, explicit frame advancement, command
 line execution, JUnit output, and a maintained GitHub Action. Its open visual
-regression issue means repository-owned golden-image comparison is still
-required.
+regression issue means Stagehand screenshots and the repository-owned visual
+comparator remain required. GdUnit4 v6.2.1 documents support through Godot
+4.7.1, so the engine must be pinned to that supported version or compatibility
+with 4.7.2 must be established before CI treats it as authoritative.
 
 ## Airtest adoption boundary
 

@@ -22,3 +22,11 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/default_filters/use_nearest_mipmap_filter=true
 textures/canvas_textures/default_texture_filter=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/stagehand/plugin.cfg")
+
+[autoload]
+
+StagehandServer="*res://addons/stagehand/autoload/stagehand_server.gd"

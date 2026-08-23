@@ -1,0 +1,128 @@
+{
+  "name": "basic-info-runtime-correction-gate",
+  "description": "Drive the real Godot scene through source-owned Basic Info controls and retain runtime screenshots and reports.",
+  "target": {
+    "mode": "launch",
+    "project_path": "godot",
+    "host": "127.0.0.1",
+    "headless": false,
+    "timeout_ms": 60000
+  },
+  "steps": [
+    {
+      "name": "desktop scene is live",
+      "action": "wait_for_node",
+      "with": {
+        "selector": "name:Main",
+        "state": "exists",
+        "timeout_ms": 15000
+      }
+    },
+    {
+      "name": "capture initial desktop",
+      "action": "screenshot",
+      "with": {
+        "output": "initial-desktop.png"
+      }
+    },
+    {
+      "name": "activate Status from its exact Basic Info surface",
+      "action": "click",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info/hit-003"
+      }
+    },
+    {
+      "name": "Status navigation records the source control",
+      "action": "wait_for_property",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info",
+        "property": "last_action",
+        "operator": "equals",
+        "expected_value": "status",
+        "timeout_ms": 1000
+      }
+    },
+    {
+      "name": "minimize through the exact title control",
+      "action": "click",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info/hit-000"
+      }
+    },
+    {
+      "name": "wait for generated minimized endpoint",
+      "action": "wait_for_property",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info",
+        "property": "minimized",
+        "operator": "equals",
+        "expected_value": true,
+        "timeout_ms": 2000
+      }
+    },
+    {
+      "name": "capture generated minimized state",
+      "action": "screenshot",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info",
+        "output": "basic-info-minimized.png"
+      }
+    },
+    {
+      "name": "compact state keeps the independent Japanese title",
+      "action": "assert_property",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info/title-text",
+        "property": "visible",
+        "operator": "equals",
+        "expected": true
+      }
+    },
+    {
+      "name": "compact title control aligns to its generated endcap",
+      "action": "assert_property",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info/window-button",
+        "property": "position.x",
+        "operator": "equals",
+        "expected": 168
+      }
+    },
+    {
+      "name": "restore through the public minimized surface",
+      "action": "click",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info/restore-surface"
+      }
+    },
+    {
+      "name": "wait for exact expanded endpoint",
+      "action": "wait_for_property",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info",
+        "property": "minimized",
+        "operator": "equals",
+        "expected_value": false,
+        "timeout_ms": 2000
+      }
+    },
+    {
+      "name": "capture restored frame",
+      "action": "screenshot",
+      "with": {
+        "output": "restored-desktop.png"
+      }
+    },
+    {
+      "name": "restored title control returns to source geometry",
+      "action": "assert_property",
+      "with": {
+        "selector": "/root/Main/Windows/basic-info/window-button",
+        "property": "position.x",
+        "operator": "equals",
+        "expected": 268
+      }
+    }
+  ]
+}

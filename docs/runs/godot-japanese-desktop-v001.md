@@ -12,7 +12,7 @@ than a full-screen screenshot underlay.
 The scene exposes:
 
 - 15 independently movable windows;
-- 255 independent visual authorities, including Qwen clean plates and isolated
+- 263 independent visual authorities, including Qwen clean plates and isolated
   source-derived labels, icons, rows, buttons, and thumbs;
 - 150 mapped interaction surfaces; and
 - the accepted 33-authority, 18-control Options implementation unchanged as
@@ -20,8 +20,8 @@ The scene exposes:
 
 The browser evidence is retained in
 `artifacts/qa/godot-options-v001/full-desktop-report.json`. The initial full
-composition passed the bounded integration gate at normalized MAE `0.0531846`
-and high-error pixel rate `0.1620283354`. Options independently retained MAE
+composition passed the bounded integration gate at normalized MAE `0.0513851`
+and high-error pixel rate `0.1571247776`. Options independently retained MAE
 `0.033354`, high-error pixel rate `0.1248243560`, and largest high-error
 component rate `0.0640807963`.
 
@@ -35,8 +35,33 @@ owned visual and hit layers to their declared geometry; Party alone retains
 overflow because its three external buttons are explicitly owned satellites.
 
 This is why the desktop gate contains real drag and click journeys in addition
-to a screenshot comparison. The final local run passed both engine contracts
-and all six exported-canvas journeys.
+to a screenshot comparison. The current local run passes both engine contracts
+and all seven exported-canvas journeys.
+
+## Generation and compact-state corrections
+
+A later Stagehand replay found two defects that the initial browser journey did
+not cover. First, the runtime manifest dropped all eight Basic Info navigation
+rasters because their stable component IDs lived on child spans while their
+background images lived on the owning buttons. Capture now resolves that public
+control owner, and engine plus Web-export tests lock the exact eight IDs. The
+desktop inventory increased from 255 to 263 visual authorities.
+
+Second, generic minimized windows loaded their Qwen-generated compact plates
+but hid every independent title component, producing a blank blue bar. Godot
+now retains the window-specific title icon, Japanese title, minimize/close
+artwork, and generated plate; right-anchored controls travel with every one of
+the 13 geometry steps and return to exact expanded coordinates. The engine
+contract checks Basic Info, Status, Inventory, and Equipment, while Stagehand
+drives the public Basic Info gesture and retains the 180 by 18 settled frame.
+
+The Web gate now emits `per-window-fidelity-report.json`. It compares every
+source-relative window crop to the accepted Options/BGM normalized-MAE floor
+of `0.03668`, then repeats the comparison against an offline clean-plate plus
+component assembly. Basic Info, Status, Inventory, Game Menu, Compact Info, and
+Party fail before Godot and are routed to `qwen-asset-pass`; this prevents an
+asset-generation defect from being misreported as a Web or engine-rendering
+bug.
 
 The correction replay also passed all 15 windows with zero uncontracted
 controls. The stricter cross-window BGM fidelity promotion remains honest:

@@ -1,9 +1,9 @@
 {
   "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
-  "runtimeSha256": "4b4ffd6abe42a6a7d23122bed4b2b635b6a876e2ab6f017c76ce7f1c26332d22",
-  "normalizedMae": 0.0531846,
-  "highErrorPixelRate": 0.16202833537996308,
+  "runtimeSha256": "f134aac74b7dacd3dc86a2547595ae127aea83ea14a1ea6705d0cd2cf1f650bc",
+  "normalizedMae": 0.0513851,
+  "highErrorPixelRate": 0.1571247775856452,
   "windows": 15,
-  "components": 255,
+  "components": 263,
   "controls": 150
 }

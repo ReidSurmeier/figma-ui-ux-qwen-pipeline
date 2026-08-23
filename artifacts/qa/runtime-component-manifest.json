@@ -160,6 +160,94 @@
           "authority": "element-background"
         },
         {
+          "id": "page-status",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-status.png",
+          "geometry": {
+            "x": 207,
+            "y": 22,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
+          "id": "page-option",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-option.png",
+          "geometry": {
+            "x": 244,
+            "y": 22,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
+          "id": "page-items",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-items.png",
+          "geometry": {
+            "x": 207,
+            "y": 47,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
+          "id": "page-equip",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-equip.png",
+          "geometry": {
+            "x": 244,
+            "y": 47,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
+          "id": "page-skill",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-skill.png",
+          "geometry": {
+            "x": 207,
+            "y": 72,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
+          "id": "page-map",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-map.png",
+          "geometry": {
+            "x": 244,
+            "y": 72,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
+          "id": "page-chat",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-chat.png",
+          "geometry": {
+            "x": 207,
+            "y": 97,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
+          "id": "page-friend",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-friend.png",
+          "geometry": {
+            "x": 244,
+            "y": 97,
+            "width": 33,
+            "height": 20
+          },
+          "authority": "control-owner-background"
+        },
+        {
           "id": "base-label",
           "assetPath": "/assets/japanese-rpg-v001/basic-info/components/base-label.png",
           "geometry": {

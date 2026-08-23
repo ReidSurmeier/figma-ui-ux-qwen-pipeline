@@ -25,3 +25,22 @@ test("the BGM fidelity benchmark resolves every Options control to an independen
 
   expect(unresolved).toEqual([]);
 });
+
+test("every Basic Info navigation control retains its source visual in the runtime manifest", async ({ page }) => {
+  await page.goto("/");
+  const captured = await captureRuntimeComponentManifest(page);
+  const basicInfo = captured.windows.find((window) => window.id === "basic-info");
+  if (!basicInfo) throw new Error("Basic Info is absent from the runtime manifest");
+
+  const componentIds = new Set(basicInfo.components.map((component) => component.id));
+  expect([...componentIds]).toEqual(expect.arrayContaining([
+    "page-status",
+    "page-option",
+    "page-items",
+    "page-equip",
+    "page-skill",
+    "page-map",
+    "page-chat",
+    "page-friend",
+  ]));
+});

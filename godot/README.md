@@ -27,6 +27,18 @@ contracts, exports the single-threaded Compatibility-renderer web build, and
 runs the exported-canvas suite when `GODOT_WEB_URL` is present. The web export
 is intentionally ignored by Git and rebuilt from source.
 
+Run the real-scene correction replay separately:
+
+```bash
+STAGEHAND_HOST=100.103.164.128 godot/run-stagehand-qa.sh
+```
+
+The host override is required on this WSL machine because loopback Stagehand
+traffic stalls here. The runner pins Stagehand v0.4.0 by SHA-256, launches the
+actual Godot scene under a Mesa-backed virtual display, drives exact source
+controls, waits for settled state instead of accepting click dispatch alone,
+and retains JSON, JUnit, RPC trace, engine log, and screenshots.
+
 The active tailnet review route is:
 
 `https://windows-wsl.taile06c45.ts.net/godot-japanese-ui/`
@@ -37,7 +49,7 @@ Tailscale-IP HTTP route is therefore not a valid review URL.
 ## Testing boundary
 
 - `tests/full_desktop_contract.gd` locks the pink authority, 15-window
-  inventory, 255 visual authorities, 150 control surfaces, and movement
+  inventory, 263 visual authorities, 150 control surfaces, and movement
   ownership.
 - `tests/engine_contract.gd` verifies Options source coordinates, inventory ownership,
   exact 0/100 slider geometry, state isolation, tab reversal, footer reversal,
@@ -48,8 +60,11 @@ Tailscale-IP HTTP route is therefore not a valid review URL.
   cross-window overflow, scans dense Options hit boundaries, records
   pointer-down feedback, requires more than four continuous slider samples,
   and compares both the full desktop and Options crop with source authorities.
+- `tests/stagehand/basic-info-runtime.json` launches the real scene, activates
+  Status from Basic Info, minimizes to the generated endpoint, restores through
+  the public compact surface, and captures both endpoint frames.
 - `.github/workflows/godot-options-quality.yml` repeats both layers on Linux and
-  uploads the web build and evidence.
+  uploads the web build, browser evidence, and Stagehand evidence.
 
 GdUnit4 6.2.1 was rechecked before this tracer. Its published compatibility
 matrix currently names Godot through 4.7.1, while this project and the available

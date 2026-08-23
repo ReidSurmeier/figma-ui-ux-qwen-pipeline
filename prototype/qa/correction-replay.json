@@ -75,6 +75,14 @@
       "promotion_rule": "Turn crop equivalence or missing provenance into a reproducible endpoint-difference and provenance test."
     },
     {
+      "id": "minimized-title-authority-continuity",
+      "source_correction": "Generated interaction states and animations must remain complete rather than loading as blank or partial UI.",
+      "review_prompt": "At every minimize animation frame and at the settled compact endpoint, are the window-specific Japanese title, icon, and right-end controls still visible, independently editable, and aligned to the generated chrome?",
+      "applies_to": ["options", "basic-info", "status", "inventory", "equipment"],
+      "required_evidence": ["generated compact plate", "title component inventory", "transition geometry samples", "settled Stagehand screenshot", "restore trace"],
+      "promotion_rule": "Turn every blank or partial compact state into a reproducible title-authority visibility, endcap alignment, and restore-geometry test before revising assembly."
+    },
+    {
       "id": "tab-boundary-mapping",
       "source_correction": "The button mapping on info and options is not correct to the tab.",
       "review_prompt": "Click the center and both sides of every tab boundary. Does each pixel activate only the visually corresponding tab and show the correct panel?",

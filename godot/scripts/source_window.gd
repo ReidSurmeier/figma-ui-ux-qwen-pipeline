@@ -16,6 +16,7 @@ var clean_plate: TextureRect
 var minimized_plate: TextureRect
 var component_nodes := {}
 var component_geometry := {}
+var minimized_title_nodes := {}
 var hit_nodes := {}
 var hit_visuals := {}
 var control_states := {}
@@ -78,15 +79,21 @@ func _build_visuals() -> void:
 		var dimensions := Vector2(float(geometry.width), float(geometry.height))
 		var at := Vector2(float(geometry.x), float(geometry.y))
 		component_geometry[component_id] = {"position": at, "size": dimensions}
-		component_nodes[component_id] = _texture_node(
+		var component_node := _texture_node(
 			component_id,
 			_asset_path(str(component.assetPath)),
 			at,
 			dimensions
 		)
+		component_nodes[component_id] = component_node
+		if at.y < 18.0 and at.y + dimensions.y <= 18.0:
+			minimized_title_nodes[component_id] = component_node
 	if _has_minimize_control():
 		var endpoint := _minimize_endpoint()
 		minimized_plate = _texture_node("minimized-plate", _asset_path(endpoint), Vector2.ZERO, MINIMIZED_SIZE)
+		# Keep the generated compact chrome behind the independently editable
+		# source title icon, Japanese title, and right-end controls.
+		move_child(minimized_plate, 1)
 		minimized_plate.visible = false
 
 func _build_hits() -> void:
@@ -307,6 +314,7 @@ func _toggle_minimized() -> void:
 func _set_minimize_progress(progress: float) -> void:
 	var stepped: float = floor(progress * 13.0) / 13.0
 	size = animation_start_size.lerp(animation_end_size, stepped).round()
+	_update_minimized_title_geometry()
 	var geometry := "%dx%d" % [roundi(size.x), roundi(size.y)]
 	if minimize_samples.is_empty() or minimize_samples[-1] != geometry:
 		minimize_samples.append(geometry)
@@ -314,6 +322,7 @@ func _set_minimize_progress(progress: float) -> void:
 
 func _finish_minimize() -> void:
 	size = animation_end_size
+	_update_minimized_title_geometry()
 	minimized = size == MINIMIZED_SIZE
 	if minimized:
 		_set_expanded_visuals_visible(false)
@@ -324,7 +333,8 @@ func _finish_minimize() -> void:
 
 func _set_expanded_visuals_visible(value: bool) -> void:
 	clean_plate.visible = value
-	for visual in component_nodes.values(): visual.visible = value
+	for component_id in component_nodes.keys():
+		component_nodes[component_id].visible = value or minimized_title_nodes.has(component_id)
 	for hit in hit_nodes.values(): hit.visible = value
 	get_node("drag-surface").visible = value
 	if not value:
@@ -342,6 +352,14 @@ func _set_expanded_visuals_visible(value: bool) -> void:
 	else:
 		var restore := get_node_or_null("restore-surface")
 		if restore != null: restore.queue_free()
+
+func _update_minimized_title_geometry() -> void:
+	for component_id in minimized_title_nodes.keys():
+		var visual: CanvasItem = minimized_title_nodes[component_id]
+		var original: Dictionary = component_geometry[component_id]
+		visual.position = original.position
+		if original.position.x >= expanded_size.x - 30.0:
+			visual.position.x += size.x - expanded_size.x
 
 func visual_authority_count() -> int:
 	return component_nodes.size() + 1

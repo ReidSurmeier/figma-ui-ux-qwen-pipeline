@@ -64,6 +64,12 @@ jobs:
       - name: Run engine contract and export web build
         run: godot/qa.sh
 
+      - name: Run real-scene Stagehand correction replay
+        env:
+          STAGEHAND_HOST: 127.0.0.1
+          STAGEHAND_XVFB: 1
+        run: godot/run-stagehand-qa.sh
+
       - name: Run exported-canvas interaction and fidelity gate
         env:
           GODOT_WEB_URL: http://127.0.0.1:4176/
@@ -89,4 +95,5 @@ jobs:
           path: |
             godot/web
             artifacts/qa/godot-options-v001
+            artifacts/qa/godot-stagehand-v001
           if-no-files-found: error

@@ -22,8 +22,23 @@ const componentManifest = JSON.parse(readFileSync(resolve(
   projectRoot,
   "artifacts/qa/runtime-component-manifest.json",
 ), "utf8"));
+const windowVerification = JSON.parse(readFileSync(resolve(
+  projectRoot,
+  "prototype/qa/window-verification.json",
+), "utf8"));
 
 const INITIAL_WINDOW = { x: 345, y: 182, width: 280, height: 122 };
+const BASIC_INFO_WINDOW = { x: 0, y: 0, width: 280, height: 120 };
+const BASIC_INFO_COMPONENTS = [
+  "page-status",
+  "page-option",
+  "page-items",
+  "page-equip",
+  "page-skill",
+  "page-map",
+  "page-chat",
+  "page-friend",
+];
 
 function canvasPoint(canvas, localX, localY) {
   return {
@@ -58,7 +73,7 @@ test("Godot composes all independent windows over the original pink desktop", as
   await expect.poll(() => state(page)).toMatchObject({
     background: "#ff00fe",
     window_count: 15,
-    component_count: 255,
+    component_count: 263,
     control_count: 150,
     desktop_mapped_controls: 150,
     movable_windows: 15,
@@ -82,12 +97,114 @@ test("Godot composes all independent windows over the original pink desktop", as
     normalizedMae,
     highErrorPixelRate: highErrorCount / (849 * 564),
     windows: 15,
-    components: 255,
+    components: 263,
     controls: 150,
   };
   writeFileSync(resolve(evidenceDir, "full-desktop-report.json"), `${JSON.stringify(report, null, 2)}\n`);
   expect(report.normalizedMae).toBeLessThanOrEqual(0.055);
   expect(report.highErrorPixelRate).toBeLessThanOrEqual(0.17);
+
+  const acceptedBgmFloor = 0.03668;
+  const perWindowDir = resolve(evidenceDir, "windows");
+  mkdirSync(perWindowDir, { recursive: true });
+  const windowMetrics = [];
+  for (const window of windowRegistry.windows) {
+    const [x, y, width, height] = window.bounds;
+    const sourceCrop = resolve(perWindowDir, `${window.id}-source.png`);
+    const runtimeCrop = resolve(perWindowDir, `${window.id}-runtime.png`);
+    for (const [input, output] of [[sourceDesktop, sourceCrop], [screenshot, runtimeCrop]]) {
+      execFileSync("convert", [input, "-crop", `${width}x${height}+${x}+${y}`, "+repage", output]);
+    }
+    const comparison = spawnSync("compare", ["-metric", "MAE", sourceCrop, runtimeCrop, "null:"], {
+      encoding: "utf8",
+    });
+    expect([0, 1]).toContain(comparison.status);
+    const normalizedMae = Number(comparison.stderr.trim().match(/\(([^)]+)\)/)?.[1]);
+    const verification = windowVerification.windows.find(({ id }) => id === window.id);
+    let assemblyNormalizedMae = null;
+    if (window.id !== "options") {
+      const manifestWindow = componentManifest.windows.find(({ id }) => id === window.id);
+      const assembly = resolve(perWindowDir, `${window.id}-offline-assembly.png`);
+      execFileSync("convert", [
+        resolve(projectRoot, "prototype/public", manifestWindow.cleanPlate.replace(/^\//, "")),
+        assembly,
+      ]);
+      for (const component of manifestWindow.components) {
+        execFileSync("composite", [
+          "-geometry",
+          `+${component.geometry.x}+${component.geometry.y}`,
+          resolve(projectRoot, "prototype/public", component.assetPath.replace(/^\//, "")),
+          assembly,
+          assembly,
+        ]);
+      }
+      const assemblyComparison = spawnSync(
+        "compare",
+        ["-metric", "MAE", sourceCrop, assembly, "null:"],
+        { encoding: "utf8" },
+      );
+      expect([0, 1]).toContain(assemblyComparison.status);
+      assemblyNormalizedMae = Number(assemblyComparison.stderr.trim().match(/\(([^)]+)\)/)?.[1]);
+    }
+    const meetsFloor = normalizedMae <= acceptedBgmFloor;
+    const failsBeforeGodot = assemblyNormalizedMae !== null && assemblyNormalizedMae > acceptedBgmFloor;
+    windowMetrics.push({
+      id: window.id,
+      bounds: window.bounds,
+      normalizedMae,
+      assemblyNormalizedMae,
+      acceptedBgmFloor,
+      visualStatus: meetsFloor ? "meets-bgm-floor" : "revision-required",
+      verificationStatus: verification?.status ?? "missing",
+      correctionRoute: meetsFloor ? null : (failsBeforeGodot ? "qwen-asset-pass" : "godot-assembly"),
+    });
+  }
+  const perWindowReport = {
+    sourceSha256: report.sourceSha256,
+    runtimeSha256: report.runtimeSha256,
+    acceptedBgmFloor,
+    windows: windowMetrics,
+    revisionRequired: windowMetrics.filter(({ visualStatus }) => visualStatus === "revision-required").map(({ id }) => id),
+  };
+  writeFileSync(resolve(evidenceDir, "per-window-fidelity-report.json"), `${JSON.stringify(perWindowReport, null, 2)}\n`);
+  expect(windowMetrics).toHaveLength(15);
+  for (const metric of windowMetrics.filter(({ verificationStatus }) => verificationStatus === "quality-benchmark")) {
+    expect(metric.normalizedMae, `${metric.id} fell below the accepted BGM fidelity floor`).toBeLessThanOrEqual(acceptedBgmFloor);
+  }
+});
+
+test("Basic Info keeps every source navigation image in the exported Godot scene", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  const basicInfo = componentManifest.windows.find((window) => window.id === "basic-info");
+  expect(basicInfo).toBeDefined();
+  expect(basicInfo.components.map((component) => component.id)).toEqual(
+    expect.arrayContaining(BASIC_INFO_COMPONENTS),
+  );
+  await expect.poll(async () => (await state(page)).windows["basic-info"]).toMatchObject({
+    components: 27,
+    controls: 11,
+    mapped_controls: 11,
+  });
+
+  const desktopScreenshot = resolve(evidenceDir, "godot-basic-info-desktop.png");
+  const screenshot = resolve(evidenceDir, "godot-basic-info.png");
+  await page.locator("canvas").screenshot({ path: desktopScreenshot });
+  execFileSync("convert", [
+    desktopScreenshot,
+    "-crop",
+    `${BASIC_INFO_WINDOW.width}x${BASIC_INFO_WINDOW.height}+${BASIC_INFO_WINDOW.x}+${BASIC_INFO_WINDOW.y}`,
+    "+repage",
+    screenshot,
+  ]);
+  for (const component of basicInfo.components.filter(({ id }) => BASIC_INFO_COMPONENTS.includes(id))) {
+    const pixel = imageMagick("convert", [
+      screenshot,
+      "-crop",
+      `1x1+${component.geometry.x + Math.floor(component.geometry.width / 2)}+${component.geometry.y + Math.floor(component.geometry.height / 2)}`,
+      "txt:-",
+    ]);
+    expect(pixel, `${component.id} must not collapse to the pink desktop`).not.toContain("#FF00FE");
+  }
 });
 
 test("all source windows move through real pointer gestures and controls answer at their mapped surfaces", async ({ page }) => {

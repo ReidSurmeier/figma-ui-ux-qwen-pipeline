@@ -9,6 +9,22 @@ A reconstructed window is not `verified` merely because it resembles one screens
 
 The second layer is intentionally exploratory. It may find a failure, but it cannot waive or directly replace a test.
 
+A finding is not a completed loop result. The runner must route it back to the
+owning production layer, add a regression contract, apply the correction, and
+replay the same gesture and visual checkpoint. The route is explicit:
+
+- missing, incorrect, or contaminated visual state -> Qwen Asset Pass and its
+  bounded deterministic assembly;
+- missing component or incorrect asset ownership -> component capture and
+  runtime-manifest generation;
+- wrong bounds, clipping, overlap, or z-order -> assembly geometry;
+- dead, generic, non-reversible, or choppy interaction -> Godot behavior and
+  timing;
+- runtime-only or export-only mismatch -> Godot Web export integration.
+
+`revision-required` is therefore an intermediate state, never a successful
+overnight outcome.
+
 ## Loop
 
 ```text
@@ -24,6 +40,11 @@ Reference authority
        yes -> minimise -> add reproducible RED test -> revise -> restart focused gates
        no  -> full suite -> Figma parity audit -> verified
 ```
+
+The Godot correction replay uses Stagehand against the running scene. It must
+retain JSON, JUnit, RPC trace, Godot log, and before/after screenshots. Browser
+Playwright remains a Web-export parity layer; it is not allowed to substitute a
+JavaScript state change for a real Godot interaction.
 
 Every correction-replay finding is promoted to a reproducible test before implementation changes. This prevents a reviewer from repeatedly reporting the same class of defect in prose without teaching the pipeline how to catch it.
 

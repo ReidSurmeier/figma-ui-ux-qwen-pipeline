@@ -19,6 +19,12 @@ godot/web/
 godot/**/*.import
 artifacts/qa/godot-options-v001/playwright/
 artifacts/qa/godot-options-v001/manual-debug*.png
+artifacts/qa/godot-options-v001/windows/
+artifacts/qa/godot-options-v001/godot-basic-info*.png
+artifacts/qa/godot-options-v001/*-diff.png
+artifacts/qa/godot-options-v001/*comparison.png
+artifacts/qa/godot-options-v001/per-window-failures.png
+artifacts/qa/godot-stagehand-v001/
 
 # Discovery screenshots are reproducible from the Figma board.
 artifacts/figma/candidates/

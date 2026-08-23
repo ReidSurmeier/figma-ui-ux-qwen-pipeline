@@ -83,6 +83,14 @@
       "acceptance_gate": "The endpoint differs materially from a crop, has provenance, and contains no hidden body pixels."
     },
     {
+      "id": "orphaned-generated-state-components",
+      "authority": "runtime",
+      "symptom": "A generated endpoint loads, but its independent title, icon, or end controls disappear or remain at expanded-window coordinates.",
+      "detectors": ["endpoint component visibility inventory", "right-end alignment readback", "idle-transition-settled screenshots", "restore geometry replay"],
+      "remediation": "Keep the generated plate behind state-persistent editable components, move right-anchored controls with every transition frame, and restore their exact source coordinates.",
+      "acceptance_gate": "Every generated endpoint retains its window-specific title authorities, aligns right-end controls to the compact endcap, and restores exact expanded geometry."
+    },
+    {
       "id": "dead-control",
       "authority": "runtime",
       "symptom": "A visible button, selector, checkbox, or menu can be pressed but has no observable settled effect.",

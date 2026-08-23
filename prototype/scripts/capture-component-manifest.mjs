@@ -42,6 +42,22 @@ export async function captureRuntimeComponentManifest(page) {
           authority: pseudo === "::before" ? "pseudo-before-background" : "pseudo-after-background",
         };
       }
+      // Some controls keep the stable component ID on an inert child while
+      // the owning button carries the raster background. Preserve the child's
+      // exact geometry but resolve the visual authority from that public
+      // control surface so engine exports do not turn visible buttons into
+      // transparent hotspots.
+      const controlOwner = node.closest("button, [role=tab], [role=option]");
+      if (controlOwner && controlOwner !== node) {
+        const assetPath = assetPathFromStyle(getComputedStyle(controlOwner));
+        if (assetPath) {
+          return {
+            assetPath,
+            geometry: relative(node),
+            authority: "control-owner-background",
+          };
+        }
+      }
       return null;
     };
 
