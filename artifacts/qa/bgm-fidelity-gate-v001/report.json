@@ -1,0 +1,578 @@
+{
+  "schemaVersion": "1.0",
+  "benchmarkWindow": "options",
+  "sourceAuthority": "benchmarks/japanese-rpg-options-v001/reference.png",
+  "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+  "runtimeUrl": "http://100.103.164.128:4175/",
+  "runtimeSha256": "c64c0d9b097f99f1c694cdebcea5a21758f81a1c00d860b8d08c25d09d899a05",
+  "generatedAt": "2026-08-23T18:40:15.681Z",
+  "overall": "revision-required",
+  "verdicts": [
+    {
+      "windowId": "basic-info",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "largest-local-defect",
+        "complete-visual-ownership",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "basic-info",
+        "normalizedMae": 0.0438438,
+        "highErrorPixelRate": 0.12398809523809524,
+        "largestHighErrorComponentRate": 0.08455357142857142,
+        "controls": 11,
+        "controlsWithVisualAuthority": 2,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 0.18181818181818182
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "basic-info",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "basic-info",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "card",
+      "status": "revision-required",
+      "failures": [
+        "largest-local-defect",
+        "complete-visual-ownership",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "card",
+        "normalizedMae": 0.0351131,
+        "highErrorPixelRate": 0.11688095238095238,
+        "largestHighErrorComponentRate": 0.10483333333333333,
+        "controls": 4,
+        "controlsWithVisualAuthority": 2,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 0.5
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "card",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "card",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "skills",
+      "status": "revision-required",
+      "failures": [
+        "largest-local-defect",
+        "complete-visual-ownership",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "skills",
+        "normalizedMae": 0.0310148,
+        "highErrorPixelRate": 0.11532956831192945,
+        "largestHighErrorComponentRate": 0.07227680643663933,
+        "controls": 20,
+        "controlsWithVisualAuthority": 1,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 0.05
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "skills",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "skills",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "status",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "high-error-pixel-rate",
+        "largest-local-defect",
+        "complete-visual-ownership",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "status",
+        "normalizedMae": 0.0642526,
+        "highErrorPixelRate": 0.21947278911564627,
+        "largestHighErrorComponentRate": 0.0691609977324263,
+        "controls": 7,
+        "controlsWithVisualAuthority": 0,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 0
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "status",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "status",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "inventory",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "high-error-pixel-rate",
+        "largest-local-defect",
+        "complete-visual-ownership",
+        "full-surface-hit-map",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "inventory",
+        "normalizedMae": 0.0470875,
+        "highErrorPixelRate": 0.15461418143899897,
+        "largestHighErrorComponentRate": 0.11942127215849843,
+        "controls": 27,
+        "controlsWithVisualAuthority": 1,
+        "hitMapFailures": 9,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 0.037037037037037035
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "inventory",
+        "failures": [
+          {
+            "control": "item item 7",
+            "point": {
+              "x": 265.5,
+              "y": 274.5
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 7",
+            "point": {
+              "x": 265.5,
+              "y": 283
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 7",
+            "point": {
+              "x": 265.5,
+              "y": 291.5
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 14",
+            "point": {
+              "x": 265.5,
+              "y": 308.5
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 14",
+            "point": {
+              "x": 265.5,
+              "y": 317
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 14",
+            "point": {
+              "x": 265.5,
+              "y": 325.5
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 21",
+            "point": {
+              "x": 265.5,
+              "y": 342.5
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 21",
+            "point": {
+              "x": 265.5,
+              "y": 351
+            },
+            "received": "所持品スクロール"
+          },
+          {
+            "control": "item item 21",
+            "point": {
+              "x": 265.5,
+              "y": 359.5
+            },
+            "received": "所持品スクロール"
+          }
+        ]
+      },
+      "interactionAuthority": {
+        "id": "inventory",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "equipment",
+      "status": "revision-required",
+      "failures": [
+        "largest-local-defect",
+        "complete-visual-ownership",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "equipment",
+        "normalizedMae": 0.0313384,
+        "highErrorPixelRate": 0.09565319548872181,
+        "largestHighErrorComponentRate": 0.07159304511278196,
+        "controls": 12,
+        "controlsWithVisualAuthority": 10,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 0.8333333333333334
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "equipment",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "equipment",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "options",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "options",
+        "normalizedMae": 0.036679,
+        "highErrorPixelRate": 0.12769320843091334,
+        "largestHighErrorComponentRate": 0.0640807962529274,
+        "controls": 17,
+        "controlsWithVisualAuthority": 17,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "options",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "options",
+        "status": "benchmark-pass",
+        "evidence": [
+          "prototype/e2e/options-window.spec.ts",
+          "prototype/e2e/options-semantic.spec.ts"
+        ]
+      }
+    },
+    {
+      "windowId": "chat",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "largest-local-defect",
+        "reversible-interaction",
+        "visual-control-geometry"
+      ],
+      "metrics": {
+        "windowId": "chat",
+        "normalizedMae": 0.0411756,
+        "highErrorPixelRate": 0.10181547619047619,
+        "largestHighErrorComponentRate": 0.07258928571428572,
+        "controls": 6,
+        "controlsWithVisualAuthority": 6,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 2,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [
+        {
+          "control": "トピック",
+          "visualComponent": "chat-topic-field",
+          "hit": {
+            "x": 44,
+            "y": 27,
+            "width": 228,
+            "height": 17
+          },
+          "visual": {
+            "x": 44,
+            "y": 26,
+            "width": 232,
+            "height": 19
+          }
+        },
+        {
+          "control": "ルーム",
+          "visualComponent": "chat-room",
+          "hit": {
+            "x": 181,
+            "y": 55,
+            "width": 92,
+            "height": 16
+          },
+          "visual": {
+            "x": 136,
+            "y": 45,
+            "width": 140,
+            "height": 20
+          }
+        }
+      ],
+      "hitMap": {
+        "windowId": "chat",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "chat",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "exchange",
+      "status": "revision-required",
+      "failures": [
+        "largest-local-defect",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "exchange",
+        "normalizedMae": 0.033484,
+        "highErrorPixelRate": 0.10571428571428572,
+        "largestHighErrorComponentRate": 0.078125,
+        "controls": 19,
+        "controlsWithVisualAuthority": 19,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "exchange",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "exchange",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "game-menu",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "high-error-pixel-rate",
+        "largest-local-defect",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "game-menu",
+        "normalizedMae": 0.0734947,
+        "highErrorPixelRate": 0.2666802140486351,
+        "largestHighErrorComponentRate": 0.20151730678046467,
+        "controls": 4,
+        "controlsWithVisualAuthority": 4,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "game-menu",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "game-menu",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "compact-info",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "high-error-pixel-rate",
+        "largest-local-defect",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "compact-info",
+        "normalizedMae": 0.063524,
+        "highErrorPixelRate": 0.1708185053380783,
+        "largestHighErrorComponentRate": 0.15709201830198272,
+        "controls": 0,
+        "controlsWithVisualAuthority": 0,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "compact-info",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "compact-info",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "party",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "high-error-pixel-rate",
+        "largest-local-defect",
+        "complete-visual-ownership",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "party",
+        "normalizedMae": 0.236078,
+        "highErrorPixelRate": 0.5342938311688312,
+        "largestHighErrorComponentRate": 0.37666396103896105,
+        "controls": 16,
+        "controlsWithVisualAuthority": 15,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 0.9375
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "party",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "party",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "quickbar",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "high-error-pixel-rate",
+        "largest-local-defect",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "quickbar",
+        "normalizedMae": 0.246913,
+        "highErrorPixelRate": 0.39447188449848025,
+        "largestHighErrorComponentRate": 0.39447188449848025,
+        "controls": 3,
+        "controlsWithVisualAuthority": 3,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "quickbar",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "quickbar",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "bottom-bar",
+      "status": "revision-required",
+      "failures": [
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "bottom-bar",
+        "normalizedMae": 0.000147837,
+        "highErrorPixelRate": 0.0007142857142857143,
+        "largestHighErrorComponentRate": 0.00007936507936507937,
+        "controls": 3,
+        "controlsWithVisualAuthority": 3,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "bottom-bar",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "bottom-bar",
+        "status": "pending-benchmark-replay"
+      }
+    },
+    {
+      "windowId": "notification",
+      "status": "revision-required",
+      "failures": [
+        "source-relative-visual",
+        "high-error-pixel-rate",
+        "largest-local-defect",
+        "reversible-interaction"
+      ],
+      "metrics": {
+        "windowId": "notification",
+        "normalizedMae": 0.159175,
+        "highErrorPixelRate": 0.2812344449975112,
+        "largestHighErrorComponentRate": 0.2812344449975112,
+        "controls": 0,
+        "controlsWithVisualAuthority": 0,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": null,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "geometryMismatches": [],
+      "hitMap": {
+        "windowId": "notification",
+        "failures": []
+      },
+      "interactionAuthority": {
+        "id": "notification",
+        "status": "pending-benchmark-replay"
+      }
+    }
+  ]
+}

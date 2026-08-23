@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "benchmarkWindow": "options",
+  "benchmarkRegion": {
+    "id": "bgm-effect",
+    "description": "The accepted BGM and Effect rows are the canonical reconstruction-quality floor for every window."
+  },
+  "sourceAuthority": "benchmarks/japanese-rpg-options-v001/reference.png",
+  "acceptedRuntimeAuthority": "benchmarks/japanese-rpg-options-v001/regions/options-window/runtime-visual-v004.png",
+  "requiredWindows": [
+    "basic-info",
+    "card",
+    "skills",
+    "status",
+    "inventory",
+    "equipment",
+    "options",
+    "chat",
+    "exchange",
+    "game-menu",
+    "compact-info",
+    "party",
+    "quickbar",
+    "bottom-bar",
+    "notification"
+  ],
+  "qualityDimensions": [
+    "source-relative-visual",
+    "largest-local-defect",
+    "complete-visual-ownership",
+    "full-surface-hit-map",
+    "reversible-interaction"
+  ],
+  "visual": {
+    "highErrorFuzzPercent": 10,
+    "maximumNormalizedMae": 0.03668,
+    "maximumHighErrorPixelRate": 0.1277,
+    "maximumLargestComponentRate": 0.06409,
+    "thresholdAuthority": "Measured from the complete source-aligned Options window containing the accepted BGM and Effect controls; limits are rounded upward only."
+  },
+  "interaction": {
+    "minimumVisualAuthorityCoverage": 1,
+    "maximumHitMapFailures": 0,
+    "maximumIrreversibleInteractions": 0,
+    "minimumContinuousSamples": 5,
+    "requiredCheckpoints": [
+      "idle",
+      "pointer-down",
+      "pointer-up",
+      "settled",
+      "reversed"
+    ]
+  }
+}

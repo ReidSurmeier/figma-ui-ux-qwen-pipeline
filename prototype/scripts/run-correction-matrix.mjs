@@ -4,10 +4,12 @@ import { access, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { dirname, relative, resolve, sep } from "node:path";
 import { chromium } from "playwright";
 
+import { runBgmFidelityGate } from "./bgm-fidelity-gate.mjs";
 import { classifyInteractionProbe } from "./classify-interaction-probe.mjs";
 import { correctionMatrixOutputConfig, selectedCorrectionMatrixWindows } from "./correction-matrix-config.mjs";
 import { rangeGesturePoint } from "./range-gesture-geometry.mjs";
 import { executeSemanticInteractionContracts, semanticContractForControl } from "./semantic-interaction-contract.mjs";
+import { promotionStatus } from "./window-promotion.mjs";
 
 if (process.argv.includes("--help") || process.argv.includes("-h")) {
   console.log("Usage: CORRECTION_MATRIX_WINDOW_IDS=party npm run qa:replay");
@@ -30,9 +32,15 @@ const semanticContracts = semanticManifest.contracts.filter(({ window_id }) => s
 const figmaMarker = resolve(repoDir, "artifacts/qa/figma-correction-matrix-v003.json");
 const sha = (value) => createHash("sha256").update(value).digest("hex");
 const exists = async (path) => access(path).then(() => true, () => false);
-const browser = await chromium.launch({ headless: true, executablePath: "/usr/bin/google-chrome" });
 await rm(evidenceRoot, { recursive: true, force: true });
 await mkdir(evidenceRoot, { recursive: true });
+const fidelityReport = await runBgmFidelityGate({
+  repoDir,
+  url: baseUrl,
+  outputPath: resolve(evidenceRoot, "bgm-fidelity-report.json"),
+});
+const fidelityByWindow = new Map(fidelityReport.verdicts.map((verdict) => [verdict.windowId, verdict]));
+const browser = await chromium.launch({ headless: true, executablePath: "/usr/bin/google-chrome" });
 const semanticRun = executeSemanticInteractionContracts({ contracts: semanticContracts, prototypeDir, repoDir });
 await writeFile(resolve(evidenceRoot, "semantic-contract-playwright.json"), `${JSON.stringify(semanticRun.report, null, 2)}\n`);
 const sourceContracts = ["contract-check.sh", "remaining-window-contract.sh"].map((script) => {
@@ -491,12 +499,20 @@ try {
     await mkdir(dirname(reportPath), { recursive: true });
     await writeFile(reportPath, `${JSON.stringify(report, null, 2)}\n`);
     const registryWindow = registry.windows.find(({ id }) => id === windowId);
-    registryWindow.status = overall === "pass" && figmaSynced
-      ? "verified"
-      : overall === "pass"
-        ? "figma-pending"
-        : "revision-required";
-    registryWindow.deterministic_gates = overall;
+    const fidelity = fidelityByWindow.get(windowId) ?? { status: "revision-required", failures: ["missing-bgm-fidelity-verdict"] };
+    registryWindow.status = promotionStatus({
+      windowId,
+      correctionStatus: overall,
+      figmaSynced,
+      fidelityStatus: fidelity.status,
+      benchmarkWindow: fidelityReport.benchmarkWindow,
+    });
+    registryWindow.deterministic_gates = overall === "pass" && fidelity.status === "benchmark-pass" ? "pass" : "fail";
+    registryWindow.bgm_fidelity = {
+      status: fidelity.status,
+      failures: fidelity.failures,
+      report: artifactReference(resolve(evidenceRoot, "bgm-fidelity-report.json")),
+    };
     registryWindow.correction_replay = { status: overall, report: reportReference };
     reports.push({ windowId, overall, controlCoverage, failures: results.filter(({ verdict }) => verdict === "fail").map(({ prompt_id }) => prompt_id) });
     await page.close();
@@ -505,10 +521,10 @@ try {
   await browser.close();
 }
 
-registry.schema_version = "1.2";
-registry.invalidation_reason = "v003 executes every applicable correction prompt with window-specific browser evidence; no window is verified until runtime and hosted Figma passes are both green.";
+registry.schema_version = "1.3";
+registry.invalidation_reason = "No window is verified until it matches the BGM and Effect fidelity benchmark, passes correction replay, and passes hosted Figma parity.";
 await mkdir(dirname(registryOutputPath), { recursive: true });
 await writeFile(registryOutputPath, `${JSON.stringify(registry, null, 2)}\n`);
 await writeFile(resolve(evidenceRoot, "summary.json"), `${JSON.stringify({ schema_version: "3.0", reports }, null, 2)}\n`);
 process.stdout.write(`${JSON.stringify({ windows: reports.length, passed: reports.filter(({ overall }) => overall === "pass").length, reports }, null, 2)}\n`);
-if (reports.some(({ overall }) => overall !== "pass")) process.exitCode = 1;
+if (reports.some(({ overall }) => overall !== "pass") || fidelityReport.overall !== "pass") process.exitCode = 1;

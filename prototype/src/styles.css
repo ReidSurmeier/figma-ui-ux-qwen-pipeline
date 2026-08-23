@@ -500,14 +500,23 @@ button, input, select { font: inherit; }
 
 .volume-slider {
   appearance: none;
-  left: 83px;
+  left: 86px;
   top: 4px;
-  width: 143px;
+  width: 136px;
   height: 15px;
   border: 0;
   outline-offset: 1px;
-  background: url("/assets/japanese-options-v001/components/slider-track.png") 0 2px / 143px 11px no-repeat;
+  background: transparent;
   accent-color: auto;
+}
+.slider-track-visual {
+  position: absolute;
+  left: 83px;
+  top: 6px;
+  width: 143px;
+  height: 11px;
+  pointer-events: none;
+  background: url("/assets/japanese-options-v001/components/slider-track.png") 0 0 / 143px 11px no-repeat;
 }
 .volume-slider::-webkit-slider-thumb {
   appearance: none;

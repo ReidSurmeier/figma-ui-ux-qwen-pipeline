@@ -16,9 +16,10 @@ function VolumeControl({ name, value, onValueChange, isOn, onOnChange }: VolumeC
   return (
     <div className={`volume-row volume-row--${name.toLowerCase()}`}>
       <span className="volume-label" aria-hidden="true">{name}</span>
-      <button type="button" className="arrow arrow--left" aria-label={`${name}を下げる`} data-visual-component={`options-${name.toLowerCase()}-down`} onClick={() => onValueChange(Math.max(0, value - 1))}>
+      <button type="button" className="arrow arrow--left" aria-label={`${name}を下げる`} data-component-id={`options-${name.toLowerCase()}-down`} data-visual-component={`options-${name.toLowerCase()}-down`} onClick={() => onValueChange(Math.max(0, value - 1))}>
         <span aria-hidden="true" />
       </button>
+      <span className="slider-track-visual" data-component-id={`options-${name.toLowerCase()}-track`} aria-hidden="true" />
       <input
         id={id}
         className="volume-slider"
@@ -33,16 +34,17 @@ function VolumeControl({ name, value, onValueChange, isOn, onOnChange }: VolumeC
       />
       <span
         className="slider-thumb-visual"
+        data-component-id={`options-${name.toLowerCase()}-thumb`}
         data-testid={`${name.toLowerCase()}-visual-thumb`}
         aria-hidden="true"
         style={{ left: 75.5 + value * 1.42 }}
       />
-      <button type="button" className="arrow arrow--right" aria-label={`${name}を上げる`} data-visual-component={`options-${name.toLowerCase()}-up`} onClick={() => onValueChange(Math.min(100, value + 1))}>
+      <button type="button" className="arrow arrow--right" aria-label={`${name}を上げる`} data-component-id={`options-${name.toLowerCase()}-up`} data-visual-component={`options-${name.toLowerCase()}-up`} onClick={() => onValueChange(Math.min(100, value + 1))}>
         <span aria-hidden="true" />
       </button>
       <output className="sr-only" data-testid={`${name.toLowerCase()}-value`} htmlFor={id}>{value}</output>
       <label className="on-toggle">
-        <input type="checkbox" aria-label={`${name} on`} data-visual-component={`options-${name.toLowerCase()}-on`} checked={isOn} onChange={(event) => onOnChange(event.currentTarget.checked)} />
+        <input type="checkbox" aria-label={`${name} on`} data-component-id={`options-${name.toLowerCase()}-on`} data-visual-component={`options-${name.toLowerCase()}-on`} checked={isOn} onChange={(event) => onOnChange(event.currentTarget.checked)} />
         <span aria-hidden="true">on</span>
       </label>
     </div>
@@ -52,7 +54,7 @@ function VolumeControl({ name, value, onValueChange, isOn, onOnChange }: VolumeC
 function FooterCheckbox({ name, checked, onCheckedChange }: { name: string; checked: boolean; onCheckedChange: (checked: boolean) => void }) {
   return (
     <label className={`footer-toggle footer-toggle--${name}`}>
-      <input type="checkbox" aria-label={name} data-visual-component={`options-footer-${name}`} checked={checked} onChange={(event) => onCheckedChange(event.currentTarget.checked)} />
+      <input type="checkbox" aria-label={name} data-component-id={`options-footer-${name}`} data-visual-component={`options-footer-${name}`} checked={checked} onChange={(event) => onCheckedChange(event.currentTarget.checked)} />
       <span aria-hidden="true">{name}</span>
     </label>
   );
@@ -147,18 +149,18 @@ export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActi
             }
           }}
         >
-          <span aria-hidden="true" />
+          <span aria-hidden="true" data-component-id="options-minimize" />
         </button>
         <button type="button" className="window-button window-button--close" aria-label="閉じる" data-close-window="options" data-visual-component="options-close" onClick={() => onClose ? onClose() : setIsOpen(false)}>
-          <span aria-hidden="true" />
+          <span aria-hidden="true" data-component-id="options-close" />
         </button>
       </header>
 
       {isBodyMounted && (
         <div className="window-body">
           <div className="vertical-tabs" role="tablist" aria-label="オプション表示">
-            <button type="button" role="tab" aria-label="option" aria-selected={activeTab === "option"} data-visual-component="options-tab-option" onClick={() => setActiveTab("option")}><span aria-hidden="true">option</span></button>
-            <button type="button" role="tab" aria-label="info" aria-selected={activeTab === "info"} data-visual-component="options-tab-info" onClick={() => setActiveTab("info")}><span aria-hidden="true">info</span></button>
+            <button type="button" role="tab" aria-label="option" aria-selected={activeTab === "option"} data-component-id="options-tab-option" data-visual-component="options-tab-option" onClick={() => setActiveTab("option")}><span aria-hidden="true">option</span></button>
+            <button type="button" role="tab" aria-label="info" aria-selected={activeTab === "info"} data-component-id="options-tab-info" data-visual-component="options-tab-info" onClick={() => setActiveTab("info")}><span aria-hidden="true">info</span></button>
           </div>
 
           <div className="option-panel" role="tabpanel">
@@ -184,6 +186,7 @@ export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActi
                         aria-expanded={skinOpen}
                         aria-controls="skin-options"
                         aria-haspopup="listbox"
+                        data-component-id="options-skin"
                         data-visual-component="options-skin"
                         onClick={() => setSkinOpen((open) => !open)}
                         onKeyDown={(event) => {

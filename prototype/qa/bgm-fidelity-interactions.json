@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "benchmark": "BGM and Effect",
+  "windows": [
+    {
+      "id": "options",
+      "status": "benchmark-pass",
+      "evidence": [
+        "prototype/e2e/options-window.spec.ts",
+        "prototype/e2e/options-semantic.spec.ts"
+      ]
+    },
+    { "id": "basic-info", "status": "pending-benchmark-replay" },
+    { "id": "card", "status": "pending-benchmark-replay" },
+    { "id": "skills", "status": "pending-benchmark-replay" },
+    { "id": "status", "status": "pending-benchmark-replay" },
+    { "id": "inventory", "status": "pending-benchmark-replay" },
+    { "id": "equipment", "status": "pending-benchmark-replay" },
+    { "id": "chat", "status": "pending-benchmark-replay" },
+    { "id": "exchange", "status": "pending-benchmark-replay" },
+    { "id": "game-menu", "status": "pending-benchmark-replay" },
+    { "id": "compact-info", "status": "pending-benchmark-replay" },
+    { "id": "party", "status": "pending-benchmark-replay" },
+    { "id": "quickbar", "status": "pending-benchmark-replay" },
+    { "id": "bottom-bar", "status": "pending-benchmark-replay" },
+    { "id": "notification", "status": "pending-benchmark-replay" }
+  ]
+}

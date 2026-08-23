@@ -1,11 +1,11 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.3",
   "reference": "benchmarks/japanese-rpg-options-v001/reference.png",
-  "invalidation_reason": "v003 executes every applicable correction prompt with window-specific browser evidence; no window is verified until runtime and hosted Figma passes are both green.",
+  "invalidation_reason": "No window is verified until it matches the BGM and Effect fidelity benchmark, passes correction replay, and passes hosted Figma parity.",
   "windows": [
     {
       "id": "options",
-      "status": "verified",
+      "status": "quality-benchmark",
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
@@ -14,8 +14,8 @@
     },
     {
       "id": "basic-info",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/basic-info/correction-replay-v003.json"
@@ -23,8 +23,8 @@
     },
     {
       "id": "card",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/card/correction-replay-v003.json"
@@ -32,8 +32,8 @@
     },
     {
       "id": "skills",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/skills/correction-replay-v003.json"
@@ -41,8 +41,8 @@
     },
     {
       "id": "status",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/status/correction-replay-v003.json"
@@ -50,8 +50,8 @@
     },
     {
       "id": "inventory",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/inventory/correction-replay-v003.json"
@@ -59,8 +59,8 @@
     },
     {
       "id": "equipment",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/equipment/correction-replay-v003.json"
@@ -68,8 +68,8 @@
     },
     {
       "id": "chat",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/chat/correction-replay-v003.json"
@@ -77,8 +77,8 @@
     },
     {
       "id": "exchange",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/exchange/correction-replay-v003.json"
@@ -86,8 +86,8 @@
     },
     {
       "id": "game-menu",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/game-menu/correction-replay-v003.json"
@@ -95,8 +95,8 @@
     },
     {
       "id": "party",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/party/correction-replay-v003.json"
@@ -104,8 +104,8 @@
     },
     {
       "id": "quickbar",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/quickbar/correction-replay-v003.json"
@@ -113,8 +113,8 @@
     },
     {
       "id": "compact-info",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/compact-info/correction-replay-v003.json"
@@ -122,8 +122,8 @@
     },
     {
       "id": "bottom-bar",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/bottom-bar/correction-replay-v003.json"
@@ -131,8 +131,8 @@
     },
     {
       "id": "notification",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "fail",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/notification/correction-replay-v003.json"

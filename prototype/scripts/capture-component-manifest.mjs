@@ -16,11 +16,33 @@ export async function captureRuntimeComponentManifest(page) {
         height: Math.round(bounds.height * 100) / 100,
       };
     };
-    const assetPath = (node) => {
-      const match = getComputedStyle(node).backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+    const assetPathFromStyle = (style) => {
+      const match = style.backgroundImage.match(/url\(["']?(.*?)["']?\)/);
       if (!match) return null;
       const url = new URL(match[1], location.href);
       return url.pathname;
+    };
+    const assetAuthority = (node) => {
+      const direct = assetPathFromStyle(getComputedStyle(node));
+      if (direct) return { assetPath: direct, geometry: relative(node), authority: "element-background" };
+      for (const pseudo of ["::before", "::after"]) {
+        const style = getComputedStyle(node, pseudo);
+        const assetPath = assetPathFromStyle(style);
+        if (!assetPath) continue;
+        const bounds = node.getBoundingClientRect();
+        const px = (value, fallback) => Number.parseFloat(value) || fallback;
+        return {
+          assetPath,
+          geometry: {
+            x: Math.round((bounds.x - root.x + px(style.left, 0)) * 100) / 100,
+            y: Math.round((bounds.y - root.y + px(style.top, 0)) * 100) / 100,
+            width: Math.round(px(style.width, bounds.width) * 100) / 100,
+            height: Math.round(px(style.height, bounds.height) * 100) / 100,
+          },
+          authority: pseudo === "::before" ? "pseudo-before-background" : "pseudo-after-background",
+        };
+      }
+      return null;
     };
 
     const cleanPlate = window.dataset.cleanPlate;
@@ -39,11 +61,10 @@ export async function captureRuntimeComponentManifest(page) {
         height: Math.round(root.height * 100) / 100,
       },
       ...(cleanPlate ? { cleanPlate } : {}),
-      components: ownedNodes("[data-component-id]").map((node) => ({
-        id: node.dataset.componentId,
-        assetPath: assetPath(node),
-        geometry: relative(node),
-      })).filter(({ assetPath: path }) => path),
+      components: ownedNodes("[data-component-id]").map((node) => {
+        const authority = assetAuthority(node);
+        return authority ? { id: node.dataset.componentId, ...authority } : null;
+      }).filter(Boolean),
       controls: ownedNodes("button, input, [role=tab], [role=option]")
         .filter((node) => node.getBoundingClientRect().width > 0 && node.getBoundingClientRect().height > 0)
         .map((node, index) => {

@@ -1,0 +1,64 @@
+name: Japanese UI BGM Fidelity Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/japanese-ui-quality.yml"
+      - "prototype/**"
+      - "benchmarks/japanese-rpg-options-v001/**"
+  pull_request:
+    paths:
+      - ".github/workflows/japanese-ui-quality.yml"
+      - "prototype/**"
+      - "benchmarks/japanese-rpg-options-v001/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bgm-fidelity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+
+      - name: Install prototype dependencies
+        run: npm ci --prefix prototype
+
+      - name: Install Chrome for Playwright
+        run: npx --prefix prototype playwright install --with-deps chrome
+
+      - name: Run unit tests and build
+        run: npm --prefix prototype test && npm --prefix prototype run build
+
+      - name: Start the executable prototype
+        run: |
+          npm --prefix prototype exec vite -- --host 127.0.0.1 --port 4174 > /tmp/japanese-ui-vite.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            curl --fail --silent http://127.0.0.1:4174/ >/dev/null && exit 0
+            sleep 1
+          done
+          sed -n '1,200p' /tmp/japanese-ui-vite.log
+          exit 1
+
+      - name: Enforce BGM and Effect fidelity floor
+        env:
+          BGM_FIDELITY_URL: http://127.0.0.1:4174/
+        run: npm --prefix prototype run qa:bgm-fidelity
+
+      - name: Upload fidelity evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: bgm-fidelity-evidence
+          path: artifacts/qa/bgm-fidelity-gate-v001
+          if-no-files-found: error
