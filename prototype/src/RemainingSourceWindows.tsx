@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { SourceRaster, SourceWindow } from "./SourceWindow";
 
-type WindowProps = { zIndex: number; onActivate: (id: string) => void };
+type WindowProps = { zIndex: number; onActivate: (id: string) => void; open?: boolean; onClose?: () => void };
 const root = "/assets/japanese-rpg-v001";
 
 export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
@@ -34,7 +34,7 @@ export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
 
 const skillNames = ["ディバインプロテクション", "ワープポータル", "ニューマ", "ヒール", "エンジェラス", "ブレッシング", "速度増加", "ルアフ"];
 const skillLevels = [5, 4, 4, 9, 5, 10, 10, 1];
-export function SkillsSourceWindow({ zIndex, onActivate }: WindowProps) {
+export function SkillsSourceWindow({ zIndex, onActivate, open, onClose }: WindowProps) {
   const [selected, setSelected] = useState(0);
   const [scroll, setScroll] = useState(34);
   const [status, setStatus] = useState("");
@@ -42,7 +42,7 @@ export function SkillsSourceWindow({ zIndex, onActivate }: WindowProps) {
   const assetRoot = `${root}/skills`;
   const listOffset = Math.round(Math.max(0, (scroll - 34) / 66) * 144);
   return (
-    <SourceWindow id="skills" title="スキルリスト" initialPosition={{ x: 568, y: 0 }} width={281} height={184} titleWidth={96} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false}>
+    <SourceWindow id="skills" title="スキルリスト" initialPosition={{ x: 568, y: 0 }} width={281} height={184} titleWidth={96} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} open={open} onClose={onClose}>
       <div className="skills-source-viewport">
         <div className="skills-source-list" style={{ transform: `translateY(${-listOffset}px)` }}>
           {skillNames.map((name, row) => {
@@ -74,11 +74,11 @@ export function SkillsSourceWindow({ zIndex, onActivate }: WindowProps) {
   );
 }
 
-export function EquipmentSourceWindow({ zIndex, onActivate }: WindowProps) {
+export function EquipmentSourceWindow({ zIndex, onActivate, open, onClose }: WindowProps) {
   const [selected, setSelected] = useState("");
   const assetRoot = `${root}/equipment`;
   return (
-    <SourceWindow id="equipment" title="装備アイテム" initialPosition={{ x: 0, y: 385 }} width={280} height={152} titleWidth={110} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate}>
+    <SourceWindow id="equipment" title="装備アイテム" initialPosition={{ x: 0, y: 385 }} width={280} height={152} titleWidth={110} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} open={open} onClose={onClose}>
       {["left", "right"].flatMap((side) => [0, 1, 2, 3, 4].map((row) => <button key={`${side}-${row}`} type="button" className="equipment-source-row" aria-label={`${side === "left" ? "左" : "右"}装備 ${row + 1}`} aria-pressed={selected === `${side}-${row}`} style={{ left: side === "left" ? 4 : 170, width: side === "left" ? 105 : 106, top: row === 4 ? 134 : 18 + row * 29, height: row === 4 ? 18 : 29 }} onClick={() => setSelected(`${side}-${row}`)}><SourceRaster id={`equipment-${side}-${row}`} file={`${assetRoot}/components/${side}-${row}`} style={{ inset: 0 }} /></button>))}
       <SourceRaster id="equipment-avatar" className="equipment-source-avatar" file={`${assetRoot}/components/avatar`} style={{ left: 109, top: 18, width: 61, height: 134 }} />
       <output className="sr-only" role="status">{selected}</output>
@@ -143,14 +143,14 @@ export function GameMenuSourceWindow({ zIndex, onActivate }: WindowProps) {
   return <SourceWindow id="game-menu" title="ゲームメニュー" initialPosition={{ x: 626, y: 182 }} width={222} height={133} titleWidth={128} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closable={false}>{labels.map((label, row) => <button key={label} type="button" className="game-menu-source-action" aria-pressed={selected === row} aria-label={label} style={{ top: 29 + row * 25 }} onClick={() => setSelected(row)}><SourceRaster id={`game-menu-action-${row}`} file={`${assetRoot}/components/action-${row}`} style={{ inset: 0 }} /></button>)}<output className="sr-only" role="status">{selected >= 0 ? labels[selected] : "menu ready"}</output></SourceWindow>;
 }
 
-export function PartySourceWindow({ zIndex, onActivate, tab, onTabChange }: WindowProps & { tab: "friends" | "party"; onTabChange: (tab: "friends" | "party") => void }) {
+export function PartySourceWindow({ zIndex, onActivate, open, onClose, tab, onTabChange }: WindowProps & { tab: "friends" | "party"; onTabChange: (tab: "friends" | "party") => void }) {
   const [member, setMember] = useState<number | null>(0);
   const [page, setPage] = useState(0);
   const [status, setStatus] = useState("");
   const names = ["SakumaRiri", "Sebas'", "ANRI(砂漠の都市モロク)", "Show_A", "Ayanalshizuka"];
   const assetRoot = `${root}/party`;
   return <>
-    <SourceWindow id="party" title="パーティー (Riri-Soft)" initialPosition={{ x: 568, y: 370 }} width={160} height={154} titleWidth={125} titleTop={4} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closeRight={1} closeTop={3}>
+    <SourceWindow id="party" title="パーティー (Riri-Soft)" initialPosition={{ x: 568, y: 370 }} width={160} height={154} titleWidth={125} titleTop={4} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closeRight={1} closeTop={3} open={open} onClose={onClose}>
       {names.map((name, row) => {
         const selected = member === row;
         const rowFile = row === 0 && !selected

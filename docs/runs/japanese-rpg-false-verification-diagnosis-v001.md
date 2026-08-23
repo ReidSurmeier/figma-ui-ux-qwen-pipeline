@@ -396,6 +396,16 @@ exactly to 280 by 120. A third isolated replay reports 11 enabled controls,
 failures. This is browser/correction completion for Basic Info, not a waiver of
 the separate fresh Figma parity gate.
 
+That green result was deliberately challenged again before promotion. The
+destination test had proved open and z-order but not reversal. Closing Status
+made the Basic Info `status` button permanently dead because each child window
+owned private `open` state. The expanded test went RED on the exact
+close → reopen journey. Desktop now owns visibility for Status, Options,
+Inventory, Equipment, Skills, Party, and Map; every matching Basic Info control
+reopens its closed destination without reload. The locked navigation contract
+hash was refreshed only after this complete journey passed, demonstrating that
+new method requirements demote earlier green evidence instead of being waived.
+
 The same full-coverage run found a correction-runner race at the Options close
 button: the control removed its window between visibility and screenshot calls.
 The runner now waits for activation repaint, retries transiently detached idle

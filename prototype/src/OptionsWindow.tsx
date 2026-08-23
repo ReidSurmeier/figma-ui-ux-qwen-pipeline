@@ -61,9 +61,11 @@ type OptionsWindowProps = {
   initialPosition?: { x: number; y: number };
   zIndex?: number;
   onActivate?: () => void;
+  open?: boolean;
+  onClose?: () => void;
 };
 
-export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActivate }: OptionsWindowProps = {}) {
+export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActivate, open, onClose }: OptionsWindowProps = {}) {
   const [bgm, setBgm] = useState(62);
   const [effect, setEffect] = useState(43);
   const [bgmOn, setBgmOn] = useState(false);
@@ -78,7 +80,7 @@ export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActi
   const [position, setPosition] = useState(initialPosition);
   const dragOrigin = useRef<{ pointerX: number; pointerY: number; panelX: number; panelY: number } | null>(null);
 
-  if (!isOpen) return null;
+  if (!(open ?? isOpen)) return null;
 
   return (
     <section
@@ -144,7 +146,7 @@ export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActi
         >
           <span aria-hidden="true" />
         </button>
-        <button type="button" className="window-button window-button--close" aria-label="閉じる" onClick={() => setIsOpen(false)}>
+        <button type="button" className="window-button window-button--close" aria-label="閉じる" onClick={() => onClose ? onClose() : setIsOpen(false)}>
           <span aria-hidden="true" />
         </button>
       </header>

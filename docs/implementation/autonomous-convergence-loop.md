@@ -105,3 +105,10 @@ Ranges declare `data-visual-component`; minimize controls declare
 then execute every mapped control. This prevents one passing HP slider from
 granting SP by resemblance, and prevents a cropped transition from satisfying
 a generated compact-state requirement.
+
+A visible destination is not sufficient if its close action strands the user.
+For every closable destination, the inventory journey performs
+open → close → reopen from the originating control. The shared desktop owns
+destination visibility so reopening does not depend on reloading or remounting
+the application. Introducing this reversal checkpoint demotes any previously
+passing destination contract until its locked test hash and replay are fresh.

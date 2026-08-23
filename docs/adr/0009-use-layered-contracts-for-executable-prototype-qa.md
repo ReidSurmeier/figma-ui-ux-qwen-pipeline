@@ -119,6 +119,12 @@ Use a layered QA system with one responsibility per layer:
     values, exact endpoints, invariant regions, and donor remainder. Every
     minimize control likewise declares its generated endpoint and proves motion,
     settled geometry, preserved title authority, and restoration.
+29. Navigation completion includes reversal and recovery. If a destination has
+    a close control, the originating navigation control must reopen it without a
+    page reload. Visibility is application state owned by the common desktop,
+    not private state that makes a previously valid navigation control dead.
+    Adding this requirement invalidates an earlier passing navigation contract
+    until the complete close-to-reopen journey is green.
 
 ## Consequences
 

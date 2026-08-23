@@ -237,6 +237,14 @@ test("every Basic Info page control declares and reaches its source-approved des
       return { id: node.getAttribute("data-component-id"), bounds: [bounds.x, bounds.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
     }));
     expect(invariantAfter, `${label} changed Basic Info title or meter authority`).toEqual(invariantBefore);
+
+    const close = target.getByRole("button", { name: /閉じる$/ });
+    if (await close.count()) {
+      await close.click();
+      await expect(target).toHaveCount(0);
+      await basic.getByRole("button", { name: label, exact: true }).click();
+      await expect(page.locator(`[data-window-id="${destination}"]`), `${label} did not restore its closed destination`).toBeVisible();
+    }
   }
 });
 

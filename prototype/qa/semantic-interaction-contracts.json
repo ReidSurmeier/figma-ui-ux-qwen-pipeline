@@ -63,7 +63,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info page control declares and reaches its source-approved destination",
-        "sha256": "9441248c4b4ff9722315d0e28541ef9e08b3b3a7eb181a8bfceffa6d20734f6e"
+        "sha256": "b207bb6b0946d94174f7c6444e9c9647a0283c0f0951ccca77487915392672bd"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -123,7 +123,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-        "sha256": "9441248c4b4ff9722315d0e28541ef9e08b3b3a7eb181a8bfceffa6d20734f6e"
+        "sha256": "b207bb6b0946d94174f7c6444e9c9647a0283c0f0951ccca77487915392672bd"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -167,7 +167,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
-        "sha256": "9441248c4b4ff9722315d0e28541ef9e08b3b3a7eb181a8bfceffa6d20734f6e"
+        "sha256": "b207bb6b0946d94174f7c6444e9c9647a0283c0f0951ccca77487915392672bd"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",

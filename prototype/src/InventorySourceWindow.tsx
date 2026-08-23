@@ -2,18 +2,18 @@ import { useState } from "react";
 
 import { SourceRaster, SourceWindow } from "./SourceWindow";
 
-type InventoryWindowProps = { zIndex: number; onActivate: (id: string) => void };
+type InventoryWindowProps = { zIndex: number; onActivate: (id: string) => void; open?: boolean; onClose?: () => void };
 const assetRoot = "/assets/japanese-rpg-v001/inventory";
 const tabs = ["item", "equip", "etc"] as const;
 
-export function InventorySourceWindow({ zIndex, onActivate }: InventoryWindowProps) {
+export function InventorySourceWindow({ zIndex, onActivate, open, onClose }: InventoryWindowProps) {
   const [tab, setTab] = useState<(typeof tabs)[number]>("item");
   const [selected, setSelected] = useState(0);
   const [scroll, setScroll] = useState(0);
   const visibleCount = tab === "item" ? 21 : tab === "equip" ? 14 : 7;
 
   return (
-    <SourceWindow id="inventory" title="所持アイテム" initialPosition={{ x: 0, y: 247 }} width={280} height={137} titleWidth={120} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate}>
+    <SourceWindow id="inventory" title="所持アイテム" initialPosition={{ x: 0, y: 247 }} width={280} height={137} titleWidth={120} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} open={open} onClose={onClose}>
       {tabs.map((name, index) => (
         <button key={name} type="button" className="inventory-source-tab" aria-label={name} aria-pressed={tab === name} data-source-selected={index === 0} style={{ left: 5, top: 18 + index * 35 }} onClick={() => { setTab(name); setSelected(0); }}>
           <SourceRaster id={`inventory-tab-${name}`} file={`${assetRoot}/components/tab-${name}`} style={{ inset: 0 }} />

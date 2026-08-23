@@ -2,12 +2,12 @@ import { useState } from "react";
 
 import { SourceRaster, SourceWindow } from "./SourceWindow";
 
-type StatusWindowProps = { zIndex: number; onActivate: (id: string) => void };
+type StatusWindowProps = { zIndex: number; onActivate: (id: string) => void; open?: boolean; onClose?: () => void };
 
 const assetRoot = "/assets/japanese-rpg-v001/status";
 const statNames = ["Str", "Agi", "Vit", "Int", "Dex", "Luk"];
 
-export function StatusSourceWindow({ zIndex, onActivate }: StatusWindowProps) {
+export function StatusSourceWindow({ zIndex, onActivate, open, onClose }: StatusWindowProps) {
   const [increments, setIncrements] = useState<Record<string, number>>({});
 
   return (
@@ -21,6 +21,8 @@ export function StatusSourceWindow({ zIndex, onActivate }: StatusWindowProps) {
       assetRoot={assetRoot}
       zIndex={zIndex}
       onActivate={onActivate}
+      open={open}
+      onClose={onClose}
     >
       <SourceRaster id="status-side-tabs" file={`${assetRoot}/components/side-tabs`} style={{ left: 3, top: 18, width: 17, height: 108 }} />
       {statNames.map((name, index) => {
