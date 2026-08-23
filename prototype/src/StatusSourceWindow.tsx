@@ -36,7 +36,16 @@ export function StatusSourceWindow({ zIndex, onActivate }: StatusWindowProps) {
               <div key={name} className={`status-source-row${changed ? " status-source-row--changed" : ""}`} style={{ top }}>
                 <SourceRaster id={`status-primary-row-${index}`} file={`${assetRoot}/components/primary-row-${index}`} style={{ left: 20, top: 0, width: 90, height: 18 }} />
                 <SourceRaster id={`status-derived-row-${index}`} file={`${assetRoot}/components/derived-row-${index}`} style={{ left: 100, top: 0, width: 180, height: 18 }} />
-                {index !== 3 && <button type="button" aria-label={`${name}を上げる`} aria-pressed={changed} onClick={() => setIncrements((current) => ({ ...current, [name]: (current[name] ?? 0) + 1 }))} />}
+                {changed && index !== 3 && (
+                  <output
+                    className="status-source-value-patch"
+                    aria-label={`${name} 2`}
+                    style={{ backgroundPosition: `-54px -${26 + index * 18}px` }}
+                  >
+                    <span aria-hidden="true" />
+                  </output>
+                )}
+                {index !== 3 && <button type="button" aria-label={`${name}を上げる`} aria-pressed={changed} onClick={() => setIncrements((current) => ({ ...current, [name]: 1 }))} />}
               </div>
             );
           })}

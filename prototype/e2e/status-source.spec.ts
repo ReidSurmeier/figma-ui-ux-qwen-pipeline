@@ -31,16 +31,36 @@ test("status is a Qwen clean plate plus independent source-locked raster groups"
   }
 });
 
-test("status increment controls produce a stable visible and semantic state", async ({ page }) => {
+test("status increment visibly changes only the source value field", async ({ page }) => {
   await page.goto("/");
   const window = page.getByRole("region", { name: "ステータス" });
   const button = window.getByRole("button", { name: "Strを上げる" });
-  const row = window.locator(".status-source-row").first();
+  const bounds = await window.boundingBox();
+  expect(bounds).not.toBeNull();
+
+  const labelClip = {
+    x: bounds!.x + 20,
+    y: bounds!.y + 18,
+    width: 30,
+    height: 18,
+  };
+  const valueClip = {
+    x: bounds!.x + 50,
+    y: bounds!.y + 18,
+    width: 52,
+    height: 18,
+  };
+  const labelBefore = await page.screenshot({ clip: labelClip });
+  const valueBefore = await page.screenshot({ clip: valueClip });
+
   await expect(button).toHaveAttribute("aria-pressed", "false");
   await button.click();
   await expect(button).toHaveAttribute("aria-pressed", "true");
-  await expect(row).toHaveClass(/status-source-row--changed/);
-  await expect(window.getByRole("status")).toContainText("Str+1");
+
+  const labelAfter = await page.screenshot({ clip: labelClip });
+  const valueAfter = await page.screenshot({ clip: valueClip });
+  expect(labelAfter.equals(labelBefore), "the source Str label must remain pixel-identical").toBe(true);
+  expect(valueAfter.equals(valueBefore), "the visible Str value must change").toBe(false);
 });
 
 test("status tabs map to their own content and restore the source table", async ({ page }) => {
