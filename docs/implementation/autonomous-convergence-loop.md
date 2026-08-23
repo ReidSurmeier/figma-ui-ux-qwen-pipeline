@@ -125,3 +125,13 @@ three categories even though the default correction probe sees 21. Its category
 controls are real vertical tabs with wrapped ArrowUp/ArrowDown traversal, so an
 agent can discover secondary views through the public accessibility interface
 instead of guessing from raster appearance.
+
+Animated component checks define both the pixels allowed to change and adjacent
+regions that must not change. Transformed assets live inside explicit body-local
+clip viewports, and the test samples title, copy, art, and perimeter authorities
+through the active state before requiring exact restoration. Before those pixel
+authorities are captured, the window is activated and allowed to settle so a
+z-order change cannot masquerade as animation leakage. Controls that drive a
+different component also expose a machine-readable relationship such as
+`aria-controls`; a visual response without an auditable target remains
+uncontracted.

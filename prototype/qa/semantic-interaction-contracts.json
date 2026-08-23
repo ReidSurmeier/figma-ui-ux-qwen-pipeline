@@ -492,6 +492,130 @@
           "rule": "the restored window has exact pre-close geometry and ordered independent component inventory"
         }
       ]
+    },
+    {
+      "id": "card-reversible-art-rotation-v001",
+      "window_id": "card",
+      "control_labels": ["カードを回転"],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card art rotation is reversible and leaves title plus copy pixels invariant",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 0, 280, 150]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["The independent Card art can animate without crossing into the Japanese title or copy regions and restores exactly."]
+      },
+      "gesture": "trusted pointer click rotates the art and a second pointer click restores its exact idle pixels",
+      "expected_region_changes": [
+        {
+          "component_id": "card-art",
+          "rule": "the independently owned art visibly rotates and restores exactly"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["card-title-icon", "card-title-text", "card-copy-0", "card-copy-1", "card-copy-2", "card-copy-3", "card-copy-4"],
+          "rule": "title and Japanese copy pixels remain byte-identical throughout rotation"
+        }
+      ]
+    },
+    {
+      "id": "card-real-scroll-v001",
+      "window_id": "card",
+      "control_labels": ["カード情報スクロール"],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card real scroll gestures move copy and one visual thumb without entering title or art",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 0, 280, 150]
+      },
+      "gesture": "keyboard Home, nine real vertical pointer positions, and keyboard End",
+      "expected_region_changes": [
+        {
+          "component_id": "card-scrollbar-thumb",
+          "rule": "one independent thumb follows exact y=44 to y=71 endpoints while the clipped copy exposes more than four states"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["card-title-icon", "card-title-text", "card-art"],
+          "rule": "title and art pixels remain byte-identical at every sampled scroll value"
+        }
+      ]
+    },
+    {
+      "id": "card-slot-scroll-control-v001",
+      "window_id": "card",
+      "control_labels": ["カードスロット"],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card slot controls the Card scroll state without changing title or art",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 0, 280, 150]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["The source-themed Card slot controls two settled Card copy positions and exposes that relationship to interaction QA."]
+      },
+      "gesture": "two trusted pointer clicks toggle the related Card scrollbar between the expanded and settled positions",
+      "expected_region_changes": [
+        {
+          "component_id": "card-scrollbar-thumb",
+          "rule": "aria-controls names the scrollbar and the controlled value transitions from 0 to 70 to 30"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["card-title-icon", "card-title-text", "card-art"],
+          "rule": "title and art pixels remain byte-identical through both slot transitions"
+        }
+      ]
+    },
+    {
+      "id": "card-close-v001",
+      "window_id": "card",
+      "control_labels": ["ソルジャースケルトンカードを閉じる"],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card close target removes exactly the Card window",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 0, 280, 150]
+      },
+      "gesture": "trusted pointer click activates the source-visible close target",
+      "expected_region_changes": [
+        {
+          "window_id": "card",
+          "rule": "the Card region and its complete component inventory are removed"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["all non-Card runtime components"],
+          "rule": "exactly one runtime window is removed"
+        }
+      ]
     }
   ]
 }

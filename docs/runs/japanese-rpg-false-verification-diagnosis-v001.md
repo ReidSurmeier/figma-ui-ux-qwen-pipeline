@@ -449,6 +449,32 @@ The next isolated replay reports 27 visible enabled controls, 27 contracted,
 27 contract-passed, zero uncontracted, and no correction failures. This is the
 third browser/correction-complete window, still pending fresh Figma parity.
 
+## Card transformed-region and control-relationship tracer
+
+The initial isolated Card replay found four visible enabled controls, zero
+contracts, and no generic probe failure. Rotation, scrolling, slot selection,
+and close each produced some state or pixel change, so the old classifier had no
+way to distinguish correct Card behavior from an unrelated or leaking change.
+
+The first locked rotation test immediately found a real geometry defect: the
+three-degree art transform escaped its body and changed pixels in the Japanese
+title band. The art now rotates inside a source-local clipping viewport and
+restores its exact idle pixels. The scroll contract samples nine real pointer
+positions, proves more than four copy states, follows one independent thumb from
+y=44 to y=71, and holds the title plus art byte-identical. The Card slot now
+declares `aria-controls="card-info-scroll"`, and its contract proves the public
+0 to 70 to 30 state journey instead of accepting an unspecified visual change.
+Close proves that exactly the Card window is removed; no screenshot-invisible
+reopen behavior was invented.
+
+Invariant baselines are captured only after bringing Card to the foreground.
+During the first combined run, a legitimate z-order transition changed the
+visible title crop and demonstrated that unstabilized screenshot authorities can
+also create false failures. With activation fixed, the isolated replay reports
+four controls, four contracted, four contract-passed, zero uncontracted, and no
+correction failures. Card remains pending the separate full-suite and Figma
+parity gates.
+
 The same full-coverage run found a correction-runner race at the Options close
 button: the control removed its window between visibility and screenshot calls.
 The runner now waits for activation repaint, retries transiently detached idle

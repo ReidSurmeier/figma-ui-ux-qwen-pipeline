@@ -11,9 +11,11 @@ export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
   const assetRoot = `${root}/card`;
   return (
     <SourceWindow id="card" title="ソルジャースケルトンカード" initialPosition={{ x: 285, y: 0 }} width={280} height={150} titleWidth={160} titleTextLeft={86} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false}>
-      <button className="card-source-art" type="button" aria-label="カードを回転" aria-pressed={rotated} onClick={() => setRotated((value) => !value)}>
-        <SourceRaster id="card-art" file={`${assetRoot}/components/art`} style={{ inset: 0 }} />
-      </button>
+      <div className="card-source-art-viewport">
+        <button className="card-source-art" type="button" aria-label="カードを回転" aria-pressed={rotated} data-visual-component="card-art" onClick={() => setRotated((value) => !value)}>
+          <SourceRaster id="card-art" file={`${assetRoot}/components/art`} style={{ inset: 0 }} />
+        </button>
+      </div>
       <div className="card-source-copy-viewport">
         <div className="card-source-copy" style={{ transform: `translateY(${-Math.round(scroll * 0.18)}px)` }}>
           {[0, 1, 2, 3].map((row) => <SourceRaster key={row} id={`card-copy-${row}`} file={`${assetRoot}/components/copy-${row}`} style={{ left: 0, top: row * 19, width: 155, height: 19 }} />)}
@@ -22,9 +24,9 @@ export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
       </div>
       <SourceRaster id="card-scrollbar-track" file={`${assetRoot}/components/scrollbar-track`} style={{ left: 248, top: 34, width: 29, height: 80 }} />
       <SourceRaster id="card-scrollbar-thumb" className="card-source-thumb" file={`${assetRoot}/components/scrollbar-thumb`} style={{ left: 248, top: 44 + Math.round(scroll * 0.27), width: 29, height: 32 }} />
-      <input className="card-source-scroll" type="range" aria-label="カード情報スクロール" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />
+      <input id="card-info-scroll" className="card-source-scroll" type="range" aria-label="カード情報スクロール" data-visual-component="card-scrollbar-thumb" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />
       <SourceRaster id="card-bottom-icon" file={`${assetRoot}/components/bottom-icon`} style={{ left: 5, top: 122, width: 25, height: 22 }} />
-      <button className="card-source-slot" type="button" aria-label="カードスロット" aria-pressed={scroll > 50} onClick={() => setScroll((value) => value > 50 ? 30 : 70)}>
+      <button className="card-source-slot" type="button" aria-label="カードスロット" aria-controls="card-info-scroll" aria-pressed={scroll > 50} onClick={() => setScroll((value) => value > 50 ? 30 : 70)}>
         <SourceRaster id="card-bottom-slot" file={`${assetRoot}/components/bottom-slot`} style={{ inset: 0 }} />
       </button>
       <output className="sr-only" role="status">card scroll {scroll}</output>

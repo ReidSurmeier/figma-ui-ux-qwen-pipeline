@@ -132,6 +132,14 @@ Use a layered QA system with one responsibility per layer:
 31. Source-visible category controls expose real tablist, tab, and tabpanel
     semantics plus wrapped vertical keyboard traversal. A default-tab screenshot
     cannot prove that secondary categories or their descendants are reachable.
+32. Clip every transformed child to its source-owned body region. A reversible
+    animation still fails when an intermediate rotated, translated, or scaled
+    pixel enters the title, neighboring copy, or window perimeter. Tests sample
+    those invariant regions during the interaction, not only after restoration.
+33. Stabilize window activation and z-order before capturing invariant pixel
+    authorities. A legitimate foreground transition can otherwise be mistaken
+    for control-owned pixel damage; subsequent interaction samples must keep the
+    activated stacking state fixed.
 
 ## Consequences
 
