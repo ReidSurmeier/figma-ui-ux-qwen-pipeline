@@ -278,6 +278,40 @@ test("Equipment preserves its avatar component without inventing a rotation hots
     ?.closest("button")?.getAttribute("aria-label") ?? null, bounds)).toBeNull();
 });
 
+test("Equipment minimize uses its generated endpoint, clears body content, and restores exactly", async ({ page }) => {
+  await page.goto("/");
+  const equipment = page.getByRole("region", { name: "装備アイテム" });
+  const minimize = equipment.getByRole("button", { name: "装備アイテムを最小化" });
+  const expanded = await equipment.screenshot();
+  await minimize.click();
+  const widths: number[] = [];
+  for (let frame = 0; frame < 16; frame += 1) {
+    await page.waitForTimeout(16);
+    widths.push((await equipment.boundingBox())?.width ?? -1);
+  }
+
+  expect(new Set(widths).size).toBeGreaterThan(4);
+  await expect(equipment).toHaveCSS("background-image", /equipment\/minimized-plate\.png/);
+  await expect(equipment.locator(".source-window__components")).toHaveCount(0);
+  const minimized = await equipment.boundingBox();
+  expect(minimized).toMatchObject({ width: 180, height: 18 });
+  if (!minimized) throw new Error("Equipment minimized geometry is unavailable");
+  for (const component of [
+    equipment.locator('[data-component-id="equipment-title-text"]'),
+    equipment.locator('[data-component-id="equipment-minimize"]'),
+    equipment.locator('[data-component-id="equipment-close"]'),
+  ]) {
+    const componentBounds = await component.boundingBox();
+    if (!componentBounds) throw new Error("Equipment minimized title component is unavailable");
+    expect(componentBounds.x).toBeGreaterThanOrEqual(minimized.x);
+    expect(componentBounds.x + componentBounds.width).toBeLessThanOrEqual(minimized.x + minimized.width);
+  }
+
+  await minimize.click();
+  await page.waitForTimeout(240);
+  expect((await equipment.screenshot()).equals(expanded)).toBe(true);
+});
+
 test("compact HP and SP remain source-faithful readouts rather than invisible sliders", async ({ page }) => {
   await page.goto("/");
   const compact = page.getByRole("region", { name: "簡易情報" });

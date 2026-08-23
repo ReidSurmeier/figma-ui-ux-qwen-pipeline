@@ -181,3 +181,11 @@ removed. The avatar remains an independent raster component, and the runtime
 now proves that its center does not resolve to a button. A future rotation flow
 requires explicit behavior authority and source-fitting Qwen state assets
 before it can be introduced.
+
+The previously reported Equipment minimize failure no longer reproduces. Its
+current endpoint uses the independently generated 180 by 18 Qwen plate, removes
+the complete body subtree, keeps title text and both title buttons inside the
+resolved edge, exposes more than four width samples during the stepped motion,
+and restores to a byte-identical expanded window. These are now locked as an
+Equipment-specific browser contract; no speculative minimize visual change was
+made.
