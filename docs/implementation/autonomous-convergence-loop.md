@@ -135,3 +135,11 @@ z-order change cannot masquerade as animation leakage. Controls that drive a
 different component also expose a machine-readable relationship such as
 `aria-controls`; a visual response without an auditable target remains
 uncontracted.
+
+Clipped multi-page controls have two complementary inventories. The correction
+probe counts enabled controls on the current settled page; controls on other
+pages remain disabled until the public scroll, tab, or listbox route reveals
+them. The semantic family test then traverses every page and clicks every member.
+This avoids both failure modes: granting hidden siblings by resemblance and
+blindly clicking clipped DOM nodes whose apparent pixel response comes from an
+overlap or z-order change.

@@ -140,6 +140,11 @@ Use a layered QA system with one responsibility per layer:
     authorities. A legitimate foreground transition can otherwise be mistaken
     for control-owned pixel damage; subsequent interaction samples must keep the
     activated stacking state fixed.
+34. The default control inventory contains only controls reachable in the
+    settled visible view. Clipped descendants are disabled until their public
+    navigation state reveals them, while a locked dynamic-family journey must
+    still visit every page and exercise every descendant. DOM presence is not
+    evidence that a user or an agent can activate a control.
 
 ## Consequences
 

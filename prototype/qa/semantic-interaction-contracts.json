@@ -616,6 +616,163 @@
           "rule": "exactly one runtime window is removed"
         }
       ]
+    },
+    {
+      "id": "skills-every-row-selection-v001",
+      "window_id": "skills",
+      "control_label_patterns": ["^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ) Lv (5|4|9|10|1)$"],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [568, 0, 281, 184]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Every extracted Japanese skill row is selectable through a real pointer target after navigating to its settled clipped page."]
+      },
+      "gesture": "trusted pointer clicks visit every skill row on its settled page",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "skill-copy-*",
+          "rule": "exactly the clicked skill row owns aria-selected and the listbox active descendant"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["skills-title-icon", "skills-title-text", "skills-points", "skills-use", "skills-close-action"],
+          "rule": "the title and footer remain byte-identical throughout every row selection"
+        }
+      ]
+    },
+    {
+      "id": "skills-every-level-control-v001",
+      "window_id": "skills",
+      "control_label_patterns": ["^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ)をレベルアップ$"],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [568, 0, 281, 184]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Each source-visible LV UP target independently toggles only its associated skill state and reports the Japanese skill name."]
+      },
+      "gesture": "two trusted pointer clicks toggle and restore each of the eight level controls",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "skill-level-*",
+          "rule": "only the clicked level control owns aria-pressed and the matching Japanese status"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["all other skill level controls", "skills-title-icon", "skills-title-text", "skills-points"],
+          "rule": "no sibling level state, title pixel, or footer pixel changes"
+        }
+      ]
+    },
+    {
+      "id": "skills-real-scroll-v001",
+      "window_id": "skills",
+      "control_labels": ["スキルスクロール"],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills real scroll gestures keep one thumb and the clipped list outside title and footer",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [568, 0, 281, 184]
+      },
+      "gesture": "keyboard Home, nine real vertical pointer positions, and keyboard End",
+      "expected_region_changes": [
+        {
+          "component_id": "skills-scrollbar-thumb",
+          "rule": "one independent thumb follows exact y=28 to y=107 endpoints while the clipped list exposes more than four states"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["skills-title-icon", "skills-title-text", "skills-points", "skills-use", "skills-close-action"],
+          "rule": "the Japanese title and complete footer remain byte-identical at every sampled value"
+        }
+      ]
+    },
+    {
+      "id": "skills-use-selected-row-v001",
+      "window_id": "skills",
+      "control_labels": ["use"],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills use acts on selection and both close controls support Basic Info recovery",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [568, 0, 281, 184]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["The source-visible use control acts on the currently selected Japanese skill and exposes settled feedback."]
+      },
+      "gesture": "keyboard selection followed by a trusted pointer click on use",
+      "expected_region_changes": [
+        {
+          "component_id": "skills-use",
+          "rule": "use owns settled pressed feedback and reports the selected Japanese skill"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["skills-title-icon", "skills-title-text", "all non-selected skill rows"],
+          "rule": "using the selected skill does not change title or selection ownership"
+        }
+      ]
+    },
+    {
+      "id": "skills-close-and-reopen-v001",
+      "window_id": "skills",
+      "control_labels": ["スキルリストを閉じる", "close"],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills use acts on selection and both close controls support Basic Info recovery",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [568, 0, 281, 184]
+      },
+      "gesture": "trusted pointer clicks close through each source-visible target and the Basic Info skill control reopens after each",
+      "expected_region_changes": [
+        {
+          "window_id": "skills",
+          "rule": "each close target removes Skills and Basic Info restores its exact 33-component destination"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["all skills runtime components"],
+          "rule": "each restored Skills window has the complete independent component inventory"
+        }
+      ]
     }
   ]
 }

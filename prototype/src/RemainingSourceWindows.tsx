@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { type KeyboardEvent, useState } from "react";
 
 import { SourceRaster, SourceWindow } from "./SourceWindow";
 
@@ -43,22 +43,39 @@ export function SkillsSourceWindow({ zIndex, onActivate, open, onClose }: Window
   const [upgraded, setUpgraded] = useState<boolean[]>(skillNames.map(() => false));
   const assetRoot = `${root}/skills`;
   const listOffset = Math.round(Math.max(0, (scroll - 34) / 66) * 144);
+  const pageTwoVisible = scroll > 67;
+  const setScrollPosition = (value: number) => {
+    setScroll(value);
+    if (value > 67 && selected < 4) setSelected(4);
+    if (value <= 67 && selected >= 4) setSelected(0);
+  };
+  const selectFromKeyboard = (event: KeyboardEvent<HTMLDivElement>) => {
+    let next = selected;
+    if (event.key === "ArrowDown") next = (selected + 1) % skillNames.length;
+    else if (event.key === "ArrowUp") next = (selected - 1 + skillNames.length) % skillNames.length;
+    else if (event.key === "Home") next = 0;
+    else if (event.key === "End") next = skillNames.length - 1;
+    else return;
+    event.preventDefault();
+    setSelected(next);
+    setScroll(next < 4 ? 34 : 100);
+  };
   return (
     <SourceWindow id="skills" title="スキルリスト" initialPosition={{ x: 568, y: 0 }} width={281} height={184} titleWidth={96} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} open={open} onClose={onClose}>
-      <div className="skills-source-viewport">
+      <div className="skills-source-viewport" role="listbox" aria-label="スキル" aria-activedescendant={`skill-option-${selected}`} tabIndex={0} onKeyDown={selectFromKeyboard}>
         <div className="skills-source-list" style={{ transform: `translateY(${-listOffset}px)` }}>
           {skillNames.map((name, row) => {
             const pageTwoRow = row - 4;
             const iconFile = row < 4 ? `${assetRoot}/components/icon-${row}` : `${assetRoot}/components/page-2-icon-${pageTwoRow}`;
             const copyFile = row < 4 ? `${assetRoot}/components/copy-${row}` : `${assetRoot}/components/page-2-copy-${pageTwoRow}`;
-            return <button key={name} className="skill-source-row" type="button" role="option" aria-label={`${name} Lv ${skillLevels[row]}`} aria-selected={selected === row} data-source-selected={row === 0 || row === 4 || row === 7} style={{ top: row * 36 }} onClick={() => setSelected(row)}>
+            return <button key={name} id={`skill-option-${row}`} className="skill-source-row" type="button" role="option" tabIndex={-1} disabled={pageTwoVisible !== (row >= 4)} aria-label={`${name} Lv ${skillLevels[row]}`} aria-selected={selected === row} data-source-selected={row === 0 || row === 4 || row === 7} style={{ top: row * 36 }} onClick={() => setSelected(row)}>
               <SourceRaster id={`skill-icon-${row}`} file={iconFile} style={{ left: 39, top: 2, width: 34, height: 34 }} />
               <SourceRaster id={`skill-copy-${row}`} file={copyFile} style={{ left: 102, top: 0, width: 141, height: 36 }} />
             </button>;
           })}
           {skillNames.map((name, row) => {
             const levelFile = row < 4 ? `${assetRoot}/components/level-${row}` : `${assetRoot}/components/page-2-level-${row - 4}`;
-            return <button key={name} type="button" className="skill-source-level" aria-label={`${name}をレベルアップ`} aria-pressed={upgraded[row]} style={{ left: 73, top: 2 + row * 36 }} onClick={() => { setUpgraded((values) => values.map((value, index) => index === row ? !value : value)); setStatus(`${name} Lv+1`); }}>
+            return <button key={name} type="button" className="skill-source-level" disabled={pageTwoVisible !== (row >= 4)} aria-label={`${name}をレベルアップ`} aria-pressed={upgraded[row]} style={{ left: 73, top: 2 + row * 36 }} onClick={() => { setUpgraded((values) => values.map((value, index) => index === row ? !value : value)); setStatus(`${name} Lv+1`); }}>
               <SourceRaster id={`skill-level-${row}`} file={levelFile} style={{ inset: 0 }} />
             </button>;
           })}
@@ -66,10 +83,10 @@ export function SkillsSourceWindow({ zIndex, onActivate, open, onClose }: Window
       </div>
       <SourceRaster id="skills-scrollbar-track" file={`${assetRoot}/components/scrollbar-track`} style={{ left: 263, top: 18, width: 17, height: 144 }} />
       <SourceRaster id="skills-scrollbar-thumb" className="skills-source-thumb" file={`${assetRoot}/components/scrollbar-thumb`} style={{ left: 263, top: 28 + Math.round(scroll * 0.79), width: 17, height: 38 }} />
-      <input className="skills-source-scroll" type="range" aria-label="スキルスクロール" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />
+      <input className="skills-source-scroll" type="range" aria-label="スキルスクロール" data-visual-component="skills-scrollbar-thumb" min="0" max="100" step="1" value={scroll} onInput={(event) => setScrollPosition(event.currentTarget.valueAsNumber)} onChange={(event) => setScrollPosition(event.currentTarget.valueAsNumber)} />
       <SourceRaster id="skills-points" file={`${assetRoot}/components/points`} style={{ left: 2, top: 163, width: 173, height: 20 }} />
       <button type="button" className="skills-source-action skills-source-action--use" aria-label="use" aria-pressed={status.startsWith("use")} onClick={() => setStatus(`use ${skillNames[selected]}`)}><SourceRaster id="skills-use" file={`${assetRoot}/components/use`} style={{ inset: 0 }} /></button>
-      <button type="button" className="skills-source-action skills-source-action--close" aria-label="close" aria-pressed={status === "close"} onClick={() => setStatus("close")}><SourceRaster id="skills-close-action" file={`${assetRoot}/components/close-action`} style={{ inset: 0 }} /></button>
+      <button type="button" className="skills-source-action skills-source-action--close" aria-label="close" data-close-window="skills" onClick={() => { setStatus("close"); onClose?.(); }}><SourceRaster id="skills-close-action" file={`${assetRoot}/components/close-action`} style={{ inset: 0 }} /></button>
       <SourceRaster id="skills-resize" file={`${assetRoot}/components/resize-grip`} style={{ left: 263, top: 162, width: 17, height: 22 }} />
       <output className="sr-only" role="status">{status}</output>
     </SourceWindow>

@@ -158,6 +158,27 @@ through idle, selected, and cleared states and activates the generated
 `ルアフ` level control. This prevents visual focus and interaction state from
 silently disagreeing.
 
+The later semantic replay initially found 20 enabled controls and zero
+contracts. After locking the complete family tests, it still failed two controls:
+`エンジェラス Lv 5` and its level button. They were the first fully clipped
+page-two controls. The generic probe clicked their DOM boxes without navigating
+the list and observed no change; neighboring clipped controls had appeared to
+change only because their hit coordinates overlapped visible pixels. This proves
+that DOM enumeration plus a click is not a user journey.
+
+Skills now owns one focusable Japanese listbox with wrapped ArrowUp/ArrowDown,
+Home, and End traversal. Scroll state exposes exactly four enabled rows and four
+enabled level targets on the settled page and moves selection to a visible row;
+the locked dynamic-family journey navigates both pages and clicks all eight rows
+and all eight level buttons. The real scrollbar test samples nine pointer
+positions, one visual thumb, exact y=28/y=107 endpoints, more than four clipped
+list states, and byte-identical title/footer regions. The bottom `close` action
+now closes the window instead of emitting a fake status, and both close targets
+are recovered through the Basic Info `skill` control with the exact 33-component
+inventory. The isolated replay now reports 12 currently reachable controls,
+12 contracted, 12 contract-passed, zero uncontracted, and no correction
+failures; the complete two-page journey remains locked in browser evidence.
+
 ## Equipment hit ownership tracer
 
 The Equipment resting screenshot was visually close, but its left-row assets
