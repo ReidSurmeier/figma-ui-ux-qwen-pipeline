@@ -1,0 +1,42 @@
+[TASK]
+Create the missing second scroll page for the exact Japanese スキルリスト window. Replace only the four visible skill rows with four coherent Acolyte skills while preserving the complete source UI style and all non-list geometry.
+
+[REFERENCE ROLE]
+Reference image 1 is the immutable original source crop and defines the authentic Japanese RPG pixel art, row geometry, icon scale, typography, selection, level controls, scrollbar, footer, and chrome. Reference image 2 is the authoritative cleaned 281 by 184 runtime assembly and fixes the exact output canvas. Edit only the four-row skill-list viewport in reference image 2.
+
+[PRESERVATION INVARIANTS]
+- Keep the 281 by 184 window canvas, title bar, Japanese title, close button, outer stepped corners, list viewport bounds, scrollbar, skill-points footer, use and close buttons, resize grip, palette, one-pixel rules, and all coordinates unchanged from reference image 2.
+- Every source-scale pixel outside x=2..262 and y=18..161 is immutable.
+- Keep exactly four 36-pixel-high rows with the same icon column, level-up control column, text column, separators, baseline rhythm, and selected-row language as reference image 1.
+
+[CANVAS AND LAYOUT]
+- Return only the same 281 by 184 Skills window at exactly 1124 by 736 pixels, four times source scale.
+- Do not add margin, magenta donor background, neighboring windows, a second scrollbar, or surrounding desktop pixels.
+
+[REGION EDITS]
+- REGION: second skill-list page
+  CHANGE: Replace the four current skill rows with four new source-styled rows in this order: エンジェラス Lv: 5, ブレッシング Lv: 10, 速度増加 Lv: 10, ルアフ Lv: 1. Give each row one distinct 34 by 34 Acolyte skill icon and one source-matched level-up control. Keep the row backgrounds and selected/unselected hierarchy coherent with the reference.
+  PRESERVE: x=2..262 viewport bounds; four rows at y=18,54,90,126; icon, level, and copy column anchors; scrollbar and footer outside the viewport
+
+[EXACT COPY]
+- row 1 skill name: "エンジェラス"
+- row 2 skill name: "ブレッシング"
+- row 3 skill name: "速度増加"
+- row 4 skill name: "ルアフ"
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese late-1990s desktop-game raster UI
+- Hard source-scale pixel art, pale blue-grey window chrome, compact bitmap Japanese text, and 34-pixel icon cells
+
+[ASSET RULES]
+- Exactly four skill rows, four skill icons, four level-up controls, and the four exact Japanese names.
+- The generated list must remain separable into independent 36-pixel row assets after point reduction.
+
+[NEGATIVE CONSTRAINTS]
+- No English skill names, gibberish Japanese, pseudo-text, duplicate rows, extra icons, extra scrollbar, modern cards, smooth gradients, antialiased redesign, rounded contemporary controls, donor magenta, crop, or global redraw.
+- Do not modify the title, footer, buttons, scrollbar, resize grip, or window boundary.
+
+[QUALITY GATE]
+- At 281 by 184 all four exact Japanese names are legible and remain within their source columns.
+- Each row retains the source 36-pixel height and no icon or label overlaps the scrollbar, title, adjacent row, or footer.
+- Only the four row donors will be eligible for deterministic assembly; all non-list generated pixels will be rejected.

@@ -118,3 +118,42 @@ card scrolling moves the visible Japanese copy rather than only its thumb
 It fails because the copy viewport is byte-identical at scroll 0 and 100. This
 is the first correct public-interface seam for replacing the false scrollbar
 oracle. UI implementation remains unchanged while this diagnosis is reviewed.
+
+## Skills scroll tracer and extraction correction
+
+The Skills window reproduced the same false-oracle class as Card: changing the
+range input moved only `.skills-source-thumb`; the four visible skill rows stayed
+byte-identical. The replacement public-interface test captures the exact list,
+title, and footer rectangles. It requires list movement while the title and
+footer remain invariant.
+
+The first Qwen second-page assembly then exposed a second independent failure.
+The generation brief requested four 36-pixel rows, but the accepted Qwen output
+contained unequal raster bands at source-scale y/height values `18/29`, `47/36`,
+`83/28`, and `115/31`. The old assembler assumed ideal y values
+`18,54,90,126`, which imported adjacent separators and clipped later Japanese
+glyphs. A whole-window movement test could not detect this.
+
+The corrected method now:
+
+1. records the measured candidate rectangle for every accepted component;
+2. normalizes each measured Qwen donor to the runtime's 36-pixel row only after
+   extraction;
+3. stores magnified exact-copy evidence for every Japanese label;
+4. records rejected candidates and the component-specific rejection reason;
+5. fails closed if provenance is only an unsubstantiated `"pass"`; and
+6. retains only the bounded Qwen row donors, rejecting generated chrome,
+   scrollbar, footer, and outer-window pixels.
+
+The fourth row required a focused Alibaba `qwen/qwen-image-3-pro` repair pass.
+The selected output supplies only its icon, level control, and exact `ルアフ`
+copy; the source-locked title, scrollbar, footer, and window geometry remain
+independent runtime components.
+
+The selected-row color is also generated evidence, not runtime truth. Both
+page-two rows whose donors contain baked cyan or blue focus are explicitly
+cleared when `aria-selected=false`; the icon and level-control assets retain
+their original color. The executable contract measures source-blue pixels
+through idle, selected, and cleared states and activates the generated
+`ルアフ` level control. This prevents visual focus and interaction state from
+silently disagreeing.

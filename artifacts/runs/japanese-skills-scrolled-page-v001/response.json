@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "bytes": 661185,
+      "media_type": "image/png",
+      "sha256": "48ca2c6cbbfaa99304491b14854a488cb2c45987acc6464168c7c2af597d3b8c"
+    },
+    {
+      "bytes": 685303,
+      "media_type": "image/png",
+      "sha256": "52d944ae98c0e95bd7cca2a98f8df30a95b9a26fdaa998c57d5d2fb154af1802"
+    }
+  ],
+  "request_id": "9a9ff770-2162-9774-8243-b815997d00ac",
+  "usage": {
+    "input_image_count": 2,
+    "input_image_type": "qima_input_1k",
+    "output_height": 736,
+    "output_image_count": 2,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1124
+  }
+}

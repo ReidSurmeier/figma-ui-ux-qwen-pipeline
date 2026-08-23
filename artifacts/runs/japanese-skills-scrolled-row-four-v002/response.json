@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "bytes": 815584,
+      "media_type": "image/png",
+      "sha256": "3acd62473deaf84c158021c66ad649973352e3d016dd08e6d324f2f2f83ad473"
+    },
+    {
+      "bytes": 726015,
+      "media_type": "image/png",
+      "sha256": "7501b94cc24144755d0517673c88e78f7fe7edd86a185a96539e72ae18112082"
+    },
+    {
+      "bytes": 703020,
+      "media_type": "image/png",
+      "sha256": "72b8410725440e695a8bb8aeb7496fd67464300f41d7ec0724ebd960d3c1b947"
+    },
+    {
+      "bytes": 696914,
+      "media_type": "image/png",
+      "sha256": "1c0fc6c156868e773c19ab34d4a57599b85903f8672b3b256a5c548219b4ffd8"
+    }
+  ],
+  "request_id": "1194fdcf-64aa-9114-810c-e4443c438b07",
+  "usage": {
+    "input_image_count": 2,
+    "input_image_type": "qima_input_1k",
+    "output_height": 736,
+    "output_image_count": 4,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1124
+  }
+}

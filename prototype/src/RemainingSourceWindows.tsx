@@ -32,22 +32,36 @@ export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
   );
 }
 
-const skillNames = ["ディバインプロテクション", "ワープポータル", "ニューマ", "ヒール"];
+const skillNames = ["ディバインプロテクション", "ワープポータル", "ニューマ", "ヒール", "エンジェラス", "ブレッシング", "速度増加", "ルアフ"];
+const skillLevels = [5, 4, 4, 9, 5, 10, 10, 1];
 export function SkillsSourceWindow({ zIndex, onActivate }: WindowProps) {
   const [selected, setSelected] = useState(0);
   const [scroll, setScroll] = useState(34);
   const [status, setStatus] = useState("");
-  const [upgraded, setUpgraded] = useState<boolean[]>([false, false, false, false]);
+  const [upgraded, setUpgraded] = useState<boolean[]>(skillNames.map(() => false));
   const assetRoot = `${root}/skills`;
+  const listOffset = Math.round(Math.max(0, (scroll - 34) / 66) * 144);
   return (
     <SourceWindow id="skills" title="スキルリスト" initialPosition={{ x: 568, y: 0 }} width={281} height={184} titleWidth={96} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false}>
-      {skillNames.map((name, row) => <button key={name} className="skill-source-row" type="button" role="option" aria-label={`${name} Lv ${row === 0 ? 5 : row === 3 ? 9 : 4}`} aria-selected={selected === row} data-source-selected={row === 0} style={{ top: 18 + row * 36 }} onClick={() => setSelected(row)}>
-        <SourceRaster id={`skill-icon-${row}`} file={`${assetRoot}/components/icon-${row}`} style={{ left: 39, top: 2, width: 34, height: 34 }} />
-        <SourceRaster id={`skill-copy-${row}`} file={`${assetRoot}/components/copy-${row}`} style={{ left: 102, top: 0, width: 141, height: 36 }} />
-      </button>)}
-      {skillNames.map((name, row) => <button key={name} type="button" className="skill-source-level" aria-label={`${name}をレベルアップ`} aria-pressed={upgraded[row]} style={{ left: 75, top: 20 + row * 36 }} onClick={() => { setUpgraded((values) => values.map((value, index) => index === row ? !value : value)); setStatus(`${name} Lv+1`); }}>
-        <SourceRaster id={`skill-level-${row}`} file={`${assetRoot}/components/level-${row}`} style={{ inset: 0 }} />
-      </button>)}
+      <div className="skills-source-viewport">
+        <div className="skills-source-list" style={{ transform: `translateY(${-listOffset}px)` }}>
+          {skillNames.map((name, row) => {
+            const pageTwoRow = row - 4;
+            const iconFile = row < 4 ? `${assetRoot}/components/icon-${row}` : `${assetRoot}/components/page-2-icon-${pageTwoRow}`;
+            const copyFile = row < 4 ? `${assetRoot}/components/copy-${row}` : `${assetRoot}/components/page-2-copy-${pageTwoRow}`;
+            return <button key={name} className="skill-source-row" type="button" role="option" aria-label={`${name} Lv ${skillLevels[row]}`} aria-selected={selected === row} data-source-selected={row === 0 || row === 4 || row === 7} style={{ top: row * 36 }} onClick={() => setSelected(row)}>
+              <SourceRaster id={`skill-icon-${row}`} file={iconFile} style={{ left: 39, top: 2, width: 34, height: 34 }} />
+              <SourceRaster id={`skill-copy-${row}`} file={copyFile} style={{ left: 102, top: 0, width: 141, height: 36 }} />
+            </button>;
+          })}
+          {skillNames.map((name, row) => {
+            const levelFile = row < 4 ? `${assetRoot}/components/level-${row}` : `${assetRoot}/components/page-2-level-${row - 4}`;
+            return <button key={name} type="button" className="skill-source-level" aria-label={`${name}をレベルアップ`} aria-pressed={upgraded[row]} style={{ left: 73, top: 2 + row * 36 }} onClick={() => { setUpgraded((values) => values.map((value, index) => index === row ? !value : value)); setStatus(`${name} Lv+1`); }}>
+              <SourceRaster id={`skill-level-${row}`} file={levelFile} style={{ inset: 0 }} />
+            </button>;
+          })}
+        </div>
+      </div>
       <SourceRaster id="skills-scrollbar-track" file={`${assetRoot}/components/scrollbar-track`} style={{ left: 263, top: 18, width: 17, height: 144 }} />
       <SourceRaster id="skills-scrollbar-thumb" className="skills-source-thumb" file={`${assetRoot}/components/scrollbar-thumb`} style={{ left: 263, top: 28 + Math.round(scroll * 0.79), width: 17, height: 38 }} />
       <input className="skills-source-scroll" type="range" aria-label="スキルスクロール" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />

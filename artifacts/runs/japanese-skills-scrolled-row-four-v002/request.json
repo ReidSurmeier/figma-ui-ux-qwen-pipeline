@@ -1,0 +1,29 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nRepair only the fourth visible row of the exact Japanese \u30b9\u30ad\u30eb\u30ea\u30b9\u30c8 window. Render the complete exact label \u30eb\u30a2\u30d5 and Lv: 1 wholly inside its 36-pixel row, with no glyph crossing or clipping at either row boundary.\n\n[REFERENCE ROLE]\nReference image 1 is the strongest Qwen second-page candidate and defines the complete current 281 by 184 window. Reference image 2 is the immutable original source and defines authentic Japanese RPG pixel typography, row padding, line weight, chrome, icons, and level-up controls. Edit only the fourth skill row in reference image 1.\n\n[PRESERVATION INVARIANTS]\n- Keep the 281 by 184 source canvas and every pixel-scale object outside x=41..244 and y=126..161 visually unchanged.\n- Keep the title, scrollbar, footer, first three skill rows, row separators, selected blue fill, and outer chrome unchanged.\n- The fourth-row name and level must have at least one clear source pixel above and below every glyph; no Japanese stroke may be cropped by y=126 or y=161.\n\n[CANVAS AND LAYOUT]\n- Return exactly 1124 by 736 pixels, four times the 281 by 184 source window.\n- Do not add margin, neighboring UI, donor background, or a second window.\n\n[REGION EDITS]\n- REGION: fourth skill row\n  CHANGE: Regenerate the complete fourth row at source x=41..244 and y=126..161. It must contain one coherent green Acolyte skill icon, one source-matched level-up control, and exact Japanese copy \u30eb\u30a2\u30d5 above Lv: 1. Move or redraw the copy as needed so every glyph is fully visible inside this row.\n  PRESERVE: 36-pixel row height; selected blue background; source icon, level-control, and copy column anchors; hard pixel-scale edges\n\n[EXACT COPY]\n- fourth-row skill name: \"\u30eb\u30a2\u30d5\"\n- fourth-row level: \"Lv: 1\"\n\n[STYLE SYSTEM]\n- Exact source-matched Japanese late-1990s desktop-game raster UI\n- Compact bitmap Japanese text, hard aliased source pixels, one-pixel rules, and no contemporary redesign\n\n[ASSET RULES]\n- Exactly one 36-pixel fourth-row donor with one icon, one level-up control, \u30eb\u30a2\u30d5, and Lv: 1.\n- All fourth-row content must remain independently crop-safe after point reduction to 281 by 184.\n\n[NEGATIVE CONSTRAINTS]\n- No \u30eb\u30d5, pseudo-Japanese, missing \u30a2, clipped glyphs, strokes touching the top or bottom crop boundary, duplicate text, extra icon, extra row, altered scrollbar, altered footer, modern font, antialiasing, rounded card, or global redraw.\n\n[QUALITY GATE]\n- At source scale the exact string \u30eb\u30a2\u30d5 is legible as three complete Japanese glyphs.\n- The fourth-row name and Lv: 1 have at least one uninterrupted clear pixel row above and below their full glyph bounds.\n- The fourth row can be cropped at source y=126..161 without importing content from row three or the footer."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 4,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083422,
+    "size": "1124*736",
+    "watermark": false
+  }
+}

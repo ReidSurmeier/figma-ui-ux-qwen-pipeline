@@ -176,6 +176,52 @@ describe("human-correction replay after deterministic verification", () => {
     expect(new Set(rowHashes).size).toBe(5);
   });
 
+  it("fails closed on Qwen Skills copy without component-level Japanese and boundary evidence", async () => {
+    const { access, readFile } = await import("node:fs/promises");
+    const { resolve } = await import("node:path");
+    const selection = JSON.parse(await readFile(resolve("..", "artifacts/runs/japanese-skills-scrolled-page-v001-selection.json"), "utf8")) as {
+      model: string;
+      provider: string;
+      component_sources: Array<{ output: string; candidate: string; source_scale_region: number[] }>;
+      exact_copy_review: Record<string, {
+        status: string;
+        evidence: string;
+        boundary_clearance: { top: number; bottom: number };
+      }>;
+      rejected_components: Array<{ candidate: string; component: string; reason: string }>;
+    };
+
+    expect(selection.model).toBe("qwen/qwen-image-3-pro");
+    expect(selection.provider).toBe("alibaba");
+    expect(selection.component_sources).toHaveLength(12);
+    expect(selection.component_sources.map(({ output }) => output)).toEqual(expect.arrayContaining(
+      ["icon", "level", "copy"].flatMap((kind) => [0, 1, 2, 3].map((row) => `page-2-${kind}-${row}`)),
+    ));
+    expect(selection.component_sources
+      .filter(({ output }) => output.startsWith("page-2-copy-"))
+      .map(({ source_scale_region }) => source_scale_region)).toEqual([
+        [104, 18, 141, 29],
+        [104, 47, 141, 36],
+        [104, 83, 141, 28],
+        [104, 115, 141, 31],
+      ]);
+    expect(selection.component_sources.some(({ source_scale_region }) => source_scale_region[3] !== 36)).toBe(true);
+
+    for (const review of Object.values(selection.exact_copy_review)) {
+      expect(review.status).toBe("pass");
+      expect(review.boundary_clearance.top).toBeGreaterThanOrEqual(1);
+      expect(review.boundary_clearance.bottom).toBeGreaterThanOrEqual(1);
+      await expect(access(resolve("..", review.evidence))).resolves.toBeUndefined();
+    }
+
+    expect(selection.rejected_components).toEqual(expect.arrayContaining([
+      expect.objectContaining({
+        candidate: "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png",
+        component: "page-2-copy-3",
+      }),
+    ]));
+  });
+
   it("requires shared source-window minimize motion to expose more than four geometry steps", async () => {
     const { readFile } = await import("node:fs/promises");
     const { resolve } = await import("node:path");

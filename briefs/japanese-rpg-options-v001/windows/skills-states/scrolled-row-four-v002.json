@@ -1,0 +1,54 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "objective": "Repair only the fourth visible row of the exact Japanese スキルリスト window. Render the complete exact label ルアフ and Lv: 1 wholly inside its 36-pixel row, with no glyph crossing or clipping at either row boundary.",
+  "reference_role": "Reference image 1 is the strongest Qwen second-page candidate and defines the complete current 281 by 184 window. Reference image 2 is the immutable original source and defines authentic Japanese RPG pixel typography, row padding, line weight, chrome, icons, and level-up controls. Edit only the fourth skill row in reference image 1.",
+  "preservation_invariants": [
+    "Keep the 281 by 184 source canvas and every pixel-scale object outside x=41..244 and y=126..161 visually unchanged.",
+    "Keep the title, scrollbar, footer, first three skill rows, row separators, selected blue fill, and outer chrome unchanged.",
+    "The fourth-row name and level must have at least one clear source pixel above and below every glyph; no Japanese stroke may be cropped by y=126 or y=161."
+  ],
+  "canvas": [
+    "Return exactly 1124 by 736 pixels, four times the 281 by 184 source window.",
+    "Do not add margin, neighboring UI, donor background, or a second window."
+  ],
+  "regions": [
+    {
+      "name": "fourth skill row",
+      "change": "Regenerate the complete fourth row at source x=41..244 and y=126..161. It must contain one coherent green Acolyte skill icon, one source-matched level-up control, and exact Japanese copy ルアフ above Lv: 1. Move or redraw the copy as needed so every glyph is fully visible inside this row.",
+      "preserve": [
+        "36-pixel row height",
+        "selected blue background",
+        "source icon, level-control, and copy column anchors",
+        "hard pixel-scale edges"
+      ]
+    }
+  ],
+  "exact_copy": [
+    { "region": "fourth-row skill name", "text": "ルアフ" },
+    { "region": "fourth-row level", "text": "Lv: 1" }
+  ],
+  "style": [
+    "Exact source-matched Japanese late-1990s desktop-game raster UI",
+    "Compact bitmap Japanese text, hard aliased source pixels, one-pixel rules, and no contemporary redesign"
+  ],
+  "asset_rules": [
+    "Exactly one 36-pixel fourth-row donor with one icon, one level-up control, ルアフ, and Lv: 1.",
+    "All fourth-row content must remain independently crop-safe after point reduction to 281 by 184."
+  ],
+  "negative_constraints": [
+    "No ルフ, pseudo-Japanese, missing ア, clipped glyphs, strokes touching the top or bottom crop boundary, duplicate text, extra icon, extra row, altered scrollbar, altered footer, modern font, antialiasing, rounded card, or global redraw."
+  ],
+  "quality_checks": [
+    "At source scale the exact string ルアフ is legible as three complete Japanese glyphs.",
+    "The fourth-row name and Lv: 1 have at least one uninterrupted clear pixel row above and below their full glyph bounds.",
+    "The fourth row can be cropped at source y=126..161 without importing content from row three or the footer."
+  ],
+  "output": {
+    "size": "1124*736",
+    "aspect_ratio": "source",
+    "resolution": "1K",
+    "count": 4,
+    "seed": 22083422
+  }
+}

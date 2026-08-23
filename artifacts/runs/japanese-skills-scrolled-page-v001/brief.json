@@ -1,0 +1,69 @@
+{
+  "asset_rules": [
+    "Exactly four skill rows, four skill icons, four level-up controls, and the four exact Japanese names.",
+    "The generated list must remain separable into independent 36-pixel row assets after point reduction."
+  ],
+  "canvas": [
+    "Return only the same 281 by 184 Skills window at exactly 1124 by 736 pixels, four times source scale.",
+    "Do not add margin, magenta donor background, neighboring windows, a second scrollbar, or surrounding desktop pixels."
+  ],
+  "exact_copy": [
+    {
+      "region": "row 1 skill name",
+      "text": "\u30a8\u30f3\u30b8\u30a7\u30e9\u30b9"
+    },
+    {
+      "region": "row 2 skill name",
+      "text": "\u30d6\u30ec\u30c3\u30b7\u30f3\u30b0"
+    },
+    {
+      "region": "row 3 skill name",
+      "text": "\u901f\u5ea6\u5897\u52a0"
+    },
+    {
+      "region": "row 4 skill name",
+      "text": "\u30eb\u30a2\u30d5"
+    }
+  ],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No English skill names, gibberish Japanese, pseudo-text, duplicate rows, extra icons, extra scrollbar, modern cards, smooth gradients, antialiased redesign, rounded contemporary controls, donor magenta, crop, or global redraw.",
+    "Do not modify the title, footer, buttons, scrollbar, resize grip, or window boundary."
+  ],
+  "objective": "Create the missing second scroll page for the exact Japanese \u30b9\u30ad\u30eb\u30ea\u30b9\u30c8 window. Replace only the four visible skill rows with four coherent Acolyte skills while preserving the complete source UI style and all non-list geometry.",
+  "output": {
+    "aspect_ratio": "source",
+    "count": 2,
+    "resolution": "1K",
+    "seed": 22083421,
+    "size": "1124*736"
+  },
+  "preservation_invariants": [
+    "Keep the 281 by 184 window canvas, title bar, Japanese title, close button, outer stepped corners, list viewport bounds, scrollbar, skill-points footer, use and close buttons, resize grip, palette, one-pixel rules, and all coordinates unchanged from reference image 2.",
+    "Every source-scale pixel outside x=2..262 and y=18..161 is immutable.",
+    "Keep exactly four 36-pixel-high rows with the same icon column, level-up control column, text column, separators, baseline rhythm, and selected-row language as reference image 1."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "At 281 by 184 all four exact Japanese names are legible and remain within their source columns.",
+    "Each row retains the source 36-pixel height and no icon or label overlaps the scrollbar, title, adjacent row, or footer.",
+    "Only the four row donors will be eligible for deterministic assembly; all non-list generated pixels will be rejected."
+  ],
+  "reference_role": "Reference image 1 is the immutable original source crop and defines the authentic Japanese RPG pixel art, row geometry, icon scale, typography, selection, level controls, scrollbar, footer, and chrome. Reference image 2 is the authoritative cleaned 281 by 184 runtime assembly and fixes the exact output canvas. Edit only the four-row skill-list viewport in reference image 2.",
+  "regions": [
+    {
+      "change": "Replace the four current skill rows with four new source-styled rows in this order: \u30a8\u30f3\u30b8\u30a7\u30e9\u30b9 Lv: 5, \u30d6\u30ec\u30c3\u30b7\u30f3\u30b0 Lv: 10, \u901f\u5ea6\u5897\u52a0 Lv: 10, \u30eb\u30a2\u30d5 Lv: 1. Give each row one distinct 34 by 34 Acolyte skill icon and one source-matched level-up control. Keep the row backgrounds and selected/unselected hierarchy coherent with the reference.",
+      "name": "second skill-list page",
+      "preserve": [
+        "x=2..262 viewport bounds",
+        "four rows at y=18,54,90,126",
+        "icon, level, and copy column anchors",
+        "scrollbar and footer outside the viewport"
+      ]
+    }
+  ],
+  "style": [
+    "Exact source-matched Japanese late-1990s desktop-game raster UI",
+    "Hard source-scale pixel art, pale blue-grey window chrome, compact bitmap Japanese text, and 34-pixel icon cells"
+  ]
+}

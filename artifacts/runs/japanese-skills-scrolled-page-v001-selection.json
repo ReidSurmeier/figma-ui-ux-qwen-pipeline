@@ -1,0 +1,42 @@
+{
+  "schema_version": "2.0",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "generation_runs": [
+    "artifacts/runs/japanese-skills-scrolled-page-v001",
+    "artifacts/runs/japanese-skills-scrolled-row-four-v002"
+  ],
+  "source_authority": "benchmarks/japanese-rpg-options-v001/regions/skills/reference.png",
+  "assembly_authority": "artifacts/qa/skills/default-v004.png",
+  "accepted_region": [2, 18, 261, 144],
+  "component_sources": [
+    { "output": "page-2-icon-0", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [41, 18, 34, 29] },
+    { "output": "page-2-level-0", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [75, 18, 28, 29] },
+    { "output": "page-2-copy-0", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [104, 18, 141, 29] },
+    { "output": "page-2-icon-1", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [41, 47, 34, 36] },
+    { "output": "page-2-level-1", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [75, 47, 28, 36] },
+    { "output": "page-2-copy-1", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [104, 47, 141, 36] },
+    { "output": "page-2-icon-2", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [41, 83, 34, 28] },
+    { "output": "page-2-level-2", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [75, 83, 28, 28] },
+    { "output": "page-2-copy-2", "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "source_scale_region": [104, 83, 141, 28] },
+    { "output": "page-2-icon-3", "candidate": "artifacts/runs/japanese-skills-scrolled-row-four-v002/image-01.png", "source_scale_region": [41, 115, 34, 31] },
+    { "output": "page-2-level-3", "candidate": "artifacts/runs/japanese-skills-scrolled-row-four-v002/image-01.png", "source_scale_region": [75, 115, 28, 31] },
+    { "output": "page-2-copy-3", "candidate": "artifacts/runs/japanese-skills-scrolled-row-four-v002/image-01.png", "source_scale_region": [104, 115, 141, 31] }
+  ],
+  "exact_copy_review": {
+    "エンジェラス": { "status": "pass", "evidence": "artifacts/qa/skills/exact-copy-angelus-v001.png", "boundary_clearance": { "top": 2, "bottom": 2 } },
+    "ブレッシング": { "status": "pass", "evidence": "artifacts/qa/skills/exact-copy-blessing-v001.png", "boundary_clearance": { "top": 1, "bottom": 1 } },
+    "速度増加": { "status": "pass", "evidence": "artifacts/qa/skills/exact-copy-speed-v001.png", "boundary_clearance": { "top": 1, "bottom": 1 } },
+    "ルアフ": { "status": "pass", "evidence": "artifacts/qa/skills/exact-copy-ruwach-v002.png", "boundary_clearance": { "top": 2, "bottom": 2 } }
+  },
+  "rejected_components": [
+    { "candidate": "artifacts/runs/japanese-skills-scrolled-page-v001/image-01.png", "component": "page-2-copy-3", "reason": "The name crosses the fourth-row top boundary and reads as clipped at source scale." },
+    { "candidate": "artifacts/runs/japanese-skills-scrolled-row-four-v002/image-03.png", "component": "page-2-copy-3", "reason": "The generated name contains a duplicated ア glyph." }
+  ],
+  "rejected_generated_regions": [
+    "title and window buttons",
+    "scrollbar",
+    "footer controls and resize grip",
+    "outer chrome"
+  ]
+}

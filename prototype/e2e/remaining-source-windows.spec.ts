@@ -194,6 +194,57 @@ test("skills scrollbar moves its visible source thumb through more than four pos
   expect(positions.at(-1)).toBe("107px");
 });
 
+test("Skills scrolling moves the clipped list while preserving its title and footer", async ({ page }) => {
+  await page.goto("/");
+  const skills = page.getByRole("region", { name: "スキルリスト" });
+  const slider = skills.getByRole("slider", { name: "スキルスクロール" });
+  const bounds = await skills.boundingBox();
+  if (!bounds) throw new Error("Skills viewport geometry is unavailable");
+  const listClip = { x: bounds.x + 2, y: bounds.y + 18, width: 261, height: 144 };
+  const titleClip = { x: bounds.x, y: bounds.y, width: 281, height: 18 };
+  const footerClip = { x: bounds.x, y: bounds.y + 162, width: 281, height: 22 };
+
+  await slider.fill("0");
+  const listAtTop = await page.screenshot({ clip: listClip });
+  const titleAtTop = await page.screenshot({ clip: titleClip });
+  const footerAtTop = await page.screenshot({ clip: footerClip });
+  await slider.fill("100");
+  await page.waitForTimeout(40);
+  const listAtBottom = await page.screenshot({ clip: listClip });
+
+  expect(listAtBottom.equals(listAtTop), "the Skills thumb moved while its visible list stayed frozen").toBe(false);
+  expect((await page.screenshot({ clip: titleClip })).equals(titleAtTop), "Skills content entered or changed the title region").toBe(true);
+  expect((await page.screenshot({ clip: footerClip })).equals(footerAtTop), "Skills content entered or changed the footer region").toBe(true);
+});
+
+test("generated Skills rows clear baked focus and remain fully interactive", async ({ page }) => {
+  const evidence = mkdtempSync(join(tmpdir(), "skills-page-two-state-"));
+  try {
+    await page.goto("/");
+    const skills = page.getByRole("region", { name: "スキルリスト" });
+    await skills.getByRole("slider", { name: "スキルスクロール" }).fill("100");
+    const angelus = skills.getByRole("option", { name: /エンジェラス/ });
+    const ruwach = skills.getByRole("option", { name: /ルアフ/ });
+    const idlePath = join(evidence, "ruwach-idle.png");
+    const selectedPath = join(evidence, "ruwach-selected.png");
+    const clearedPath = join(evidence, "ruwach-cleared.png");
+
+    await ruwach.screenshot({ path: idlePath });
+    await ruwach.click();
+    await ruwach.screenshot({ path: selectedPath });
+    expect(selectedBluePixelCount(selectedPath)).toBeGreaterThan(selectedBluePixelCount(idlePath) + 800);
+    await expect(skills.locator('[role="option"][aria-selected="true"]')).toHaveCount(1);
+
+    await angelus.click();
+    await ruwach.screenshot({ path: clearedPath });
+    expect(selectedBluePixelCount(clearedPath)).toBeLessThan(selectedBluePixelCount(selectedPath) - 800);
+    await skills.getByRole("button", { name: "ルアフをレベルアップ" }).click();
+    await expect(skills.getByRole("status")).toContainText("ルアフ Lv+1");
+  } finally {
+    rmSync(evidence, { recursive: true, force: true });
+  }
+});
+
 test("compact HP and SP remain source-faithful readouts rather than invisible sliders", async ({ page }) => {
   await page.goto("/");
   const compact = page.getByRole("region", { name: "簡易情報" });
