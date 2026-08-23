@@ -8,8 +8,8 @@ RUNTIME_SOURCE="$PROTOTYPE_DIR/src/RemainingSourceWindows.tsx"
 ASSEMBLY_SOURCE="$REPO_DIR/scripts/assemble_remaining_japanese_rpg_assets.sh"
 
 declare -A counts=(
-  [card]=14 [skills]=22 [equipment]=15 [chat]=14
-  [exchange]=24 [game-menu]=8 [party]=20 [quickbar]=7
+  [card]=14 [skills]=34 [equipment]=15 [chat]=14
+  [exchange]=24 [game-menu]=8 [party]=27 [quickbar]=7
   [compact-info]=7 [bottom-bar]=8 [notification]=7
 )
 declare -A dimensions=(
@@ -24,8 +24,10 @@ rg -Fq 'japanese-status-derived-stats-v004/image-01.png' "$ASSEMBLY_SOURCE"
 
 for name in "${!counts[@]}"; do
   root="$PROTOTYPE_DIR/public/assets/japanese-rpg-v001/$name"
-  [[ "$(identify -format '%wx%h' "$root/clean-plate.png")" == "${dimensions[$name]}" ]]
-  [[ "$(find "$root/components" -maxdepth 1 -name '*.png' | wc -l)" == "${counts[$name]}" ]]
+  actual_dimensions=$(identify -format '%wx%h' "$root/clean-plate.png")
+  [[ "$actual_dimensions" == "${dimensions[$name]}" ]] || { printf 'remaining-window-contract: FAIL %s plate is %s, expected %s\n' "$name" "$actual_dimensions" "${dimensions[$name]}" >&2; exit 1; }
+  actual_count=$(find "$root/components" -maxdepth 1 -name '*.png' | wc -l)
+  [[ "$actual_count" == "${counts[$name]}" ]] || { printf 'remaining-window-contract: FAIL %s has %s component assets, expected %s\n' "$name" "$actual_count" "${counts[$name]}" >&2; exit 1; }
   pink="$(convert "$root/clean-plate.png" -alpha set -fx '(a>0.1&&r>0.35&&b>0.35&&g<0.48&&(r-g)>0.12&&(b-g)>0.12)?1:0' -format '%[fx:mean*w*h]' info:)"
   awk -v count="$pink" 'BEGIN { exit !(count < 0.5) }'
   [[ "$(convert "$root/clean-plate.png" -alpha extract -crop 1x1+0+0 -format '%[fx:mean]' info:)" == "0" ]]
@@ -62,4 +64,4 @@ for relative in "${!transparent_bottom_rows[@]}"; do
   awk -v value="$alpha" 'BEGIN { exit !(value < 0.001) }'
 done
 
-printf 'remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams\n'
+printf 'remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams\n'

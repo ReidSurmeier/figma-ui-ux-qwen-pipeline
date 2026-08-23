@@ -24,6 +24,18 @@ function darkGlyphMaskSignature(image: Buffer) {
   ], { input: image, encoding: "utf8" }).trim();
 }
 
+function sourceGlyphMaskSignature(path: string, crop: string) {
+  return execFileSync("convert", [
+    path,
+    "-crop", crop,
+    "+repage",
+    "-alpha", "off",
+    "-fx", "(r<0.4&&g<0.55&&b<0.72)?1:0",
+    "-format", "%#",
+    "info:",
+  ], { encoding: "utf8" }).trim();
+}
+
 function normalizedPixelDifference(first: string, second: string) {
   return Number(execFileSync("convert", [
     first,
@@ -476,20 +488,23 @@ test("Party member selection can clear and moves only the source-local indicator
   const firstLabel = { x: bounds.x + 21, y: bounds.y + 19, width: 136, height: 19 };
   const secondIndicator = { x: bounds.x + 3, y: bounds.y + 38, width: 18, height: 19 };
   const secondLabel = { x: bounds.x + 21, y: bounds.y + 38, width: 136, height: 19 };
+  const partyAssets = join(process.cwd(), "public/assets/japanese-rpg-v001/party/components");
+  const firstSourceGlyphs = sourceGlyphMaskSignature(join(partyAssets, "member-0.png"), "136x19+18+0");
+  const secondSourceGlyphs = sourceGlyphMaskSignature(join(partyAssets, "member-1.png"), "136x19+18+0");
 
   const firstIndicatorSelected = await page.screenshot({ clip: firstIndicator });
-  const firstLabelBefore = await page.screenshot({ clip: firstLabel });
+  await expect.poll(async () => darkGlyphMaskSignature(await page.screenshot({ clip: firstLabel }))).toBe(firstSourceGlyphs);
   await first.click();
   const firstIndicatorCleared = await page.screenshot({ clip: firstIndicator });
   expect(firstIndicatorCleared.equals(firstIndicatorSelected), "the source check indicator did not clear").toBe(false);
-  expect(darkGlyphMaskSignature(await page.screenshot({ clip: firstLabel })), "clearing the indicator altered the member glyph geometry").toBe(darkGlyphMaskSignature(firstLabelBefore));
+  expect(darkGlyphMaskSignature(await page.screenshot({ clip: firstLabel })), "clearing the indicator altered the member glyph geometry").toBe(firstSourceGlyphs);
   await expect(party.locator('[role="option"][aria-selected="true"]')).toHaveCount(0);
 
   const secondIndicatorBefore = await page.screenshot({ clip: secondIndicator });
-  const secondLabelBefore = await page.screenshot({ clip: secondLabel });
+  await expect.poll(async () => darkGlyphMaskSignature(await page.screenshot({ clip: secondLabel }))).toBe(secondSourceGlyphs);
   await second.click();
   expect((await page.screenshot({ clip: secondIndicator })).equals(secondIndicatorBefore), "Sebas received no visible selection indicator").toBe(false);
-  expect(darkGlyphMaskSignature(await page.screenshot({ clip: secondLabel })), "selecting Sebas altered the member glyph geometry").toBe(darkGlyphMaskSignature(secondLabelBefore));
+  expect(darkGlyphMaskSignature(await page.screenshot({ clip: secondLabel })), "selecting Sebas altered the member glyph geometry").toBe(secondSourceGlyphs);
   expect((await page.screenshot({ clip: firstIndicator })).equals(firstIndicatorCleared), "selecting Sebas reintroduced or altered the cleared first indicator").toBe(true);
   await expect(second).toHaveAttribute("aria-selected", "true");
   await expect(party.locator('[role="option"][aria-selected="true"]')).toHaveCount(1);

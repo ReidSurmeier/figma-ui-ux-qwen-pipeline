@@ -62,9 +62,10 @@ independent exact-source components.
   canonical state frames instead of a single unchanged review clone. Options
   additionally has a live outer-boundary donor-magenta gate.
 
-## Verification
+## Historical verification (invalidated)
 
-The final run passed:
+This earlier final-run claim predates the false-verification diagnosis and must
+not be used for promotion:
 
 - 22 unit tests;
 - production TypeScript/Vite build;
@@ -74,12 +75,15 @@ The final run passed:
 - full desktop source-relative masked MAE `0.0405295`, plus 11 focused window gates;
 - live Figma audits for Options, Basic Info, Status, and the complete desktop;
 - complete Figma/runtime screenshot MAE `0.00639723`;
-- correction replay of all 17 learned prompts for all 15 windows.
+- a correction replay that claimed all 17 learned prompts for all 15 windows.
 
-Run the same promotion sequence with:
+The replacement audit sequence is:
 
 ```bash
 npm --prefix prototype run test:all:live
-npm --prefix prototype run qa:replay
+CORRECTION_MATRIX_RUN_ROOT=/tmp/japanese-rpg-correction-audit npm --prefix prototype run qa:replay
 npm --prefix prototype test
 ```
+
+Only omit `CORRECTION_MATRIX_RUN_ROOT` for an intentional canonical replay after
+the isolated run completes and its failures have been reviewed.

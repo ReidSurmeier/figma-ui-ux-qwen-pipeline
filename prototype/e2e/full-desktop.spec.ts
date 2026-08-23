@@ -152,54 +152,41 @@ test("window cleanup preserves the source six-pixel stepped corner silhouette", 
   }
 });
 
-test("the enabled control inventory contains no settled dead buttons", async ({ page }) => {
-  test.setTimeout(120_000);
-  await page.goto("/");
-
-  const descriptors = await page.locator("[data-window-id]").evaluateAll((windows) => windows.flatMap((window) => (
-    [...window.querySelectorAll<HTMLButtonElement>("button:not(:disabled)")].map((button, index) => ({
-      windowId: (window as HTMLElement).dataset.windowId!,
-      index,
-      name: button.getAttribute("aria-label") || button.innerText.trim().replace(/\s+/g, " ").slice(0, 50),
-      selected: button.getAttribute("aria-selected") === "true" || button.getAttribute("aria-pressed") === "true",
-    }))
-  )));
-
-  const dead: Array<{ windowId: string; name: string }> = [];
-  for (const descriptor of descriptors.filter(({ selected }) => !selected)) {
-    await page.goto("/");
-    const window = page.locator(`[data-window-id="${descriptor.windowId}"]`);
-    const button = window.locator("button:not(:disabled)").nth(descriptor.index);
-    if (!await button.isVisible()) continue;
-    await window.evaluate((element) => element.dispatchEvent(new PointerEvent("pointerdown", { bubbles: true })));
-    await page.evaluate(() => (document.activeElement as HTMLElement | null)?.blur());
-    const before = await window.screenshot();
-    await button.click({ force: true });
-    await page.waitForTimeout(30);
-    if (!await window.count() || !await window.isVisible()) continue;
-    if (await button.getAttribute("aria-expanded") !== "true") {
-      await page.evaluate(() => (document.activeElement as HTMLElement | null)?.blur());
-    }
-    const after = await window.screenshot();
-    if (before.equals(after)) dead.push({ windowId: descriptor.windowId, name: descriptor.name });
-  }
-
-  expect(dead).toEqual([]);
-});
-
-test("every enabled button owns the center of its hit target after activation", async ({ page }) => {
+test("every visible enabled button owns the center of its clipped hit target after real activation", async ({ page }) => {
   await page.goto("/");
   const windowIds = await page.locator("[data-window-id]").evaluateAll((windows) => windows.map((window) => (window as HTMLElement).dataset.windowId!));
   const obstructions = [];
   for (const windowId of windowIds) {
     await page.goto("/");
     const window = page.locator(`[data-window-id="${windowId}"]`);
-    await window.evaluate((element) => element.dispatchEvent(new PointerEvent("pointerdown", { bubbles: true })));
-    await page.waitForTimeout(0);
+    const exposedActivationPoint = await window.locator("[data-drag-handle]").evaluate((handle) => {
+      const bounds = handle.getBoundingClientRect();
+      for (let y = Math.ceil(bounds.top); y < Math.floor(bounds.bottom); y += 1) {
+        for (let x = Math.ceil(bounds.left); x < Math.floor(bounds.right); x += 1) {
+          const target = document.elementFromPoint(x + 0.5, y + 0.5);
+          if (target && handle.contains(target)) return { x: x + 0.5, y: y + 0.5 };
+        }
+      }
+      return null;
+    });
+    expect(exposedActivationPoint, `${windowId} has no user-reachable activation pixel`).not.toBeNull();
+    await page.mouse.click(exposedActivationPoint!.x, exposedActivationPoint!.y);
+    await expect.poll(async () => Number(await window.evaluate((element) => getComputedStyle(element).zIndex))).toBe(24);
     obstructions.push(...await window.evaluate((element) => [...element.querySelectorAll<HTMLButtonElement>("button:not(:disabled)")]
       .filter((button) => button.offsetParent !== null)
       .flatMap((button) => {
-        const bounds = button.getBoundingClientRect();
+        let bounds = button.getBoundingClientRect();
+        for (let ancestor = button.parentElement; ancestor && ancestor !== element.parentElement; ancestor = ancestor.parentElement) {
+          const style = getComputedStyle(ancestor);
+          if (![style.overflowX, style.overflowY].some((overflow) => ["auto", "clip", "hidden", "scroll"].includes(overflow))) continue;
+          const clip = ancestor.getBoundingClientRect();
+          const left = Math.max(bounds.left, clip.left);
+          const top = Math.max(bounds.top, clip.top);
+          const right = Math.min(bounds.right, clip.right);
+          const bottom = Math.min(bounds.bottom, clip.bottom);
+          bounds = new DOMRect(left, top, Math.max(0, right - left), Math.max(0, bottom - top));
+        }
+        if (bounds.width < 1 || bounds.height < 1) return [];
         const target = document.elementFromPoint(bounds.x + bounds.width / 2, bounds.y + bounds.height / 2);
         if (target === button || (target && button.contains(target))) return [];
         return [{
@@ -211,4 +198,25 @@ test("every enabled button owns the center of its hit target after activation", 
   }
 
   expect(obstructions).toEqual([]);
+});
+
+test("vertical source scrollbars expose continuous values through real axis-aware pointer gestures", async ({ page }) => {
+  await page.goto("/");
+  for (const name of ["カード情報スクロール", "スキルスクロール", "所持品スクロール"] as const) {
+    const range = page.getByRole("slider", { name });
+    const box = await range.boundingBox();
+    if (!box) throw new Error(`${name} has no pointer bounds`);
+    await range.focus();
+    await range.press("Home");
+    expect(await range.inputValue()).toBe("0");
+    const values = new Set<number>();
+    for (let step = 1; step < 10; step += 1) {
+      await page.mouse.click(box.x + box.width / 2, box.y + box.height * (step / 10));
+      values.add(Number(await range.inputValue()));
+    }
+    expect(values.size, `${name} did not expose more than four pointer positions`).toBeGreaterThan(4);
+    await range.focus();
+    await range.press("End");
+    expect(await range.inputValue()).toBe("100");
+  }
 });

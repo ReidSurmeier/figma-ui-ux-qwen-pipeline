@@ -47,4 +47,21 @@ describe("generic interaction probe verdicts", () => {
 
     expect(classifyInteractionProbe({ visualSettled: true }, contract).passed).toBe(false);
   });
+
+  it("keeps the correction runner on real gestures and free of the undefined verdict bug", async () => {
+    const { readFile } = await import("node:fs/promises");
+    const { resolve } = await import("node:path");
+    const runner = await readFile(resolve("scripts/run-correction-matrix.mjs"), "utf8");
+    const desktopSuite = await readFile(resolve("e2e/full-desktop.spec.ts"), "utf8");
+
+    expect(runner).not.toMatch(/if \(!passed\)/);
+    expect(runner).not.toContain(".selectOption(");
+    expect(runner).not.toContain(".fill(");
+    expect(runner).not.toContain("button.click();");
+    expect(runner).not.toContain('execFileSync("bash"');
+    expect(runner).toContain('spawnSync("bash"');
+    expect(runner).toContain("process.exitCode = 1");
+    expect(desktopSuite).not.toContain("click({ force: true })");
+    expect(desktopSuite).not.toContain("enabled control inventory contains no settled dead buttons");
+  });
 });

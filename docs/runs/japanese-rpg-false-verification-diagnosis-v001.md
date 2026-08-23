@@ -244,3 +244,64 @@ settled change. The remaining source-difference score is dominated by the
 intentional removal of magenta desktop pixels. The asset contract separately
 proves zero opaque donor-pink pixels, so no pink border is reintroduced merely
 to lower screenshot MAE.
+
+## Correction-runner self-audit
+
+The correction matrix itself contained three independent false-verification
+hazards:
+
+1. `if (!passed)` referenced an undefined variable, so the first uncontracted
+   control crashed the run before it could retain evidence.
+2. Generic controls were driven with `.fill()`, `.selectOption()`, and a legacy
+   `click({ force: true })` inventory test. Those paths bypass the visible
+   pointer/keyboard journey and can certify controls whose real hit geometry or
+   application-owned popup is broken.
+3. `remaining-window-contract.sh` still expected the pre-reconstruction Skills
+   and Party inventories. It exited silently at 22 versus 34 Skills assets and
+   never reached the browser probes.
+
+The runner now uses pointer and keyboard gestures, records exact range values
+at Home, nine pointer samples, and End, and samples minimize motion after a
+trusted Playwright pointer click. Source prerequisite scripts are executed as
+structured evidence with status, stdout, and stderr; a failed prerequisite can
+no longer throw away the rest of the audit. The component inventory contract
+now names dimension/count mismatches explicitly.
+
+Generic activity remains deliberately uncontracted. A pixel or ARIA change is
+recorded, but it cannot pass without all four semantic requirements:
+`realGesture`, `expectedRegionChanged`, `invariantRegionsStable`, and
+`sourceApproved`. These values must eventually come from source-specific
+executable contracts, not booleans asserted by the same generic probe.
+
+For runner development, `CORRECTION_MATRIX_RUN_ROOT` moves every mutable output
+(frames, reports, and the verification-registry copy) beneath one isolated
+directory. This permits a full self-test without deleting canonical evidence or
+changing the tracked registry. Omitting it remains the explicit production
+replay path.
+
+The first replacement hit-map sweep also revealed an oracle defect:
+`offsetParent !== null` included Skills page-two buttons outside the clipped
+viewport. The corrected test raises each window through a real exposed pixel,
+waits for the top z-index, intersects every button with all clipping ancestors,
+and samples the center of the remaining visible silhouette. It therefore
+detects genuine overlap while excluding off-viewport DOM geometry.
+
+The first isolated end-to-end self-test completed all 15 windows without
+touching the tracked registry (SHA-256 remained
+`cbb968057c1cf7e7c25a9192009cf422d186ee6dee447a408aba563234232dad`). It
+failed closed on 13 windows and passed only Compact Info and Notification,
+which expose no invented controls. That is the expected state while generic
+activity has no semantic contracts.
+
+That run also found an orientation error in its own range sampler. Card,
+Skills, and Inventory use `writing-mode: vertical-lr`, but the generic sampler
+clicked across x; every intermediate gesture therefore returned value 50 and
+only Home/End changed the raster. The sampler now chooses x or y from computed
+writing mode. A real-browser regression proves all three vertical controls
+expose more than four pointer positions and exact 0/100 keyboard endpoints.
+Finally, any failed window now sets a nonzero process exit code, so CI or an
+overnight loop cannot report a green command for a red audit summary.
+
+For a fast runner self-test, `CORRECTION_MATRIX_WINDOW_IDS` accepts a
+comma-separated source-window subset and rejects unknown ids. Omitting it still
+runs the full 15-window overnight matrix.
