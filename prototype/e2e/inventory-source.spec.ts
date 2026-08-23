@@ -71,6 +71,27 @@ test("inventory cells select independently and scrolling is continuous", async (
   await expect(window.locator(".inventory-source-thumb")).toHaveCSS("top", "31px");
 });
 
+test("inventory scrolling changes only the clipped body and never enters the header", async ({ page }) => {
+  await page.goto("/");
+  const window = page.getByRole("region", { name: "所持アイテム" });
+  const slider = window.getByRole("slider", { name: "所持品スクロール" });
+  const bounds = await window.boundingBox();
+  if (!bounds) throw new Error("Inventory window geometry is unavailable");
+  const header = { x: bounds.x, y: bounds.y, width: 263, height: 18 };
+  const body = { x: bounds.x + 36, y: bounds.y + 19, width: 227, height: 102 };
+
+  await slider.fill("0");
+  const headerAtTop = await page.screenshot({ clip: header });
+  const bodyAtTop = await page.screenshot({ clip: body });
+  await slider.fill("100");
+  await page.waitForTimeout(40);
+  const headerAtBottom = await page.screenshot({ clip: header });
+  const bodyAtBottom = await page.screenshot({ clip: body });
+
+  expect(bodyAtBottom.equals(bodyAtTop), "inventory contents did not scroll").toBe(false);
+  expect(headerAtBottom.equals(headerAtTop), "inventory icons leaked into the title/header").toBe(true);
+});
+
 test("inventory minimize uses a generated compact endpoint", async ({ page }) => {
   await page.goto("/");
   const window = page.getByRole("region", { name: "所持アイテム" });

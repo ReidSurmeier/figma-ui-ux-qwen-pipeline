@@ -109,7 +109,8 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .inventory-source-tab:active { filter: brightness(0.72); }
 .inventory-source-tab[aria-pressed="true"] { box-shadow: inset 2px 0 #548cb9; }
 .inventory-source-tab[data-source-selected="true"][aria-pressed="false"] .source-raster { filter: grayscale(0.88) brightness(1.16) contrast(0.82); }
-.inventory-source-grid { position: absolute; z-index: 3; left: 36px; top: 19px; width: 238px; height: 102px; transition: transform 16ms linear; }
+.inventory-source-viewport { position: absolute; z-index: 3; left: 36px; top: 19px; overflow: hidden; width: 227px; height: 102px; }
+.inventory-source-grid { position: absolute; inset: 0; width: 238px; height: 102px; transition: transform 16ms linear; }
 .inventory-source-cell { position: absolute; width: 34px; height: 34px; padding: 0; border: 0; background: transparent; }
 .inventory-source-cell:active { filter: brightness(0.75); }
 .inventory-source-cell[aria-pressed="true"] { outline: 1px solid #668fb9; outline-offset: -1px; }

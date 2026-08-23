@@ -19,16 +19,18 @@ export function InventorySourceWindow({ zIndex, onActivate }: InventoryWindowPro
           <SourceRaster id={`inventory-tab-${name}`} file={`${assetRoot}/components/tab-${name}`} style={{ inset: 0 }} />
         </button>
       ))}
-      <div className="inventory-source-grid" style={{ transform: `translateY(${-Math.round(scroll * 0.12)}px)` }}>
-        {Array.from({ length: visibleCount }, (_, index) => {
-          const row = Math.floor(index / 7);
-          const column = index % 7;
-          return (
-            <button key={`${tab}-${index}`} type="button" className="inventory-source-cell" aria-label={`${tab} item ${index + 1}`} aria-pressed={selected === index} style={{ left: column * 34, top: row * 34 }} onClick={() => setSelected(index)}>
-              <SourceRaster id={`inventory-cell-${row}-${column}`} file={`${assetRoot}/components/cell-${row}-${column}`} style={{ inset: 0 }} />
-            </button>
-          );
-        })}
+      <div className="inventory-source-viewport">
+        <div className="inventory-source-grid" style={{ transform: `translateY(${-Math.round(scroll * 0.12)}px)` }}>
+          {Array.from({ length: visibleCount }, (_, index) => {
+            const row = Math.floor(index / 7);
+            const column = index % 7;
+            return (
+              <button key={`${tab}-${index}`} type="button" className="inventory-source-cell" aria-label={`${tab} item ${index + 1}`} aria-pressed={selected === index} style={{ left: column * 34, top: row * 34 }} onClick={() => setSelected(index)}>
+                <SourceRaster id={`inventory-cell-${row}-${column}`} file={`${assetRoot}/components/cell-${row}-${column}`} style={{ inset: 0 }} />
+              </button>
+            );
+          })}
+        </div>
       </div>
       <SourceRaster id="inventory-scroll-up" file={`${assetRoot}/components/scroll-up`} style={{ left: 263, top: 18, width: 17, height: 17 }} />
       <SourceRaster id="inventory-scroll-track" file={`${assetRoot}/components/scroll-track`} style={{ left: 263, top: 35, width: 17, height: 66 }} />
