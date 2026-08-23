@@ -10,7 +10,7 @@
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
-        "sha256": "c96e74e2a3dcbddc78427fa1344fd6f0a4b0583c25e488f600d846d645354f50"
+        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -781,7 +781,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-        "sha256": "91491836b869776b726e518ea3a4f02550bd6f2f8a2eccb0514ba50696281d44"
+        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -814,7 +814,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
-        "sha256": "91491836b869776b726e518ea3a4f02550bd6f2f8a2eccb0514ba50696281d44"
+        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -847,7 +847,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment close removes the window and Basic Info restores its complete destination",
-        "sha256": "91491836b869776b726e518ea3a4f02550bd6f2f8a2eccb0514ba50696281d44"
+        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -876,7 +876,7 @@
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
-        "sha256": "c96e74e2a3dcbddc78427fa1344fd6f0a4b0583c25e488f600d846d645354f50"
+        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -899,6 +899,72 @@
         {
           "component_ids": ["bottom-bar-title-icon", "bottom-bar-title-text", "bottom-bar-rail", "bottom-bar-thumb"],
           "rule": "the complete first 580 pixels remain byte-identical after both reversal journeys"
+        }
+      ]
+    },
+    {
+      "id": "chat-complete-application-form-v001",
+      "window_id": "chat",
+      "control_labels": ["トピック", "ルーム", "公開", "非公開", "OK"],
+      "test": {
+        "file": "e2e/chat-source.spec.ts",
+        "title": "Chat visibly edits Japanese topic and submits one application-owned form without invented tabs",
+        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 279, 280, 120]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["The single source-themed Chat form visibly accepts Japanese topic text, uses an application-owned room list, selects privacy, and submits exact settled feedback without invented tabs."]
+      },
+      "gesture": "keyboard Japanese text entry plus trusted pointer clicks select the application-owned room, privacy, and OK",
+      "expected_region_changes": [
+        {
+          "component_ids": ["chat-topic-field", "chat-room", "chat-privacy-public", "chat-privacy-private", "chat-ok"],
+          "rule": "typed Japanese text is visible, the two-option list settles to Party, privacy transfers to private, and OK reports the exact complete form"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["chat-title-icon", "chat-title-text"],
+          "rule": "the Japanese title remains byte-identical and no tab control is introduced"
+        }
+      ]
+    },
+    {
+      "id": "chat-complete-cancel-reset-v001",
+      "window_id": "chat",
+      "control_labels": ["cancel"],
+      "test": {
+        "file": "e2e/chat-source.spec.ts",
+        "title": "Chat cancel restores the complete default form instead of only clearing topic",
+        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [285, 279, 280, 120]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Cancel reverses every pending Chat form edit and restores the screenshot-consistent default state."]
+      },
+      "gesture": "keyboard and trusted pointer interactions dirty every form field before a trusted cancel click",
+      "expected_region_changes": [
+        {
+          "component_ids": ["chat-topic-field", "chat-room", "chat-privacy-public", "chat-privacy-private", "chat-cancel"],
+          "rule": "topic clears, room returns to Chat Room, privacy returns to public, the listbox closes, and cancellation feedback settles"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["chat-title-icon", "chat-title-text", "chat-ok"],
+          "rule": "cancel restores form state without changing the Japanese title or submit control"
         }
       ]
     }

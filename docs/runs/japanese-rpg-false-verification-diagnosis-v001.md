@@ -388,6 +388,36 @@ the title, rail, and slider remain byte-identical. The new isolated replay
 reports three controls, three contracted, three contract-passed, zero
 uncontracted, and no correction failures.
 
+## Chat visible-edit and complete-form tracer
+
+The initial isolated Chat replay found six enabled controls, zero contracts,
+and generic activity for each. That did not catch a direct user-facing defect:
+the semantic topic input used opacity `0.002`, so Japanese text changed the DOM
+and later status output while remaining effectively invisible in the form. The
+old test filled the input programmatically and checked only the final status.
+
+The topic field now renders its current value at full opacity with the shared
+Japanese pixel-font contract over the extracted source field. Every control
+declares its owned visual component. A locked journey proves there is one form
+and no invented tab or native `select`, visibly enters Japanese copy, opens the
+application-owned two-option room list, chooses private privacy, and submits the
+exact complete status while the title stays byte-identical. A separate reversal
+journey found that `cancel` cleared only topic; it now also restores Chat Room,
+public privacy, the closed menu, and settled cancellation feedback. The isolated
+replay now reports six controls, six contracted, six contract-passed, zero
+uncontracted, and no correction failures.
+
+The first full-suite run exposed a separate evidence race. Chat, Equipment, and
+Bottom Bar captured invariant baselines before proving foreground ownership;
+later pointer activation changed transparent pixels over neighboring windows.
+Their dedicated tests now poll until the target has the desktop's maximum
+computed z-index. A subsequent uncapped 12-worker run still caused those three
+and the pre-existing Inventory source comparison to fail together, with
+Inventory MAE jumping to `0.131185`. The shared WSL Vite server was serving too
+many cold bitmap pages concurrently. Playwright is now capped at six workers;
+the complete 94-test run passes with Chat MAE `0.0278025`, full composition MAE
+`0.0436587`, and all window gates green.
+
 ## Basic Info destination tracer
 
 The existing page-button test covered six buttons but silently omitted `map`

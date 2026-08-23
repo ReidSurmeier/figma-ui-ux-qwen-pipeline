@@ -147,7 +147,7 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .chat-source-privacy { top: 66px; width: 16px; height: 18px; margin: 0; }
 .chat-source-privacy--public { left: 43px; }
 .chat-source-privacy--private { left: 82px; }
-.chat-source-topic { left: 44px; top: 27px; width: 228px; height: 17px; }
+.chat-source-topic { left: 44px; top: 27px; box-sizing: border-box; width: 228px; height: 17px; padding: 1px 3px; border: 0; outline: 0; background: transparent; color: #173a61; font-family: DotGothic16, "WenQuanYi Zen Hei Mono", monospace; font-size: 9px; line-height: 15px; opacity: 1; }
 .chat-source-room-control { position: absolute; z-index: 10; left: 181px; top: 47px; width: 92px; height: 16px; }
 .chat-source-room-button { position: relative; width: 92px; height: 16px; padding: 0 15px 0 3px; border: 1px solid #aebccc; border-radius: 0; background: #fff; color: #173a61; font-family: DotGothic16, "WenQuanYi Zen Hei Mono", monospace; font-size: 9px; line-height: 14px; text-align: left; white-space: nowrap; }
 .chat-source-room-button::after { content: ""; position: absolute; right: 2px; top: 4px; border-top: 6px solid #6f96c8; border-right: 5px solid transparent; border-left: 5px solid transparent; }

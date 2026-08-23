@@ -1,9 +1,19 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Locator } from "@playwright/test";
+
+async function activateWindow(window: Locator) {
+  await window.dispatchEvent("pointerdown");
+  await expect.poll(() => window.evaluate((element) => {
+    const z = Number(getComputedStyle(element).zIndex);
+    const all = [...element.parentElement!.querySelectorAll<HTMLElement>("[data-window-id]")].map((node) => Number(getComputedStyle(node).zIndex));
+    return z === Math.max(...all);
+  })).toBe(true);
+  await window.page().evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+}
 
 test("Every Equipment row owns its exact source column and transfers exclusive selection", async ({ page }) => {
   await page.goto("/");
   const equipment = page.getByRole("region", { name: "装備アイテム" });
-  await equipment.click({ position: { x: 140, y: 9 } });
+  await activateWindow(equipment);
   const bounds = await equipment.boundingBox();
   if (!bounds) throw new Error("Equipment geometry is unavailable");
   const titleClip = { x: bounds.x, y: bounds.y, width: 280, height: 18 };
@@ -38,7 +48,7 @@ test("Equipment minimize uses its generated compact endpoint through complete mo
   const equipment = page.getByRole("region", { name: "装備アイテム" });
   const minimize = equipment.getByRole("button", { name: "装備アイテムを最小化", exact: true });
   await expect(minimize).toHaveAttribute("data-minimize-endpoint", "/assets/japanese-rpg-v001/equipment/minimized-plate.png");
-  await equipment.click({ position: { x: 140, y: 9 } });
+  await activateWindow(equipment);
   const expanded = await equipment.screenshot();
   const expandedBounds = await equipment.boundingBox();
   expect(expandedBounds).toMatchObject({ width: 280, height: 152 });

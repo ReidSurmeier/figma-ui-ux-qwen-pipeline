@@ -160,3 +160,16 @@ High-risk windows keep their locked semantic journeys in dedicated test files.
 This limits the hash blast radius: adding an Equipment assertion cannot stale a
 Bottom Bar contract merely because both once lived in a generic remaining-
 windows suite.
+
+Editable inputs have both a semantic element and a visible pixel-font value
+layer. Tests enter Japanese copy, blur the field, and require the owned source
+region to change while the title remains invariant. Form cancellation dirties
+every field first, then proves a complete return to the source-consistent
+default; clearing only the text field does not satisfy reversal.
+
+Before a pixel authority is captured, the test dispatches activation and polls
+until the target window owns the maximum computed z-index. This makes overlap
+state an asserted precondition instead of a timing guess. The full browser suite
+uses at most six workers against the single Vite asset server: a 12-worker run
+reproduced incomplete Inventory rasters and false transparent-region changes,
+while the bounded run completed with stable source MAE and invariants.

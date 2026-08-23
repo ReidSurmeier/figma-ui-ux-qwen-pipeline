@@ -3,6 +3,7 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: false,
+  workers: 6,
   reporter: "line",
   use: {
     baseURL: "http://10.255.255.254:4174",

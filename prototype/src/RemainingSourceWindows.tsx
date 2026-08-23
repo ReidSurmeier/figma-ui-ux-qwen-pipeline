@@ -121,17 +121,17 @@ export function ChatSourceWindow({ zIndex, onActivate }: WindowProps) {
         <SourceRaster id="chat-privacy-public" file={`${assetRoot}/components/privacy-${privacy === "公開" ? "on" : "off"}`} style={{ left: 43, top: 66, width: 16, height: 18 }} />
         <SourceRaster id="chat-privacy-private" file={`${assetRoot}/components/privacy-${privacy === "非公開" ? "on" : "off"}`} style={{ left: 82, top: 66, width: 16, height: 18 }} />
         <SourceRaster id="chat-password" file={`${assetRoot}/components/password`} style={{ left: 135, top: 65, width: 141, height: 20 }} />
-        <input className="chat-source-topic" aria-label="トピック" value={topic} onChange={(event) => setTopic(event.currentTarget.value)} />
+        <input className="chat-source-topic" aria-label="トピック" data-visual-component="chat-topic-field" value={topic} onChange={(event) => setTopic(event.currentTarget.value)} />
         <div className="chat-source-room-control" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setRoomOpen(false); }}>
-          <button type="button" className="chat-source-room-button" role="combobox" aria-label="ルーム" aria-expanded={roomOpen} aria-controls="chat-room-options" aria-haspopup="listbox" onClick={() => setRoomOpen((value) => !value)}>{room}</button>
+          <button type="button" className="chat-source-room-button" role="combobox" aria-label="ルーム" aria-expanded={roomOpen} aria-controls="chat-room-options" aria-haspopup="listbox" data-visual-component="chat-room" onClick={() => setRoomOpen((value) => !value)}>{room}</button>
           {roomOpen && <div id="chat-room-options" className="chat-source-room-listbox" role="listbox" aria-label="ルーム">
             {["チャットルーム", "パーティー"].map((option) => <button key={option} type="button" role="option" aria-selected={room === option} onClick={() => { setRoom(option); setRoomOpen(false); }}>{option}</button>)}
           </div>}
         </div>
-        <input className="chat-source-privacy chat-source-privacy--public" type="radio" name="privacy" aria-label="公開" checked={privacy === "公開"} onChange={() => setPrivacy("公開")} />
-        <input className="chat-source-privacy chat-source-privacy--private" type="radio" name="privacy" aria-label="非公開" checked={privacy === "非公開"} onChange={() => setPrivacy("非公開")} />
-        <button className="chat-source-ok" type="button" aria-label="OK" onClick={() => setStatus(`${privacy} ${room}「${topic}」を作成しました`)}><SourceRaster id="chat-ok" file={`${assetRoot}/components/ok`} style={{ inset: 0 }} /></button>
-        <button className="chat-source-cancel" type="button" aria-label="cancel" onClick={() => { setTopic(""); setStatus("キャンセルしました"); }}><SourceRaster id="chat-cancel" file={`${assetRoot}/components/cancel`} style={{ inset: 0 }} /></button>
+        <input className="chat-source-privacy chat-source-privacy--public" type="radio" name="privacy" aria-label="公開" data-visual-component="chat-privacy-public" checked={privacy === "公開"} onChange={() => setPrivacy("公開")} />
+        <input className="chat-source-privacy chat-source-privacy--private" type="radio" name="privacy" aria-label="非公開" data-visual-component="chat-privacy-private" checked={privacy === "非公開"} onChange={() => setPrivacy("非公開")} />
+        <button className="chat-source-ok" type="button" aria-label="OK" data-visual-component="chat-ok" onClick={() => setStatus(`${privacy} ${room}「${topic}」を作成しました`)}><SourceRaster id="chat-ok" file={`${assetRoot}/components/ok`} style={{ inset: 0 }} /></button>
+        <button className="chat-source-cancel" type="button" aria-label="cancel" data-visual-component="chat-cancel" onClick={() => { setTopic(""); setRoom("チャットルーム"); setRoomOpen(false); setPrivacy("公開"); setStatus("キャンセルしました"); }}><SourceRaster id="chat-cancel" file={`${assetRoot}/components/cancel`} style={{ inset: 0 }} /></button>
       </div>
       <output className="chat-source-status" role="status">{status}</output>
     </SourceWindow>

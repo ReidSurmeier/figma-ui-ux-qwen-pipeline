@@ -156,6 +156,17 @@ Use a layered QA system with one responsibility per layer:
 37. Prefer one semantic test file per reconstructed window. This keeps evidence
     locks local, prevents unrelated sibling tests from invalidating a reviewed
     contract, and lets the global lock gate name the exact window that drifted.
+38. Editable source fields must render their current value in the reconstructed
+    pixel style; a transparent semantic input over an unchanged raster is not
+    editable visual behavior. Cancel actions reverse the complete pending form,
+    not an arbitrary subset of fields.
+39. An invariant screenshot baseline is accepted only after the target window's
+    computed z-index equals the desktop maximum. Frame delays alone do not prove
+    activation, and transparent pixels can reveal a different overlapping layer.
+40. Cap the bitmap-heavy Playwright suite at six workers against the single WSL
+    asset server. Higher cold-page concurrency produced incomplete raster
+    captures and false MAE or invariant failures; throughput cannot outrank
+    deterministic evidence.
 
 ## Consequences
 

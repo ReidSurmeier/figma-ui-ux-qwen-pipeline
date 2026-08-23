@@ -1,10 +1,21 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Locator } from "@playwright/test";
+
+async function activateWindow(window: Locator) {
+  await window.dispatchEvent("pointerdown");
+  await expect.poll(() => window.evaluate((element) => {
+    const z = Number(getComputedStyle(element).zIndex);
+    const all = [...element.parentElement!.querySelectorAll<HTMLElement>("[data-window-id]")].map((node) => Number(getComputedStyle(node).zIndex));
+    return z === Math.max(...all);
+  })).toBe(true);
+  await window.page().evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+}
 
 test("Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag", async ({ page }) => {
   await page.goto("/");
   const bottomBar = page.getByRole("region", { name: "クイックスロットバー" });
   const slider = bottomBar.getByRole("slider", { name: "クイックスロット位置" });
   await expect(slider).toHaveAttribute("data-visual-component", "bottom-bar-thumb");
+  await activateWindow(bottomBar);
   const thumb = bottomBar.locator('[data-component-id="bottom-bar-thumb"]');
   const bounds = await bottomBar.boundingBox();
   if (!bounds) throw new Error("Bottom Bar source geometry is unavailable");
@@ -42,6 +53,7 @@ test("Bottom Bar previous and next controls are reversible and leave slider plus
   const next = bottomBar.getByRole("button", { name: "次のスロット", exact: true });
   await expect(previous).toHaveAttribute("data-visual-component", "bottom-bar-previous");
   await expect(next).toHaveAttribute("data-visual-component", "bottom-bar-next");
+  await activateWindow(bottomBar);
   const bounds = await bottomBar.boundingBox();
   if (!bounds) throw new Error("Bottom Bar source geometry is unavailable");
   const fixedClip = { x: bounds.x, y: bounds.y, width: 580, height: 21 };
