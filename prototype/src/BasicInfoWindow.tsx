@@ -11,7 +11,7 @@ function Raster({ id, file, style, className = "" }: { id: string; file?: string
 
 const pages = [
   ["status", "status", undefined, 207, 22], ["option", "options", undefined, 244, 22], ["items", "inventory", undefined, 207, 47], ["equip", "equipment", undefined, 244, 47],
-  ["skill", "skills", undefined, 207, 72], ["map", null, undefined, 244, 72], ["chat", "chat", undefined, 207, 97], ["friend", "party", "friends", 244, 97],
+  ["skill", "skills", undefined, 207, 72], ["map", "map", undefined, 244, 72], ["chat", "chat", undefined, 207, 97], ["friend", "party", "friends", 244, 97],
 ] as const;
 
 export function BasicInfoWindow({ zIndex, onActivate, onNavigate }: BasicInfoWindowProps) {

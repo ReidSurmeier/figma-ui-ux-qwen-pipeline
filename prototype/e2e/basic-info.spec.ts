@@ -106,12 +106,59 @@ test("friend opens the visible Party friends destination instead of only self-se
 });
 
 test("map opens a visible movable destination instead of only self-selecting Basic Info", async ({ page }) => {
-  test.fail(true, "RED: no source-themed Map destination exists yet; repair requires a reviewed Qwen state rather than another filter-only response");
   await page.goto("/");
   const basic = page.getByRole("region", { name: "基本情報" });
-  await basic.getByRole("button", { name: "map", exact: true }).click();
+  const mapButton = basic.getByRole("button", { name: "map", exact: true });
+  await mapButton.click();
   const map = page.getByRole("region", { name: "マップ", exact: true });
   await expect(map).toBeVisible();
-  await expect(map.locator("[data-drag-handle]")).toBeVisible();
+  await expect(map).toHaveAttribute("data-clean-plate", "/assets/japanese-rpg-v001/map/clean-plate.png");
+  await expect(map.locator("[data-component-id]")).toHaveCount(4);
+  const dragHandle = map.locator("[data-drag-handle]");
+  await expect(dragHandle).toBeVisible();
   expect(Number(await map.evaluate((element) => getComputedStyle(element).zIndex))).toBeGreaterThan(Number(await basic.evaluate((element) => getComputedStyle(element).zIndex)));
+
+  const titleGeometry = await map.evaluate((element) => {
+    const bounds = element.getBoundingClientRect();
+    const relative = (selector: string) => {
+      const child = element.querySelector<HTMLElement>(selector)?.getBoundingClientRect();
+      if (!child) throw new Error(`${selector} is unavailable`);
+      return { left: child.left - bounds.left, top: child.top - bounds.top, right: child.right - bounds.left, bottom: child.bottom - bounds.top };
+    };
+    return {
+      icon: relative('[data-component-id="map-title-icon"]'),
+      title: relative('[data-component-id="map-title-text"]'),
+      close: relative('button[aria-label="マップを閉じる"]'),
+      body: relative('[data-component-id="map-body"]'),
+    };
+  });
+  expect(titleGeometry.icon.right).toBeLessThanOrEqual(titleGeometry.title.left);
+  expect(titleGeometry.title.right).toBeLessThanOrEqual(titleGeometry.close.left);
+  expect(titleGeometry.body).toEqual({ left: 16, top: 29, right: 264, bottom: 142 });
+
+  const evidenceDir = mkdtempSync(join(tmpdir(), "map-window-"));
+  try {
+    const screenshot = join(evidenceDir, "map.png");
+    await map.screenshot({ path: screenshot });
+    expect(pinkDominantPixelCount(screenshot, "280x150+0+0")).toBe(0);
+  } finally {
+    rmSync(evidenceDir, { recursive: true, force: true });
+  }
+
+  const before = await map.boundingBox();
+  const handle = await dragHandle.boundingBox();
+  if (!before || !handle) throw new Error("Map drag geometry is unavailable");
+  await page.mouse.move(handle.x + 80, handle.y + 9);
+  await page.mouse.down();
+  await page.mouse.move(handle.x + 112, handle.y + 33, { steps: 8 });
+  await page.mouse.up();
+  const after = await map.boundingBox();
+  if (!after) throw new Error("Map post-drag geometry is unavailable");
+  expect(Math.round(after.x - before.x)).toBe(32);
+  expect(Math.round(after.y - before.y)).toBe(24);
+
+  await map.getByRole("button", { name: "マップを閉じる", exact: true }).click();
+  await expect(map).toHaveCount(0);
+  await mapButton.click();
+  await expect(page.getByRole("region", { name: "マップ", exact: true })).toBeVisible();
 });

@@ -99,6 +99,16 @@ Use a layered QA system with one responsibility per layer:
     them. The remote transaction may reject or fail to resolve destinations
     created in the same call; staged destination and reaction writes make the
     graph reproducible and auditable.
+25. Derive destination coverage from the complete enabled-control inventory,
+    not a hand-maintained subset inside one test. Every navigation control must
+    prove a visible destination, destination z-order, and a real destination
+    affordance. If the state is initially hidden, capture and replay it after
+    activation; the default runtime manifest alone cannot prove that it exists.
+26. A Qwen candidate may be accepted by bounded region without accepting its
+    complete window. Record every full-window rejection, the exact accepted
+    crop rectangles, and the independent runtime chrome authority. A generated
+    full window with wrong title geometry cannot become a screenshot underlay
+    merely because its body artwork is useful.
 
 ## Consequences
 
@@ -114,3 +124,5 @@ Use a layered QA system with one responsibility per layer:
   receive separate verdicts.
 - A global similarity score cannot mask a broken title, checkbox, or endpoint;
   each declared high-risk region has its own oracle.
+- Hidden destinations are tested as user journeys and as activated visual
+  states; default-page DOM coverage is not treated as destination coverage.

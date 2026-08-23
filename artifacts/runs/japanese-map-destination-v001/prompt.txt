@@ -1,0 +1,47 @@
+[TASK]
+Create one inferred Map destination window for the Japanese RPG prototype. It appears only after the existing Basic Info map button is clicked. Match the source application's exact late-1990s raster UI language without pretending this state was visible in the authority screenshot.
+
+[REFERENCE ROLE]
+Reference image 1 is the immutable full Japanese RPG screenshot and fixes the pixel scale, blue-grey palette, stepped window corners, title chrome, line weight, and overall source identity. Reference image 2 is the exact 280 by 150 card-window crop and fixes the requested output size and outer-window geometry. Reference image 3 is the exact Status window crop and reinforces the source title bar, one-pixel bevel hierarchy, compact density, and Japanese application character.
+
+[PRESERVATION INVARIANTS]
+- Use an exact 280 by 150 source-scale window silhouette with the same six-pixel stepped corners and 18-pixel title bar rhythm as the references.
+- Keep hard aliased source-scale pixels, restrained blue-grey surfaces, one-pixel dark rules, and no modern UI styling.
+- The window must be visually plausible beside the existing screenshot windows but remain a new inferred interaction state.
+- Do not copy surrounding magenta desktop pixels or any neighboring source window.
+
+[CANVAS AND LAYOUT]
+- Return only the Map window at exactly 1120*600 pixels, four times the authoritative 280 by 150 source scale.
+- No margin, desktop background, neighboring UI, caption, contact sheet, or review annotation.
+- The complete window must fit the canvas with resolved stepped corners and no crop.
+
+[REGION EDITS]
+- REGION: title bar
+  CHANGE: Render the exact Japanese title マップ once in the source pixel style, with one small source-matched title icon at left and one source-matched close button at right.
+  PRESERVE: 18-pixel source title height; blue-grey title gradient; one-pixel outer chrome; clear separation between title text, icon, and close button
+- REGION: map body
+  CHANGE: Render a compact top-down fantasy town map inside a beveled white-and-pale-blue body panel. Use crisp one-pixel roads, a river, bridges, small building blocks, a player marker, and a thin source-themed border. Include no body text so no unreadable Japanese glyphs can be introduced.
+  PRESERVE: clear body margins; source-scale pixel density; flat limited palette; independently croppable title and body regions
+
+[EXACT COPY]
+- title bar: "マップ"
+
+[STYLE SYSTEM]
+- Authentic Japanese late-1990s desktop RPG raster UI, matching the references rather than a modern retro interpretation.
+- Hard source-scale pixels, pale blue-grey chrome, thin navy rules, compact dithered fantasy map art, and no antialiasing.
+
+[ASSET RULES]
+- Exactly one complete 280 by 150 Map window.
+- Exactly one title icon, one マップ title, one close button, and one map body.
+- Keep the title, icon, close button, map body, and empty chrome visually separable for later component extraction.
+
+[NEGATIVE CONSTRAINTS]
+- No English MAP label, no gibberish, no additional Japanese body text, no duplicated title, no extra buttons, tabs, sliders, checkboxes, inventory items, character portraits, or dialogue.
+- No magenta desktop, screenshot overlay, neighboring window, full game screen, modern rounded card, glass, blur, glow, soft shadow, antialiased typography, or high-resolution illustration style.
+- Do not reuse the card illustration or Status statistics as map content.
+
+[QUALITY GATE]
+- At 280 by 150 the title reads exactly マップ and every glyph remains legible in the source pixel aesthetic.
+- The outer silhouette and title geometry align with the 280 by 150 card reference.
+- The map body contains no text and remains readable as a compact top-down town map at source scale.
+- The output can be decomposed into an empty plate, title/icon/button components, and an independent map-body component without retaining a screenshot underlay.

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "source_authority": "benchmarks/japanese-rpg-options-v001/reference.png",
+  "interaction_state": "inferred from the source-visible Basic Info map button",
+  "generation_run": "artifacts/runs/japanese-map-destination-v001",
+  "status": "bounded-components-accepted-full-windows-rejected",
+  "promoted_full_window": null,
+  "accepted_components": [
+    {
+      "id": "map-title-icon",
+      "candidate": "artifacts/runs/japanese-map-destination-v001/image-01.png",
+      "generated_scale_region": [20, 16, 64, 60],
+      "source_scale_output": [16, 15],
+      "output": "prototype/public/assets/japanese-rpg-v001/map/components/title-icon.png",
+      "selection_reason": "The bounded Qwen icon remains legible at source scale and is independent from the title, close button, map body, and window chrome."
+    },
+    {
+      "id": "map-title-text",
+      "candidate": "artifacts/runs/japanese-map-destination-v001/image-01.png",
+      "generated_scale_region": [94, 25, 228, 52],
+      "source_scale_output": [57, 13],
+      "exact_copy": "マップ",
+      "output": "prototype/public/assets/japanese-rpg-v001/map/components/title-text.png",
+      "selection_reason": "The bounded Qwen title reads exactly マップ once and retains hard raster edges when reduced with point sampling."
+    },
+    {
+      "id": "map-body",
+      "candidate": "artifacts/runs/japanese-map-destination-v001/image-01.png",
+      "generated_scale_region": [66, 117, 992, 452],
+      "source_scale_output": [248, 113],
+      "output": "prototype/public/assets/japanese-rpg-v001/map/components/map-body.png",
+      "selection_reason": "Candidate 1 has the clearest compact town structure, body-only border, river, bridges, player marker, and no body text. The accepted rectangle excludes all generated window chrome."
+    }
+  ],
+  "rejected_full_windows": [
+    {
+      "candidate": "image-01.png",
+      "reason": "Best component donor, but the generated title band is about 23 source pixels high instead of the source-locked 18-pixel rhythm."
+    },
+    {
+      "candidate": "image-02.png",
+      "reason": "The title band is too tall, the close control is oversized, and the body inset does not match the source windows."
+    },
+    {
+      "candidate": "image-03.png",
+      "reason": "The title band is much too tall and the generated chrome reads as a different window system."
+    },
+    {
+      "candidate": "image-04.png",
+      "reason": "The body is too narrowly inset, the title band is too tall, and the map composition leaves an unbalanced blank lower-right area."
+    }
+  ],
+  "assembly_invariants": {
+    "full_generated_window_used_as_runtime_underlay": false,
+    "runtime_clean_plate": "prototype/public/assets/japanese-rpg-v001/card/clean-plate.png",
+    "runtime_close_control": "prototype/public/assets/japanese-rpg-v001/card/components/close.png",
+    "reason_for_reuse": "These are already independent Qwen-derived/source-locked components with the authoritative 280 by 150 silhouette and 18-pixel title geometry.",
+    "accepted_generated_pixels": "three independently cropped rectangles only",
+    "body_text_allowed": false
+  }
+}

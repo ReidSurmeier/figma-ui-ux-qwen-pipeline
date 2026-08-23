@@ -1,0 +1,32 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nCreate one inferred Map destination window for the Japanese RPG prototype. It appears only after the existing Basic Info map button is clicked. Match the source application's exact late-1990s raster UI language without pretending this state was visible in the authority screenshot.\n\n[REFERENCE ROLE]\nReference image 1 is the immutable full Japanese RPG screenshot and fixes the pixel scale, blue-grey palette, stepped window corners, title chrome, line weight, and overall source identity. Reference image 2 is the exact 280 by 150 card-window crop and fixes the requested output size and outer-window geometry. Reference image 3 is the exact Status window crop and reinforces the source title bar, one-pixel bevel hierarchy, compact density, and Japanese application character.\n\n[PRESERVATION INVARIANTS]\n- Use an exact 280 by 150 source-scale window silhouette with the same six-pixel stepped corners and 18-pixel title bar rhythm as the references.\n- Keep hard aliased source-scale pixels, restrained blue-grey surfaces, one-pixel dark rules, and no modern UI styling.\n- The window must be visually plausible beside the existing screenshot windows but remain a new inferred interaction state.\n- Do not copy surrounding magenta desktop pixels or any neighboring source window.\n\n[CANVAS AND LAYOUT]\n- Return only the Map window at exactly 1120*600 pixels, four times the authoritative 280 by 150 source scale.\n- No margin, desktop background, neighboring UI, caption, contact sheet, or review annotation.\n- The complete window must fit the canvas with resolved stepped corners and no crop.\n\n[REGION EDITS]\n- REGION: title bar\n  CHANGE: Render the exact Japanese title \u30de\u30c3\u30d7 once in the source pixel style, with one small source-matched title icon at left and one source-matched close button at right.\n  PRESERVE: 18-pixel source title height; blue-grey title gradient; one-pixel outer chrome; clear separation between title text, icon, and close button\n- REGION: map body\n  CHANGE: Render a compact top-down fantasy town map inside a beveled white-and-pale-blue body panel. Use crisp one-pixel roads, a river, bridges, small building blocks, a player marker, and a thin source-themed border. Include no body text so no unreadable Japanese glyphs can be introduced.\n  PRESERVE: clear body margins; source-scale pixel density; flat limited palette; independently croppable title and body regions\n\n[EXACT COPY]\n- title bar: \"\u30de\u30c3\u30d7\"\n\n[STYLE SYSTEM]\n- Authentic Japanese late-1990s desktop RPG raster UI, matching the references rather than a modern retro interpretation.\n- Hard source-scale pixels, pale blue-grey chrome, thin navy rules, compact dithered fantasy map art, and no antialiasing.\n\n[ASSET RULES]\n- Exactly one complete 280 by 150 Map window.\n- Exactly one title icon, one \u30de\u30c3\u30d7 title, one close button, and one map body.\n- Keep the title, icon, close button, map body, and empty chrome visually separable for later component extraction.\n\n[NEGATIVE CONSTRAINTS]\n- No English MAP label, no gibberish, no additional Japanese body text, no duplicated title, no extra buttons, tabs, sliders, checkboxes, inventory items, character portraits, or dialogue.\n- No magenta desktop, screenshot overlay, neighboring window, full game screen, modern rounded card, glass, blur, glow, soft shadow, antialiased typography, or high-resolution illustration style.\n- Do not reuse the card illustration or Status statistics as map content.\n\n[QUALITY GATE]\n- At 280 by 150 the title reads exactly \u30de\u30c3\u30d7 and every glyph remains legible in the source pixel aesthetic.\n- The outer silhouette and title geometry align with the 280 by 150 card reference.\n- The map body contains no text and remains readable as a compact top-down town map at source scale.\n- The output can be decomposed into an empty plate, title/icon/button components, and an independent map-body component without retaining a screenshot underlay."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 4,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083460,
+    "size": "1120*600",
+    "watermark": false
+  }
+}

@@ -360,8 +360,20 @@ Two public-interface acceptance tests were observed RED independently. Friend
 must activate the existing Party window and its source `友達` tab. Map must
 expose a visible draggable `マップ` region, not a filter or hidden message. The
 Friend repair now routes through Desktop-owned navigation state and passes.
-Map remains an executable expected failure with an explicit Qwen-state
-requirement; it cannot silently turn green until a real destination is added.
+The Map RED contract was then expanded before implementation to prove a real
+32 by 24 pixel drag, close, and reopen—not merely DOM visibility. Qwen Image 3
+Pro generated four inferred Map candidates through Alibaba. All four complete
+windows were rejected because their title bands violated the source-locked
+18-pixel geometry. Candidate 1 was accepted only as three bounded component
+donors: title icon, exact `マップ` title, and text-free map body. Runtime chrome
+reuses an existing independent 280 by 150 Qwen-derived clean plate and close
+control; no generated complete window or reference screenshot is mounted.
+
+The focused Map gate now passes independent-component count, title non-overlap,
+exact body bounds, zero donor-magenta pixels, z-order, drag displacement, close,
+and reopen. This changes the method: conditional destinations must be captured
+after activation, and Qwen candidate selection is allowed at bounded-component
+granularity while complete-window promotion remains explicitly null.
 
 The same full-coverage run found a correction-runner race at the Options close
 button: the control removed its window between visibility and screenshot calls.

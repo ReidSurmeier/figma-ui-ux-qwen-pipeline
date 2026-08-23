@@ -43,6 +43,9 @@ filter or hidden status string from promoting an otherwise dead control.
 - transparent asset edge-ring and move-over-contrast evidence;
 - idle, pointer-down, pointer-up, settled, reversal, cancel, minimize, restore, and extreme-drag checkpoints where applicable;
 - enabled-control inventory and `elementFromPoint` hit ownership;
+- for every navigation control: visible destination identity, destination
+  z-order, destination drag/close/reopen behavior where applicable, and an
+  activated-state screenshot even when the destination is absent at startup;
 - local visual comparisons rather than only a whole-window score;
 - source-relative per-window comparisons that mask only donor-magenta pixels and retain original chrome, text, and semantic artwork;
 - one-to-three-pixel corner evidence proving cleanup retained stepped window rounding instead of deleting the complete perimeter ring;
@@ -81,3 +84,10 @@ hand. It drives Figma asset placement, stable names, geometry, and hotspot
 coverage. Figma review destinations must be committed in one MCP transaction
 before a later transaction creates reactions to them; a destination created
 and linked in the same transaction is not a reliable hosted-file contract.
+
+The default manifest is not sufficient for conditional windows. The test that
+opens a hidden destination must also assert its independent component count,
+title/body geometry, perimeter contamination, real drag displacement, close,
+and reopen path. Its Qwen selection record must distinguish accepted component
+regions from rejected complete candidates so a useful generated body cannot
+quietly reintroduce a screenshot-underlay architecture.

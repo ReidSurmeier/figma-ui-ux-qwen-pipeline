@@ -1,0 +1,40 @@
+{
+  "outputs": [
+    {
+      "bytes": 811659,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "e296700cbb3578e11bdc0e84e736315b0f5ab0cd2f942915a00ff9222c827cfb"
+    },
+    {
+      "bytes": 783784,
+      "file": "image-02.png",
+      "media_type": "image/png",
+      "sha256": "b5177407857a7b8be6b8e2df6fb828c0b47c5a174d5ce2b5ae1562d0ac978ad8"
+    },
+    {
+      "bytes": 698371,
+      "file": "image-03.png",
+      "media_type": "image/png",
+      "sha256": "d39ab189f4e9651c5ff782336b764d0e0ae7ac3829b26d0823f882b2e85a2402"
+    },
+    {
+      "bytes": 712001,
+      "file": "image-04.png",
+      "media_type": "image/png",
+      "sha256": "9ceab26ea3ea373c6c70e0388fd1983f029092ce8b8f03371459847da8b50f5b"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "553469b0-5a3f-9ff7-8a68-fe627313b4bc",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 3,
+    "input_image_type": "qima_input_1k",
+    "output_height": 600,
+    "output_image_count": 4,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

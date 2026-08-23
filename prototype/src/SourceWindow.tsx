@@ -22,6 +22,8 @@ type SourceWindowProps = {
   closeTop?: number;
   minimizeRight?: number;
   minimizeTop?: number;
+  open?: boolean;
+  onClose?: () => void;
 };
 
 export function SourceRaster({
@@ -45,15 +47,15 @@ export function SourceRaster({
   );
 }
 
-export function SourceWindow({ id, title, initialPosition, width, height, titleWidth, titleTextLeft = 16, titleTop = 3, assetRoot, zIndex, onActivate, children, minimizable = true, closable = true, dragHandleStyle, closeRight = 1, closeTop = 2, minimizeRight = 15, minimizeTop = 2 }: SourceWindowProps) {
+export function SourceWindow({ id, title, initialPosition, width, height, titleWidth, titleTextLeft = 16, titleTop = 3, assetRoot, zIndex, onActivate, children, minimizable = true, closable = true, dragHandleStyle, closeRight = 1, closeTop = 2, minimizeRight = 15, minimizeTop = 2, open, onClose }: SourceWindowProps) {
   const [position, setPosition] = useState(initialPosition);
   const [minimized, setMinimized] = useState(false);
-  const [open, setOpen] = useState(true);
+  const [locallyOpen, setLocallyOpen] = useState(true);
   const drag = useRef<{ pointer: Point; window: Point } | null>(null);
   const activeWidth = minimized ? 180 : width;
   const activeHeight = minimized ? 18 : height;
 
-  if (!open) return null;
+  if (!(open ?? locallyOpen)) return null;
 
   const move = (event: PointerEvent<HTMLElement>) => {
     if (!drag.current) return;
@@ -105,7 +107,7 @@ export function SourceWindow({ id, title, initialPosition, width, height, titleW
         {minimizable && <button type="button" className="source-window__button source-window__button--minimize" style={{ right: minimizeRight }} aria-label={`${title}を最小化`} aria-expanded={!minimized} onClick={() => setMinimized((value) => !value)}>
           <SourceRaster id={`${id}-minimize`} file={`${assetRoot}/components/minimize`} style={{ left: 0, top: minimizeTop, width: 14, height: 15 }} />
         </button>}
-        {closable && <button type="button" className="source-window__button source-window__button--close" style={{ right: closeRight }} aria-label={`${title}を閉じる`} onClick={() => setOpen(false)}>
+        {closable && <button type="button" className="source-window__button source-window__button--close" style={{ right: closeRight }} aria-label={`${title}を閉じる`} onClick={() => onClose ? onClose() : setLocallyOpen(false)}>
           <SourceRaster id={`${id}-close`} file={`${assetRoot}/components/close`} style={{ left: 0, top: closeTop, width: 13, height: 15 }} />
         </button>}
       </header>
