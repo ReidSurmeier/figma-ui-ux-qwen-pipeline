@@ -187,6 +187,16 @@ Use a layered QA system with one responsibility per layer:
     journey per slot. Exclusive ARIA state alone is insufficient: every inactive
     raster must remain byte-identical, and same-slot activation must restore the
     complete neutral bank without changing drag ownership.
+46. Runtime control records persist their declared visual component and lifecycle
+    targets in the shared manifest. Browser-only attributes are insufficient for
+    Figma parity or later engine export; capture must retain
+    `visualComponent`, `minimizeEndpoint`, and `closeWindow` when present.
+47. Pixel invariants capture authority only after foreground activation and two
+    consecutive identical frames. A navigation-complete event does not prove CSS
+    bitmap decode and compositing are settled under concurrent cold-page load.
+48. Source-raster authority additionally awaits explicit decode of every
+    computed CSS background in the target window. Two identical early frames can
+    precede delayed background decode under parallel browser pressure.
 
 ## Consequences
 

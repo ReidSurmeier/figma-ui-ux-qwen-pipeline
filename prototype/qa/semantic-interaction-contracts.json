@@ -216,7 +216,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
-        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -265,7 +265,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
-        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -310,7 +310,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status close removes the window and Basic Info restores the same independent destination",
-        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -781,7 +781,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -814,7 +814,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
-        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -847,7 +847,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment close removes the window and Basic Info restores its complete destination",
-        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1157,6 +1157,68 @@
           "rule": "inactive slot pixels remain byte-identical through every isolated selection and reversal"
         }
       ]
+    },
+    {
+      "id": "options-minimize-close-lifecycle-v001",
+      "window_id": "options",
+      "control_labels": ["最小化", "閉じる"],
+      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options generated minimize and close complete their reversible desktop lifecycle", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["Options uses its recorded generated compact endpoint and the Basic Info option action restores the complete closed destination."] },
+      "gesture": "trusted pointer clicks minimize, restore, close, and reopen Options from Basic Info",
+      "expected_region_changes": [{ "component_ids": ["options-minimize", "options-close"], "rule": "minimize traverses more than four geometry states to 180 by 18, restores exact pixels, and close/reopen restores the full destination" }],
+      "invariant_regions": [{ "component_ids": ["generated Options compact plate and complete expanded panel"], "rule": "both lifecycle endpoints match their locked authorities" }]
+    },
+    {
+      "id": "options-tabs-reversible-v001",
+      "window_id": "options",
+      "control_labels": ["option", "info"],
+      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options tabs own exact source strips and reverse to the original option panel", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "gesture": "trusted pointer clicks transfer from option to info and back",
+      "expected_region_changes": [{ "component_ids": ["options-tab-option", "options-tab-info"], "rule": "the exact non-overlapping source tab strips transfer selected state and expose the Japanese info panel" }],
+      "invariant_regions": [{ "component_ids": ["complete Options option panel"], "rule": "returning to option restores the exact source screenshot" }]
+    },
+    {
+      "id": "options-bgm-row-v001",
+      "window_id": "options",
+      "control_labels": ["BGMを下げる", "BGM", "BGMを上げる", "BGM on"],
+      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options BGM controls own one continuous reversible row", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "gesture": "trusted pointer arrow and checkbox clicks plus a 24-step slider drag and keyboard endpoints",
+      "expected_region_changes": [{ "component_ids": ["options-bgm-down", "options-bgm-thumb", "options-bgm-up", "options-bgm-on"], "rule": "the BGM row decrements, increments, toggles reversibly, samples more than four values, and reaches 0 and 100" }],
+      "invariant_regions": [{ "component_ids": ["complete Effect row"], "rule": "every BGM gesture leaves Effect byte-identical" }]
+    },
+    {
+      "id": "options-effect-row-v001",
+      "window_id": "options",
+      "control_labels": ["Effectを下げる", "Effect", "Effectを上げる", "Effect on"],
+      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options Effect controls own one continuous reversible row", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "gesture": "trusted pointer arrow and checkbox clicks plus a 24-step slider drag and keyboard endpoints",
+      "expected_region_changes": [{ "component_ids": ["options-effect-down", "options-effect-thumb", "options-effect-up", "options-effect-on"], "rule": "the Effect row decrements, increments, toggles reversibly, samples more than four values, and reaches 0 and 100" }],
+      "invariant_regions": [{ "component_ids": ["complete BGM row"], "rule": "every Effect gesture leaves BGM byte-identical" }]
+    },
+    {
+      "id": "options-skin-application-menu-v001",
+      "window_id": "options",
+      "control_labels": ["Skin"],
+      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options Skin is application-owned and keyboard reversible", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["Skin uses the application-owned pixel menu rather than a host-native dropdown."] },
+      "gesture": "trusted pointer selection plus keyboard ArrowDown, ArrowUp, and Escape",
+      "expected_region_changes": [{ "component_ids": ["options-skin"], "rule": "the application listbox opens, selects Japanese choices, reverses keyboard selection, and closes" }],
+      "invariant_regions": [{ "component_ids": ["Options title and volume rows"], "rule": "Skin interaction stays within its owned menu region" }]
+    },
+    {
+      "id": "options-footer-checkbox-family-v001",
+      "window_id": "options",
+      "control_label_patterns": ["^(opaque|attack|skill|item)$"],
+      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Every Options footer checkbox changes only itself and restores cleanly", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
+      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "gesture": "trusted pointer clicks toggle and restore all four footer checkboxes independently",
+      "expected_region_changes": [{ "component_id_pattern": "options-footer-*", "rule": "only the clicked checkbox changes and the second click restores its exact neutral pixels" }],
+      "invariant_regions": [{ "component_ids": ["the three inactive footer checkboxes"], "rule": "inactive siblings remain byte-identical for every family member" }]
     }
   ]
 }

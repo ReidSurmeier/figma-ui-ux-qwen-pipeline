@@ -171,36 +171,15 @@
     },
     {
       "windowId": "options",
-      "overall": "fail",
+      "overall": "pass",
       "controlCoverage": {
         "total": 17,
-        "contracted": 0,
-        "contractPassed": 0,
+        "contracted": 17,
+        "contractPassed": 17,
         "contractFailed": [],
-        "uncontracted": [
-          "最小化",
-          "閉じる",
-          "option",
-          "info",
-          "BGMを下げる",
-          "BGM",
-          "BGMを上げる",
-          "BGM on",
-          "Effectを下げる",
-          "Effect",
-          "Effectを上げる",
-          "Effect on",
-          "Skin",
-          "opaque",
-          "attack",
-          "skill",
-          "item"
-        ]
+        "uncontracted": []
       },
-      "failures": [
-        "settled-button-effects",
-        "complete-user-flow-not-screenshot-only"
-      ]
+      "failures": []
     }
   ]
 }

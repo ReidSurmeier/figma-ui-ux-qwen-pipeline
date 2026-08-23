@@ -1,8 +1,39 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
 import { execFileSync } from "node:child_process";
 import { mkdtempSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+
+async function activateWindow(window: Locator) {
+  await window.dispatchEvent("pointerdown");
+  await expect.poll(() => window.evaluate((element) => {
+    const z = Number(getComputedStyle(element).zIndex);
+    const all = [...element.parentElement!.querySelectorAll<HTMLElement>("[data-window-id]")].map((node) => Number(getComputedStyle(node).zIndex));
+    return z === Math.max(...all);
+  })).toBe(true);
+  await window.evaluate(async (root) => {
+    const urls = [root, ...root.querySelectorAll<HTMLElement>("*")].flatMap((node) => (
+      [...getComputedStyle(node).backgroundImage.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1])
+    ));
+    await Promise.all([...new Set(urls)].map(async (url) => {
+      const image = new Image();
+      image.src = url;
+      await image.decode();
+    }));
+  });
+  await window.page().evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+}
+
+async function stableClip(page: Page, clip: { x: number; y: number; width: number; height: number }) {
+  let previous = await page.screenshot({ clip });
+  for (let attempt = 0; attempt < 8; attempt += 1) {
+    await page.waitForTimeout(24);
+    const current = await page.screenshot({ clip });
+    if (current.equals(previous)) return current;
+    previous = current;
+  }
+  throw new Error("Status authority did not settle to two identical frames");
+}
 
 function opaquePinkPixelCount(path: string) {
   return Number(execFileSync("convert", [
@@ -34,6 +65,7 @@ test("status is a Qwen clean plate plus independent source-locked raster groups"
 test("status increment visibly changes only the source value field", async ({ page }) => {
   await page.goto("/");
   const window = page.getByRole("region", { name: "ステータス" });
+  await activateWindow(window);
   const button = window.getByRole("button", { name: "Strを上げる" });
   const bounds = await window.boundingBox();
   expect(bounds).not.toBeNull();
@@ -50,8 +82,8 @@ test("status increment visibly changes only the source value field", async ({ pa
     width: 52,
     height: 18,
   };
-  const labelBefore = await page.screenshot({ clip: labelClip });
-  const valueBefore = await page.screenshot({ clip: valueClip });
+  const labelBefore = await stableClip(page, labelClip);
+  const valueBefore = await stableClip(page, valueClip);
 
   await expect(button).toHaveAttribute("aria-pressed", "false");
   await button.click();

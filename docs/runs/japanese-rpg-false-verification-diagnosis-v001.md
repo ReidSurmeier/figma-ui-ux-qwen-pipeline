@@ -184,6 +184,54 @@ so `settled-button-effects` and `complete-user-flow-not-screenshot-only` fail
 closed. The next method revision is therefore an Options contract-coverage task,
 not evidence that the other 14 windows need regeneration.
 
+## Options explicit-control-ownership tracer
+
+The initial full replay found all 17 Options controls reachable but zero
+contracted. The existing browser suite proved many individual pixels and flows,
+but no locked journey connected each control label to its visible component,
+invariant siblings, and approved reversal. A six-journey RED suite then failed
+every group because the controls exposed no `data-visual-component`; minimize
+and close also lacked machine-readable lifecycle targets.
+
+Options now declares ownership for minimize, close, both tabs, both complete
+four-control volume rows, Skin, and all four footer checkboxes. The locked suite
+proves generated minimize/restore plus close/reopen, exact reversible tab strips,
+continuous BGM and Effect endpoints with cross-row invariants, the application-
+owned Japanese Skin listbox, and isolated checkbox restoration. The focused
+correction replay reports 17 controls, 17 contracted, 17 contract-passed, zero
+uncontracted, and no correction failures. Runtime manifest capture now retains
+visual and lifecycle target declarations so this ownership can reach Figma and
+later engine validation.
+
+The final combined correction replay passes all 15 windows. Every one of the
+139 currently enabled controls is either covered by a passing locked semantic
+contract or belongs to a source window with no controls; no control is
+uncontracted and no recurring correction prompt reports a failure. This is the
+first full-run correction result in which Options, Party satellites, and
+Quickbar are all covered by the same owner-aware method.
+
+The first 109-test combined browser run then produced one non-repeatable Status
+label invariant failure. The stronger all-five-row ownership journey passed in
+that run, and ten six-worker repetitions of the failing Str journey passed. The
+weaker test captured its authority immediately after navigation without first
+activating Status or proving two identical frames. It now foregrounds the
+window and requires a stable pre-gesture bitmap; the post-click label invariant
+remains byte-exact, so actual value-to-label bleed still fails.
+
+The next full replay exposed the same missing precondition in Equipment: its
+10-row journey failed only at the final title comparison, while minimize and
+close passed and the complete suite had just passed. Equipment already activated
+the window but captured title and avatar after only two animation frames. Those
+pixel authorities now also require consecutive identical frames before any row
+gesture; final comparisons remain byte-exact.
+
+That frame-only fix still failed 2 of 20 Equipment stress repetitions. The
+source rasters are CSS backgrounds, and two early frames can agree before a
+delayed decode completes under six-worker pressure. Status and Equipment now
+enumerate their computed background URLs and await `Image.decode()` before the
+stable-frame gate. This targets the observed cold-decode race without relaxing
+any pixel invariant.
+
 ## First RED tracer
 
 `remaining-source-windows.spec.ts` now includes:

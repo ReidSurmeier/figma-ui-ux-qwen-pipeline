@@ -193,6 +193,21 @@ second activation that restores the complete neutral bank. It repeats the
 journey with keyboard activation and after a real window drag so a generic
 pressed-state class cannot conceal wrong raster ownership.
 
+The runtime manifest retains each control's `visualComponent`,
+`minimizeEndpoint`, and `closeWindow` declarations in addition to role and
+geometry. This makes browser ownership auditable by the Figma review layer and
+future engine export instead of leaving the mapping inside transient DOM state.
+
+Local pixel authorities require both foreground activation and two consecutive
+identical screenshots before the gesture. This preserves exact post-gesture
+invariants while rejecting cold CSS-bitmap decode or z-order transition frames
+as valid baselines.
+
+For source-raster windows, stabilization first enumerates every computed CSS
+background URL in the target and awaits `Image.decode()` for each unique asset.
+Frame equality alone is not enough because two early frames can agree before a
+late background decode changes the authority.
+
 Spatial containment is not semantic ownership. A source control may sit outside
 its window and remain fixed while that window is dragged. Such satellite
 controls declare `data-control-owner` with the stable window ID. Runtime

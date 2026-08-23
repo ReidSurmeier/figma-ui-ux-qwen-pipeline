@@ -4,12 +4,12 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787470702058",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787471351853",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787470702058",
-    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787465551356",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787471351853",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787471351853",
     "http://10.255.255.254:4174/src/styles.css?t=1787469847023",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
@@ -637,8 +637,9 @@
       "e2e/game-menu-source.spec.ts",
       "e2e/party-source.spec.ts",
       "e2e/quickbar-source.spec.ts",
+      "e2e/options-semantic.spec.ts",
       "--grep",
-      "(?:Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag|every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores|every source-visible Status increment owns its exact hitbox and changes only its local value field|status minimize uses a generated compact endpoint through complete motion and restores the full source geometry|status close removes the window and Basic Info restores the same independent destination|every Inventory category is a reachable tab with its complete selectable cell inventory|every reachable Inventory cell independently owns selection in all three categories|Inventory real scroll gestures keep one visual thumb and every sampled body state below the header|Inventory minimize uses a generated compact endpoint through complete motion and restores|Inventory close removes the window and Basic Info restores its exact componentized destination|Card art rotation is reversible and leaves title plus copy pixels invariant|Card real scroll gestures move copy and one visual thumb without entering title or art|Card slot controls the Card scroll state without changing title or art|Card close target removes exactly the Card window|Every Skills row and level control is pointer-reachable on its settled page and owns only its state|Skills real scroll gestures keep one thumb and the clipped list outside title and footer|Skills use acts on selection and both close controls support Basic Info recovery|Every Equipment row owns its exact source column and transfers exclusive selection|Equipment minimize uses its generated compact endpoint through complete motion and restores|Equipment close removes the window and Basic Info restores its complete destination|Bottom Bar previous and next controls are reversible and leave slider plus title invariant|Chat visibly edits Japanese topic and submits one application-owned form without invented tabs|Chat cancel restores the complete default form instead of only clearing topic|Every Exchange item owns its exact grid cell and transfers exclusive selection|Exchange confirm enables Trade and Trade or cancel restore a clean transaction|Every Game Menu action owns its source row, transfers selection, and toggles back to ready|Every Party member is a reachable listbox option with exclusive reversible selection|Party tools and source tabs transfer state and support keyboard traversal|Party satellite actions stay fixed while Party moves and expose exact ownership|Party close removes satellites and Basic Info friend restores the complete destination|Every Quickbar slot owns its exact raster and reverses independently to neutral)",
+      "(?:Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag|every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores|every source-visible Status increment owns its exact hitbox and changes only its local value field|status minimize uses a generated compact endpoint through complete motion and restores the full source geometry|status close removes the window and Basic Info restores the same independent destination|every Inventory category is a reachable tab with its complete selectable cell inventory|every reachable Inventory cell independently owns selection in all three categories|Inventory real scroll gestures keep one visual thumb and every sampled body state below the header|Inventory minimize uses a generated compact endpoint through complete motion and restores|Inventory close removes the window and Basic Info restores its exact componentized destination|Card art rotation is reversible and leaves title plus copy pixels invariant|Card real scroll gestures move copy and one visual thumb without entering title or art|Card slot controls the Card scroll state without changing title or art|Card close target removes exactly the Card window|Every Skills row and level control is pointer-reachable on its settled page and owns only its state|Skills real scroll gestures keep one thumb and the clipped list outside title and footer|Skills use acts on selection and both close controls support Basic Info recovery|Every Equipment row owns its exact source column and transfers exclusive selection|Equipment minimize uses its generated compact endpoint through complete motion and restores|Equipment close removes the window and Basic Info restores its complete destination|Bottom Bar previous and next controls are reversible and leave slider plus title invariant|Chat visibly edits Japanese topic and submits one application-owned form without invented tabs|Chat cancel restores the complete default form instead of only clearing topic|Every Exchange item owns its exact grid cell and transfers exclusive selection|Exchange confirm enables Trade and Trade or cancel restore a clean transaction|Every Game Menu action owns its source row, transfers selection, and toggles back to ready|Every Party member is a reachable listbox option with exclusive reversible selection|Party tools and source tabs transfer state and support keyboard traversal|Party satellite actions stay fixed while Party moves and expose exact ownership|Party close removes satellites and Basic Info friend restores the complete destination|Every Quickbar slot owns its exact raster and reverses independently to neutral|Options generated minimize and close complete their reversible desktop lifecycle|Options tabs own exact source strips and reverse to the original option panel|Options BGM controls own one continuous reversible row|Options Effect controls own one continuous reversible row|Options Skin is application-owned and keyboard reversible|Every Options footer checkbox changes only itself and restores cleanly)",
       "--reporter=json"
     ],
     "report": "artifacts/qa/correction-matrix-v003/semantic-contract-playwright.json"
@@ -825,7 +826,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
-        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -863,7 +864,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
-        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -904,7 +905,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status close removes the window and Basic Info restores the same independent destination",
-        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1495,7 +1496,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1536,7 +1537,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
-        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1577,7 +1578,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment close removes the window and Basic Info restores its complete destination",
-        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2089,6 +2090,247 @@
         "scope": [
           "Each source-visible Quickbar slot owns only its extracted raster, transfers exclusive selection, and can return independently to the source-neutral state."
         ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-minimize-close-lifecycle-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "最小化",
+        "閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options generated minimize and close complete their reversible desktop lifecycle",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Options uses its recorded generated compact endpoint and the Basic Info option action restores the complete closed destination."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-tabs-reversible-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "option",
+        "info"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options tabs own exact source strips and reverse to the original option panel",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-bgm-row-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "BGMを下げる",
+        "BGM",
+        "BGMを上げる",
+        "BGM on"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options BGM controls own one continuous reversible row",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-effect-row-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "Effectを下げる",
+        "Effect",
+        "Effectを上げる",
+        "Effect on"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options Effect controls own one continuous reversible row",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-skin-application-menu-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "Skin"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options Skin is application-owned and keyboard reversible",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Skin uses the application-owned pixel menu rather than a host-native dropdown."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-footer-checkbox-family-v001",
+      "windowId": "options",
+      "controlLabelPatterns": [
+        "^(opaque|attack|skill|item)$"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Every Options footer checkbox changes only itself and restores cleanly",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
       },
       "behaviorApproved": true,
       "requirements": {

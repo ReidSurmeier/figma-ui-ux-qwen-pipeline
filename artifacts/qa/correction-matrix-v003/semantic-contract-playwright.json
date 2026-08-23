@@ -16,8 +16,9 @@
       "e2e/game-menu-source.spec.ts",
       "e2e/party-source.spec.ts",
       "e2e/quickbar-source.spec.ts",
+      "e2e/options-semantic.spec.ts",
       "--grep",
-      "(?:Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag|every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores|every source-visible Status increment owns its exact hitbox and changes only its local value field|status minimize uses a generated compact endpoint through complete motion and restores the full source geometry|status close removes the window and Basic Info restores the same independent destination|every Inventory category is a reachable tab with its complete selectable cell inventory|every reachable Inventory cell independently owns selection in all three categories|Inventory real scroll gestures keep one visual thumb and every sampled body state below the header|Inventory minimize uses a generated compact endpoint through complete motion and restores|Inventory close removes the window and Basic Info restores its exact componentized destination|Card art rotation is reversible and leaves title plus copy pixels invariant|Card real scroll gestures move copy and one visual thumb without entering title or art|Card slot controls the Card scroll state without changing title or art|Card close target removes exactly the Card window|Every Skills row and level control is pointer-reachable on its settled page and owns only its state|Skills real scroll gestures keep one thumb and the clipped list outside title and footer|Skills use acts on selection and both close controls support Basic Info recovery|Every Equipment row owns its exact source column and transfers exclusive selection|Equipment minimize uses its generated compact endpoint through complete motion and restores|Equipment close removes the window and Basic Info restores its complete destination|Bottom Bar previous and next controls are reversible and leave slider plus title invariant|Chat visibly edits Japanese topic and submits one application-owned form without invented tabs|Chat cancel restores the complete default form instead of only clearing topic|Every Exchange item owns its exact grid cell and transfers exclusive selection|Exchange confirm enables Trade and Trade or cancel restore a clean transaction|Every Game Menu action owns its source row, transfers selection, and toggles back to ready|Every Party member is a reachable listbox option with exclusive reversible selection|Party tools and source tabs transfer state and support keyboard traversal|Party satellite actions stay fixed while Party moves and expose exact ownership|Party close removes satellites and Basic Info friend restores the complete destination|Every Quickbar slot owns its exact raster and reverses independently to neutral)",
+      "(?:Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag|every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores|every source-visible Status increment owns its exact hitbox and changes only its local value field|status minimize uses a generated compact endpoint through complete motion and restores the full source geometry|status close removes the window and Basic Info restores the same independent destination|every Inventory category is a reachable tab with its complete selectable cell inventory|every reachable Inventory cell independently owns selection in all three categories|Inventory real scroll gestures keep one visual thumb and every sampled body state below the header|Inventory minimize uses a generated compact endpoint through complete motion and restores|Inventory close removes the window and Basic Info restores its exact componentized destination|Card art rotation is reversible and leaves title plus copy pixels invariant|Card real scroll gestures move copy and one visual thumb without entering title or art|Card slot controls the Card scroll state without changing title or art|Card close target removes exactly the Card window|Every Skills row and level control is pointer-reachable on its settled page and owns only its state|Skills real scroll gestures keep one thumb and the clipped list outside title and footer|Skills use acts on selection and both close controls support Basic Info recovery|Every Equipment row owns its exact source column and transfers exclusive selection|Equipment minimize uses its generated compact endpoint through complete motion and restores|Equipment close removes the window and Basic Info restores its complete destination|Bottom Bar previous and next controls are reversible and leave slider plus title invariant|Chat visibly edits Japanese topic and submits one application-owned form without invented tabs|Chat cancel restores the complete default form instead of only clearing topic|Every Exchange item owns its exact grid cell and transfers exclusive selection|Exchange confirm enables Trade and Trade or cancel restore a clean transaction|Every Game Menu action owns its source row, transfers selection, and toggles back to ready|Every Party member is a reachable listbox option with exclusive reversible selection|Party tools and source tabs transfer state and support keyboard traversal|Party satellite actions stay fixed while Party moves and expose exact ownership|Party close removes satellites and Basic Info friend restores the complete destination|Every Quickbar slot owns its exact raster and reverses independently to neutral|Options generated minimize and close complete their reversible desktop lifecycle|Options tabs own exact source strips and reverse to the original option panel|Options BGM controls own one continuous reversible row|Options Effect controls own one continuous reversible row|Options Skin is application-owned and keyboard reversible|Every Options footer checkbox changes only itself and restores cleanly)",
       "--reporter=json"
     ],
     "configFile": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/playwright.config.ts",
@@ -99,12 +100,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4839,
+                  "duration": 4657,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:09.252Z",
+                  "startTime": "2026-08-23T08:08:51.189Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -133,12 +134,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2257,
+                  "duration": 2168,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:14.346Z",
+                  "startTime": "2026-08-23T08:08:56.079Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -167,12 +168,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6305,
+                  "duration": 5723,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:16.611Z",
+                  "startTime": "2026-08-23T08:08:58.257Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -209,12 +210,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 3771,
+                  "duration": 4346,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:09.253Z",
+                  "startTime": "2026-08-23T08:08:51.192Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -243,12 +244,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 2883,
+                  "duration": 1954,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:13.331Z",
+                  "startTime": "2026-08-23T08:08:55.745Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -285,12 +286,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 3929,
+                  "duration": 4005,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:09.235Z",
+                  "startTime": "2026-08-23T08:08:51.193Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -319,12 +320,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 4085,
+                  "duration": 2448,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:13.396Z",
+                  "startTime": "2026-08-23T08:08:55.495Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -353,12 +354,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1180,
+                  "duration": 1346,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:17.487Z",
+                  "startTime": "2026-08-23T08:08:57.956Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -387,12 +388,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1005,
+                  "duration": 884,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:18.675Z",
+                  "startTime": "2026-08-23T08:08:59.309Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -429,12 +430,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 3158,
+                  "duration": 3553,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:09.247Z",
+                  "startTime": "2026-08-23T08:08:51.185Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -463,12 +464,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1028,
+                  "duration": 1122,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:12.695Z",
+                  "startTime": "2026-08-23T08:08:54.931Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -505,12 +506,12 @@
                   "workerIndex": 4,
                   "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 4353,
+                  "duration": 4255,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:09.241Z",
+                  "startTime": "2026-08-23T08:08:51.194Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -520,7 +521,7 @@
           ],
           "id": "8b80f622c2e623f8bb72-cc174765567e056fcfce",
           "file": "equipment-source.spec.ts",
-          "line": 13,
+          "line": 34,
           "column": 1
         },
         {
@@ -539,12 +540,12 @@
                   "workerIndex": 4,
                   "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 2595,
+                  "duration": 2617,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:13.841Z",
+                  "startTime": "2026-08-23T08:08:55.697Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -554,7 +555,7 @@
           ],
           "id": "8b80f622c2e623f8bb72-ab5ace3c51ae8cb86ce3",
           "file": "equipment-source.spec.ts",
-          "line": 46,
+          "line": 67,
           "column": 1
         },
         {
@@ -573,12 +574,12 @@
                   "workerIndex": 4,
                   "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 1071,
+                  "duration": 1635,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:16.444Z",
+                  "startTime": "2026-08-23T08:08:58.322Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -588,7 +589,7 @@
           ],
           "id": "8b80f622c2e623f8bb72-47df4a695772aee894cc",
           "file": "equipment-source.spec.ts",
-          "line": 74,
+          "line": 95,
           "column": 1
         }
       ]
@@ -615,12 +616,12 @@
                   "workerIndex": 5,
                   "parallelIndex": 5,
                   "status": "passed",
-                  "duration": 4768,
+                  "duration": 4913,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:09.235Z",
+                  "startTime": "2026-08-23T08:08:51.192Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -649,12 +650,12 @@
                   "workerIndex": 5,
                   "parallelIndex": 5,
                   "status": "passed",
-                  "duration": 1216,
+                  "duration": 1222,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:14.182Z",
+                  "startTime": "2026-08-23T08:08:56.380Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -691,12 +692,12 @@
                   "workerIndex": 3,
                   "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1400,
+                  "duration": 2041,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:13.733Z",
+                  "startTime": "2026-08-23T08:08:56.065Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -730,15 +731,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
                   "status": "passed",
-                  "duration": 1219,
+                  "duration": 1389,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:15.149Z",
+                  "startTime": "2026-08-23T08:08:57.619Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -764,15 +765,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
                   "status": "passed",
-                  "duration": 3346,
+                  "duration": 3267,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:16.373Z",
+                  "startTime": "2026-08-23T08:08:59.016Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -798,15 +799,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
                   "status": "passed",
-                  "duration": 2121,
+                  "duration": 2162,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:19.726Z",
+                  "startTime": "2026-08-23T08:09:02.290Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -832,15 +833,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
                   "status": "passed",
-                  "duration": 1536,
+                  "duration": 2023,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:21.854Z",
+                  "startTime": "2026-08-23T08:09:04.458Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -866,15 +867,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 3,
-                  "parallelIndex": 3,
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
                   "status": "passed",
-                  "duration": 868,
+                  "duration": 824,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:23.396Z",
+                  "startTime": "2026-08-23T08:09:06.487Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -885,6 +886,218 @@
           "id": "445a187e1882bd4cc175-31ef84f5447fe5ecadc7",
           "file": "inventory-source.spec.ts",
           "line": 238,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "options-semantic.spec.ts",
+      "file": "options-semantic.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Options generated minimize and close complete their reversible desktop lifecycle",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2338,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T08:08:57.714Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a8ecef46ac53c7d0e72-225973aaae67d811c64c",
+          "file": "options-semantic.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "Options tabs own exact source strips and reverse to the original option panel",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 826,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T08:09:00.059Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a8ecef46ac53c7d0e72-3e6ca3a6d060710e2f16",
+          "file": "options-semantic.spec.ts",
+          "line": 49,
+          "column": 1
+        },
+        {
+          "title": "Options BGM controls own one continuous reversible row",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1292,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T08:09:00.893Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a8ecef46ac53c7d0e72-1fd68a23ad217375e82a",
+          "file": "options-semantic.spec.ts",
+          "line": 70,
+          "column": 3
+        },
+        {
+          "title": "Options Effect controls own one continuous reversible row",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1324,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T08:09:02.193Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a8ecef46ac53c7d0e72-c9acc9934067fb0ea046",
+          "file": "options-semantic.spec.ts",
+          "line": 70,
+          "column": 3
+        },
+        {
+          "title": "Options Skin is application-owned and keyboard reversible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 610,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T08:09:03.524Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a8ecef46ac53c7d0e72-41b65ed3b4fdf2e21049",
+          "file": "options-semantic.spec.ts",
+          "line": 116,
+          "column": 1
+        },
+        {
+          "title": "Every Options footer checkbox changes only itself and restores cleanly",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2526,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T08:09:04.142Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3a8ecef46ac53c7d0e72-5a3f1cbe7daa24e684d0",
+          "file": "options-semantic.spec.ts",
+          "line": 134,
           "column": 1
         }
       ]
@@ -908,15 +1121,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 5,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1349,
+                  "duration": 2015,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:15.408Z",
+                  "startTime": "2026-08-23T08:08:58.120Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -942,15 +1155,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 5,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1899,
+                  "duration": 1420,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:16.764Z",
+                  "startTime": "2026-08-23T08:09:00.145Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -976,15 +1189,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 5,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1257,
+                  "duration": 1127,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:18.672Z",
+                  "startTime": "2026-08-23T08:09:01.574Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1010,15 +1223,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 5,
-                  "parallelIndex": 5,
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
                   "status": "passed",
-                  "duration": 1489,
+                  "duration": 1092,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:19.936Z",
+                  "startTime": "2026-08-23T08:09:02.708Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1052,15 +1265,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 3102,
+                  "duration": 3715,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:16.225Z",
+                  "startTime": "2026-08-23T08:08:59.975Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1094,15 +1307,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 2517,
+                  "duration": 2460,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:17.528Z",
+                  "startTime": "2026-08-23T08:09:00.210Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1128,15 +1341,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 1784,
+                  "duration": 1275,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:20.050Z",
+                  "startTime": "2026-08-23T08:09:02.676Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1162,15 +1375,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 4,
-                  "parallelIndex": 4,
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
                   "status": "passed",
-                  "duration": 2828,
+                  "duration": 2659,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:21.841Z",
+                  "startTime": "2026-08-23T08:09:03.958Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1204,15 +1417,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 5733,
+                  "duration": 5206,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:19.346Z",
+                  "startTime": "2026-08-23T08:09:03.703Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1222,7 +1435,7 @@
           ],
           "id": "09069bc0ead11ead76fd-84361a17c3d10be23973",
           "file": "status-source.spec.ts",
-          "line": 66,
+          "line": 98,
           "column": 1
         },
         {
@@ -1238,15 +1451,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 1295,
+                  "duration": 1279,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:25.087Z",
+                  "startTime": "2026-08-23T08:09:08.915Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1256,7 +1469,7 @@
           ],
           "id": "09069bc0ead11ead76fd-18b050d75ecfb2d332c7",
           "file": "status-source.spec.ts",
-          "line": 123,
+          "line": 155,
           "column": 1
         },
         {
@@ -1272,15 +1485,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
                   "status": "passed",
-                  "duration": 773,
+                  "duration": 793,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-08-23T07:40:26.388Z",
+                  "startTime": "2026-08-23T08:09:10.199Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -1290,7 +1503,7 @@
           ],
           "id": "09069bc0ead11ead76fd-73706a34e1ee7e4aef3a",
           "file": "status-source.spec.ts",
-          "line": 164,
+          "line": 196,
           "column": 1
         }
       ]
@@ -1298,9 +1511,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-08-23T07:40:08.789Z",
-    "duration": 18502.043,
-    "expected": 33,
+    "startTime": "2026-08-23T08:08:50.743Z",
+    "duration": 20395.846,
+    "expected": 39,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

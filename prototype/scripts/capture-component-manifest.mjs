@@ -46,11 +46,19 @@ export async function captureRuntimeComponentManifest(page) {
       })).filter(({ assetPath: path }) => path),
       controls: ownedNodes("button, input, [role=tab], [role=option]")
         .filter((node) => node.getBoundingClientRect().width > 0 && node.getBoundingClientRect().height > 0)
-        .map((node, index) => ({
-          id: node.getAttribute("aria-label") || node.textContent?.trim().replace(/\s+/g, " ") || `control-${index}`,
-          role: node.getAttribute("role") || node.tagName.toLowerCase(),
-          geometry: relative(node),
-        })),
+        .map((node, index) => {
+          const visualComponent = node.getAttribute("data-visual-component");
+          const minimizeEndpoint = node.getAttribute("data-minimize-endpoint");
+          const closeWindow = node.getAttribute("data-close-window");
+          return {
+            id: node.getAttribute("aria-label") || node.textContent?.trim().replace(/\s+/g, " ") || `control-${index}`,
+            role: node.getAttribute("role") || node.tagName.toLowerCase(),
+            geometry: relative(node),
+            ...(visualComponent ? { visualComponent } : {}),
+            ...(minimizeEndpoint ? { minimizeEndpoint } : {}),
+            ...(closeWindow ? { closeWindow } : {}),
+          };
+        }),
     };
   }));
 

@@ -5,10 +5,10 @@
   "windows": [
     {
       "id": "options",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
-        "status": "fail",
+        "status": "pass",
         "report": "artifacts/qa/options/correction-replay-v003.json"
       }
     },

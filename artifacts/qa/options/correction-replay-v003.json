@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
   "window_id": "options",
-  "overall": "fail",
+  "overall": "pass",
   "evidence_scope": "fresh executable per-window correction matrix",
   "evidence": [
     "artifacts/qa/correction-matrix-v003/options/trace.json",
@@ -11,28 +11,10 @@
   ],
   "control_coverage": {
     "total": 17,
-    "contracted": 0,
-    "contractPassed": 0,
+    "contracted": 17,
+    "contractPassed": 17,
     "contractFailed": [],
-    "uncontracted": [
-      "最小化",
-      "閉じる",
-      "option",
-      "info",
-      "BGMを下げる",
-      "BGM",
-      "BGMを上げる",
-      "BGM on",
-      "Effectを下げる",
-      "Effect",
-      "Effectを上げる",
-      "Effect on",
-      "Skin",
-      "opaque",
-      "attack",
-      "skill",
-      "item"
-    ]
+    "uncontracted": []
   },
   "results": [
     {
@@ -734,57 +716,21 @@
     },
     {
       "prompt_id": "settled-button-effects",
-      "verdict": "fail",
-      "note": "Executed probe found a reproducible failure; see metrics and retained failure frames.",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
       "evidence": [
         {
           "kind": "executed-browser-probe",
           "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
           "metrics": {
             "controlCount": 17,
-            "failures": [
-              "最小化",
-              "閉じる",
-              "option",
-              "info",
-              "BGMを下げる",
-              "BGM",
-              "BGMを上げる",
-              "BGM on",
-              "Effectを下げる",
-              "Effect",
-              "Effectを上げる",
-              "Effect on",
-              "Skin",
-              "opaque",
-              "attack",
-              "skill",
-              "item"
-            ],
+            "failures": [],
             "controlCoverage": {
               "total": 17,
-              "contracted": 0,
-              "contractPassed": 0,
+              "contracted": 17,
+              "contractPassed": 17,
               "contractFailed": [],
-              "uncontracted": [
-                "最小化",
-                "閉じる",
-                "option",
-                "info",
-                "BGMを下げる",
-                "BGM",
-                "BGMを上げる",
-                "BGM on",
-                "Effectを下げる",
-                "Effect",
-                "Effectを上げる",
-                "Effect on",
-                "Skin",
-                "opaque",
-                "attack",
-                "skill",
-                "item"
-              ]
+              "uncontracted": []
             }
           }
         }
@@ -851,57 +797,21 @@
     },
     {
       "prompt_id": "complete-user-flow-not-screenshot-only",
-      "verdict": "fail",
-      "note": "Executed probe found a reproducible failure; see metrics and retained failure frames.",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
       "evidence": [
         {
           "kind": "executed-browser-probe",
           "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
           "metrics": {
             "controlCount": 17,
-            "failures": [
-              "最小化",
-              "閉じる",
-              "option",
-              "info",
-              "BGMを下げる",
-              "BGM",
-              "BGMを上げる",
-              "BGM on",
-              "Effectを下げる",
-              "Effect",
-              "Effectを上げる",
-              "Effect on",
-              "Skin",
-              "opaque",
-              "attack",
-              "skill",
-              "item"
-            ],
+            "failures": [],
             "controlCoverage": {
               "total": 17,
-              "contracted": 0,
-              "contractPassed": 0,
+              "contracted": 17,
+              "contractPassed": 17,
               "contractFailed": [],
-              "uncontracted": [
-                "最小化",
-                "閉じる",
-                "option",
-                "info",
-                "BGMを下げる",
-                "BGM",
-                "BGMを上げる",
-                "BGM on",
-                "Effectを下げる",
-                "Effect",
-                "Effectを上げる",
-                "Effect on",
-                "Skin",
-                "opaque",
-                "attack",
-                "skill",
-                "item"
-              ]
+              "uncontracted": []
             },
             "consoleErrors": []
           }
@@ -1035,25 +945,7 @@
                 "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ],
-            "discreteControlFailures": [
-              "最小化",
-              "閉じる",
-              "option",
-              "info",
-              "BGMを下げる",
-              "BGM",
-              "BGMを上げる",
-              "BGM on",
-              "Effectを下げる",
-              "Effect",
-              "Effectを上げる",
-              "Effect on",
-              "Skin",
-              "opaque",
-              "attack",
-              "skill",
-              "item"
-            ]
+            "discreteControlFailures": []
           }
         }
       ]

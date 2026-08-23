@@ -1,4 +1,4 @@
-import { expect, test, type Locator } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
 
 async function activateWindow(window: Locator) {
   await window.dispatchEvent("pointerdown");
@@ -7,7 +7,28 @@ async function activateWindow(window: Locator) {
     const all = [...element.parentElement!.querySelectorAll<HTMLElement>("[data-window-id]")].map((node) => Number(getComputedStyle(node).zIndex));
     return z === Math.max(...all);
   })).toBe(true);
+  await window.evaluate(async (root) => {
+    const urls = [root, ...root.querySelectorAll<HTMLElement>("*")].flatMap((node) => (
+      [...getComputedStyle(node).backgroundImage.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map((match) => match[1])
+    ));
+    await Promise.all([...new Set(urls)].map(async (url) => {
+      const image = new Image();
+      image.src = url;
+      await image.decode();
+    }));
+  });
   await window.page().evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+}
+
+async function stableClip(page: Page, clip: { x: number; y: number; width: number; height: number }) {
+  let previous = await page.screenshot({ clip });
+  for (let attempt = 0; attempt < 8; attempt += 1) {
+    await page.waitForTimeout(24);
+    const current = await page.screenshot({ clip });
+    if (current.equals(previous)) return current;
+    previous = current;
+  }
+  throw new Error("Equipment authority did not settle to two identical frames");
 }
 
 test("Every Equipment row owns its exact source column and transfers exclusive selection", async ({ page }) => {
@@ -18,8 +39,8 @@ test("Every Equipment row owns its exact source column and transfers exclusive s
   if (!bounds) throw new Error("Equipment geometry is unavailable");
   const titleClip = { x: bounds.x, y: bounds.y, width: 280, height: 18 };
   const avatarClip = { x: bounds.x + 109, y: bounds.y + 18, width: 61, height: 134 };
-  const titleAuthority = await page.screenshot({ clip: titleClip });
-  const avatarAuthority = await page.screenshot({ clip: avatarClip });
+  const titleAuthority = await stableClip(page, titleClip);
+  const avatarAuthority = await stableClip(page, avatarClip);
 
   for (const side of ["左", "右"] as const) {
     for (let row = 0; row < 5; row += 1) {
