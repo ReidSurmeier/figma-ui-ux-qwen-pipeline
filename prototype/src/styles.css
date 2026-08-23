@@ -93,18 +93,11 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .source-window__button:active { filter: brightness(0.72); }
 .source-window--minimized .source-window__button--minimize { right: 15px; }
 
-.status-source-tab { position: absolute; z-index: 4; left: 3px; width: 17px; padding: 0; border: 0; background: transparent; }
-.status-source-tab--stats { top: 18px; height: 54px; }
-.status-source-tab--info { top: 72px; height: 54px; }
-.status-source-tab:active { filter: brightness(0.72); }
-.status-source-tab[aria-pressed="true"] { box-shadow: inset 2px 0 #668fb9; }
 .status-source-row { position: absolute; left: 0; width: 280px; height: 18px; }
 .status-source-row > button { position: absolute; z-index: 5; left: 91px; top: 3px; width: 11px; height: 11px; padding: 0; border: 0; background: transparent; }
 .status-source-row > button:active { background: rgba(55, 100, 164, 0.24); }
 .status-source-value-patch { position: absolute; z-index: 4; left: 54px; top: 8px; width: 7px; height: 10px; overflow: hidden; padding: 0; border: 0; background-image: var(--source-clean-plate); background-size: 280px 126px; color: transparent; }
 .status-source-value-patch > span { position: absolute; left: 1px; top: 3px; width: 5px; height: 7px; background-image: url("/assets/japanese-rpg-v001/status/components/primary-row-0.png"); background-position: -55px -11px; }
-.status-source-info { position: absolute; left: 24px; top: 23px; display: grid; gap: 7px; width: 244px; color: #183d70; font-size: 11px; line-height: 14px; }
-.status-source-info strong { font-weight: 400; color: #12345f; }
 
 .inventory-source-tab { position: absolute; z-index: 5; width: 29px; height: 35px; padding: 0; border: 0; background: transparent; }
 .inventory-source-tab:active { filter: brightness(0.72); }

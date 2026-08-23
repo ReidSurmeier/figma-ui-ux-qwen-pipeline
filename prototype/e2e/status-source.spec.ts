@@ -63,15 +63,13 @@ test("status increment visibly changes only the source value field", async ({ pa
   expect(valueAfter.equals(valueBefore), "the visible Str value must change").toBe(false);
 });
 
-test("status tabs map to their own content and restore the source table", async ({ page }) => {
+test("status does not invent an alternate tab over the source-only STATUS label", async ({ page }) => {
   await page.goto("/");
   const window = page.getByRole("region", { name: "ステータス" });
-  await window.getByRole("button", { name: "info" }).click();
-  await expect(window.getByRole("button", { name: "info" })).toHaveAttribute("aria-pressed", "true");
-  await expect(window.getByRole("tabpanel")).toContainText("キャラクター情報");
-  await window.getByRole("button", { name: "stats" }).click();
-  await expect(window.getByRole("button", { name: "stats" })).toHaveAttribute("aria-pressed", "true");
+  await expect(window.getByRole("button", { name: /^(stats|info)$/ })).toHaveCount(0);
+  await expect(window.getByRole("tabpanel")).toHaveCount(0);
   await expect(window.locator('[data-component-id="status-primary-row-0"]')).toBeVisible();
+  await expect(window.locator('[data-component-id="status-derived-row-5"]')).toBeVisible();
 });
 
 test("status minimize uses a generated compact endpoint and restores the full source geometry", async ({ page }) => {
