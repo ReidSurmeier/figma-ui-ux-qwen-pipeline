@@ -55,13 +55,14 @@ func _run_contract() -> void:
 	await create_timer(0.3).timeout
 	_check(options.minimized and options.size == Vector2(180, 18), "Minimize must reach the generated 180x18 endpoint")
 	_check(options.minimized_plate.visible, "Minimize must use the generated endpoint plate")
+	_check(options.minimize_samples.size() > 4, "Minimize must emit more than four distinct geometry steps")
 	options._toggle_minimized()
 	await create_timer(0.3).timeout
 	_check(not options.minimized and options.size == Vector2(280, 122), "Minimize must restore the exact expanded geometry")
 
 	var report := {
 		"status": "pass" if failures.is_empty() else "fail",
-		"assertions": 22,
+		"assertions": 23,
 		"failures": failures,
 		"scene": "res://main.tscn",
 	}

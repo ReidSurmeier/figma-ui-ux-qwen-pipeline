@@ -20,6 +20,7 @@ var dragging_window := false
 var drag_offset := Vector2.ZERO
 var animation_start_size := EXPANDED_SIZE
 var animation_end_size := EXPANDED_SIZE
+var minimize_samples: Array[String] = []
 
 var expanded_nodes: Array[CanvasItem] = []
 var visuals := {}
@@ -328,6 +329,7 @@ func _toggle_minimized() -> void:
 	clip_contents = true
 	animation_start_size = size
 	animation_end_size = EXPANDED_SIZE if minimized else MINIMIZED_SIZE
+	minimize_samples = ["%dx%d" % [roundi(size.x), roundi(size.y)]]
 	if minimized:
 		for node in expanded_nodes: node.visible = true
 		minimized_plate.visible = true
@@ -338,6 +340,9 @@ func _toggle_minimized() -> void:
 func _set_minimize_progress(progress: float) -> void:
 	var stepped: float = floor(progress * 13.0) / 13.0
 	size = animation_start_size.lerp(animation_end_size, stepped).round()
+	var geometry := "%dx%d" % [roundi(size.x), roundi(size.y)]
+	if minimize_samples.is_empty() or minimize_samples[-1] != geometry:
+		minimize_samples.append(geometry)
 	_update_title_controls()
 	_publish_qa()
 
@@ -408,6 +413,7 @@ func _qa_state() -> Dictionary:
 		"visible": visible,
 		"position": [roundi(position.x), roundi(position.y)],
 		"window_size": [roundi(size.x), roundi(size.y)],
+		"minimize_samples": minimize_samples,
 		"visual_authorities": visuals.size() + 1,
 		"controls": hits.size(),
 		"mapped_controls": hit_visuals.size(),

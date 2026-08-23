@@ -193,13 +193,9 @@ test("tabs, custom dropdown, checkboxes, movement, and stepped minimize are reve
   const minimize = canvasPoint(bounds, 385 + 258, 208 + 9);
   const restore = canvasPoint(bounds, 385 + 158, 208 + 9);
   await page.mouse.click(minimize.x, minimize.y);
-  const geometries = new Set();
-  for (let frame = 0; frame < 18; frame += 1) {
-    await page.waitForTimeout(16);
-    geometries.add((await state(page)).window_size.join("x"));
-  }
-  expect(geometries.size).toBeGreaterThan(4);
   await expect.poll(() => state(page)).toMatchObject({ minimized: true, window_size: [180, 18] });
+  const geometries = new Set((await state(page)).minimize_samples);
+  expect(geometries.size).toBeGreaterThan(4);
 
   await page.mouse.click(restore.x, restore.y);
   await expect.poll(() => state(page)).toMatchObject({ minimized: false, window_size: [280, 122] });
