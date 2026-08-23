@@ -31,14 +31,10 @@ export function BottomBarSourceWindow({ zIndex, onActivate }: WindowProps) {
 }
 
 export function NotificationSourceWindow({ zIndex, onActivate }: WindowProps) {
-  const [next, setNext] = useState(false);
   const assetRoot = `${root}/notification`;
   return <SourceWindow id="notification" title="通知" initialPosition={{ x: 604, y: 523 }} width={245} height={41} titleWidth={80} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closable={false} dragHandleStyle={{ left: 0, top: 0, width: 28, height: 10 }}>
-    <button type="button" className="notification-source-button" aria-label="次の通知" aria-pressed={next} onClick={() => setNext((value) => !value)}>
-      <SourceRaster id="notification-bubble" file={`${assetRoot}/components/bubble`} style={{ left: 0, top: 0, width: 143, height: 41 }} />
-      <SourceRaster id="notification-upper" file={`${assetRoot}/components/upper`} style={{ left: 143, top: 0, width: 102, height: 20 }} />
-      <SourceRaster id="notification-lower" file={`${assetRoot}/components/lower`} style={{ left: 143, top: 20, width: 102, height: 21 }} />
-    </button>
-    <output className="sr-only" role="status">notification {next ? 2 : 1}</output>
+    <SourceRaster id="notification-bubble" file={`${assetRoot}/components/bubble`} style={{ left: 0, top: 0, width: 143, height: 41 }} />
+    <SourceRaster id="notification-upper" file={`${assetRoot}/components/upper`} style={{ left: 143, top: 0, width: 102, height: 20 }} />
+    <SourceRaster id="notification-lower" file={`${assetRoot}/components/lower`} style={{ left: 143, top: 20, width: 102, height: 21 }} />
   </SourceWindow>;
 }

@@ -111,9 +111,6 @@ test("remaining source windows expose meaningful reversible user flows", async (
   await bottomSlider.fill("0");
   await expect(bottomBar.locator(".bottom-bar-source-thumb")).toHaveCSS("left", "98px");
 
-  const notification = page.getByRole("region", { name: "通知" });
-  await notification.getByRole("button", { name: "次の通知" }).click();
-  await expect(notification.getByRole("button", { name: "次の通知" })).toHaveAttribute("aria-pressed", "true");
 });
 
 test("card and skills sliders expose more than four positions and reach both endpoints", async ({ page }) => {
@@ -334,6 +331,26 @@ test("Compact Info uses its source 16-pixel band and exact readout rows", async 
   ] as const) {
     const component = await compact.locator(`[data-component-id="${componentId}"]`).boundingBox();
     expect(component).toMatchObject({
+      x: bounds.x + expected.x,
+      y: bounds.y + expected.y,
+      width: expected.width,
+      height: expected.height,
+    });
+  }
+});
+
+test("Notification keeps independent message layers without inventing a next hotspot", async ({ page }) => {
+  await page.goto("/");
+  const notification = page.getByRole("region", { name: "通知" });
+  const bounds = await notification.boundingBox();
+  if (!bounds) throw new Error("Notification geometry is unavailable");
+  await expect(notification.getByRole("button")).toHaveCount(0);
+  for (const [componentId, expected] of [
+    ["notification-bubble", { x: 0, y: 0, width: 143, height: 41 }],
+    ["notification-upper", { x: 143, y: 0, width: 102, height: 20 }],
+    ["notification-lower", { x: 143, y: 20, width: 102, height: 21 }],
+  ] as const) {
+    expect(await notification.locator(`[data-component-id="${componentId}"]`).boundingBox()).toMatchObject({
       x: bounds.x + expected.x,
       y: bounds.y + expected.y,
       width: expected.width,

@@ -206,3 +206,18 @@ to assembly instead of blaming generation. Two focused Alibaba
 rejected: the first retained semantic copy, while the second was empty but
 violated the exact 16/19-pixel band geometry. No inferior candidate was promoted
 merely because generation had been attempted.
+
+## Notification behavior-authority tracer
+
+Notification already matched its source crop (`MAE=0`), but the complete
+three-layer message cluster was wrapped in an invisible `次の通知` button. Its
+only settled effect was a brightness/saturation filter over the unchanged
+message; the hidden status string changed from notification 1 to 2. No source
+or behavior record defines this hotspot or a second message state.
+
+The fabricated control is removed. Bubble, upper message, and lower message
+remain independent 143 by 41, 102 by 20, and 102 by 21 raster layers at their
+exact source coordinates. The browser gate asserts those bounds and that the
+Notification region exposes no button. A future next-message interaction must
+first supply explicit behavior authority and a source-fitting second message
+state.

@@ -191,8 +191,6 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .bottom-bar-source-button--previous { left: 580px; }
 .bottom-bar-source-button--next { left: 590px; }
 .bottom-bar-source-button[aria-pressed="true"] .source-raster { filter: brightness(0.68) saturate(1.35); }
-.notification-source-button { position: absolute; z-index: 5; inset: 0; padding: 0; border: 0; background: transparent; }
-.notification-source-button[aria-pressed="true"] .source-raster { filter: brightness(0.82) saturate(1.25); }
 .source-window[data-window-id="bottom-bar"], .source-window[data-window-id="notification"] { clip-path: none; }
 .basic-info__identity { display: grid; gap: 1px; margin-bottom: 3px; font-size: 11px; }
 .basic-info__identity strong { font-weight: 400; }
