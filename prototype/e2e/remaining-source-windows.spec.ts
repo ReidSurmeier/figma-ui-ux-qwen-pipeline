@@ -245,6 +245,28 @@ test("generated Skills rows clear baked focus and remain fully interactive", asy
   }
 });
 
+test("Equipment rows and avatar own exact non-overlapping source columns", async ({ page }) => {
+  await page.goto("/");
+  const equipment = page.getByRole("region", { name: "装備アイテム" });
+  const bounds = await equipment.boundingBox();
+  if (!bounds) throw new Error("Equipment geometry is unavailable");
+  const left = equipment.getByRole("button", { name: "左装備 1" });
+  const avatar = equipment.getByRole("button", { name: "キャラクターを回転" });
+  const right = equipment.getByRole("button", { name: "右装備 1" });
+
+  expect(await left.boundingBox()).toMatchObject({ x: bounds.x + 4, width: 105 });
+  expect(await avatar.boundingBox()).toMatchObject({ x: bounds.x + 109, width: 61 });
+  expect(await right.boundingBox()).toMatchObject({ x: bounds.x + 170, width: 106 });
+
+  const owners = await page.evaluate(({ x, y }) => [
+    document.elementFromPoint(x + 108, y + 31)?.closest("button")?.getAttribute("aria-label"),
+    document.elementFromPoint(x + 109, y + 31)?.closest("button")?.getAttribute("aria-label"),
+    document.elementFromPoint(x + 169, y + 31)?.closest("button")?.getAttribute("aria-label"),
+    document.elementFromPoint(x + 170, y + 31)?.closest("button")?.getAttribute("aria-label"),
+  ], bounds);
+  expect(owners).toEqual(["左装備 1", "キャラクターを回転", "キャラクターを回転", "右装備 1"]);
+});
+
 test("compact HP and SP remain source-faithful readouts rather than invisible sliders", async ({ page }) => {
   await page.goto("/");
   const compact = page.getByRole("region", { name: "簡易情報" });

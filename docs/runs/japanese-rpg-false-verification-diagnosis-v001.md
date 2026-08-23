@@ -157,3 +157,17 @@ their original color. The executable contract measures source-blue pixels
 through idle, selected, and cleared states and activates the generated
 `ルアフ` level control. This prevents visual focus and interaction state from
 silently disagreeing.
+
+## Equipment hit ownership tracer
+
+The Equipment resting screenshot was visually close, but its left-row assets
+are 105 pixels wide while the shared runtime rule stretched every row button to
+106 pixels. With left rows beginning at x=4 and the avatar beginning at x=109,
+the implementation created a one-pixel overlap. DOM order assigned the shared
+edge to the avatar, so visible row and hit-map ownership disagreed.
+
+The corrected runtime preserves the source widths exactly: left rows own
+x=4..108, the avatar owns x=109..169, and right rows own x=170..275. The gate
+asserts the three DOM rectangles and probes the integer pixels on both shared
+boundaries with `elementFromPoint`; it does not rely on center clicks or forced
+activation.
