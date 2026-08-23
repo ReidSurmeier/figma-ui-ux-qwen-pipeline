@@ -14,8 +14,12 @@ export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
       <button className="card-source-art" type="button" aria-label="カードを回転" aria-pressed={rotated} onClick={() => setRotated((value) => !value)}>
         <SourceRaster id="card-art" file={`${assetRoot}/components/art`} style={{ inset: 0 }} />
       </button>
-      {[0, 1, 2, 3].map((row) => <SourceRaster key={row} id={`card-copy-${row}`} file={`${assetRoot}/components/copy-${row}`} style={{ left: 90, top: 20 + row * 19, width: 155, height: 19 }} />)}
-      <SourceRaster id="card-copy-4" file={`${assetRoot}/components/copy-4`} style={{ left: 90, top: 94, width: 67, height: 18 }} />
+      <div className="card-source-copy-viewport">
+        <div className="card-source-copy" style={{ transform: `translateY(${-Math.round(scroll * 0.18)}px)` }}>
+          {[0, 1, 2, 3].map((row) => <SourceRaster key={row} id={`card-copy-${row}`} file={`${assetRoot}/components/copy-${row}`} style={{ left: 0, top: row * 19, width: 155, height: 19 }} />)}
+          <SourceRaster id="card-copy-4" file={`${assetRoot}/components/copy-4`} style={{ left: 0, top: 74, width: 67, height: 18 }} />
+        </div>
+      </div>
       <SourceRaster id="card-scrollbar-track" file={`${assetRoot}/components/scrollbar-track`} style={{ left: 248, top: 34, width: 29, height: 80 }} />
       <SourceRaster id="card-scrollbar-thumb" className="card-source-thumb" file={`${assetRoot}/components/scrollbar-thumb`} style={{ left: 248, top: 44 + Math.round(scroll * 0.27), width: 29, height: 32 }} />
       <input className="card-source-scroll" type="range" aria-label="カード情報スクロール" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />

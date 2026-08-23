@@ -119,6 +119,8 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 
 .card-source-art { position: absolute; z-index: 4; left: 5px; top: 18px; width: 82px; height: 96px; padding: 0; border: 0; background: transparent; transition: transform 96ms steps(6, end); }
 .card-source-art[aria-pressed="true"] { transform: rotate(3deg); filter: brightness(0.82) saturate(1.25); }
+.card-source-copy-viewport { position: absolute; z-index: 4; left: 90px; top: 20px; overflow: hidden; width: 155px; height: 92px; }
+.card-source-copy { position: absolute; inset: 0; transition: transform 16ms linear; }
 .card-source-scroll { position: absolute; z-index: 6; left: 248px; top: 34px; width: 29px; height: 80px; margin: 0; opacity: 0.001; writing-mode: vertical-lr; direction: rtl; cursor: ns-resize; }
 .card-source-thumb { z-index: 5; transition: top 16ms linear; }
 .card-source-slot { position: absolute; z-index: 4; left: 30px; top: 121px; width: 246px; height: 25px; padding: 0; border: 0; background: transparent; }
