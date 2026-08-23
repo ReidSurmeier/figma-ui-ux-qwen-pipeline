@@ -52,6 +52,7 @@ describe("human-correction replay after deterministic verification", () => {
       "text-overlap-and-pixel-aesthetic",
       "figma-link-and-page-parity",
       "complete-user-flow-not-screenshot-only",
+      "interaction-animation-source-fit",
     ];
     expect(correctionReplay.prompts.map(({ id }) => id)).toEqual(expect.arrayContaining(required));
     for (const prompt of correctionReplay.prompts) {
@@ -103,5 +104,51 @@ describe("human-correction replay after deterministic verification", () => {
         expect(result.note.length).toBeGreaterThan(20);
       }
     }
+  });
+
+  it("rejects synthesized correction passes without prompt-specific executable evidence", async () => {
+    const { readFile } = await import("node:fs/promises");
+    const { resolve } = await import("node:path");
+    for (const window of windowVerification.windows) {
+      if (!window.correction_replay.report) continue;
+      const report = JSON.parse(await readFile(resolve("..", window.correction_replay.report), "utf8")) as {
+        results: Array<{ prompt_id: string; verdict: string; evidence?: Array<{ kind: string; artifact: string; metrics?: Record<string, unknown> }> }>;
+      };
+      for (const result of report.results.filter(({ verdict }) => verdict === "pass")) {
+        expect(result.evidence, `${window.id}/${result.prompt_id} used a canned pass`).toBeDefined();
+        expect(result.evidence?.length, `${window.id}/${result.prompt_id} has no executed evidence`).toBeGreaterThan(0);
+        for (const item of result.evidence ?? []) {
+          expect(item.kind.length).toBeGreaterThan(2);
+          expect(item.artifact.length).toBeGreaterThan(4);
+        }
+      }
+    }
+  });
+
+  it("requires independent generated minimize endpoints for every minimizable source window", async () => {
+    const { readFile } = await import("node:fs/promises");
+    const { createHash } = await import("node:crypto");
+    const { resolve } = await import("node:path");
+    const windowIds = ["basic-info", "status", "inventory", "equipment"];
+    const hashes = await Promise.all(windowIds.map(async (id) => createHash("sha256")
+      .update(await readFile(resolve("public/assets/japanese-rpg-v001", id, "minimized-plate.png")))
+      .digest("hex")));
+    expect(new Set(hashes).size).toBe(windowIds.length);
+  });
+
+  it("requires independent off and on assets for every source checkbox", async () => {
+    const { access } = await import("node:fs/promises");
+    const { resolve } = await import("node:path");
+    for (const state of ["off", "on"]) {
+      await expect(access(resolve("public/assets/japanese-rpg-v001/chat/components", `privacy-${state}.png`))).resolves.toBeUndefined();
+    }
+  });
+
+  it("requires shared source-window minimize motion to expose more than four geometry steps", async () => {
+    const { readFile } = await import("node:fs/promises");
+    const { resolve } = await import("node:path");
+    const styles = await readFile(resolve("src/styles.css"), "utf8");
+    expect(styles).toMatch(/\.source-window\s*\{[^}]*transition:\s*width 208ms steps\(13, end\), height 208ms steps\(13, end\)/s);
+    expect(styles).toMatch(/\.basic-info-window\s*\{[^}]*transition:\s*width 208ms steps\(13, end\), height 208ms steps\(13, end\)/s);
   });
 });

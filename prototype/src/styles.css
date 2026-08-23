@@ -62,13 +62,16 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .pixel-window__body { position: relative; height: calc(100% - 18px); background: rgba(251, 251, 251, 0.98); }
 
 .basic-info { position: relative; width: 100%; height: 100%; padding: 3px 72px 23px 7px; font-family: Cousine, monospace; font-size: 10px; }
-.basic-info-window { position: absolute; width: 280px; height: 120px; overflow: hidden; clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 4px) 1px, calc(100% - 2px) 2px, calc(100% - 2px) 4px, calc(100% - 1px) 4px, 100% 6px, 100% calc(100% - 6px), calc(100% - 1px) calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), calc(100% - 4px) calc(100% - 1px), calc(100% - 5px) 100%, 5px 100%, 4px calc(100% - 1px), 2px calc(100% - 2px), 2px calc(100% - 4px), 1px calc(100% - 4px), 0 calc(100% - 6px), 0 6px, 1px 4px, 2px 4px, 2px 2px, 4px 1px); background: url("/assets/japanese-rpg-v001/basic-info/clean-plate.png") 0 0 / 280px 120px no-repeat; image-rendering: pixelated; }
-.basic-info-window--minimized { width: 180px; height: 18px; background-image: url("/assets/japanese-rpg-v001/basic-info/minimized-plate.png"); background-size: 180px 18px; }
+.basic-info-window { position: absolute; width: 280px; height: 120px; overflow: hidden; clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 4px) 1px, calc(100% - 2px) 2px, calc(100% - 2px) 4px, calc(100% - 1px) 4px, 100% 6px, 100% calc(100% - 6px), calc(100% - 1px) calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), calc(100% - 4px) calc(100% - 1px), calc(100% - 5px) 100%, 5px 100%, 4px calc(100% - 1px), 2px calc(100% - 2px), 2px calc(100% - 4px), 1px calc(100% - 4px), 0 calc(100% - 6px), 0 6px, 1px 4px, 2px 4px, 2px 2px, 4px 1px); background: url("/assets/japanese-rpg-v001/basic-info/clean-plate.png") 0 0 / 280px 120px no-repeat; image-rendering: pixelated; transition: width 208ms steps(13, end), height 208ms steps(13, end); }
+.basic-info-window::before { content: ""; position: absolute; z-index: 1; inset: 0; width: 180px; height: 18px; background: url("/assets/japanese-rpg-v001/basic-info/minimized-plate.png") 0 0 / 180px 18px no-repeat; opacity: 0; transition: opacity 104ms steps(6, end); pointer-events: none; }
+.basic-info-window--minimized { width: 180px; height: 18px; }
+.basic-info-window--minimized::before { opacity: 1; }
 .basic-info-title { position: absolute; z-index: 8; left: 0; top: 0; width: 100%; height: 18px; cursor: move; }
 .basic-raster { position: absolute; display: block; pointer-events: none; background-position: 0 0; background-repeat: no-repeat; background-size: 100% 100%; image-rendering: pixelated; }
 .basic-info-window-button { position: absolute; z-index: 3; right: 2px; top: 3px; width: 10px; height: 11px; padding: 0; border: 0; background: transparent; }
 .basic-info-window-button:active { filter: brightness(0.72); }
-.basic-info-components { position: absolute; inset: 0; }
+.basic-info-components { position: absolute; inset: 0; transition: opacity 104ms steps(6, end); }
+.basic-info-window--minimized .basic-info-components { opacity: 0; pointer-events: none; }
 .basic-info-page { position: absolute; z-index: 4; width: 33px; height: 20px; padding: 0; border: 0; background-color: transparent; background-position: 0 0; background-repeat: no-repeat; background-size: 33px 20px; image-rendering: pixelated; }
 .basic-info-page span { position: absolute; inset: 0; }
 .basic-info-page:active { filter: brightness(0.76); }
@@ -78,10 +81,11 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .basic-info-slider--sp { top: 43px; }
 .basic-info-thumb { transition: left 16ms linear; }
 
-.source-window { position: absolute; overflow: hidden; clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 4px) 1px, calc(100% - 2px) 2px, calc(100% - 2px) 4px, calc(100% - 1px) 4px, 100% 6px, 100% calc(100% - 6px), calc(100% - 1px) calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), calc(100% - 4px) calc(100% - 1px), calc(100% - 5px) 100%, 5px 100%, 4px calc(100% - 1px), 2px calc(100% - 2px), 2px calc(100% - 4px), 1px calc(100% - 4px), 0 calc(100% - 6px), 0 6px, 1px 4px, 2px 4px, 2px 2px, 4px 1px); background: var(--source-clean-plate) 0 0 / 100% 100% no-repeat; image-rendering: pixelated; }
-.source-window--minimized { background-image: var(--source-minimized-plate); background-size: 180px 18px; }
+.source-window { position: absolute; overflow: hidden; clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 4px) 1px, calc(100% - 2px) 2px, calc(100% - 2px) 4px, calc(100% - 1px) 4px, 100% 6px, 100% calc(100% - 6px), calc(100% - 1px) calc(100% - 4px), calc(100% - 2px) calc(100% - 4px), calc(100% - 2px) calc(100% - 2px), calc(100% - 4px) calc(100% - 1px), calc(100% - 5px) 100%, 5px 100%, 4px calc(100% - 1px), 2px calc(100% - 2px), 2px calc(100% - 4px), 1px calc(100% - 4px), 0 calc(100% - 6px), 0 6px, 1px 4px, 2px 4px, 2px 2px, 4px 1px); background: var(--source-clean-plate) 0 0 / 100% 100% no-repeat; image-rendering: pixelated; transition: width 208ms steps(13, end), height 208ms steps(13, end); }
+.source-window--minimized { width: 180px; height: 18px; }
 .source-window__title { position: absolute; z-index: 20; inset: 0 0 auto; height: 18px; cursor: move; }
-.source-window__components { position: absolute; inset: 0; }
+.source-window__components { position: absolute; inset: 0; transition: opacity 104ms steps(6, end); }
+.source-window--minimized .source-window__components { opacity: 0; pointer-events: none; }
 .source-raster { position: absolute; display: block; pointer-events: none; background-position: 0 0; background-repeat: no-repeat; background-size: 100% 100%; image-rendering: pixelated; }
 .source-window__button { position: absolute; z-index: 3; top: 0; height: 18px; padding: 0; border: 0; background: transparent; }
 .source-window__button--minimize { right: 15px; width: 14px; }
@@ -116,6 +120,7 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .card-source-art { position: absolute; z-index: 4; left: 5px; top: 18px; width: 82px; height: 96px; padding: 0; border: 0; background: transparent; transition: transform 96ms steps(6, end); }
 .card-source-art[aria-pressed="true"] { transform: rotate(3deg); filter: brightness(0.82) saturate(1.25); }
 .card-source-scroll { position: absolute; z-index: 6; left: 248px; top: 34px; width: 29px; height: 80px; margin: 0; opacity: 0.001; writing-mode: vertical-lr; direction: rtl; cursor: ns-resize; }
+.card-source-thumb { z-index: 5; transition: top 16ms linear; }
 .card-source-slot { position: absolute; z-index: 4; left: 30px; top: 121px; width: 246px; height: 25px; padding: 0; border: 0; background: transparent; }
 .card-source-slot[aria-pressed="true"] .source-raster { filter: brightness(0.85) saturate(1.3); }
 
@@ -126,6 +131,7 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .skill-source-level:active .source-raster { filter: brightness(0.7); }
 .skill-source-level[aria-pressed="true"] .source-raster { filter: brightness(0.72) saturate(1.35); }
 .skills-source-scroll { position: absolute; z-index: 7; left: 263px; top: 18px; width: 17px; height: 144px; margin: 0; opacity: 0.001; writing-mode: vertical-lr; direction: rtl; cursor: ns-resize; }
+.skills-source-thumb { z-index: 6; transition: top 16ms linear; }
 .skills-source-action { position: absolute; z-index: 5; top: 164px; height: 20px; padding: 0; border: 0; background: transparent; }
 .skills-source-action--use { left: 175px; width: 43px; }
 .skills-source-action--close { left: 220px; width: 43px; }
@@ -142,7 +148,10 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .chat-source-tabs button { height: 18px; padding: 0 7px; border: 1px solid #8799ac; background: #dce8ef; color: #173a61; font-size: 9px; }
 .chat-source-tabs button[aria-selected="true"] { background: #fff; box-shadow: inset 0 -2px #77a9ca; }
 .chat-source-message { position: absolute; z-index: 4; left: 3px; top: 25px; width: 274px; height: 57px; padding: 18px 7px; border: 1px solid #b8c1ca; background: #fff; color: #17324e; font-size: 10px; text-align: center; }
-.chat-source-topic, .chat-source-room, .chat-source-private { position: absolute; z-index: 7; opacity: 0.002; }
+.chat-source-topic, .chat-source-room, .chat-source-privacy { position: absolute; z-index: 7; opacity: 0.002; }
+.chat-source-privacy { top: 66px; width: 16px; height: 18px; margin: 0; }
+.chat-source-privacy--public { left: 43px; }
+.chat-source-privacy--private { left: 82px; }
 .chat-source-topic { left: 44px; top: 27px; width: 228px; height: 17px; }
 .chat-source-room { left: 181px; top: 47px; width: 92px; height: 16px; }
 .chat-source-private { left: 72px; top: 67px; width: 62px; height: 16px; }
@@ -181,9 +190,6 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .quickbar-source-slot { position: absolute; z-index: 5; padding: 0; border: 0; background: transparent; }
 .quickbar-source-slot[aria-pressed="true"] { outline: 2px solid #6f9fd8; outline-offset: -2px; filter: brightness(0.8) saturate(1.3); }
 
-.compact-source-slider { position: absolute; z-index: 6; top: 19px; width: 118px; height: 15px; margin: 0; opacity: 0.001; cursor: ew-resize; }
-.compact-source-slider--hp { left: 16px; }
-.compact-source-slider--sp { left: 145px; width: 132px; }
 .bottom-bar-source-slider { position: absolute; z-index: 6; left: 102px; top: 1px; width: 478px; height: 19px; margin: 0; opacity: 0.001; cursor: ew-resize; }
 .bottom-bar-source-button { position: absolute; z-index: 7; top: 0; width: 10px; height: 21px; padding: 0; border: 0; background: transparent; }
 .bottom-bar-source-button--previous { left: 580px; }

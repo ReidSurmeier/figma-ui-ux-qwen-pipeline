@@ -27,7 +27,14 @@ plate() {
   convert "$WORK_DIR/$name-bordered.png" -alpha set -channel A \
     -fx '(((j<1||j>=h-1)&&(i<5||i>=w-5))||((j<2||j>=h-2)&&(i<4||i>=w-4))||((j<4||j>=h-4)&&(i<2||i>=w-2))||((j<6||j>=h-6)&&(i<1||i>=w-1)))?0:a' \
     "$directory/clean-plate.png"
-  cp "$QWEN_MIN" "$directory/minimized-plate.png"
+  if [[ "$name" == "equipment" ]]; then
+    [[ -f "$directory/minimized-plate.png" ]] || {
+      printf 'missing dedicated Equipment minimized asset; run assemble_generated_minimized_states.sh first\n' >&2
+      exit 1
+    }
+  else
+    cp "$QWEN_MIN" "$directory/minimized-plate.png"
+  fi
 }
 
 crop() {
@@ -74,8 +81,27 @@ crop card close 266 2 13 15
 transparent_component card minimize 14 18
 crop card art 5 18 82 96
 for row in 0 1 2 3; do crop card "copy-$row" 90 "$((20 + row * 19))" 155 19; done
-crop card checkbox 90 94 67 18
+crop card copy-4 90 94 67 18
 crop card scrollbar 248 34 29 80
+# The source scrollbar is a control, not one frozen picture. Rebuild the
+# exposed channel from a source row that is not covered by the resting thumb,
+# then isolate the exact source thumb by differencing it against that channel.
+convert "$OUTPUT/card/components/scrollbar.png" -crop 29x1+0+50 +repage \
+  -filter point -resize 29x58\! "$WORK_DIR/card-channel.png"
+composite -geometry +0+10 "$WORK_DIR/card-channel.png" \
+  "$OUTPUT/card/components/scrollbar.png" "$WORK_DIR/card-scrollbar-track.png"
+convert "$OUTPUT/card/components/scrollbar.png" -crop 29x32+0+10 +repage \
+  "$WORK_DIR/card-thumb-source.png"
+convert "$WORK_DIR/card-scrollbar-track.png" -crop 29x32+0+10 +repage \
+  "$WORK_DIR/card-thumb-clean.png"
+convert "$WORK_DIR/card-thumb-source.png" "$WORK_DIR/card-thumb-clean.png" \
+  -compose difference -composite -colorspace gray -threshold 4% \
+  -morphology Close Square "$WORK_DIR/card-thumb-mask.png"
+convert "$WORK_DIR/card-thumb-source.png" "$WORK_DIR/card-thumb-mask.png" \
+  -alpha off -compose copy_opacity -composite \
+  "$OUTPUT/card/components/scrollbar-thumb.png"
+mv "$WORK_DIR/card-scrollbar-track.png" "$OUTPUT/card/components/scrollbar-track.png"
+rm -f "$OUTPUT/card/components/scrollbar.png" "$OUTPUT/card/components/checkbox.png"
 crop card bottom-icon 5 122 25 22
 crop card bottom-slot 30 121 246 25
 
@@ -90,6 +116,26 @@ for row in 0 1 2 3; do
   crop skills "level-$row" 75 "$((20 + row * 36))" 28 34
 done
 crop skills scrollbar 263 18 17 144
+# Isolate the source thumb from the Skills track. The uncovered row at y=100
+# is repeated only behind the resting thumb; arrows and surrounding pixels stay
+# source-locked. The independent thumb can then traverse the whole channel.
+convert "$OUTPUT/skills/components/scrollbar.png" -crop 17x1+0+100 +repage \
+  -filter point -resize 17x38\! "$WORK_DIR/skills-channel.png"
+composite -geometry +0+37 "$WORK_DIR/skills-channel.png" \
+  "$OUTPUT/skills/components/scrollbar.png" "$WORK_DIR/skills-scrollbar-track.png"
+convert "$OUTPUT/skills/components/scrollbar.png" -crop 17x38+0+37 +repage \
+  "$WORK_DIR/skills-thumb-source.png"
+convert "$WORK_DIR/skills-scrollbar-track.png" -crop 17x38+0+37 +repage \
+  "$WORK_DIR/skills-thumb-clean.png"
+convert "$WORK_DIR/skills-thumb-source.png" "$WORK_DIR/skills-thumb-clean.png" \
+  -compose difference -composite -colorspace gray -threshold 4% \
+  -morphology Close Square -fx '(i<5||i>14)?0:u' \
+  "$WORK_DIR/skills-thumb-mask.png"
+convert "$WORK_DIR/skills-thumb-source.png" "$WORK_DIR/skills-thumb-mask.png" \
+  -alpha off -compose copy_opacity -composite \
+  "$OUTPUT/skills/components/scrollbar-thumb.png"
+mv "$WORK_DIR/skills-scrollbar-track.png" "$OUTPUT/skills/components/scrollbar-track.png"
+rm -f "$OUTPUT/skills/components/scrollbar.png"
 crop skills points 2 163 173 20
 crop skills use 175 164 43 20
 crop skills close-action 220 164 43 20
@@ -125,6 +171,18 @@ crop chat people 3 45 133 20
 crop chat room 136 45 140 20
 crop chat security 3 65 131 20
 crop chat password 135 65 141 20
+# The source depicts 公開 selected and 非公開 unselected. Keep the Japanese
+# labels in their exact source raster, remove the two baked state icons, and
+# expose the on/off icons as independent transparent assets that can swap.
+convert "$OUTPUT/chat/components/security.png" -crop 16x18+40+1 +repage "$OUTPUT/chat/components/privacy-on.png"
+convert "$OUTPUT/chat/components/security.png" -crop 16x18+79+1 +repage "$OUTPUT/chat/components/privacy-off.png"
+for file in "$OUTPUT/chat/components"/privacy-{on,off}.png; do
+  convert "$file" -alpha set -channel A -fx '((r>0.96)&&(g>0.96)&&(b>0.96))?0:a' "$WORK_DIR/privacy-alpha.png"
+  mv "$WORK_DIR/privacy-alpha.png" "$file"
+done
+convert "$OUTPUT/chat/components/security.png" -alpha set -channel A \
+  -fx '((i>=40&&i<56)||(i>=79&&i<95))?0:a' "$WORK_DIR/security-labels.png"
+mv "$WORK_DIR/security-labels.png" "$OUTPUT/chat/components/security.png"
 crop_full chat ok 474 376 44 22
 crop_full chat cancel 519 376 43 22
 for file in "$OUTPUT/chat/components"/{ok,cancel}.png; do remove_magenta "$file"; done

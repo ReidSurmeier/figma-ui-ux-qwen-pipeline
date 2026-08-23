@@ -13,6 +13,47 @@ const assetNameByUrl = Object.fromEntries(uploadManifest.assets.map((asset) => [
 ]));
 const windows = manifest.windows;
 const groups = [windows.slice(0, 8), windows.slice(8)];
+const canonicalDestinationByControl = {
+  "basic-info": {
+    HP: "State / basic-info / HP-100 / v003",
+    SP: "State / basic-info / SP-100 / v003",
+    status: "Editable / Japanese Basic Info / v001 / Page status",
+    option: "Editable / Japanese Basic Info / v001 / Page option",
+    items: "Editable / Japanese Basic Info / v001 / Page items",
+    equip: "Editable / Japanese Basic Info / v001 / Page equip",
+    skill: "Editable / Japanese Basic Info / v001 / Page skill",
+    map: "Editable / Japanese Basic Info / v001 / Page map",
+    chat: "Editable / Japanese Basic Info / v001 / Page chat",
+    friend: "Editable / Japanese Basic Info / v001 / Page friend",
+  },
+  card: { "カード情報スクロール": "State / card / scroll-100 / v003" },
+  skills: { "スキルスクロール": "State / skills / scroll-100 / v003" },
+  status: {
+    stats: "Editable / Japanese Status / v001 / Stats",
+    info: "Editable / Japanese Status / v001 / Info",
+    "Strを上げる": "Editable / Japanese Status / v001 / Stat Str changed",
+    "Agiを上げる": "Editable / Japanese Status / v001 / Stat Agi changed",
+    "Vitを上げる": "Editable / Japanese Status / v001 / Stat Vit changed",
+    "Dexを上げる": "Editable / Japanese Status / v001 / Stat Dex changed",
+    "Lukを上げる": "Editable / Japanese Status / v001 / Stat Luk changed",
+  },
+  inventory: { "所持品スクロール": "State / inventory / scroll-100 / v003" },
+  chat: {
+    公開: "State / chat / privacy-public / v003",
+    非公開: "State / chat / privacy-private / v003",
+  },
+  "bottom-bar": { "クイックスロット位置": "State / bottom-bar / position-100 / v003" },
+  options: {
+    BGM: "State / options / BGM-100 / v003",
+    Effect: "State / options / Effect-100 / v003",
+    "BGM on": "State / options / BGM-on / v003",
+    "Effect on": "State / options / Effect-off / v003",
+    opaque: "State / options / opaque-on / v003",
+    attack: "State / options / attack-off / v003",
+    skill: "State / options / skill-on / v003",
+    item: "State / options / item-off / v003",
+  },
+};
 
 const prelude = `
 const page = await figma.getNodeByIdAsync("0:1");
@@ -183,6 +224,7 @@ for (let groupIndex = 0; groupIndex < groups.length; groupIndex += 1) {
   const code = `${prelude}
 const root = findRoot();
 const definitions = ${JSON.stringify(linkDefinitions)};
+const canonicalDestinations = ${JSON.stringify(canonicalDestinationByControl)};
 const minimizedIds = new Set(["basic-info", "card", "status", "inventory", "equipment", "exchange", "options"]);
 const results = [];
 for (const definition of definitions) {
@@ -192,24 +234,37 @@ for (const definition of definitions) {
   const minimized = minimizedIds.has(definition.id)
     ? page.children.find((node) => node.name === \`Review / \${definition.ariaLabel} / v001 / Qwen minimized\`)
     : null;
+  const expectedNames = new Set(definition.controls.map((control, controlIndex) => \`interaction/\${definition.id}/\${controlIndex}/\${control.id}\`));
+  const removed = [];
+  for (const child of [...window.children]) {
+    if (child.name.startsWith(\`interaction/\${definition.id}/\`) && !expectedNames.has(child.name)) {
+      removed.push(child.id);
+      child.remove();
+    }
+  }
   let hotspotCount = 0;
   for (let controlIndex = 0; controlIndex < definition.controls.length; controlIndex += 1) {
     const control = definition.controls[controlIndex];
     const hotspotName = \`interaction/\${definition.id}/\${controlIndex}/\${control.id}\`;
-    if (window.children.some((node) => node.name === hotspotName)) continue;
-    const hotspot = figma.createRectangle();
-    hotspot.name = hotspotName;
+    const existing = window.children.find((node) => node.name === hotspotName);
+    const hotspot = existing?.type === "RECTANGLE" ? existing : figma.createRectangle();
+    if (!existing) {
+      hotspot.name = hotspotName;
+      hotspot.fills = [{type:"SOLID",color:{r:0,g:0,b:0},opacity:0.001}];
+      window.appendChild(hotspot);
+    }
     hotspot.resize(Math.max(1, control.geometry.width), Math.max(1, control.geometry.height));
-    hotspot.fills = [{type:"SOLID",color:{r:0,g:0,b:0},opacity:0.001}];
-    window.appendChild(hotspot);
     hotspot.x = control.geometry.x;
     hotspot.y = control.geometry.y;
-    const destination = minimized && /最小化|minimize/i.test(control.id) ? minimized : review;
-    hotspot.reactions = [{trigger:{type:"ON_CLICK"},actions:[{type:"NODE",destinationId:destination.id,navigation:"NAVIGATE",transition:{type:"SMART_ANIMATE",duration:0.2,easing:{type:"EASE_OUT"}}}]}];
+    const canonicalName = canonicalDestinations[definition.id]?.[control.id];
+    const canonical = canonicalName ? page.children.find((node) => node.name === canonicalName) : null;
+    const destination = minimized && /最小化|minimize/i.test(control.id) ? minimized : canonical ?? review;
+    const duration = /スクロール|位置|^(BGM|Effect|HP|SP)$/.test(control.id) ? 0.16 : / on$|^(opaque|attack|skill|item|公開|非公開)$/.test(control.id) ? 0.08 : 0.2;
+    hotspot.reactions = [{trigger:{type:"ON_CLICK"},actions:[{type:"NODE",destinationId:destination.id,navigation:"NAVIGATE",transition:{type:"SMART_ANIMATE",duration,easing:{type:duration===0.2?"EASE_OUT":"LINEAR"}}}]}];
     hotspotCount += 1;
   }
   if (minimized && minimized.type === "FRAME") minimized.reactions = [{trigger:{type:"ON_CLICK"},actions:[{type:"BACK"}]}];
-  results.push({id:definition.id,hotspots:hotspotCount,reviewId:review.id,minimizedId:minimized?.id??null});
+  results.push({id:definition.id,hotspots:hotspotCount,removed,reviewId:review.id,minimizedId:minimized?.id??null});
 }
 return {results};
 `;
@@ -219,6 +274,7 @@ return {results};
 const auditCode = `${prelude}
 const root = findRoot();
 const definitions = ${JSON.stringify(windows)};
+const canonicalDestinations = ${JSON.stringify(canonicalDestinationByControl)};
 const imageHash = (node) => Array.isArray(node.fills) ? node.fills.find((fill) => fill.type === "IMAGE")?.imageHash ?? null : null;
 const reactions = (node) => node.reactions.flatMap((reaction) => reaction.actions ?? (reaction.action ? [reaction.action] : []));
 const report = definitions.map((definition) => {
@@ -239,7 +295,20 @@ const report = definitions.map((definition) => {
   };
 });
 const reference = page.children.find((node) => node.name === REF_NAME);
-return {root:{id:root.id,width:root.width,height:root.height,windowCount:report.length},reference:{id:reference?.id??null,imageHash:reference?imageHash(reference):null},windows:report};
+const canonicalStateAudit = [];
+for (const definition of definitions) {
+  const window = findWindow(root, definition.id);
+  for (let controlIndex = 0; controlIndex < definition.controls.length; controlIndex += 1) {
+    const control = definition.controls[controlIndex];
+    const expectedName = canonicalDestinations[definition.id]?.[control.id];
+    if (!expectedName) continue;
+    const hotspot = window.findOne((node) => node.name === \`interaction/\${definition.id}/\${controlIndex}/\${control.id}\`);
+    const destination = page.children.find((node) => node.name === expectedName);
+    const destinationIds = hotspot ? reactions(hotspot).map((action) => action.destinationId).filter(Boolean) : [];
+    canonicalStateAudit.push({windowId:definition.id,controlId:control.id,hotspotId:hotspot?.id??null,expectedName,destinationId:destination?.id??null,destinationIds,linked:!!destination && destinationIds.includes(destination.id)});
+  }
+}
+return {root:{id:root.id,width:root.width,height:root.height,windowCount:report.length},reference:{id:reference?.id??null,imageHash:reference?imageHash(reference):null},windows:report,canonicalStateAudit};
 `;
 await writeFile(resolve(outputDir, "audit.js"), auditCode);
 
@@ -251,6 +320,8 @@ const definitions = ${JSON.stringify(syncDefinitions)};
 const assetNames = ${JSON.stringify(assetNameByUrl)};
 let updatedWindows = 0;
 let updatedComponents = 0;
+let createdComponents = 0;
+const removedComponents = [];
 const syncWindow = (window, definition) => {
   if (definition.id === "options") {
     window.fills = imageFill(latestAsset("options--clean-plate-alpha-edge"));
@@ -260,10 +331,27 @@ const syncWindow = (window, definition) => {
     window.fills = imageFill(latestAsset(plateName));
   }
   updatedWindows += 1;
+  if (definition.id !== "options") {
+    const expectedNames = new Set(definition.components.map((component) => \`ui/\${definition.id}/\${component.id}\`));
+    for (const child of [...window.children]) {
+      if (child.type === "RECTANGLE" && child.name.startsWith(\`ui/\${definition.id}/\`) && !expectedNames.has(child.name)) {
+        removedComponents.push(child.id);
+        child.remove();
+      }
+    }
+  }
   for (const component of definition.components) {
     const nodeName = \`ui/\${definition.id}/\${component.id}\`;
-    const node = window.findOne((candidate) => candidate.name === nodeName);
-    if (!node || node.type !== "RECTANGLE") throw new Error(\`Missing raster node \${nodeName}\`);
+    const existing = window.findOne((candidate) => candidate.name === nodeName);
+    const node = existing?.type === "RECTANGLE" ? existing : figma.createRectangle();
+    if (!existing) {
+      node.name = nodeName;
+      window.appendChild(node);
+      createdComponents += 1;
+    }
+    node.resize(component.geometry.width, component.geometry.height);
+    node.x = component.geometry.x;
+    node.y = component.geometry.y;
     const assetName = assetNames[component.assetPath];
     if (!assetName) throw new Error(\`No uploaded mapping for \${component.assetPath}\`);
     node.fills = imageFill(latestAsset(assetName));
@@ -283,7 +371,7 @@ if (${groupIndex} === 0) {
   reference.fills = imageFill(latestAsset("runtime--full-reference"));
   referenceId = reference.id;
 }
-return {updatedWindows,updatedComponents,referenceId};
+return {updatedWindows,updatedComponents,createdComponents,removedComponents,referenceId};
 `;
 await writeFile(resolve(outputDir, `sync-assets-${groupIndex + 1}.js`), syncCode);
 }

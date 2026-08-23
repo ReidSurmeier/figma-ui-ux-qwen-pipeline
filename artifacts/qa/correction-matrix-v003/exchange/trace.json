@@ -1,0 +1,967 @@
+{
+  "windowId": "exchange",
+  "requests": [
+    "http://10.255.255.254:4174/",
+    "http://10.255.255.254:4174/@vite/client",
+    "https://mcp.figma.com/mcp/html-to-design/capture.js",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787450929077",
+    "http://10.255.255.254:4174/@react-refresh",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787435582010",
+    "http://10.255.255.254:4174/src/styles.css?t=1787450929077",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787447791566",
+    "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/window-button.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/player-name.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/player-class.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-value.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-value.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/meter-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-status.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-option.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-items.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-equip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-skill.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-map.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-chat.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-friend.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/base-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/base-progress.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/job-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/job-progress.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/footer-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/art.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/scrollbar-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/scrollbar-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/bottom-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/bottom-slot.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/points.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/use.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/close-action.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/resize-grip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/side-tabs.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-item.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-equip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-etc.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-up.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-down.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/resize-grip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/avatar.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-field.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/people.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/security.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-on.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-off.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/password.png",
+    "http://10.255.255.254:4174/fonts/DotGothic16-Regular.ttf",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/ok.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/cancel.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-7.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-7.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/summary.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/ok.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/trade.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/cancel.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/friends.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/party-tab.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/levels.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/hp.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/sp.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/rail.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/previous.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/next.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/bubble.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/upper.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/lower.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/clean-plate-alpha-edge.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/minimized-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-option.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-info.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/bgm-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-left-arrow.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-track.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-right-arrow.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/on-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/effect-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/skin-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/skin-dropdown.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-opaque.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-snap.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-attack.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-skill.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-item.png"
+  ],
+  "consoleErrors": [],
+  "geometry": {
+    "defaultBox": {
+      "x": 285,
+      "y": 399,
+      "width": 280,
+      "height": 120
+    },
+    "titleBox": {
+      "x": 301,
+      "y": 402,
+      "width": 140,
+      "height": 13
+    },
+    "componentIds": [
+      "exchange-title-icon",
+      "exchange-title-text",
+      "exchange-item-0-0",
+      "exchange-item-0-1",
+      "exchange-item-0-2",
+      "exchange-item-0-3",
+      "exchange-item-0-4",
+      "exchange-item-0-5",
+      "exchange-item-0-6",
+      "exchange-item-0-7",
+      "exchange-item-1-0",
+      "exchange-item-1-1",
+      "exchange-item-1-2",
+      "exchange-item-1-3",
+      "exchange-item-1-4",
+      "exchange-item-1-5",
+      "exchange-item-1-6",
+      "exchange-item-1-7",
+      "exchange-summary",
+      "exchange-ok",
+      "exchange-trade",
+      "exchange-cancel"
+    ],
+    "uniqueComponentIds": 22,
+    "corner": {
+      "outside00": false,
+      "step50": true,
+      "step41": true,
+      "step22": true,
+      "step14": true,
+      "step06": true
+    },
+    "textOverflow": [],
+    "nativeTextFonts": [],
+    "drag": {
+      "defaultBox": {
+        "x": 285,
+        "y": 399,
+        "width": 280,
+        "height": 120
+      },
+      "bottomRight": {
+        "x": 569,
+        "y": 444,
+        "width": 280,
+        "height": 120
+      },
+      "viewport": {
+        "width": 849,
+        "height": 564
+      },
+      "contained": true
+    }
+  },
+  "controls": [
+    {
+      "index": 0,
+      "label": "交換アイテム 1",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "b3d5445e5dfdae2568ac498d87139bd66bd5fd6956dad2c045205cb2de63358d",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 1 を選択"
+        ]
+      }
+    },
+    {
+      "index": 1,
+      "label": "交換アイテム 2",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "cd52f33b91b4785bcc4b90cbe794d72769a8ac2f6772b25f8330d2f52f5711bf",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 2 を選択"
+        ]
+      }
+    },
+    {
+      "index": 2,
+      "label": "交換アイテム 3",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "10d4ef6ff25d182ad7c2eaa33f686c44c39b3d8a7041d0daaaa5f57b95d26727",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 3 を選択"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "label": "交換アイテム 4",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "d5871a81a6fb36d841669b2c647a5507a7dd0cefb8a8290b553cefb5c1fe9941",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 4 を選択"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "label": "交換アイテム 5",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "d049bae9e96e0bc1e3e219145e0532f1f09ab2d16ab486531335750ad81a755a",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 5 を選択"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "label": "交換アイテム 6",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "cd1eb70d4ad6aae5372b4e9b13ad062b4ab29b19c4a84eafa1e348f2a7eb5b8e",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 6 を選択"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "label": "交換アイテム 7",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "e9fed866f0d42de35dc5336134c9c3da50d5821fca84f6abb7beeca107730e61",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 7 を選択"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "label": "交換アイテム 8",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "82e5f4958b18e12edac23d18c5686db6e70f1022c4a216e90a3591f58281918a",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 8 を選択"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "label": "交換アイテム 9",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "7c6089fbfd5723338df6545dee1ab68c1480e35dbd56104ab61af2cad36b712c",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 9 を選択"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "label": "交換アイテム 10",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "c8db33c943f0f5546004820998fb6721b79a88446a144bfa62a427d900e9aeb7",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 10 を選択"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "label": "交換アイテム 11",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "674e3e01fe6d213d6ef33185089e6fef25c628dd540a4ab2ee29ed4bf13504b8",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 11 を選択"
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "label": "交換アイテム 12",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "26d1795c9c2c0e7577dc2f1eec333909d4384e157fc5f8f8c06c9b1afc765a04",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 12 を選択"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "label": "交換アイテム 13",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "22004b02ca06d9cbd5fc5c555cab9b040db4dadf8336ef318ceb5912bd3c896f",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 13 を選択"
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "label": "交換アイテム 14",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "28a16f10d174f365415aa9b7cde120bec977bfed52aaae1c3682dbbf4ce5f844",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 14 を選択"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "label": "交換アイテム 15",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "5e271cff83a16bf2091e150e36d754f971022a9d003cc99a76e92ded7036cff8",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 15 を選択"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "label": "交換アイテム 16",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "settledHash": "c1a2d6162c1623a6a9beef0117057f5056fe10f60d7ffee5d21d3e116f1a0f33",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-item",
+        "outputs": [
+          "交換アイテム 16 を選択"
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "label": "OK",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "6fa685975660733542827d3bd22a600db4fe9975d522d5b7b77af9651aa5b848",
+      "settledHash": "5a5b219d4ed3e8dab947a6f10cda3a31333dc99a6c18c8943fe99c88cd8ff4f5",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-ok",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-ok",
+        "outputs": [
+          "交換内容を確認しました"
+        ]
+      }
+    },
+    {
+      "index": 17,
+      "label": "cancel",
+      "tag": "button",
+      "type": "",
+      "idleHash": "ab21e5fdfb7a79d0df852c9ea7b066ede56694c57b13ef2acbac00be76ce3726",
+      "downHash": "edb28610f9538a7929d1be40d34849fffbc9c807f217e7874d20015967f37ce8",
+      "settledHash": "7b93a8946db9261df2733292149ad2f3fc928e8c4eb2fc6d73e50510e45e91a8",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-cancel",
+        "outputs": [
+          ""
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "exchange-source-cancel",
+        "outputs": [
+          "交換をキャンセルしました"
+        ]
+      }
+    }
+  ],
+  "ranges": [],
+  "minimize": null,
+  "checkboxes": [],
+  "donorPinkBoundary": 0,
+  "sourceContracts": [
+    {
+      "script": "contract-check.sh",
+      "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+    },
+    {
+      "script": "remaining-window-contract.sh",
+      "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+    }
+  ]
+}

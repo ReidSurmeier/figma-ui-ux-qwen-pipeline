@@ -30,8 +30,10 @@ convert "$WORK_DIR/plate-4.png" -alpha set -channel A \
 
 # Shared compact chrome is a selected Qwen Image 3 Pro endpoint from the same
 # source UI family. Status title/icon/buttons remain separate components.
-cp "$REPO_ROOT/prototype/public/assets/japanese-rpg-v001/basic-info/minimized-plate.png" \
-  "$OUTPUT_DIR/minimized-plate.png"
+[[ -f "$OUTPUT_DIR/minimized-plate.png" ]] || {
+  printf 'missing dedicated Status minimized asset; run assemble_generated_minimized_states.sh first\n' >&2
+  exit 1
+}
 
 bash "$REPO_ROOT/scripts/evaluate_qwen_clean_plate.sh" "$OUTPUT_DIR/clean-plate.png" 280 126
 sha256sum "$OUTPUT_DIR/clean-plate.png" "$OUTPUT_DIR/minimized-plate.png"

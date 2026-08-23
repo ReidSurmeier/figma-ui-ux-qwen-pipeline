@@ -1,0 +1,11 @@
+{
+  "status": "selected-region-assembly",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "openrouter",
+  "selected_candidate": "image-02.png",
+  "selected_candidate_sha256": "956e3949213a3da8f784cf350f2e532cf93e4730818b6362fc6d8e0ae30a2d9c",
+  "assembly": {"source_crop": [0, 18, 1024, 66], "trim_fuzz_percent": 4, "normalized_size": [280, 18], "left_surface": [0, 0, 176, 18], "right_endcap": [276, 0, 4, 18]},
+  "promoted_asset": "prototype/public/assets/japanese-rpg-v001/status/minimized-plate.png",
+  "promoted_sha256": "51fce8f22de4817c2dbae6ecbfea0a1a0c0bee41c81b3303f239c5d076627f4c",
+  "selection_reason": "Complete compact edges, no body or pseudo-text, Status-specific slate-blue generated surface, and a unique runtime hash."
+}

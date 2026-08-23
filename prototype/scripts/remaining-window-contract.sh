@@ -8,7 +8,7 @@ RUNTIME_SOURCE="$PROTOTYPE_DIR/src/RemainingSourceWindows.tsx"
 ASSEMBLY_SOURCE="$REPO_DIR/scripts/assemble_remaining_japanese_rpg_assets.sh"
 
 declare -A counts=(
-  [card]=13 [skills]=21 [equipment]=15 [chat]=12
+  [card]=14 [skills]=22 [equipment]=15 [chat]=14
   [exchange]=24 [game-menu]=8 [party]=20 [quickbar]=7
   [compact-info]=7 [bottom-bar]=8 [notification]=7
 )
@@ -62,4 +62,4 @@ for relative in "${!transparent_bottom_rows[@]}"; do
   awk -v value="$alpha" 'BEGIN { exit !(value < 0.001) }'
 done
 
-printf 'remaining-window-contract: PASS Qwen plates, 142 independent assets, rounded pixel corners, no runtime underlay, and no donor-pink component seams\n'
+printf 'remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams\n'

@@ -7,7 +7,7 @@
   },
   "reference": {
     "id": "41:3",
-    "imageHash": "5207224a4c53e1e60faf85217f08d7e0856ec816"
+    "imageHash": "51a44295e9b926599c39b30ec14d244afba609e3"
   },
   "windows": [
     {
@@ -47,8 +47,8 @@
         "width": 280,
         "height": 150
       },
-      "rasterCount": 13,
-      "expectedComponentMinimum": 13,
+      "rasterCount": 14,
+      "expectedComponentMinimum": 14,
       "hotspotCount": 4,
       "expectedHotspots": 4,
       "unlinkedHotspots": [],
@@ -69,8 +69,8 @@
         "width": 281,
         "height": 184
       },
-      "rasterCount": 21,
-      "expectedComponentMinimum": 21,
+      "rasterCount": 22,
+      "expectedComponentMinimum": 22,
       "hotspotCount": 12,
       "expectedHotspots": 12,
       "unlinkedHotspots": [],
@@ -157,10 +157,10 @@
         "width": 280,
         "height": 120
       },
-      "rasterCount": 11,
-      "expectedComponentMinimum": 11,
-      "hotspotCount": 6,
-      "expectedHotspots": 6,
+      "rasterCount": 13,
+      "expectedComponentMinimum": 13,
+      "hotspotCount": 7,
+      "expectedHotspots": 7,
       "unlinkedHotspots": [],
       "reviewId": "42:133"
     },
@@ -269,8 +269,8 @@
       },
       "rasterCount": 6,
       "expectedComponentMinimum": 6,
-      "hotspotCount": 2,
-      "expectedHotspots": 2,
+      "hotspotCount": 0,
+      "expectedHotspots": 0,
       "unlinkedHotspots": [],
       "reviewId": "42:201"
     },
@@ -339,6 +339,349 @@
       "expectedHotspots": 17,
       "unlinkedHotspots": [],
       "reviewId": "42:220"
+    }
+  ],
+  "canonicalStateAudit": [
+    {
+      "windowId": "basic-info",
+      "controlId": "HP",
+      "hotspotId": "42:272",
+      "expectedName": "State / basic-info / HP-100 / v003",
+      "destinationId": "50:2",
+      "destinationIds": [
+        "50:2"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "SP",
+      "hotspotId": "42:274",
+      "expectedName": "State / basic-info / SP-100 / v003",
+      "destinationId": "50:30",
+      "destinationIds": [
+        "50:30"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "status",
+      "hotspotId": "42:276",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page status",
+      "destinationId": "32:2",
+      "destinationIds": [
+        "32:2"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "option",
+      "hotspotId": "42:278",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page option",
+      "destinationId": "33:4",
+      "destinationIds": [
+        "33:4"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "items",
+      "hotspotId": "42:280",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page items",
+      "destinationId": "33:31",
+      "destinationIds": [
+        "33:31"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "equip",
+      "hotspotId": "42:282",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page equip",
+      "destinationId": "33:58",
+      "destinationIds": [
+        "33:58"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "skill",
+      "hotspotId": "42:284",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page skill",
+      "destinationId": "33:85",
+      "destinationIds": [
+        "33:85"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "map",
+      "hotspotId": "42:286",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page map",
+      "destinationId": "33:112",
+      "destinationIds": [
+        "33:112"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "chat",
+      "hotspotId": "42:288",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page chat",
+      "destinationId": "33:139",
+      "destinationIds": [
+        "33:139"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "basic-info",
+      "controlId": "friend",
+      "hotspotId": "42:290",
+      "expectedName": "Editable / Japanese Basic Info / v001 / Page friend",
+      "destinationId": "33:166",
+      "destinationIds": [
+        "33:166"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "card",
+      "controlId": "カード情報スクロール",
+      "hotspotId": "42:297",
+      "expectedName": "State / card / scroll-100 / v003",
+      "destinationId": "50:58",
+      "destinationIds": [
+        "50:58"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "skills",
+      "controlId": "スキルスクロール",
+      "hotspotId": "42:320",
+      "expectedName": "State / skills / scroll-100 / v003",
+      "destinationId": "50:73",
+      "destinationIds": [
+        "50:73"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "status",
+      "controlId": "stats",
+      "hotspotId": "42:330",
+      "expectedName": "Editable / Japanese Status / v001 / Stats",
+      "destinationId": "37:2",
+      "destinationIds": [
+        "37:2"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "status",
+      "controlId": "info",
+      "hotspotId": "42:332",
+      "expectedName": "Editable / Japanese Status / v001 / Info",
+      "destinationId": "37:27",
+      "destinationIds": [
+        "37:27"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "status",
+      "controlId": "Strを上げる",
+      "hotspotId": "42:334",
+      "expectedName": "Editable / Japanese Status / v001 / Stat Str changed",
+      "destinationId": "37:62",
+      "destinationIds": [
+        "37:62"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "status",
+      "controlId": "Agiを上げる",
+      "hotspotId": "42:336",
+      "expectedName": "Editable / Japanese Status / v001 / Stat Agi changed",
+      "destinationId": "37:87",
+      "destinationIds": [
+        "37:87"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "status",
+      "controlId": "Vitを上げる",
+      "hotspotId": "42:338",
+      "expectedName": "Editable / Japanese Status / v001 / Stat Vit changed",
+      "destinationId": "37:112",
+      "destinationIds": [
+        "37:112"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "status",
+      "controlId": "Dexを上げる",
+      "hotspotId": "42:340",
+      "expectedName": "Editable / Japanese Status / v001 / Stat Dex changed",
+      "destinationId": "37:137",
+      "destinationIds": [
+        "37:137"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "status",
+      "controlId": "Lukを上げる",
+      "hotspotId": "42:342",
+      "expectedName": "Editable / Japanese Status / v001 / Stat Luk changed",
+      "destinationId": "37:162",
+      "destinationIds": [
+        "37:162"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "inventory",
+      "controlId": "所持品スクロール",
+      "hotspotId": "42:397",
+      "expectedName": "State / inventory / scroll-100 / v003",
+      "destinationId": "50:96",
+      "destinationIds": [
+        "50:96"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "chat",
+      "controlId": "公開",
+      "hotspotId": "42:433",
+      "expectedName": "State / chat / privacy-public / v003",
+      "destinationId": "48:10",
+      "destinationIds": [
+        "48:10"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "chat",
+      "controlId": "非公開",
+      "hotspotId": "48:42",
+      "expectedName": "State / chat / privacy-private / v003",
+      "destinationId": "48:24",
+      "destinationIds": [
+        "48:24"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "bottom-bar",
+      "controlId": "クイックスロット位置",
+      "hotspotId": "42:528",
+      "expectedName": "State / bottom-bar / position-100 / v003",
+      "destinationId": "50:131",
+      "destinationIds": [
+        "50:131"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "BGM",
+      "hotspotId": "42:546",
+      "expectedName": "State / options / BGM-100 / v003",
+      "destinationId": "50:139",
+      "destinationIds": [
+        "50:139"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "BGM on",
+      "hotspotId": "42:550",
+      "expectedName": "State / options / BGM-on / v003",
+      "destinationId": "50:245",
+      "destinationIds": [
+        "50:245"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "Effect",
+      "hotspotId": "42:554",
+      "expectedName": "State / options / Effect-100 / v003",
+      "destinationId": "50:188",
+      "destinationIds": [
+        "50:188"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "Effect on",
+      "hotspotId": "42:558",
+      "expectedName": "State / options / Effect-off / v003",
+      "destinationId": "50:294",
+      "destinationIds": [
+        "50:294"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "opaque",
+      "hotspotId": "42:562",
+      "expectedName": "State / options / opaque-on / v003",
+      "destinationId": "50:343",
+      "destinationIds": [
+        "50:343"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "attack",
+      "hotspotId": "42:564",
+      "expectedName": "State / options / attack-off / v003",
+      "destinationId": "50:392",
+      "destinationIds": [
+        "50:392"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "skill",
+      "hotspotId": "42:566",
+      "expectedName": "State / options / skill-on / v003",
+      "destinationId": "50:441",
+      "destinationIds": [
+        "50:441"
+      ],
+      "linked": true
+    },
+    {
+      "windowId": "options",
+      "controlId": "item",
+      "hotspotId": "42:568",
+      "expectedName": "State / options / item-off / v003",
+      "destinationId": "50:490",
+      "destinationIds": [
+        "50:490"
+      ],
+      "linked": true
     }
   ]
 }

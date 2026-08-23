@@ -7,7 +7,7 @@ const root = "/assets/japanese-rpg-v001";
 
 export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
   const [rotated, setRotated] = useState(false);
-  const [scroll, setScroll] = useState(30);
+  const [scroll, setScroll] = useState(0);
   const assetRoot = `${root}/card`;
   return (
     <SourceWindow id="card" title="ソルジャースケルトンカード" initialPosition={{ x: 285, y: 0 }} width={280} height={150} titleWidth={160} titleTextLeft={86} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false}>
@@ -15,8 +15,9 @@ export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
         <SourceRaster id="card-art" file={`${assetRoot}/components/art`} style={{ inset: 0 }} />
       </button>
       {[0, 1, 2, 3].map((row) => <SourceRaster key={row} id={`card-copy-${row}`} file={`${assetRoot}/components/copy-${row}`} style={{ left: 90, top: 20 + row * 19, width: 155, height: 19 }} />)}
-      <SourceRaster id="card-checkbox-source" file={`${assetRoot}/components/checkbox`} style={{ left: 90, top: 94, width: 67, height: 18 }} />
-      <SourceRaster id="card-scrollbar" file={`${assetRoot}/components/scrollbar`} style={{ left: 248, top: 34, width: 29, height: 80 }} />
+      <SourceRaster id="card-copy-4" file={`${assetRoot}/components/copy-4`} style={{ left: 90, top: 94, width: 67, height: 18 }} />
+      <SourceRaster id="card-scrollbar-track" file={`${assetRoot}/components/scrollbar-track`} style={{ left: 248, top: 34, width: 29, height: 80 }} />
+      <SourceRaster id="card-scrollbar-thumb" className="card-source-thumb" file={`${assetRoot}/components/scrollbar-thumb`} style={{ left: 248, top: 44 + Math.round(scroll * 0.27), width: 29, height: 32 }} />
       <input className="card-source-scroll" type="range" aria-label="カード情報スクロール" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />
       <SourceRaster id="card-bottom-icon" file={`${assetRoot}/components/bottom-icon`} style={{ left: 5, top: 122, width: 25, height: 22 }} />
       <button className="card-source-slot" type="button" aria-label="カードスロット" aria-pressed={scroll > 50} onClick={() => setScroll((value) => value > 50 ? 30 : 70)}>
@@ -30,7 +31,7 @@ export function CardSourceWindow({ zIndex, onActivate }: WindowProps) {
 const skillNames = ["ディバインプロテクション", "ワープポータル", "ニューマ", "ヒール"];
 export function SkillsSourceWindow({ zIndex, onActivate }: WindowProps) {
   const [selected, setSelected] = useState(0);
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(34);
   const [status, setStatus] = useState("");
   const [upgraded, setUpgraded] = useState<boolean[]>([false, false, false, false]);
   const assetRoot = `${root}/skills`;
@@ -43,7 +44,8 @@ export function SkillsSourceWindow({ zIndex, onActivate }: WindowProps) {
       {skillNames.map((name, row) => <button key={name} type="button" className="skill-source-level" aria-label={`${name}をレベルアップ`} aria-pressed={upgraded[row]} style={{ left: 75, top: 20 + row * 36 }} onClick={() => { setUpgraded((values) => values.map((value, index) => index === row ? !value : value)); setStatus(`${name} Lv+1`); }}>
         <SourceRaster id={`skill-level-${row}`} file={`${assetRoot}/components/level-${row}`} style={{ inset: 0 }} />
       </button>)}
-      <SourceRaster id="skills-scrollbar" file={`${assetRoot}/components/scrollbar`} style={{ left: 263, top: 18, width: 17, height: 144 }} />
+      <SourceRaster id="skills-scrollbar-track" file={`${assetRoot}/components/scrollbar-track`} style={{ left: 263, top: 18, width: 17, height: 144 }} />
+      <SourceRaster id="skills-scrollbar-thumb" className="skills-source-thumb" file={`${assetRoot}/components/scrollbar-thumb`} style={{ left: 263, top: 28 + Math.round(scroll * 0.79), width: 17, height: 38 }} />
       <input className="skills-source-scroll" type="range" aria-label="スキルスクロール" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />
       <SourceRaster id="skills-points" file={`${assetRoot}/components/points`} style={{ left: 2, top: 163, width: 173, height: 20 }} />
       <button type="button" className="skills-source-action skills-source-action--use" aria-label="use" aria-pressed={status.startsWith("use")} onClick={() => setStatus(`use ${skillNames[selected]}`)}><SourceRaster id="skills-use" file={`${assetRoot}/components/use`} style={{ inset: 0 }} /></button>
@@ -80,10 +82,14 @@ export function ChatSourceWindow({ zIndex, onActivate }: WindowProps) {
       {tab === "メッセージ" ? <div className="chat-source-message" role="tabpanel">受信メッセージはありません</div> : <div role="tabpanel">
         <SourceRaster id="chat-topic-label" file={`${assetRoot}/components/topic-label`} style={{ left: 3, top: 26, width: 41, height: 19 }} /><SourceRaster id="chat-topic-field" file={`${assetRoot}/components/topic-field`} style={{ left: 44, top: 26, width: 232, height: 19 }} />
         <SourceRaster id="chat-people" file={`${assetRoot}/components/people`} style={{ left: 3, top: 45, width: 133, height: 20 }} /><SourceRaster id="chat-room" file={`${assetRoot}/components/room`} style={{ left: 136, top: 45, width: 140, height: 20 }} />
-        <SourceRaster id="chat-security" file={`${assetRoot}/components/security`} style={{ left: 3, top: 65, width: 131, height: 20 }} /><SourceRaster id="chat-password" file={`${assetRoot}/components/password`} style={{ left: 135, top: 65, width: 141, height: 20 }} />
+        <SourceRaster id="chat-security" file={`${assetRoot}/components/security`} style={{ left: 3, top: 65, width: 131, height: 20 }} />
+        <SourceRaster id="chat-privacy-public" file={`${assetRoot}/components/privacy-${privacy === "公開" ? "on" : "off"}`} style={{ left: 43, top: 66, width: 16, height: 18 }} />
+        <SourceRaster id="chat-privacy-private" file={`${assetRoot}/components/privacy-${privacy === "非公開" ? "on" : "off"}`} style={{ left: 82, top: 66, width: 16, height: 18 }} />
+        <SourceRaster id="chat-password" file={`${assetRoot}/components/password`} style={{ left: 135, top: 65, width: 141, height: 20 }} />
         <input className="chat-source-topic" aria-label="トピック" value={topic} onChange={(event) => setTopic(event.currentTarget.value)} />
         <select className="chat-source-room" aria-label="ルーム" value={room} onChange={(event) => setRoom(event.currentTarget.value)}><option>チャットルーム</option><option>パーティー</option></select>
-        <label className="chat-source-private"><input type="radio" name="privacy" checked={privacy === "非公開"} onChange={() => setPrivacy("非公開")} />非公開</label>
+        <input className="chat-source-privacy chat-source-privacy--public" type="radio" name="privacy" aria-label="公開" checked={privacy === "公開"} onChange={() => setPrivacy("公開")} />
+        <input className="chat-source-privacy chat-source-privacy--private" type="radio" name="privacy" aria-label="非公開" checked={privacy === "非公開"} onChange={() => setPrivacy("非公開")} />
         <button className="chat-source-ok" type="button" aria-label="OK" onClick={() => setStatus(`${privacy} ${room}「${topic}」を作成しました`)}><SourceRaster id="chat-ok" file={`${assetRoot}/components/ok`} style={{ inset: 0 }} /></button>
         <button className="chat-source-cancel" type="button" aria-label="cancel" onClick={() => { setTopic(""); setStatus("キャンセルしました"); }}><SourceRaster id="chat-cancel" file={`${assetRoot}/components/cancel`} style={{ inset: 0 }} /></button>
       </div>}

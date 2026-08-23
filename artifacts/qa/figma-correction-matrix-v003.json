@@ -1,0 +1,36 @@
+{
+  "schema_version": "3.0",
+  "captured_at": "2026-08-22T22:03:38-04:00",
+  "file_key": "v0bBUYUtCz88dfG2IMgho4",
+  "desktop_root_id": "41:2",
+  "desktop_url": "https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4?node-id=41-2",
+  "verdict": "pass",
+  "evidence": {
+    "live_audit": "artifacts/qa/figma-desktop-audit-v001.json",
+    "desktop_screenshot": "artifacts/qa/figma-desktop-current.png",
+    "options_screenshot": "artifacts/qa/figma-options-current.png",
+    "chat_public_screenshot": "artifacts/qa/figma-chat-public-v003.png",
+    "chat_private_screenshot": "artifacts/qa/figma-chat-private-v003.png"
+  },
+  "metrics": {
+    "windows": 15,
+    "runtime_component_instances": 196,
+    "linked_hotspots": 146,
+    "canonical_state_links": 31,
+    "canonical_state_links_green": 31,
+    "options_donor_magenta_pixels": 2,
+    "runtime_normalized_mae": 0.00639723
+  },
+  "hashes": {
+    "desktop_screenshot_sha256": "3afef345cee69d517b8e0ff359bc77e30615c4055b85a6f8816929b3db5608d9",
+    "options_screenshot_sha256": "c8e7d389786ef0f6c946fa48c554d75a7407bc5bed23e93fcb2a7b3b22c0a3e3",
+    "chat_public_screenshot_sha256": "4cd0a1d98e7de782bda0d4863873c1eb94fd43c1acdead03c75e3038b5461a16",
+    "chat_private_screenshot_sha256": "3aa26d08b970139e5cea7e499519061c01e8cedbb35314f0c7c083e6cf1bdf36"
+  },
+  "notes": [
+    "Card and Skills use independent source-derived track and thumb layers in Figma.",
+    "Chat public and private states swap independent on and off raster assets without moving their anchors.",
+    "Options checkbox states use separate standard and footer source assets; the donor-magenta perimeter is removed.",
+    "Continuous range input remains authoritative in WSL; Figma represents named editable endpoints with Smart Animate."
+  ]
+}

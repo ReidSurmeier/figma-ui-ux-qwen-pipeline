@@ -1,0 +1,37 @@
+[TASK]
+Create a dedicated coherent minimized-state chrome donor for the exact Japanese 装備アイテム equipment window. Recompose this specific 280 by 152 window into a compact 180 by 18 title bar at the top-left. It must be a newly resolved Equipment endpoint, never a crop and never a reused window bar.
+
+[REFERENCE ROLE]
+Reference image 1 is the authoritative 装備アイテム window and fixes its exact pale-blue chrome, pixel density, stepped corner language, title-bar lighting, and one-pixel border weights.
+
+[PRESERVATION INVARIANTS]
+- Keep the Equipment source palette, hard aliased edges, one-pixel border rhythm, and six-pixel stepped corner character.
+- The compact bar has complete left, top, newly resolved right, and bottom chrome.
+- Remove the avatar, equipment rows, title glyph, icon, and window buttons; those remain independent editable elements.
+- Do not copy the Basic Info, Status, or Inventory compact asset. Derive only from the supplied Equipment reference.
+
+[CANVAS AND LAYOUT]
+- Return a 1120 by 608 output canvas, four times the 280 by 152 reference.
+- Place one four-times compact 180 by 18 title surface at x=0 y=0 and fill all remaining canvas pixels with neutral white review field.
+- Resolve the compact right endcap at source x=179.
+
+[REGION EDITS]
+- REGION: Equipment minimized chrome
+  CHANGE: Remove the complete body and regenerate only an empty compact 180 by 18 Equipment title surface with continuous source-matched chrome and a complete right endcap.
+  PRESERVE: Equipment title palette; hard pixel-scale border; stepped source corners
+
+[STYLE SYSTEM]
+- authentic late-1990s Japanese desktop RPG raster UI
+- crisp low-resolution pale-blue Equipment chrome
+
+[ASSET RULES]
+- Exactly one empty compact title surface at top-left.
+- No glyphs, pseudo-text, icon, button, avatar, equipment row, or second window.
+
+[NEGATIVE CONSTRAINTS]
+- No crop, squeezed window, reused compact bar, modern rounded card, soft shadow, glass, gibberish, or magenta background.
+
+[QUALITY GATE]
+- All four compact edges are complete.
+- No equipment body content survives.
+- The endpoint differs from every other window and reads as newly generated Equipment chrome.

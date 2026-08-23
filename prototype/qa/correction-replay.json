@@ -46,7 +46,7 @@
       "id": "checkbox-anchor-and-stray-pixel",
       "source_correction": "When I click a checkbox it moves, and there is a random black pixel above the bottom checkboxes.",
       "review_prompt": "Toggle every checkbox twice. Is its outer geometry invariant, and do before/after difference pixels stay inside the declared state region with no dead pixel above it?",
-      "applies_to": ["options", "card"],
+      "applies_to": ["options", "chat"],
       "required_evidence": ["off screenshot", "on screenshot", "toggle-back screenshot", "difference bounding box"],
       "promotion_rule": "Turn any motion or stray pixel into a reproducible geometry-invariance and clear-row test."
     },
@@ -54,7 +54,7 @@
       "id": "checkbox-label-overlap",
       "source_correction": "The on label is overlapped by the checkbox.",
       "review_prompt": "At both checkbox states, do the checkbox and its Japanese or on label occupy disjoint declared boxes while matching source spacing?",
-      "applies_to": ["options", "card"],
+      "applies_to": ["options", "chat"],
       "required_evidence": ["checkbox bounds", "label bounds", "dark-pixel footprints"],
       "promotion_rule": "Turn any overlap into a reproducible bounding-box intersection assertion."
     },
@@ -137,6 +137,14 @@
       "applies_to": ["*"],
       "required_evidence": ["critical flow trace", "console log", "state checkpoints", "retained failure artifacts"],
       "promotion_rule": "Turn every unreachable or inconsistent state into a reproducible end-to-end user-flow test."
+    },
+    {
+      "id": "interaction-animation-source-fit",
+      "source_correction": "Many generated interaction states and animations are still not done.",
+      "review_prompt": "Replay every state-changing control from idle through pointer-down, transition, settled, reversal, and restore. Does the response use a complete source-fitting state or generated endpoint, and does motion expose enough distinct frames without clipping, fading to an unrelated surface, or substituting a generic asset from another window?",
+      "applies_to": ["*"],
+      "required_evidence": ["idle/down/transition/settled contact sheet", "distinct geometry or visual-state samples", "state-asset provenance and hash", "reversal trace"],
+      "promotion_rule": "Turn every missing, generic, or visually foreign state and every choppy transition into a reproducible state-hash, sample-count, and clipping test before revision."
     }
   ]
 }

@@ -402,8 +402,8 @@
           }
         },
         {
-          "id": "card-checkbox-source",
-          "assetPath": "/assets/japanese-rpg-v001/card/components/checkbox.png",
+          "id": "card-copy-4",
+          "assetPath": "/assets/japanese-rpg-v001/card/components/copy-4.png",
           "geometry": {
             "x": 90,
             "y": 94,
@@ -412,13 +412,23 @@
           }
         },
         {
-          "id": "card-scrollbar",
-          "assetPath": "/assets/japanese-rpg-v001/card/components/scrollbar.png",
+          "id": "card-scrollbar-track",
+          "assetPath": "/assets/japanese-rpg-v001/card/components/scrollbar-track.png",
           "geometry": {
             "x": 248,
             "y": 34,
             "width": 29,
             "height": 80
+          }
+        },
+        {
+          "id": "card-scrollbar-thumb",
+          "assetPath": "/assets/japanese-rpg-v001/card/components/scrollbar-thumb.png",
+          "geometry": {
+            "x": 248,
+            "y": 44,
+            "width": 29,
+            "height": 32
           }
         },
         {
@@ -647,13 +657,23 @@
           }
         },
         {
-          "id": "skills-scrollbar",
-          "assetPath": "/assets/japanese-rpg-v001/skills/components/scrollbar.png",
+          "id": "skills-scrollbar-track",
+          "assetPath": "/assets/japanese-rpg-v001/skills/components/scrollbar-track.png",
           "geometry": {
             "x": 263,
             "y": 18,
             "width": 17,
             "height": 144
+          }
+        },
+        {
+          "id": "skills-scrollbar-thumb",
+          "assetPath": "/assets/japanese-rpg-v001/skills/components/scrollbar-thumb.png",
+          "geometry": {
+            "x": 263,
+            "y": 55,
+            "width": 17,
+            "height": 38
           }
         },
         {
@@ -2087,6 +2107,26 @@
           }
         },
         {
+          "id": "chat-privacy-public",
+          "assetPath": "/assets/japanese-rpg-v001/chat/components/privacy-on.png",
+          "geometry": {
+            "x": 43,
+            "y": 66,
+            "width": 16,
+            "height": 18
+          }
+        },
+        {
+          "id": "chat-privacy-private",
+          "assetPath": "/assets/japanese-rpg-v001/chat/components/privacy-off.png",
+          "geometry": {
+            "x": 82,
+            "y": 66,
+            "width": 16,
+            "height": 18
+          }
+        },
+        {
           "id": "chat-password",
           "assetPath": "/assets/japanese-rpg-v001/chat/components/password.png",
           "geometry": {
@@ -2149,13 +2189,23 @@
           }
         },
         {
-          "id": "control-3",
+          "id": "公開",
           "role": "input",
           "geometry": {
-            "x": 77,
-            "y": 73,
-            "width": 13,
-            "height": 13
+            "x": 43,
+            "y": 66,
+            "width": 16,
+            "height": 18
+          }
+        },
+        {
+          "id": "非公開",
+          "role": "input",
+          "geometry": {
+            "x": 82,
+            "y": 66,
+            "width": 16,
+            "height": 18
           }
         },
         {
@@ -3232,28 +3282,7 @@
           }
         }
       ],
-      "controls": [
-        {
-          "id": "簡易HP",
-          "role": "input",
-          "geometry": {
-            "x": 16,
-            "y": 19,
-            "width": 118,
-            "height": 15
-          }
-        },
-        {
-          "id": "簡易SP",
-          "role": "input",
-          "geometry": {
-            "x": 145,
-            "y": 19,
-            "width": 132,
-            "height": 15
-          }
-        }
-      ]
+      "controls": []
     },
     {
       "id": "bottom-bar",

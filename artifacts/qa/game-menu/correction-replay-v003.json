@@ -1,0 +1,253 @@
+{
+  "schema_version": "3.0",
+  "window_id": "game-menu",
+  "overall": "pass",
+  "evidence_scope": "fresh executable per-window correction matrix",
+  "evidence": [
+    "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+    "artifacts/qa/figma-desktop-current.png",
+    "artifacts/qa/figma-desktop-audit-v001.json",
+    "artifacts/qa/figma-correction-matrix-v003.json"
+  ],
+  "results": [
+    {
+      "prompt_id": "no-reference-underlay",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "noUnderlay": true,
+            "requestedResources": 265
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "independent-elements",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "independent": true,
+            "componentCount": 6,
+            "expected": 6
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "preserve-japanese-source-style",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "japaneseStyle": true,
+            "nativeTextFonts": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "no-pink-donor-pixels",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "sourceContracts": [
+              {
+                "script": "contract-check.sh",
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+              },
+              {
+                "script": "remaining-window-contract.sh",
+                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+              }
+            ],
+            "donorPinkBoundary": 0,
+            "maximumBoundaryPixels": 2,
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/game-menu/trace.json/../default.png"
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "pixel-rounded-window-edges",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "outside00": false,
+            "step50": true,
+            "step41": true,
+            "step22": true,
+            "step14": true,
+            "step06": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "title-placement-and-white-box",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "titlePlaced": true,
+            "titleBox": {
+              "x": 642,
+              "y": 185,
+              "width": 128,
+              "height": 13
+            },
+            "windowBox": {
+              "x": 626,
+              "y": 182,
+              "width": 222,
+              "height": 133
+            }
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "generated-minimize-endpoint",
+      "verdict": "not-applicable",
+      "note": "The source window has no control in this correction class.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "hasMinimize": false,
+            "minimizeProvenance": false,
+            "minimize": null
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "settled-button-effects",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "controlCount": 4,
+            "failures": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "drag-cutoff-and-z-order",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "defaultBox": {
+              "x": 626,
+              "y": 182,
+              "width": 222,
+              "height": 133
+            },
+            "bottomRight": {
+              "x": 627,
+              "y": 431,
+              "width": 222,
+              "height": 133
+            },
+            "viewport": {
+              "width": 849,
+              "height": 564
+            },
+            "contained": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "text-overlap-and-pixel-aesthetic",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "overflow": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "figma-link-and-page-parity",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "figmaSynced": true,
+            "requiredMarker": "artifacts/qa/figma-correction-matrix-v003.json"
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "complete-user-flow-not-screenshot-only",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "controlCount": 4,
+            "failures": [],
+            "consoleErrors": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "interaction-animation-source-fit",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/game-menu/trace.json",
+          "metrics": {
+            "minimize": null,
+            "ranges": [],
+            "discreteControlFailures": []
+          }
+        }
+      ]
+    }
+  ]
+}

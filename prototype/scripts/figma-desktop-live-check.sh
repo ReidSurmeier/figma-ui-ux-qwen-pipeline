@@ -8,6 +8,7 @@ HELPER="$REPO_DIR/.agents/skills/figma-qwen-ui-pipeline/scripts/figma-mcp.mjs"
 AUDIT_CODE="$REPO_DIR/artifacts/figma-code-v001/audit.js"
 AUDIT_EVIDENCE="$REPO_DIR/artifacts/qa/figma-desktop-audit-v001.json"
 SCREENSHOT="$REPO_DIR/artifacts/qa/figma-desktop-current.png"
+OPTIONS_SCREENSHOT="$REPO_DIR/artifacts/qa/figma-options-current.png"
 RUNTIME="$REPO_DIR/artifacts/qa/source-visuals/full.png"
 
 RAW_RESULT=$(node "$HELPER" use \
@@ -36,7 +37,9 @@ jq -e '
     .hotspotCount == .expectedHotspots and
     (.unlinkedHotspots | length) == 0 and
     (.reviewId | type == "string")
-  )
+  ) and
+  (.canonicalStateAudit | length) == 31 and
+  all(.canonicalStateAudit[]; .linked == true)
 ' <<<"$AUDIT" >/dev/null
 
 node "$HELPER" screenshot \
@@ -45,10 +48,19 @@ node "$HELPER" screenshot \
   --out "$SCREENSHOT" \
   --max-dimension 2048 >/dev/null
 
+node "$HELPER" screenshot \
+  --target japanese-options-window-v004 \
+  --node-id 41:18 \
+  --out "$OPTIONS_SCREENSHOT" \
+  --max-dimension 1024 >/dev/null
+
 [[ "$(identify -format '%wx%h' "$SCREENSHOT")" == "849x564" ]]
 [[ "$(identify -format '%wx%h' "$RUNTIME")" == "849x564" ]]
+[[ "$(identify -format '%wx%h' "$OPTIONS_SCREENSHOT")" == "280x122" ]]
+PINK=$(convert "$OPTIONS_SCREENSHOT" -alpha set -fx '(a>0.1&&r>0.35&&b>0.35&&g<0.48&&(r-g)>0.12&&(b-g)>0.12)?1:0' -format '%[fx:mean*w*h]' info:)
+awk -v count="$PINK" 'BEGIN { exit !(count <= 5) }'
 RESULT=$(compare -metric MAE "$RUNTIME" "$SCREENSHOT" null: 2>&1 || true)
 NORMALIZED=$(sed -n 's/.*(\([^)]*\)).*/\1/p' <<<"$RESULT")
 awk -v value="$NORMALIZED" 'BEGIN { exit !(value <= 0.012) }'
 
-printf 'figma-desktop-live-check: PASS 15 windows, 192 editable rasters, 147 linked hotspots, exact geometry, and runtime MAE=%s\n' "$NORMALIZED"
+printf 'figma-desktop-live-check: PASS 15 windows, 196 editable rasters, 146 linked hotspots, 31 canonical state links, zero donor-magenta perimeter, exact geometry, and runtime MAE=%s\n' "$NORMALIZED"

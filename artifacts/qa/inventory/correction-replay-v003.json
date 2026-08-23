@@ -1,0 +1,457 @@
+{
+  "schema_version": "3.0",
+  "window_id": "inventory",
+  "overall": "pass",
+  "evidence_scope": "fresh executable per-window correction matrix",
+  "evidence": [
+    "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+    "artifacts/qa/figma-desktop-current.png",
+    "artifacts/qa/figma-desktop-audit-v001.json",
+    "artifacts/qa/figma-correction-matrix-v003.json"
+  ],
+  "results": [
+    {
+      "prompt_id": "no-reference-underlay",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "noUnderlay": true,
+            "requestedResources": 266
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "independent-elements",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "independent": true,
+            "componentCount": 33,
+            "expected": 33
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "preserve-japanese-source-style",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "japaneseStyle": true,
+            "nativeTextFonts": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "no-pink-donor-pixels",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "sourceContracts": [
+              {
+                "script": "contract-check.sh",
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+              },
+              {
+                "script": "remaining-window-contract.sh",
+                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+              }
+            ],
+            "donorPinkBoundary": 0,
+            "maximumBoundaryPixels": 2,
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/inventory/trace.json/../default.png"
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "pixel-rounded-window-edges",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "outside00": false,
+            "step50": true,
+            "step41": true,
+            "step22": true,
+            "step14": true,
+            "step06": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "title-placement-and-white-box",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "titlePlaced": true,
+            "titleBox": {
+              "x": 16,
+              "y": 250,
+              "width": 120,
+              "height": 13
+            },
+            "windowBox": {
+              "x": 0,
+              "y": 247,
+              "width": 280,
+              "height": 137
+            }
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "generated-minimize-endpoint",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "hasMinimize": true,
+            "minimizeProvenance": true,
+            "minimize": {
+              "samples": [
+                [
+                  280,
+                  137
+                ],
+                [
+                  272.3,
+                  127.8
+                ],
+                [
+                  264.6,
+                  118.7
+                ],
+                [
+                  256.9,
+                  109.5
+                ],
+                [
+                  249.2,
+                  100.4
+                ],
+                [
+                  241.5,
+                  91.2
+                ],
+                [
+                  233.8,
+                  82.1
+                ],
+                [
+                  226.1,
+                  72.9
+                ],
+                [
+                  218.5,
+                  63.8
+                ],
+                [
+                  210.8,
+                  54.6
+                ],
+                [
+                  203.1,
+                  45.5
+                ],
+                [
+                  195.4,
+                  36.3
+                ],
+                [
+                  187.7,
+                  27.1
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ]
+              ],
+              "distinctGeometry": 14
+            }
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "tab-boundary-mapping",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "tabsPass": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "slider-full-endpoint-and-grey-block",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "ranges": [
+              {
+                "label": "所持品スクロール",
+                "distinctVisuals": 11,
+                "values": 11
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "continuous-motion-not-four-frames",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "ranges": [
+              {
+                "label": "所持品スクロール",
+                "distinctVisuals": 11,
+                "values": 11
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "settled-button-effects",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "controlCount": 27,
+            "failures": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "drag-cutoff-and-z-order",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "defaultBox": {
+              "x": 0,
+              "y": 247,
+              "width": 280,
+              "height": 137
+            },
+            "bottomRight": {
+              "x": 569,
+              "y": 427,
+              "width": 280,
+              "height": 137
+            },
+            "viewport": {
+              "width": 849,
+              "height": 564
+            },
+            "contained": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "text-overlap-and-pixel-aesthetic",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "overflow": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "figma-link-and-page-parity",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "figmaSynced": true,
+            "requiredMarker": "artifacts/qa/figma-correction-matrix-v003.json"
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "complete-user-flow-not-screenshot-only",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "controlCount": 27,
+            "failures": [],
+            "consoleErrors": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "interaction-animation-source-fit",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "minimize": {
+              "samples": [
+                [
+                  280,
+                  137
+                ],
+                [
+                  272.3,
+                  127.8
+                ],
+                [
+                  264.6,
+                  118.7
+                ],
+                [
+                  256.9,
+                  109.5
+                ],
+                [
+                  249.2,
+                  100.4
+                ],
+                [
+                  241.5,
+                  91.2
+                ],
+                [
+                  233.8,
+                  82.1
+                ],
+                [
+                  226.1,
+                  72.9
+                ],
+                [
+                  218.5,
+                  63.8
+                ],
+                [
+                  210.8,
+                  54.6
+                ],
+                [
+                  203.1,
+                  45.5
+                ],
+                [
+                  195.4,
+                  36.3
+                ],
+                [
+                  187.7,
+                  27.1
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ]
+              ],
+              "distinctGeometry": 14
+            },
+            "ranges": [
+              {
+                "label": "所持品スクロール",
+                "distinctVisuals": 11,
+                "values": 11
+              }
+            ],
+            "discreteControlFailures": []
+          }
+        }
+      ]
+    }
+  ]
+}

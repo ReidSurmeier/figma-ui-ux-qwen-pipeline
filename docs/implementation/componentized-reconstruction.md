@@ -126,6 +126,9 @@ The first tracer now implements the following failure-directed gates:
 | button has no press feedback or acts on pointer-down | idle/down/up/settled browser checkpoints |
 | minimize is a crop or four-frame jump | separate Qwen endpoint provenance plus more than four sampled widths and heights |
 | hosted Figma silently drifts from Git/runtime | recorded export hashes plus a live remote-MCP node/hash/geometry/reaction audit |
+| a static readout is mistaken for an interactive control | classify visible affordances from source evidence before adding input semantics; assert the absence of invented controls |
+| a scrollbar is frozen into a larger crop | split source track and thumb, then sample the visible thumb at both endpoints and at least five intermediate positions |
+| a verification report repeats expected answers without executing the UI | generate reports only from retained browser traces and live Figma evidence; remove canned pass writers |
 
 Asset isolation must use the smallest source-confirmed silhouette, not the
 first convenient rectangular crop. Transparency alone is insufficient: a
@@ -305,6 +308,13 @@ tracer the option region is `[5,18,14,37]`, the info region is
 Gate: every declared state is reachable through an intended user action, every
 critical flow has a reset path, and the runtime emits inspectable state changes.
 
+For Figma, a hotspot count alone is not evidence of behavior. Each canonical
+control must resolve to the intended editable state frame, and the audit must
+compare the actual reaction destination ID. Continuous motion remains owned by
+the executable WSL prototype; Figma carries exact endpoint and discrete-state
+review frames rather than pretending a small set of frames is a continuous
+slider implementation.
+
 ### 6. Run layered QA
 
 Run the layers in dependency order:
@@ -371,14 +381,15 @@ Godot spike without renaming states or manually guessing its geometry.
 
 ### Figma and runtime ownership
 
-- [ ] Verify which Figma account, team, file, page, and libraries are
-      authoritative.
+- [x] Record the authoritative hosted Figma file, desktop root, reference frame,
+      and review URL in the run document and generated design manifest.
 - [x] Exclude Figma Make because neither required access mode is available.
 - [x] Keep the WSL repository and application as the sole executable authority.
-- [ ] Define the shared manifest sync check and conflict policy between Figma
-      Design, the WSL runtime, and Git.
-- [ ] Add a private Mac-review URL for the WSL runtime without changing the
-      loopback-bound Playwright server.
+- [x] Derive the Figma raster inventory and stable IDs from the committed runtime
+      manifest; require a separate live Figma structure/reaction audit before
+      promotion.
+- [x] Add a private Tailscale Mac-review URL while retaining the WSL Playwright
+      server as the executable test authority.
 
 ### Test environment
 

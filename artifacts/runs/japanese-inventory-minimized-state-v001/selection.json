@@ -1,0 +1,11 @@
+{
+  "status": "selected-region-assembly",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "openrouter",
+  "selected_candidate": "image-01.png",
+  "selected_candidate_sha256": "ae079777df72965ef276465fde12fa66f9c5f58ace42f374aa47fcf855ff1a62",
+  "assembly": {"source_crop": [0, 8, 1024, 66], "trim_fuzz_percent": 4, "normalized_size": [280, 18], "left_surface": [0, 0, 176, 18], "right_endcap": [276, 0, 4, 18]},
+  "promoted_asset": "prototype/public/assets/japanese-rpg-v001/inventory/minimized-plate.png",
+  "promoted_sha256": "6b0ac79f2eb24373e893f9f67e3404ce8a1ba8cd9f03437c03d8408ee1da57ae",
+  "selection_reason": "Complete compact edges, no item grid or pseudo-text, source-fitting Inventory pale-blue chrome, and a unique runtime hash."
+}

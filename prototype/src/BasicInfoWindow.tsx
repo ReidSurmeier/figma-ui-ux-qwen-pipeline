@@ -68,8 +68,7 @@ export function BasicInfoWindow({ zIndex, onActivate }: BasicInfoWindowProps) {
         </button>
       </header>
 
-      {!minimized && (
-        <div className="basic-info-components">
+      <div className="basic-info-components" aria-hidden={minimized}>
           <Raster id="player-name" style={{ left: 7, top: 22, width: 64, height: 11 }} />
           <Raster id="player-class" style={{ left: 7, top: 38, width: 43, height: 10 }} />
           <Raster id="hp-label" style={{ left: 95, top: 28, width: 16, height: 10 }} />
@@ -99,8 +98,7 @@ export function BasicInfoWindow({ zIndex, onActivate }: BasicInfoWindowProps) {
           <Raster id="job-progress" style={{ left: 86, top: 88, width: 104, height: 9 }} />
           <Raster id="footer-text" style={{ left: 4, top: 104, width: 198, height: 12 }} />
           <output className="sr-only" role="status">{status}</output>
-        </div>
-      )}
+      </div>
     </section>
   );
 }

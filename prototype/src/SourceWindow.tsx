@@ -79,8 +79,9 @@ export function SourceWindow({ id, title, initialPosition, width, height, titleW
         width: activeWidth,
         height: activeHeight,
         zIndex,
+        backgroundImage: `url("${assetRoot}/${minimized ? "minimized-plate" : "clean-plate"}.png")`,
+        backgroundSize: minimized ? "180px 18px" : "100% 100%",
         "--source-clean-plate": `url("${assetRoot}/clean-plate.png")`,
-        "--source-minimized-plate": `url("${assetRoot}/minimized-plate.png")`,
       } as CSSProperties}
       onPointerDown={() => onActivate(id)}
     >

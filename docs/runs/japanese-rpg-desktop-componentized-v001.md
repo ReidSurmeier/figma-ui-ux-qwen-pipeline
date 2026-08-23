@@ -12,7 +12,7 @@ prototype-link layer.
 - Figma review: <https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4?node-id=41-2>
 - Figma desktop root: `41:2`
 - Runtime settled reference: `41:3`
-- Figma inventory: 15 windows, 192 independent raster instances, 147 linked hotspots, 15 review destinations, and 7 Qwen compact endpoints.
+- Figma inventory: 15 windows, 196 runtime-manifest raster instances, 146 linked hotspots, 31 canonical state links, and 7 Qwen compact endpoints.
 
 ## Reconstruction authority
 
@@ -43,25 +43,43 @@ independent exact-source components.
   generator now emits separate review-destination and hotspot-link stages.
 - The Figma build is derived from the captured runtime component manifest and
   can resynchronize changed asset hashes without recreating geometry.
+- Card and Skills no longer contain frozen scrollbar rectangles. Their
+  source-derived tracks and thumbs are independent assets, and the visible
+  thumbs traverse their exact endpoints across more than four sampled states.
+- Compact Info HP and SP are source-faithful readouts, not invisible sliders.
+  The verification inventory now distinguishes depicted controls from static
+  information rather than adding interaction that the screenshot does not
+  support.
+- Minimized Status and Inventory states directly load their dedicated generated
+  compact plates and unmount the full control trees until restore. This avoids
+  cropped full-window art and hidden active hit targets.
+- The v002 correction replay was invalid because it could be written from
+  synthesized pass data. The canned writer is removed. V003 executes every
+  applicable correction against every window and requires fresh browser traces,
+  source contracts, boundary-pixel checks, and the live Figma marker before a
+  window may be marked `verified`.
+- Figma slider, checkbox, privacy, page, and tab hotspots now target editable
+  canonical state frames instead of a single unchanged review clone. Options
+  additionally has a live outer-boundary donor-magenta gate.
 
 ## Verification
 
 The final run passed:
 
-- 18 unit tests;
+- 22 unit tests;
 - production TypeScript/Vite build;
 - Options, Basic Info, Status, Inventory, and remaining-window asset contracts;
-- 47 browser interaction and geometry tests;
+- 50 browser interaction and geometry tests;
 - Options visual MAE `0.0231548` with focused title/alpha checks;
-- full desktop source-relative masked MAE `0.0403683`, plus 11 focused window gates;
+- full desktop source-relative masked MAE `0.0405295`, plus 11 focused window gates;
 - live Figma audits for Options, Basic Info, Status, and the complete desktop;
-- complete Figma/runtime screenshot MAE `0.00639739`;
+- complete Figma/runtime screenshot MAE `0.00639723`;
 - correction replay of all 17 learned prompts for all 15 windows.
 
 Run the same promotion sequence with:
 
 ```bash
 npm --prefix prototype run test:all:live
-npm --prefix prototype run qa:promote
+npm --prefix prototype run qa:replay
 npm --prefix prototype test
 ```

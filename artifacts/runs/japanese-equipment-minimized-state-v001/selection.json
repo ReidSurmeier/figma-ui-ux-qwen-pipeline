@@ -1,0 +1,11 @@
+{
+  "status": "selected-region-assembly",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "openrouter",
+  "selected_candidate": "image-02.png",
+  "selected_candidate_sha256": "7ef044c30c63cf0c2892d5376b8bef708ba5b5e2bb7758ac170686239085972c",
+  "assembly": {"source_crop": [0, 0, 1024, 89], "trim_fuzz_percent": 4, "normalized_size": [280, 18], "left_surface": [0, 0, 176, 18], "right_endcap": [276, 0, 4, 18]},
+  "promoted_asset": "prototype/public/assets/japanese-rpg-v001/equipment/minimized-plate.png",
+  "promoted_sha256": "dbbb0992820882511a28884d96d7e788d83325986d39b431daf7f1c9ca03e755",
+  "selection_reason": "Complete compact edges, no avatar or equipment rows, source-fitting Equipment blue chrome, and a unique runtime hash."
+}

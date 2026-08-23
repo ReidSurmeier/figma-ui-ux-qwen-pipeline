@@ -1,0 +1,831 @@
+{
+  "schema_version": "3.0",
+  "window_id": "options",
+  "overall": "pass",
+  "evidence_scope": "fresh executable per-window correction matrix",
+  "evidence": [
+    "artifacts/qa/correction-matrix-v003/options/trace.json",
+    "artifacts/qa/figma-desktop-current.png",
+    "artifacts/qa/figma-desktop-audit-v001.json",
+    "artifacts/qa/figma-correction-matrix-v003.json"
+  ],
+  "results": [
+    {
+      "prompt_id": "no-reference-underlay",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "noUnderlay": true,
+            "requestedResources": 267
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "independent-elements",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "independent": true,
+            "componentCount": 0,
+            "expected": 0
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "preserve-japanese-source-style",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "japaneseStyle": true,
+            "nativeTextFonts": [
+              {
+                "text": "オプション",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "option",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "info",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "BGM",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "on",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "Effect",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "on",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "Skin",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "opaque",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "スナップ",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "attack",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "skill",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              },
+              {
+                "text": "item",
+                "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "no-pink-donor-pixels",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "sourceContracts": [
+              {
+                "script": "contract-check.sh",
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+              },
+              {
+                "script": "remaining-window-contract.sh",
+                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+              }
+            ],
+            "donorPinkBoundary": 0,
+            "maximumBoundaryPixels": 2,
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/options/trace.json/../default.png"
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "pixel-rounded-window-edges",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "outside00": false,
+            "step50": true,
+            "step41": true,
+            "step22": true,
+            "step14": true,
+            "step06": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "checkbox-anchor-and-stray-pixel",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "checks": [
+              {
+                "label": "BGM on",
+                "wasChecked": false,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "Effect on",
+                "wasChecked": true,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "opaque",
+                "wasChecked": false,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "attack",
+                "wasChecked": true,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "skill",
+                "wasChecked": false,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "item",
+                "wasChecked": true,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "checkbox-label-overlap",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "checks": [
+              {
+                "label": "BGM on",
+                "wasChecked": false,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "Effect on",
+                "wasChecked": true,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "opaque",
+                "wasChecked": false,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "attack",
+                "wasChecked": true,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "skill",
+                "wasChecked": false,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ]
+              },
+              {
+                "label": "item",
+                "wasChecked": true,
+                "geometryInvariant": true,
+                "distinctVisual": true,
+                "distinctStateArt": true,
+                "beforeArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+                ],
+                "afterArt": [
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+                  "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "title-placement-and-white-box",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "titlePlaced": true,
+            "titleBox": {
+              "x": 361,
+              "y": 186,
+              "width": 54,
+              "height": 11
+            },
+            "windowBox": {
+              "x": 345,
+              "y": 182,
+              "width": 280,
+              "height": 122
+            }
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "generated-minimize-endpoint",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "hasMinimize": true,
+            "minimizeProvenance": true,
+            "minimize": {
+              "samples": [
+                [
+                  280,
+                  122
+                ],
+                [
+                  272.3,
+                  114
+                ],
+                [
+                  264.6,
+                  106
+                ],
+                [
+                  256.9,
+                  98
+                ],
+                [
+                  249.2,
+                  90
+                ],
+                [
+                  241.5,
+                  82
+                ],
+                [
+                  233.8,
+                  74
+                ],
+                [
+                  226.1,
+                  66
+                ],
+                [
+                  218.5,
+                  58
+                ],
+                [
+                  210.8,
+                  50
+                ],
+                [
+                  203.1,
+                  42
+                ],
+                [
+                  195.4,
+                  34
+                ],
+                [
+                  187.7,
+                  26
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ]
+              ],
+              "distinctGeometry": 14
+            }
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "tab-boundary-mapping",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "tabsPass": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "slider-full-endpoint-and-grey-block",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "ranges": [
+              {
+                "label": "BGM",
+                "distinctVisuals": 11,
+                "values": 11
+              },
+              {
+                "label": "Effect",
+                "distinctVisuals": 11,
+                "values": 11
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "continuous-motion-not-four-frames",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "ranges": [
+              {
+                "label": "BGM",
+                "distinctVisuals": 11,
+                "values": 11
+              },
+              {
+                "label": "Effect",
+                "distinctVisuals": 11,
+                "values": 11
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "settled-button-effects",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "controlCount": 17,
+            "failures": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "drag-cutoff-and-z-order",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "defaultBox": {
+              "x": 345,
+              "y": 182,
+              "width": 280,
+              "height": 122
+            },
+            "bottomRight": {
+              "x": 569,
+              "y": 442,
+              "width": 280,
+              "height": 122
+            },
+            "viewport": {
+              "width": 849,
+              "height": 564
+            },
+            "contained": true
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "text-overlap-and-pixel-aesthetic",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "overflow": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "figma-link-and-page-parity",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "figmaSynced": true,
+            "requiredMarker": "artifacts/qa/figma-correction-matrix-v003.json"
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "complete-user-flow-not-screenshot-only",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "controlCount": 17,
+            "failures": [],
+            "consoleErrors": []
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "interaction-animation-source-fit",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
+          "metrics": {
+            "minimize": {
+              "samples": [
+                [
+                  280,
+                  122
+                ],
+                [
+                  272.3,
+                  114
+                ],
+                [
+                  264.6,
+                  106
+                ],
+                [
+                  256.9,
+                  98
+                ],
+                [
+                  249.2,
+                  90
+                ],
+                [
+                  241.5,
+                  82
+                ],
+                [
+                  233.8,
+                  74
+                ],
+                [
+                  226.1,
+                  66
+                ],
+                [
+                  218.5,
+                  58
+                ],
+                [
+                  210.8,
+                  50
+                ],
+                [
+                  203.1,
+                  42
+                ],
+                [
+                  195.4,
+                  34
+                ],
+                [
+                  187.7,
+                  26
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
+                ]
+              ],
+              "distinctGeometry": 14
+            },
+            "ranges": [
+              {
+                "label": "BGM",
+                "distinctVisuals": 11,
+                "values": 11
+              },
+              {
+                "label": "Effect",
+                "distinctVisuals": 11,
+                "values": 11
+              }
+            ],
+            "discreteControlFailures": []
+          }
+        }
+      ]
+    }
+  ]
+}

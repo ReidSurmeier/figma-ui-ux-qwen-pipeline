@@ -1,0 +1,14 @@
+{
+  "aspect_ratio": "16:9",
+  "input_references": [
+    {
+      "image_url": "[recorded separately]",
+      "type": "image_url"
+    }
+  ],
+  "model": "qwen/qwen-image-3-pro",
+  "n": 2,
+  "prompt": "[TASK]\nCreate a dedicated coherent minimized-state chrome donor for the exact Japanese \u88c5\u5099\u30a2\u30a4\u30c6\u30e0 equipment window. Recompose this specific 280 by 152 window into a compact 180 by 18 title bar at the top-left. It must be a newly resolved Equipment endpoint, never a crop and never a reused window bar.\n\n[REFERENCE ROLE]\nReference image 1 is the authoritative \u88c5\u5099\u30a2\u30a4\u30c6\u30e0 window and fixes its exact pale-blue chrome, pixel density, stepped corner language, title-bar lighting, and one-pixel border weights.\n\n[PRESERVATION INVARIANTS]\n- Keep the Equipment source palette, hard aliased edges, one-pixel border rhythm, and six-pixel stepped corner character.\n- The compact bar has complete left, top, newly resolved right, and bottom chrome.\n- Remove the avatar, equipment rows, title glyph, icon, and window buttons; those remain independent editable elements.\n- Do not copy the Basic Info, Status, or Inventory compact asset. Derive only from the supplied Equipment reference.\n\n[CANVAS AND LAYOUT]\n- Return a 1120 by 608 output canvas, four times the 280 by 152 reference.\n- Place one four-times compact 180 by 18 title surface at x=0 y=0 and fill all remaining canvas pixels with neutral white review field.\n- Resolve the compact right endcap at source x=179.\n\n[REGION EDITS]\n- REGION: Equipment minimized chrome\n  CHANGE: Remove the complete body and regenerate only an empty compact 180 by 18 Equipment title surface with continuous source-matched chrome and a complete right endcap.\n  PRESERVE: Equipment title palette; hard pixel-scale border; stepped source corners\n\n[STYLE SYSTEM]\n- authentic late-1990s Japanese desktop RPG raster UI\n- crisp low-resolution pale-blue Equipment chrome\n\n[ASSET RULES]\n- Exactly one empty compact title surface at top-left.\n- No glyphs, pseudo-text, icon, button, avatar, equipment row, or second window.\n\n[NEGATIVE CONSTRAINTS]\n- No crop, squeezed window, reused compact bar, modern rounded card, soft shadow, glass, gibberish, or magenta background.\n\n[QUALITY GATE]\n- All four compact edges are complete.\n- No equipment body content survives.\n- The endpoint differs from every other window and reads as newly generated Equipment chrome.",
+  "resolution": "1K",
+  "seed": 22083103
+}

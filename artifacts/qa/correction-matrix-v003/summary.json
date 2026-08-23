@@ -1,0 +1,80 @@
+{
+  "schema_version": "3.0",
+  "reports": [
+    {
+      "windowId": "basic-info",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "card",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "skills",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "status",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "inventory",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "equipment",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "chat",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "exchange",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "game-menu",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "party",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "quickbar",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "compact-info",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "bottom-bar",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "notification",
+      "overall": "pass",
+      "failures": []
+    },
+    {
+      "windowId": "options",
+      "overall": "pass",
+      "failures": []
+    }
+  ]
+}

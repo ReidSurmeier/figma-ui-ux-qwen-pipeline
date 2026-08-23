@@ -1,0 +1,855 @@
+{
+  "windowId": "equipment",
+  "requests": [
+    "http://10.255.255.254:4174/",
+    "http://10.255.255.254:4174/@vite/client",
+    "https://mcp.figma.com/mcp/html-to-design/capture.js",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787450929077",
+    "http://10.255.255.254:4174/@react-refresh",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787435582010",
+    "http://10.255.255.254:4174/src/styles.css?t=1787450929077",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787447791566",
+    "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/window-button.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/player-name.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/player-class.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-value.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-value.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/meter-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-status.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-option.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-items.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-equip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-skill.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-map.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-chat.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-friend.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/base-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/base-progress.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/job-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/job-progress.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/footer-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/art.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/scrollbar-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/scrollbar-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/bottom-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/bottom-slot.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/points.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/use.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/close-action.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/resize-grip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/side-tabs.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-item.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-equip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-etc.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-up.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-down.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/resize-grip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/avatar.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-field.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/people.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/security.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-on.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-off.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/password.png",
+    "http://10.255.255.254:4174/fonts/DotGothic16-Regular.ttf",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/ok.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/cancel.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-7.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-7.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/summary.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/ok.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/trade.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/cancel.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/friends.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/party-tab.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/levels.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/hp.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/sp.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/rail.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/previous.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/next.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/bubble.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/upper.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/lower.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/clean-plate-alpha-edge.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/minimized-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-option.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-info.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/bgm-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-left-arrow.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-track.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-right-arrow.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/on-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/effect-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/skin-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/skin-dropdown.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-opaque.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-snap.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-attack.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-skill.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-item.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/minimized-plate.png"
+  ],
+  "consoleErrors": [],
+  "geometry": {
+    "defaultBox": {
+      "x": 0,
+      "y": 385,
+      "width": 280,
+      "height": 152
+    },
+    "titleBox": {
+      "x": 16,
+      "y": 388,
+      "width": 110,
+      "height": 13
+    },
+    "componentIds": [
+      "equipment-title-icon",
+      "equipment-title-text",
+      "equipment-minimize",
+      "equipment-close",
+      "equipment-left-0",
+      "equipment-left-1",
+      "equipment-left-2",
+      "equipment-left-3",
+      "equipment-left-4",
+      "equipment-right-0",
+      "equipment-right-1",
+      "equipment-right-2",
+      "equipment-right-3",
+      "equipment-right-4",
+      "equipment-avatar"
+    ],
+    "uniqueComponentIds": 15,
+    "corner": {
+      "outside00": false,
+      "step50": true,
+      "step41": true,
+      "step22": true,
+      "step14": true,
+      "step06": true
+    },
+    "textOverflow": [],
+    "nativeTextFonts": [],
+    "drag": {
+      "defaultBox": {
+        "x": 0,
+        "y": 385,
+        "width": 280,
+        "height": 152
+      },
+      "bottomRight": {
+        "x": 569,
+        "y": 412,
+        "width": 280,
+        "height": 152
+      },
+      "viewport": {
+        "width": 849,
+        "height": 564
+      },
+      "contained": true
+    }
+  },
+  "controls": [
+    {
+      "index": 0,
+      "label": "装備アイテムを最小化",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "65d84cc0876e7e01dfd016f995899e2643eabe168d8ca77e03e5d7a3b67a1529",
+      "settledHash": "30045909b136cb3109cc9996b970e0826c3506bd6c5f49e6ebdb8bf0ef46a3a0",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": "true",
+        "className": "source-window__button source-window__button--minimize",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": "false",
+        "className": "source-window__button source-window__button--minimize",
+        "outputs": []
+      }
+    },
+    {
+      "index": 1,
+      "label": "装備アイテムを閉じる",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "860df5a5a2b37add6f1f70f82a3f692984533e4255a16bad77d7508e127633d4",
+      "settledHash": "00f6e0c4c3a9d55fde269d5ea3f9c4fbdcb9bb1bac575f75511de57593754f3f",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "source-window__button source-window__button--close",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": true,
+        "outputs": []
+      }
+    },
+    {
+      "index": 2,
+      "label": "左装備 1",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "6546625c4113937cadee2146380e4f3cdca8fb44b2e2a0a7b1304627fa96116f",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "left-0 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "label": "左装備 2",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "b1c06e86ebd194f64acbbed53943c8992fdf066a72d567a7a62c2f79b976bea6",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "left-1 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 4,
+      "label": "左装備 3",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "3ba7bf74399b126836611ec1062b87f283067ff369570871a57342557bbadad2",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "left-2 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "label": "左装備 4",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "75293d7d75d513786c312f688db4ebdb7a6cc53d71b982d57883ea94514c233b",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "left-3 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "label": "左装備 5",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "975a003d67d355ba8ee3dd12ecf5853483498782c10c9ad7f2c79febfda02a51",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "left-4 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "label": "右装備 1",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "70c0b863f50911ac50df57c063eb22d0f945ef5ef8ed2e01789850cc3fdf4e89",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "right-0 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "label": "右装備 2",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "2a1869e939eee101f9737bbf3a97374c3f73c716964a72cb3c74217589dfc7a9",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "right-1 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "label": "右装備 3",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "0912bbf279494033a8f041ea92837ef34067bd5090c4e9b9be681695265b6007",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "right-2 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "label": "右装備 4",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "6320aaef10a0e278fd0873a19cfa2f335b32f9e03c3134dfc4feda852fd94162",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "right-3 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "label": "右装備 5",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "c1c6ec3d3da6144d7e26620431f65d59af9c2e96ae63c6ffcae8c80a110b2c24",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-row",
+        "outputs": [
+          "right-4 turn 0"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "label": "キャラクターを回転",
+      "tag": "button",
+      "type": "",
+      "idleHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "downHash": "8f5da9ad8ec5f7cfd5814ef20967d670d183795b3904889337e1c467f902ea54",
+      "settledHash": "ee9e439e3b1703194094374f255119803f3269756edaa12eb0abb3c539e1df65",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": "false",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-avatar",
+        "outputs": [
+          "turn 0"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": "true",
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "equipment-source-avatar",
+        "outputs": [
+          "turn 1"
+        ]
+      }
+    }
+  ],
+  "ranges": [],
+  "minimize": {
+    "samples": [
+      [
+        280,
+        152
+      ],
+      [
+        272.3,
+        141.7
+      ],
+      [
+        264.6,
+        131.4
+      ],
+      [
+        256.9,
+        121.1
+      ],
+      [
+        249.2,
+        110.8
+      ],
+      [
+        241.5,
+        100.5
+      ],
+      [
+        233.8,
+        90.1
+      ],
+      [
+        226.1,
+        79.8
+      ],
+      [
+        218.5,
+        69.5
+      ],
+      [
+        210.8,
+        59.2
+      ],
+      [
+        203.1,
+        48.9
+      ],
+      [
+        195.4,
+        38.6
+      ],
+      [
+        187.7,
+        28.3
+      ],
+      [
+        180,
+        18
+      ],
+      [
+        180,
+        18
+      ],
+      [
+        180,
+        18
+      ],
+      [
+        180,
+        18
+      ]
+    ],
+    "distinctGeometry": 14
+  },
+  "checkboxes": [],
+  "donorPinkBoundary": 0,
+  "sourceContracts": [
+    {
+      "script": "contract-check.sh",
+      "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+    },
+    {
+      "script": "remaining-window-contract.sh",
+      "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+    }
+  ]
+}

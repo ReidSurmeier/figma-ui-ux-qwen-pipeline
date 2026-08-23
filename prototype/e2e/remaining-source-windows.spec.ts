@@ -65,8 +65,8 @@ test("remaining source windows expose meaningful reversible user flows", async (
   await expect(quickbar.getByRole("button", { name: "クイックスロット 3" })).toHaveAttribute("aria-pressed", "true");
 
   const compact = page.getByRole("region", { name: "簡易情報" });
-  await compact.getByRole("slider", { name: "簡易HP" }).fill("100");
-  await expect(compact.getByRole("status")).toContainText("HP 100");
+  await expect(compact.locator('[data-component-id="compact-hp"]')).toBeVisible();
+  await expect(compact.locator('[data-component-id="compact-sp"]')).toBeVisible();
 
   const bottomBar = page.getByRole("region", { name: "クイックスロットバー" });
   await bottomBar.getByRole("button", { name: "次のスロット" }).click();
@@ -99,6 +99,49 @@ test("card and skills sliders expose more than four positions and reach both end
     expect(new Set(values).size).toBe(21);
     await expect(slider).toHaveValue("100");
   }
+});
+
+test("card scrollbar moves its visible source thumb between exact endpoints", async ({ page }) => {
+  await page.goto("/");
+  const card = page.getByRole("region", { name: "ソルジャースケルトンカード" });
+  const slider = card.getByRole("slider", { name: "カード情報スクロール" });
+  const thumb = card.locator(".card-source-thumb");
+
+  await slider.fill("0");
+  await expect(thumb).toHaveCSS("top", "44px");
+  const minimum = await card.screenshot();
+
+  await slider.fill("100");
+  await expect(thumb).toHaveCSS("top", "71px");
+  const maximum = await card.screenshot();
+
+  expect(maximum.equals(minimum)).toBe(false);
+});
+
+test("skills scrollbar moves its visible source thumb through more than four positions", async ({ page }) => {
+  await page.goto("/");
+  const skills = page.getByRole("region", { name: "スキルリスト" });
+  const slider = skills.getByRole("slider", { name: "スキルスクロール" });
+  const thumb = skills.locator(".skills-source-thumb");
+  const positions: string[] = [];
+
+  for (const value of [0, 20, 40, 60, 80, 100]) {
+    await slider.fill(String(value));
+    await page.waitForTimeout(24);
+    positions.push(await thumb.evaluate((element) => getComputedStyle(element).top));
+  }
+
+  expect(new Set(positions).size).toBe(6);
+  expect(positions.at(0)).toBe("28px");
+  expect(positions.at(-1)).toBe("107px");
+});
+
+test("compact HP and SP remain source-faithful readouts rather than invisible sliders", async ({ page }) => {
+  await page.goto("/");
+  const compact = page.getByRole("region", { name: "簡易情報" });
+  await expect(compact.getByRole("slider")).toHaveCount(0);
+  await expect(compact.locator('[data-component-id="compact-hp"]')).toBeVisible();
+  await expect(compact.locator('[data-component-id="compact-sp"]')).toBeVisible();
 });
 
 test("source-baked selection is visibly cleared before another option is promoted", async ({ page }) => {

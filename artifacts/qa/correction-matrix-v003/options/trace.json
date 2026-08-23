@@ -1,0 +1,1240 @@
+{
+  "windowId": "options",
+  "requests": [
+    "http://10.255.255.254:4174/",
+    "http://10.255.255.254:4174/@vite/client",
+    "https://mcp.figma.com/mcp/html-to-design/capture.js",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787450929077",
+    "http://10.255.255.254:4174/@react-refresh",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787435582010",
+    "http://10.255.255.254:4174/src/styles.css?t=1787450929077",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787447791566",
+    "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/window-button.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/player-name.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/player-class.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-value.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-value.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/meter-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/hp-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/sp-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-status.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-option.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-items.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-equip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-skill.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-map.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-chat.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/page-friend.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/base-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/base-progress.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/job-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/job-progress.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/footer-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/art.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/copy-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/scrollbar-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/scrollbar-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/bottom-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/card/components/bottom-slot.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/points.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/use.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/close-action.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/resize-grip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/side-tabs.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-item.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-equip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/tab-etc.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-0-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-1-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/cell-2-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-up.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-track.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/scroll-down.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/resize-grip.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/left-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/right-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/equipment/components/avatar.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-label.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-field.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/people.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/security.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-on.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-off.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/password.png",
+    "http://10.255.255.254:4174/fonts/DotGothic16-Regular.ttf",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/ok.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/cancel.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-0-7.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-6.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/item-1-7.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/summary.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/ok.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/trade.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/components/cancel.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/game-menu/components/action-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/friends.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/party-tab.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/slot-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/levels.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/hp.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/compact-info/components/sp.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/rail.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/previous.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/bottom-bar/components/next.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/clean-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/bubble.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/upper.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/notification/components/lower.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/clean-plate-alpha-edge.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/minimized-plate.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/title-icon.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/title-text.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/minimize.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/close.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-option.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-info.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/bgm-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-left-arrow.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-track.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-thumb.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/slider-right-arrow.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/on-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/effect-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/skin-label.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/skin-dropdown.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-opaque.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-snap.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-attack.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-skill.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-item.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-option-inactive.png",
+    "http://10.255.255.254:4174/assets/japanese-options-v001/components/tab-info-selected.png"
+  ],
+  "consoleErrors": [],
+  "geometry": {
+    "defaultBox": {
+      "x": 345,
+      "y": 182,
+      "width": 280,
+      "height": 122
+    },
+    "titleBox": {
+      "x": 361,
+      "y": 186,
+      "width": 54,
+      "height": 11
+    },
+    "componentIds": [],
+    "uniqueComponentIds": 0,
+    "corner": {
+      "outside00": false,
+      "step50": true,
+      "step41": true,
+      "step22": true,
+      "step14": true,
+      "step06": true
+    },
+    "textOverflow": [],
+    "nativeTextFonts": [
+      {
+        "text": "オプション",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "option",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "info",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "BGM",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "on",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "Effect",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "on",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "Skin",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "opaque",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "スナップ",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "attack",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "skill",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      },
+      {
+        "text": "item",
+        "font": "DotGothic16, Unifont-JP, \"WenQuanYi Zen Hei Sharp\", monospace"
+      }
+    ],
+    "drag": {
+      "defaultBox": {
+        "x": 345,
+        "y": 182,
+        "width": 280,
+        "height": 122
+      },
+      "bottomRight": {
+        "x": 569,
+        "y": 442,
+        "width": 280,
+        "height": 122
+      },
+      "viewport": {
+        "width": 849,
+        "height": 564
+      },
+      "contained": true
+    }
+  },
+  "controls": [
+    {
+      "index": 0,
+      "label": "最小化",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "8cad80ba8cee347f448df1f86d4667a07f574146e00cade934d0b787ae700b7a",
+      "settledHash": "583bf6bd695b6b6ce759e9f16053630eef959ff37c6957b92cab04193fb1b8e3",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": "true",
+        "className": "window-button window-button--minimize",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": "false",
+        "className": "window-button window-button--minimize",
+        "outputs": []
+      }
+    },
+    {
+      "index": 1,
+      "label": "閉じる",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "8fea29c458f53924f3877145b3fc36588522365d264d779ce5aba91fb07ba471",
+      "settledHash": "58b19ab1859aa539dfac497b8c81fcacf3fff5f68156eae9da0c49c91e1c99c0",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "window-button window-button--close",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": true,
+        "outputs": []
+      }
+    },
+    {
+      "index": 2,
+      "label": "option",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "c5839dea555b22b9c31b12cb1b34440fca61da845b975fd2c0b0eb6323d8c970",
+      "settledHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "visualDown": true,
+      "visualSettled": false,
+      "stateChanged": false,
+      "alreadySelected": true,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": "true",
+        "ariaExpanded": null,
+        "className": "",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": "true",
+        "ariaExpanded": null,
+        "className": "",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 3,
+      "label": "info",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "7feb71903a94810eb49be116e000ee79f08c8f88a8dd39a2a10e8c8e7d4c7c81",
+      "settledHash": "47043071d4b68599364d8e49a04bc3acc053584eb267b76af97162dfa062f3c3",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": "false",
+        "ariaExpanded": null,
+        "className": "",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": "true",
+        "ariaExpanded": null,
+        "className": "",
+        "outputs": []
+      }
+    },
+    {
+      "index": 4,
+      "label": "BGMを下げる",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "8a20d00d89ce8635e0ce0b0db114ac4d2c771abcccc1da2038ab480cfe845207",
+      "settledHash": "f30c6d57b2e6a981c29aa179d11190472cc121a072d28aa272e536abdcb9c28e",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--left",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--left",
+        "outputs": [
+          "61",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 5,
+      "label": "BGM",
+      "tag": "input",
+      "type": "range",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "f8ffc1e1b5cb30c0fe350f1a6efbe6f9edb209382b947bc2bb2eb5e3938dfbb0",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "volume-slider",
+        "checked": false,
+        "value": "62",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "volume-slider",
+        "checked": false,
+        "value": "0",
+        "outputs": [
+          "0",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 6,
+      "label": "BGMを上げる",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "00bbb3ddb1368fc817b1e339310910cd81f623f92abae0d44051208fc2eeeed0",
+      "settledHash": "7cd180f83f728c5889921be4ed4a248539334614498a0744a27d8199f094b102",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--right",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--right",
+        "outputs": [
+          "63",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 7,
+      "label": "BGM on",
+      "tag": "input",
+      "type": "checkbox",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "809f07a62e1a261323905a8f7b1de155673f8711e1de3e6601725b8982114b38",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": false,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": true,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 8,
+      "label": "Effectを下げる",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "1bc6986051f7bb09cb1328e3e60fd0d73ff4f77e8d17a883d16c28d4ff0701a5",
+      "settledHash": "0ff17df0f44dd7759305cc4b1c0987f82ab726c7ca8dc8e636ee9c4d792f54bd",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--left",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--left",
+        "outputs": [
+          "62",
+          "42"
+        ]
+      }
+    },
+    {
+      "index": 9,
+      "label": "Effect",
+      "tag": "input",
+      "type": "range",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "7bf0d5b97dd2c1980f9b1180c5993cdc729e4c40bc13bba5237a8c58eaebafba",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "volume-slider",
+        "checked": false,
+        "value": "43",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "volume-slider",
+        "checked": false,
+        "value": "100",
+        "outputs": [
+          "62",
+          "100"
+        ]
+      }
+    },
+    {
+      "index": 10,
+      "label": "Effectを上げる",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "157fc2ae77ec68f3ba16c364062eac123b84efc264e832b123e986864a83c02d",
+      "settledHash": "becd95be40c34729c4ffd064e9300efb925b5caf02ad33d48a23049abe7fc245",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--right",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "arrow arrow--right",
+        "outputs": [
+          "62",
+          "44"
+        ]
+      }
+    },
+    {
+      "index": 11,
+      "label": "Effect on",
+      "tag": "input",
+      "type": "checkbox",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "4479164a98e305c84c4f6aef5151009d486529d6b89e4ea23ed88de24f7eea7a",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": true,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": false,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 12,
+      "label": "Skin",
+      "tag": "button",
+      "type": "",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "66036dc79296f23433d685a864e9e6e69840f0d04d92b67912ac0b2194e58057",
+      "settledHash": "dc75eca1b0dd451adb7014bd4a363e064e5d16db004fcfb8d1cc1e7640716224",
+      "visualDown": true,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": "false",
+        "className": "skin-combobox-button",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": "true",
+        "className": "skin-combobox-button",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 13,
+      "label": "opaque",
+      "tag": "input",
+      "type": "checkbox",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "1893c870eebbffa7499517bcf5205709abaf5c779f1ae6dc761de4220f66e15d",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": false,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": true,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 14,
+      "label": "attack",
+      "tag": "input",
+      "type": "checkbox",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "9732492444e5063c2b5db980fb44b4a66b742373c2dc00d3e7e27dac70f80dd2",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": true,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": false,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 15,
+      "label": "skill",
+      "tag": "input",
+      "type": "checkbox",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "06f79f077915fff8b075b72a7369b554d49a0845ce867a703f950bb760be2604",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": false,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": true,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    },
+    {
+      "index": 16,
+      "label": "item",
+      "tag": "input",
+      "type": "checkbox",
+      "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
+      "settledHash": "8945dae17c54221278b59b2e87a2c019aadce1f2e59a04672eedb69db5017c37",
+      "visualDown": false,
+      "visualSettled": true,
+      "stateChanged": true,
+      "alreadySelected": false,
+      "passed": true,
+      "beforeState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": true,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      },
+      "afterState": {
+        "missing": false,
+        "ariaPressed": null,
+        "ariaSelected": null,
+        "ariaExpanded": null,
+        "className": "",
+        "checked": false,
+        "value": "on",
+        "outputs": [
+          "62",
+          "43"
+        ]
+      }
+    }
+  ],
+  "ranges": [
+    {
+      "label": "BGM",
+      "distinctVisuals": 11,
+      "values": 11
+    },
+    {
+      "label": "Effect",
+      "distinctVisuals": 11,
+      "values": 11
+    }
+  ],
+  "minimize": {
+    "samples": [
+      [
+        280,
+        122
+      ],
+      [
+        272.3,
+        114
+      ],
+      [
+        264.6,
+        106
+      ],
+      [
+        256.9,
+        98
+      ],
+      [
+        249.2,
+        90
+      ],
+      [
+        241.5,
+        82
+      ],
+      [
+        233.8,
+        74
+      ],
+      [
+        226.1,
+        66
+      ],
+      [
+        218.5,
+        58
+      ],
+      [
+        210.8,
+        50
+      ],
+      [
+        203.1,
+        42
+      ],
+      [
+        195.4,
+        34
+      ],
+      [
+        187.7,
+        26
+      ],
+      [
+        180,
+        18
+      ],
+      [
+        180,
+        18
+      ],
+      [
+        180,
+        18
+      ],
+      [
+        180,
+        18
+      ]
+    ],
+    "distinctGeometry": 14
+  },
+  "checkboxes": [
+    {
+      "label": "BGM on",
+      "wasChecked": false,
+      "geometryInvariant": true,
+      "distinctVisual": true,
+      "distinctStateArt": true,
+      "beforeArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ],
+      "afterArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ]
+    },
+    {
+      "label": "Effect on",
+      "wasChecked": true,
+      "geometryInvariant": true,
+      "distinctVisual": true,
+      "distinctStateArt": true,
+      "beforeArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ],
+      "afterArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ]
+    },
+    {
+      "label": "opaque",
+      "wasChecked": false,
+      "geometryInvariant": true,
+      "distinctVisual": true,
+      "distinctStateArt": true,
+      "beforeArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ],
+      "afterArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ]
+    },
+    {
+      "label": "attack",
+      "wasChecked": true,
+      "geometryInvariant": true,
+      "distinctVisual": true,
+      "distinctStateArt": true,
+      "beforeArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ],
+      "afterArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ]
+    },
+    {
+      "label": "skill",
+      "wasChecked": false,
+      "geometryInvariant": true,
+      "distinctVisual": true,
+      "distinctStateArt": true,
+      "beforeArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ],
+      "afterArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ]
+    },
+    {
+      "label": "item",
+      "wasChecked": true,
+      "geometryInvariant": true,
+      "distinctVisual": true,
+      "distinctStateArt": true,
+      "beforeArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")"
+      ],
+      "afterArt": [
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-on.png\")",
+        "url(\"http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-checkbox-off.png\")"
+      ]
+    }
+  ],
+  "donorPinkBoundary": 0,
+  "sourceContracts": [
+    {
+      "script": "contract-check.sh",
+      "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+    },
+    {
+      "script": "remaining-window-contract.sh",
+      "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+    }
+  ]
+}

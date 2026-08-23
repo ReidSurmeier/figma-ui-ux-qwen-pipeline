@@ -145,6 +145,14 @@
       "detectors": ["idle/down/up/settled checkpoints", "critical user-flow replay", "console and overflow audit"],
       "remediation": "Layer component tests, browser gestures, temporal sampling, visual regions, and exploratory scouting.",
       "acceptance_gate": "Every critical flow is replayed through user inputs with retained failure traces and no console errors."
+    },
+    {
+      "id": "generic-generated-state-reuse",
+      "authority": "asset",
+      "symptom": "A generated compact, unchecked, selected, or interaction state is copied across unrelated windows or replaced by a CSS filter and reported as complete.",
+      "detectors": ["cross-window state hash inventory", "state provenance matrix", "idle-transition-settled contact sheet", "source-local state comparison"],
+      "remediation": "Generate or isolate the missing state for the specific window and behavior, retain its Qwen or Exact Copy provenance, and bind it to the real control.",
+      "acceptance_gate": "Every applicable state has window-specific provenance and pixels, every state-changing control reaches it, and no unrelated window shares the endpoint hash."
     }
   ]
 }

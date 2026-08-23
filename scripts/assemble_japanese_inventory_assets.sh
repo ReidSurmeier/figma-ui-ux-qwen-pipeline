@@ -24,7 +24,10 @@ convert "$WORK_DIR/plate-2.png" -stroke '#6f8496' -strokewidth 1 -fill none \
 convert "$WORK_DIR/plate-3.png" -alpha set -channel A \
   -fx '(((j<1||j>=h-1)&&(i<5||i>=w-5))||((j<2||j>=h-2)&&(i<4||i>=w-4))||((j<4||j>=h-4)&&(i<2||i>=w-2))||((j<6||j>=h-6)&&(i<1||i>=w-1)))?0:a' \
   "$OUTPUT_DIR/clean-plate.png"
-cp "$REPO_ROOT/prototype/public/assets/japanese-rpg-v001/basic-info/minimized-plate.png" "$OUTPUT_DIR/minimized-plate.png"
+[[ -f "$OUTPUT_DIR/minimized-plate.png" ]] || {
+  printf 'missing dedicated Inventory minimized asset; run assemble_generated_minimized_states.sh first\n' >&2
+  exit 1
+}
 
 crop() {
   local name=$1 x=$2 y=$3 width=$4 height=$5

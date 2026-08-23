@@ -1,6 +1,7 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.2",
   "reference": "benchmarks/japanese-rpg-options-v001/reference.png",
+  "invalidation_reason": "v003 executes every applicable correction prompt with window-specific browser evidence; no window is verified until runtime and hosted Figma passes are both green.",
   "windows": [
     {
       "id": "options",
@@ -8,7 +9,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/options/correction-replay-v002.json"
+        "report": "artifacts/qa/options/correction-replay-v003.json"
       }
     },
     {
@@ -17,7 +18,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/basic-info/correction-replay-v002.json"
+        "report": "artifacts/qa/basic-info/correction-replay-v003.json"
       }
     },
     {
@@ -26,7 +27,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/card/correction-replay-v002.json"
+        "report": "artifacts/qa/card/correction-replay-v003.json"
       }
     },
     {
@@ -35,7 +36,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/skills/correction-replay-v002.json"
+        "report": "artifacts/qa/skills/correction-replay-v003.json"
       }
     },
     {
@@ -44,7 +45,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/status/correction-replay-v002.json"
+        "report": "artifacts/qa/status/correction-replay-v003.json"
       }
     },
     {
@@ -53,7 +54,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/inventory/correction-replay-v002.json"
+        "report": "artifacts/qa/inventory/correction-replay-v003.json"
       }
     },
     {
@@ -62,7 +63,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/equipment/correction-replay-v002.json"
+        "report": "artifacts/qa/equipment/correction-replay-v003.json"
       }
     },
     {
@@ -71,7 +72,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/chat/correction-replay-v002.json"
+        "report": "artifacts/qa/chat/correction-replay-v003.json"
       }
     },
     {
@@ -80,7 +81,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/exchange/correction-replay-v002.json"
+        "report": "artifacts/qa/exchange/correction-replay-v003.json"
       }
     },
     {
@@ -89,7 +90,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/game-menu/correction-replay-v002.json"
+        "report": "artifacts/qa/game-menu/correction-replay-v003.json"
       }
     },
     {
@@ -98,7 +99,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/party/correction-replay-v002.json"
+        "report": "artifacts/qa/party/correction-replay-v003.json"
       }
     },
     {
@@ -107,7 +108,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/quickbar/correction-replay-v002.json"
+        "report": "artifacts/qa/quickbar/correction-replay-v003.json"
       }
     },
     {
@@ -116,7 +117,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/compact-info/correction-replay-v002.json"
+        "report": "artifacts/qa/compact-info/correction-replay-v003.json"
       }
     },
     {
@@ -125,7 +126,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/bottom-bar/correction-replay-v002.json"
+        "report": "artifacts/qa/bottom-bar/correction-replay-v003.json"
       }
     },
     {
@@ -134,7 +135,7 @@
       "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
-        "report": "artifacts/qa/notification/correction-replay-v002.json"
+        "report": "artifacts/qa/notification/correction-replay-v003.json"
       }
     }
   ]
