@@ -144,6 +144,31 @@ describe("human-correction replay after deterministic verification", () => {
     }
   });
 
+  it("requires bounded Qwen provenance for independent Party member indicators", async () => {
+    const { readFile } = await import("node:fs/promises");
+    const { createHash } = await import("node:crypto");
+    const { resolve } = await import("node:path");
+    const selection = JSON.parse(await readFile(resolve("..", "artifacts/runs/japanese-party-member-states-v001-selection.json"), "utf8")) as {
+      model: string;
+      provider: string;
+      states: Array<{ output: string; source_scale_region: number[] }>;
+      invariants: { text_generation_accepted: boolean };
+    };
+
+    expect(selection.model).toBe("qwen/qwen-image-3-pro");
+    expect(selection.provider).toBe("alibaba");
+    expect(selection.states.map(({ source_scale_region }) => source_scale_region)).toEqual([
+      [3, 19, 18, 19],
+      [3, 38, 18, 19],
+    ]);
+    expect(selection.invariants.text_generation_accepted).toBe(false);
+
+    const hashes = await Promise.all(selection.states.map(async ({ output }) => createHash("sha256")
+      .update(await readFile(resolve("..", output)))
+      .digest("hex")));
+    expect(new Set(hashes).size).toBe(2);
+  });
+
   it("requires shared source-window minimize motion to expose more than four geometry steps", async () => {
     const { readFile } = await import("node:fs/promises");
     const { resolve } = await import("node:path");

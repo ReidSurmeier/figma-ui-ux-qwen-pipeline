@@ -1,0 +1,36 @@
+[TASK]
+Create one missing interaction state for the exact Japanese Party window: render a clear selected indicator on the Sebas member row while preserving every other source pixel and all text.
+
+[REFERENCE ROLE]
+Reference image 1 is the immutable original compound screenshot crop and defines the authentic Japanese RPG raster style. Reference image 2 is the authoritative assembled 160 by 154 Party window and fixes the output canvas, exact geometry, labels, rows, title, tools, tabs, and chrome. Edit only the second row indicator in reference image 2, using its first-row checked indicator as the selection-state style authority.
+
+[PRESERVATION INVARIANTS]
+- Keep the 160 by 154 Party-window geometry, title bar, Japanese title, close button, five member labels, member row surfaces, first-row indicator, remaining online and offline indicators, toolbar icons, bottom tabs, borders, palette, line weights, and pixel density unchanged from reference image 2.
+- Every pixel at source scale outside x=3..20 and y=38..56 is immutable.
+- Keep the complete Sebas label beginning at x=21 byte-for-byte visually unchanged; do not redraw, translate, smooth, recolor, or regenerate any text.
+
+[CANVAS AND LAYOUT]
+- Return only the same Party window as reference image 2 at exactly 640 by 616 pixels, four times the authoritative 160 by 154 canvas.
+- Do not add margin, donor background, neighboring desktop controls, or any surrounding screenshot.
+
+[REGION EDITS]
+- REGION: second member selection indicator
+  CHANGE: Replace the green ON indicator at source x=3..20 and y=38..56 with the same selected blue checked-box state shown on the first member row, retaining the exact 18 by 19 source footprint and local row surface.
+  PRESERVE: the row boundary; all Sebas text; the other four member indicators
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese late-1990s desktop-game raster UI
+- Hard source-scale pixels, one-pixel blue-grey bevels, no antialiasing or modern control styling
+
+[ASSET RULES]
+- Exactly one selected blue checked indicator replaces exactly one green ON indicator.
+- No text, icon, row, tab, or window chrome may be added, removed, or redrawn.
+
+[NEGATIVE CONSTRAINTS]
+- No extra checkmark, blue selected row, text change, gibberish, translated text, blur, glow, rounded modern control, donor magenta, crop, resize, or global redraw.
+- Do not change SakumaRiri, ANRI, Show_A, Ayanalshizuka, toolbar, friends tab, party tab, or close button.
+
+[QUALITY GATE]
+- At 160 by 154 the second row visibly reads as selected and its label remains aligned and identical.
+- The edited indicator occupies the same 18 by 19 source-scale rectangle and leaves no stray pixel above, below, or to its right.
+- All pixels outside the named indicator region are suitable for deterministic replacement with reference image 2.

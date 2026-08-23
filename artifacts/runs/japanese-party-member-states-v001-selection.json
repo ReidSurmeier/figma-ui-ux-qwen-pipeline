@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "source_authority": "benchmarks/japanese-rpg-options-v001/regions/party/reference.png",
+  "assembly_authority": "artifacts/qa/party/default-v004.png",
+  "states": [
+    {
+      "id": "member-indicator-off",
+      "run": "artifacts/runs/japanese-party-member-first-cleared-v001",
+      "candidate": "image-01.png",
+      "source_scale_region": [3, 19, 18, 19],
+      "generated_scale_region": [12, 76, 72, 76],
+      "output": "prototype/public/assets/japanese-rpg-v001/party/components/member-indicator-off.png",
+      "selection_reason": "Candidate 1 preserves the source's soft blue-grey circular indicator silhouette without the dark square redraw in candidate 2. Only the bounded indicator donor is accepted."
+    },
+    {
+      "id": "member-indicator-selected",
+      "run": "artifacts/runs/japanese-party-member-second-selected-v001",
+      "candidate": "image-02.png",
+      "source_scale_region": [3, 38, 18, 19],
+      "generated_scale_region": [12, 152, 72, 76],
+      "output": "prototype/public/assets/japanese-rpg-v001/party/components/member-indicator-selected.png",
+      "selection_reason": "Candidate 2 most closely follows the source checked indicator's blue-grey bevel and clean checkmark. Only the bounded indicator donor is accepted."
+    }
+  ],
+  "invariants": {
+    "accepted_generated_pixels": "two independent 18 by 19 source-scale rectangles",
+    "outside_region_authority": "the original source-locked member row assets",
+    "text_generation_accepted": false
+  }
+}

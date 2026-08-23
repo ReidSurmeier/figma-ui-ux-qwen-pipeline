@@ -1,0 +1,29 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nCreate one missing interaction state for the exact Japanese Party window: clear the blue checked indicator on the first SakumaRiri member row while preserving every other source pixel and all text.\n\n[REFERENCE ROLE]\nReference image 1 is the immutable original compound screenshot crop and defines the authentic Japanese RPG raster style. Reference image 2 is the authoritative assembled 160 by 154 Party window and fixes the output canvas, exact geometry, labels, rows, title, tools, tabs, and chrome. Edit only the first row indicator in reference image 2.\n\n[PRESERVATION INVARIANTS]\n- Keep the 160 by 154 Party-window geometry, title bar, Japanese title, close button, five member labels, member row surfaces, online and offline indicators on rows two through five, toolbar icons, bottom tabs, borders, palette, line weights, and pixel density unchanged from reference image 2.\n- Every pixel at source scale outside x=3..20 and y=19..37 is immutable.\n- Keep the complete SakumaRiri member label beginning at x=21 byte-for-byte visually unchanged; do not redraw, translate, smooth, recolor, or regenerate any text.\n\n[CANVAS AND LAYOUT]\n- Return only the same Party window as reference image 2 at exactly 640 by 616 pixels, four times the authoritative 160 by 154 canvas.\n- Do not add margin, donor background, neighboring desktop controls, or any surrounding screenshot.\n\n[REGION EDITS]\n- REGION: first member selection indicator\n  CHANGE: Replace the selected blue checked box at source x=3..20 and y=19..37 with a coherent neutral unchecked indicator in the exact same late-1990s Japanese RPG pixel style, size, and anchor. Continue the local white row surface behind it.\n  PRESERVE: the row boundary; all SakumaRiri and location text; the remaining four member indicators\n\n[STYLE SYSTEM]\n- Exact source-matched Japanese late-1990s desktop-game raster UI\n- Hard source-scale pixels, one-pixel blue-grey bevels, no antialiasing or modern control styling\n\n[ASSET RULES]\n- Exactly one neutral unchecked indicator replaces exactly one selected indicator.\n- No text, icon, row, tab, or window chrome may be added, removed, or redrawn.\n\n[NEGATIVE CONSTRAINTS]\n- No checked mark, blue selected row, text change, gibberish, translated text, blur, glow, rounded modern control, donor magenta, crop, resize, or global redraw.\n- Do not change Sebas, ANRI, Show_A, Ayanalshizuka, toolbar, friends tab, party tab, or close button.\n\n[QUALITY GATE]\n- At 160 by 154 the first row visibly reads as unselected and its label remains aligned and identical.\n- The edited indicator occupies the same 18 by 19 source-scale rectangle and leaves no stray pixel above, below, or to its right.\n- All pixels outside the named indicator region are suitable for deterministic replacement with reference image 2."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 2,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083411,
+    "size": "640*616",
+    "watermark": false
+  }
+}

@@ -131,7 +131,7 @@ export function GameMenuSourceWindow({ zIndex, onActivate }: WindowProps) {
 }
 
 export function PartySourceWindow({ zIndex, onActivate }: WindowProps) {
-  const [member, setMember] = useState(0);
+  const [member, setMember] = useState<number | null>(0);
   const [page, setPage] = useState(0);
   const [tab, setTab] = useState<"friends" | "party">("party");
   const [status, setStatus] = useState("");
@@ -139,14 +139,21 @@ export function PartySourceWindow({ zIndex, onActivate }: WindowProps) {
   const assetRoot = `${root}/party`;
   return <>
     <SourceWindow id="party" title="パーティー (Riri-Soft)" initialPosition={{ x: 568, y: 370 }} width={160} height={154} titleWidth={125} titleTop={4} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closeRight={1} closeTop={3}>
-      {names.map((name, row) => <button key={name} type="button" role="option" className="party-source-member" aria-label={name} aria-selected={member === row} data-source-selected={row === 0} style={{ top: 19 + row * 19 }} onClick={() => { setMember(row); setStatus(`${name} を選択`); }}><SourceRaster id={`party-member-${row}`} file={`${assetRoot}/components/member-${row}`} style={{ inset: 0 }} /></button>)}
+      {names.map((name, row) => {
+        const selected = member === row;
+        const indicatorState = row === 0 && !selected ? "off" : row !== 0 && selected ? "selected" : null;
+        return <button key={name} type="button" role="option" className="party-source-member" aria-label={name} aria-selected={selected} style={{ top: 19 + row * 19 }} onClick={() => { const next = selected ? null : row; setMember(next); setStatus(next === null ? `${name} の選択を解除` : `${name} を選択`); }}>
+          <SourceRaster id={`party-member-${row}`} file={`${assetRoot}/components/member-${row}`} style={{ inset: 0 }} />
+          {indicatorState && <SourceRaster id={`party-member-${row}-indicator-${indicatorState}`} file={`${assetRoot}/components/member-indicator-${indicatorState}`} style={{ left: 0, top: 0, width: 18, height: 19 }} />}
+        </button>;
+      })}
       {[0, 1, 2, 3, 4].map((column) => <button key={column} type="button" className="party-source-tool" aria-label={`パーティーツール ${column + 1}`} aria-pressed={status === `tool ${column + 1}`} style={{ left: 4 + column * 29 }} onClick={() => setStatus(`tool ${column + 1}`)}><SourceRaster id={`party-tool-${column}`} file={`${assetRoot}/components/tool-${column}`} style={{ inset: 0 }} /></button>)}
       <button type="button" className="party-source-tab party-source-tab--friends" aria-label="友達" aria-pressed={tab === "friends"} onClick={() => setTab("friends")}><SourceRaster id="party-friends" file={`${assetRoot}/components/friends`} style={{ inset: 0 }} /></button>
       <button type="button" className="party-source-tab party-source-tab--party" aria-label="パーティー" aria-pressed={tab === "party"} onClick={() => setTab("party")}><SourceRaster id="party-party-tab" file={`${assetRoot}/components/party-tab`} style={{ inset: 0 }} /></button>
       <output className="sr-only" role="status">{status || `${page + 1}/2`}</output>
     </SourceWindow>
     <div className="party-source-external-actions" role="group" aria-label="パーティー外部操作" style={{ zIndex }}>
-      {["back", "next", "sell"].map((label, row) => <button key={label} type="button" className="party-source-action" aria-label={label} aria-pressed={status.startsWith(label)} style={{ top: row * 23 }} onClick={() => { if (label === "back") setPage(0); if (label === "next") setPage(1); setStatus(`${label} ${label === "sell" ? names[member] : `${label === "next" ? 2 : 1}/2`}`); }}><SourceRaster id={`party-action-${row}`} file={`${assetRoot}/components/action-${row}`} style={{ inset: 0 }} /></button>)}
+      {["back", "next", "sell"].map((label, row) => <button key={label} type="button" className="party-source-action" aria-label={label} aria-pressed={status.startsWith(label)} style={{ top: row * 23 }} onClick={() => { if (label === "back") setPage(0); if (label === "next") setPage(1); setStatus(`${label} ${label === "sell" ? (member === null ? "選択なし" : names[member]) : `${label === "next" ? 2 : 1}/2`}`); }}><SourceRaster id={`party-action-${row}`} file={`${assetRoot}/components/action-${row}`} style={{ inset: 0 }} /></button>)}
     </div>
   </>;
 }

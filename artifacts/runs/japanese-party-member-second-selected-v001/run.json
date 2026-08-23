@@ -1,0 +1,28 @@
+{
+  "outputs": [
+    {
+      "bytes": 386979,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "ea52df146cbf720a3e052cac88ef86f21383af8a8c0b2d05f82639cca63e9688"
+    },
+    {
+      "bytes": 385576,
+      "file": "image-02.png",
+      "media_type": "image/png",
+      "sha256": "2df9f0b65d939a061c3136d6e4955fe275b5b2155697f83e17ed67e9406fa4b2"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "7a738f46-5437-97f8-b7fa-ef06749ea57e",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 2,
+    "input_image_type": "qima_input_1k",
+    "output_height": 616,
+    "output_image_count": 2,
+    "output_image_type": "qima_output_1k",
+    "output_width": 640
+  }
+}

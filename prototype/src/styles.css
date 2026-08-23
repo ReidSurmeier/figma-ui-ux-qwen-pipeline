@@ -174,8 +174,6 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .game-menu-source-action[aria-pressed="true"] { outline: 2px solid #6b91bd; outline-offset: -2px; filter: brightness(0.77); }
 
 .party-source-member { position: absolute; z-index: 4; left: 3px; width: 154px; height: 19px; padding: 0; border: 0; background: transparent; }
-.party-source-member[aria-selected="true"]:not([data-source-selected="true"]) { outline: 1px solid #5b8fb9; outline-offset: -1px; filter: brightness(0.86); }
-.party-source-member[data-source-selected="true"][aria-selected="false"] .source-raster { filter: grayscale(0.88) brightness(1.16) contrast(0.82); }
 .party-source-external-actions { position: absolute; left: 738px; top: 350px; width: 41px; height: 66px; }
 .party-source-action { position: absolute; z-index: 5; left: 0; width: 41px; height: 20px; padding: 0; border: 0; background: transparent; }
 .party-source-action[aria-pressed="true"] .source-raster { filter: brightness(0.7); }

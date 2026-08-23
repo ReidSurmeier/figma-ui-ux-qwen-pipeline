@@ -1,0 +1,36 @@
+[TASK]
+Create one missing interaction state for the exact Japanese Party window: clear the blue checked indicator on the first SakumaRiri member row while preserving every other source pixel and all text.
+
+[REFERENCE ROLE]
+Reference image 1 is the immutable original compound screenshot crop and defines the authentic Japanese RPG raster style. Reference image 2 is the authoritative assembled 160 by 154 Party window and fixes the output canvas, exact geometry, labels, rows, title, tools, tabs, and chrome. Edit only the first row indicator in reference image 2.
+
+[PRESERVATION INVARIANTS]
+- Keep the 160 by 154 Party-window geometry, title bar, Japanese title, close button, five member labels, member row surfaces, online and offline indicators on rows two through five, toolbar icons, bottom tabs, borders, palette, line weights, and pixel density unchanged from reference image 2.
+- Every pixel at source scale outside x=3..20 and y=19..37 is immutable.
+- Keep the complete SakumaRiri member label beginning at x=21 byte-for-byte visually unchanged; do not redraw, translate, smooth, recolor, or regenerate any text.
+
+[CANVAS AND LAYOUT]
+- Return only the same Party window as reference image 2 at exactly 640 by 616 pixels, four times the authoritative 160 by 154 canvas.
+- Do not add margin, donor background, neighboring desktop controls, or any surrounding screenshot.
+
+[REGION EDITS]
+- REGION: first member selection indicator
+  CHANGE: Replace the selected blue checked box at source x=3..20 and y=19..37 with a coherent neutral unchecked indicator in the exact same late-1990s Japanese RPG pixel style, size, and anchor. Continue the local white row surface behind it.
+  PRESERVE: the row boundary; all SakumaRiri and location text; the remaining four member indicators
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese late-1990s desktop-game raster UI
+- Hard source-scale pixels, one-pixel blue-grey bevels, no antialiasing or modern control styling
+
+[ASSET RULES]
+- Exactly one neutral unchecked indicator replaces exactly one selected indicator.
+- No text, icon, row, tab, or window chrome may be added, removed, or redrawn.
+
+[NEGATIVE CONSTRAINTS]
+- No checked mark, blue selected row, text change, gibberish, translated text, blur, glow, rounded modern control, donor magenta, crop, resize, or global redraw.
+- Do not change Sebas, ANRI, Show_A, Ayanalshizuka, toolbar, friends tab, party tab, or close button.
+
+[QUALITY GATE]
+- At 160 by 154 the first row visibly reads as unselected and its label remains aligned and identical.
+- The edited indicator occupies the same 18 by 19 source-scale rectangle and leaves no stray pixel above, below, or to its right.
+- All pixels outside the named indicator region are suitable for deterministic replacement with reference image 2.

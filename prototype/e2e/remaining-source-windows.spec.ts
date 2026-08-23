@@ -213,3 +213,34 @@ test("dragging Party leaves the source-external back next sell strip anchored", 
   expect(nextAfter).toEqual(nextBefore);
   await expect(party.getByRole("button", { name: /^(back|next|sell)$/ })).toHaveCount(0);
 });
+
+test("Party member selection can clear and moves only the source-local indicator", async ({ page }) => {
+  await page.goto("/");
+  const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
+  const first = party.getByRole("option", { name: /SakumaRiri/ });
+  const second = party.getByRole("option", { name: /Sebas/ });
+  const bounds = await party.boundingBox();
+  if (!bounds) throw new Error("Party member-state geometry is unavailable");
+
+  const firstIndicator = { x: bounds.x + 3, y: bounds.y + 19, width: 18, height: 19 };
+  const firstLabel = { x: bounds.x + 21, y: bounds.y + 19, width: 136, height: 19 };
+  const secondIndicator = { x: bounds.x + 3, y: bounds.y + 38, width: 18, height: 19 };
+  const secondLabel = { x: bounds.x + 21, y: bounds.y + 38, width: 136, height: 19 };
+
+  const firstIndicatorSelected = await page.screenshot({ clip: firstIndicator });
+  const firstLabelBefore = await page.screenshot({ clip: firstLabel });
+  await first.click();
+  const firstIndicatorCleared = await page.screenshot({ clip: firstIndicator });
+  expect(firstIndicatorCleared.equals(firstIndicatorSelected), "the source check indicator did not clear").toBe(false);
+  expect((await page.screenshot({ clip: firstLabel })).equals(firstLabelBefore), "clearing the indicator altered the member label").toBe(true);
+  await expect(party.locator('[role="option"][aria-selected="true"]')).toHaveCount(0);
+
+  const secondIndicatorBefore = await page.screenshot({ clip: secondIndicator });
+  const secondLabelBefore = await page.screenshot({ clip: secondLabel });
+  await second.click();
+  expect((await page.screenshot({ clip: secondIndicator })).equals(secondIndicatorBefore), "Sebas received no visible selection indicator").toBe(false);
+  expect((await page.screenshot({ clip: secondLabel })).equals(secondLabelBefore), "selecting Sebas altered the member label").toBe(true);
+  expect((await page.screenshot({ clip: firstIndicator })).equals(firstIndicatorCleared), "selecting Sebas reintroduced or altered the cleared first indicator").toBe(true);
+  await expect(second).toHaveAttribute("aria-selected", "true");
+  await expect(party.locator('[role="option"][aria-selected="true"]')).toHaveCount(1);
+});
