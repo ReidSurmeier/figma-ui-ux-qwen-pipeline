@@ -11,6 +11,7 @@ if [[ ! -x "$godot_bin" ]]; then
 fi
 
 "$godot_bin" --headless --path "$godot_dir" --editor --quit
+"$godot_bin" --headless --path "$godot_dir" --script res://tests/full_desktop_contract.gd
 "$godot_bin" --headless --path "$godot_dir" --script res://tests/engine_contract.gd
 mkdir -p "$godot_dir/web"
 "$godot_bin" --headless --path "$godot_dir" --export-release Web web/index.html

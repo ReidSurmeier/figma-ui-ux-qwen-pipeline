@@ -420,5 +420,9 @@ func _qa_state() -> Dictionary:
 	}
 
 func _publish_qa() -> void:
+	var owner := get_parent()
+	if owner != null and owner.get_parent() != null and owner.get_parent().has_method("_publish_desktop_qa"):
+		owner.get_parent().call_deferred("_publish_desktop_qa")
+		return
 	if OS.has_feature("web"):
 		JavaScriptBridge.eval("window.godotQaState = " + JSON.stringify(_qa_state()) + ";")

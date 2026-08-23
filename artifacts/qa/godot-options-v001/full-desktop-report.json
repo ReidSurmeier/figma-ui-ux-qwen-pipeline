@@ -1,0 +1,9 @@
+{
+  "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+  "runtimeSha256": "4b4ffd6abe42a6a7d23122bed4b2b635b6a876e2ab6f017c76ce7f1c26332d22",
+  "normalizedMae": 0.0531846,
+  "highErrorPixelRate": 0.16202833537996308,
+  "windows": 15,
+  "components": 255,
+  "controls": 150
+}

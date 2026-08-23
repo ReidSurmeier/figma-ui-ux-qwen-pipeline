@@ -1,17 +1,18 @@
-# Godot Japanese Options tracer
+# Godot Japanese desktop prototype
 
-This Godot 4.7.2 project is the first production-engine tracer for the
-componentized Japanese UI reconstruction. It builds only the accepted Options
-window: the BGM and Effect sliders, source-state checkboxes, vertical tabs,
-custom Skin menu, footer controls, window movement, minimize animation, and
-close behavior.
+This Godot 4.7.2 project is the executable production-engine prototype for the
+complete 849x564 Japanese UI Reference Screen. It restores the source pink
+desktop and assembles all 15 visible windows from the existing component
+manifest. Every window is independently movable, and all 150 declared control
+surfaces are owned by the Godot scene.
 
-The window is not a screenshot overlay. Its shell and Japanese bitmap labels
-are separate source-derived textures, while hit regions, state, focus,
-continuous values, movement, and animation are native Godot controls. The four
-opaque checkbox state assets are deterministic 11x11 extractions from the
-versioned accepted runtime authority. They avoid the browser-versus-Godot alpha
-blend mismatch without flattening the window.
+The Reference Screen is not a runtime underlay. The pink desktop is a native
+`ColorRect`; Qwen-derived clean plates and source-derived labels, icons, rows,
+buttons, and thumbs remain separate textures. Hit regions, state, focus,
+continuous values, movement, and animation are native Godot controls. The
+accepted Options implementation remains the canonical quality floor and keeps
+its exact slider endpoints, custom Skin menu, stateful checkboxes, vertical
+tabs, stepped minimize animation, and close behavior.
 
 ## Run in WSL
 
@@ -21,10 +22,10 @@ Open `project.godot` in Godot 4.7.2, or run the complete local gate:
 GODOT_WEB_URL=https://windows-wsl.taile06c45.ts.net/godot-japanese-ui/ godot/qa.sh
 ```
 
-`qa.sh` imports the project, executes the engine-state contract, exports the
-single-threaded Compatibility-renderer web build, and runs the exported-canvas
-suite when `GODOT_WEB_URL` is present. The web export is intentionally ignored
-by Git and rebuilt from source.
+`qa.sh` imports the project, executes the complete-desktop and Options engine
+contracts, exports the single-threaded Compatibility-renderer web build, and
+runs the exported-canvas suite when `GODOT_WEB_URL` is present. The web export
+is intentionally ignored by Git and rebuilt from source.
 
 The active tailnet review route is:
 
@@ -35,13 +36,18 @@ Tailscale-IP HTTP route is therefore not a valid review URL.
 
 ## Testing boundary
 
-- `tests/engine_contract.gd` verifies source coordinates, inventory ownership,
+- `tests/full_desktop_contract.gd` locks the pink authority, 15-window
+  inventory, 255 visual authorities, 150 control surfaces, and movement
+  ownership.
+- `tests/engine_contract.gd` verifies Options source coordinates, inventory ownership,
   exact 0/100 slider geometry, state isolation, tab reversal, footer reversal,
   and generated minimize endpoints inside Godot.
 - `tests/options_web.spec.mjs` drives the exported WebAssembly canvas through
-  actual pointer and keyboard input. It scans boundary hit points, records
+  actual pointer and keyboard input. It drags every visible window, activates a
+  representative mapped surface in every interactive sibling, catches
+  cross-window overflow, scans dense Options hit boundaries, records
   pointer-down feedback, requires more than four continuous slider samples,
-  and compares the source crop with the canonical BGM fidelity thresholds.
+  and compares both the full desktop and Options crop with source authorities.
 - `.github/workflows/godot-options-quality.yml` repeats both layers on Linux and
   uploads the web build and evidence.
 

@@ -10,6 +10,11 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/options/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "benchmark-pass",
+        "failures": [],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -19,6 +24,16 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/basic-info/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "largest-local-defect",
+          "complete-visual-ownership",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -28,6 +43,15 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/card/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "largest-local-defect",
+          "complete-visual-ownership",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -37,6 +61,15 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/skills/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "largest-local-defect",
+          "complete-visual-ownership",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -46,6 +79,17 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/status/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "high-error-pixel-rate",
+          "largest-local-defect",
+          "complete-visual-ownership",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -55,6 +99,18 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/inventory/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "high-error-pixel-rate",
+          "largest-local-defect",
+          "complete-visual-ownership",
+          "full-surface-hit-map",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -64,6 +120,15 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/equipment/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "largest-local-defect",
+          "complete-visual-ownership",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -73,6 +138,16 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/chat/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "largest-local-defect",
+          "reversible-interaction",
+          "visual-control-geometry"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -82,6 +157,14 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/exchange/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "largest-local-defect",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -91,6 +174,16 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/game-menu/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "high-error-pixel-rate",
+          "largest-local-defect",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -100,6 +193,17 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/party/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "high-error-pixel-rate",
+          "largest-local-defect",
+          "complete-visual-ownership",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -109,6 +213,16 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/quickbar/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "high-error-pixel-rate",
+          "largest-local-defect",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -118,6 +232,16 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/compact-info/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "high-error-pixel-rate",
+          "largest-local-defect",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -127,6 +251,13 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/bottom-bar/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
@@ -136,6 +267,16 @@
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/notification/correction-replay-v003.json"
+      },
+      "bgm_fidelity": {
+        "status": "revision-required",
+        "failures": [
+          "source-relative-visual",
+          "high-error-pixel-rate",
+          "largest-local-defect",
+          "reversible-interaction"
+        ],
+        "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     }
   ]

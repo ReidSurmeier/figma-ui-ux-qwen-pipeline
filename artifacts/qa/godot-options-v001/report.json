@@ -1,8 +1,8 @@
 {
   "sourceSha256": "a89550a02883f34dcc0d993089c8bc6869fccc741680b9e98d24535ef3ae8e77",
-  "runtimeSha256": "f9aba70f3dcb2ba93acd6bb53ef3c5c90e9164f74391bd33c8fdbf6f1577f391",
-  "normalizedMae": 0.0337518,
-  "highErrorPixelRate": 0.1251463700234192,
+  "runtimeSha256": "26d48291835ed13fd5f7233f91defacc9e6a81e86adbb5efd1f019af48e22b72",
+  "normalizedMae": 0.033354,
+  "highErrorPixelRate": 0.12482435597189695,
   "largestHighErrorComponentRate": 0.0640807962529274,
   "controls": 18,
   "mappedControls": 18

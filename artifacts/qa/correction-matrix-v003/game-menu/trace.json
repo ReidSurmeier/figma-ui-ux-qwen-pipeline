@@ -4,13 +4,13 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787471351853",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787510080775",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787471351853",
-    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787471351853",
-    "http://10.255.255.254:4174/src/styles.css?t=1787469847023",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787510080773",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787510080773",
+    "http://10.255.255.254:4174/src/styles.css?t=1787510080775",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
     "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
@@ -1792,7 +1792,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
-        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1835,7 +1835,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
-        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",

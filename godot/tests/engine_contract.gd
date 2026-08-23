@@ -15,7 +15,7 @@ func _run_contract() -> void:
 	root.add_child(scene)
 	await process_frame
 	await process_frame
-	var options: Variant = scene.get_node("OptionsWindow")
+	var options: Variant = scene.get_node("Windows/options")
 
 	_check(options.size == Vector2(280, 122), "Options must open at 280x122")
 	_check(options.position == Vector2(345, 182), "Options must open at the source coordinate")

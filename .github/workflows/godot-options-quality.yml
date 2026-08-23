@@ -1,4 +1,4 @@
-name: Godot Japanese Options Quality Gate
+name: Godot Japanese Desktop Quality Gate
 
 on:
   push:
@@ -20,7 +20,7 @@ permissions:
   contents: read
 
 jobs:
-  godot-options:
+  godot-desktop:
     runs-on: ubuntu-latest
     env:
       GODOT_VERSION: 4.7.2
@@ -85,7 +85,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: godot-japanese-options-v001
+          name: godot-japanese-desktop-v001
           path: |
             godot/web
             artifacts/qa/godot-options-v001

@@ -10,6 +10,18 @@ const sourceWindow = resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/regions/options-window/reference.png",
 );
+const sourceDesktop = resolve(
+  projectRoot,
+  "benchmarks/japanese-rpg-options-v001/reference.png",
+);
+const windowRegistry = JSON.parse(readFileSync(resolve(
+  projectRoot,
+  "benchmarks/japanese-rpg-options-v001/windows.json",
+), "utf8"));
+const componentManifest = JSON.parse(readFileSync(resolve(
+  projectRoot,
+  "artifacts/qa/runtime-component-manifest.json",
+), "utf8"));
 
 const INITIAL_WINDOW = { x: 345, y: 182, width: 280, height: 122 };
 
@@ -39,6 +51,92 @@ test.beforeEach(async ({ page }) => {
   await page.goto("./");
   await page.locator("canvas").waitFor({ state: "visible" });
   await expect.poll(() => state(page)).toMatchObject({ ready: true });
+});
+
+test("Godot composes all independent windows over the original pink desktop", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  await expect.poll(() => state(page)).toMatchObject({
+    background: "#ff00fe",
+    window_count: 15,
+    component_count: 255,
+    control_count: 150,
+    desktop_mapped_controls: 150,
+    movable_windows: 15,
+  });
+
+  const screenshot = resolve(evidenceDir, "godot-full-desktop.png");
+  await page.locator("canvas").screenshot({ path: screenshot });
+  const comparison = spawnSync(
+    "compare",
+    ["-metric", "MAE", sourceDesktop, screenshot, "null:"],
+    { encoding: "utf8" },
+  );
+  expect([0, 1]).toContain(comparison.status);
+  const normalizedMae = Number(comparison.stderr.trim().match(/\(([^)]+)\)/)?.[1]);
+  const highErrorCount = Number(imageMagick("compare", [
+    "-metric", "AE", "-fuzz", "10%", sourceDesktop, screenshot, "null:",
+  ]).match(/\d+(?:\.\d+)?/)?.[0]);
+  const report = {
+    sourceSha256: createHash("sha256").update(readFileSync(sourceDesktop)).digest("hex"),
+    runtimeSha256: createHash("sha256").update(readFileSync(screenshot)).digest("hex"),
+    normalizedMae,
+    highErrorPixelRate: highErrorCount / (849 * 564),
+    windows: 15,
+    components: 255,
+    controls: 150,
+  };
+  writeFileSync(resolve(evidenceDir, "full-desktop-report.json"), `${JSON.stringify(report, null, 2)}\n`);
+  expect(report.normalizedMae).toBeLessThanOrEqual(0.055);
+  expect(report.highErrorPixelRate).toBeLessThanOrEqual(0.17);
+});
+
+test("all source windows move through real pointer gestures and controls answer at their mapped surfaces", async ({ page }) => {
+  const canvas = await page.locator("canvas").boundingBox();
+  if (!canvas) throw new Error("Godot canvas has no geometry");
+  const topFirst = [...windowRegistry.windows].reverse();
+  const dragLocal = {
+    "bottom-bar": [50, 10],
+    notification: [12, 5],
+    quickbar: [96, 70],
+  };
+
+  for (const window of topFirst) {
+    const [sourceX, sourceY, width, height] = window.bounds;
+    const before = (await state(page)).windows[window.id].position;
+    const [localX, localY] = dragLocal[window.id] ?? [20, 9];
+    const dx = sourceX + width + 6 <= 849 ? 6 : -6;
+    const dy = sourceY + height + 5 <= 564 ? 5 : -5;
+    const start = canvasPoint(canvas, before[0] + localX, before[1] + localY);
+    await page.mouse.move(start.x, start.y);
+    await page.mouse.down();
+    await page.mouse.move(start.x + dx, start.y + dy, { steps: 3 });
+    await page.mouse.up();
+    await expect.poll(async () => (await state(page)).windows[window.id].position).toEqual([
+      before[0] + dx,
+      before[1] + dy,
+    ]);
+
+    const moved = canvasPoint(canvas, before[0] + dx + localX, before[1] + dy + localY);
+    await page.mouse.move(moved.x, moved.y);
+    await page.mouse.down();
+    await page.mouse.move(moved.x - dx, moved.y - dy, { steps: 3 });
+    await page.mouse.up();
+    await expect.poll(async () => (await state(page)).windows[window.id].position).toEqual(before);
+  }
+
+  for (const window of componentManifest.windows) {
+    if (window.id === "options" || window.controls.length === 0) continue;
+    const control = window.controls.find((candidate) => !candidate.closeWindow && !candidate.minimizeEndpoint);
+    if (!control) continue;
+    const position = (await state(page)).windows[window.id].position;
+    const point = canvasPoint(
+      canvas,
+      position[0] + control.geometry.x + control.geometry.width / 2,
+      position[1] + control.geometry.y + control.geometry.height / 2,
+    );
+    await page.mouse.click(point.x, point.y);
+    await expect.poll(async () => (await state(page)).windows[window.id].last_action).toContain(control.id);
+  }
 });
 
 test("Godot exports the accepted Japanese Options assembly without a screenshot underlay", async ({ page }) => {

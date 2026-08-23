@@ -4,13 +4,13 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787471351853",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787510080775",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787471351853",
-    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787471351853",
-    "http://10.255.255.254:4174/src/styles.css?t=1787469847023",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787510080773",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787510080773",
+    "http://10.255.255.254:4174/src/styles.css?t=1787510080775",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
     "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
@@ -296,8 +296,28 @@
       "width": 54,
       "height": 11
     },
-    "componentIds": [],
-    "uniqueComponentIds": 0,
+    "componentIds": [
+      "options-minimize",
+      "options-close",
+      "options-tab-option",
+      "options-tab-info",
+      "options-bgm-down",
+      "options-bgm-track",
+      "options-bgm-thumb",
+      "options-bgm-up",
+      "options-bgm-on",
+      "options-effect-down",
+      "options-effect-track",
+      "options-effect-thumb",
+      "options-effect-up",
+      "options-effect-on",
+      "options-skin",
+      "options-footer-opaque",
+      "options-footer-attack",
+      "options-footer-skill",
+      "options-footer-item"
+    ],
+    "uniqueComponentIds": 19,
     "corner": {
       "outside00": false,
       "step50": true,
@@ -774,7 +794,7 @@
       "type": "range",
       "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
       "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
-      "settledHash": "f8ffc1e1b5cb30c0fe350f1a6efbe6f9edb209382b947bc2bb2eb5e3938dfbb0",
+      "settledHash": "b5918c24e760387834a1fe78b1c56b7fdd102b521663f6d8f6937e3decbc18ef",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -1102,7 +1122,7 @@
       "type": "range",
       "idleHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
       "downHash": "5e3be87be24d590e70bcaf94298bf8c0b52b947ece50a6e64669ea355fc2fd96",
-      "settledHash": "7bf0d5b97dd2c1980f9b1180c5993cdc729e4c40bc13bba5237a8c58eaebafba",
+      "settledHash": "6d7b06f75b77a346744ce421c68cde4987b0dcf37b90ae944be97f51b052f1ba",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -3148,7 +3168,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
-        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3191,7 +3211,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
-        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",

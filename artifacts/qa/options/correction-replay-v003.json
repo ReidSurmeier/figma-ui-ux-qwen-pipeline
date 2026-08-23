@@ -42,8 +42,8 @@
           "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
           "metrics": {
             "independent": true,
-            "componentCount": 0,
-            "expected": 0
+            "componentCount": 19,
+            "expected": 19
           }
         }
       ]
