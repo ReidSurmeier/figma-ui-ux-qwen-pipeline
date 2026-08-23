@@ -1,0 +1,29 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nFinish the empty clean plate for the Japanese RPG party window. Reference 1 is source authority. Reference 2 is a rejected cleanup candidate whose empty panel geometry is useful but which illegally retained the title, close button, selected checkmark, and SakumaRiri row. Remove only that remaining semantic foreground and keep the empty source-scale chrome.\n\n[REFERENCE ROLE]\nReference image 1 fixes the original 160 by 210 geometry and pixel style. Reference image 2 fixes the desired empty member panel, toolbar wells, bottom tabs, and complete non-magenta silhouette, but its title and first row are rejected residue and are not copy authority.\n\n[PRESERVATION INVARIANTS]\n- Keep the exact 160 by 210 composition, source pixel density, stepped corners, one-pixel borders, empty five-row body, toolbar band, bottom tab wells, and resize grip from the useful empty candidate.\n- Do not reintroduce the overlapping Basic Info strip or magenta donor field.\n- Do not move, scale, smooth, modernize, relight, or rewrite any surviving empty chrome.\n\n[CANVAS AND LAYOUT]\n- Return exactly 640 by 840 pixels, four times source scale.\n- Return only the empty party-window clean plate with transparent or neutral exterior and no neighboring UI.\n\n[REGION EDITS]\n- REGION: remaining semantic residue in rejected candidate\n  CHANGE: Remove the complete title icon, \u30d1\u30fc\u30c6\u30a3\u30fc (Riri-Soft) title, close button, first-row checkmark, SakumaRiri text, and selected blue row tint. Reconstruct the continuous empty title gradient and the same empty white row surface beneath them.\n  PRESERVE: all panel boundaries; empty lower rows; toolbar band; two bottom tab wells; resize grip; outer stepped chrome\n\n[STYLE SYSTEM]\n- Authentic late-1990s Japanese desktop RPG raster UI\n- hard aliased source-scale blue-grey chrome\n\n[ASSET RULES]\n- Exactly one empty clean plate.\n- No readable or pseudo-readable text, number, icon, checkmark, member, selected tint, button glyph, item, or sprite may remain.\n\n[NEGATIVE CONSTRAINTS]\n- No magenta, title text, Riri-Soft, SakumaRiri, checkmark, close glyph, ghost text, invented controls, modern rounded card, antialiasing, or soft shadow.\n\n[QUALITY GATE]\n- OCR returns no title or member name at source scale.\n- The first row is the same empty white surface as the other rows.\n- The result can sit beneath independently extracted title, member, toolbar, and tab assets without duplicates."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 1,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083371,
+    "size": "640*840",
+    "watermark": false
+  }
+}

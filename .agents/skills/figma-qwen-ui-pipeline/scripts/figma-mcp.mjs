@@ -190,6 +190,15 @@ async function main(argv) {
   const [command, ...rest] = argv;
   if (!command) throw new Error("Expected command: tools, call, get-figjam, screenshot, upload, or use");
   const options = parseOptions(rest);
+  if (options.assetManifest) {
+    const manifest = JSON.parse(await readFile(path.resolve(options.assetManifest), "utf8"));
+    const filter = options.assetFilter ? new RegExp(options.assetFilter) : null;
+    const paths = (manifest.assets ?? [])
+      .filter((asset) => !filter || filter.test(asset.uploadName ?? asset.uploadPath ?? ""))
+      .map((asset) => asset.uploadPath)
+      .filter(Boolean);
+    options.asset.push(...paths);
+  }
   const target = await resolveTarget(options);
   const client = await connect();
 
@@ -259,18 +268,31 @@ async function main(argv) {
     const uploadResult = await client.call("upload_assets", request);
     const uploadUrls = extractUploadUrls(uploadResult, options.asset.length);
     const uploaded = [];
-    await Promise.all(options.asset.map(async (assetPath, index) => {
+    const uploadOne = async (assetPath, index) => {
       const absolutePath = path.resolve(assetPath);
       const bytes = await readFile(absolutePath);
       const contentType = guessContentType(absolutePath);
-      const response = await fetch(uploadUrls[index], {
-        method: "POST",
-        headers: { "content-type": contentType },
-        body: bytes,
-      });
-      if (!response.ok) throw new Error(`Asset upload failed for ${path.basename(assetPath)} with HTTP ${response.status}`);
-      uploaded.push({ file: path.basename(assetPath), bytes: bytes.length, contentType });
-    }));
+      let lastError;
+      for (let attempt = 1; attempt <= 3; attempt += 1) {
+        try {
+          const body = new FormData();
+          body.append("file", new Blob([bytes], { type: contentType }), path.basename(assetPath));
+          const response = await fetch(uploadUrls[index], { method: "POST", body });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          uploaded.push({ file: path.basename(assetPath), bytes: bytes.length, contentType });
+          return;
+        } catch (error) {
+          lastError = error;
+          if (attempt < 3) await new Promise((resolve) => setTimeout(resolve, attempt * 250));
+        }
+      }
+      throw new Error(`Asset upload failed for ${path.basename(assetPath)}: ${lastError?.message ?? lastError}`);
+    };
+    const concurrency = Number(options.concurrency ?? 10);
+    for (let offset = 0; offset < options.asset.length; offset += concurrency) {
+      const chunk = options.asset.slice(offset, offset + concurrency);
+      await Promise.all(chunk.map((assetPath, localIndex) => uploadOne(assetPath, offset + localIndex)));
+    }
     process.stdout.write(`${JSON.stringify({ command, nodeId: options.nodeId ?? null, uploaded })}\n`);
     return;
   }

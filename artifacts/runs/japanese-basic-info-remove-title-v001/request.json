@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nEdit the exact Japanese \u57fa\u672c\u60c5\u5831 window reference. Remove only the left title icon, Japanese \u57fa\u672c\u60c5\u5831 title glyphs, and the single right title-bar button. Continue the original blue title-bar gradient and one-pixel chrome beneath them. Preserve the body and every other source element exactly.\n\n[REFERENCE ROLE]\nReference image 1 is the immutable 280 by 120 source crop and fixes the title-bar silhouette, gradient, geometry, and unchanged pixels.\n\n[PRESERVATION INVARIANTS]\n- Do not alter title-bar height, outer corners, borders, body, meters, buttons, levels, footer, palette, or crop.\n- Keep the low-resolution source raster style and exact proportions.\n- Local foreground removal only.\n\n[CANVAS AND LAYOUT]\n- Return the same complete crop at 1120 by 480 pixels with no margin.\n- Only x=3..52, y=3..14 and x=268..276, y=3..14 may change; outside these regions is Exact Copy.\n\n[REGION EDITS]\n- REGION: title foreground\n  CHANGE: Remove icon, Japanese title glyphs, and right title button; continue the same local blue gradient and hard one-pixel rules.\n  PRESERVE: title bar silhouette; gradient; outer frame; body\n\n[STYLE SYSTEM]\n- Exact source-matched Japanese PC RPG raster UI\n- hard pixel-scale title chrome\n\n[ASSET RULES]\n- No glyph, icon, button remnant, ghost, white box, replacement text, or magenta desktop in the edited regions.\n\n[NEGATIVE CONSTRAINTS]\n- No redesign, smoothing, added controls, new title, changed gradient, changed crop, or full-window redraw.\n\n[QUALITY GATE]\n- Title foreground is absent.\n- Gradient is continuous with no rectangular patch.\n- Body and frame remain aligned."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 1,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22082625,
+    "size": "1120*480",
+    "watermark": false
+  }
+}

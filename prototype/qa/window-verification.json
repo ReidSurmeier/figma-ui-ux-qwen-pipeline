@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "reference": "benchmarks/japanese-rpg-options-v001/reference.png",
+  "windows": [
+    {
+      "id": "options",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/options/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "basic-info",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/basic-info/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "card",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/card/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "skills",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/skills/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "status",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/status/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "inventory",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/inventory/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "equipment",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/equipment/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "chat",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/chat/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "exchange",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/exchange/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "game-menu",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/game-menu/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "party",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/party/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "quickbar",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/quickbar/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "compact-info",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/compact-info/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "bottom-bar",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/bottom-bar/correction-replay-v002.json"
+      }
+    },
+    {
+      "id": "notification",
+      "status": "verified",
+      "deterministic_gates": "pass",
+      "correction_replay": {
+        "status": "pass",
+        "report": "artifacts/qa/notification/correction-replay-v002.json"
+      }
+    }
+  ]
+}

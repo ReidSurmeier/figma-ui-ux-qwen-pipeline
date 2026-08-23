@@ -70,6 +70,10 @@ class CompileEditBriefTests(unittest.TestCase):
                 reference_urls=[f"data:image/png;base64,{index}" for index in range(5)],
             )
 
+    def test_rejects_unstructured_exact_copy_before_provider_call(self):
+        with self.assertRaisesRegex(ValueError, "exact_copy entries must be objects"):
+            compile_edit_brief({"objective": "Edit locally.", "exact_copy": ["outside unchanged"]})
+
     def test_compiles_spatial_style_and_negative_constraints(self):
         brief = {
             "objective": "Transform the central plant into a golf club.",

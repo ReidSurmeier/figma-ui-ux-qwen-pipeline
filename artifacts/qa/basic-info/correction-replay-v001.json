@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "window_id": "basic-info",
+  "overall": "pass",
+  "evidence": [
+    "artifacts/qa/basic-info/default-v002.png",
+    "artifacts/qa/basic-info/hp-min.png",
+    "artifacts/qa/basic-info/hp-max.png",
+    "artifacts/qa/basic-info/minimized.png",
+    "artifacts/qa/basic-info/figma-default-v001.png",
+    "artifacts/qa/basic-info/figma-minimized-v001.png",
+    "prototype/e2e/basic-info.spec.ts",
+    "prototype/e2e/full-desktop.spec.ts",
+    "prototype/scripts/basic-info-contract.sh",
+    "prototype/scripts/figma-basic-info-live-check.sh"
+  ],
+  "results": [
+    { "prompt_id": "no-reference-underlay", "verdict": "pass", "note": "Runtime resource audit and source scan request no reference screenshot." },
+    { "prompt_id": "independent-elements", "verdict": "pass", "note": "Twenty-six semantic layer instances resolve to twenty-five independent assets; the shared meter track is reused twice." },
+    { "prompt_id": "preserve-japanese-source-style", "verdict": "pass", "note": "The Japanese title is a glyph-only Exact Copy raster with a transparent perimeter." },
+    { "prompt_id": "no-pink-donor-pixels", "verdict": "pass", "note": "Opaque forbidden-color count is zero and three-pixel runtime edge rings are green." },
+    { "prompt_id": "title-placement-and-white-box", "verdict": "pass", "note": "Title is independently anchored at source geometry and its opaque glyphs trim to 37x10 inside a transparent 40x12 canvas." },
+    { "prompt_id": "generated-minimize-endpoint", "verdict": "pass", "note": "Dedicated Qwen prompt 733e6ac5-225e-95a9-8210-e56466247933 supplied the surface and endcap; endpoint differs from an expanded-plate crop and contains no body pixels." },
+    { "prompt_id": "slider-full-endpoint-and-grey-block", "verdict": "pass", "note": "HP source-delta thumb reaches both semantic range edges; alpha trim excludes the full grey rail." },
+    { "prompt_id": "continuous-motion-not-four-frames", "verdict": "pass", "note": "Fourteen-step user drag emits more than four distinct input values." },
+    { "prompt_id": "settled-button-effects", "verdict": "pass", "note": "Every page button selects its own state, updates status, and survives the global dead-control inventory." },
+    { "prompt_id": "drag-cutoff-and-z-order", "verdict": "pass", "note": "Full-window and minimized dimensions stay within the 849x564 desktop host." },
+    { "prompt_id": "text-overlap-and-pixel-aesthetic", "verdict": "pass", "note": "Source-raster labels fit fixed source regions; Base Lv. width correction is covered by an explicit 58px assertion." },
+    { "prompt_id": "figma-link-and-page-parity", "verdict": "pass", "note": "Live MCP readback proves 26 independent raster layers per state, eight page states, 56 valid cross-state links, exact anchors, and linked Qwen minimize and restore endpoints." },
+    { "prompt_id": "complete-user-flow-not-screenshot-only", "verdict": "pass", "note": "User-driven page selection, continuous slider, drag, minimize, and restore paths are exercised in the browser." }
+  ],
+  "promoted_regressions": [
+    "initial HP thumb source position",
+    "selected status button must not receive a second darkening filter",
+    "Base Lv. raster width must preserve the complete final glyph",
+    "invisible status output must not obstruct exchange OK hit ownership"
+  ]
+}

@@ -1,0 +1,34 @@
+[TASK]
+Edit the exact Japanese 基本情報 window reference. Remove only the Base Lv. and Job Lv. labels and numbers, both blue level bars and tracks, and the complete Weight and Zeny footer text. Reconstruct the same empty pale level panel and empty footer band. Preserve every other source element exactly.
+
+[REFERENCE ROLE]
+Reference image 1 is the immutable 280 by 120 source crop and fixes all geometry and unchanged pixels.
+
+[PRESERVATION INVARIANTS]
+- Keep title, identity, HP/SP resources, right page buttons, window frame, level-panel silhouette, footer separators, palette, and crop.
+- Preserve low-resolution raster character and one-pixel rules.
+- Local removal only.
+
+[CANVAS AND LAYOUT]
+- Return the same complete crop at 1120 by 480 pixels with no added margin.
+- Only x=4..200, y=68..96 and x=3..276, y=101..117 may change; all other pixels are Exact Copy.
+
+[REGION EDITS]
+- REGION: level panel and footer foreground
+  CHANGE: Remove all labels, values, blue fills, bar tracks, and footer copy while retaining empty panel and band surfaces.
+  PRESERVE: level panel background; footer band; all separators and window edges
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese PC RPG raster UI
+- hard pixel-scale edges and pale blue-grey chrome
+
+[ASSET RULES]
+- No text, number, blue bar, bar track, ghost glyph, replacement label, or magenta desktop in the changed regions.
+
+[NEGATIVE CONSTRAINTS]
+- No redesign, smoothing, added content, changed partition, changed crop, or whole-window redraw.
+
+[QUALITY GATE]
+- Both declared foreground regions are empty.
+- Panel and footer geometry remain intact.
+- All unrelated source regions remain aligned.

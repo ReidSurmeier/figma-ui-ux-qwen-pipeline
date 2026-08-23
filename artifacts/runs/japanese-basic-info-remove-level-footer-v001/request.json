@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nEdit the exact Japanese \u57fa\u672c\u60c5\u5831 window reference. Remove only the Base Lv. and Job Lv. labels and numbers, both blue level bars and tracks, and the complete Weight and Zeny footer text. Reconstruct the same empty pale level panel and empty footer band. Preserve every other source element exactly.\n\n[REFERENCE ROLE]\nReference image 1 is the immutable 280 by 120 source crop and fixes all geometry and unchanged pixels.\n\n[PRESERVATION INVARIANTS]\n- Keep title, identity, HP/SP resources, right page buttons, window frame, level-panel silhouette, footer separators, palette, and crop.\n- Preserve low-resolution raster character and one-pixel rules.\n- Local removal only.\n\n[CANVAS AND LAYOUT]\n- Return the same complete crop at 1120 by 480 pixels with no added margin.\n- Only x=4..200, y=68..96 and x=3..276, y=101..117 may change; all other pixels are Exact Copy.\n\n[REGION EDITS]\n- REGION: level panel and footer foreground\n  CHANGE: Remove all labels, values, blue fills, bar tracks, and footer copy while retaining empty panel and band surfaces.\n  PRESERVE: level panel background; footer band; all separators and window edges\n\n[STYLE SYSTEM]\n- Exact source-matched Japanese PC RPG raster UI\n- hard pixel-scale edges and pale blue-grey chrome\n\n[ASSET RULES]\n- No text, number, blue bar, bar track, ghost glyph, replacement label, or magenta desktop in the changed regions.\n\n[NEGATIVE CONSTRAINTS]\n- No redesign, smoothing, added content, changed partition, changed crop, or whole-window redraw.\n\n[QUALITY GATE]\n- Both declared foreground regions are empty.\n- Panel and footer geometry remain intact.\n- All unrelated source regions remain aligned."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 1,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22082624,
+    "size": "1120*480",
+    "watermark": false
+  }
+}

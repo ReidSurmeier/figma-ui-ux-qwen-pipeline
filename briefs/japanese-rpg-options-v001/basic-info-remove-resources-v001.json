@@ -1,0 +1,15 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "objective": "Edit the exact Japanese 基本情報 window reference. Remove only SakumaRiri, Acolyte, HP, SP, both numeric value strings, and both complete resource meters including tracks, fills, and thumbs. Reconstruct the uninterrupted white body beneath them. Preserve every other source element exactly.",
+  "reference_role": "Reference image 1 is the immutable 280 by 120 source crop and fixes every coordinate and unchanged pixel.",
+  "preservation_invariants": ["Do not alter the title, right button grid, level panel, footer, borders, palette, or crop.", "Keep the late-1990s low-resolution raster style and exact source proportions.", "Local removal only, not redesign."],
+  "canvas": ["Return the same complete crop at 1120 by 480 pixels with no added margin.", "Only the main body region x=5..201, y=19..63 may change; outside it is Exact Copy."],
+  "regions": [{"name": "identity and resource rows", "change": "Remove all identity/resource glyphs and both meter controls. Continue only the plain white body surface.", "preserve": ["body edges", "level panel below", "right button grid"]}],
+  "exact_copy": [],
+  "style": ["Exact source-matched Japanese PC RPG raster UI", "hard pixel-scale edges and pale blue-grey chrome"],
+  "asset_rules": ["No text, number, meter, fill, track, thumb, ghost glyph, pseudo-control, or magenta desktop in the changed region."],
+  "negative_constraints": ["No redesign, new text, smoothing, scale change, layout change, or full-window reinterpretation."],
+  "quality_checks": ["Identity and both resource rows are absent.", "Exposed white surface is continuous.", "Unrelated regions remain aligned."],
+  "output": {"size": "1120*480", "aspect_ratio": "7:3", "resolution": "1K", "count": 1, "seed": 22082623}
+}

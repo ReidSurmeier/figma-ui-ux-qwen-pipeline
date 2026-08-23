@@ -1,0 +1,53 @@
+{
+  "asset_rules": [
+    "Exactly one empty clean plate.",
+    "No readable or pseudo-readable text, number, icon, checkmark, member, selected tint, button glyph, item, or sprite may remain."
+  ],
+  "canvas": [
+    "Return exactly 640 by 840 pixels, four times source scale.",
+    "Return only the empty party-window clean plate with transparent or neutral exterior and no neighboring UI."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No magenta, title text, Riri-Soft, SakumaRiri, checkmark, close glyph, ghost text, invented controls, modern rounded card, antialiasing, or soft shadow."
+  ],
+  "objective": "Finish the empty clean plate for the Japanese RPG party window. Reference 1 is source authority. Reference 2 is a rejected cleanup candidate whose empty panel geometry is useful but which illegally retained the title, close button, selected checkmark, and SakumaRiri row. Remove only that remaining semantic foreground and keep the empty source-scale chrome.",
+  "output": {
+    "aspect_ratio": "source",
+    "count": 1,
+    "resolution": "1K",
+    "seed": 22083371,
+    "size": "640*840"
+  },
+  "preservation_invariants": [
+    "Keep the exact 160 by 210 composition, source pixel density, stepped corners, one-pixel borders, empty five-row body, toolbar band, bottom tab wells, and resize grip from the useful empty candidate.",
+    "Do not reintroduce the overlapping Basic Info strip or magenta donor field.",
+    "Do not move, scale, smooth, modernize, relight, or rewrite any surviving empty chrome."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "OCR returns no title or member name at source scale.",
+    "The first row is the same empty white surface as the other rows.",
+    "The result can sit beneath independently extracted title, member, toolbar, and tab assets without duplicates."
+  ],
+  "reference_role": "Reference image 1 fixes the original 160 by 210 geometry and pixel style. Reference image 2 fixes the desired empty member panel, toolbar wells, bottom tabs, and complete non-magenta silhouette, but its title and first row are rejected residue and are not copy authority.",
+  "regions": [
+    {
+      "change": "Remove the complete title icon, \u30d1\u30fc\u30c6\u30a3\u30fc (Riri-Soft) title, close button, first-row checkmark, SakumaRiri text, and selected blue row tint. Reconstruct the continuous empty title gradient and the same empty white row surface beneath them.",
+      "name": "remaining semantic residue in rejected candidate",
+      "preserve": [
+        "all panel boundaries",
+        "empty lower rows",
+        "toolbar band",
+        "two bottom tab wells",
+        "resize grip",
+        "outer stepped chrome"
+      ]
+    }
+  ],
+  "style": [
+    "Authentic late-1990s Japanese desktop RPG raster UI",
+    "hard aliased source-scale blue-grey chrome"
+  ]
+}

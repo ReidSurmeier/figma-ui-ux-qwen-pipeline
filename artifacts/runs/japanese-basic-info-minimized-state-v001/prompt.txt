@@ -1,0 +1,37 @@
+[TASK]
+Create a coherent minimized-state chrome donor for the exact Japanese 基本情報 window. Recompose the 280 by 120 window into a compact 180 by 18 title bar at the top-left. It must be a newly resolved late-1990s Japanese game-window endpoint, never a crop of the expanded window.
+
+[REFERENCE ROLE]
+Reference image 1 is the authoritative 280 by 120 基本情報 window and fixes the pixel density, dark and pale blue title gradient, one-pixel chrome, and source raster character.
+
+[PRESERVATION INVARIANTS]
+- Keep source pixel scale, palette family, hard aliased edges, and one-pixel line weights.
+- The minimized bar occupies source-scale x=0..179, y=0..17 and has complete left, top, right, and bottom chrome.
+- Do not retain, crop, squash, or ghost any identity, meter, value, page button, level, footer, or body pixel.
+- Do not include title glyphs, title icon, or title button; those remain separate editable elements.
+
+[CANVAS AND LAYOUT]
+- Return an 1120 by 480 output canvas, four times the 280 by 120 reference.
+- Place the four-times minimized donor at x=0 y=0 with source-scale size 180 by 18; fill all other pixels with a flat neutral white review field.
+- Resolve a new compact right endcap at x=179.
+
+[REGION EDITS]
+- REGION: minimized basic-information chrome
+  CHANGE: Remove the complete body and recompose only the empty title chrome as a compact 180 by 18 bar with a continuous source-matched blue gradient and a complete right endcap.
+  PRESERVE: top-left chrome; title palette; hard pixel-scale edges
+
+[STYLE SYSTEM]
+- Authentic source-matched Japanese late-1990s desktop RPG raster UI
+- crisp low-resolution blue-grey title chrome
+
+[ASSET RULES]
+- Exactly one empty 180 by 18 minimized surface at top-left.
+- No title text, pseudo-text, icon, button, body, control, or extra window.
+
+[NEGATIVE CONSTRAINTS]
+- No simple crop, clipped body, squeezed expanded window, open right edge, modern rounded card, soft shadow, glass, gibberish, or magenta desktop background.
+
+[QUALITY GATE]
+- The compact bar has four complete edges and a continuous empty title surface.
+- No expanded-body content survives.
+- The endpoint reads as regenerated chrome rather than a crop.

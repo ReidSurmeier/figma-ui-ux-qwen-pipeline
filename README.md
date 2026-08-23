@@ -45,14 +45,22 @@ loopback alias.
 8. Rebuild labels, layout, controls, and animation as native Figma and web
    elements.
 
-## Componentized Japanese Options tracer
+## Componentized Japanese RPG desktop
 
-The first completed tracer removes the full-screen reference underlay from the
-Japanese Options window. Figma Design owns independently editable bitmap layers;
+The completed desktop removes the full-screen reference underlay from all 15
+visible Japanese UI windows. Figma Design owns independently editable bitmap layers;
 Qwen Image 3 Pro supplies independent raster assets when native construction
 cannot preserve the source appearance; the WSL-hosted application owns
 continuous behavior and complete user flows; Git stores the shared manifest,
 provenance, and executable test contracts.
+
+The editable full-desktop review is [Japanese RPG Desktop v001](https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4?node-id=41-2).
+It contains 192 independent raster instances and 147 linked interaction
+hotspots. Each window has a separate review destination; the seven windows
+with a minimize control link to dedicated Qwen-generated compact endpoints.
+The WSL runtime and Figma structure share
+[`artifacts/qa/runtime-component-manifest.json`](artifacts/qa/runtime-component-manifest.json)
+but remain separate verification authorities.
 
 The current additive review state is [Japanese Options Window v004 tab-map-slider-clean](https://www.figma.com/design/v0bBUYUtCz88dfG2IMgho4?node-id=27-3).
 The v001 through v003 frames remain beside it as failure history. v004 retains
@@ -72,7 +80,7 @@ npm --prefix prototype run test:all:live
 ```
 
 That command runs unit tests, a production build, source/provider/asset and
-temporal-rendering contracts, twenty-three Playwright user flows, and a direct-
+temporal-rendering contracts, 47 Playwright user flows, and a direct-
 Chrome visual comparison. Temporal coverage includes pointer-down appearance,
 viewport-contained dragging, pixel-font/text bounds, exact header placement,
 fixed checkbox silhouettes, a zero-pixel contamination row above every footer
@@ -80,12 +88,23 @@ checkbox, the source gap before each complete `on` glyph, the thirteen-step
 width/height minimize/restore transition, exact tab-boundary clicks, full slider
 endpoint travel without an opaque grey donor rectangle, and proof that the
 Qwen-generated minimized endpoint is not a crop.
+It also checks every standard window's original six-pixel stepped rounded
+corner silhouette, known donor-facing crop rows, every visible control's
+settled state, all-edge drag recovery, and Figma/runtime geometry and screenshot
+parity. After the full live suite passes, refresh every learned-correction
+report and promote the windows with:
+
+```bash
+npm --prefix prototype run qa:promote
+npm --prefix prototype test
+```
 The visual gate uses direct headless Chrome plus ImageMagick, independently of
 the Playwright user-flow test. See the
 [v004 tab and slider remediation record](docs/runs/japanese-options-window-tab-slider-remediation-v004.md),
 [v003 checkbox remediation record](docs/runs/japanese-options-window-checkbox-remediation-v003.md),
 [v002 remediation record](docs/runs/japanese-options-window-visual-remediation-v002.md),
-[v001 historical run record](docs/runs/japanese-options-window-componentized-v001.md), and
+[v001 historical run record](docs/runs/japanese-options-window-componentized-v001.md),
+[full-desktop run record](docs/runs/japanese-rpg-desktop-componentized-v001.md), and
 [design manifest](benchmarks/japanese-rpg-options-v001/design-manifest.json).
 
 See the [componentized reconstruction implementation draft](docs/implementation/componentized-reconstruction.md),

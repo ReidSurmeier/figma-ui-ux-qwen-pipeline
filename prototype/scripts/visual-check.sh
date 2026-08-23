@@ -24,12 +24,12 @@ npm run build >/dev/null
 SERVER_PID=$!
 
 for _ in $(seq 1 50); do
-  if curl -fsS --max-time 1 http://10.255.255.254:4184/ >/dev/null 2>&1; then
+  if curl -fsS --max-time 1 http://10.255.255.254:4184/?view=options >/dev/null 2>&1; then
     break
   fi
   sleep 0.1
 done
-curl -fsS --max-time 2 http://10.255.255.254:4184/ >/dev/null
+curl -fsS --max-time 2 http://10.255.255.254:4184/?view=options >/dev/null
 
 timeout 15s /usr/bin/google-chrome \
   --headless=new \
@@ -40,7 +40,7 @@ timeout 15s /usr/bin/google-chrome \
   --user-data-dir="${CHECK_DIR}/chrome-profile" \
   --window-size=320,180 \
   --screenshot="${CHECK_DIR}/full.png" \
-  http://10.255.255.254:4184/ >/dev/null 2>&1 || true
+  http://10.255.255.254:4184/?view=options >/dev/null 2>&1 || true
 
 if [[ ! -s "${CHECK_DIR}/full.png" ]]; then
   printf 'visual-check: Chrome did not produce a screenshot\n' >&2
@@ -52,7 +52,13 @@ fi
 # a runtime underlay.
 convert "${CHECK_DIR}/full.png" -crop 280x122+0+29 +repage "${CHECK_DIR}/window.png"
 
-METRIC="$(compare -metric MAE "${REFERENCE}" "${CHECK_DIR}/window.png" null: 2>&1 || true)"
+# The source screenshot contains a three-pixel magenta donor perimeter that the
+# executable derivative intentionally removes. Compare the source-authoritative
+# interior, then test the replacement perimeter independently below.
+METRIC="$(compare -metric MAE \
+  "${REFERENCE}[274x116+3+3]" \
+  "${CHECK_DIR}/window.png[274x116+3+3]" \
+  null: 2>&1 || true)"
 NORMALIZED="$(printf '%s\n' "${METRIC}" | sed -n 's/.*(\([^)]*\)).*/\1/p')"
 
 if [[ -z "${NORMALIZED}" ]]; then
@@ -84,6 +90,13 @@ for asset in checkbox-off checkbox-on footer-checkbox-off footer-checkbox-on sli
     exit 1
   fi
 done
+
+RUNTIME_PLATE="${PROTOTYPE_DIR}/public/assets/japanese-options-v001/clean-plate-alpha-edge.png"
+RUNTIME_PLATE_OPAQUE="$(identify -format '%[opaque]' "${RUNTIME_PLATE}")"
+if [[ "${RUNTIME_PLATE_OPAQUE,,}" != "false" ]]; then
+  printf 'visual-check: FAIL runtime clean plate must have a transparent donor perimeter\n' >&2
+  exit 1
+fi
 
 MINIMIZED="${PROTOTYPE_DIR}/public/assets/japanese-options-v001/components/minimized-plate.png"
 MINIMIZED_CHANGED_PIXELS="$(compare -metric AE "${REFERENCE}[180x18+0+0]" "${MINIMIZED}" null: 2>&1 || true)"

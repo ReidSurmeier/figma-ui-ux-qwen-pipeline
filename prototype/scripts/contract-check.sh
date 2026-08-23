@@ -91,6 +91,12 @@ info_alpha_difference="$(compare -metric AE \
 rg -q 'font-family: "DotGothic16"' "${RUNTIME_STYLES}"
 [[ "$(sha256sum "${PROTOTYPE_DIR}/public/fonts/DotGothic16-Regular.ttf" | cut -d' ' -f1)" == "155da8f318553c11d9dffc2affbc7c2114c6a46f9740bcf639ed5568af92be71" ]]
 [[ "$(sha256sum "${PROTOTYPE_DIR}/public/assets/japanese-options-v001/clean-plate.png" | cut -d' ' -f1)" == "$(jq -r '.qwen.clean_plate.sha256' "${MANIFEST}")" ]]
+[[ "$(identify -format '%wx%h:%[opaque]' "${PROTOTYPE_DIR}/public/assets/japanese-options-v001/clean-plate-alpha-edge.png" | tr '[:upper:]' '[:lower:]')" == "280x122:false" ]]
+[[ "$(convert "${PROTOTYPE_DIR}/public/assets/japanese-options-v001/clean-plate-alpha-edge.png" -alpha extract -crop 1x1+0+0 -format '%[fx:mean]' info:)" == "0" ]]
+awk -v alpha="$(convert "${PROTOTYPE_DIR}/public/assets/japanese-options-v001/clean-plate-alpha-edge.png" -alpha extract -crop 1x1+140+2 -format '%[fx:mean]' info:)" 'BEGIN { exit !(alpha > 0.9) }'
+pink_count="$(convert "${PROTOTYPE_DIR}/public/assets/japanese-options-v001/clean-plate-alpha-edge.png" -alpha set -fx '(a>0.1&&r>0.35&&b>0.35&&g<0.48&&(r-g)>0.12&&(b-g)>0.12)?1:0' -format '%[fx:mean*w*h]' info:)"
+awk -v count="$pink_count" 'BEGIN { exit !(count < 0.5) }'
+rg -q 'clip-path: polygon\(5px 0' "${RUNTIME_STYLES}"
 [[ "$(sha256sum "${ASSET_DIR}/minimized-plate.png" | cut -d' ' -f1)" == "$(jq -r '.promoted_asset.sha256' "${MINIMIZED_PROVENANCE}")" ]]
 [[ "$(identify -format '%wx%h' "${ASSET_DIR}/minimized-plate.png")" == "180x18" ]]
 for transparent_asset in checkbox-off.png checkbox-on.png footer-checkbox-off.png footer-checkbox-on.png on-label.png slider-thumb.png title-text.png; do

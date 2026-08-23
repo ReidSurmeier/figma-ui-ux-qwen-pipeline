@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "window_id": "status",
+  "overall": "pass",
+  "evidence": [
+    "artifacts/qa/status-default-v001.png",
+    "artifacts/qa/japanese-rpg-v001-full-desktop-status-v001.png",
+    "artifacts/qa/status/figma-default-v001.png",
+    "artifacts/runs/japanese-status-components-v001-contact-sheet.png",
+    "prototype/e2e/status-source.spec.ts",
+    "prototype/e2e/full-desktop.spec.ts",
+    "prototype/scripts/status-contract.sh",
+    "prototype/scripts/figma-status-live-check.sh"
+  ],
+  "results": [
+    { "prompt_id": "no-reference-underlay", "verdict": "pass", "note": "Runtime source and resource requests exclude the Status reference crop." },
+    { "prompt_id": "independent-elements", "verdict": "pass", "note": "Seventeen editable raster groups separate title chrome, side tabs, and twelve stat rows from the Qwen clean plate." },
+    { "prompt_id": "preserve-japanese-source-style", "verdict": "pass", "note": "The Japanese title and all screenshot-inferable default copy remain source-locked raster components." },
+    { "prompt_id": "no-pink-donor-pixels", "verdict": "pass", "note": "The plate and every visible component contain zero opaque forbidden pink pixels." },
+    { "prompt_id": "checkbox-anchor-and-dead-pixel", "verdict": "not-applicable", "note": "Status contains no checkbox control." },
+    { "prompt_id": "checkbox-label-overlap", "verdict": "not-applicable", "note": "Status contains no on-label checkbox pair." },
+    { "prompt_id": "title-placement-and-white-box", "verdict": "pass", "note": "Title icon and Japanese title are independent transparent assets anchored at source coordinates." },
+    { "prompt_id": "generated-minimize-endpoint", "verdict": "pass", "note": "Minimize switches to the selected Qwen compact chrome endpoint and removes all expanded-body nodes." },
+    { "prompt_id": "tab-hit-mapping", "verdict": "pass", "note": "Stats and info hotspots own separate non-overlapping halves and switch to their own stable content." },
+    { "prompt_id": "slider-full-endpoint-and-grey-block", "verdict": "not-applicable", "note": "Status contains no slider." },
+    { "prompt_id": "continuous-motion-not-four-frames", "verdict": "not-applicable", "note": "Status contains no continuously valued control." },
+    { "prompt_id": "settled-button-effects", "verdict": "pass", "note": "Every stat increment, tab, minimize, restore, and close control survives the dead-control inventory; increment rows retain visible selected feedback." },
+    { "prompt_id": "drag-cutoff-and-z-order", "verdict": "pass", "note": "The shared source-window shell clamps expanded and compact geometry inside the 849 by 564 host and participates in desktop z-order." },
+    { "prompt_id": "text-overlap-and-pixel-aesthetic", "verdict": "pass", "note": "Default visible copy is source raster; inferred Info content uses the locked Japanese pixel-font contract inside a bounded panel." },
+    { "prompt_id": "figma-link-and-page-parity", "verdict": "pass", "note": "Live MCP readback proves 17 independent rasters, five stat feedback states, bounded Stats and Info mapping, close actions, and Qwen minimize and restore links. Figma and browser screenshots differ by normalized MAE 0.0073." },
+    { "prompt_id": "complete-user-flow-not-screenshot-only", "verdict": "pass", "note": "The browser exercises stats, tabs, minimize, restore, close, drag, z-order, and hit ownership rather than validating a screenshot alone." }
+  ],
+  "promoted_regressions": [
+    "global Qwen cleanup with readable OCR residue must be rejected",
+    "low-confidence OCR hallucinations from empty grid lines do not reject a visibly empty donor",
+    "opaque magenta rejects a candidate even when OCR is empty",
+    "every stat increment produces stable visible and semantic feedback"
+  ]
+}

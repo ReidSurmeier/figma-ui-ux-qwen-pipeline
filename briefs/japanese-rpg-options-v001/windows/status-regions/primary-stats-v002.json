@@ -1,0 +1,54 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "objective": "Render the empty semantic target in Reference image 2 with the exact source style and coordinates from Reference image 1. Erase every source label, value, digit, arrow, and icon. Reference 2 controls what remains; Reference 1 controls only palette, pixel texture, and border character.",
+  "reference_role": "Reference image 1 is the original Status-window region and is style authority only. Reference image 2 is the mandatory empty geometry target. Never transcribe semantic foreground from Reference 1; render Reference 2 as a source-matched late-1990s raster surface.",
+  "preservation_invariants": [
+    "Keep the exact crop dimensions, pixel density, palette, row geometry, one-pixel separators, borders, and highlights.",
+    "Preserve the six white row surfaces, thin grey row lines, column wells, and outer panel edges.",
+    "All surviving non-semantic pixels must remain at their original coordinates.",
+    "Reference image 2 locks the empty row and column geometry; keep it empty."
+  ],
+  "canvas": [
+    "Return this crop only, never the complete game screenshot or magenta desktop.",
+    "Render at exactly 540*648 pixels for point reduction back to 90 by 108.",
+    "Continue the nearest white, pale-grey, or pale-blue panel surface through every erased foreground pixel."
+  ],
+  "regions": [
+    {
+      "name": "primary-stats",
+      "change": "Completely remove Str Agi Vit Int Dex Luk, every value, plus sign, bonus value, blue arrow disc, and trailing point value. Leave no readable text, pseudo-text, numbers, arrows, icons, glyph fragments, shadows, or selection tint.",
+      "preserve": [
+        "the six white row surfaces, thin grey row lines, column wells, and outer panel edges",
+        "row and column boundaries",
+        "source-scale raster character"
+      ]
+    }
+  ],
+  "exact_copy": [],
+  "style": [
+    "Exact late-1990s Japanese PC RPG raster UI inpainting",
+    "empty source-matched panel donor"
+  ],
+  "asset_rules": [
+    "No semantic foreground may remain.",
+    "No replacement labels, controls, icons, decoration, or invented panels."
+  ],
+  "negative_constraints": [
+    "No readable or gibberish text, digits, arrows, buttons, blue selection, magenta, neighboring windows, smoothing, modern UI, rounded cards, or soft shadows.",
+    "Do not copy or redraw any text, digits, labels, values, plus signs, arrows, or icons from Reference image 1."
+  ],
+  "quality_checks": [
+    "OCR at source scale returns no labels or values.",
+    "The donor aligns with the source crop boundaries and can be composited without a seam.",
+    "Only empty local panel and chrome surfaces remain.",
+    "The output is semantically identical to the empty Reference 2 guide and stylistically matched to Reference 1."
+  ],
+  "output": {
+    "size": "540*648",
+    "aspect_ratio": "source",
+    "resolution": "1K",
+    "count": 1,
+    "seed": 22083202
+  }
+}

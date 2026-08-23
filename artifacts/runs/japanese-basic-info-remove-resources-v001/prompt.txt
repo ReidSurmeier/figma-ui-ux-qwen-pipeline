@@ -1,0 +1,34 @@
+[TASK]
+Edit the exact Japanese 基本情報 window reference. Remove only SakumaRiri, Acolyte, HP, SP, both numeric value strings, and both complete resource meters including tracks, fills, and thumbs. Reconstruct the uninterrupted white body beneath them. Preserve every other source element exactly.
+
+[REFERENCE ROLE]
+Reference image 1 is the immutable 280 by 120 source crop and fixes every coordinate and unchanged pixel.
+
+[PRESERVATION INVARIANTS]
+- Do not alter the title, right button grid, level panel, footer, borders, palette, or crop.
+- Keep the late-1990s low-resolution raster style and exact source proportions.
+- Local removal only, not redesign.
+
+[CANVAS AND LAYOUT]
+- Return the same complete crop at 1120 by 480 pixels with no added margin.
+- Only the main body region x=5..201, y=19..63 may change; outside it is Exact Copy.
+
+[REGION EDITS]
+- REGION: identity and resource rows
+  CHANGE: Remove all identity/resource glyphs and both meter controls. Continue only the plain white body surface.
+  PRESERVE: body edges; level panel below; right button grid
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese PC RPG raster UI
+- hard pixel-scale edges and pale blue-grey chrome
+
+[ASSET RULES]
+- No text, number, meter, fill, track, thumb, ghost glyph, pseudo-control, or magenta desktop in the changed region.
+
+[NEGATIVE CONSTRAINTS]
+- No redesign, new text, smoothing, scale change, layout change, or full-window reinterpretation.
+
+[QUALITY GATE]
+- Identity and both resource rows are absent.
+- Exposed white surface is continuous.
+- Unrelated regions remain aligned.

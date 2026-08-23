@@ -64,6 +64,8 @@ def compile_edit_brief(
     invariants = brief.get("preservation_invariants", [])
     exact_copy = brief.get("exact_copy", [])
     regions = brief.get("regions", [])
+    if not isinstance(exact_copy, list) or any(not isinstance(item, Mapping) for item in exact_copy):
+        raise ValueError("exact_copy entries must be objects with region and text fields")
     sections = [
         ("TASK", [str(brief.get("objective", "")).strip()]),
         ("REFERENCE ROLE", [str(brief.get("reference_role", "")).strip()]),

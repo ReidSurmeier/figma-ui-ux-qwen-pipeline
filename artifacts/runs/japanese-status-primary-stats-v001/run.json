@@ -1,0 +1,24 @@
+{
+  "status": "rejected",
+  "evaluation": { "verdict": "reject", "reasons": ["semantic-text-residue"] },
+  "outputs": [
+    {
+      "bytes": 302226,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "105c67102cbe2bcba570d756a1f6ab5e5bd7c4e3060f100399271763593e9006"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "6d707488-543a-9fef-9a6d-0e557914863c",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 648,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 540
+  }
+}

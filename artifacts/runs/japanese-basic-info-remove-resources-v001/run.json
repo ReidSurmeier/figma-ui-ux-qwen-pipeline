@@ -1,0 +1,24 @@
+{
+  "status": "selected-local-donor",
+  "selection": { "candidate": "image-01.png", "region_source_bounds": [5, 19, 197, 45], "reason": "Identity, HP/SP copy, and resource meters are absent; the exposed main-body panel is coherent. Only the declared local region may enter assembly." },
+  "outputs": [
+    {
+      "bytes": 456852,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "b89d82498e244db17f83cea7df8c1ee0e2ffbcc7dd9b6dccb8e657de3644d392"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "44cb9732-1875-9e94-9646-a9e69c08cb62",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 480,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

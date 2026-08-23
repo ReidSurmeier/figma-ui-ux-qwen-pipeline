@@ -11,9 +11,14 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:visual": "bash scripts/visual-check.sh",
-    "test:contracts": "bash scripts/contract-check.sh",
-    "test:figma-live": "bash scripts/figma-live-check.sh",
-    "test:all": "npm test && npm run build && npm run test:contracts && npm run test:e2e && npm run test:visual",
+    "test:visual:source": "bash scripts/source-visual-check.sh",
+    "capture:component-manifest": "node scripts/capture-component-manifest.mjs",
+    "prepare:figma-assets": "node scripts/prepare-figma-assets.mjs",
+    "prepare:figma-build": "node ../scripts/generate_figma_japanese_desktop_v001_build.mjs",
+    "qa:promote": "node scripts/write-correction-replay.mjs",
+    "test:contracts": "bash scripts/contract-check.sh && bash scripts/basic-info-contract.sh && bash scripts/status-contract.sh && bash scripts/inventory-contract.sh && bash scripts/remaining-window-contract.sh",
+    "test:figma-live": "bash scripts/figma-live-check.sh && bash scripts/figma-basic-info-live-check.sh && bash scripts/figma-status-live-check.sh && bash scripts/figma-desktop-live-check.sh",
+    "test:all": "npm test && npm run build && npm run test:contracts && npm run test:e2e && npm run test:visual && npm run test:visual:source",
     "test:all:live": "npm run test:all && npm run test:figma-live"
   },
   "dependencies": {

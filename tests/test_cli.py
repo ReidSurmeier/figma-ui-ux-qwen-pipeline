@@ -1,4 +1,6 @@
 import json
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -7,6 +9,21 @@ from qwen_ui_pipeline.cli import main
 
 
 class RecordComfyRunTests(unittest.TestCase):
+    def test_module_invocation_executes_the_cli(self):
+        with tempfile.TemporaryDirectory() as directory:
+            brief_path = Path(directory) / "brief.json"
+            brief_path.write_text(json.dumps({"objective": "Remove the foreground."}), encoding="utf-8")
+
+            result = subprocess.run(
+                [sys.executable, "-m", "qwen_ui_pipeline.cli", "compile", str(brief_path)],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+
+            self.assertIn("[TASK]", result.stdout)
+            self.assertIn("Remove the foreground.", result.stdout)
+
     def test_writes_an_exact_component_extraction_workflow(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

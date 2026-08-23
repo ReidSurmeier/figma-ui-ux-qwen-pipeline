@@ -1,0 +1,34 @@
+[TASK]
+Edit the exact Japanese 基本情報 window reference. Remove only the left title icon, Japanese 基本情報 title glyphs, and the single right title-bar button. Continue the original blue title-bar gradient and one-pixel chrome beneath them. Preserve the body and every other source element exactly.
+
+[REFERENCE ROLE]
+Reference image 1 is the immutable 280 by 120 source crop and fixes the title-bar silhouette, gradient, geometry, and unchanged pixels.
+
+[PRESERVATION INVARIANTS]
+- Do not alter title-bar height, outer corners, borders, body, meters, buttons, levels, footer, palette, or crop.
+- Keep the low-resolution source raster style and exact proportions.
+- Local foreground removal only.
+
+[CANVAS AND LAYOUT]
+- Return the same complete crop at 1120 by 480 pixels with no margin.
+- Only x=3..52, y=3..14 and x=268..276, y=3..14 may change; outside these regions is Exact Copy.
+
+[REGION EDITS]
+- REGION: title foreground
+  CHANGE: Remove icon, Japanese title glyphs, and right title button; continue the same local blue gradient and hard one-pixel rules.
+  PRESERVE: title bar silhouette; gradient; outer frame; body
+
+[STYLE SYSTEM]
+- Exact source-matched Japanese PC RPG raster UI
+- hard pixel-scale title chrome
+
+[ASSET RULES]
+- No glyph, icon, button remnant, ghost, white box, replacement text, or magenta desktop in the edited regions.
+
+[NEGATIVE CONSTRAINTS]
+- No redesign, smoothing, added controls, new title, changed gradient, changed crop, or full-window redraw.
+
+[QUALITY GATE]
+- Title foreground is absent.
+- Gradient is continuous with no rectangular patch.
+- Body and frame remain aligned.

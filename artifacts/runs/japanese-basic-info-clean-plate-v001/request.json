@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nCreate a clean plate from the exact 280 by 120 Japanese RPG basic-information window crop. Remove all foreground text, meters, values, labels, page buttons, title glyphs, and title-bar buttons while reconstructing only the surfaces exposed beneath them. Preserve the window shell and every source geometry. This is component isolation, not redesign.\n\n[REFERENCE ROLE]\nReference image 1 is the authoritative Japanese \u57fa\u672c\u60c5\u5831 window crop. It fixes the exact canvas, title bar, pale blue and white panel surfaces, one-pixel bevels, separators, late-1990s raster texture, and all source coordinates.\n\n[PRESERVATION INVARIANTS]\n- Keep the exact 280 by 120 composition, outer silhouette, title-bar height, title-bar gradient, corner geometry, body partitions, thin borders, highlights, shadows, and footer band.\n- Keep the original low-resolution Japanese PC-game raster style, limited grey-blue palette, hard pixel-scale edges, and source-scale line weights.\n- Do not move, scale, crop, warp, modernize, smooth, relight, or invent any surface.\n\n[CANVAS AND LAYOUT]\n- Return only the same window crop with no surrounding magenta desktop or neighboring windows.\n- Render at exactly 1120 by 480 pixels, four times the source dimensions, for deterministic reduction to 280 by 120.\n- Fill each removal from the nearest continuous local title gradient, white body panel, pale meter panel, button panel, or footer surface.\n\n[REGION EDITS]\n- REGION: title foreground\n  CHANGE: Remove the title icon, Japanese \u57fa\u672c\u60c5\u5831 title glyphs, and right title-bar button. Continue the original blue title gradient and one-pixel chrome beneath them.\n  PRESERVE: title bar silhouette; gradient; top and bottom rules\n- REGION: identity and resource rows\n  CHANGE: Remove SakumaRiri, Acolyte, HP, SP, all numeric values, both complete meter foregrounds and slider thumbs. Reconstruct their uninterrupted local white and pale panel surfaces.\n  PRESERVE: body divisions; row spacing; unoccupied surface colors\n- REGION: right page button grid\n  CHANGE: Remove the complete eight-button grid including every button face and English label. Reconstruct the flat panel beneath it without pseudo-buttons.\n  PRESERVE: window right edge; body background\n- REGION: level and footer foreground\n  CHANGE: Remove Base Lv., Job Lv., the numbers, both blue progress fills and tracks, Weight, Zeny, and all footer numbers and punctuation. Reconstruct the pale level panel and footer band with their existing separators.\n  PRESERVE: level panel silhouette; footer band height; horizontal separators\n\n[STYLE SYSTEM]\n- Authentic source-matched late-1990s Japanese desktop RPG interface.\n- Crisp pixel-scale pale blue-grey chrome, hard one-pixel rules, restrained dithering, and no contemporary styling.\n- An empty background plate only.\n\n[ASSET RULES]\n- Exactly one empty \u57fa\u672c\u60c5\u5831 window plate and no surrounding application screenshot.\n- No readable or pseudo-readable text, letters, numbers, meter fills, thumbs, icons, button faces, or button labels may remain.\n- Do not add decoration, replacement controls, panels, characters, logos, or content.\n\n[NEGATIVE CONSTRAINTS]\n- No magenta background, neighboring window fragments, modern cards, rounded corners, glass, soft shadows, antialiased redesign, gibberish text, ghost glyphs, duplicated controls, or new icons.\n- No full game screenshot and no crop border borrowed from the magenta desktop.\n\n[QUALITY GATE]\n- At source size the window silhouette, title geometry, body partitions, footer height, and palette align with the reference.\n- All foreground semantics are absent and newly exposed surfaces remain locally plausible.\n- The clean plate can sit beneath independently movable source-locked components without revealing a duplicate."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 2,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22082621,
+    "size": "1120*480",
+    "watermark": false
+  }
+}

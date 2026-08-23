@@ -22,6 +22,18 @@ function darkPixelCount(path: string, crop: string) {
   }).trim());
 }
 
+function pinkDominantPixelCount(path: string, crop: string) {
+  return Number(execFileSync("convert", [
+    path,
+    "-crop", crop,
+    "+repage",
+    "-alpha", "off",
+    "-fx", "(r>0.58&&b>0.58&&g<0.7&&(r-g)>0.15&&(b-g)>0.15)?1:0",
+    "-format", "%[fx:mean*w*h]",
+    "info:",
+  ], { encoding: "utf8" }).trim());
+}
+
 function normalizedMae(actualPath: string, expectedPath: string, crop: string) {
   const result = execFileSync("bash", ["-lc", `compare -metric MAE '${expectedPath}[${crop}]' '${actualPath}[${crop}]' null: 2>&1 || true`], {
     encoding: "utf8",
@@ -39,7 +51,7 @@ function absoluteErrorPixels(actualPath: string, expectedPath: string, expectedC
 }
 
 test("checkbox state changes preserve the visible source anchor without stray pixels", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const evidenceDir = mkdtempSync(join(tmpdir(), "japanese-options-checkbox-"));
   try {
@@ -78,7 +90,7 @@ test("checkbox state changes preserve the visible source anchor without stray pi
 });
 
 test("bottom checkbox states never paint a dead pixel above their visible boxes", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const evidenceDir = mkdtempSync(join(tmpdir(), "japanese-options-footer-checkbox-"));
   try {
@@ -106,7 +118,7 @@ test("bottom checkbox states never paint a dead pixel above their visible boxes"
 });
 
 test("volume checkboxes leave the source gap before a complete on label", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const evidenceDir = mkdtempSync(join(tmpdir(), "japanese-options-on-label-"));
   try {
@@ -124,7 +136,7 @@ test("volume checkboxes leave the source gap before a complete on label", async 
 });
 
 test("slider thumbs reach both source track endpoints without native inset", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const panel = page.getByRole("region", { name: "オプション" });
   const slider = page.getByRole("slider", { name: "BGM" });
@@ -146,7 +158,7 @@ test("slider thumbs reach both source track endpoints without native inset", asy
 });
 
 test("the editable Japanese title has no rectangular boundary seam", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const evidenceDir = mkdtempSync(join(tmpdir(), "japanese-options-title-"));
   try {
@@ -162,8 +174,27 @@ test("the editable Japanese title has no rectangular boundary seam", async ({ pa
   }
 });
 
+test("the options window does not carry desktop pink pixels on its outer edge", async ({ page }) => {
+  await page.goto("/?view=options");
+
+  const evidenceDir = mkdtempSync(join(tmpdir(), "japanese-options-edge-"));
+  try {
+    const screenshot = join(evidenceDir, "window.png");
+    await page.getByRole("region", { name: "オプション" }).screenshot({ path: screenshot });
+    const contaminated = [
+      "280x3+0+0",
+      "280x3+0+119",
+      "3x116+0+3",
+      "3x116+277+3",
+    ].reduce((total, crop) => total + pinkDominantPixelCount(screenshot, crop), 0);
+    expect(contaminated).toBe(0);
+  } finally {
+    rmSync(evidenceDir, { recursive: true, force: true });
+  }
+});
+
 test("an arrow button has a visible pointer-down state", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const increment = page.getByRole("button", { name: "BGMを上げる" });
   const box = await increment.boundingBox();
@@ -179,7 +210,7 @@ test("an arrow button has a visible pointer-down state", async ({ page }) => {
 });
 
 test("a window button has a visible pointer-down state before it acts", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const minimize = page.getByRole("button", { name: "最小化" });
   const box = await minimize.boundingBox();
@@ -197,7 +228,7 @@ test("a window button has a visible pointer-down state before it acts", async ({
 });
 
 test("a tab has a visible pointer-down state before selection changes", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const info = page.getByRole("tab", { name: "info" });
   const box = await info.boundingBox();
@@ -215,7 +246,7 @@ test("a tab has a visible pointer-down state before selection changes", async ({
 });
 
 test("the Skin button has a visible pointer-down state before its menu opens", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const skin = page.getByRole("combobox", { name: "Skin" });
   const box = await skin.boundingBox();
@@ -233,7 +264,7 @@ test("the Skin button has a visible pointer-down state before its menu opens", a
 });
 
 test("dragging keeps the complete window inside the interaction viewport", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const panel = page.getByRole("region", { name: "オプション" });
   const titleBar = page.locator(".title-bar");
@@ -265,7 +296,7 @@ test("dragging keeps the complete window inside the interaction viewport", async
 });
 
 test("inferred Japanese text uses the shared pixel-font contract", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   await page.evaluate(() => document.fonts.load('11px "DotGothic16"'));
   const dotGothicAvailable = await page.evaluate(() => document.fonts.check('11px "DotGothic16"'));
@@ -281,7 +312,7 @@ test("inferred Japanese text uses the shared pixel-font contract", async ({ page
 });
 
 test("the Skin control stays on its source pixel geometry regardless of font metrics", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const panel = page.getByRole("region", { name: "オプション" });
   const skin = page.getByRole("combobox", { name: "Skin" });
@@ -297,7 +328,7 @@ test("the Skin control stays on its source pixel geometry regardless of font met
 });
 
 test("minimize transitions to a generated compact state instead of cropping the full window", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const panel = page.getByRole("region", { name: "オプション" });
   const minimize = page.getByRole("button", { name: "最小化" });
@@ -340,7 +371,7 @@ test("minimize transitions to a generated compact state instead of cropping the 
 });
 
 test("the source-locked header title stays aligned while moving and minimizing", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const panel = page.getByRole("region", { name: "オプション" });
   const title = page.locator(".title-bar h1");
@@ -373,7 +404,7 @@ test("the source-locked header title stays aligned while moving and minimizing",
 });
 
 test("Japanese dropdown and info text stay inside their pixel-layout regions", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const skin = page.getByRole("combobox", { name: "Skin" });
   await skin.click();
@@ -438,7 +469,7 @@ test("Japanese dropdown and info text stay inside their pixel-layout regions", a
 });
 
 test("the Japanese Options window supports the complete first-test flow", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const panel = page.getByRole("region", { name: "オプション" });
   await expect(panel).toBeVisible();
@@ -498,7 +529,7 @@ test("the Japanese Options window supports the complete first-test flow", async 
 });
 
 test("the selected info tab keeps visible source-matched chrome", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const infoTab = page.getByRole("tab", { name: "info" });
   await infoTab.click();
@@ -511,7 +542,7 @@ test("the selected info tab keeps visible source-matched chrome", async ({ page 
 });
 
 test("tab selection transfers visible state feedback to the selected tab", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const optionTab = page.getByRole("tab", { name: "option" });
   const infoTab = page.getByRole("tab", { name: "info" });
@@ -527,7 +558,7 @@ test("tab selection transfers visible state feedback to the selected tab", async
 });
 
 test("option and info pixels map to non-overlapping tab hit regions", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const panel = page.getByRole("region", { name: "オプション" });
   const optionTab = page.getByRole("tab", { name: "option" });
@@ -558,7 +589,7 @@ test("option and info pixels map to non-overlapping tab hit regions", async ({ p
 });
 
 test("the Skin dropdown opens a source-themed application-owned menu", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const skin = page.getByRole("combobox", { name: "Skin" });
   await skin.click();
@@ -580,7 +611,7 @@ test("the Skin dropdown opens a source-themed application-owned menu", async ({ 
 });
 
 test("the Skin dropdown supports keyboard selection and Escape", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const skin = page.getByRole("combobox", { name: "Skin" });
   await skin.focus();
@@ -600,13 +631,13 @@ test("the prototype loads without browser console errors", async ({ page }) => {
     if (message.type() === "error") errors.push(`${message.location().url}: ${message.text()}`);
   });
 
-  await page.goto("/");
+  await page.goto("/?view=options");
   await expect(page.getByRole("region", { name: "オプション" })).toBeVisible();
   expect(errors).toEqual([]);
 });
 
 test("user selections survive tab visits and minimize restore", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?view=options");
 
   const skin = page.getByRole("combobox", { name: "Skin" });
   await skin.click();

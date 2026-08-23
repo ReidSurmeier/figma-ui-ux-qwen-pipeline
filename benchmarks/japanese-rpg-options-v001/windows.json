@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "source": "reference.png",
+  "canvas": { "width": 849, "height": 564 },
+  "windows": [
+    { "id": "basic-info", "title": "基本情報", "bounds": [0, 0, 280, 120], "status": "verified" },
+    { "id": "card", "title": "ソルジャースケルトンカード", "bounds": [285, 0, 280, 150], "status": "reconstruction" },
+    { "id": "skills", "title": "スキルリスト", "bounds": [568, 0, 281, 184], "status": "reconstruction" },
+    { "id": "status", "title": "ステータス", "bounds": [0, 120, 280, 126], "status": "reconstruction" },
+    { "id": "inventory", "title": "所持アイテム", "bounds": [0, 247, 280, 137], "status": "reconstruction" },
+    { "id": "equipment", "title": "装備アイテム", "bounds": [0, 385, 280, 152], "status": "reconstruction" },
+    { "id": "options", "title": "オプション", "bounds": [345, 182, 280, 122], "status": "verified" },
+    { "id": "chat", "title": "チャットルーム", "bounds": [285, 279, 280, 120], "status": "reconstruction", "occluded_by": ["options"] },
+    { "id": "exchange", "title": "交換ウィンドウ: ANRI", "bounds": [285, 399, 280, 120], "status": "reconstruction" },
+    { "id": "game-menu", "title": "ゲームメニュー", "bounds": [626, 182, 222, 133], "status": "reconstruction", "occluded_by": ["skills"] },
+    { "id": "compact-info", "title": "簡易情報", "bounds": [568, 314, 281, 35], "status": "reconstruction" },
+    { "id": "party", "title": "パーティー (Riri-Soft)", "bounds": [568, 349, 210, 154], "status": "reconstruction", "shape": "160-wide party panel plus three source action buttons" },
+    { "id": "quickbar", "title": "クイックスロット", "bounds": [736, 430, 112, 94], "status": "reconstruction" },
+    { "id": "bottom-bar", "title": "クイックスロットバー", "bounds": [0, 538, 600, 21], "status": "reconstruction" },
+    { "id": "notification", "title": "通知", "bounds": [604, 523, 245, 41], "status": "reconstruction" }
+  ]
+}

@@ -1,0 +1,1289 @@
+{
+  "schemaVersion": "1.0",
+  "assets": [
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/clean-plate.png",
+      "uploadName": "basic-info--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
+      "uploadName": "basic-info--title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/title-text.png",
+      "uploadName": "basic-info--title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/window-button.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/window-button.png",
+      "uploadName": "basic-info--window-button.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--window-button.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/player-name.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/player-name.png",
+      "uploadName": "basic-info--player-name.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--player-name.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/player-class.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/player-class.png",
+      "uploadName": "basic-info--player-class.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--player-class.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/hp-label.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/hp-label.png",
+      "uploadName": "basic-info--hp-label.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--hp-label.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/sp-label.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/sp-label.png",
+      "uploadName": "basic-info--sp-label.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--sp-label.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/hp-value.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/hp-value.png",
+      "uploadName": "basic-info--hp-value.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--hp-value.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/sp-value.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/sp-value.png",
+      "uploadName": "basic-info--sp-value.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--sp-value.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/meter-track.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/meter-track.png",
+      "uploadName": "basic-info--hp-track.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--hp-track.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/hp-thumb.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/hp-thumb.png",
+      "uploadName": "basic-info--hp-thumb.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--hp-thumb.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/sp-thumb.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/sp-thumb.png",
+      "uploadName": "basic-info--sp-thumb.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--sp-thumb.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/base-label.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/base-label.png",
+      "uploadName": "basic-info--base-label.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--base-label.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/base-progress.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/base-progress.png",
+      "uploadName": "basic-info--base-progress.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--base-progress.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/job-label.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/job-label.png",
+      "uploadName": "basic-info--job-label.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--job-label.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/job-progress.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/job-progress.png",
+      "uploadName": "basic-info--job-progress.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--job-progress.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/components/footer-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/components/footer-text.png",
+      "uploadName": "basic-info--footer-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--footer-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/clean-plate.png",
+      "uploadName": "card--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/title-icon.png",
+      "uploadName": "card--card-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/title-text.png",
+      "uploadName": "card--card-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/close.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/close.png",
+      "uploadName": "card--card-close.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-close.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/art.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/art.png",
+      "uploadName": "card--card-art.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-art.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/copy-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/copy-0.png",
+      "uploadName": "card--card-copy-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-copy-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/copy-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/copy-1.png",
+      "uploadName": "card--card-copy-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-copy-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/copy-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/copy-2.png",
+      "uploadName": "card--card-copy-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-copy-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/copy-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/copy-3.png",
+      "uploadName": "card--card-copy-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-copy-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/checkbox.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/checkbox.png",
+      "uploadName": "card--card-checkbox-source.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-checkbox-source.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/scrollbar.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/scrollbar.png",
+      "uploadName": "card--card-scrollbar.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-scrollbar.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/bottom-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/bottom-icon.png",
+      "uploadName": "card--card-bottom-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-bottom-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/components/bottom-slot.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/components/bottom-slot.png",
+      "uploadName": "card--card-bottom-slot.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--card-bottom-slot.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/clean-plate.png",
+      "uploadName": "skills--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/title-icon.png",
+      "uploadName": "skills--skills-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/title-text.png",
+      "uploadName": "skills--skills-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/close.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/close.png",
+      "uploadName": "skills--skills-close.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-close.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/icon-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/icon-0.png",
+      "uploadName": "skills--skill-icon-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-icon-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/copy-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/copy-0.png",
+      "uploadName": "skills--skill-copy-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-copy-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/icon-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/icon-1.png",
+      "uploadName": "skills--skill-icon-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-icon-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/copy-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/copy-1.png",
+      "uploadName": "skills--skill-copy-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-copy-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/icon-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/icon-2.png",
+      "uploadName": "skills--skill-icon-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-icon-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/copy-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/copy-2.png",
+      "uploadName": "skills--skill-copy-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-copy-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/icon-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/icon-3.png",
+      "uploadName": "skills--skill-icon-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-icon-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/copy-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/copy-3.png",
+      "uploadName": "skills--skill-copy-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-copy-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/level-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/level-0.png",
+      "uploadName": "skills--skill-level-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-level-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/level-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/level-1.png",
+      "uploadName": "skills--skill-level-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-level-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/level-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/level-2.png",
+      "uploadName": "skills--skill-level-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-level-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/level-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/level-3.png",
+      "uploadName": "skills--skill-level-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skill-level-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/scrollbar.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/scrollbar.png",
+      "uploadName": "skills--skills-scrollbar.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-scrollbar.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/points.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/points.png",
+      "uploadName": "skills--skills-points.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-points.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/use.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/use.png",
+      "uploadName": "skills--skills-use.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-use.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/close-action.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/close-action.png",
+      "uploadName": "skills--skills-close-action.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-close-action.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/skills/components/resize-grip.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/skills/components/resize-grip.png",
+      "uploadName": "skills--skills-resize.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/skills--skills-resize.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/clean-plate.png",
+      "uploadName": "status--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/title-icon.png",
+      "uploadName": "status--status-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/title-text.png",
+      "uploadName": "status--status-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/minimize.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/minimize.png",
+      "uploadName": "status--status-minimize.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-minimize.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/close.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/close.png",
+      "uploadName": "status--status-close.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-close.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/side-tabs.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/side-tabs.png",
+      "uploadName": "status--status-side-tabs.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-side-tabs.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/primary-row-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/primary-row-0.png",
+      "uploadName": "status--status-primary-row-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-primary-row-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+      "uploadName": "status--status-derived-row-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-derived-row-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/primary-row-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/primary-row-1.png",
+      "uploadName": "status--status-primary-row-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-primary-row-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+      "uploadName": "status--status-derived-row-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-derived-row-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/primary-row-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/primary-row-2.png",
+      "uploadName": "status--status-primary-row-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-primary-row-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+      "uploadName": "status--status-derived-row-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-derived-row-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/primary-row-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/primary-row-3.png",
+      "uploadName": "status--status-primary-row-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-primary-row-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/derived-row-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/derived-row-3.png",
+      "uploadName": "status--status-derived-row-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-derived-row-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/primary-row-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/primary-row-4.png",
+      "uploadName": "status--status-primary-row-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-primary-row-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+      "uploadName": "status--status-derived-row-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-derived-row-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/primary-row-5.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/primary-row-5.png",
+      "uploadName": "status--status-primary-row-5.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-primary-row-5.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+      "uploadName": "status--status-derived-row-5.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--status-derived-row-5.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/clean-plate.png",
+      "uploadName": "inventory--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/title-icon.png",
+      "uploadName": "inventory--inventory-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/title-text.png",
+      "uploadName": "inventory--inventory-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/minimize.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/minimize.png",
+      "uploadName": "inventory--inventory-minimize.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-minimize.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/close.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/close.png",
+      "uploadName": "inventory--inventory-close.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-close.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/tab-item.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/tab-item.png",
+      "uploadName": "inventory--inventory-tab-item.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-tab-item.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/tab-equip.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/tab-equip.png",
+      "uploadName": "inventory--inventory-tab-equip.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-tab-equip.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/tab-etc.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/tab-etc.png",
+      "uploadName": "inventory--inventory-tab-etc.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-tab-etc.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-0-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-0-0.png",
+      "uploadName": "inventory--inventory-cell-0-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-0-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-0-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-0-1.png",
+      "uploadName": "inventory--inventory-cell-0-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-0-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-0-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-0-2.png",
+      "uploadName": "inventory--inventory-cell-0-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-0-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-0-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-0-3.png",
+      "uploadName": "inventory--inventory-cell-0-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-0-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-0-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-0-4.png",
+      "uploadName": "inventory--inventory-cell-0-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-0-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-0-5.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-0-5.png",
+      "uploadName": "inventory--inventory-cell-0-5.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-0-5.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-0-6.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-0-6.png",
+      "uploadName": "inventory--inventory-cell-0-6.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-0-6.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-1-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-1-0.png",
+      "uploadName": "inventory--inventory-cell-1-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-1-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-1-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-1-1.png",
+      "uploadName": "inventory--inventory-cell-1-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-1-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-1-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-1-2.png",
+      "uploadName": "inventory--inventory-cell-1-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-1-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-1-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-1-3.png",
+      "uploadName": "inventory--inventory-cell-1-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-1-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-1-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-1-4.png",
+      "uploadName": "inventory--inventory-cell-1-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-1-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-1-5.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-1-5.png",
+      "uploadName": "inventory--inventory-cell-1-5.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-1-5.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-1-6.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-1-6.png",
+      "uploadName": "inventory--inventory-cell-1-6.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-1-6.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-2-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-2-0.png",
+      "uploadName": "inventory--inventory-cell-2-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-2-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-2-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-2-1.png",
+      "uploadName": "inventory--inventory-cell-2-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-2-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-2-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-2-2.png",
+      "uploadName": "inventory--inventory-cell-2-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-2-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-2-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-2-3.png",
+      "uploadName": "inventory--inventory-cell-2-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-2-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-2-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-2-4.png",
+      "uploadName": "inventory--inventory-cell-2-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-2-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-2-5.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-2-5.png",
+      "uploadName": "inventory--inventory-cell-2-5.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-2-5.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/cell-2-6.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/cell-2-6.png",
+      "uploadName": "inventory--inventory-cell-2-6.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-cell-2-6.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/scroll-up.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/scroll-up.png",
+      "uploadName": "inventory--inventory-scroll-up.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-scroll-up.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/scroll-track.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/scroll-track.png",
+      "uploadName": "inventory--inventory-scroll-track.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-scroll-track.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/scroll-thumb.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/scroll-thumb.png",
+      "uploadName": "inventory--inventory-scroll-thumb.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-scroll-thumb.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/scroll-down.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/scroll-down.png",
+      "uploadName": "inventory--inventory-scroll-down.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-scroll-down.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/components/resize-grip.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/components/resize-grip.png",
+      "uploadName": "inventory--inventory-resize-grip.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--inventory-resize-grip.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/clean-plate.png",
+      "uploadName": "equipment--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/title-icon.png",
+      "uploadName": "equipment--equipment-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/title-text.png",
+      "uploadName": "equipment--equipment-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/minimize.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/minimize.png",
+      "uploadName": "equipment--equipment-minimize.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-minimize.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/close.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/close.png",
+      "uploadName": "equipment--equipment-close.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-close.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/left-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/left-0.png",
+      "uploadName": "equipment--equipment-left-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-left-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/left-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/left-1.png",
+      "uploadName": "equipment--equipment-left-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-left-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/left-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/left-2.png",
+      "uploadName": "equipment--equipment-left-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-left-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/left-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/left-3.png",
+      "uploadName": "equipment--equipment-left-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-left-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/left-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/left-4.png",
+      "uploadName": "equipment--equipment-left-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-left-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/right-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/right-0.png",
+      "uploadName": "equipment--equipment-right-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-right-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/right-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/right-1.png",
+      "uploadName": "equipment--equipment-right-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-right-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/right-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/right-2.png",
+      "uploadName": "equipment--equipment-right-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-right-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/right-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/right-3.png",
+      "uploadName": "equipment--equipment-right-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-right-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/right-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/right-4.png",
+      "uploadName": "equipment--equipment-right-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-right-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/components/avatar.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/components/avatar.png",
+      "uploadName": "equipment--equipment-avatar.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--equipment-avatar.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/clean-plate.png",
+      "uploadName": "chat--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/title-icon.png",
+      "uploadName": "chat--chat-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/title-text.png",
+      "uploadName": "chat--chat-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/topic-label.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/topic-label.png",
+      "uploadName": "chat--chat-topic-label.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-topic-label.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/topic-field.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/topic-field.png",
+      "uploadName": "chat--chat-topic-field.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-topic-field.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/people.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/people.png",
+      "uploadName": "chat--chat-people.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-people.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/room.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/room.png",
+      "uploadName": "chat--chat-room.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-room.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/security.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/security.png",
+      "uploadName": "chat--chat-security.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-security.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/password.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/password.png",
+      "uploadName": "chat--chat-password.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-password.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/ok.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/ok.png",
+      "uploadName": "chat--chat-ok.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-ok.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/chat/components/cancel.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/chat/components/cancel.png",
+      "uploadName": "chat--chat-cancel.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/chat--chat-cancel.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/clean-plate.png",
+      "uploadName": "exchange--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/title-icon.png",
+      "uploadName": "exchange--exchange-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/title-text.png",
+      "uploadName": "exchange--exchange-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-0.png",
+      "uploadName": "exchange--exchange-item-0-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-1.png",
+      "uploadName": "exchange--exchange-item-0-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-2.png",
+      "uploadName": "exchange--exchange-item-0-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-3.png",
+      "uploadName": "exchange--exchange-item-0-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-4.png",
+      "uploadName": "exchange--exchange-item-0-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-5.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-5.png",
+      "uploadName": "exchange--exchange-item-0-5.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-5.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-6.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-6.png",
+      "uploadName": "exchange--exchange-item-0-6.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-6.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-0-7.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-0-7.png",
+      "uploadName": "exchange--exchange-item-0-7.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-0-7.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-0.png",
+      "uploadName": "exchange--exchange-item-1-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-1.png",
+      "uploadName": "exchange--exchange-item-1-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-2.png",
+      "uploadName": "exchange--exchange-item-1-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-3.png",
+      "uploadName": "exchange--exchange-item-1-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-4.png",
+      "uploadName": "exchange--exchange-item-1-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-5.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-5.png",
+      "uploadName": "exchange--exchange-item-1-5.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-5.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-6.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-6.png",
+      "uploadName": "exchange--exchange-item-1-6.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-6.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/item-1-7.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/item-1-7.png",
+      "uploadName": "exchange--exchange-item-1-7.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-item-1-7.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/summary.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/summary.png",
+      "uploadName": "exchange--exchange-summary.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-summary.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/ok.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/ok.png",
+      "uploadName": "exchange--exchange-ok.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-ok.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/trade.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/trade.png",
+      "uploadName": "exchange--exchange-trade.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-trade.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/components/cancel.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/components/cancel.png",
+      "uploadName": "exchange--exchange-cancel.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--exchange-cancel.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/game-menu/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/game-menu/clean-plate.png",
+      "uploadName": "game-menu--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/game-menu--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/game-menu/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/game-menu/components/title-icon.png",
+      "uploadName": "game-menu--game-menu-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/game-menu--game-menu-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/game-menu/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/game-menu/components/title-text.png",
+      "uploadName": "game-menu--game-menu-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/game-menu--game-menu-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/game-menu/components/action-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/game-menu/components/action-0.png",
+      "uploadName": "game-menu--game-menu-action-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/game-menu--game-menu-action-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/game-menu/components/action-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/game-menu/components/action-1.png",
+      "uploadName": "game-menu--game-menu-action-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/game-menu--game-menu-action-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/game-menu/components/action-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/game-menu/components/action-2.png",
+      "uploadName": "game-menu--game-menu-action-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/game-menu--game-menu-action-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/game-menu/components/action-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/game-menu/components/action-3.png",
+      "uploadName": "game-menu--game-menu-action-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/game-menu--game-menu-action-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/clean-plate.png",
+      "uploadName": "party--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/title-icon.png",
+      "uploadName": "party--party-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/title-text.png",
+      "uploadName": "party--party-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/close.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/close.png",
+      "uploadName": "party--party-close.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-close.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/member-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/member-0.png",
+      "uploadName": "party--party-member-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-member-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/member-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/member-1.png",
+      "uploadName": "party--party-member-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-member-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/member-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/member-2.png",
+      "uploadName": "party--party-member-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-member-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/member-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/member-3.png",
+      "uploadName": "party--party-member-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-member-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/member-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/member-4.png",
+      "uploadName": "party--party-member-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-member-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/action-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/action-0.png",
+      "uploadName": "party--party-action-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-action-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/action-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/action-1.png",
+      "uploadName": "party--party-action-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-action-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/action-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/action-2.png",
+      "uploadName": "party--party-action-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-action-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/tool-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/tool-0.png",
+      "uploadName": "party--party-tool-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-tool-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/tool-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/tool-1.png",
+      "uploadName": "party--party-tool-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-tool-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/tool-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/tool-2.png",
+      "uploadName": "party--party-tool-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-tool-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/tool-3.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/tool-3.png",
+      "uploadName": "party--party-tool-3.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-tool-3.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/tool-4.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/tool-4.png",
+      "uploadName": "party--party-tool-4.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-tool-4.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/friends.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/friends.png",
+      "uploadName": "party--party-friends.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-friends.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/party/components/party-tab.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/party/components/party-tab.png",
+      "uploadName": "party--party-party-tab.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/party--party-party-tab.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/quickbar/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/quickbar/clean-plate.png",
+      "uploadName": "quickbar--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/quickbar--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/quickbar/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/quickbar/components/title-icon.png",
+      "uploadName": "quickbar--quickbar-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/quickbar--quickbar-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/quickbar/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/quickbar/components/title-text.png",
+      "uploadName": "quickbar--quickbar-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/quickbar--quickbar-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/quickbar/components/slot-0.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/quickbar/components/slot-0.png",
+      "uploadName": "quickbar--quickbar-slot-0.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/quickbar--quickbar-slot-0.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/quickbar/components/slot-1.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/quickbar/components/slot-1.png",
+      "uploadName": "quickbar--quickbar-slot-1.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/quickbar--quickbar-slot-1.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/quickbar/components/slot-2.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/quickbar/components/slot-2.png",
+      "uploadName": "quickbar--quickbar-slot-2.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/quickbar--quickbar-slot-2.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/compact-info/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/compact-info/clean-plate.png",
+      "uploadName": "compact-info--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/compact-info--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/compact-info/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/compact-info/components/title-icon.png",
+      "uploadName": "compact-info--compact-info-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/compact-info--compact-info-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/compact-info/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/compact-info/components/title-text.png",
+      "uploadName": "compact-info--compact-info-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/compact-info--compact-info-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/compact-info/components/levels.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/compact-info/components/levels.png",
+      "uploadName": "compact-info--compact-levels.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/compact-info--compact-levels.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/compact-info/components/hp.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/compact-info/components/hp.png",
+      "uploadName": "compact-info--compact-hp.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/compact-info--compact-hp.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/compact-info/components/sp.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/compact-info/components/sp.png",
+      "uploadName": "compact-info--compact-sp.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/compact-info--compact-sp.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/bottom-bar/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/bottom-bar/clean-plate.png",
+      "uploadName": "bottom-bar--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/bottom-bar--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/bottom-bar/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/bottom-bar/components/title-icon.png",
+      "uploadName": "bottom-bar--bottom-bar-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/bottom-bar--bottom-bar-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/bottom-bar/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/bottom-bar/components/title-text.png",
+      "uploadName": "bottom-bar--bottom-bar-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/bottom-bar--bottom-bar-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/bottom-bar/components/rail.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/bottom-bar/components/rail.png",
+      "uploadName": "bottom-bar--bottom-bar-rail.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/bottom-bar--bottom-bar-rail.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/bottom-bar/components/thumb.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/bottom-bar/components/thumb.png",
+      "uploadName": "bottom-bar--bottom-bar-thumb.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/bottom-bar--bottom-bar-thumb.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/bottom-bar/components/previous.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/bottom-bar/components/previous.png",
+      "uploadName": "bottom-bar--bottom-bar-previous.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/bottom-bar--bottom-bar-previous.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/bottom-bar/components/next.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/bottom-bar/components/next.png",
+      "uploadName": "bottom-bar--bottom-bar-next.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/bottom-bar--bottom-bar-next.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/notification/clean-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/notification/clean-plate.png",
+      "uploadName": "notification--clean-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/notification--clean-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/notification/components/title-icon.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/notification/components/title-icon.png",
+      "uploadName": "notification--notification-title-icon.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/notification--notification-title-icon.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/notification/components/title-text.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/notification/components/title-text.png",
+      "uploadName": "notification--notification-title-text.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/notification--notification-title-text.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/notification/components/bubble.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/notification/components/bubble.png",
+      "uploadName": "notification--notification-bubble.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/notification--notification-bubble.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/notification/components/upper.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/notification/components/upper.png",
+      "uploadName": "notification--notification-upper.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/notification--notification-upper.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/notification/components/lower.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/notification/components/lower.png",
+      "uploadName": "notification--notification-lower.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/notification--notification-lower.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
+      "uploadName": "basic-info--minimized-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/basic-info--minimized-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/card/minimized-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/card/minimized-plate.png",
+      "uploadName": "card--minimized-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/card--minimized-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/status/minimized-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/status/minimized-plate.png",
+      "uploadName": "status--minimized-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/status--minimized-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/inventory/minimized-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/inventory/minimized-plate.png",
+      "uploadName": "inventory--minimized-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/inventory--minimized-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/equipment/minimized-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/equipment/minimized-plate.png",
+      "uploadName": "equipment--minimized-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/equipment--minimized-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-rpg-v001/exchange/minimized-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-rpg-v001/exchange/minimized-plate.png",
+      "uploadName": "exchange--minimized-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/exchange--minimized-plate.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-options-v001/clean-plate-alpha-edge.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-options-v001/clean-plate-alpha-edge.png",
+      "uploadName": "options--clean-plate-alpha-edge.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/options--clean-plate-alpha-edge.png"
+    },
+    {
+      "sourceUrl": "/assets/japanese-options-v001/components/minimized-plate.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/public/assets/japanese-options-v001/components/minimized-plate.png",
+      "uploadName": "options--minimized-plate.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/options--minimized-plate.png"
+    },
+    {
+      "sourceUrl": "artifacts/qa/source-visuals/full.png",
+      "sourcePath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/qa/source-visuals/full.png",
+      "uploadName": "runtime--full-reference.png",
+      "uploadPath": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/artifacts/figma-upload-v001/runtime--full-reference.png"
+    }
+  ]
+}

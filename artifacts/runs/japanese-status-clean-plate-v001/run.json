@@ -1,0 +1,28 @@
+{
+  "status": "rejected",
+  "evaluation": {
+    "verdict": "reject",
+    "reasons": ["semantic-text-residue"],
+    "note": "The global pass removed the title foreground but retained the complete stat table. It is provenance only and must not be assembled."
+  },
+  "outputs": [
+    {
+      "bytes": 492902,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "65f9479a4cd978e9f619f7a2263320694d6923c92f93a6541f48362178cbd19d"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "d87550e9-f731-9f98-a290-485171664761",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 504,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

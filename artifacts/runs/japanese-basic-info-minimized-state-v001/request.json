@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nCreate a coherent minimized-state chrome donor for the exact Japanese \u57fa\u672c\u60c5\u5831 window. Recompose the 280 by 120 window into a compact 180 by 18 title bar at the top-left. It must be a newly resolved late-1990s Japanese game-window endpoint, never a crop of the expanded window.\n\n[REFERENCE ROLE]\nReference image 1 is the authoritative 280 by 120 \u57fa\u672c\u60c5\u5831 window and fixes the pixel density, dark and pale blue title gradient, one-pixel chrome, and source raster character.\n\n[PRESERVATION INVARIANTS]\n- Keep source pixel scale, palette family, hard aliased edges, and one-pixel line weights.\n- The minimized bar occupies source-scale x=0..179, y=0..17 and has complete left, top, right, and bottom chrome.\n- Do not retain, crop, squash, or ghost any identity, meter, value, page button, level, footer, or body pixel.\n- Do not include title glyphs, title icon, or title button; those remain separate editable elements.\n\n[CANVAS AND LAYOUT]\n- Return an 1120 by 480 output canvas, four times the 280 by 120 reference.\n- Place the four-times minimized donor at x=0 y=0 with source-scale size 180 by 18; fill all other pixels with a flat neutral white review field.\n- Resolve a new compact right endcap at x=179.\n\n[REGION EDITS]\n- REGION: minimized basic-information chrome\n  CHANGE: Remove the complete body and recompose only the empty title chrome as a compact 180 by 18 bar with a continuous source-matched blue gradient and a complete right endcap.\n  PRESERVE: top-left chrome; title palette; hard pixel-scale edges\n\n[STYLE SYSTEM]\n- Authentic source-matched Japanese late-1990s desktop RPG raster UI\n- crisp low-resolution blue-grey title chrome\n\n[ASSET RULES]\n- Exactly one empty 180 by 18 minimized surface at top-left.\n- No title text, pseudo-text, icon, button, body, control, or extra window.\n\n[NEGATIVE CONSTRAINTS]\n- No simple crop, clipped body, squeezed expanded window, open right edge, modern rounded card, soft shadow, glass, gibberish, or magenta desktop background.\n\n[QUALITY GATE]\n- The compact bar has four complete edges and a continuous empty title surface.\n- No expanded-body content survives.\n- The endpoint reads as regenerated chrome rather than a crop."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 2,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22082626,
+    "size": "1120*480",
+    "watermark": false
+  }
+}

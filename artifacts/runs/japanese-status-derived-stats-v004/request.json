@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nRender the exact empty 180 by 108 six-row table guide in Reference image 1 as a finished pale white late-1990s Japanese RPG panel. Keep every row empty and keep the complete canvas filled by the table surface.\n\n[REFERENCE ROLE]\nReference image 1 is the only authority. Preserve its complete 180 by 108 white table surface, six-row geometry, one-pixel dividers, and empty content.\n\n[PRESERVATION INVARIANTS]\n- Keep the exact 180 by 108 canvas.\n- The panel fills the complete canvas from left edge to right edge.\n- Keep six empty white rows and their hard one-pixel separators.\n\n[CANVAS AND LAYOUT]\n- Return this crop only, never the complete game screenshot or magenta desktop.\n- Render at exactly 720*432 pixels for point reduction back to 180 by 108.\n- Continue the nearest white, pale-grey, or pale-blue panel surface through every erased foreground pixel.\n\n[REGION EDITS]\n- REGION: derived-stats\n  CHANGE: Completely remove Atk Def Matk Mdef Hit Flee Critical Aspd Status Point Guild and every number punctuation and value. Leave no readable text, pseudo-text, numbers, arrows, icons, glyph fragments, shadows, or selection tint.\n  PRESERVE: the two derived-stat columns, white row surfaces, thin grey separators, right edge, and lower rule; row and column boundaries; source-scale raster character\n\n[STYLE SYSTEM]\n- Exact late-1990s Japanese PC RPG raster UI inpainting\n- empty source-matched panel donor\n\n[ASSET RULES]\n- No semantic foreground may remain.\n- No replacement labels, controls, icons, decoration, or invented panels.\n\n[NEGATIVE CONSTRAINTS]\n- No text, digits, labels, values, arrows, icons, selection, neighboring content, smoothing, rounded cards, gradients, or soft shadows.\n- No outside field or margin; the table surface reaches all four crop edges.\n\n[QUALITY GATE]\n- OCR at source scale returns no labels or values.\n- The donor aligns with the source crop boundaries and can be composited without a seam.\n- Only empty local panel and chrome surfaces remain.\n- The output is semantically identical to the empty Reference 2 guide and stylistically matched to Reference 1."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 1,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083403,
+    "size": "720*432",
+    "watermark": false
+  }
+}

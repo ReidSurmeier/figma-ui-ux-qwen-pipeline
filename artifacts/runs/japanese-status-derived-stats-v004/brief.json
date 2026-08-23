@@ -1,0 +1,53 @@
+{
+  "asset_rules": [
+    "No semantic foreground may remain.",
+    "No replacement labels, controls, icons, decoration, or invented panels."
+  ],
+  "canvas": [
+    "Return this crop only, never the complete game screenshot or magenta desktop.",
+    "Render at exactly 720*432 pixels for point reduction back to 180 by 108.",
+    "Continue the nearest white, pale-grey, or pale-blue panel surface through every erased foreground pixel."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No text, digits, labels, values, arrows, icons, selection, neighboring content, smoothing, rounded cards, gradients, or soft shadows.",
+    "No outside field or margin; the table surface reaches all four crop edges."
+  ],
+  "objective": "Render the exact empty 180 by 108 six-row table guide in Reference image 1 as a finished pale white late-1990s Japanese RPG panel. Keep every row empty and keep the complete canvas filled by the table surface.",
+  "output": {
+    "aspect_ratio": "source",
+    "count": 1,
+    "resolution": "1K",
+    "seed": 22083403,
+    "size": "720*432"
+  },
+  "preservation_invariants": [
+    "Keep the exact 180 by 108 canvas.",
+    "The panel fills the complete canvas from left edge to right edge.",
+    "Keep six empty white rows and their hard one-pixel separators."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "OCR at source scale returns no labels or values.",
+    "The donor aligns with the source crop boundaries and can be composited without a seam.",
+    "Only empty local panel and chrome surfaces remain.",
+    "The output is semantically identical to the empty Reference 2 guide and stylistically matched to Reference 1."
+  ],
+  "reference_role": "Reference image 1 is the only authority. Preserve its complete 180 by 108 white table surface, six-row geometry, one-pixel dividers, and empty content.",
+  "regions": [
+    {
+      "change": "Completely remove Atk Def Matk Mdef Hit Flee Critical Aspd Status Point Guild and every number punctuation and value. Leave no readable text, pseudo-text, numbers, arrows, icons, glyph fragments, shadows, or selection tint.",
+      "name": "derived-stats",
+      "preserve": [
+        "the two derived-stat columns, white row surfaces, thin grey separators, right edge, and lower rule",
+        "row and column boundaries",
+        "source-scale raster character"
+      ]
+    }
+  ],
+  "style": [
+    "Exact late-1990s Japanese PC RPG raster UI inpainting",
+    "empty source-matched panel donor"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "asset_rules": [
+    "No button silhouette, label, ghost glyph, pseudo-text, replacement control, or magenta desktop in the changed region."
+  ],
+  "canvas": [
+    "Return the same complete 280 by 120 window crop at exactly 1120 by 480 pixels with no added margin.",
+    "The changed region is x=205..277, y=19..98 at source scale; outside it is Exact Copy."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No redesign, modern UI, smoothing, rounded cards, added text, new icon, changed scale, changed border, or whole-screen reinterpretation."
+  ],
+  "objective": "Edit the exact Japanese \u57fa\u672c\u60c5\u5831 window reference. Remove only the eight right-side page buttons and their English labels: status, option, items, equip, skill, map, chat, friend. Fill that rectangular right body region with the same uninterrupted white window-body surface. Preserve everything else exactly.",
+  "output": {
+    "aspect_ratio": "7:3",
+    "count": 1,
+    "resolution": "1K",
+    "seed": 22082622,
+    "size": "1120*480"
+  },
+  "preservation_invariants": [
+    "Do not alter the title bar, Japanese title, identity text, HP and SP rows, meters, level panel, footer, window border, palette, or crop.",
+    "Keep the source's late-1990s low-resolution raster styling and exact proportions.",
+    "This is a local object-removal pass, not a redraw."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "The eight buttons are absent.",
+    "The exposed white panel is continuous.",
+    "All unrelated source regions remain aligned."
+  ],
+  "reference_role": "Reference image 1 is the immutable 280 by 120 source crop and fixes every coordinate and all unchanged pixels.",
+  "regions": [
+    {
+      "change": "Remove all eight complete beveled buttons and every glyph inside them. Reconstruct only the continuous plain white body surface and preserve the right border.",
+      "name": "right page-button grid",
+      "preserve": [
+        "outer right frame",
+        "white body color",
+        "all pixels outside the declared region"
+      ]
+    }
+  ],
+  "style": [
+    "Exact source-matched Japanese PC RPG raster UI",
+    "hard pixel-scale edges and pale blue-grey chrome"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nErase every foreground mark from the exact Status-window derived-stats crop and return the same crop as an empty local surface donor. This is strict inpainting, not a redesign and not a transcription task.\n\n[REFERENCE ROLE]\nReference image 1 is the authoritative source crop. Its exact 180 by 108 canvas and all one-pixel panel boundaries are locked.\n\n[PRESERVATION INVARIANTS]\n- Keep the exact crop dimensions, pixel density, palette, row geometry, one-pixel separators, borders, and highlights.\n- Preserve the two derived-stat columns, white row surfaces, thin grey separators, right edge, and lower rule.\n- All surviving non-semantic pixels must remain at their original coordinates.\n\n[CANVAS AND LAYOUT]\n- Return this crop only, never the complete game screenshot or magenta desktop.\n- Render at exactly 720*432 pixels for point reduction back to 180 by 108.\n- Continue the nearest white, pale-grey, or pale-blue panel surface through every erased foreground pixel.\n\n[REGION EDITS]\n- REGION: derived-stats\n  CHANGE: Completely remove Atk Def Matk Mdef Hit Flee Critical Aspd Status Point Guild and every number punctuation and value. Leave no readable text, pseudo-text, numbers, arrows, icons, glyph fragments, shadows, or selection tint.\n  PRESERVE: the two derived-stat columns, white row surfaces, thin grey separators, right edge, and lower rule; row and column boundaries; source-scale raster character\n\n[STYLE SYSTEM]\n- Exact late-1990s Japanese PC RPG raster UI inpainting\n- empty source-matched panel donor\n\n[ASSET RULES]\n- No semantic foreground may remain.\n- No replacement labels, controls, icons, decoration, or invented panels.\n\n[NEGATIVE CONSTRAINTS]\n- No readable or gibberish text, digits, arrows, buttons, blue selection, magenta, neighboring windows, smoothing, modern UI, rounded cards, or soft shadows.\n\n[QUALITY GATE]\n- OCR at source scale returns no labels or values.\n- The donor aligns with the source crop boundaries and can be composited without a seam.\n- Only empty local panel and chrome surfaces remain."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 1,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083103,
+    "size": "720*432",
+    "watermark": false
+  }
+}

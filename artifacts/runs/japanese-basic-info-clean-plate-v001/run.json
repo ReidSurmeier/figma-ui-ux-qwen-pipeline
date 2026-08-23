@@ -1,0 +1,34 @@
+{
+  "status": "selected-local-donor",
+  "selection": {
+    "candidate": "image-01.png",
+    "region_source_bounds": [3, 2, 275, 15],
+    "reason": "Both candidates failed as whole clean plates, but image-01 removed the complete internal title foreground. Only x=3..277, y=2..16 is selected as a bounded local donor; magenta edges and all body pixels remain rejected."
+  },
+  "outputs": [
+    {
+      "bytes": 440620,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "9564372cf87dd597c90a05057b25ac65ac35287db6e073c08b3c21566a34eb70"
+    },
+    {
+      "bytes": 439140,
+      "file": "image-02.png",
+      "media_type": "image/png",
+      "sha256": "325765720905df47b5cc65fd042518a4658de1efac92102c73f6a458c2bda3b2"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "fb72eb38-49cd-9106-963c-d529e01721ad",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 480,
+    "output_image_count": 2,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "rejected",
+  "selection": { "candidate": null, "reason": "The candidate retained the Japanese title glyphs and title controls. Reconstruct the hidden gradient from adjacent source rows and keep this failed pass as evidence." },
+  "outputs": [
+    {
+      "bytes": 471203,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "81cade4f653202d525aeccbd951adcb10a50804a8832ad75b5c25a61a90ae3eb"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "2fdacdcc-f00b-9b9e-ad93-f2eb18f0d44d",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 480,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

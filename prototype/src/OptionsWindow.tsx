@@ -57,7 +57,13 @@ function FooterCheckbox({ name, checked, onCheckedChange }: { name: string; chec
   );
 }
 
-export function OptionsWindow() {
+type OptionsWindowProps = {
+  initialPosition?: { x: number; y: number };
+  zIndex?: number;
+  onActivate?: () => void;
+};
+
+export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActivate }: OptionsWindowProps = {}) {
   const [bgm, setBgm] = useState(62);
   const [effect, setEffect] = useState(43);
   const [bgmOn, setBgmOn] = useState(false);
@@ -69,7 +75,7 @@ export function OptionsWindow() {
   const [isMinimized, setIsMinimized] = useState(false);
   const [isBodyMounted, setIsBodyMounted] = useState(true);
   const [isOpen, setIsOpen] = useState(true);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState(initialPosition);
   const dragOrigin = useRef<{ pointerX: number; pointerY: number; panelX: number; panelY: number } | null>(null);
 
   if (!isOpen) return null;
@@ -77,8 +83,10 @@ export function OptionsWindow() {
   return (
     <section
       className={`options-window${isMinimized ? " options-window--minimized" : ""}${skinOpen ? " options-window--menu-open" : ""}`}
+      data-window-id="options"
       aria-label="オプション"
-      style={{ left: position.x, top: position.y }}
+      style={{ left: position.x, top: position.y, zIndex }}
+      onPointerDown={onActivate}
       onTransitionEnd={(event) => {
         if (event.target === event.currentTarget && event.propertyName === "height" && isMinimized) {
           setIsBodyMounted(false);
@@ -87,6 +95,7 @@ export function OptionsWindow() {
     >
       <header
         className="title-bar"
+        data-drag-handle
         onPointerDown={(event) => {
           if ((event.target as HTMLElement).closest("button")) return;
           event.currentTarget.setPointerCapture?.(event.pointerId);
@@ -101,10 +110,11 @@ export function OptionsWindow() {
           const hostRect = host.getBoundingClientRect();
           const proposedX = origin.panelX + event.clientX - origin.pointerX;
           const proposedY = origin.panelY + event.clientY - origin.pointerY;
-          const minX = -hostRect.left;
-          const minY = -hostRect.top;
-          const maxX = window.innerWidth - hostRect.left - panel.offsetWidth;
-          const maxY = window.innerHeight - hostRect.top - panel.offsetHeight;
+          const desktopHost = host.matches(".rpg-desktop");
+          const minX = desktopHost ? 0 : -hostRect.left;
+          const minY = desktopHost ? 0 : -hostRect.top;
+          const maxX = desktopHost ? hostRect.width - panel.offsetWidth : window.innerWidth - hostRect.left - panel.offsetWidth;
+          const maxY = desktopHost ? hostRect.height - panel.offsetHeight : window.innerHeight - hostRect.top - panel.offsetHeight;
           setPosition({
             x: Math.min(maxX, Math.max(minX, proposedX)),
             y: Math.min(maxY, Math.max(minY, proposedY)),

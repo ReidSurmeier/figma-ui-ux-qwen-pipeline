@@ -1,0 +1,56 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "objective": "Create an empty source-geometry clean plate for the exact Japanese RPG exchange window crop. Remove all semantic foreground while reconstructing only the surfaces exposed beneath it. This is component isolation, not redesign.",
+  "reference_role": "Reference image 1 is the authoritative 280 by 120 Japanese window crop titled 交換ウィンドウ: ANRI. It fixes canvas, chrome, pixel density, palette, one-pixel rules, and every visible coordinate.",
+  "preservation_invariants": [
+    "Keep the exact 280 by 120 source composition and outer silhouette.",
+    "Preserve the title bar, two six-slot item grids, central division, two summary bands, and three bottom action-button wells.",
+    "Keep the authentic late-1990s Japanese PC-game raster style, hard pixel-scale edges, limited blue-grey palette, one-pixel highlights and shadows, and source-scale line weights.",
+    "Do not move, scale, crop, warp, modernize, smooth, relight, or invent any surviving surface."
+  ],
+  "canvas": [
+    "Return only this window crop with no surrounding magenta desktop and no neighboring-window fragments.",
+    "Render at exactly 1120*480 pixels, 4 times source scale, for deterministic point reduction back to source dimensions.",
+    "Fill each removal from the nearest continuous title gradient, white body surface, pale panel, row background, border, or footer surface."
+  ],
+  "regions": [
+    {
+      "name": "all semantic foreground and foreign overlap",
+      "change": "Remove title icon and glyphs, window buttons, every item icon count and selection tint, send and get labels, all Zeny values, and OK trade and cancel buttons. Reconstruct the declared empty local panels and chrome beneath them without ghost text or pseudo-controls.",
+      "preserve": [
+        "the title bar, two six-slot item grids, central division, two summary bands, and three bottom action-button wells",
+        "outer window geometry",
+        "panel boundaries",
+        "one-pixel bevel hierarchy"
+      ]
+    }
+  ],
+  "exact_copy": [],
+  "style": [
+    "Authentic source-matched late-1990s Japanese desktop RPG raster UI.",
+    "Crisp source-scale pale blue-grey chrome, hard aliased rules, restrained dithering, and no contemporary styling.",
+    "An empty background plate only."
+  ],
+  "asset_rules": [
+    "Exactly one empty window plate and no surrounding application screenshot.",
+    "No readable or pseudo-readable text, numbers, foreground icons, item art, sprite art, meter fills, scrollbar thumbs, button faces, or labels may remain.",
+    "Do not add replacement content, decoration, characters, logos, or controls."
+  ],
+  "negative_constraints": [
+    "No magenta background, neighboring-window fragments, modern cards, rounded corners, glass, soft shadows, antialiased redesign, gibberish text, ghost glyphs, duplicated controls, or new icons.",
+    "No full game screenshot and no crop border borrowed from the magenta desktop."
+  ],
+  "quality_checks": [
+    "At source size the outer silhouette, title geometry, body partitions, row spacing, and palette align with the reference.",
+    "All foreground semantics are absent and newly exposed surfaces remain locally plausible.",
+    "The clean plate can sit beneath independent source-locked components without revealing a duplicate or occluder."
+  ],
+  "output": {
+    "size": "1120*480",
+    "aspect_ratio": "source",
+    "resolution": "1K",
+    "count": 1,
+    "seed": 22083400
+  }
+}

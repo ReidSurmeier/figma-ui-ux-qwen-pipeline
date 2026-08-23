@@ -11,7 +11,7 @@ export default defineConfig({
     launchOptions: {
       executablePath: "/usr/bin/google-chrome",
     },
-    viewport: { width: 560, height: 300 },
+    viewport: { width: 1024, height: 720 },
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
   },

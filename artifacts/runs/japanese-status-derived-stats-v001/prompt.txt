@@ -1,0 +1,36 @@
+[TASK]
+Erase every foreground mark from the exact Status-window derived-stats crop and return the same crop as an empty local surface donor. This is strict inpainting, not a redesign and not a transcription task.
+
+[REFERENCE ROLE]
+Reference image 1 is the authoritative source crop. Its exact 180 by 108 canvas and all one-pixel panel boundaries are locked.
+
+[PRESERVATION INVARIANTS]
+- Keep the exact crop dimensions, pixel density, palette, row geometry, one-pixel separators, borders, and highlights.
+- Preserve the two derived-stat columns, white row surfaces, thin grey separators, right edge, and lower rule.
+- All surviving non-semantic pixels must remain at their original coordinates.
+
+[CANVAS AND LAYOUT]
+- Return this crop only, never the complete game screenshot or magenta desktop.
+- Render at exactly 720*432 pixels for point reduction back to 180 by 108.
+- Continue the nearest white, pale-grey, or pale-blue panel surface through every erased foreground pixel.
+
+[REGION EDITS]
+- REGION: derived-stats
+  CHANGE: Completely remove Atk Def Matk Mdef Hit Flee Critical Aspd Status Point Guild and every number punctuation and value. Leave no readable text, pseudo-text, numbers, arrows, icons, glyph fragments, shadows, or selection tint.
+  PRESERVE: the two derived-stat columns, white row surfaces, thin grey separators, right edge, and lower rule; row and column boundaries; source-scale raster character
+
+[STYLE SYSTEM]
+- Exact late-1990s Japanese PC RPG raster UI inpainting
+- empty source-matched panel donor
+
+[ASSET RULES]
+- No semantic foreground may remain.
+- No replacement labels, controls, icons, decoration, or invented panels.
+
+[NEGATIVE CONSTRAINTS]
+- No readable or gibberish text, digits, arrows, buttons, blue selection, magenta, neighboring windows, smoothing, modern UI, rounded cards, or soft shadows.
+
+[QUALITY GATE]
+- OCR at source scale returns no labels or values.
+- The donor aligns with the source crop boundaries and can be composited without a seam.
+- Only empty local panel and chrome surfaces remain.

@@ -1,0 +1,17 @@
+{
+  "verdict": "reject",
+  "source_scale": {
+    "width": 640,
+    "height": 840
+  },
+  "ocr": {
+    "confident_alphanumeric_characters": 0,
+    "raw_alphanumeric_characters": 17,
+    "confident_text": "",
+    "raw_text": "@/i-F+4—-(Riri-Sot) Bl es Eee."
+  },
+  "opaque_magenta_pixels": 0,
+  "reasons": [
+    "low-confidence-semantic-text-residue"
+  ]
+}

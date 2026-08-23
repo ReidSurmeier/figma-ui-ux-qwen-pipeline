@@ -1,0 +1,65 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "objective": "Create a clean plate from the exact 280 by 120 Japanese RPG basic-information window crop. Remove all foreground text, meters, values, labels, page buttons, title glyphs, and title-bar buttons while reconstructing only the surfaces exposed beneath them. Preserve the window shell and every source geometry. This is component isolation, not redesign.",
+  "reference_role": "Reference image 1 is the authoritative Japanese 基本情報 window crop. It fixes the exact canvas, title bar, pale blue and white panel surfaces, one-pixel bevels, separators, late-1990s raster texture, and all source coordinates.",
+  "preservation_invariants": [
+    "Keep the exact 280 by 120 composition, outer silhouette, title-bar height, title-bar gradient, corner geometry, body partitions, thin borders, highlights, shadows, and footer band.",
+    "Keep the original low-resolution Japanese PC-game raster style, limited grey-blue palette, hard pixel-scale edges, and source-scale line weights.",
+    "Do not move, scale, crop, warp, modernize, smooth, relight, or invent any surface."
+  ],
+  "canvas": [
+    "Return only the same window crop with no surrounding magenta desktop or neighboring windows.",
+    "Render at exactly 1120 by 480 pixels, four times the source dimensions, for deterministic reduction to 280 by 120.",
+    "Fill each removal from the nearest continuous local title gradient, white body panel, pale meter panel, button panel, or footer surface."
+  ],
+  "regions": [
+    {
+      "name": "title foreground",
+      "change": "Remove the title icon, Japanese 基本情報 title glyphs, and right title-bar button. Continue the original blue title gradient and one-pixel chrome beneath them.",
+      "preserve": ["title bar silhouette", "gradient", "top and bottom rules"]
+    },
+    {
+      "name": "identity and resource rows",
+      "change": "Remove SakumaRiri, Acolyte, HP, SP, all numeric values, both complete meter foregrounds and slider thumbs. Reconstruct their uninterrupted local white and pale panel surfaces.",
+      "preserve": ["body divisions", "row spacing", "unoccupied surface colors"]
+    },
+    {
+      "name": "right page button grid",
+      "change": "Remove the complete eight-button grid including every button face and English label. Reconstruct the flat panel beneath it without pseudo-buttons.",
+      "preserve": ["window right edge", "body background"]
+    },
+    {
+      "name": "level and footer foreground",
+      "change": "Remove Base Lv., Job Lv., the numbers, both blue progress fills and tracks, Weight, Zeny, and all footer numbers and punctuation. Reconstruct the pale level panel and footer band with their existing separators.",
+      "preserve": ["level panel silhouette", "footer band height", "horizontal separators"]
+    }
+  ],
+  "exact_copy": [],
+  "style": [
+    "Authentic source-matched late-1990s Japanese desktop RPG interface.",
+    "Crisp pixel-scale pale blue-grey chrome, hard one-pixel rules, restrained dithering, and no contemporary styling.",
+    "An empty background plate only."
+  ],
+  "asset_rules": [
+    "Exactly one empty 基本情報 window plate and no surrounding application screenshot.",
+    "No readable or pseudo-readable text, letters, numbers, meter fills, thumbs, icons, button faces, or button labels may remain.",
+    "Do not add decoration, replacement controls, panels, characters, logos, or content."
+  ],
+  "negative_constraints": [
+    "No magenta background, neighboring window fragments, modern cards, rounded corners, glass, soft shadows, antialiased redesign, gibberish text, ghost glyphs, duplicated controls, or new icons.",
+    "No full game screenshot and no crop border borrowed from the magenta desktop."
+  ],
+  "quality_checks": [
+    "At source size the window silhouette, title geometry, body partitions, footer height, and palette align with the reference.",
+    "All foreground semantics are absent and newly exposed surfaces remain locally plausible.",
+    "The clean plate can sit beneath independently movable source-locked components without revealing a duplicate."
+  ],
+  "output": {
+    "size": "1120*480",
+    "aspect_ratio": "7:3",
+    "resolution": "1K",
+    "count": 2,
+    "seed": 22082621
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "verdict": "pass",
+  "source_scale": {
+    "width": 640,
+    "height": 840
+  },
+  "ocr": {
+    "confident_alphanumeric_characters": 1,
+    "raw_alphanumeric_characters": 1,
+    "confident_text": "I",
+    "raw_text": "I |"
+  },
+  "opaque_magenta_pixels": 0,
+  "reasons": []
+}

@@ -17,6 +17,8 @@ label, or visually implausible generated asset.
 
 ## Decision
 
+After a window passes deterministic gates, replay the accumulated human-correction prompts in `prototype/qa/correction-replay.json` against its local visual evidence and complete interaction trace. A credible exploratory finding must be minimized and promoted to a reproducible failing test before revision. A window cannot be marked verified until this correction replay is green.
+
 Use a layered QA system with one responsibility per layer:
 
 1. Validate manifests, stable IDs, required states, provenance, and source
@@ -74,6 +76,29 @@ Use a layered QA system with one responsibility per layer:
     behavior, render its native thumb transparent, and derive an independent
     visual thumb center from the declared source endpoints. Verify the minimum
     and maximum center coordinates and the thumb asset's negative space.
+19. Removing a donor background must be color- and region-specific. Never erase
+    the complete perimeter ring merely because it contains magenta: doing so
+    deletes the source's stepped rounded chrome. Assert transparent corner
+    steps, opaque border occupancy, and zero donor-magenta independently.
+20. A new human correction invalidates all applicable historical verification
+    reports. A window can return to `verified` only after its replay report
+    contains the new prompt ID and both browser and Figma evidence have been
+    refreshed.
+21. Compare every reconstructed window against its aligned source crop after
+    masking donor-magenta pixels, and compare the full 849 by 564 composition
+    separately. Whole-composition similarity cannot replace per-window gates;
+    per-window similarity cannot prove that no source UI surface was omitted.
+22. Treat donor-facing component rows as explicit negative-space contracts.
+    A source-relative comparison may deliberately mask the donor background and
+    therefore miss a visible seam that travels with an extracted control.
+    Known crop boundaries must independently assert zero alpha occupancy.
+23. Capture the runtime component manifest from the executable DOM and use it
+    to drive Figma geometry, raster naming, and hotspot coverage. Hand-copied
+    Figma coordinates are not a parity mechanism.
+24. Commit Figma prototype destinations before writing reactions that target
+    them. The remote transaction may reject or fail to resolve destinations
+    created in the same call; staged destination and reaction writes make the
+    graph reproducible and auditable.
 
 ## Consequences
 

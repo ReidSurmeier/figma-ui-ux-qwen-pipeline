@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "window_id": "options",
+  "overall": "pass",
+  "evidence": [
+    "prototype/e2e/options-window.spec.ts",
+    "prototype/scripts/contract-check.sh",
+    "prototype/scripts/visual-check.sh",
+    "prototype/scripts/figma-live-check.sh",
+    "benchmarks/japanese-rpg-options-v001/regions/options-window/figma-v004-readback.json"
+  ],
+  "results": [
+    { "prompt_id": "no-reference-underlay", "verdict": "pass", "note": "Runtime source and browser resource checks exclude the reference screenshot as a visible underlay." },
+    { "prompt_id": "independent-elements", "verdict": "pass", "note": "Title, tabs, arrows, tracks, thumbs, checkboxes, labels, dropdown, footer controls, and window buttons have separate runtime and Figma nodes." },
+    { "prompt_id": "preserve-japanese-source-style", "verdict": "pass", "note": "Source Japanese title and labels remain transparent source rasters; inferred menu text uses the locked DotGothic16 pixel-font contract." },
+    { "prompt_id": "no-pink-donor-pixels", "verdict": "pass", "note": "The executable Qwen plate derivative replaces only the three-pixel donor perimeter with alpha; edge tests and the visual gate reject returning magenta pixels." },
+    { "prompt_id": "checkbox-anchor-and-dead-pixel", "verdict": "pass", "note": "Checked and unchecked assets share the same 11x11 anchor and tests inspect the strip above every footer checkbox after state changes." },
+    { "prompt_id": "checkbox-label-overlap", "verdict": "pass", "note": "BGM and Effect checkboxes preserve the source gap before a complete independently positioned on label." },
+    { "prompt_id": "title-placement-and-white-box", "verdict": "pass", "note": "The title has exact source geometry and a transparent perimeter; the focused title-boundary MAE gate is green." },
+    { "prompt_id": "generated-minimize-endpoint", "verdict": "pass", "note": "The minimized state is a dedicated Qwen Image 3 Pro endpoint and differs from a crop by 3240 pixels." },
+    { "prompt_id": "tab-hit-mapping", "verdict": "pass", "note": "Option and Info visual assets and non-overlapping hotspots map to their own selected frames in browser and Figma." },
+    { "prompt_id": "slider-full-endpoint-and-grey-block", "verdict": "pass", "note": "Both source-delta thumbs reach exact track endpoints and exclude the old opaque grey donor block." },
+    { "prompt_id": "continuous-motion-not-four-frames", "verdict": "pass", "note": "The WSL executable uses step-one range inputs with continuous DOM motion, not a four-frame Figma animation." },
+    { "prompt_id": "settled-button-effects", "verdict": "pass", "note": "Pointer-down feedback, settled state changes, dropdown selection, checkbox changes, tabs, minimize, restore, and the complete flow are exercised." },
+    { "prompt_id": "drag-cutoff-and-z-order", "verdict": "pass", "note": "Drag containment keeps the full window recoverable; the menu-open state now removes descendant clipping without exposing the pink donor edge." },
+    { "prompt_id": "text-overlap-and-pixel-aesthetic", "verdict": "pass", "note": "Japanese menu and info text remain inside fixed pixel-layout regions and the full dropdown stays visually attached." },
+    { "prompt_id": "figma-link-and-page-parity", "verdict": "pass", "note": "Live MCP readback proves exact v004 anchors, tab destinations, minimize and restore reactions, asset hashes, and fonts." },
+    { "prompt_id": "complete-user-flow-not-screenshot-only", "verdict": "pass", "note": "All 34 browser flows pass; the correction replay specifically caught and promoted the previously unreachable third dropdown option." }
+  ],
+  "promoted_regressions": [
+    "dropdown options must own their center hit targets outside the source window bounds",
+    "the third dropdown option must remain clickable and close the list",
+    "the no-pink visual gate compares the source-authoritative interior and tests the replacement alpha perimeter separately"
+  ]
+}

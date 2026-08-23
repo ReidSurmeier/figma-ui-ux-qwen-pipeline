@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "bytes": 222174,
+      "media_type": "image/png",
+      "sha256": "e1b1e9148ad1c03324b295973622f63c46ef418fa5a3755cc1eb6de4ca2ecf26"
+    }
+  ],
+  "request_id": "502b139b-e05c-9280-917a-1b2d5df1c906",
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 432,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 720
+  }
+}

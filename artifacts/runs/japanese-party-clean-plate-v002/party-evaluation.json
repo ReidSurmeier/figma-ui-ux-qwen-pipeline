@@ -1,0 +1,9 @@
+{
+  "verdict": "reject",
+  "first_row_dark_pixels": 320,
+  "first_to_second_row_mae": 0.181188,
+  "reasons": [
+    "first-row-foreground-residue",
+    "selected-row-surface-residue"
+  ]
+}

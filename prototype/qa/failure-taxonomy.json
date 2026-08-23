@@ -1,0 +1,150 @@
+{
+  "schema_version": "1.0",
+  "source": "Observed Japanese Options and GolfStudio correction history through 2026-08-22",
+  "failures": [
+    {
+      "id": "reference-underlay",
+      "authority": "runtime",
+      "symptom": "A screenshot remains visible beneath transparent controls, so elements cannot be moved or reused independently.",
+      "detectors": ["source-import scan", "hide-every-editable-element screenshot", "runtime network request audit"],
+      "remediation": "Replace the screenshot with a Clean Plate and independent Editable Elements; fail if the reference is requested by runtime code.",
+      "acceptance_gate": "The completed runtime never loads the Reference Screen and remains coherent when any component is hidden or moved."
+    },
+    {
+      "id": "flattened-element",
+      "authority": "asset",
+      "symptom": "Several labels, controls, or states are baked into one raster object.",
+      "detectors": ["manifest coverage audit", "destructive hide-move-replace exercise", "Figma node inventory"],
+      "remediation": "Split the raster at semantic and state boundaries; keep shared alignment in a component root.",
+      "acceptance_gate": "Every declared element resolves to its own stable object and replacement path."
+    },
+    {
+      "id": "background-contamination",
+      "authority": "asset",
+      "symptom": "Pink desktop or neighboring surface pixels travel with a label, thumb, checkbox, or window.",
+      "detectors": ["forbidden-color edge-ring count", "alpha silhouette bounds", "move-over-contrast screenshot"],
+      "remediation": "Regenerate or difference-isolate the foreground against its Clean Plate; never accept a raw rectangular crop.",
+      "acceptance_gate": "The declared negative-space ring is transparent and moving the element reveals no donor background."
+    },
+    {
+      "id": "boundary-ring",
+      "authority": "asset",
+      "symptom": "The visible interior matches while a box seam, clipped glyph, or stray neighboring pixel remains at the perimeter.",
+      "detectors": ["one-to-three-pixel perimeter comparison", "clear-row and clear-column assertions", "alpha trim geometry"],
+      "remediation": "Widen the oracle beyond the opaque interior and re-isolate from the correct source origin.",
+      "acceptance_gate": "Interior, perimeter, and required clear rows and columns all satisfy their local contracts."
+    },
+    {
+      "id": "overcropped-window-edge",
+      "authority": "asset",
+      "symptom": "Removing donor pixels deletes the stepped rounded window chrome or replaces it with a hard rectangular edge.",
+      "detectors": ["corner alpha readback", "perimeter occupancy comparison", "high-zoom source and runtime corner crops"],
+      "remediation": "Remove only donor-colored pixels, retain non-donor border pixels, and reconstruct the source's stepped pixel corner mask.",
+      "acceptance_gate": "Every corner preserves the declared transparent steps and opaque source border without magenta contamination."
+    },
+    {
+      "id": "text-overlap",
+      "authority": "runtime",
+      "symptom": "Japanese text escapes its source region, overlaps a checkbox, or uses an incompatible smooth font.",
+      "detectors": ["Range bounding-box containment", "scrollWidth/clientWidth audit", "font readback", "OCR and dark-pixel footprint"],
+      "remediation": "Use source-locked raster Exact Copy where needed or the shared pixel font inside fixed source geometry.",
+      "acceptance_gate": "Every text range is contained, non-overlapping, verbatim Japanese, and uses its declared font authority."
+    },
+    {
+      "id": "hit-map-overlap",
+      "authority": "runtime",
+      "symptom": "A visible option pixel activates info, or overlapping artwork gives two controls ownership of the same coordinate.",
+      "detectors": ["adjacent boundary clicks", "elementFromPoint grid scan", "hit-region intersection audit"],
+      "remediation": "Separate non-interactive visual overlap from adjacent transparent input regions with one explicit boundary owner.",
+      "acceptance_gate": "Every interactive pixel maps to exactly one intended control and both sides of each boundary are tested."
+    },
+    {
+      "id": "slider-endpoint-inset",
+      "authority": "runtime",
+      "symptom": "A native range thumb stops short of the source track endpoint or carries a grey rectangular donor crop.",
+      "detectors": ["value-0/value-100 center geometry", "thumb alpha bounds", "native-thumb visibility readback"],
+      "remediation": "Keep the semantic range input but hide its browser thumb and derive an independent visual thumb from declared endpoints.",
+      "acceptance_gate": "The visual center equals both source endpoints and the source-delta thumb has transparent negative space."
+    },
+    {
+      "id": "insufficient-motion-samples",
+      "authority": "runtime",
+      "symptom": "A slider or minimize transition jumps through four frames and looks choppy.",
+      "detectors": ["distinct value or geometry sample count", "input event trace", "reversal and interruption replay"],
+      "remediation": "Implement continuous numeric behavior or a declared stepped-smooth duration rather than a raster-state slideshow.",
+      "acceptance_gate": "Continuous controls emit more than four values; transitions meet the declared sample and interruption contract."
+    },
+    {
+      "id": "cropped-generated-state",
+      "authority": "asset",
+      "symptom": "Minimize simply clips the existing UI instead of revealing a coherent newly generated surface.",
+      "detectors": ["endpoint difference from equivalent source crop", "provenance lookup", "hidden-content audit"],
+      "remediation": "Run a bounded Qwen Image 3 Pro endpoint Render Pass and keep its prompt, provider, seed, and selected output.",
+      "acceptance_gate": "The endpoint differs materially from a crop, has provenance, and contains no hidden body pixels."
+    },
+    {
+      "id": "dead-control",
+      "authority": "runtime",
+      "symptom": "A visible button, selector, checkbox, or menu can be pressed but has no observable settled effect.",
+      "detectors": ["enabled-control inventory", "gesture replay", "before/after application-state and screenshot signature"],
+      "remediation": "Add the missing Behavior Contract or explicitly disable and explain the control; never leave an enabled dead surface.",
+      "acceptance_gate": "Every enabled control has pointer-down feedback and a tested settled state transition."
+    },
+    {
+      "id": "drag-cutoff",
+      "authority": "runtime",
+      "symptom": "Dragging or minimizing moves content beyond the viewport or clips part of the window.",
+      "detectors": ["all-edge drag replay", "window/client intersection geometry", "motion-frame screenshot sampling"],
+      "remediation": "Constrain the complete window rectangle to its desktop host using current dimensions at every motion frame.",
+      "acceptance_gate": "Every window remains recoverable and its title controls stay reachable after extreme drags and state changes."
+    },
+    {
+      "id": "figma-coordinate-drift",
+      "authority": "figma",
+      "symptom": "Figma auto-layout repositions a newly appended hotspot or asset despite requested coordinates.",
+      "detectors": ["post-write root-relative readback", "layoutPositioning audit", "focused node screenshot"],
+      "remediation": "Set absolute layout positioning after reparenting, then write coordinates and read them back.",
+      "acceptance_gate": "Hosted node geometry equals the manifest after the final parent relationship is established."
+    },
+    {
+      "id": "runtime-figma-drift",
+      "authority": "cross-layer",
+      "symptom": "The browser works but Figma links differ, or Figma looks correct while continuous behavior is absent.",
+      "detectors": ["shared stable-ID manifest", "runtime screenshot versus Figma export", "separate reaction and browser-flow audits"],
+      "remediation": "Keep editable Design and Executable Prototype as separate authorities tied by versioned state and geometry contracts.",
+      "acceptance_gate": "Both audits pass independently and parity fields match; neither layer infers the other's verdict."
+    },
+    {
+      "id": "provider-model-drift",
+      "authority": "source",
+      "symptom": "A required Qwen pass silently falls back to another model or loses reference conditioning.",
+      "detectors": ["request artifact audit", "provider/model allowlist", "reference hash and prompt ID verification"],
+      "remediation": "Fail closed unless the model is qwen/qwen-image-3-pro and the approved provider/ref inputs are recorded.",
+      "acceptance_gate": "Every generative asset names the exact Qwen model, provider, reference hash, prompt, seed, and selection decision."
+    },
+    {
+      "id": "source-identity-drift",
+      "authority": "source",
+      "symptom": "A related board or worktree is mistaken for the authoritative Japanese screenshot.",
+      "detectors": ["file key and node ID check", "reference SHA-256", "workspace and conversation continuity audit"],
+      "remediation": "Resolve the immutable Reference Screen identity before any Render Pass or Figma write.",
+      "acceptance_gate": "All manifests and evidence resolve to the same approved file key, node ID, dimensions, and hash."
+    },
+    {
+      "id": "whole-image-drift",
+      "authority": "asset",
+      "symptom": "A full-frame Qwen revision improves one element while rewriting text, layout, or unrelated chrome.",
+      "detectors": ["outside-region absolute pixel difference", "Exact Copy OCR", "geometry anchors"],
+      "remediation": "Use one bounded Asset Pass per change and deterministic Assembly; reject whole-image feedback chaining.",
+      "acceptance_gate": "Unchanged regions have zero difference where required and every changed region is declared."
+    },
+    {
+      "id": "endpoint-only-testing",
+      "authority": "runtime",
+      "symptom": "Screenshots pass while pointer-down, animation, menu reachability, or complete user journeys fail.",
+      "detectors": ["idle/down/up/settled checkpoints", "critical user-flow replay", "console and overflow audit"],
+      "remediation": "Layer component tests, browser gestures, temporal sampling, visual regions, and exploratory scouting.",
+      "acceptance_gate": "Every critical flow is replayed through user inputs with retained failure traces and no console errors."
+    }
+  ]
+}

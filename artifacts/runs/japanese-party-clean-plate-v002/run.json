@@ -1,0 +1,22 @@
+{
+  "outputs": [
+    {
+      "bytes": 283370,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "3b03cbae8dbf0e8871d52b13fe8a3180aa492d91cfccd0314f4d7ce49d3a3ec3"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "14802a3a-c8ff-97a7-b6c6-18b3dd29383a",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 2,
+    "input_image_type": "qima_input_1k",
+    "output_height": 840,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 640
+  }
+}

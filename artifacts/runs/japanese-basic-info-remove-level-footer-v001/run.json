@@ -1,0 +1,24 @@
+{
+  "status": "selected-local-donor",
+  "selection": { "candidate": "image-01.png", "region_source_bounds": [[4, 68, 197, 29], [3, 101, 274, 17]], "reason": "Level and footer foreground are removed with coherent exposed panel surfaces. Only the declared local regions may enter assembly." },
+  "outputs": [
+    {
+      "bytes": 437534,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "d3f9677ba0f2fbc5bb1e2590416fd39ca6e41a5ac1ed1d698909a6d8a2a011c4"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "a1576b52-bd82-9bb4-a1d3-655deec5dd25",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 480,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

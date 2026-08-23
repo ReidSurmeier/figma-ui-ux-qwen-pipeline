@@ -1,0 +1,34 @@
+{
+  "status": "selected-region-assembly",
+  "selection": {
+    "candidate": "image-02.png",
+    "reason": "Candidate 2 contains a coherent title-only generated surface and complete right endcap but is wider than requested. Assemble source-scale x=0..175 plus its generated x=276..279 endcap into the exact 180 by 18 endpoint; exclude every pixel below y=17.",
+    "asset": "../../../prototype/public/assets/japanese-rpg-v001/basic-info/minimized-plate.png"
+  },
+  "outputs": [
+    {
+      "bytes": 238443,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "140076afcf170a4b36bec653f4d16a09898ffb13c6b84142dc7989f20bab370e"
+    },
+    {
+      "bytes": 110438,
+      "file": "image-02.png",
+      "media_type": "image/png",
+      "sha256": "8273b5485a297d49b05cd52627b5389a65fd0a453c2e0d8b77acde5e3f0a6c7d"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "733e6ac5-225e-95a9-8210-e56466247933",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 480,
+    "output_image_count": 2,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

@@ -215,3 +215,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     print(json.dumps({"output_directory": str(output_directory), **record}, indent=2))
     return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

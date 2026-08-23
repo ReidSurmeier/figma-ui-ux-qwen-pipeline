@@ -1,0 +1,24 @@
+{
+  "status": "selected-local-donor",
+  "evaluation": { "verdict": "pass", "source_scale": [90, 108], "ocr_confident_alphanumeric_characters": 0, "opaque_magenta_pixels": 0 },
+  "outputs": [
+    {
+      "bytes": 186355,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "354dfdda89a4964f9fa82bf75176a0f02bef0ed0fc1765d752d276f62a82ca66"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "91f13e02-a744-9ec5-9cd3-a439ea3ddbca",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 2,
+    "input_image_type": "qima_input_1k",
+    "output_height": 648,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 540
+  }
+}

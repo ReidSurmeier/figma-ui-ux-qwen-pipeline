@@ -1,0 +1,24 @@
+{
+  "status": "selected-local-donor",
+  "selection": { "candidate": "image-01.png", "region_source_bounds": [205, 19, 73, 80], "reason": "All eight page buttons and labels are absent; the exposed white panel is coherent. Only the declared local region may enter assembly." },
+  "outputs": [
+    {
+      "bytes": 389881,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "01aaa3d855c44e8bdd0cb789f5ff097522f4283d7555853339ec9c305f03f3e1"
+    }
+  ],
+  "provenance": {
+    "prompt_id": "9ffce7f2-bd12-9ce3-8a6f-087bbae4808e",
+    "provider": "alibaba"
+  },
+  "usage": {
+    "input_image_count": 1,
+    "input_image_type": "qima_input_1k",
+    "output_height": 480,
+    "output_image_count": 1,
+    "output_image_type": "qima_output_1k",
+    "output_width": 1120
+  }
+}

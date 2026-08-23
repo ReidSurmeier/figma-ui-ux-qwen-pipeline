@@ -1,0 +1,46 @@
+{
+  "asset_rules": [
+    "No text, pseudo-text, icon, checkmark, selected tint, or member content may remain."
+  ],
+  "canvas": [
+    "Return exactly 640 by 840 pixels.",
+    "Return only the clean plate."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No SakumaRiri, blue row, checkmark, title, button, magenta, invented line, blur, redesign, or change outside the first row."
+  ],
+  "objective": "Correct one failed region in the empty Japanese RPG party-window plate. The prior candidate is useful everywhere except its first member row. Replace the entire selected blue first row, checkmark, and SakumaRiri name with the exact same empty white row surface immediately below it. Change nothing else.",
+  "output": {
+    "aspect_ratio": "source",
+    "count": 1,
+    "resolution": "1K",
+    "seed": 22083372,
+    "size": "640*840"
+  },
+  "preservation_invariants": [
+    "Keep canvas, title gradient, outer silhouette, body bounds, lower empty rows, toolbar band, bottom tab wells, resize grip, palette, and all one-pixel borders unchanged from reference 2.",
+    "Modify only the horizontal first-member-row region containing the blue selection, checkmark, and SakumaRiri glyphs.",
+    "Do not move or resize any surface."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "The first and second blank row interiors have matching white surfaces.",
+    "The first-row dark-pixel count is below the automated threshold."
+  ],
+  "reference_role": "Reference image 1 is original source authority. Reference image 2 is the rejected clean candidate and fixes every output pixel except the selected first-row residue. The blank second row in reference 2 is the direct fill authority for the failed first row.",
+  "regions": [
+    {
+      "change": "Erase the blue selected fill, checkmark, and complete SakumaRiri name. Continue the blank white member-list surface from the empty row immediately below across the whole failed row, preserving only the outer body borders.",
+      "name": "selected first member row",
+      "preserve": [
+        "left and right body borders",
+        "all pixels outside the first row"
+      ]
+    }
+  ],
+  "style": [
+    "Source-matched hard aliased Japanese RPG raster chrome"
+  ]
+}

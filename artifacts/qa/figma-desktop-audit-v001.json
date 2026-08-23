@@ -1,0 +1,344 @@
+{
+  "root": {
+    "id": "41:2",
+    "width": 849,
+    "height": 564,
+    "windowCount": 15
+  },
+  "reference": {
+    "id": "41:3",
+    "imageHash": "5207224a4c53e1e60faf85217f08d7e0856ec816"
+  },
+  "windows": [
+    {
+      "id": "basic-info",
+      "nodeId": "41:4",
+      "geometry": {
+        "x": 0,
+        "y": 0,
+        "width": 280,
+        "height": 120
+      },
+      "expectedGeometry": {
+        "x": 0,
+        "y": 0,
+        "width": 280,
+        "height": 120
+      },
+      "rasterCount": 19,
+      "expectedComponentMinimum": 19,
+      "hotspotCount": 11,
+      "expectedHotspots": 11,
+      "unlinkedHotspots": [],
+      "reviewId": "42:2"
+    },
+    {
+      "id": "card",
+      "nodeId": "41:5",
+      "geometry": {
+        "x": 285,
+        "y": 0,
+        "width": 280,
+        "height": 150
+      },
+      "expectedGeometry": {
+        "x": 285,
+        "y": 0,
+        "width": 280,
+        "height": 150
+      },
+      "rasterCount": 13,
+      "expectedComponentMinimum": 13,
+      "hotspotCount": 4,
+      "expectedHotspots": 4,
+      "unlinkedHotspots": [],
+      "reviewId": "42:23"
+    },
+    {
+      "id": "skills",
+      "nodeId": "41:6",
+      "geometry": {
+        "x": 568,
+        "y": 0,
+        "width": 281,
+        "height": 184
+      },
+      "expectedGeometry": {
+        "x": 568,
+        "y": 0,
+        "width": 281,
+        "height": 184
+      },
+      "rasterCount": 21,
+      "expectedComponentMinimum": 21,
+      "hotspotCount": 12,
+      "expectedHotspots": 12,
+      "unlinkedHotspots": [],
+      "reviewId": "42:38"
+    },
+    {
+      "id": "status",
+      "nodeId": "41:7",
+      "geometry": {
+        "x": 0,
+        "y": 120,
+        "width": 280,
+        "height": 126
+      },
+      "expectedGeometry": {
+        "x": 0,
+        "y": 120,
+        "width": 280,
+        "height": 126
+      },
+      "rasterCount": 18,
+      "expectedComponentMinimum": 18,
+      "hotspotCount": 9,
+      "expectedHotspots": 9,
+      "unlinkedHotspots": [],
+      "reviewId": "42:59"
+    },
+    {
+      "id": "inventory",
+      "nodeId": "41:8",
+      "geometry": {
+        "x": 0,
+        "y": 247,
+        "width": 280,
+        "height": 137
+      },
+      "expectedGeometry": {
+        "x": 0,
+        "y": 247,
+        "width": 280,
+        "height": 137
+      },
+      "rasterCount": 34,
+      "expectedComponentMinimum": 34,
+      "hotspotCount": 27,
+      "expectedHotspots": 27,
+      "unlinkedHotspots": [],
+      "reviewId": "42:79"
+    },
+    {
+      "id": "equipment",
+      "nodeId": "41:9",
+      "geometry": {
+        "x": 0,
+        "y": 385,
+        "width": 280,
+        "height": 152
+      },
+      "expectedGeometry": {
+        "x": 0,
+        "y": 385,
+        "width": 280,
+        "height": 152
+      },
+      "rasterCount": 16,
+      "expectedComponentMinimum": 16,
+      "hotspotCount": 13,
+      "expectedHotspots": 13,
+      "unlinkedHotspots": [],
+      "reviewId": "42:115"
+    },
+    {
+      "id": "chat",
+      "nodeId": "41:10",
+      "geometry": {
+        "x": 285,
+        "y": 279,
+        "width": 280,
+        "height": 120
+      },
+      "expectedGeometry": {
+        "x": 285,
+        "y": 279,
+        "width": 280,
+        "height": 120
+      },
+      "rasterCount": 11,
+      "expectedComponentMinimum": 11,
+      "hotspotCount": 6,
+      "expectedHotspots": 6,
+      "unlinkedHotspots": [],
+      "reviewId": "42:133"
+    },
+    {
+      "id": "exchange",
+      "nodeId": "41:11",
+      "geometry": {
+        "x": 285,
+        "y": 399,
+        "width": 280,
+        "height": 120
+      },
+      "expectedGeometry": {
+        "x": 285,
+        "y": 399,
+        "width": 280,
+        "height": 120
+      },
+      "rasterCount": 23,
+      "expectedComponentMinimum": 23,
+      "hotspotCount": 19,
+      "expectedHotspots": 19,
+      "unlinkedHotspots": [],
+      "reviewId": "42:144"
+    },
+    {
+      "id": "game-menu",
+      "nodeId": "41:12",
+      "geometry": {
+        "x": 626,
+        "y": 182,
+        "width": 222,
+        "height": 133
+      },
+      "expectedGeometry": {
+        "x": 626,
+        "y": 182,
+        "width": 222,
+        "height": 133
+      },
+      "rasterCount": 7,
+      "expectedComponentMinimum": 7,
+      "hotspotCount": 4,
+      "expectedHotspots": 4,
+      "unlinkedHotspots": [],
+      "reviewId": "42:169"
+    },
+    {
+      "id": "party",
+      "nodeId": "41:13",
+      "geometry": {
+        "x": 568,
+        "y": 349,
+        "width": 210,
+        "height": 154
+      },
+      "expectedGeometry": {
+        "x": 568,
+        "y": 349,
+        "width": 210,
+        "height": 154
+      },
+      "rasterCount": 19,
+      "expectedComponentMinimum": 19,
+      "hotspotCount": 16,
+      "expectedHotspots": 16,
+      "unlinkedHotspots": [],
+      "reviewId": "42:176"
+    },
+    {
+      "id": "quickbar",
+      "nodeId": "41:14",
+      "geometry": {
+        "x": 736,
+        "y": 430,
+        "width": 112,
+        "height": 94
+      },
+      "expectedGeometry": {
+        "x": 736,
+        "y": 430,
+        "width": 112,
+        "height": 94
+      },
+      "rasterCount": 6,
+      "expectedComponentMinimum": 6,
+      "hotspotCount": 3,
+      "expectedHotspots": 3,
+      "unlinkedHotspots": [],
+      "reviewId": "42:195"
+    },
+    {
+      "id": "compact-info",
+      "nodeId": "41:15",
+      "geometry": {
+        "x": 568,
+        "y": 314,
+        "width": 281,
+        "height": 35
+      },
+      "expectedGeometry": {
+        "x": 568,
+        "y": 314,
+        "width": 281,
+        "height": 35
+      },
+      "rasterCount": 6,
+      "expectedComponentMinimum": 6,
+      "hotspotCount": 2,
+      "expectedHotspots": 2,
+      "unlinkedHotspots": [],
+      "reviewId": "42:201"
+    },
+    {
+      "id": "bottom-bar",
+      "nodeId": "41:16",
+      "geometry": {
+        "x": 0,
+        "y": 538,
+        "width": 600,
+        "height": 21
+      },
+      "expectedGeometry": {
+        "x": 0,
+        "y": 538,
+        "width": 600,
+        "height": 21
+      },
+      "rasterCount": 7,
+      "expectedComponentMinimum": 7,
+      "hotspotCount": 3,
+      "expectedHotspots": 3,
+      "unlinkedHotspots": [],
+      "reviewId": "42:207"
+    },
+    {
+      "id": "notification",
+      "nodeId": "41:17",
+      "geometry": {
+        "x": 604,
+        "y": 523,
+        "width": 245,
+        "height": 41
+      },
+      "expectedGeometry": {
+        "x": 604,
+        "y": 523,
+        "width": 245,
+        "height": 41
+      },
+      "rasterCount": 6,
+      "expectedComponentMinimum": 6,
+      "hotspotCount": 1,
+      "expectedHotspots": 1,
+      "unlinkedHotspots": [],
+      "reviewId": "42:214"
+    },
+    {
+      "id": "options",
+      "nodeId": "41:18",
+      "geometry": {
+        "x": 345,
+        "y": 182,
+        "width": 280,
+        "height": 122
+      },
+      "expectedGeometry": {
+        "x": 345,
+        "y": 182,
+        "width": 280,
+        "height": 122
+      },
+      "rasterCount": 32,
+      "expectedComponentMinimum": 1,
+      "hotspotCount": 17,
+      "expectedHotspots": 17,
+      "unlinkedHotspots": [],
+      "reviewId": "42:220"
+    }
+  ]
+}

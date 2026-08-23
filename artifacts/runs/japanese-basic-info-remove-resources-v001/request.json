@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nEdit the exact Japanese \u57fa\u672c\u60c5\u5831 window reference. Remove only SakumaRiri, Acolyte, HP, SP, both numeric value strings, and both complete resource meters including tracks, fills, and thumbs. Reconstruct the uninterrupted white body beneath them. Preserve every other source element exactly.\n\n[REFERENCE ROLE]\nReference image 1 is the immutable 280 by 120 source crop and fixes every coordinate and unchanged pixel.\n\n[PRESERVATION INVARIANTS]\n- Do not alter the title, right button grid, level panel, footer, borders, palette, or crop.\n- Keep the late-1990s low-resolution raster style and exact source proportions.\n- Local removal only, not redesign.\n\n[CANVAS AND LAYOUT]\n- Return the same complete crop at 1120 by 480 pixels with no added margin.\n- Only the main body region x=5..201, y=19..63 may change; outside it is Exact Copy.\n\n[REGION EDITS]\n- REGION: identity and resource rows\n  CHANGE: Remove all identity/resource glyphs and both meter controls. Continue only the plain white body surface.\n  PRESERVE: body edges; level panel below; right button grid\n\n[STYLE SYSTEM]\n- Exact source-matched Japanese PC RPG raster UI\n- hard pixel-scale edges and pale blue-grey chrome\n\n[ASSET RULES]\n- No text, number, meter, fill, track, thumb, ghost glyph, pseudo-control, or magenta desktop in the changed region.\n\n[NEGATIVE CONSTRAINTS]\n- No redesign, new text, smoothing, scale change, layout change, or full-window reinterpretation.\n\n[QUALITY GATE]\n- Identity and both resource rows are absent.\n- Exposed white surface is continuous.\n- Unrelated regions remain aligned."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 1,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22082623,
+    "size": "1120*480",
+    "watermark": false
+  }
+}

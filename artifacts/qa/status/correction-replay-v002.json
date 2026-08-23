@@ -1,0 +1,83 @@
+{
+  "schema_version": "2.0",
+  "window_id": "status",
+  "overall": "pass",
+  "evidence": [
+    "prototype/qa/correction-replay.json",
+    "prototype/e2e/full-desktop.spec.ts",
+    "prototype/e2e/status-source.spec.ts",
+    "prototype/scripts/status-contract.sh",
+    "prototype/scripts/source-visual-check.sh",
+    "artifacts/qa/source-visuals/full.png",
+    "artifacts/qa/figma-desktop-current.png",
+    "artifacts/qa/figma-desktop-audit-v001.json"
+  ],
+  "results": [
+    {
+      "prompt_id": "no-reference-underlay",
+      "verdict": "pass",
+      "note": "Runtime import scans and browser requests exclude the authority screenshot as an underlay."
+    },
+    {
+      "prompt_id": "independent-elements",
+      "verdict": "pass",
+      "note": "The runtime component manifest and Figma audit expose each declared semantic raster and hotspot as an independent stable node."
+    },
+    {
+      "prompt_id": "preserve-japanese-source-style",
+      "verdict": "pass",
+      "note": "Source-relative visual gates preserve the original Japanese raster wording, glyph geometry, baseline, and pixel treatment."
+    },
+    {
+      "prompt_id": "no-pink-donor-pixels",
+      "verdict": "pass",
+      "note": "Forbidden-color checks and explicit transparent donor-facing rows reject colored crop seams even when a masked MAE would hide them."
+    },
+    {
+      "prompt_id": "pixel-rounded-window-edges",
+      "verdict": "pass",
+      "note": "The browser corner probe validates the original six-pixel stepped alpha silhouette and opaque border occupancy at every standard window corner."
+    },
+    {
+      "prompt_id": "title-placement-and-white-box",
+      "verdict": "pass",
+      "note": "Title geometry and perimeter checks reject displacement, smooth replacement text, and unintended rectangular fills."
+    },
+    {
+      "prompt_id": "generated-minimize-endpoint",
+      "verdict": "pass",
+      "note": "The minimized destination uses a separately generated Qwen endpoint with recorded provenance rather than an expanded-frame crop."
+    },
+    {
+      "prompt_id": "settled-button-effects",
+      "verdict": "pass",
+      "note": "The enabled-control inventory records pointer feedback and a meaningful settled state for every reachable control."
+    },
+    {
+      "prompt_id": "drag-cutoff-and-z-order",
+      "verdict": "pass",
+      "note": "Extreme-edge drags remain clamped and recoverable while pointer focus raises the intended window without clipping controls."
+    },
+    {
+      "prompt_id": "text-overlap-and-pixel-aesthetic",
+      "verdict": "pass",
+      "note": "Source-shaped text regions remain bounded and the Japanese pixel aesthetic is preserved across reachable states."
+    },
+    {
+      "prompt_id": "figma-link-and-page-parity",
+      "verdict": "pass",
+      "note": "Live remote-MCP readback confirms exact runtime geometry, independent rasters, linked hotspots, and review destinations."
+    },
+    {
+      "prompt_id": "complete-user-flow-not-screenshot-only",
+      "verdict": "pass",
+      "note": "End-to-end tests exercise click, drag, selection, reversal, minimize, restore, and recovery paths rather than screenshots alone."
+    }
+  ],
+  "promoted_regressions": [
+    "six-pixel stepped window corners must retain their transparent steps and border occupancy",
+    "known donor-facing crop rows must remain fully transparent",
+    "source-baked selection must clear before another option is promoted",
+    "every Figma hotspot must resolve to a committed review or Qwen minimized destination"
+  ]
+}
