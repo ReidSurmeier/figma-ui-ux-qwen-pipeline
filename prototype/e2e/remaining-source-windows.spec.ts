@@ -1,4 +1,28 @@
 import { expect, test } from "@playwright/test";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+
+function selectedBluePixelCount(path: string) {
+  return Number(execFileSync("convert", [
+    path,
+    "-alpha", "off",
+    "-fx", "(b>0.65&&(b-r)>0.12&&(b-g)>0.02&&r>0.2)?1:0",
+    "-format", "%[fx:mean*w*h]",
+    "info:",
+  ], { encoding: "utf8" }).trim());
+}
+
+function darkGlyphMaskSignature(image: Buffer) {
+  return execFileSync("convert", [
+    "png:-",
+    "-alpha", "off",
+    "-fx", "(r<0.4&&g<0.55&&b<0.72)?1:0",
+    "-format", "%#",
+    "info:",
+  ], { input: image, encoding: "utf8" }).trim();
+}
 
 const windows = [
   { name: "ソルジャースケルトンカード", id: "card", minimumComponents: 10 },
@@ -232,15 +256,49 @@ test("Party member selection can clear and moves only the source-local indicator
   await first.click();
   const firstIndicatorCleared = await page.screenshot({ clip: firstIndicator });
   expect(firstIndicatorCleared.equals(firstIndicatorSelected), "the source check indicator did not clear").toBe(false);
-  expect((await page.screenshot({ clip: firstLabel })).equals(firstLabelBefore), "clearing the indicator altered the member label").toBe(true);
+  expect(darkGlyphMaskSignature(await page.screenshot({ clip: firstLabel })), "clearing the indicator altered the member glyph geometry").toBe(darkGlyphMaskSignature(firstLabelBefore));
   await expect(party.locator('[role="option"][aria-selected="true"]')).toHaveCount(0);
 
   const secondIndicatorBefore = await page.screenshot({ clip: secondIndicator });
   const secondLabelBefore = await page.screenshot({ clip: secondLabel });
   await second.click();
   expect((await page.screenshot({ clip: secondIndicator })).equals(secondIndicatorBefore), "Sebas received no visible selection indicator").toBe(false);
-  expect((await page.screenshot({ clip: secondLabel })).equals(secondLabelBefore), "selecting Sebas altered the member label").toBe(true);
+  expect(darkGlyphMaskSignature(await page.screenshot({ clip: secondLabel })), "selecting Sebas altered the member glyph geometry").toBe(darkGlyphMaskSignature(secondLabelBefore));
   expect((await page.screenshot({ clip: firstIndicator })).equals(firstIndicatorCleared), "selecting Sebas reintroduced or altered the cleared first indicator").toBe(true);
   await expect(second).toHaveAttribute("aria-selected", "true");
   await expect(party.locator('[role="option"][aria-selected="true"]')).toHaveCount(1);
+});
+
+test("Party selection moves the source blue focus highlight to the chosen member", async ({ page }) => {
+  await page.goto("/");
+  const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
+  const first = party.getByRole("option", { name: /SakumaRiri/ });
+  const second = party.getByRole("option", { name: /Sebas/ });
+  const evidenceDir = mkdtempSync(join(tmpdir(), "party-focus-"));
+
+  try {
+    const firstBeforePath = join(evidenceDir, "first-before.png");
+    const secondBeforePath = join(evidenceDir, "second-before.png");
+    const firstAfterPath = join(evidenceDir, "first-after.png");
+    const secondAfterPath = join(evidenceDir, "second-after.png");
+    await first.screenshot({ path: firstBeforePath });
+    await second.screenshot({ path: secondBeforePath });
+
+    const firstBlueBefore = selectedBluePixelCount(firstBeforePath);
+    const secondBlueBefore = selectedBluePixelCount(secondBeforePath);
+    await second.click();
+    await first.screenshot({ path: firstAfterPath });
+    await second.screenshot({ path: secondAfterPath });
+
+    const firstBlueAfter = selectedBluePixelCount(firstAfterPath);
+    const secondBlueAfter = selectedBluePixelCount(secondAfterPath);
+    expect(firstBlueBefore).toBeGreaterThan(700);
+    expect(secondBlueBefore).toBeLessThan(100);
+    expect(firstBlueAfter, "SakumaRiri retained the source selected-row highlight").toBeLessThan(200);
+    expect(secondBlueAfter, "Sebas did not receive a source-sized selected-row highlight").toBeGreaterThan(200);
+    await expect(first).toHaveAttribute("aria-selected", "false");
+    await expect(second).toHaveAttribute("aria-selected", "true");
+  } finally {
+    rmSync(evidenceDir, { recursive: true, force: true });
+  }
 });

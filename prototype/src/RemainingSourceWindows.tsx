@@ -141,10 +141,13 @@ export function PartySourceWindow({ zIndex, onActivate }: WindowProps) {
     <SourceWindow id="party" title="パーティー (Riri-Soft)" initialPosition={{ x: 568, y: 370 }} width={160} height={154} titleWidth={125} titleTop={4} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closeRight={1} closeTop={3}>
       {names.map((name, row) => {
         const selected = member === row;
-        const indicatorState = row === 0 && !selected ? "off" : row !== 0 && selected ? "selected" : null;
+        const rowFile = row === 0 && !selected
+          ? `${assetRoot}/components/member-row-0-unselected`
+          : row !== 0 && selected
+            ? `${assetRoot}/components/member-row-${row}-selected`
+            : `${assetRoot}/components/member-${row}`;
         return <button key={name} type="button" role="option" className="party-source-member" aria-label={name} aria-selected={selected} style={{ top: 19 + row * 19 }} onClick={() => { const next = selected ? null : row; setMember(next); setStatus(next === null ? `${name} の選択を解除` : `${name} を選択`); }}>
-          <SourceRaster id={`party-member-${row}`} file={`${assetRoot}/components/member-${row}`} style={{ inset: 0 }} />
-          {indicatorState && <SourceRaster id={`party-member-${row}-indicator-${indicatorState}`} file={`${assetRoot}/components/member-indicator-${indicatorState}`} style={{ left: 0, top: 0, width: 18, height: 19 }} />}
+          <SourceRaster id={`party-member-${row}`} file={rowFile} style={{ inset: 0 }} />
         </button>;
       })}
       {[0, 1, 2, 3, 4].map((column) => <button key={column} type="button" className="party-source-tool" aria-label={`パーティーツール ${column + 1}`} aria-pressed={status === `tool ${column + 1}`} style={{ left: 4 + column * 29 }} onClick={() => setStatus(`tool ${column + 1}`)}><SourceRaster id={`party-tool-${column}`} file={`${assetRoot}/components/tool-${column}`} style={{ inset: 0 }} /></button>)}

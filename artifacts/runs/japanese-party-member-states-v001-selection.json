@@ -28,5 +28,12 @@
     "accepted_generated_pixels": "two independent 18 by 19 source-scale rectangles",
     "outside_region_authority": "the original source-locked member row assets",
     "text_generation_accepted": false
-  }
+  },
+  "assembly_outputs": [
+    "prototype/public/assets/japanese-rpg-v001/party/components/member-row-0-unselected.png",
+    "prototype/public/assets/japanese-rpg-v001/party/components/member-row-1-selected.png",
+    "prototype/public/assets/japanese-rpg-v001/party/components/member-row-2-selected.png",
+    "prototype/public/assets/japanese-rpg-v001/party/components/member-row-3-selected.png",
+    "prototype/public/assets/japanese-rpg-v001/party/components/member-row-4-selected.png"
+  ]
 }

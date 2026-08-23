@@ -152,6 +152,7 @@ describe("human-correction replay after deterministic verification", () => {
       model: string;
       provider: string;
       states: Array<{ output: string; source_scale_region: number[] }>;
+      assembly_outputs: string[];
       invariants: { text_generation_accepted: boolean };
     };
 
@@ -167,6 +168,12 @@ describe("human-correction replay after deterministic verification", () => {
       .update(await readFile(resolve("..", output)))
       .digest("hex")));
     expect(new Set(hashes).size).toBe(2);
+
+    expect(selection.assembly_outputs).toHaveLength(5);
+    const rowHashes = await Promise.all(selection.assembly_outputs.map(async (output) => createHash("sha256")
+      .update(await readFile(resolve("..", output)))
+      .digest("hex")));
+    expect(new Set(rowHashes).size).toBe(5);
   });
 
   it("requires shared source-window minimize motion to expose more than four geometry steps", async () => {
