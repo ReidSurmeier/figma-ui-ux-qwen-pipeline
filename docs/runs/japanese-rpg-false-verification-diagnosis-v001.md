@@ -235,3 +235,12 @@ source navigation buttons at x=580. The browser asserts all sampled pixels
 across the visible thumb resolve to the range input, then performs real pointer
 drags to x=570 and back to x=98. Both the input value and independent raster
 thumb must reach exact 100/0 endpoints.
+
+The reported Quickbar cropping/focus failure does not reproduce in the current
+runtime. Its three independent assets retain exact source rectangles
+`[2,2,42,42]`, `[44,1,42,43]`, and `[2,50,76,42]`; the resting state has no
+invented selection, and a real click promotes exactly one slot with a visible
+settled change. The remaining source-difference score is dominated by the
+intentional removal of magenta desktop pixels. The asset contract separately
+proves zero opaque donor-pink pixels, so no pink border is reintroduced merely
+to lower screenshot MAE.

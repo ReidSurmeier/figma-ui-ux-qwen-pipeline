@@ -389,6 +389,33 @@ test("Bottom Bar slider owns its complete visible thumb and reaches both endpoin
   await expect(thumb).toHaveCSS("left", "98px");
 });
 
+test("Quickbar preserves its unfocused source state and exact slot geometry", async ({ page }) => {
+  await page.goto("/");
+  const quickbar = page.getByRole("region", { name: "クイックスロット", exact: true });
+  const bounds = await quickbar.boundingBox();
+  if (!bounds) throw new Error("Quickbar geometry is unavailable");
+  await expect(quickbar.locator('button[aria-pressed="true"]')).toHaveCount(0);
+  for (const [label, expected] of [
+    ["クイックスロット 1", { x: 2, y: 2, width: 42, height: 42 }],
+    ["クイックスロット 2", { x: 44, y: 1, width: 42, height: 43 }],
+    ["クイックスロット 3", { x: 2, y: 50, width: 76, height: 42 }],
+  ] as const) {
+    expect(await quickbar.getByRole("button", { name: label }).boundingBox()).toMatchObject({
+      x: bounds.x + expected.x,
+      y: bounds.y + expected.y,
+      width: expected.width,
+      height: expected.height,
+    });
+  }
+
+  const second = quickbar.getByRole("button", { name: "クイックスロット 2" });
+  const before = await second.screenshot();
+  await second.click();
+  await expect(quickbar.locator('button[aria-pressed="true"]')).toHaveCount(1);
+  await expect(second).toHaveAttribute("aria-pressed", "true");
+  expect((await second.screenshot()).equals(before)).toBe(false);
+});
+
 test("source-baked selection is visibly cleared before another option is promoted", async ({ page }) => {
   await page.goto("/");
 
