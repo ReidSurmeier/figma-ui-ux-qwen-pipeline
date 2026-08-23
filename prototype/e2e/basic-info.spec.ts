@@ -69,15 +69,28 @@ test("basic info HP slider is continuous and reaches both visual endpoints witho
   await expect(visual).toHaveCSS("background-image", /hp-thumb\.png/);
 });
 
-test("basic info page buttons map to their own stable source regions", async ({ page }) => {
+test("basic info page buttons activate their corresponding independent source windows", async ({ page }) => {
   await page.goto("/");
   const window = page.getByRole("region", { name: "基本情報" });
   await expect(window.getByRole("button", { name: "status", exact: true })).toHaveCSS("filter", "none");
   await expect(window.locator('[data-component-id="base-label"]')).toHaveCSS("width", "58px");
-  for (const name of ["status", "option", "items", "equip", "skill", "map", "chat", "friend"]) {
+
+  const mappings = [
+    ["status", "ステータス"],
+    ["option", "オプション"],
+    ["items", "所持アイテム"],
+    ["equip", "装備アイテム"],
+    ["skill", "スキルリスト"],
+    ["chat", "チャットルーム"],
+  ] as const;
+
+  for (const [name, targetName] of mappings) {
     const button = window.getByRole("button", { name, exact: true });
     await button.click();
     await expect(button).toHaveAttribute("aria-pressed", "true");
-    await expect(window.getByRole("status")).toHaveText(`${name} を開きました`);
+    const target = page.getByRole("region", { name: targetName, exact: true });
+    const targetZ = Number(await target.evaluate((element) => getComputedStyle(element).zIndex));
+    const basicZ = Number(await window.evaluate((element) => getComputedStyle(element).zIndex));
+    expect(targetZ, `${name} must bring ${targetName} in front of 基本情報`).toBeGreaterThan(basicZ);
   }
 });

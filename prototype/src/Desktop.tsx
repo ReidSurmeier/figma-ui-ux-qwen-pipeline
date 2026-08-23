@@ -14,7 +14,7 @@ export function Desktop() {
 
   return (
     <main className="rpg-desktop" role="application" aria-label="Japanese RPG desktop">
-      <BasicInfoWindow zIndex={zIndex("basic-info")} onActivate={activate} />
+      <BasicInfoWindow zIndex={zIndex("basic-info")} onActivate={activate} onNavigate={activate} />
       <CardSourceWindow zIndex={zIndex("card")} onActivate={activate} />
       <SkillsSourceWindow zIndex={zIndex("skills")} onActivate={activate} />
       <StatusSourceWindow zIndex={zIndex("status")} onActivate={activate} />
