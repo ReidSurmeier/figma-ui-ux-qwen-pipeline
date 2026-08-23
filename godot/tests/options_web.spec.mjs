@@ -91,6 +91,11 @@ test("Godot composes all independent windows over the original pink desktop", as
 });
 
 test("all source windows move through real pointer gestures and controls answer at their mapped surfaces", async ({ page }) => {
+  // This journey intentionally replays 30 drag gestures plus one representative
+  // control on every interactive sibling. Software-rendered Godot in CI is
+  // slower than the WSL review runtime, so give the exhaustive replay its own
+  // budget without weakening any of the per-window assertions below.
+  test.setTimeout(90_000);
   const canvas = await page.locator("canvas").boundingBox();
   if (!canvas) throw new Error("Godot canvas has no geometry");
   const topFirst = [...windowRegistry.windows].reverse();
