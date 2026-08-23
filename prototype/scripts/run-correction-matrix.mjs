@@ -25,15 +25,22 @@ const prompts = JSON.parse(await readFile(resolve(prototypeDir, "qa/correction-r
 const registryInputPath = resolve(prototypeDir, "qa/window-verification.json");
 const registry = JSON.parse(await readFile(registryInputPath, "utf8"));
 const manifest = JSON.parse(await readFile(resolve(repoDir, "artifacts/qa/runtime-component-manifest.json"), "utf8"));
-const windowDefinitions = selectedCorrectionMatrixWindows(manifest.windows, process.env.CORRECTION_MATRIX_WINDOW_IDS);
+const requestedWindowIds = process.env.CORRECTION_MATRIX_WINDOW_IDS;
+const windowDefinitions = selectedCorrectionMatrixWindows(manifest.windows, requestedWindowIds);
 const selectedWindowIds = new Set(windowDefinitions.map(({ id }) => id));
+const focusedRun = selectedWindowIds.size < manifest.windows.length;
 const semanticManifest = JSON.parse(await readFile(resolve(prototypeDir, "qa/semantic-interaction-contracts.json"), "utf8"));
 const semanticContracts = semanticManifest.contracts.filter(({ window_id }) => selectedWindowIds.has(window_id));
 const figmaMarker = resolve(repoDir, "artifacts/qa/figma-correction-matrix-v003.json");
 const sha = (value) => createHash("sha256").update(value).digest("hex");
 const exists = async (path) => access(path).then(() => true, () => false);
-await rm(evidenceRoot, { recursive: true, force: true });
 await mkdir(evidenceRoot, { recursive: true });
+if (focusedRun) {
+  for (const { id } of windowDefinitions) await rm(resolve(evidenceRoot, id), { recursive: true, force: true });
+} else {
+  await rm(evidenceRoot, { recursive: true, force: true });
+  await mkdir(evidenceRoot, { recursive: true });
+}
 const fidelityReport = await runBgmFidelityGate({
   repoDir,
   url: baseUrl,
@@ -42,7 +49,10 @@ const fidelityReport = await runBgmFidelityGate({
 const fidelityByWindow = new Map(fidelityReport.verdicts.map((verdict) => [verdict.windowId, verdict]));
 const browser = await chromium.launch({ headless: true, executablePath: "/usr/bin/google-chrome" });
 const semanticRun = executeSemanticInteractionContracts({ contracts: semanticContracts, prototypeDir, repoDir });
-await writeFile(resolve(evidenceRoot, "semantic-contract-playwright.json"), `${JSON.stringify(semanticRun.report, null, 2)}\n`);
+const semanticReportPath = focusedRun
+  ? resolve(evidenceRoot, `semantic-contract-playwright-${[...selectedWindowIds].join("-")}.json`)
+  : resolve(evidenceRoot, "semantic-contract-playwright.json");
+await writeFile(semanticReportPath, `${JSON.stringify(semanticRun.report, null, 2)}\n`);
 const sourceContracts = ["contract-check.sh", "remaining-window-contract.sh"].map((script) => {
   const outcome = spawnSync("bash", [resolve(prototypeDir, "scripts", script)], { cwd: prototypeDir, encoding: "utf8" });
   return {
@@ -261,6 +271,28 @@ async function sampleMinimize(page, windowId) {
   const window = await activateWindow(page, windowId);
   const minimizeButton = window.getByRole("button", { name: /最小化/ });
   if (await minimizeButton.count() === 0) return null;
+  const captureTitleAuthority = async () => {
+    const windowBox = await window.boundingBox();
+    const titleComponents = window.locator('[data-component-id$="title-icon"], [data-component-id$="title-text"]');
+    const rightControls = window.locator('header button');
+    const titleBoxes = [];
+    const controlBoxes = [];
+    for (let index = 0; index < await titleComponents.count(); index += 1) {
+      if (await titleComponents.nth(index).isVisible()) titleBoxes.push(await titleComponents.nth(index).boundingBox());
+    }
+    for (let index = 0; index < await rightControls.count(); index += 1) {
+      if (await rightControls.nth(index).isVisible()) controlBoxes.push(await rightControls.nth(index).boundingBox());
+    }
+    const boxes = [...titleBoxes, ...controlBoxes].filter(Boolean);
+    const withinWindow = !!windowBox && boxes.every((box) => (
+      box.x >= windowBox.x
+      && box.y >= windowBox.y
+      && box.x + box.width <= windowBox.x + windowBox.width
+      && box.y + box.height <= windowBox.y + windowBox.height
+    ));
+    return { windowBox, titleBoxes, controlBoxes, withinWindow };
+  };
+  const expanded = await captureTitleAuthority();
   const samplePromise = page.evaluate(async ({ windowId }) => {
     const window = document.querySelector(`[data-window-id="${windowId}"]`);
     if (!(window instanceof HTMLElement)) return [];
@@ -275,7 +307,25 @@ async function sampleMinimize(page, windowId) {
   }, { windowId });
   await minimizeButton.click();
   const samples = await samplePromise;
-  return { samples, distinctGeometry: new Set(samples.map((value) => value.join("x"))).size, gesture: "trusted Playwright pointer click" };
+  await page.waitForTimeout(240);
+  const settled = await captureTitleAuthority();
+  await minimizeButton.click();
+  await page.waitForTimeout(240);
+  const restored = await captureTitleAuthority();
+  const titleAuthorityPass = settled.windowBox?.width === 180
+    && settled.windowBox?.height === 18
+    && settled.titleBoxes.length === 2
+    && settled.controlBoxes.length > 0
+    && settled.withinWindow
+    && JSON.stringify(restored.windowBox) === JSON.stringify(expanded.windowBox)
+    && JSON.stringify(restored.titleBoxes) === JSON.stringify(expanded.titleBoxes)
+    && JSON.stringify(restored.controlBoxes) === JSON.stringify(expanded.controlBoxes);
+  return {
+    samples,
+    distinctGeometry: new Set(samples.map((value) => value.join("x"))).size,
+    gesture: "trusted Playwright pointer click",
+    titleAuthority: { expanded, settled, restored, pass: titleAuthorityPass },
+  };
 }
 
 async function probeCheckboxes(page, windowId) {
@@ -446,6 +496,7 @@ try {
         "figma-link-and-page-parity": { figmaSynced, requiredMarker: "artifacts/qa/figma-correction-matrix-v003.json" },
         "complete-user-flow-not-screenshot-only": { controlCount: controls.length, failures: failures.map(({ label }) => label), controlCoverage, consoleErrors },
         "interaction-animation-source-fit": { minimize, ranges, discreteControlFailures: failures.map(({ label }) => label) },
+        "minimized-title-authority-continuity": minimize?.titleAuthority,
       };
       let verdict = "pass";
       if (prompt.id.startsWith("checkbox-") && checkboxes.length === 0) verdict = "not-applicable";
@@ -474,6 +525,7 @@ try {
           "figma-link-and-page-parity": figmaSynced,
           "complete-user-flow-not-screenshot-only": failures.length === 0 && consoleErrors.length === 0,
           "interaction-animation-source-fit": animationPass,
+          "minimized-title-authority-continuity": minimize?.titleAuthority?.pass === true,
         };
         if (!passByPrompt[prompt.id]) verdict = "fail";
       }
@@ -525,6 +577,19 @@ registry.schema_version = "1.3";
 registry.invalidation_reason = "No window is verified until it matches the BGM and Effect fidelity benchmark, passes correction replay, and passes hosted Figma parity.";
 await mkdir(dirname(registryOutputPath), { recursive: true });
 await writeFile(registryOutputPath, `${JSON.stringify(registry, null, 2)}\n`);
-await writeFile(resolve(evidenceRoot, "summary.json"), `${JSON.stringify({ schema_version: "3.0", reports }, null, 2)}\n`);
+const summaryPath = resolve(evidenceRoot, "summary.json");
+let summaryReports = reports;
+if (focusedRun && await exists(summaryPath)) {
+  const previousSummary = JSON.parse(await readFile(summaryPath, "utf8"));
+  summaryReports = [
+    ...(previousSummary.reports ?? []).filter(({ windowId }) => !selectedWindowIds.has(windowId)),
+    ...reports,
+  ];
+}
+await writeFile(summaryPath, `${JSON.stringify({ schema_version: "3.0", reports: summaryReports }, null, 2)}\n`);
 process.stdout.write(`${JSON.stringify({ windows: reports.length, passed: reports.filter(({ overall }) => overall === "pass").length, reports }, null, 2)}\n`);
-if (reports.some(({ overall }) => overall !== "pass") || fidelityReport.overall !== "pass") process.exitCode = 1;
+const selectedFidelityPassed = windowDefinitions.every(({ id }) => fidelityByWindow.get(id)?.status === "benchmark-pass");
+if (
+  reports.some(({ overall }) => overall !== "pass")
+  || (focusedRun ? !selectedFidelityPassed : fidelityReport.overall !== "pass")
+) process.exitCode = 1;

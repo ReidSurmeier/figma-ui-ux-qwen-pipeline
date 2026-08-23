@@ -1,0 +1,43 @@
+{
+  "outputs": [
+    {
+      "bytes": 452438,
+      "file": "image-01.png",
+      "media_type": "image/png",
+      "sha256": "f92a8f4a083161b1af9d8bae87e7d231ce784ec1798a0f1529a150f21bdfea75"
+    },
+    {
+      "bytes": 400507,
+      "file": "image-02.png",
+      "media_type": "image/png",
+      "sha256": "55723af6485eaceb557502c1db108a6d07a0d4fdb651585306aa97286a86ba6c"
+    }
+  ],
+  "provenance": {
+    "prompt_id": null,
+    "provider": "openrouter",
+    "reference_sha256": "64595b37652631b297962668863f7fb78c58a473ca69ff12a7b19dfa7396d087",
+    "reference_sha256s": [
+      "64595b37652631b297962668863f7fb78c58a473ca69ff12a7b19dfa7396d087"
+    ]
+  },
+  "usage": {
+    "completion_tokens": 8350,
+    "completion_tokens_details": {
+      "image_tokens": 8350,
+      "reasoning_tokens": 0
+    },
+    "cost": 0.083,
+    "cost_details": {
+      "upstream_inference_completions_cost": 0.08,
+      "upstream_inference_cost": 0.083,
+      "upstream_inference_prompt_cost": 0.003
+    },
+    "is_byok": false,
+    "prompt_tokens": 828,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "total_tokens": 9178
+  }
+}

@@ -43,4 +43,9 @@ test("every Basic Info navigation control retains its source visual in the runti
     "page-chat",
     "page-friend",
   ]));
+  expect(
+    basicInfo.controls
+      .filter((control) => !control.visualComponent || !componentIds.has(control.visualComponent))
+      .map((control) => control.id),
+  ).toEqual([]);
 });

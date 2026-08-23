@@ -10,6 +10,9 @@ if [[ ! -x "$godot_bin" ]]; then
   exit 1
 fi
 
+"$repo_dir/scripts/sync_godot_window_assets.sh"
+"$repo_dir/scripts/sync_godot_window_assets.sh" --check
+
 "$godot_bin" --headless --path "$godot_dir" --editor --quit
 "$godot_bin" --headless --path "$godot_dir" --script res://tests/full_desktop_contract.gd
 "$godot_bin" --headless --path "$godot_dir" --script res://tests/engine_contract.gd

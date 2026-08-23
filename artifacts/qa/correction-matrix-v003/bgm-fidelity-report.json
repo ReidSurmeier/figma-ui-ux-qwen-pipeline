@@ -4,30 +4,25 @@
   "sourceAuthority": "benchmarks/japanese-rpg-options-v001/reference.png",
   "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
   "runtimeUrl": "http://10.255.255.254:4174/",
-  "runtimeSha256": "60ffb66941eb6965e01f898aeae2dc87d6fa6572ec7630b08ef87749e7a1dc87",
-  "generatedAt": "2026-08-23T21:47:36.638Z",
+  "runtimeSha256": "fdd00663c999d0d1d66adca211f787e643a8151fc4f4b2fc4b88372a7fa23422",
+  "generatedAt": "2026-08-23T23:01:07.585Z",
   "overall": "revision-required",
   "verdicts": [
     {
       "windowId": "basic-info",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "largest-local-defect",
-        "complete-visual-ownership",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "basic-info",
-        "normalizedMae": 0.0438438,
-        "highErrorPixelRate": 0.12398809523809524,
-        "largestHighErrorComponentRate": 0.08455357142857142,
+        "normalizedMae": 0.022909,
+        "highErrorPixelRate": 0.05574404761904762,
+        "largestHighErrorComponentRate": 0.014553571428571428,
         "controls": 11,
-        "controlsWithVisualAuthority": 2,
+        "controlsWithVisualAuthority": 11,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0.18181818181818182
+        "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {
@@ -36,7 +31,12 @@
       },
       "interactionAuthority": {
         "id": "basic-info",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/basic-info/correction-replay-v003.json",
+          "artifacts/qa/godot-stagehand-v001/report.json",
+          "godot/tests/options_web.spec.mjs"
+        ]
       }
     },
     {
@@ -44,7 +44,6 @@
       "status": "revision-required",
       "failures": [
         "largest-local-defect",
-        "complete-visual-ownership",
         "reversible-interaction"
       ],
       "metrics": {
@@ -53,11 +52,11 @@
         "highErrorPixelRate": 0.11688095238095238,
         "largestHighErrorComponentRate": 0.10483333333333333,
         "controls": 4,
-        "controlsWithVisualAuthority": 2,
+        "controlsWithVisualAuthority": 4,
         "hitMapFailures": 0,
         "irreversibleInteractions": null,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0.5
+        "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {
@@ -74,7 +73,6 @@
       "status": "revision-required",
       "failures": [
         "largest-local-defect",
-        "complete-visual-ownership",
         "reversible-interaction"
       ],
       "metrics": {
@@ -83,11 +81,11 @@
         "highErrorPixelRate": 0.11532956831192945,
         "largestHighErrorComponentRate": 0.07227680643663933,
         "controls": 20,
-        "controlsWithVisualAuthority": 1,
+        "controlsWithVisualAuthority": 20,
         "hitMapFailures": 0,
         "irreversibleInteractions": null,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0.05
+        "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {
@@ -115,11 +113,11 @@
         "highErrorPixelRate": 0.21947278911564627,
         "largestHighErrorComponentRate": 0.0691609977324263,
         "controls": 7,
-        "controlsWithVisualAuthority": 0,
+        "controlsWithVisualAuthority": 2,
         "hitMapFailures": 0,
         "irreversibleInteractions": null,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0
+        "visualAuthorityCoverage": 0.2857142857142857
       },
       "geometryMismatches": [],
       "hitMap": {
@@ -138,7 +136,6 @@
         "source-relative-visual",
         "high-error-pixel-rate",
         "largest-local-defect",
-        "complete-visual-ownership",
         "full-surface-hit-map",
         "reversible-interaction"
       ],
@@ -148,11 +145,11 @@
         "highErrorPixelRate": 0.15461418143899897,
         "largestHighErrorComponentRate": 0.11942127215849843,
         "controls": 27,
-        "controlsWithVisualAuthority": 1,
+        "controlsWithVisualAuthority": 27,
         "hitMapFailures": 9,
         "irreversibleInteractions": null,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0.037037037037037035
+        "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {
@@ -242,7 +239,6 @@
       "status": "revision-required",
       "failures": [
         "largest-local-defect",
-        "complete-visual-ownership",
         "reversible-interaction"
       ],
       "metrics": {
@@ -251,11 +247,11 @@
         "highErrorPixelRate": 0.09565319548872181,
         "largestHighErrorComponentRate": 0.07159304511278196,
         "controls": 12,
-        "controlsWithVisualAuthority": 10,
+        "controlsWithVisualAuthority": 12,
         "hitMapFailures": 0,
         "irreversibleInteractions": null,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0.8333333333333334
+        "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {
@@ -459,7 +455,6 @@
         "source-relative-visual",
         "high-error-pixel-rate",
         "largest-local-defect",
-        "complete-visual-ownership",
         "reversible-interaction"
       ],
       "metrics": {
@@ -468,11 +463,11 @@
         "highErrorPixelRate": 0.5342938311688312,
         "largestHighErrorComponentRate": 0.37666396103896105,
         "controls": 16,
-        "controlsWithVisualAuthority": 15,
+        "controlsWithVisualAuthority": 16,
         "hitMapFailures": 0,
         "irreversibleInteractions": null,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0.9375
+        "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {

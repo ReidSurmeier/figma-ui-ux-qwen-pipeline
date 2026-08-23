@@ -19,20 +19,15 @@
     },
     {
       "id": "basic-info",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/basic-info/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "largest-local-defect",
-          "complete-visual-ownership",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },

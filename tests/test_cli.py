@@ -3,7 +3,9 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from types import SimpleNamespace
 from pathlib import Path
+from unittest.mock import patch
 
 from qwen_ui_pipeline.cli import main
 
@@ -99,6 +101,37 @@ class RecordComfyRunTests(unittest.TestCase):
             self.assertEqual(run["provenance"]["prompt_id"], "prompt-123")
             self.assertEqual(run["provenance"]["figma_file_key"], "figma-key")
             self.assertEqual(len(run["provenance"]["reference_sha256"]), 64)
+
+    @patch("qwen_ui_pipeline.cli.generate_with_provider")
+    def test_generated_run_records_the_exact_reference_hash(self, generate_with_provider):
+        generate_with_provider.return_value = SimpleNamespace(
+            provider="openrouter",
+            request={"model": "qwen/qwen-image-3-pro", "prompt": "remove title"},
+            response={"data": [{"b64_json": "aW1hZ2U=", "media_type": "image/png"}]},
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            brief_path = root / "brief.json"
+            brief_path.write_text(json.dumps({"objective": "Remove the title."}), encoding="utf-8")
+            reference = root / "reference.png"
+            reference.write_bytes(b"source-authority")
+            output = root / "run"
+
+            status = main([
+                "generate",
+                str(brief_path),
+                "--reference",
+                str(reference),
+                "--output-dir",
+                str(output),
+            ])
+
+            self.assertEqual(status, 0)
+            run = json.loads((output / "run.json").read_text())
+            self.assertEqual(
+                run["provenance"]["reference_sha256"],
+                "ef6642f69b15f43be9796e2f1257356b8fc6c5b9c4b783e90e19d4992b3f543b",
+            )
 
 
 if __name__ == "__main__":

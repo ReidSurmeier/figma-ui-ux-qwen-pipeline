@@ -211,6 +211,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         provenance={
             "provider": result.provider,
             "prompt_id": result.response.get("request_id"),
+            "reference_sha256": (
+                hashlib.sha256(args.reference[0].read_bytes()).hexdigest()
+                if args.reference
+                else None
+            ),
+            "reference_sha256s": [
+                hashlib.sha256(reference.read_bytes()).hexdigest()
+                for reference in args.reference
+            ],
         },
     )
     print(json.dumps({"output_directory": str(output_directory), **record}, indent=2))

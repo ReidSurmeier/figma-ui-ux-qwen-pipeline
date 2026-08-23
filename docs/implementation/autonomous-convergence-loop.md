@@ -25,6 +25,14 @@ replay the same gesture and visual checkpoint. The route is explicit:
 `revision-required` is therefore an intermediate state, never a successful
 overnight outcome.
 
+For this repository, the project owner has pre-authorized Qwen Image 3 Pro
+Render Passes required by this loop. Do not pause to request per-pass cost
+approval. Run the smallest source-locked batch that can resolve the isolated
+failure, retain the provider's exact charged cost and token usage in
+`run.json`, reject drifting candidates, and continue through assembly and
+runtime replay. Provider ambiguity after submission still fails closed so a
+timeout cannot trigger an accidental duplicate paid request.
+
 ## Loop
 
 ```text

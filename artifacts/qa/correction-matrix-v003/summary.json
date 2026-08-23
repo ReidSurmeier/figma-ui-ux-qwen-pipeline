@@ -2,18 +2,6 @@
   "schema_version": "3.0",
   "reports": [
     {
-      "windowId": "basic-info",
-      "overall": "pass",
-      "controlCoverage": {
-        "total": 11,
-        "contracted": 11,
-        "contractPassed": 11,
-        "contractFailed": [],
-        "uncontracted": []
-      },
-      "failures": []
-    },
-    {
       "windowId": "card",
       "overall": "pass",
       "controlCoverage": {
@@ -176,6 +164,18 @@
         "total": 17,
         "contracted": 17,
         "contractPassed": 17,
+        "contractFailed": [],
+        "uncontracted": []
+      },
+      "failures": []
+    },
+    {
+      "windowId": "basic-info",
+      "overall": "pass",
+      "controlCoverage": {
+        "total": 11,
+        "contracted": 11,
+        "contractPassed": 11,
         "contractFailed": [],
         "uncontracted": []
       },

@@ -84,7 +84,11 @@ export async function captureRuntimeComponentManifest(page) {
       controls: ownedNodes("button, input, [role=tab], [role=option]")
         .filter((node) => node.getBoundingClientRect().width > 0 && node.getBoundingClientRect().height > 0)
         .map((node, index) => {
-          const visualComponent = node.getAttribute("data-visual-component");
+          const ownedVisual = node.matches("[data-component-id]")
+            ? node
+            : node.querySelector("[data-component-id]");
+          const visualComponent = node.getAttribute("data-visual-component")
+            || ownedVisual?.getAttribute("data-component-id");
           const minimizeEndpoint = node.getAttribute("data-minimize-endpoint");
           const closeWindow = node.getAttribute("data-close-window");
           return {

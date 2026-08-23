@@ -10,7 +10,15 @@
         "prototype/e2e/options-semantic.spec.ts"
       ]
     },
-    { "id": "basic-info", "status": "pending-benchmark-replay" },
+    {
+      "id": "basic-info",
+      "status": "benchmark-pass",
+      "evidence": [
+        "artifacts/qa/basic-info/correction-replay-v003.json",
+        "artifacts/qa/godot-stagehand-v001/report.json",
+        "godot/tests/options_web.spec.mjs"
+      ]
+    },
     { "id": "card", "status": "pending-benchmark-replay" },
     { "id": "skills", "status": "pending-benchmark-replay" },
     { "id": "status", "status": "pending-benchmark-replay" },

@@ -1,0 +1,44 @@
+[TASK]
+Repair the Basic Info clean-plate title surface only. In the exact Japanese 基本情報 reference, remove the left title icon, all 基本情報 title glyphs, and the single right title button. Reconstruct the pale source-matched blue title gradient beneath those three foreground regions while leaving every other source pixel unchanged.
+
+[REFERENCE ROLE]
+Reference image 1 is a deterministic 2:1 preparation of the immutable 280 by 120 Basic Info crop: the source occupies x=0..279 and y=0..119, and y=120..139 is a plain review margin. The top 280 by 120 area remains the only UI authority.
+
+[PRESERVATION INVARIANTS]
+- Do not move, resize, redraw, recolor, crop, smooth, or modernize the 280 by 120 source window.
+- Preserve the exact pale title-bar gradient, stepped outer corners, one-pixel border, body, meters, navigation buttons, levels, footer, and Japanese raster character.
+- Pixels outside the three title-foreground rectangles are Exact Copy targets.
+
+[CANVAS AND LAYOUT]
+- Return a 2:1 canvas at 1K resolution matching the prepared reference composition.
+- The source-scale UI occupies x=0..279 and y=0..119. Keep the plain review margin at y=120..139 free of UI content.
+- At source scale, only x=3..13 y=3..13, x=15..54 y=3..14, and x=268..277 y=3..13 may change.
+
+[REGION EDITS]
+- REGION: left title icon
+  CHANGE: Remove the complete icon and continue the immediately surrounding pale blue title gradient through its exact footprint.
+  PRESERVE: left stepped corner; top and bottom title rules; neighboring gradient
+- REGION: Japanese title glyphs
+  CHANGE: Remove every 基本情報 glyph pixel and continue one seamless pale blue gradient with no dark patch, ghost, pseudo-text, or rectangular fill.
+  PRESERVE: glyph origin for later independent reassembly; source title height; local gradient direction
+- REGION: right title control
+  CHANGE: Remove the complete round title button and reconstruct the pale blue surface beneath it without changing the outer endcap.
+  PRESERVE: right stepped corner; outer border; title-bar endcap
+
+[STYLE SYSTEM]
+- Exact source-matched late-1990s Japanese PC RPG raster interface.
+- Hard source-scale pixels, pale blue title chrome, restrained texture, no contemporary UI language.
+
+[ASSET RULES]
+- This is a clean-plate donor only, never a complete runtime screenshot.
+- No title text, pseudo-text, icon, button, white box, dark blue patch, magenta donor pixel, or new decoration may remain in the three edited regions.
+- The later assembly restores the original icon, Japanese title, and right button as separate editable components.
+
+[NEGATIVE CONSTRAINTS]
+- No global redraw, new window, extra margin beyond the prepared review field, smooth typography, blur, glow, shadow, rounded modern card, or palette shift.
+- Do not alter any body label, value, slider, button, progress bar, border, or footer pixel.
+
+[QUALITY GATE]
+- At source scale the three title regions contain a continuous pale blue gradient with no foreground remnant.
+- The reconstructed title tone matches adjacent unchanged title pixels rather than the rejected dark-blue v001 candidate.
+- The top 280 by 120 crop retains exact geometry and accepts the independent original title components without a duplicate or box.

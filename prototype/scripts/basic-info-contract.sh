@@ -28,6 +28,8 @@ for run in \
   [[ "$(jq -r '.status | startswith("selected")' "$run")" == "true" ]]
 done
 
+bash "$REPO_ROOT/scripts/evaluate_basic_info_title_repair_v002.sh"
+
 pink_opaque_count=$(convert "$PLATE" -fx '((a>0)&&(r>0.47)&&(b>0.47)&&(g<0.36))?1:0' -format '%[fx:mean*w*h]' info:)
 [[ "$pink_opaque_count" == "0" ]]
 read -r title_width title_height < <(convert "$COMPONENT_DIR/title-text.png" -alpha extract -trim -format '%w %h\n' info:)

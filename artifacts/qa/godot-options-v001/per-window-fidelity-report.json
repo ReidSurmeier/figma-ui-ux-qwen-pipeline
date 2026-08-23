@@ -1,6 +1,6 @@
 {
   "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
-  "runtimeSha256": "f134aac74b7dacd3dc86a2547595ae127aea83ea14a1ea6705d0cd2cf1f650bc",
+  "runtimeSha256": "a7a811439b6161aa4eb5a92f87857d04733b6c383b6e90dec4ac86daab1a4fa3",
   "acceptedBgmFloor": 0.03668,
   "windows": [
     {
@@ -11,12 +11,12 @@
         280,
         120
       ],
-      "normalizedMae": 0.0435042,
-      "assemblyNormalizedMae": 0.0438556,
+      "normalizedMae": 0.0226557,
+      "assemblyNormalizedMae": 0.0228369,
       "acceptedBgmFloor": 0.03668,
-      "visualStatus": "revision-required",
-      "verificationStatus": "revision-required",
-      "correctionRoute": "qwen-asset-pass"
+      "visualStatus": "meets-bgm-floor",
+      "verificationStatus": "verified",
+      "correctionRoute": null
     },
     {
       "id": "card",
@@ -230,7 +230,6 @@
     }
   ],
   "revisionRequired": [
-    "basic-info",
     "status",
     "inventory",
     "game-menu",

@@ -63,17 +63,33 @@ Party fail before Godot and are routed to `qwen-asset-pass`; this prevents an
 asset-generation defect from being misreported as a Web or engine-rendering
 bug.
 
+The first routed repair ran two OpenRouter Qwen Image 3 Pro candidates at an
+exact recorded cost of `$0.083`. Candidate 01 reduced the Basic Info title
+background MAE from `0.177466` to `0.0399834`; only its bounded title surface
+entered deterministic assembly. The repaired live Godot window now measures
+`0.0226557`, passing the BGM floor, and the remaining generation queue is
+Status, Inventory, Game Menu, Compact Info, and Party.
+
+That repair also exposed stale engine asset copies: the offline assembly passed
+while the exported runtime remained unchanged. `scripts/sync_godot_window_assets.sh`
+now synchronizes and byte-checks all 273 PNG authorities plus the runtime
+manifest before every engine test/export. A detected Qwen fix therefore cannot
+be stranded in the prototype asset tree while Godot silently packages an older
+copy.
+
 The correction replay also passed all 15 windows with zero uncontracted
-controls. The stricter cross-window BGM fidelity promotion remains honest:
-Options is still the only `benchmark-pass` window and the 14 siblings remain
-`revision-required` in `prototype/qa/window-verification.json`. The complete
-Godot desktop is therefore an executable integration ready for review, not a
-claim that every sibling has already earned final visual acceptance.
+controls. After the Qwen title repair, owner-derived control mapping, and fresh
+11-of-11 Basic Info replay, Basic Info is the first sibling promoted to
+`verified`; Options remains `quality-benchmark`, and the other 13 siblings
+remain `revision-required` in `prototype/qa/window-verification.json`. The
+complete Godot desktop is therefore an executable integration ready for review,
+not a claim that every sibling has already earned final visual acceptance.
 
 ## Provenance boundary
 
-The pink desktop is native Godot color, not a crop. Existing Qwen Image 3 Pro
-clean plates and component assets were copied into the engine project with the
-runtime manifest hash preserved. No new image-model Render Pass was necessary
-for this integration; no generated output is represented as deterministic
-code or SVG.
+The pink desktop is native Godot color, not a crop. Qwen Image 3 Pro clean
+plates and component assets are synchronized into the engine project with the
+runtime manifest hash preserved. The Basic Info title repair is retained with
+the exact prompt, provider response metadata, output hashes, reference hash,
+charged cost, and bounded assembly rule; no generated output is represented as
+deterministic code or SVG.

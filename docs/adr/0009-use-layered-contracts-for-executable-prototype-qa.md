@@ -206,7 +206,7 @@ Use a layered QA system with one responsibility per layer:
   timing rather than by counting generated frames.
 - Exploratory AI testing broadens coverage without making the release result
   depend on an irreproducible judgment.
-- Overnight runs must stop on explicit retry, cost, and unresolved-review
+- Overnight runs must stop on explicit retry and unresolved-review
   limits; repeated regeneration is not evidence of convergence.
 - Figma authoring quality, WSL application quality, and game-engine readiness
   receive separate verdicts.
