@@ -180,3 +180,8 @@ settled feedback, changing the selected item invalidates old confirmation, and
 both commit and cancel return to a clean initial state. The semantic contract
 still executes gated controls that are absent from the default enabled-control
 probe.
+
+Menus whose screenshot does not reveal external outcomes are tested only to the
+authorized local boundary: exact row ownership, exclusive settled selection,
+and reversal to ready. A label such as Exit to Windows does not authorize the
+prototype or the test agent to invent an operating-system side effect.

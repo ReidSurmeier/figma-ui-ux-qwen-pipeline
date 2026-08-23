@@ -1033,6 +1033,39 @@
           "rule": "transaction actions do not replace the source title or summary bars"
         }
       ]
+    },
+    {
+      "id": "game-menu-reversible-actions-v001",
+      "window_id": "game-menu",
+      "control_label_patterns": ["^(Return to last save point|Character Select|Exit to Windows|Return to game)$"],
+      "test": {
+        "file": "e2e/game-menu-source.spec.ts",
+        "title": "Every Game Menu action owns its source row, transfers selection, and toggles back to ready",
+        "sha256": "2c478098d71f214538961b29911160291b1cc3e7f2a1a05a6191209dd6e8f040"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [626, 182, 222, 133]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Each source-visible Game Menu action owns its extracted row, transfers exclusive selection, and can be toggled back to the ready state without inventing external side effects."]
+      },
+      "gesture": "trusted pointer clicks visit all four actions and a second click clears the selected final action",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "game-menu-action-*",
+          "rule": "exactly one 193 by 22 source row owns selection and the same row can return the menu to ready"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["game-menu-title-icon", "game-menu-title-text"],
+          "rule": "the Japanese title remains byte-identical through every action transition"
+        }
+      ]
     }
   ]
 }

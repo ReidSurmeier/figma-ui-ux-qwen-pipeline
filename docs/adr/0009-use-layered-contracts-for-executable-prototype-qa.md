@@ -171,6 +171,9 @@ Use a layered QA system with one responsibility per layer:
     complete forward and reversal journey. A confirm control cannot succeed
     before selection, changing selection invalidates prior confirmation, and
     commit or cancel returns the transaction to a clean state.
+42. Menu actions without authorized external destinations stop at reversible
+    local selection feedback. They must not fabricate operating-system exits or
+    navigation, and clicking the selected action again restores the ready state.
 
 ## Consequences
 

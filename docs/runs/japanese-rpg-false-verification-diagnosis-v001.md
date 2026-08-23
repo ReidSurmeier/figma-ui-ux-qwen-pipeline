@@ -119,6 +119,19 @@ settle exact Japanese status. The corrected default replay sees 17 currently
 enabled controls (16 cells plus cancel), all 17 contracted and passed; the
 locked browser test additionally executes the gated OK and Trade controls.
 
+## Game Menu reversible-selection tracer
+
+The initial Game Menu replay found four controls, zero contracts, and generic
+whole-window activity for each. The source action assets measure 193 by 22 at
+x=0; a first test draft incorrectly assumed invented 206-pixel full rows, and
+the measured raster inventory corrected that assumption before implementation.
+All four controls now name their owned raster, transfer exactly one selected
+state, report the source action label, and clear back to `menu ready` when the
+selected action is clicked again. No screenshot-invisible save, character, exit,
+or return destination is fabricated. The isolated replay reports four controls,
+four contracted, four contract-passed, zero uncontracted, and no correction
+failures.
+
 ## First RED tracer
 
 `remaining-source-windows.spec.ts` now includes:
