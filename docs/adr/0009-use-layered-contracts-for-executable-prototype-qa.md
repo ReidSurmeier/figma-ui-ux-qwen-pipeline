@@ -109,6 +109,11 @@ Use a layered QA system with one responsibility per layer:
     crop rectangles, and the independent runtime chrome authority. A generated
     full window with wrong title geometry cannot become a screenshot underlay
     merely because its body artwork is useful.
+27. Behavior not visible in the immutable screenshot requires an explicit
+    `user-authorized-inferred` behavior authority in its semantic contract.
+    Missing or model-only inference fails closed even when the browser test and
+    source hash pass. The report must keep source identity and behavior authority
+    as separate evidence.
 
 ## Consequences
 

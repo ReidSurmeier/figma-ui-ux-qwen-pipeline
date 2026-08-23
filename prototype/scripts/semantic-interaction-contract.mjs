@@ -22,12 +22,14 @@ export function evaluateSemanticInteractionContract(contract, evidence) {
     && results.every(({ status }) => status === "passed" || status === "skipped");
   const testLocked = evidence.testFileSha256 === contract.test.sha256;
   const sourceLocked = evidence.sourceSha256 === contract.source.sha256;
+  const behaviorApproved = !contract.behavior_authority
+    || contract.behavior_authority.approval === "user-authorized-inferred";
   const executableEvidence = browserPassed && testLocked;
   const requirements = {
     realGesture: executableEvidence && /pointer|keyboard/.test(contract.gesture),
     expectedRegionChanged: executableEvidence && contract.expected_region_changes?.length > 0,
     invariantRegionsStable: executableEvidence && contract.invariant_regions?.length > 0,
-    sourceApproved: sourceLocked && contract.source.approval === "immutable-user-owned-source",
+    sourceApproved: sourceLocked && contract.source.approval === "immutable-user-owned-source" && behaviorApproved,
   };
 
   return {
@@ -39,6 +41,8 @@ export function evaluateSemanticInteractionContract(contract, evidence) {
     browserPassed,
     testLocked,
     sourceLocked,
+    behaviorAuthority: contract.behavior_authority ?? { approval: "source-visible" },
+    behaviorApproved,
     requirements,
     passed: Object.values(requirements).every(Boolean),
   };

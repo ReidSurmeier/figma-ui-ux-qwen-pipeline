@@ -46,6 +46,72 @@
           "rule": "navigation pixels remain byte-identical"
         }
       ]
+    },
+    {
+      "id": "basic-info-destination-inventory-v001",
+      "window_id": "basic-info",
+      "control_labels": [
+        "status",
+        "option",
+        "items",
+        "equip",
+        "skill",
+        "map",
+        "chat",
+        "friend"
+      ],
+      "test": {
+        "file": "e2e/basic-info.spec.ts",
+        "title": "every Basic Info page control declares and reaches its source-approved destination",
+        "sha256": "b851a204b695a55c77a59299a952c92216255be0e7c0751487ffc40342207115"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          207,
+          22,
+          70,
+          95
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible Map button opens an inferred source-themed Map destination.",
+          "The source-visible Friend button activates the existing Party friends view."
+        ]
+      },
+      "gesture": "pointer clicks every one of the eight declared Basic Info page controls",
+      "expected_region_changes": [
+        {
+          "window_ids": [
+            "status",
+            "options",
+            "inventory",
+            "equipment",
+            "skills",
+            "map",
+            "chat",
+            "party"
+          ],
+          "rule": "each declared destination becomes visible and rises above Basic Info; friend also selects the Party friends view"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "title-icon",
+            "title-text",
+            "hp-track",
+            "hp-thumb",
+            "sp-track",
+            "sp-thumb"
+          ],
+          "rule": "Basic Info title and meter geometry plus bitmap authority remain unchanged after every destination click"
+        }
+      ]
     }
   ]
 }

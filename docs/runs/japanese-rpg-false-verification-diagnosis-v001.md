@@ -375,6 +375,16 @@ and reopen. This changes the method: conditional destinations must be captured
 after activation, and Qwen candidate selection is allowed at bounded-component
 granularity while complete-window promotion remains explicitly null.
 
+The destination fix was then promoted from three hand-maintained tests to one
+complete metadata-backed inventory contract. The contract asserts all eight
+Basic Info controls, executes every destination, and preserves the title plus
+HP/SP meter authorities. Its inferred Map and Friend behavior is separately
+labeled `user-authorized-inferred`; the evaluator rejects an unapproved
+`model-inferred` label. An isolated autonomous replay reported 11 enabled Basic
+Info controls: exactly 8 contracted and passed, with only minimize, HP, and SP
+remaining uncontracted. The window correctly remains red, proving the new
+coverage does not promote adjacent controls by association.
+
 The same full-coverage run found a correction-runner race at the Options close
 button: the control removed its window between visibility and screenshot calls.
 The runner now waits for activation repaint, retries transiently detached idle

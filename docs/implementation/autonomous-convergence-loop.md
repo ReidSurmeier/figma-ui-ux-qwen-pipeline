@@ -91,3 +91,11 @@ title/body geometry, perimeter contamination, real drag displacement, close,
 and reopen path. Its Qwen selection record must distinguish accepted component
 regions from rejected complete candidates so a useful generated body cannot
 quietly reintroduce a screenshot-underlay architecture.
+
+Navigation controls declare their destination and optional view in runtime
+metadata. A source-locked inventory test enumerates the complete control set,
+executes every declared destination, and locks its test hash into the semantic
+contract manifest. Behavior that cannot be observed in the screenshot is
+eligible only with `user-authorized-inferred`; `model-inferred` is rejected.
+The correction runner may promote only the labels named by that passing locked
+contract, never adjacent controls in the same window.

@@ -56,4 +56,34 @@ describe("semantic interaction contracts", () => {
     expect(Object.values(evaluation.requirements).every(Boolean)).toBe(false);
     expect(evaluation.passed).toBe(false);
   });
+
+  it("accepts a source-locked interaction whose unseen behavior is explicitly user-authorized", () => {
+    const inferred = {
+      ...contract,
+      behavior_authority: {
+        approval: "user-authorized-inferred",
+        scope: ["map destination"],
+      },
+    };
+    expect(evaluateSemanticInteractionContract(inferred, {
+      playwrightReport: passedReport,
+      testFileSha256: "test-sha",
+      sourceSha256: "source-sha",
+    }).requirements.sourceApproved).toBe(true);
+  });
+
+  it("rejects an inferred behavior without a recognized user-authorization label", () => {
+    const inferred = {
+      ...contract,
+      behavior_authority: {
+        approval: "model-inferred",
+        scope: ["map destination"],
+      },
+    };
+    expect(evaluateSemanticInteractionContract(inferred, {
+      playwrightReport: passedReport,
+      testFileSha256: "test-sha",
+      sourceSha256: "source-sha",
+    }).requirements.sourceApproved).toBe(false);
+  });
 });

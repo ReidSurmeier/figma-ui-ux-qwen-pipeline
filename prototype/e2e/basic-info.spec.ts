@@ -95,6 +95,48 @@ test("basic info page buttons activate their corresponding independent source wi
   }
 });
 
+test("every Basic Info page control declares and reaches its source-approved destination", async ({ page }) => {
+  const expected = {
+    status: ["status", ""],
+    option: ["options", ""],
+    items: ["inventory", ""],
+    equip: ["equipment", ""],
+    skill: ["skills", ""],
+    map: ["map", ""],
+    chat: ["chat", ""],
+    friend: ["party", "friends"],
+  } as const;
+
+  await page.goto("/");
+  const inventory = await page.getByRole("region", { name: "基本情報" }).locator(".basic-info-page").evaluateAll((buttons) => buttons.map((button) => ({
+    label: button.getAttribute("aria-label"),
+    destination: (button as HTMLElement).dataset.destinationWindow ?? "",
+    view: (button as HTMLElement).dataset.destinationView ?? "",
+  })));
+  expect(inventory).toHaveLength(Object.keys(expected).length);
+  expect(Object.fromEntries(inventory.map(({ label, destination, view }) => [label, [destination, view]]))).toEqual(expected);
+
+  const invariantIds = ["title-icon", "title-text", "hp-track", "hp-thumb", "sp-track", "sp-thumb"];
+  for (const [label, [destination, view]] of Object.entries(expected)) {
+    await page.goto("/");
+    const basic = page.getByRole("region", { name: "基本情報" });
+    const invariantBefore = await basic.locator(invariantIds.map((id) => `[data-component-id="${id}"]`).join(",")).evaluateAll((nodes) => nodes.map((node) => {
+      const bounds = node.getBoundingClientRect();
+      return { id: node.getAttribute("data-component-id"), bounds: [bounds.x, bounds.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
+    }));
+    await basic.getByRole("button", { name: label, exact: true }).click();
+    const target = page.locator(`[data-window-id="${destination}"]`);
+    await expect(target).toBeVisible();
+    expect(Number(await target.evaluate((element) => getComputedStyle(element).zIndex))).toBeGreaterThan(Number(await basic.evaluate((element) => getComputedStyle(element).zIndex)));
+    if (view) await expect(target.getByRole("button", { name: "友達", exact: true })).toHaveAttribute("aria-pressed", "true");
+    const invariantAfter = await basic.locator(invariantIds.map((id) => `[data-component-id="${id}"]`).join(",")).evaluateAll((nodes) => nodes.map((node) => {
+      const bounds = node.getBoundingClientRect();
+      return { id: node.getAttribute("data-component-id"), bounds: [bounds.x, bounds.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
+    }));
+    expect(invariantAfter, `${label} changed Basic Info title or meter authority`).toEqual(invariantBefore);
+  }
+});
+
 test("friend opens the visible Party friends destination instead of only self-selecting Basic Info", async ({ page }) => {
   await page.goto("/");
   const basic = page.getByRole("region", { name: "基本情報" });

@@ -88,6 +88,8 @@ export function BasicInfoWindow({ zIndex, onActivate, onNavigate }: BasicInfoWin
               className="basic-info-page"
               aria-label={name}
               aria-pressed={page === name}
+              data-destination-window={target}
+              data-destination-view={view}
               style={{ left, top, backgroundImage: `url("${assetRoot}/page-${name}.png")` }}
               onClick={() => {
                 setPage(name);
