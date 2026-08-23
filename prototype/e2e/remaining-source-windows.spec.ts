@@ -454,9 +454,9 @@ test("source-baked selection is visibly cleared before another option is promote
   await expect(party.locator('[role="option"][aria-selected="true"]')).toHaveCount(1);
 
   const inventory = page.getByRole("region", { name: "所持アイテム" });
-  const sourceTab = inventory.getByRole("button", { name: "item", exact: true });
+  const sourceTab = inventory.getByRole("tab", { name: "item", exact: true });
   const tabBefore = await sourceTab.screenshot();
-  await inventory.getByRole("button", { name: "equip", exact: true }).click();
+  await inventory.getByRole("tab", { name: "equip", exact: true }).click();
   expect((await sourceTab.screenshot()).equals(tabBefore)).toBe(false);
   await expect(inventory.locator('.inventory-source-tab[aria-pressed="true"]')).toHaveCount(1);
 });

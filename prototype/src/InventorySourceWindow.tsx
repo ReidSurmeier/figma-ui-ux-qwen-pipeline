@@ -14,12 +14,22 @@ export function InventorySourceWindow({ zIndex, onActivate, open, onClose }: Inv
 
   return (
     <SourceWindow id="inventory" title="所持アイテム" initialPosition={{ x: 0, y: 247 }} width={280} height={137} titleWidth={120} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} open={open} onClose={onClose}>
-      {tabs.map((name, index) => (
-        <button key={name} type="button" className="inventory-source-tab" aria-label={name} aria-pressed={tab === name} data-source-selected={index === 0} style={{ left: 5, top: 18 + index * 35 }} onClick={() => { setTab(name); setSelected(0); }}>
-          <SourceRaster id={`inventory-tab-${name}`} file={`${assetRoot}/components/tab-${name}`} style={{ inset: 0 }} />
-        </button>
-      ))}
-      <div className="inventory-source-viewport">
+      <div className="inventory-source-tabs" role="tablist" aria-label="所持品カテゴリ">
+        {tabs.map((name, index) => (
+          <button key={name} id={`inventory-tab-${name}`} type="button" role="tab" className="inventory-source-tab" aria-label={name} aria-selected={tab === name} aria-pressed={tab === name} aria-controls="inventory-active-panel" tabIndex={tab === name ? 0 : -1} data-source-selected={index === 0} style={{ left: 5, top: 18 + index * 35 }} onClick={() => { setTab(name); setSelected(0); }} onKeyDown={(event) => {
+            if (!["ArrowDown", "ArrowUp"].includes(event.key)) return;
+            event.preventDefault();
+            const offset = event.key === "ArrowDown" ? 1 : -1;
+            const next = tabs[(index + offset + tabs.length) % tabs.length];
+            setTab(next);
+            setSelected(0);
+            event.currentTarget.parentElement?.querySelector<HTMLButtonElement>(`#inventory-tab-${next}`)?.focus();
+          }}>
+            <SourceRaster id={`inventory-tab-${name}`} file={`${assetRoot}/components/tab-${name}`} style={{ inset: 0 }} />
+          </button>
+        ))}
+      </div>
+      <div id="inventory-active-panel" className="inventory-source-viewport" role="tabpanel" aria-label={tab} aria-labelledby={`inventory-tab-${tab}`}>
         <div className="inventory-source-grid" style={{ transform: `translateY(${-Math.round(scroll * 0.12)}px)` }}>
           {Array.from({ length: visibleCount }, (_, index) => {
             const row = Math.floor(index / 7);
@@ -36,7 +46,7 @@ export function InventorySourceWindow({ zIndex, onActivate, open, onClose }: Inv
       <SourceRaster id="inventory-scroll-track" file={`${assetRoot}/components/scroll-track`} style={{ left: 263, top: 35, width: 17, height: 66 }} />
       <SourceRaster id="inventory-scroll-thumb" className="inventory-source-thumb" file={`${assetRoot}/components/scroll-thumb`} style={{ left: 263, top: 31 + Math.round(scroll * 0.19), width: 17, height: 51 }} />
       <SourceRaster id="inventory-scroll-down" file={`${assetRoot}/components/scroll-down`} style={{ left: 263, top: 101, width: 17, height: 18 }} />
-      <input className="inventory-source-scroll" aria-label="所持品スクロール" type="range" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />
+      <input className="inventory-source-scroll" aria-label="所持品スクロール" data-visual-component="inventory-scroll-thumb" type="range" min="0" max="100" step="1" value={scroll} onInput={(event) => setScroll(event.currentTarget.valueAsNumber)} onChange={(event) => setScroll(event.currentTarget.valueAsNumber)} />
       <SourceRaster id="inventory-resize-grip" file={`${assetRoot}/components/resize-grip`} style={{ left: 263, top: 119, width: 17, height: 18 }} />
       <output className="sr-only" role="status">{tab} item {selected + 1} scroll {scroll}</output>
     </SourceWindow>

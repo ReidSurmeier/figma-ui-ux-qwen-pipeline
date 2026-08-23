@@ -118,3 +118,10 @@ absences. For Status this means five 11 by 11 increment controls and no invented
 Int increment. Each sibling must change only its own local value region while
 all other rows and the derived column remain pixel-identical. One working Str
 button cannot grant Agi, Vit, Dex, or Luk by association.
+
+Dynamic families use anchored `control_label_patterns` only after a locked test
+executes every reachable member. Inventory therefore tests 42 cells across all
+three categories even though the default correction probe sees 21. Its category
+controls are real vertical tabs with wrapped ArrowUp/ArrowDown traversal, so an
+agent can discover secondary views through the public accessibility interface
+instead of guessing from raster appearance.

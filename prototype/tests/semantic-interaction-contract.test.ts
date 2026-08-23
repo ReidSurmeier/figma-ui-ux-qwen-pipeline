@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { evaluateSemanticInteractionContract } from "../scripts/semantic-interaction-contract.mjs";
+import { evaluateSemanticInteractionContract, semanticContractForControl } from "../scripts/semantic-interaction-contract.mjs";
 
 const contract = {
   id: "bottom-bar-real-drag",
@@ -29,6 +29,18 @@ const passedReport = {
 };
 
 describe("semantic interaction contracts", () => {
+  it("matches one locked semantic contract to a dynamic control-label family", () => {
+    const dynamic = {
+      windowId: "inventory",
+      controlLabels: [],
+      controlLabelPatterns: ["^item item \\d+$"],
+      passed: true,
+    };
+    expect(semanticContractForControl([dynamic], "inventory", "item item 21")).toBe(dynamic);
+    expect(semanticContractForControl([dynamic], "inventory", "equip item 1")).toBeNull();
+    expect(semanticContractForControl([dynamic], "status", "item item 21")).toBeNull();
+  });
+
   it("derives all classifier requirements only from locked passing evidence", () => {
     expect(evaluateSemanticInteractionContract(contract, {
       playwrightReport: passedReport,

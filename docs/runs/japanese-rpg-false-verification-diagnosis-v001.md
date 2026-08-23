@@ -425,6 +425,30 @@ reload. The next isolated replay reports 7 enabled controls, 7 contracted,
 Info, this is browser/correction completion pending the separate fresh Figma
 parity gate.
 
+## Inventory dynamic-control tracer
+
+The initial isolated Inventory replay found 27 enabled controls, zero contracts,
+and no direct default-state behavior defect: every visible control produced real
+state or visual evidence, the scrollbar exposed nine distinct visuals and exact
+endpoints, and minimize exposed 14 geometry states. The confirmed QA defect was
+structural. Exact-label contracts could not represent dynamic cell families,
+and visual category buttons exposed no tablist/tab/tabpanel interface for an
+agent to traverse beyond the default item view.
+
+The semantic-contract matcher now supports anchored label patterns and rejects
+multiple matching contracts. Inventory exposes real vertical tab semantics with
+wrapped keyboard traversal. A locked browser journey clicks all 42 reachable
+cells across item, equip, and etc and proves exclusive selection after every
+click; the regex does not grant unvisited siblings. A stronger real-scroll test
+samples nine pointer positions, proves more than four body states, asserts one
+thumb at the exact 31/50 endpoints, and keeps the complete header byte-identical
+at every value. Generated minimize/restore and close/Basic-Info-reopen receive
+separate lifecycle contracts.
+
+The next isolated replay reports 27 visible enabled controls, 27 contracted,
+27 contract-passed, zero uncontracted, and no correction failures. This is the
+third browser/correction-complete window, still pending fresh Figma parity.
+
 The same full-coverage run found a correction-runner race at the Options close
 button: the control removed its window between visibility and screenshot calls.
 The runner now waits for activation repaint, retries transiently detached idle

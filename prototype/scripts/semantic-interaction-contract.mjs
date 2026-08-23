@@ -15,6 +15,15 @@ function findSpec(suites, file, title) {
   return null;
 }
 
+export function semanticContractForControl(evaluations, windowId, label) {
+  const matches = evaluations.filter((evaluation) => evaluation.windowId === windowId && (
+    evaluation.controlLabels?.includes(label)
+    || evaluation.controlLabelPatterns?.some((pattern) => new RegExp(pattern, "u").test(label))
+  ));
+  if (matches.length > 1) throw new Error(`Duplicate semantic interaction contract for ${windowId}::${label}`);
+  return matches[0] ?? null;
+}
+
 export function evaluateSemanticInteractionContract(contract, evidence) {
   const spec = findSpec(evidence.playwrightReport?.suites, contract.test.file.split("/").at(-1), contract.test.title);
   const results = spec?.tests?.flatMap((test) => test.results ?? []) ?? [];
@@ -36,6 +45,7 @@ export function evaluateSemanticInteractionContract(contract, evidence) {
     id: contract.id,
     windowId: contract.window_id,
     controlLabels: contract.control_labels,
+    controlLabelPatterns: contract.control_label_patterns ?? [],
     test: contract.test,
     source: contract.source,
     browserPassed,

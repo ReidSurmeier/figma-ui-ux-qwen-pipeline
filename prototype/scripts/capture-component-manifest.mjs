@@ -23,6 +23,7 @@ export async function captureRuntimeComponentManifest(page) {
       return url.pathname;
     };
 
+    const cleanPlate = window.dataset.cleanPlate;
     return {
       id: window.dataset.windowId,
       ariaLabel: window.getAttribute("aria-label"),
@@ -32,7 +33,7 @@ export async function captureRuntimeComponentManifest(page) {
         width: Math.round(root.width * 100) / 100,
         height: Math.round(root.height * 100) / 100,
       },
-      cleanPlate: window.dataset.cleanPlate,
+      ...(cleanPlate ? { cleanPlate } : {}),
       components: [...window.querySelectorAll("[data-component-id]")].map((node) => ({
         id: node.dataset.componentId,
         assetPath: assetPath(node),

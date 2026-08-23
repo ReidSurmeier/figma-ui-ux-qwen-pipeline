@@ -125,6 +125,13 @@ Use a layered QA system with one responsibility per layer:
     not private state that makes a previously valid navigation control dead.
     Adding this requirement invalidates an earlier passing navigation contract
     until the complete close-to-reopen journey is green.
+30. Dynamic control families may use anchored semantic label patterns only when
+    one locked public-interface test exercises every reachable member. Pattern
+    matching is a coverage mechanism, not permission to infer sibling behavior;
+    overlapping exact or pattern contracts fail as duplicates.
+31. Source-visible category controls expose real tablist, tab, and tabpanel
+    semantics plus wrapped vertical keyboard traversal. A default-tab screenshot
+    cannot prove that secondary categories or their descendants are reachable.
 
 ## Consequences
 

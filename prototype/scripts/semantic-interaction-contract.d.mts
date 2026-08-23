@@ -8,6 +8,7 @@ export interface SemanticContractEvaluation {
   id: string;
   windowId: string;
   controlLabels: string[];
+  controlLabelPatterns: string[];
   browserPassed: boolean;
   testLocked: boolean;
   sourceLocked: boolean;
@@ -19,6 +20,16 @@ export interface SemanticContractEvaluation {
   };
   passed: boolean;
 }
+
+export function semanticContractForControl<T extends {
+  windowId: string;
+  controlLabels?: string[];
+  controlLabelPatterns?: string[];
+}>(
+  evaluations: T[],
+  windowId: string,
+  label: string,
+): T | null;
 
 export function evaluateSemanticInteractionContract(
   contract: Record<string, any>,

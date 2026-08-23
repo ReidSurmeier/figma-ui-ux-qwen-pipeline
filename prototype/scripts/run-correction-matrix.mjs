@@ -7,7 +7,7 @@ import { chromium } from "playwright";
 import { classifyInteractionProbe } from "./classify-interaction-probe.mjs";
 import { correctionMatrixOutputConfig, selectedCorrectionMatrixWindows } from "./correction-matrix-config.mjs";
 import { rangeGesturePoint } from "./range-gesture-geometry.mjs";
-import { executeSemanticInteractionContracts } from "./semantic-interaction-contract.mjs";
+import { executeSemanticInteractionContracts, semanticContractForControl } from "./semantic-interaction-contract.mjs";
 
 const prototypeDir = resolve(import.meta.dirname, "..");
 const repoDir = resolve(prototypeDir, "..");
@@ -29,14 +29,6 @@ await rm(evidenceRoot, { recursive: true, force: true });
 await mkdir(evidenceRoot, { recursive: true });
 const semanticRun = executeSemanticInteractionContracts({ contracts: semanticContracts, prototypeDir, repoDir });
 await writeFile(resolve(evidenceRoot, "semantic-contract-playwright.json"), `${JSON.stringify(semanticRun.report, null, 2)}\n`);
-const semanticByControl = new Map();
-for (const evaluation of semanticRun.evaluations) {
-  for (const label of evaluation.controlLabels) {
-    const key = `${evaluation.windowId}::${label}`;
-    if (semanticByControl.has(key)) throw new Error(`Duplicate semantic interaction contract for ${key}`);
-    semanticByControl.set(key, evaluation);
-  }
-}
 const sourceContracts = ["contract-check.sh", "remaining-window-contract.sh"].map((script) => {
   const outcome = spawnSync("bash", [resolve(prototypeDir, "scripts", script)], { cwd: prototypeDir, encoding: "utf8" });
   return {
@@ -179,7 +171,7 @@ async function probeControls(page, windowId, windowDir) {
     const visualDown = downHash !== idleHash;
     const visualSettled = settledHash !== idleHash;
     const alreadySelected = beforeState.ariaPressed === "true" || beforeState.ariaSelected === "true";
-    const semanticContract = semanticByControl.get(`${windowId}::${descriptor.label}`) ?? null;
+    const semanticContract = semanticContractForControl(semanticRun.evaluations, windowId, descriptor.label);
     const classification = classifyInteractionProbe({ visualDown, visualSettled, stateChanged, alreadySelected }, semanticContract?.requirements);
     const probe = { ...descriptor, idleHash, downHash, settledHash, visualDown, visualSettled, stateChanged, alreadySelected, semanticContract, ...classification, beforeState, afterState };
     probes.push(probe);

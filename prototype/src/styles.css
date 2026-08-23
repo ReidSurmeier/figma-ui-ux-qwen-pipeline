@@ -99,7 +99,9 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .status-source-value-patch { position: absolute; z-index: 4; left: 54px; top: 8px; width: 7px; height: 10px; overflow: hidden; padding: 0; border: 0; background-image: var(--source-clean-plate); background-size: 280px 126px; color: transparent; }
 .status-source-value-patch > span { position: absolute; left: 1px; top: 3px; width: 5px; height: 7px; background-image: url("/assets/japanese-rpg-v001/status/components/primary-row-0.png"); background-position: -55px -11px; }
 
+.inventory-source-tabs { position: absolute; z-index: 5; inset: 0; pointer-events: none; }
 .inventory-source-tab { position: absolute; z-index: 5; width: 29px; height: 35px; padding: 0; border: 0; background: transparent; }
+.inventory-source-tab { pointer-events: auto; }
 .inventory-source-tab:active { filter: brightness(0.72); }
 .inventory-source-tab[aria-pressed="true"] { box-shadow: inset 2px 0 #548cb9; }
 .inventory-source-tab[data-source-selected="true"][aria-pressed="false"] .source-raster { filter: grayscale(0.88) brightness(1.16) contrast(0.82); }

@@ -1660,7 +1660,7 @@
         },
         {
           "id": "item",
-          "role": "button",
+          "role": "tab",
           "geometry": {
             "x": 5,
             "y": 18,
@@ -1670,7 +1670,7 @@
         },
         {
           "id": "equip",
-          "role": "button",
+          "role": "tab",
           "geometry": {
             "x": 5,
             "y": 53,
@@ -1680,7 +1680,7 @@
         },
         {
           "id": "etc",
-          "role": "button",
+          "role": "tab",
           "geometry": {
             "x": 5,
             "y": 88,

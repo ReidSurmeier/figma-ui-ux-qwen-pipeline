@@ -338,6 +338,160 @@
           "rule": "the restored window has the exact pre-close geometry and ordered independent component inventory"
         }
       ]
+    },
+    {
+      "id": "inventory-complete-tab-inventory-v001",
+      "window_id": "inventory",
+      "control_labels": ["item", "equip", "etc"],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [0, 247, 280, 137]
+      },
+      "gesture": "trusted pointer click activates each source-visible category tab and its labeled tabpanel",
+      "expected_region_changes": [
+        {
+          "component_ids": ["inventory-tab-item", "inventory-tab-equip", "inventory-tab-etc"],
+          "rule": "selection transfers among all three tabs and exposes complete 21, 14, and 7 cell inventories"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["inventory-title-icon", "inventory-title-text", "inventory-scroll-up", "inventory-scroll-track", "inventory-scroll-down"],
+          "rule": "window title and scroll chrome remain independent and unchanged across tab visits"
+        }
+      ]
+    },
+    {
+      "id": "inventory-all-cell-selection-v001",
+      "window_id": "inventory",
+      "control_labels": [],
+      "control_label_patterns": ["^(?:item|equip|etc) item \\d+$"],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "every reachable Inventory cell independently owns selection in all three categories",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [36, 266, 227, 102]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."]
+      },
+      "gesture": "trusted pointer click visits every one of the 42 reachable cells across item, equip, and etc",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "inventory-cell-*",
+          "rule": "after each click exactly that one cell owns the selected state"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["all non-selected inventory cells"],
+          "rule": "no adjacent or prior cell retains semantic selection"
+        }
+      ]
+    },
+    {
+      "id": "inventory-real-scroll-v001",
+      "window_id": "inventory",
+      "control_labels": ["所持品スクロール"],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [36, 265, 244, 103]
+      },
+      "gesture": "keyboard Home, nine real vertical pointer positions, and keyboard End",
+      "expected_region_changes": [
+        {
+          "component_id": "inventory-scroll-thumb",
+          "rule": "one independent thumb follows the exact 31 to 50 source endpoints while the clipped body exposes more than four states"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["inventory-title-icon", "inventory-title-text"],
+          "rule": "the complete 263 by 18 header remains byte-identical at every sampled scroll value"
+        }
+      ]
+    },
+    {
+      "id": "inventory-generated-minimize-v001",
+      "window_id": "inventory",
+      "control_labels": ["所持アイテムを最小化"],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [0, 247, 280, 137]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["The source-visible minimize control transitions to the separately generated compact endpoint and restores Inventory."]
+      },
+      "gesture": "trusted pointer click minimizes with complete transition sampling and a second pointer click restores",
+      "expected_region_changes": [
+        {
+          "component_id": "inventory-minimized-plate",
+          "rule": "more than four geometry steps settle at 180 by 18 and restore exactly to 280 by 137"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["inventory-title-icon", "inventory-title-text"],
+          "rule": "title geometry and bitmap authority remain unchanged in the compact endpoint"
+        }
+      ]
+    },
+    {
+      "id": "inventory-close-and-reopen-v001",
+      "window_id": "inventory",
+      "control_labels": ["所持アイテムを閉じる"],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [0, 247, 280, 137]
+      },
+      "gesture": "trusted pointer click closes Inventory and a trusted Basic Info items click restores it without reload",
+      "expected_region_changes": [
+        {
+          "window_id": "inventory",
+          "rule": "the Inventory region is removed and then becomes visible through its source navigation control"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["all inventory runtime components"],
+          "rule": "the restored window has exact pre-close geometry and ordered independent component inventory"
+        }
+      ]
     }
   ]
 }
