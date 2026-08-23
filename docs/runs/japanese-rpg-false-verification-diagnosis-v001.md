@@ -96,6 +96,17 @@ over DOM state and hashes.
 7. Each state screenshot must receive a focused semantic visual review before
    its finding is promoted into a deterministic gate.
 
+## Current non-reproduction evidence
+
+The reported Exchange-window failures (missing summary bars and icon hit maps
+offset by a wide margin) no longer reproduce at the current runtime. The
+summary strip is pixel-identical to its source-locked component, and real
+`elementFromPoint` samples 1.5 CSS pixels to both sides of all fourteen
+horizontal item boundaries and all eight vertical row boundaries resolve to
+the expected adjacent item buttons. This is retained as the Playwright contract
+`Exchange preserves its source summary bars and exact adjacent item hit
+boundaries`; no speculative Exchange visual repair was made.
+
 ## First RED tracer
 
 `remaining-source-windows.spec.ts` now includes:

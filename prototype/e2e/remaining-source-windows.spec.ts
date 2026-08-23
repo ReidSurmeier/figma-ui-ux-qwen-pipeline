@@ -24,6 +24,18 @@ function darkGlyphMaskSignature(image: Buffer) {
   ], { input: image, encoding: "utf8" }).trim();
 }
 
+function normalizedPixelDifference(first: string, second: string) {
+  return Number(execFileSync("convert", [
+    first,
+    second,
+    "-compose", "difference",
+    "-composite",
+    "-colorspace", "gray",
+    "-format", "%[fx:mean]",
+    "info:",
+  ], { encoding: "utf8" }).trim());
+}
+
 const windows = [
   { name: "ソルジャースケルトンカード", id: "card", minimumComponents: 10 },
   { name: "スキルリスト", id: "skills", minimumComponents: 18 },
@@ -298,6 +310,54 @@ test("Party selection moves the source blue focus highlight to the chosen member
     expect(secondBlueAfter, "Sebas did not receive a source-sized selected-row highlight").toBeGreaterThan(200);
     await expect(first).toHaveAttribute("aria-selected", "false");
     await expect(second).toHaveAttribute("aria-selected", "true");
+  } finally {
+    rmSync(evidenceDir, { recursive: true, force: true });
+  }
+});
+
+test("Exchange preserves its source summary bars and exact adjacent item hit boundaries", async ({ page }) => {
+  await page.goto("/");
+  const exchange = page.getByRole("region", { name: "交換ウィンドウ: ANRI" });
+  await exchange.dispatchEvent("pointerdown");
+  const evidenceDir = mkdtempSync(join(tmpdir(), "exchange-bars-"));
+
+  try {
+    const summaryPath = join(evidenceDir, "summary.png");
+    await exchange.locator('[data-component-id="exchange-summary"]').screenshot({ path: summaryPath });
+    expect(normalizedPixelDifference(
+      "public/assets/japanese-rpg-v001/exchange/components/summary.png",
+      summaryPath,
+    )).toBe(0);
+
+    const bounds = await exchange.boundingBox();
+    if (!bounds) throw new Error("Exchange hit-map geometry is unavailable");
+    for (const row of [0, 1]) {
+      const y = bounds.y + 19 + row * 34 + 17;
+      for (let boundary = 1; boundary < 8; boundary += 1) {
+        const x = bounds.x + 5 + boundary * 34;
+        const ownership = await page.evaluate(({ leftX, rightX, y }) => {
+          const labelAt = (x: number) => document.elementFromPoint(x, y)?.closest("button")?.getAttribute("aria-label");
+          return [labelAt(leftX), labelAt(rightX)];
+        }, { leftX: x - 1.5, rightX: x + 1.5, y });
+        expect(ownership).toEqual([
+          `交換アイテム ${row * 8 + boundary}`,
+          `交換アイテム ${row * 8 + boundary + 1}`,
+        ]);
+      }
+    }
+
+    const verticalBoundaryY = bounds.y + 53;
+    for (let column = 0; column < 8; column += 1) {
+      const x = bounds.x + 5 + column * 34 + 17;
+      const ownership = await page.evaluate(({ x, topY, bottomY }) => {
+        const labelAt = (y: number) => document.elementFromPoint(x, y)?.closest("button")?.getAttribute("aria-label");
+        return [labelAt(topY), labelAt(bottomY)];
+      }, { x, topY: verticalBoundaryY - 1.5, bottomY: verticalBoundaryY + 1.5 });
+      expect(ownership).toEqual([
+        `交換アイテム ${column + 1}`,
+        `交換アイテム ${column + 9}`,
+      ]);
+    }
   } finally {
     rmSync(evidenceDir, { recursive: true, force: true });
   }
