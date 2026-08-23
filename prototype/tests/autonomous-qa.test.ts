@@ -222,6 +222,27 @@ describe("human-correction replay after deterministic verification", () => {
     ]));
   });
 
+  it("keeps rejected Compact Info Qwen plates out of the runtime", async () => {
+    const { readFile } = await import("node:fs/promises");
+    const { resolve } = await import("node:path");
+    const selection = JSON.parse(await readFile(resolve("..", "artifacts/runs/japanese-compact-info-clean-plate-v002-selection.json"), "utf8")) as {
+      model: string;
+      provider: string;
+      status: string;
+      promoted_candidate: string | null;
+      runtime_asset_changed: boolean;
+      rejected_candidates: Array<{ candidates: number[]; reason: string }>;
+    };
+
+    expect(selection.model).toBe("qwen/qwen-image-3-pro");
+    expect(selection.provider).toBe("alibaba");
+    expect(selection.status).toBe("all-new-candidates-rejected");
+    expect(selection.promoted_candidate).toBeNull();
+    expect(selection.runtime_asset_changed).toBe(false);
+    expect(selection.rejected_candidates).toHaveLength(2);
+    expect(selection.rejected_candidates.every(({ candidates, reason }) => candidates.length === 4 && reason.length > 40)).toBe(true);
+  });
+
   it("requires shared source-window minimize motion to expose more than four geometry steps", async () => {
     const { readFile } = await import("node:fs/promises");
     const { resolve } = await import("node:path");

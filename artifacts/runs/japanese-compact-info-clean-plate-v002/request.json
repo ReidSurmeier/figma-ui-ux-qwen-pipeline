@@ -1,0 +1,29 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nCorrect the geometry of an already empty Compact Info clean plate. Keep it completely empty while changing its upper/lower band boundary from the generic 18-pixel position to the source's exact 16-pixel position.\n\n[REFERENCE ROLE]\nReference image 1 is the current empty Qwen-derived 281 by 35 clean plate and is the semantic authority: preserve its complete absence of text, icons, numbers, and controls. Reference image 2 is the immutable source crop and is geometry/palette authority only: match its 16-pixel blue upper band, 19-pixel off-white lower band, one-pixel rules, and shallow stepped edge without copying any foreground.\n\n[PRESERVATION INVARIANTS]\n- The top-left donor remains exactly 281 by 35 source pixels rendered at four times scale as 1124 by 140 pixels.\n- Keep the donor completely empty as in reference image 1.\n- Place the band boundary at source y=16 exactly; the upper band is y=0..15 and the lower band is y=16..34.\n- Match reference image 2's compact blue-grey and off-white surfaces, hard one-pixel rules, and shallow stepped side edge.\n\n[CANVAS AND LAYOUT]\n- Return exactly 1124 by 512 pixels. The donor is x=0..1123, y=0..139. Everything below y=139 is a flat neutral white review field.\n- Do not add margin above or beside the donor.\n\n[REGION EDITS]\n- REGION: empty two-band shell\n  CHANGE: Preserve the empty surfaces from reference image 1, shorten the blue upper band to 16 source pixels, extend the off-white lower band to 19 source pixels, and match the source compact edge and divider.\n  PRESERVE: no semantic foreground; 281 by 35 donor bounds; pixel-scale hard rules\n\n[STYLE SYSTEM]\n- Exact source-matched late-1990s Japanese desktop RPG raster UI\n- Empty compact blue-grey and off-white background surfaces only\n\n[ASSET RULES]\n- Exactly one empty 281 by 35 donor.\n- Zero text, icons, badges, numbers, meters, labels, pseudo-text, or foreground controls.\n\n[NEGATIVE CONSTRAINTS]\n- No SakumaRiri, Lv, Acolyte, Exp, HP, SP, currency, Japanese or Latin glyphs, numbers, circular icons, controls, magenta, duplicate strip, standard 18-pixel title band, modern card, rounded contemporary design, shadow, glass, or antialiasing.\n\n[QUALITY GATE]\n- The output donor contains no recognizable foreground at four-times scale.\n- At source scale the band boundary is exactly y=16.\n- The donor is crop-safe at x=0..280 and y=0..34."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 4,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083442,
+    "size": "1124*512",
+    "watermark": false
+  }
+}

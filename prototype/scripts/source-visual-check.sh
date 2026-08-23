@@ -40,7 +40,7 @@ convert "$REPO_DIR/benchmarks/japanese-rpg-options-v001/regions/party/reference.
 convert "$EVIDENCE/party.png" -crop 160x154+0+0 +repage "$WORK_DIR/party-actual.png"
 masked_mae party "$WORK_DIR/party-source.png" "$WORK_DIR/party-actual.png" 0.055
 convert "$REFERENCE" -crop 281x35+568+314 +repage "$WORK_DIR/compact-source.png"
-masked_mae compact-info "$WORK_DIR/compact-source.png" "$EVIDENCE/compact-info.png" 0.200
+masked_mae compact-info "$WORK_DIR/compact-source.png" "$EVIDENCE/compact-info.png" 0.050
 convert "$REFERENCE" -crop 600x21+0+538 +repage "$WORK_DIR/bottom-source.png"
 masked_mae bottom-bar "$WORK_DIR/bottom-source.png" "$EVIDENCE/bottom-bar.png" 0.001
 convert "$REFERENCE" -crop 245x41+604+523 +repage "$WORK_DIR/notification-source.png"

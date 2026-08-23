@@ -320,6 +320,28 @@ test("compact HP and SP remain source-faithful readouts rather than invisible sl
   await expect(compact.locator('[data-component-id="compact-sp"]')).toBeVisible();
 });
 
+test("Compact Info uses its source 16-pixel band and exact readout rows", async ({ page }) => {
+  await page.goto("/");
+  const compact = page.getByRole("region", { name: "簡易情報" });
+  const bounds = await compact.boundingBox();
+  if (!bounds) throw new Error("Compact Info geometry is unavailable");
+  for (const [componentId, expected] of [
+    ["compact-info-title-icon", { x: 3, y: 4, width: 13, height: 13 }],
+    ["compact-info-title-text", { x: 16, y: 4, width: 100, height: 13 }],
+    ["compact-levels", { x: 116, y: 4, width: 164, height: 13 }],
+    ["compact-hp", { x: 16, y: 20, width: 126, height: 15 }],
+    ["compact-sp", { x: 142, y: 20, width: 138, height: 15 }],
+  ] as const) {
+    const component = await compact.locator(`[data-component-id="${componentId}"]`).boundingBox();
+    expect(component).toMatchObject({
+      x: bounds.x + expected.x,
+      y: bounds.y + expected.y,
+      width: expected.width,
+      height: expected.height,
+    });
+  }
+});
+
 test("source-baked selection is visibly cleared before another option is promoted", async ({ page }) => {
   await page.goto("/");
 

@@ -1,0 +1,29 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nCreate an empty clean plate for the exact 281 by 35 Japanese RPG Compact Info strip. Remove all text, icons, level copy, HP/SP copy, numbers, and meters while preserving its unusually shallow source geometry. This is a background-reconstruction pass, not a redesign.\n\n[REFERENCE ROLE]\nReference image 1 is the immutable 281 by 35 source crop and defines the exact two-band shell, 16-pixel upper band, 19-pixel lower band, stepped edge, pixel density, palette, and one-pixel rules. Reference image 2 is the current layered runtime and confirms the exact canvas and component positions, but its generic background plate is not authority.\n\n[PRESERVATION INVARIANTS]\n- Keep an exact 281 by 35 compact strip at the top-left of the output, rendered four times larger as 1124 by 140 pixels.\n- Keep the source upper band exactly 16 source pixels high and the lower information band from source y=16 through y=34.\n- Keep the late-1990s Japanese desktop-game raster palette, hard aliased one-pixel rules, shallow stepped left and right ends, and locally continuous blue and off-white surfaces.\n- Do not reinterpret this as a standard 18-pixel-title window.\n\n[CANVAS AND LAYOUT]\n- Return exactly 1124 by 512 pixels. The only UI donor occupies x=0..1123 and y=0..139; fill y=140..511 with a flat neutral white review field.\n- Do not add margin above or beside the donor, neighboring windows, magenta desktop, labels, legends, or a second strip.\n\n[REGION EDITS]\n- REGION: upper compact band\n  CHANGE: Remove the circular title icon, SakumaRiri name, class/level/experience copy, percentage, and right circular icon. Continue the local pale blue compact surface and its one-pixel rules beneath every removed glyph.\n  PRESERVE: source y=0..15 band height; upper border and divider; stepped side edges\n- REGION: lower readout band\n  CHANGE: Remove HP, SP, all numeric values, separators, and currency copy. Reconstruct the uninterrupted off-white source surface and its bottom rule.\n  PRESERVE: source y=16..34 band height; upper separator; bottom stepped edge\n\n[STYLE SYSTEM]\n- Exact source-matched Japanese late-1990s desktop RPG raster UI\n- Hard source-scale pixels, shallow blue-grey chrome, off-white information surface, and no contemporary styling\n\n[ASSET RULES]\n- Exactly one empty 281 by 35 compact background donor at four times source scale.\n- No semantic foreground or pseudo-text may remain anywhere in the donor.\n\n[NEGATIVE CONSTRAINTS]\n- No readable text, pseudo-Japanese, Latin letters, numbers, icons, circular badges, HP, SP, meters, currency, magenta, duplicate strip, standard 18-pixel title bar, modern card, rounded contemporary corners, shadow, glass, antialiasing, or global screenshot redraw.\n\n[QUALITY GATE]\n- At source scale the upper-to-lower boundary remains at y=16, not y=18.\n- The top-left donor is exactly 281 by 35 and every removed component reveals a locally continuous background.\n- No foreground glyph, number, icon, or donor-magenta pixel survives."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 4,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083441,
+    "size": "1124*512",
+    "watermark": false
+  }
+}

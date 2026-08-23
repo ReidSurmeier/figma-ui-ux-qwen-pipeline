@@ -189,3 +189,20 @@ resolved edge, exposes more than four width samples during the stepped motion,
 and restores to a byte-identical expanded window. These are now locked as an
 Equipment-specific browser contract; no speculative minimize visual change was
 made.
+
+## Compact Info threshold and geometry tracer
+
+Compact Info passed only because its normalized MAE ceiling was `0.200`, while
+most focused windows use roughly `0.025..0.055`. The source places its title
+icon, name, and level copy at y=4 and its HP/SP rows at y=20. The runtime placed
+all five components one pixel high at y=3 and y=19. On this 35-pixel strip that
+produced MAE `0.186638` and visibly cut the readout rhythm, yet the broad gate
+still passed.
+
+The component coordinates are now exact and the ceiling is `0.050`. The same
+retained Qwen-derived empty plate measures `0.0276959`; this isolates the defect
+to assembly instead of blaming generation. Two focused Alibaba
+`qwen/qwen-image-3-pro` batches were evaluated and all eight candidates were
+rejected: the first retained semantic copy, while the second was empty but
+violated the exact 16/19-pixel band geometry. No inferior candidate was promoted
+merely because generation had been attempted.

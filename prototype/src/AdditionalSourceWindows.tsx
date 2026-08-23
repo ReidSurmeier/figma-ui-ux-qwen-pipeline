@@ -7,10 +7,10 @@ const root = "/assets/japanese-rpg-v001";
 
 export function CompactInfoSourceWindow({ zIndex, onActivate }: WindowProps) {
   const assetRoot = `${root}/compact-info`;
-  return <SourceWindow id="compact-info" title="簡易情報" initialPosition={{ x: 568, y: 314 }} width={281} height={35} titleWidth={100} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closable={false}>
-    <SourceRaster id="compact-levels" file={`${assetRoot}/components/levels`} style={{ left: 116, top: 3, width: 164, height: 13 }} />
-    <SourceRaster id="compact-hp" file={`${assetRoot}/components/hp`} style={{ left: 16, top: 19, width: 126, height: 15 }} />
-    <SourceRaster id="compact-sp" file={`${assetRoot}/components/sp`} style={{ left: 142, top: 19, width: 138, height: 15 }} />
+  return <SourceWindow id="compact-info" title="簡易情報" initialPosition={{ x: 568, y: 314 }} width={281} height={35} titleWidth={100} titleTop={4} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closable={false} dragHandleStyle={{ height: 16 }}>
+    <SourceRaster id="compact-levels" file={`${assetRoot}/components/levels`} style={{ left: 116, top: 4, width: 164, height: 13 }} />
+    <SourceRaster id="compact-hp" file={`${assetRoot}/components/hp`} style={{ left: 16, top: 20, width: 126, height: 15 }} />
+    <SourceRaster id="compact-sp" file={`${assetRoot}/components/sp`} style={{ left: 142, top: 20, width: 138, height: 15 }} />
   </SourceWindow>;
 }
 

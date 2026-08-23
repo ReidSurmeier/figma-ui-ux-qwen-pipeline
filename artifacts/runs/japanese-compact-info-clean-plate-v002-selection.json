@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "generation_runs": [
+    "artifacts/runs/japanese-compact-info-clean-plate-v001",
+    "artifacts/runs/japanese-compact-info-clean-plate-v002"
+  ],
+  "status": "all-new-candidates-rejected",
+  "promoted_candidate": null,
+  "runtime_asset_changed": false,
+  "retained_runtime_asset": "prototype/public/assets/japanese-rpg-v001/compact-info/clean-plate.png",
+  "retained_runtime_plate_provenance": [
+    "artifacts/runs/japanese-status-clean-plate-v001/image-01.png",
+    "artifacts/runs/japanese-status-derived-stats-v004/image-01.png",
+    "scripts/assemble_remaining_japanese_rpg_assets.sh"
+  ],
+  "diagnosis": "The 0.186638 visual error came from five one-pixel component offsets, not a missing plate. Correct source coordinates reduced Compact Info MAE to 0.0276959 while retaining the existing Qwen-derived empty plate.",
+  "rejected_candidates": [
+    { "run": "japanese-compact-info-clean-plate-v001", "candidates": [1, 2, 3, 4], "reason": "Semantic title or readout copy survived in every output." },
+    { "run": "japanese-compact-info-clean-plate-v002", "candidates": [1, 2, 3, 4], "reason": "Every empty output violated the exact 16-pixel upper and 19-pixel lower band geometry and was visually weaker than the retained plate." }
+  ]
+}
