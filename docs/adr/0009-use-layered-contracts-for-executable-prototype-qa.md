@@ -180,6 +180,13 @@ Use a layered QA system with one responsibility per layer:
     the owner's inventory. They may remain fixed while the window moves when the
     source requires it, but closing and reopening the owner must remove and
     restore the complete control set.
+44. Correction replay applies the same owner-aware boundary to control and
+    component inventory. Its help path is non-mutating and runs before evidence
+    cleanup, so command discovery cannot erase the last complete replay.
+45. Source slot banks receive one isolated neutral-to-selected-to-neutral pixel
+    journey per slot. Exclusive ARIA state alone is insufficient: every inactive
+    raster must remain byte-identical, and same-slot activation must restore the
+    complete neutral bank without changing drag ownership.
 
 ## Consequences
 

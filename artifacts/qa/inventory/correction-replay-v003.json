@@ -9,6 +9,13 @@
     "artifacts/qa/figma-desktop-audit-v001.json",
     "artifacts/qa/figma-correction-matrix-v003.json"
   ],
+  "control_coverage": {
+    "total": 27,
+    "contracted": 27,
+    "contractPassed": 27,
+    "contractFailed": [],
+    "uncontracted": []
+  },
   "results": [
     {
       "prompt_id": "no-reference-underlay",
@@ -20,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 266
+            "requestedResources": 279
           }
         }
       ]
@@ -68,16 +75,20 @@
             "sourceContracts": [
               {
                 "script": "contract-check.sh",
-                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+                "status": 0,
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+                "error": ""
               },
               {
                 "script": "remaining-window-contract.sh",
-                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+                "status": 0,
+                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "error": ""
               }
             ],
             "donorPinkBoundary": 0,
             "maximumBoundaryPixels": 2,
-            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/inventory/trace.json/../default.png"
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/inventory/default.png"
           }
         }
       ]
@@ -145,6 +156,18 @@
                   137
                 ],
                 [
+                  280,
+                  137
+                ],
+                [
+                  280,
+                  137
+                ],
+                [
+                  280,
+                  137
+                ],
+                [
                   272.3,
                   127.8
                 ],
@@ -195,21 +218,10 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             }
           }
         }
@@ -241,8 +253,24 @@
             "ranges": [
               {
                 "label": "所持品スクロール",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  98,
+                  86,
+                  74,
+                  62,
+                  50,
+                  38,
+                  26,
+                  14,
+                  2,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "vertical-lr",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -261,8 +289,24 @@
             "ranges": [
               {
                 "label": "所持品スクロール",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  98,
+                  86,
+                  74,
+                  62,
+                  50,
+                  38,
+                  26,
+                  14,
+                  2,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "vertical-lr",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -279,7 +323,14 @@
           "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
           "metrics": {
             "controlCount": 27,
-            "failures": []
+            "failures": [],
+            "controlCoverage": {
+              "total": 27,
+              "contracted": 27,
+              "contractPassed": 27,
+              "contractFailed": [],
+              "uncontracted": []
+            }
           }
         }
       ]
@@ -354,6 +405,13 @@
           "metrics": {
             "controlCount": 27,
             "failures": [],
+            "controlCoverage": {
+              "total": 27,
+              "contracted": 27,
+              "contractPassed": 27,
+              "contractFailed": [],
+              "uncontracted": []
+            },
             "consoleErrors": []
           }
         }
@@ -370,6 +428,18 @@
           "metrics": {
             "minimize": {
               "samples": [
+                [
+                  280,
+                  137
+                ],
+                [
+                  280,
+                  137
+                ],
+                [
+                  280,
+                  137
+                ],
                 [
                   280,
                   137
@@ -425,27 +495,32 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             },
             "ranges": [
               {
                 "label": "所持品スクロール",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  98,
+                  86,
+                  74,
+                  62,
+                  50,
+                  38,
+                  26,
+                  14,
+                  2,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "vertical-lr",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ],
             "discreteControlFailures": []

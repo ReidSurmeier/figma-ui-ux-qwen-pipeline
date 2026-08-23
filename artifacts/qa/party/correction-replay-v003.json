@@ -9,6 +9,13 @@
     "artifacts/qa/figma-desktop-audit-v001.json",
     "artifacts/qa/figma-correction-matrix-v003.json"
   ],
+  "control_coverage": {
+    "total": 16,
+    "contracted": 16,
+    "contractPassed": 16,
+    "contractFailed": [],
+    "uncontracted": []
+  },
   "results": [
     {
       "prompt_id": "no-reference-underlay",
@@ -20,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/party/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 265
+            "requestedResources": 283
           }
         }
       ]
@@ -68,16 +75,20 @@
             "sourceContracts": [
               {
                 "script": "contract-check.sh",
-                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+                "status": 0,
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+                "error": ""
               },
               {
                 "script": "remaining-window-contract.sh",
-                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+                "status": 0,
+                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "error": ""
               }
             ],
             "donorPinkBoundary": 0,
             "maximumBoundaryPixels": 2,
-            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/party/trace.json/../default.png"
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/party/default.png"
           }
         }
       ]
@@ -113,14 +124,14 @@
             "titlePlaced": true,
             "titleBox": {
               "x": 584,
-              "y": 353,
+              "y": 374,
               "width": 125,
               "height": 13
             },
             "windowBox": {
               "x": 568,
-              "y": 349,
-              "width": 210,
+              "y": 370,
+              "width": 160,
               "height": 154
             }
           }
@@ -167,7 +178,14 @@
           "artifact": "artifacts/qa/correction-matrix-v003/party/trace.json",
           "metrics": {
             "controlCount": 16,
-            "failures": []
+            "failures": [],
+            "controlCoverage": {
+              "total": 16,
+              "contracted": 16,
+              "contractPassed": 16,
+              "contractFailed": [],
+              "uncontracted": []
+            }
           }
         }
       ]
@@ -183,14 +201,14 @@
           "metrics": {
             "defaultBox": {
               "x": 568,
-              "y": 349,
-              "width": 210,
+              "y": 370,
+              "width": 160,
               "height": 154
             },
             "bottomRight": {
-              "x": 639,
+              "x": 689,
               "y": 410,
-              "width": 210,
+              "width": 160,
               "height": 154
             },
             "viewport": {
@@ -242,6 +260,13 @@
           "metrics": {
             "controlCount": 16,
             "failures": [],
+            "controlCoverage": {
+              "total": 16,
+              "contracted": 16,
+              "contractPassed": 16,
+              "contractFailed": [],
+              "uncontracted": []
+            },
             "consoleErrors": []
           }
         }

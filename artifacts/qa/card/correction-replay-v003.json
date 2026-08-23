@@ -9,6 +9,13 @@
     "artifacts/qa/figma-desktop-audit-v001.json",
     "artifacts/qa/figma-correction-matrix-v003.json"
   ],
+  "control_coverage": {
+    "total": 4,
+    "contracted": 4,
+    "contractPassed": 4,
+    "contractFailed": [],
+    "uncontracted": []
+  },
   "results": [
     {
       "prompt_id": "no-reference-underlay",
@@ -20,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/card/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 265
+            "requestedResources": 278
           }
         }
       ]
@@ -68,16 +75,20 @@
             "sourceContracts": [
               {
                 "script": "contract-check.sh",
-                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+                "status": 0,
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+                "error": ""
               },
               {
                 "script": "remaining-window-contract.sh",
-                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+                "status": 0,
+                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "error": ""
               }
             ],
             "donorPinkBoundary": 0,
             "maximumBoundaryPixels": 2,
-            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/card/trace.json/../default.png"
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/card/default.png"
           }
         }
       ]
@@ -155,8 +166,24 @@
             "ranges": [
               {
                 "label": "カード情報スクロール",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  100,
+                  88,
+                  75,
+                  63,
+                  50,
+                  38,
+                  25,
+                  13,
+                  0,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "vertical-lr",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -175,8 +202,24 @@
             "ranges": [
               {
                 "label": "カード情報スクロール",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  100,
+                  88,
+                  75,
+                  63,
+                  50,
+                  38,
+                  25,
+                  13,
+                  0,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "vertical-lr",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -193,7 +236,14 @@
           "artifact": "artifacts/qa/correction-matrix-v003/card/trace.json",
           "metrics": {
             "controlCount": 4,
-            "failures": []
+            "failures": [],
+            "controlCoverage": {
+              "total": 4,
+              "contracted": 4,
+              "contractPassed": 4,
+              "contractFailed": [],
+              "uncontracted": []
+            }
           }
         }
       ]
@@ -268,6 +318,13 @@
           "metrics": {
             "controlCount": 4,
             "failures": [],
+            "controlCoverage": {
+              "total": 4,
+              "contracted": 4,
+              "contractPassed": 4,
+              "contractFailed": [],
+              "uncontracted": []
+            },
             "consoleErrors": []
           }
         }
@@ -286,8 +343,24 @@
             "ranges": [
               {
                 "label": "カード情報スクロール",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  100,
+                  88,
+                  75,
+                  63,
+                  50,
+                  38,
+                  25,
+                  13,
+                  0,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "vertical-lr",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ],
             "discreteControlFailures": []

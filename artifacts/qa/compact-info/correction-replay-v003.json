@@ -9,6 +9,13 @@
     "artifacts/qa/figma-desktop-audit-v001.json",
     "artifacts/qa/figma-correction-matrix-v003.json"
   ],
+  "control_coverage": {
+    "total": 0,
+    "contracted": 0,
+    "contractPassed": 0,
+    "contractFailed": [],
+    "uncontracted": []
+  },
   "results": [
     {
       "prompt_id": "no-reference-underlay",
@@ -20,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/compact-info/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 265
+            "requestedResources": 278
           }
         }
       ]
@@ -68,16 +75,20 @@
             "sourceContracts": [
               {
                 "script": "contract-check.sh",
-                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+                "status": 0,
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+                "error": ""
               },
               {
                 "script": "remaining-window-contract.sh",
-                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+                "status": 0,
+                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "error": ""
               }
             ],
             "donorPinkBoundary": 0,
             "maximumBoundaryPixels": 2,
-            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/compact-info/trace.json/../default.png"
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/compact-info/default.png"
           }
         }
       ]
@@ -113,7 +124,7 @@
             "titlePlaced": true,
             "titleBox": {
               "x": 584,
-              "y": 317,
+              "y": 318,
               "width": 100,
               "height": 13
             },
@@ -153,7 +164,14 @@
           "artifact": "artifacts/qa/correction-matrix-v003/compact-info/trace.json",
           "metrics": {
             "controlCount": 0,
-            "failures": []
+            "failures": [],
+            "controlCoverage": {
+              "total": 0,
+              "contracted": 0,
+              "contractPassed": 0,
+              "contractFailed": [],
+              "uncontracted": []
+            }
           }
         }
       ]
@@ -228,6 +246,13 @@
           "metrics": {
             "controlCount": 0,
             "failures": [],
+            "controlCoverage": {
+              "total": 0,
+              "contracted": 0,
+              "contractPassed": 0,
+              "contractFailed": [],
+              "uncontracted": []
+            },
             "consoleErrors": []
           }
         }

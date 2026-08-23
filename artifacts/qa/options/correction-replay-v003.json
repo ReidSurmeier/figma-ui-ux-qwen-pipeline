@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
   "window_id": "options",
-  "overall": "pass",
+  "overall": "fail",
   "evidence_scope": "fresh executable per-window correction matrix",
   "evidence": [
     "artifacts/qa/correction-matrix-v003/options/trace.json",
@@ -9,6 +9,31 @@
     "artifacts/qa/figma-desktop-audit-v001.json",
     "artifacts/qa/figma-correction-matrix-v003.json"
   ],
+  "control_coverage": {
+    "total": 17,
+    "contracted": 0,
+    "contractPassed": 0,
+    "contractFailed": [],
+    "uncontracted": [
+      "最小化",
+      "閉じる",
+      "option",
+      "info",
+      "BGMを下げる",
+      "BGM",
+      "BGMを上げる",
+      "BGM on",
+      "Effectを下げる",
+      "Effect",
+      "Effectを上げる",
+      "Effect on",
+      "Skin",
+      "opaque",
+      "attack",
+      "skill",
+      "item"
+    ]
+  },
   "results": [
     {
       "prompt_id": "no-reference-underlay",
@@ -20,7 +45,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 267
+            "requestedResources": 280
           }
         }
       ]
@@ -121,16 +146,20 @@
             "sourceContracts": [
               {
                 "script": "contract-check.sh",
-                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+                "status": 0,
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+                "error": ""
               },
               {
                 "script": "remaining-window-contract.sh",
-                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+                "status": 0,
+                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "error": ""
               }
             ],
             "donorPinkBoundary": 0,
             "maximumBoundaryPixels": 2,
-            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/options/trace.json/../default.png"
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/options/default.png"
           }
         }
       ]
@@ -504,6 +533,18 @@
                   122
                 ],
                 [
+                  280,
+                  122
+                ],
+                [
+                  280,
+                  122
+                ],
+                [
+                  280,
+                  122
+                ],
+                [
                   272.3,
                   114
                 ],
@@ -554,21 +595,10 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             }
           }
         }
@@ -601,12 +631,44 @@
               {
                 "label": "BGM",
                 "distinctVisuals": 11,
-                "values": 11
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  16,
+                  28,
+                  39,
+                  50,
+                  61,
+                  72,
+                  84,
+                  95,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               },
               {
                 "label": "Effect",
                 "distinctVisuals": 11,
-                "values": 11
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  16,
+                  28,
+                  39,
+                  50,
+                  61,
+                  72,
+                  84,
+                  95,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -626,12 +688,44 @@
               {
                 "label": "BGM",
                 "distinctVisuals": 11,
-                "values": 11
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  16,
+                  28,
+                  39,
+                  50,
+                  61,
+                  72,
+                  84,
+                  95,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               },
               {
                 "label": "Effect",
                 "distinctVisuals": 11,
-                "values": 11
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  16,
+                  28,
+                  39,
+                  50,
+                  61,
+                  72,
+                  84,
+                  95,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -640,15 +734,58 @@
     },
     {
       "prompt_id": "settled-button-effects",
-      "verdict": "pass",
-      "note": "Executed window-specific probe passed.",
+      "verdict": "fail",
+      "note": "Executed probe found a reproducible failure; see metrics and retained failure frames.",
       "evidence": [
         {
           "kind": "executed-browser-probe",
           "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
           "metrics": {
             "controlCount": 17,
-            "failures": []
+            "failures": [
+              "最小化",
+              "閉じる",
+              "option",
+              "info",
+              "BGMを下げる",
+              "BGM",
+              "BGMを上げる",
+              "BGM on",
+              "Effectを下げる",
+              "Effect",
+              "Effectを上げる",
+              "Effect on",
+              "Skin",
+              "opaque",
+              "attack",
+              "skill",
+              "item"
+            ],
+            "controlCoverage": {
+              "total": 17,
+              "contracted": 0,
+              "contractPassed": 0,
+              "contractFailed": [],
+              "uncontracted": [
+                "最小化",
+                "閉じる",
+                "option",
+                "info",
+                "BGMを下げる",
+                "BGM",
+                "BGMを上げる",
+                "BGM on",
+                "Effectを下げる",
+                "Effect",
+                "Effectを上げる",
+                "Effect on",
+                "Skin",
+                "opaque",
+                "attack",
+                "skill",
+                "item"
+              ]
+            }
           }
         }
       ]
@@ -714,15 +851,58 @@
     },
     {
       "prompt_id": "complete-user-flow-not-screenshot-only",
-      "verdict": "pass",
-      "note": "Executed window-specific probe passed.",
+      "verdict": "fail",
+      "note": "Executed probe found a reproducible failure; see metrics and retained failure frames.",
       "evidence": [
         {
           "kind": "executed-browser-probe",
           "artifact": "artifacts/qa/correction-matrix-v003/options/trace.json",
           "metrics": {
             "controlCount": 17,
-            "failures": [],
+            "failures": [
+              "最小化",
+              "閉じる",
+              "option",
+              "info",
+              "BGMを下げる",
+              "BGM",
+              "BGMを上げる",
+              "BGM on",
+              "Effectを下げる",
+              "Effect",
+              "Effectを上げる",
+              "Effect on",
+              "Skin",
+              "opaque",
+              "attack",
+              "skill",
+              "item"
+            ],
+            "controlCoverage": {
+              "total": 17,
+              "contracted": 0,
+              "contractPassed": 0,
+              "contractFailed": [],
+              "uncontracted": [
+                "最小化",
+                "閉じる",
+                "option",
+                "info",
+                "BGMを下げる",
+                "BGM",
+                "BGMを上げる",
+                "BGM on",
+                "Effectを下げる",
+                "Effect",
+                "Effectを上げる",
+                "Effect on",
+                "Skin",
+                "opaque",
+                "attack",
+                "skill",
+                "item"
+              ]
+            },
             "consoleErrors": []
           }
         }
@@ -739,6 +919,18 @@
           "metrics": {
             "minimize": {
               "samples": [
+                [
+                  280,
+                  122
+                ],
+                [
+                  280,
+                  122
+                ],
+                [
+                  280,
+                  122
+                ],
                 [
                   280,
                   122
@@ -794,35 +986,74 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             },
             "ranges": [
               {
                 "label": "BGM",
                 "distinctVisuals": 11,
-                "values": 11
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  16,
+                  28,
+                  39,
+                  50,
+                  61,
+                  72,
+                  84,
+                  95,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               },
               {
                 "label": "Effect",
                 "distinctVisuals": 11,
-                "values": 11
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  16,
+                  28,
+                  39,
+                  50,
+                  61,
+                  72,
+                  84,
+                  95,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ],
-            "discreteControlFailures": []
+            "discreteControlFailures": [
+              "最小化",
+              "閉じる",
+              "option",
+              "info",
+              "BGMを下げる",
+              "BGM",
+              "BGMを上げる",
+              "BGM on",
+              "Effectを下げる",
+              "Effect",
+              "Effectを上げる",
+              "Effect on",
+              "Skin",
+              "opaque",
+              "attack",
+              "skill",
+              "item"
+            ]
           }
         }
       ]

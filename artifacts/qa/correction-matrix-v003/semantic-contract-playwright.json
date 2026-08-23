@@ -1,0 +1,1308 @@
+{
+  "config": {
+    "argv": [
+      "/usr/bin/node",
+      "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/node_modules/.bin/playwright",
+      "test",
+      "e2e/bottom-bar-source.spec.ts",
+      "e2e/basic-info.spec.ts",
+      "e2e/status-source.spec.ts",
+      "e2e/inventory-source.spec.ts",
+      "e2e/card-source.spec.ts",
+      "e2e/skills-source.spec.ts",
+      "e2e/equipment-source.spec.ts",
+      "e2e/chat-source.spec.ts",
+      "e2e/exchange-source.spec.ts",
+      "e2e/game-menu-source.spec.ts",
+      "e2e/party-source.spec.ts",
+      "e2e/quickbar-source.spec.ts",
+      "--grep",
+      "(?:Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag|every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores|every source-visible Status increment owns its exact hitbox and changes only its local value field|status minimize uses a generated compact endpoint through complete motion and restores the full source geometry|status close removes the window and Basic Info restores the same independent destination|every Inventory category is a reachable tab with its complete selectable cell inventory|every reachable Inventory cell independently owns selection in all three categories|Inventory real scroll gestures keep one visual thumb and every sampled body state below the header|Inventory minimize uses a generated compact endpoint through complete motion and restores|Inventory close removes the window and Basic Info restores its exact componentized destination|Card art rotation is reversible and leaves title plus copy pixels invariant|Card real scroll gestures move copy and one visual thumb without entering title or art|Card slot controls the Card scroll state without changing title or art|Card close target removes exactly the Card window|Every Skills row and level control is pointer-reachable on its settled page and owns only its state|Skills real scroll gestures keep one thumb and the clipped list outside title and footer|Skills use acts on selection and both close controls support Basic Info recovery|Every Equipment row owns its exact source column and transfers exclusive selection|Equipment minimize uses its generated compact endpoint through complete motion and restores|Equipment close removes the window and Basic Info restores its complete destination|Bottom Bar previous and next controls are reversible and leave slider plus title invariant|Chat visibly edits Japanese topic and submits one application-owned form without invented tabs|Chat cancel restores the complete default form instead of only clearing topic|Every Exchange item owns its exact grid cell and transfers exclusive selection|Exchange confirm enables Trade and Trade or cancel restore a clean transaction|Every Game Menu action owns its source row, transfers selection, and toggles back to ready|Every Party member is a reachable listbox option with exclusive reversible selection|Party tools and source tabs transfer state and support keyboard traversal|Party satellite actions stay fixed while Party moves and expose exact ownership|Party close removes satellites and Basic Info friend restores the complete destination|Every Quickbar slot owns its exact raster and reverses independently to neutral)",
+      "--reporter=json"
+    ],
+    "configFile": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/playwright.config.ts",
+    "rootDir": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 6
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 6
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 6,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://10.255.255.254:4174",
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "basic-info.spec.ts",
+      "file": "basic-info.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "every Basic Info resource slider declares and drives its independent visual thumb",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4839,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:09.252Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19db23d29696225dee2f-957085310b4559f0056c",
+          "file": "basic-info.spec.ts",
+          "line": 72,
+          "column": 1
+        },
+        {
+          "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2257,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:14.346Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19db23d29696225dee2f-65f3bece967cfb74b7e3",
+          "file": "basic-info.spec.ts",
+          "line": 128,
+          "column": 1
+        },
+        {
+          "title": "every Basic Info page control declares and reaches its source-approved destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6305,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:16.611Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "19db23d29696225dee2f-4ce18d753e7175eb3d5a",
+          "file": "basic-info.spec.ts",
+          "line": 201,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "bottom-bar-source.spec.ts",
+      "file": "bottom-bar-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3771,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:09.253Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "66aaa21e2876f9f031b7-4a723a662bc1a97da0e9",
+          "file": "bottom-bar-source.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 2883,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:13.331Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "66aaa21e2876f9f031b7-b41ff2bb4a7033bfe3fc",
+          "file": "bottom-bar-source.spec.ts",
+          "line": 49,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "card-source.spec.ts",
+      "file": "card-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Card art rotation is reversible and leaves title plus copy pixels invariant",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 3929,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:09.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e9d1f5ec6f9dd745da-425db3b68f9b97670b7f",
+          "file": "card-source.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "Card real scroll gestures move copy and one visual thumb without entering title or art",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 4085,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:13.396Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e9d1f5ec6f9dd745da-3a5656110194dd8477e3",
+          "file": "card-source.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "Card slot controls the Card scroll state without changing title or art",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 1180,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:17.487Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e9d1f5ec6f9dd745da-ec855ee025570622c388",
+          "file": "card-source.spec.ts",
+          "line": 71,
+          "column": 1
+        },
+        {
+          "title": "Card close target removes exactly the Card window",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 1005,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:18.675Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a9e9d1f5ec6f9dd745da-f0494ebb4e14e876f68d",
+          "file": "card-source.spec.ts",
+          "line": 98,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "chat-source.spec.ts",
+      "file": "chat-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Chat visibly edits Japanese topic and submits one application-owned form without invented tabs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 3158,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:09.247Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "27e8e838a06a220cf4d0-6d438bba079dd28d5da8",
+          "file": "chat-source.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "Chat cancel restores the complete default form instead of only clearing topic",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1028,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:12.695Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "27e8e838a06a220cf4d0-be1887673001a073f3bf",
+          "file": "chat-source.spec.ts",
+          "line": 52,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "equipment-source.spec.ts",
+      "file": "equipment-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 4353,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:09.241Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b80f622c2e623f8bb72-cc174765567e056fcfce",
+          "file": "equipment-source.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 2595,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:13.841Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b80f622c2e623f8bb72-ab5ace3c51ae8cb86ce3",
+          "file": "equipment-source.spec.ts",
+          "line": 46,
+          "column": 1
+        },
+        {
+          "title": "Equipment close removes the window and Basic Info restores its complete destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 1071,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:16.444Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8b80f622c2e623f8bb72-47df4a695772aee894cc",
+          "file": "equipment-source.spec.ts",
+          "line": 74,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "exchange-source.spec.ts",
+      "file": "exchange-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 4768,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:09.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "90e678b5987a9669a552-d2fe584df6e03b5a6909",
+          "file": "exchange-source.spec.ts",
+          "line": 13,
+          "column": 1
+        },
+        {
+          "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 1216,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:14.182Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "90e678b5987a9669a552-0716284dd3d7314a05d3",
+          "file": "exchange-source.spec.ts",
+          "line": 40,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "game-menu-source.spec.ts",
+      "file": "game-menu-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Every Game Menu action owns its source row, transfers selection, and toggles back to ready",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1400,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:13.733Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "38bab859a1f86b796aa8-06c7d88b15fc5a10685a",
+          "file": "game-menu-source.spec.ts",
+          "line": 15,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "inventory-source.spec.ts",
+      "file": "inventory-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1219,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:15.149Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "445a187e1882bd4cc175-1be1ffa0db40bcf8ab56",
+          "file": "inventory-source.spec.ts",
+          "line": 48,
+          "column": 1
+        },
+        {
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 3346,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:16.373Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "445a187e1882bd4cc175-0d34c61826ccdd5fbae0",
+          "file": "inventory-source.spec.ts",
+          "line": 93,
+          "column": 1
+        },
+        {
+          "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 2121,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:19.726Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "445a187e1882bd4cc175-f793dcf2a706adfb0c19",
+          "file": "inventory-source.spec.ts",
+          "line": 158,
+          "column": 1
+        },
+        {
+          "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 1536,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:21.854Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "445a187e1882bd4cc175-1ec9682ad47afe9a52ee",
+          "file": "inventory-source.spec.ts",
+          "line": 197,
+          "column": 1
+        },
+        {
+          "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 868,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:23.396Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "445a187e1882bd4cc175-31ef84f5447fe5ecadc7",
+          "file": "inventory-source.spec.ts",
+          "line": 238,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "party-source.spec.ts",
+      "file": "party-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Every Party member is a reachable listbox option with exclusive reversible selection",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 1349,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:15.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8233bf14f4f960233269-72200dca3408c9d182a7",
+          "file": "party-source.spec.ts",
+          "line": 14,
+          "column": 1
+        },
+        {
+          "title": "Party tools and source tabs transfer state and support keyboard traversal",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 1899,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:16.764Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8233bf14f4f960233269-75890cf07aa4137b40ca",
+          "file": "party-source.spec.ts",
+          "line": 36,
+          "column": 1
+        },
+        {
+          "title": "Party satellite actions stay fixed while Party moves and expose exact ownership",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 1257,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:18.672Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8233bf14f4f960233269-cc1cd802644e0c939e90",
+          "file": "party-source.spec.ts",
+          "line": 62,
+          "column": 1
+        },
+        {
+          "title": "Party close removes satellites and Basic Info friend restores the complete destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 5,
+                  "status": "passed",
+                  "duration": 1489,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:19.936Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8233bf14f4f960233269-6f383e7c4e8ad8fcc9eb",
+          "file": "party-source.spec.ts",
+          "line": 85,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "quickbar-source.spec.ts",
+      "file": "quickbar-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 3102,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:16.225Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "f52a4d50b4bd924dd6f7-86084c3070282ffe173c",
+          "file": "quickbar-source.spec.ts",
+          "line": 13,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "skills-source.spec.ts",
+      "file": "skills-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Skills real scroll gestures keep one thumb and the clipped list outside title and footer",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 2517,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:17.528Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0b38307f9407891d7b77-17ef940c1fa59bb89768",
+          "file": "skills-source.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Skills use acts on selection and both close controls support Basic Info recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 1784,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:20.050Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0b38307f9407891d7b77-56ad3c50710814572430",
+          "file": "skills-source.spec.ts",
+          "line": 61,
+          "column": 1
+        },
+        {
+          "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 4,
+                  "status": "passed",
+                  "duration": 2828,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:21.841Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0b38307f9407891d7b77-75d2ceb650d57fa9e97a",
+          "file": "skills-source.spec.ts",
+          "line": 90,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "status-source.spec.ts",
+      "file": "status-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 5733,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:19.346Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "09069bc0ead11ead76fd-84361a17c3d10be23973",
+          "file": "status-source.spec.ts",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1295,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:25.087Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "09069bc0ead11ead76fd-18b050d75ecfb2d332c7",
+          "file": "status-source.spec.ts",
+          "line": 123,
+          "column": 1
+        },
+        {
+          "title": "status close removes the window and Basic Info restores the same independent destination",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 773,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-08-23T07:40:26.388Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "09069bc0ead11ead76fd-73706a34e1ee7e4aef3a",
+          "file": "status-source.spec.ts",
+          "line": 164,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-08-23T07:40:08.789Z",
+    "duration": 18502.043,
+    "expected": 33,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

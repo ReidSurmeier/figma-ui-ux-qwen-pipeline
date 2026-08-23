@@ -186,6 +186,13 @@ authorized local boundary: exact row ownership, exclusive settled selection,
 and reversal to ready. A label such as Exit to Windows does not authorize the
 prototype or the test agent to invent an operating-system side effect.
 
+Source slot banks are exercised from a neutral baseline one member at a time.
+The locked test requires exact hit geometry, an explicit visual-component
+mapping, one exclusive selection, byte-identical inactive siblings, and a
+second activation that restores the complete neutral bank. It repeats the
+journey with keyboard activation and after a real window drag so a generic
+pressed-state class cannot conceal wrong raster ownership.
+
 Spatial containment is not semantic ownership. A source control may sit outside
 its window and remain fixed while that window is dragged. Such satellite
 controls declare `data-control-owner` with the stable window ID. Runtime
@@ -194,3 +201,9 @@ controls with that owner, so spatial separation cannot make a button disappear
 from coverage. The locked journey also proves that close removes the window and
 its satellites together and that the authorized reopening path restores the
 complete set.
+
+Correction replay uses the same owner-aware query for independent components as
+for controls. Counting owned controls but only descendant component rasters
+creates a false inventory mismatch. The runner's `--help` path exits before
+removing or creating evidence; exploratory CLI inspection must never mutate the
+committed replay directory.

@@ -9,6 +9,13 @@
     "artifacts/qa/figma-desktop-audit-v001.json",
     "artifacts/qa/figma-correction-matrix-v003.json"
   ],
+  "control_coverage": {
+    "total": 11,
+    "contracted": 11,
+    "contractPassed": 11,
+    "contractFailed": [],
+    "uncontracted": []
+  },
   "results": [
     {
       "prompt_id": "no-reference-underlay",
@@ -20,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/basic-info/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 265
+            "requestedResources": 283
           }
         }
       ]
@@ -68,16 +75,20 @@
             "sourceContracts": [
               {
                 "script": "contract-check.sh",
-                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+                "status": 0,
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+                "error": ""
               },
               {
                 "script": "remaining-window-contract.sh",
-                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+                "status": 0,
+                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "error": ""
               }
             ],
             "donorPinkBoundary": 0,
             "maximumBoundaryPixels": 2,
-            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/basic-info/trace.json/../default.png"
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/basic-info/default.png"
           }
         }
       ]
@@ -149,6 +160,14 @@
                   120
                 ],
                 [
+                  280,
+                  120
+                ],
+                [
+                  280,
+                  120
+                ],
+                [
                   272.3,
                   112.1
                 ],
@@ -199,21 +218,10 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             }
           }
         }
@@ -231,13 +239,45 @@
             "ranges": [
               {
                 "label": "HP",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  13,
+                  25,
+                  38,
+                  50,
+                  62,
+                  75,
+                  87,
+                  99,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               },
               {
                 "label": "SP",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 10,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  13,
+                  25,
+                  38,
+                  50,
+                  62,
+                  75,
+                  87,
+                  99,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -256,13 +296,45 @@
             "ranges": [
               {
                 "label": "HP",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  13,
+                  25,
+                  38,
+                  50,
+                  62,
+                  75,
+                  87,
+                  99,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               },
               {
                 "label": "SP",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 10,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  13,
+                  25,
+                  38,
+                  50,
+                  62,
+                  75,
+                  87,
+                  99,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ]
           }
@@ -279,7 +351,14 @@
           "artifact": "artifacts/qa/correction-matrix-v003/basic-info/trace.json",
           "metrics": {
             "controlCount": 11,
-            "failures": []
+            "failures": [],
+            "controlCoverage": {
+              "total": 11,
+              "contracted": 11,
+              "contractPassed": 11,
+              "contractFailed": [],
+              "uncontracted": []
+            }
           }
         }
       ]
@@ -354,6 +433,13 @@
           "metrics": {
             "controlCount": 11,
             "failures": [],
+            "controlCoverage": {
+              "total": 11,
+              "contracted": 11,
+              "contractPassed": 11,
+              "contractFailed": [],
+              "uncontracted": []
+            },
             "consoleErrors": []
           }
         }
@@ -370,6 +456,14 @@
           "metrics": {
             "minimize": {
               "samples": [
+                [
+                  280,
+                  120
+                ],
+                [
+                  280,
+                  120
+                ],
                 [
                   280,
                   120
@@ -429,32 +523,53 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             },
             "ranges": [
               {
                 "label": "HP",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 9,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  13,
+                  25,
+                  38,
+                  50,
+                  62,
+                  75,
+                  87,
+                  99,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               },
               {
                 "label": "SP",
-                "distinctVisuals": 11,
-                "values": 11
+                "distinctVisuals": 10,
+                "values": 11,
+                "actualValues": [
+                  0,
+                  0,
+                  13,
+                  25,
+                  38,
+                  50,
+                  62,
+                  75,
+                  87,
+                  99,
+                  100
+                ],
+                "endpointPass": true,
+                "writingMode": "horizontal-tb",
+                "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
               }
             ],
             "discreteControlFailures": []

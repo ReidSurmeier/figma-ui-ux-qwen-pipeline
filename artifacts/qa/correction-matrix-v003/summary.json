@@ -4,77 +4,203 @@
     {
       "windowId": "basic-info",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 11,
+        "contracted": 11,
+        "contractPassed": 11,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "card",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 4,
+        "contracted": 4,
+        "contractPassed": 4,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "skills",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 12,
+        "contracted": 12,
+        "contractPassed": 12,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "status",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 7,
+        "contracted": 7,
+        "contractPassed": 7,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "inventory",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 27,
+        "contracted": 27,
+        "contractPassed": 27,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "equipment",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 12,
+        "contracted": 12,
+        "contractPassed": 12,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "chat",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 6,
+        "contracted": 6,
+        "contractPassed": 6,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "exchange",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 17,
+        "contracted": 17,
+        "contractPassed": 17,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "game-menu",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 4,
+        "contracted": 4,
+        "contractPassed": 4,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "party",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 16,
+        "contracted": 16,
+        "contractPassed": 16,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "quickbar",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 3,
+        "contracted": 3,
+        "contractPassed": 3,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "compact-info",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 0,
+        "contracted": 0,
+        "contractPassed": 0,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "bottom-bar",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 3,
+        "contracted": 3,
+        "contractPassed": 3,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "notification",
       "overall": "pass",
+      "controlCoverage": {
+        "total": 0,
+        "contracted": 0,
+        "contractPassed": 0,
+        "contractFailed": [],
+        "uncontracted": []
+      },
       "failures": []
     },
     {
       "windowId": "options",
-      "overall": "pass",
-      "failures": []
+      "overall": "fail",
+      "controlCoverage": {
+        "total": 17,
+        "contracted": 0,
+        "contractPassed": 0,
+        "contractFailed": [],
+        "uncontracted": [
+          "最小化",
+          "閉じる",
+          "option",
+          "info",
+          "BGMを下げる",
+          "BGM",
+          "BGMを上げる",
+          "BGM on",
+          "Effectを下げる",
+          "Effect",
+          "Effectを上げる",
+          "Effect on",
+          "Skin",
+          "opaque",
+          "attack",
+          "skill",
+          "item"
+        ]
+      },
+      "failures": [
+        "settled-button-effects",
+        "complete-user-flow-not-screenshot-only"
+      ]
     }
   ]
 }

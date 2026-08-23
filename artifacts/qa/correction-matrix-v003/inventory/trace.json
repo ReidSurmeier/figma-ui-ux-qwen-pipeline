@@ -4,22 +4,23 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787450929077",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787470702058",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787450929075",
-    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787435582010",
-    "http://10.255.255.254:4174/src/styles.css?t=1787450929077",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787470702058",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787465551356",
+    "http://10.255.255.254:4174/src/styles.css?t=1787469847023",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
     "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787447791566",
-    "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787450929075",
-    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787450929075",
-    "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787450929075",
-    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787450929075",
-    "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787450929075",
+    "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787465313587",
+    "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787468367758",
+    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787470702058",
+    "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787466360012",
+    "http://10.255.255.254:4174/src/MapSourceWindow.tsx?t=1787465870814",
+    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787465870814",
+    "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787465870814",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom.js?v=4e59ef8f",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
@@ -74,10 +75,22 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/icon-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/copy-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-icon-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-copy-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-icon-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-copy-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-icon-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-copy-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-icon-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-copy-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/level-3.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-level-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-level-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-level-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/page-2-level-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-track.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/scrollbar-thumb.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/skills/components/points.png",
@@ -163,7 +176,6 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-on.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-off.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/password.png",
-    "http://10.255.255.254:4174/fonts/DotGothic16-Regular.ttf",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/ok.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/cancel.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/clean-plate.png",
@@ -205,9 +217,6 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/member-4.png",
-    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-0.png",
-    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-1.png",
-    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-2.png",
@@ -215,6 +224,9 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/tool-4.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/friends.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/party-tab.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/party/components/action-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-icon.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/quickbar/components/title-text.png",
@@ -266,6 +278,7 @@
     "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-attack.png",
     "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-skill.png",
     "http://10.255.255.254:4174/assets/japanese-options-v001/components/footer-item.png",
+    "http://10.255.255.254:4174/fonts/DotGothic16-Regular.ttf",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/minimized-plate.png"
   ],
   "consoleErrors": [],
@@ -354,14 +367,58 @@
       "label": "所持アイテムを最小化",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "0f667f62d132f97c3bd2c798d148aed3a01a48ef1df535771c02fc6ee1bed18c",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "77909c5515097cb2d9e6cd4579e9a0e05d76383ab1d34a6042be8ce93b7c9f7d",
       "settledHash": "b2b0ff2fe08005577a3abb32c2d7a5d92221e2e4b232d5213701d0b7e381f0e1",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-generated-minimize-v001",
+        "windowId": "inventory",
+        "controlLabels": [
+          "所持アイテムを最小化"
+        ],
+        "controlLabelPatterns": [],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            0,
+            247,
+            280,
+            137
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "The source-visible minimize control transitions to the separately generated compact endpoint and restores Inventory."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": null,
@@ -386,14 +443,55 @@
       "label": "所持アイテムを閉じる",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "e2792e2eab48dc9ffa8d0bde10e809c00450ba0c9a009cebd5b76f48d95ceb42",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "4ca0c30ec93e48c90fd6cee8c6d7e07478058a761a5b85fbed4ee6f599ac82d1",
       "settledHash": "6afd035ed99ee348192ff6ed44e4c432054132cff1ab8fe50fa9b78f70bec88d",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-close-and-reopen-v001",
+        "windowId": "inventory",
+        "controlLabels": [
+          "所持アイテムを閉じる"
+        ],
+        "controlLabelPatterns": [],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            0,
+            247,
+            280,
+            137
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "source-visible"
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": null,
@@ -414,18 +512,61 @@
       "label": "item",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "3055dca8a6ce1a2254fc80c14a9abb4d21b846e92794804a8c667a1e8b6a8b6e",
-      "settledHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "28ca9976f03e06a7267fc122a8d2e628d02feeec6097ee94ca83f7487cb7d06c",
+      "settledHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
       "visualDown": true,
       "visualSettled": false,
       "stateChanged": false,
       "alreadySelected": true,
+      "semanticContract": {
+        "id": "inventory-complete-tab-inventory-v001",
+        "windowId": "inventory",
+        "controlLabels": [
+          "item",
+          "equip",
+          "etc"
+        ],
+        "controlLabelPatterns": [],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            0,
+            247,
+            280,
+            137
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "source-visible"
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "true",
-        "ariaSelected": null,
+        "ariaSelected": "true",
         "ariaExpanded": null,
         "className": "inventory-source-tab",
         "outputs": [
@@ -435,7 +576,7 @@
       "afterState": {
         "missing": false,
         "ariaPressed": "true",
-        "ariaSelected": null,
+        "ariaSelected": "true",
         "ariaExpanded": null,
         "className": "inventory-source-tab",
         "outputs": [
@@ -448,18 +589,61 @@
       "label": "equip",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "0c240a7d22f999a00c2c3595e8b103ef9ec8f346d37224a643391ea94d7fa685",
-      "settledHash": "53e96c5b5d1ad9675b0245d9db78ba078c45bd33a6a637d73d2faa3ea2edcad5",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "9e181d9c3d0d77e29222b2ee939db2e4e1573d2896516e6def98d12a2fe927c0",
+      "settledHash": "a07f07c90386bf95a5a9ba0d83d9697ea5b0d126a1cddb60484e5542add6766c",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-complete-tab-inventory-v001",
+        "windowId": "inventory",
+        "controlLabels": [
+          "item",
+          "equip",
+          "etc"
+        ],
+        "controlLabelPatterns": [],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            0,
+            247,
+            280,
+            137
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "source-visible"
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
-        "ariaSelected": null,
+        "ariaSelected": "false",
         "ariaExpanded": null,
         "className": "inventory-source-tab",
         "outputs": [
@@ -469,7 +653,7 @@
       "afterState": {
         "missing": false,
         "ariaPressed": "true",
-        "ariaSelected": null,
+        "ariaSelected": "true",
         "ariaExpanded": null,
         "className": "inventory-source-tab",
         "outputs": [
@@ -482,18 +666,61 @@
       "label": "etc",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "ded55ff55e7c85916e3d434b444280114802eb1a9b15d2f55170f0dec34b3329",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "48fe2e4705d924f58443b5ad0324dcfd477010c5c7df62a92f960ef7f698a66a",
       "settledHash": "cb47c251128e9b36e7db70c1ef9c55af15909f2ade3f1968d9718cb5ca99e93b",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-complete-tab-inventory-v001",
+        "windowId": "inventory",
+        "controlLabels": [
+          "item",
+          "equip",
+          "etc"
+        ],
+        "controlLabelPatterns": [],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            0,
+            247,
+            280,
+            137
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "source-visible"
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
-        "ariaSelected": null,
+        "ariaSelected": "false",
         "ariaExpanded": null,
         "className": "inventory-source-tab",
         "outputs": [
@@ -503,7 +730,7 @@
       "afterState": {
         "missing": false,
         "ariaPressed": "true",
-        "ariaSelected": null,
+        "ariaSelected": "true",
         "ariaExpanded": null,
         "className": "inventory-source-tab",
         "outputs": [
@@ -516,14 +743,58 @@
       "label": "item item 1",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "f7e5c5a6bdc8e157fe268aa5c18d2f99b8f3b40c98933330ee366f5ab7d7f2ae",
-      "settledHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "0646188e6fda4e70ec4d98630208ee25fa2b79cfa9c87f69c0b41b6f965d4760",
+      "settledHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
       "visualDown": true,
       "visualSettled": false,
       "stateChanged": false,
       "alreadySelected": true,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "true",
@@ -550,14 +821,58 @@
       "label": "item item 2",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "da71f5bbb146f106bd08c5f69806f1ebeb00098ee011ed2eff9e9dc8f0ea0a44",
-      "settledHash": "c3b5ab1ead855d734f28aab5aca793fe217c60caf46d5710f87b2349adde6177",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "d5c593c5369bf4986e7ecda479f92ad0b3e89199f2c789e2a05774f6896e663a",
+      "settledHash": "1beabdcaa28735b74cbd66f3da3ad474b0e6f20b69eca2916b85258b1992faf2",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -584,14 +899,58 @@
       "label": "item item 3",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "471763a02d3a2b72dcc9b759ef3698444d59f3f76dbec62aee79225a79d91fdb",
-      "settledHash": "6394d1ffd0424acf6d3ed240c467f67470aaa18f89b4de82890277e2c5bf6393",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "1dd711970d1d35fadbde8d66ec6be5f99ecb0814cb37fa589982f25026392197",
+      "settledHash": "dbb5b9a9a2c649cf59a211391a282f484ec8f995e60b074195d42a279a78c935",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -618,14 +977,58 @@
       "label": "item item 4",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "c67c0b9d06b37db600db4c5330eca9769e71309741ec948e8a1e5f5bb3aa1e7b",
-      "settledHash": "6ea3304764b0c47daa4ed2ad00e37af7f7d06c5590ddcc43dd9eb66e35a9cf1e",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "64c0da329f46bdde277ff1c028587e2ad2fde2f634f3e239459cefa57fbd79fb",
+      "settledHash": "b3b6db2364bdbf79b5df8f40776e130ee0a95c41b10a3309100d1f9e53f4f8b8",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -652,14 +1055,58 @@
       "label": "item item 5",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "92c41ff043c512fd49bdb314cbf37f58aaed53fcd544802d4720701eba1bc2fd",
-      "settledHash": "151dd9d89b500aacd12a5726132cba7ad1132ed00c6d1e2da54c1d2516ec8e96",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "41bb4d7f68ab6cd1c8e006899f1f7785c12c4a0577c272751d592b72b92f0c0c",
+      "settledHash": "8a8f752c404721fd1bda931dc7a0b989693c0be72131e93f819ac13467c56834",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -686,14 +1133,58 @@
       "label": "item item 6",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "540e4e1268474df2486b449b2f3a07603ffc9d7b44feba8fd954a4f8f6f3160e",
-      "settledHash": "902e0a2174caf81f0befa52cbafc185600226f8da9871d036d4835cdbb3bc037",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "56989e25fdfb82f65e81c68e94310244dc96d86ad6762ff8c866c7b25957c35f",
+      "settledHash": "7e1345b1abeb9565ad1e168f3b8b08acc96056f84159054da3ae30d80d69ba37",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -720,14 +1211,58 @@
       "label": "item item 7",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "a04246bcae778287f606dcec05bd8cc55407dfce93681dfabe50ebdb4e0d882d",
-      "settledHash": "b7c9e07bc3bff7d8891db41336603af1cb5caeb935e7f259176ad9b7835788a5",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "9e6bc325a3c06917e65f9737ed498913fc8cd9d9bab8a2bd3dc4ae71f845f1f1",
+      "settledHash": "cc0aaad11f5931d40d6481d3e7d9d70720466e491b710c532239bfdc5830734a",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -754,14 +1289,58 @@
       "label": "item item 8",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "befaeafdfbda4ec22417c91d7d84e3efbbb04cbb0e5a46c70154c72b52030031",
-      "settledHash": "4cd2bbd2f265918f463a896f308d5a1daf5596d75232966b0d8848fe602d79ff",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "6558eb6551d578cb9459fabc98b7f00b6d326f3ea407f7d463c8d8c974c81f10",
+      "settledHash": "97cfa8fc7de424ccb4820c376bc8b2c3500e6c1a9f0c12cd6728ceb050d01bd2",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -788,14 +1367,58 @@
       "label": "item item 9",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "13c3077e68cf211485475155471acd200c540e41693882fa4f65119cdfe71ad8",
-      "settledHash": "7e029259569e4719b6fb60e7d29f832f673bf8696ce86441dd21309fa325c946",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "641057f7cf0dad6f3eb76970ec049f71b19ef8f3cb586d3c7ef97e6ad0adefc1",
+      "settledHash": "7270035b117c982ac4fcb4f66cab932fa1078d050fbae63eb7eb0d93b215fef1",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -822,14 +1445,58 @@
       "label": "item item 10",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "1b1257377335ac95f38f0fb2e43fc1ee999259d9ef5e2de64504470d72a22098",
-      "settledHash": "4d69c6090a00700a09983d743209da0ade7670e8f5d109e48464ac76ba4b8006",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "4ab6ce7ada38b8595c241aecf4cc547b7729439014dcaaf1d533320cec90e4ad",
+      "settledHash": "2b673299a1527c48d41ceaabb7aca7bc3234f00c7398603a6ec3bbba464c33f4",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -856,14 +1523,58 @@
       "label": "item item 11",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "b7c02e50484a6bbef8db59ab2f8af69e770cbbc1ab2769f8e896181d5638aafe",
-      "settledHash": "919254d05167a96f4924fed03fcd821a7499b6a2590fd592ec0c152746dc78a7",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "ca3c4229d5fb41e4a67480143e79e67ae63f66eab0a36ca86138d179d3340118",
+      "settledHash": "2885668692e29f1e656f61d0e6c50e2c73539cdb8f02f4ada153d1c25e409d8f",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -890,14 +1601,58 @@
       "label": "item item 12",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "b5f630b6a6b0fc539496ef5eefa265e0c01fbe5488759dc3b7bdc21781d4d934",
-      "settledHash": "1ead5b92d2ee477a567d471f016207bb45f61091823f658218ebc7f46be9dff9",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "d4e8c0ffa001cc0b23eb358f89394bbd8ef480537864015e1d9ffb8d8320447d",
+      "settledHash": "58ae1b316fc68b9214ba616932894f910b4b71a525f7c9ebfd8e63c05ed59c98",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -924,14 +1679,58 @@
       "label": "item item 13",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "a75643f863f098b292eaa5a82e6c944258ade8adac14ea3f0c1ba8b16d6ce76b",
-      "settledHash": "d88f5be2a61c461961d356865d036f1858dfb16aeb5d7bf17f0df00a591619c2",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "fb07b6ffdaea74c758980d04c657dc3340a77f339ff0c5b73c37c493dccbf07f",
+      "settledHash": "7da16b2d3b13b82557ebb3a06db9c44faf3c0370d18e4723c933ea80e58d531f",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -958,14 +1757,58 @@
       "label": "item item 14",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "4b04c7c7a1dacdc6d21db1c02d03b953c6390be8f05aa07ee0e46cc63eceafa7",
-      "settledHash": "d5254d24d6ff0a7766a756b60d9a01f5823e7101b149cf1f3747c85f59201291",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "eac2d9cf182c9acb96ed38a7d8c6148e2650f632d055c739634ed44985b4ad87",
+      "settledHash": "be88ed719778ab57df9148611d486b0455dfb49a2d3b1fafc0d9dc64d81f202b",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -992,14 +1835,58 @@
       "label": "item item 15",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "74a28e28615cd786db1fac66d440b229fa9551ae54446919cab8b9455c9b75ba",
-      "settledHash": "e2c7c78881b1ab484885d2d6f17f3157f828f695fe129291074592c22261890f",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "f87dd845b7b79be411df316e16d9ed13061caada31b9f741ac8d5c5236efffb0",
+      "settledHash": "f1086fa3a4be330fb42d940aadb028547d892f69c911bd79298be4e66b08e997",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -1026,14 +1913,58 @@
       "label": "item item 16",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "b4fa724e97bac2fb0fa96175c6c2a774dd27e5952cef7fcbfa450c8b22c8e729",
-      "settledHash": "b07834330b2ba26658e1d68b6f3e56ddaa16c4ce2d05c25bacdbb54df114832d",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "9c4df8a1a8083ff6c0979ad560e73ec4df8ba438a9df2434f2dd64500ab758c0",
+      "settledHash": "e51f5163c8664099ca3fa917f8e86e0defb8a986239465a5387ac61e99d54031",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -1060,14 +1991,58 @@
       "label": "item item 17",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "00bd61cd43ff3ca3195ede9d822268e2e57998fe9a4a2d85cf19aceae0830968",
-      "settledHash": "829d0cf4d3c3cba0d4e6bbaee19b79b9f63474f0ffd2560c6f982f0daa6c1d72",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "f93111c90bb204b26ab1f7d5e4642756abe8336e162fd37b5bff45026f633c1a",
+      "settledHash": "e7db1bb90a1b2339a007bdfcbe8157eeae117a5b2e8e50729096c585a914b1e9",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -1094,14 +2069,58 @@
       "label": "item item 18",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "4919d89e84d8db50afa3f802ccde03674523cf98ba8149a3e3560ab5515c895e",
-      "settledHash": "bed243a84dbeff66999d779d139e7dce090ba521b9646bf9a844df65846f4f9f",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "7249ad6da6263996aa6a7aff267dbf4fff5a36b94734faba42b8c3227bc9bfe9",
+      "settledHash": "396c59528445db09d775d9dcd70cd6760b0e91186321d8437faaaf36d47ae721",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -1128,14 +2147,58 @@
       "label": "item item 19",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "cadc58d22acd199f81e0b32e08a4d12735aa8d4b87c204a4ff59b40950a39889",
-      "settledHash": "eaa535e9faee7cce46907ec31736b909e4eeba034a00a0b1fade6ea3d0a7a791",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "e93db734403eede4d0505b83d7f05dbec6c7e15a5a2701c72bdfa343e1734243",
+      "settledHash": "e6b45c1cefb0b3efd81c191ee58dd1935a11c91e44dd4dbb78f939a0629f7bde",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -1162,14 +2225,58 @@
       "label": "item item 20",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "e5761d4496fe7e6a655c2aa633efbbd07f56905842d46826d7a396f0c0aed940",
-      "settledHash": "a49e867d9e007b1aa3dd5d46fbd6945048ccf4428c1fd23fad38bb800f3356c2",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "69c8e8d3362d34899a1437d2d056eccdcfe63ae4c5a04d6bf14a9bfa069bab67",
+      "settledHash": "0430f3ebbed947d4687ac0eb7716a79d9f6972fcdf9c13628ac27cd568de8c32",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -1196,14 +2303,58 @@
       "label": "item item 21",
       "tag": "button",
       "type": "",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "4a68985d73fa154b10b7f795d2656465bc9c2b39f383cb3db54b067946625840",
-      "settledHash": "38e96ebec1d72d3bfb677050f64bb3d089421bc33a9409ef7bc505441cb25f7f",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "66176ab12cc17b2aaa99713af6cea107645b3d822ae615db9f83f6b6c11cf1d8",
+      "settledHash": "800e9cdb18677d7914b9c84b06d8b33e5aa7d2f96ca9323ce944743663376e02",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-all-cell-selection-v001",
+        "windowId": "inventory",
+        "controlLabels": [],
+        "controlLabelPatterns": [
+          "^(?:item|equip|etc) item \\d+$"
+        ],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "every reachable Inventory cell independently owns selection in all three categories",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            266,
+            227,
+            102
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "user-authorized-inferred",
+          "scope": [
+            "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+          ]
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": "false",
@@ -1230,14 +2381,55 @@
       "label": "所持品スクロール",
       "tag": "input",
       "type": "range",
-      "idleHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "downHash": "2d2614851b8ce061d0c8b200b7b513655323d4d8b092011982b8061024b19a29",
-      "settledHash": "8bc918f2ccdd134e5d5477e55e22d5dd4fe1b2eb38791788d3d72c7981453597",
+      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "downHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "settledHash": "90cf978345e29f31744840defa30bb373e2d2fc7920461dfd424b61e2c1b9038",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
       "alreadySelected": false,
+      "semanticContract": {
+        "id": "inventory-real-scroll-v001",
+        "windowId": "inventory",
+        "controlLabels": [
+          "所持品スクロール"
+        ],
+        "controlLabelPatterns": [],
+        "test": {
+          "file": "e2e/inventory-source.spec.ts",
+          "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
+          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        },
+        "source": {
+          "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+          "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+          "approval": "immutable-user-owned-source",
+          "region": [
+            36,
+            265,
+            244,
+            103
+          ]
+        },
+        "browserPassed": true,
+        "testLocked": true,
+        "sourceLocked": true,
+        "behaviorAuthority": {
+          "approval": "source-visible"
+        },
+        "behaviorApproved": true,
+        "requirements": {
+          "realGesture": true,
+          "expectedRegionChanged": true,
+          "invariantRegionsStable": true,
+          "sourceApproved": true
+        },
+        "passed": true
+      },
+      "activityObserved": true,
       "passed": true,
+      "classification": "contract-passed",
+      "missingRequirements": [],
       "beforeState": {
         "missing": false,
         "ariaPressed": null,
@@ -1267,12 +2459,40 @@
   "ranges": [
     {
       "label": "所持品スクロール",
-      "distinctVisuals": 11,
-      "values": 11
+      "distinctVisuals": 9,
+      "values": 11,
+      "actualValues": [
+        0,
+        98,
+        86,
+        74,
+        62,
+        50,
+        38,
+        26,
+        14,
+        2,
+        100
+      ],
+      "endpointPass": true,
+      "writingMode": "vertical-lr",
+      "gesture": "keyboard Home, axis-aware pointer samples, keyboard End"
     }
   ],
   "minimize": {
     "samples": [
+      [
+        280,
+        137
+      ],
+      [
+        280,
+        137
+      ],
+      [
+        280,
+        137
+      ],
       [
         280,
         137
@@ -1328,32 +2548,1513 @@
       [
         180,
         18
-      ],
-      [
-        180,
-        18
-      ],
-      [
-        180,
-        18
-      ],
-      [
-        180,
-        18
       ]
     ],
-    "distinctGeometry": 14
+    "distinctGeometry": 14,
+    "gesture": "trusted Playwright pointer click"
   },
   "checkboxes": [],
   "donorPinkBoundary": 0,
   "sourceContracts": [
     {
       "script": "contract-check.sh",
-      "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+      "status": 0,
+      "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+      "error": ""
     },
     {
       "script": "remaining-window-contract.sh",
-      "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+      "status": 0,
+      "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+      "error": ""
+    }
+  ],
+  "controlCoverage": {
+    "total": 27,
+    "contracted": 27,
+    "contractPassed": 27,
+    "contractFailed": [],
+    "uncontracted": []
+  },
+  "semanticContractRun": {
+    "status": 0,
+    "error": "",
+    "command": [
+      "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/node_modules/.bin/playwright",
+      "test",
+      "e2e/bottom-bar-source.spec.ts",
+      "e2e/basic-info.spec.ts",
+      "e2e/status-source.spec.ts",
+      "e2e/inventory-source.spec.ts",
+      "e2e/card-source.spec.ts",
+      "e2e/skills-source.spec.ts",
+      "e2e/equipment-source.spec.ts",
+      "e2e/chat-source.spec.ts",
+      "e2e/exchange-source.spec.ts",
+      "e2e/game-menu-source.spec.ts",
+      "e2e/party-source.spec.ts",
+      "e2e/quickbar-source.spec.ts",
+      "--grep",
+      "(?:Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag|every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores|every source-visible Status increment owns its exact hitbox and changes only its local value field|status minimize uses a generated compact endpoint through complete motion and restores the full source geometry|status close removes the window and Basic Info restores the same independent destination|every Inventory category is a reachable tab with its complete selectable cell inventory|every reachable Inventory cell independently owns selection in all three categories|Inventory real scroll gestures keep one visual thumb and every sampled body state below the header|Inventory minimize uses a generated compact endpoint through complete motion and restores|Inventory close removes the window and Basic Info restores its exact componentized destination|Card art rotation is reversible and leaves title plus copy pixels invariant|Card real scroll gestures move copy and one visual thumb without entering title or art|Card slot controls the Card scroll state without changing title or art|Card close target removes exactly the Card window|Every Skills row and level control is pointer-reachable on its settled page and owns only its state|Skills real scroll gestures keep one thumb and the clipped list outside title and footer|Skills use acts on selection and both close controls support Basic Info recovery|Every Equipment row owns its exact source column and transfers exclusive selection|Equipment minimize uses its generated compact endpoint through complete motion and restores|Equipment close removes the window and Basic Info restores its complete destination|Bottom Bar previous and next controls are reversible and leave slider plus title invariant|Chat visibly edits Japanese topic and submits one application-owned form without invented tabs|Chat cancel restores the complete default form instead of only clearing topic|Every Exchange item owns its exact grid cell and transfers exclusive selection|Exchange confirm enables Trade and Trade or cancel restore a clean transaction|Every Game Menu action owns its source row, transfers selection, and toggles back to ready|Every Party member is a reachable listbox option with exclusive reversible selection|Party tools and source tabs transfer state and support keyboard traversal|Party satellite actions stay fixed while Party moves and expose exact ownership|Party close removes satellites and Basic Info friend restores the complete destination|Every Quickbar slot owns its exact raster and reverses independently to neutral)",
+      "--reporter=json"
+    ],
+    "report": "artifacts/qa/correction-matrix-v003/semantic-contract-playwright.json"
+  },
+  "semanticContracts": [
+    {
+      "id": "bottom-bar-slider-real-drag-v001",
+      "windowId": "bottom-bar",
+      "controlLabels": [
+        "クイックスロット位置"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/bottom-bar-source.spec.ts",
+        "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
+        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          538,
+          600,
+          21
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "basic-info-destination-inventory-v001",
+      "windowId": "basic-info",
+      "controlLabels": [
+        "status",
+        "option",
+        "items",
+        "equip",
+        "skill",
+        "map",
+        "chat",
+        "friend"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/basic-info.spec.ts",
+        "title": "every Basic Info page control declares and reaches its source-approved destination",
+        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          207,
+          22,
+          70,
+          95
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible Map button opens an inferred source-themed Map destination.",
+          "The source-visible Friend button activates the existing Party friends view."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "basic-info-resource-sliders-v001",
+      "windowId": "basic-info",
+      "controlLabels": [
+        "HP",
+        "SP"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/basic-info.spec.ts",
+        "title": "every Basic Info resource slider declares and drives its independent visual thumb",
+        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          111,
+          22,
+          86,
+          32
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "basic-info-generated-minimize-v001",
+      "windowId": "basic-info",
+      "controlLabels": [
+        "基本情報を最小化"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/basic-info.spec.ts",
+        "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
+        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          0,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores the complete window."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "status-complete-increment-inventory-v001",
+      "windowId": "status",
+      "controlLabels": [
+        "Strを上げる",
+        "Agiを上げる",
+        "Vitを上げる",
+        "Dexを上げる",
+        "Lukを上げる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
+        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "status-generated-minimize-v001",
+      "windowId": "status",
+      "controlLabels": [
+        "ステータスを最小化"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
+        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores the complete Status window."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "status-close-and-reopen-v001",
+      "windowId": "status",
+      "controlLabels": [
+        "ステータスを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "status close removes the window and Basic Info restores the same independent destination",
+        "sha256": "16ec2e169c18ba6c57bbb57d2008d750ba74ec7cae923114c2d93921f7b8f3f1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-complete-tab-inventory-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "item",
+        "equip",
+        "etc"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-all-cell-selection-v001",
+      "windowId": "inventory",
+      "controlLabels": [],
+      "controlLabelPatterns": [
+        "^(?:item|equip|etc) item \\d+$"
+      ],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "every reachable Inventory cell independently owns selection in all three categories",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          36,
+          266,
+          227,
+          102
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-real-scroll-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "所持品スクロール"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          36,
+          265,
+          244,
+          103
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-generated-minimize-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "所持アイテムを最小化"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores Inventory."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-close-and-reopen-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "所持アイテムを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
+        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-reversible-art-rotation-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "カードを回転"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card art rotation is reversible and leaves title plus copy pixels invariant",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The independent Card art can animate without crossing into the Japanese title or copy regions and restores exactly."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-real-scroll-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "カード情報スクロール"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card real scroll gestures move copy and one visual thumb without entering title or art",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-slot-scroll-control-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "カードスロット"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card slot controls the Card scroll state without changing title or art",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-themed Card slot controls two settled Card copy positions and exposes that relationship to interaction QA."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-close-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "ソルジャースケルトンカードを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card close target removes exactly the Card window",
+        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-every-row-selection-v001",
+      "windowId": "skills",
+      "controlLabelPatterns": [
+        "^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ) Lv (5|4|9|10|1)$"
+      ],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Every extracted Japanese skill row is selectable through a real pointer target after navigating to its settled clipped page."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-every-level-control-v001",
+      "windowId": "skills",
+      "controlLabelPatterns": [
+        "^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ)をレベルアップ$"
+      ],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each source-visible LV UP target independently toggles only its associated skill state and reports the Japanese skill name."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-real-scroll-v001",
+      "windowId": "skills",
+      "controlLabels": [
+        "スキルスクロール"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills real scroll gestures keep one thumb and the clipped list outside title and footer",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-use-selected-row-v001",
+      "windowId": "skills",
+      "controlLabels": [
+        "use"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills use acts on selection and both close controls support Basic Info recovery",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible use control acts on the currently selected Japanese skill and exposes settled feedback."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-close-and-reopen-v001",
+      "windowId": "skills",
+      "controlLabels": [
+        "スキルリストを閉じる",
+        "close"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills use acts on selection and both close controls support Basic Info recovery",
+        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "equipment-every-row-selection-v001",
+      "windowId": "equipment",
+      "controlLabelPatterns": [
+        "^(左|右)装備 [1-5]$"
+      ],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
+        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each extracted left and right Equipment row is independently selectable through its exact source column without claiming the avatar gap."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "equipment-generated-minimize-v001",
+      "windowId": "equipment",
+      "controlLabels": [
+        "装備アイテムを最小化"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
+        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact Equipment endpoint and restores exactly."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "equipment-close-and-reopen-v001",
+      "windowId": "equipment",
+      "controlLabels": [
+        "装備アイテムを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Equipment close removes the window and Basic Info restores its complete destination",
+        "sha256": "502aed7f7ad6b842fe60531ebe518adef46e6358770c56e4e60786f616f9cf0d"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "bottom-bar-reversible-navigation-v001",
+      "windowId": "bottom-bar",
+      "controlLabels": [
+        "前のスロット",
+        "次のスロット"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/bottom-bar-source.spec.ts",
+        "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
+        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          538,
+          600,
+          21
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible previous and next controls traverse slot state reversibly while preserving the independent slider and Japanese title."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "chat-complete-application-form-v001",
+      "windowId": "chat",
+      "controlLabels": [
+        "トピック",
+        "ルーム",
+        "公開",
+        "非公開",
+        "OK"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/chat-source.spec.ts",
+        "title": "Chat visibly edits Japanese topic and submits one application-owned form without invented tabs",
+        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          279,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The single source-themed Chat form visibly accepts Japanese topic text, uses an application-owned room list, selects privacy, and submits exact settled feedback without invented tabs."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "chat-complete-cancel-reset-v001",
+      "windowId": "chat",
+      "controlLabels": [
+        "cancel"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/chat-source.spec.ts",
+        "title": "Chat cancel restores the complete default form instead of only clearing topic",
+        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          279,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Cancel reverses every pending Chat form edit and restores the screenshot-consistent default state."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "exchange-every-item-selection-v001",
+      "windowId": "exchange",
+      "controlLabelPatterns": [
+        "^交換アイテム (?:[1-9]|1[0-6])$"
+      ],
+      "test": {
+        "file": "e2e/exchange-source.spec.ts",
+        "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
+        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          399,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each of the 16 extracted Exchange cells is independently selectable through its exact source grid target."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "exchange-confirm-trade-cancel-v001",
+      "windowId": "exchange",
+      "controlLabels": [
+        "OK",
+        "trade",
+        "cancel"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/exchange-source.spec.ts",
+        "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
+        "sha256": "8cbd22aeffaa736f1b0693206ffc96c6fbb0ee5387fd0fbdd747263dae5318c8"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          399,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "OK requires an item, Trade requires confirmation, and both Trade and cancel restore a clean reversible Exchange transaction."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "game-menu-reversible-actions-v001",
+      "windowId": "game-menu",
+      "controlLabelPatterns": [
+        "^(Return to last save point|Character Select|Exit to Windows|Return to game)$"
+      ],
+      "test": {
+        "file": "e2e/game-menu-source.spec.ts",
+        "title": "Every Game Menu action owns its source row, transfers selection, and toggles back to ready",
+        "sha256": "2c478098d71f214538961b29911160291b1cc3e7f2a1a05a6191209dd6e8f040"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          626,
+          182,
+          222,
+          133
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each source-visible Game Menu action owns its extracted row, transfers exclusive selection, and can be toggled back to the ready state without inventing external side effects."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-member-selection-v001",
+      "windowId": "party",
+      "controlLabelPatterns": [
+        "^(SakumaRiri|Sebas'|ANRI\\(砂漠の都市モロク\\)|Show_A|Ayanalshizuka)$"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Every Party member is a reachable listbox option with exclusive reversible selection",
+        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Every source Party member is a listbox option with exclusive selection and same-member reversal."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-tools-reversible-v001",
+      "windowId": "party",
+      "controlLabelPatterns": [
+        "^パーティーツール [1-5]$"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party tools and source tabs transfer state and support keyboard traversal",
+        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "All five source tool targets transfer one selected state and toggle back to neutral."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-view-tabs-v001",
+      "windowId": "party",
+      "controlLabels": [
+        "友達",
+        "パーティー"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party tools and source tabs transfer state and support keyboard traversal",
+        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source Friends and Party controls expose real tab semantics with horizontal keyboard traversal."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-satellite-actions-v001",
+      "windowId": "party",
+      "controlLabels": [
+        "back",
+        "next",
+        "sell"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party satellite actions stay fixed while Party moves and expose exact ownership",
+        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          350,
+          211,
+          174
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The fixed back, next, and sell strip belongs to Party QA while remaining anchored outside the movable window."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-close-and-reopen-v001",
+      "windowId": "party",
+      "controlLabels": [
+        "パーティー (Riri-Soft)を閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party close removes satellites and Basic Info friend restores the complete destination",
+        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          350,
+          211,
+          174
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "quickbar-reversible-slots-v001",
+      "windowId": "quickbar",
+      "controlLabelPatterns": [
+        "^クイックスロット [1-3]$"
+      ],
+      "test": {
+        "file": "e2e/quickbar-source.spec.ts",
+        "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
+        "sha256": "44c23059158bbe2630825c2c980cc8294e58f441d9513e2726716ffe4f03e32f"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          736,
+          430,
+          112,
+          94
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each source-visible Quickbar slot owns only its extracted raster, transfers exclusive selection, and can return independently to the source-neutral state."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
     }
   ]
 }

@@ -1124,6 +1124,39 @@
       "gesture": "trusted pointer close removes Party and satellites, then Basic Info friend restores both",
       "expected_region_changes": [{ "window_id": "party", "rule": "the main window and owned satellite controls close and reopen together" }],
       "invariant_regions": [{ "component_ids": ["all Party and satellite components"], "rule": "reopen restores the complete owned destination" }]
+    },
+    {
+      "id": "quickbar-reversible-slots-v001",
+      "window_id": "quickbar",
+      "control_label_patterns": ["^クイックスロット [1-3]$"],
+      "test": {
+        "file": "e2e/quickbar-source.spec.ts",
+        "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
+        "sha256": "44c23059158bbe2630825c2c980cc8294e58f441d9513e2726716ffe4f03e32f"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [736, 430, 112, 94]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": ["Each source-visible Quickbar slot owns only its extracted raster, transfers exclusive selection, and can return independently to the source-neutral state."]
+      },
+      "gesture": "trusted pointer clicks visit and reverse every slot; keyboard activation and a real drag preserve ownership",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "quickbar-slot-*",
+          "rule": "only the activated slot changes, exactly one slot is selected, and a second activation restores all three neutral rasters"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": ["the two inactive quickbar slots"],
+          "rule": "inactive slot pixels remain byte-identical through every isolated selection and reversal"
+        }
+      ]
     }
   ]
 }

@@ -151,6 +151,39 @@ restores the complete group. The corrected isolated replay reports 16 controls,
 16 contracted, 16 contract-passed, zero uncontracted, and no correction
 failures.
 
+The first owner-aware full replay exposed a remaining asymmetry: it counted all
+16 owned controls but only the 15 component descendants inside Party, then
+falsely failed the manifest's 18-component inventory. The independent-component
+probe now uses the same owner-aware selector and the focused Party replay passes
+with 16/16 contracted controls and no correction failures. The replay CLI also
+exits before evidence cleanup for `--help`, preventing command inspection from
+erasing the last complete evidence set.
+
+## Quickbar isolated-slot tracer
+
+The full replay found all three Quickbar buttons reachable but zero contracted.
+Generic probes saw a pressed state and a whole-control pixel change, but could
+not prove which extracted raster owned that response, whether inactive slots
+changed, or whether the bank could return to its source-neutral state. The first
+RED journey also found that none of the buttons declared a visual-component
+mapping and activating an already selected slot could not clear it.
+
+Each slot now declares its exact `quickbar-slot-*` raster and toggles between
+neutral and one exclusive selection. The locked journey starts from neutral for
+each slot, proves only that slot changes, requires both inactive siblings to stay
+byte-identical, and requires a second click to restore all three. A separate
+keyboard and drag journey proves native activation and window movement preserve
+the same ownership. The focused browser test passes both journeys, and the
+isolated correction replay reports three controls, three contracted, three
+contract-passed, zero uncontracted, and no correction failures.
+
+The subsequent full correction replay passes 14 of 15 windows. Party remains
+green at 16/16 and Quickbar at 3/3. Options is now the only failing window: all
+17 controls are reachable, but none is connected to a locked semantic journey,
+so `settled-button-effects` and `complete-user-flow-not-screenshot-only` fail
+closed. The next method revision is therefore an Options contract-coverage task,
+not evidence that the other 14 windows need regeneration.
+
 ## First RED tracer
 
 `remaining-source-windows.spec.ts` now includes:

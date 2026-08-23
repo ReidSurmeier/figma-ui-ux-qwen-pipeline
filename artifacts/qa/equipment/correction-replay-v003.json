@@ -9,6 +9,13 @@
     "artifacts/qa/figma-desktop-audit-v001.json",
     "artifacts/qa/figma-correction-matrix-v003.json"
   ],
+  "control_coverage": {
+    "total": 12,
+    "contracted": 12,
+    "contractPassed": 12,
+    "contractFailed": [],
+    "uncontracted": []
+  },
   "results": [
     {
       "prompt_id": "no-reference-underlay",
@@ -20,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/equipment/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 266
+            "requestedResources": 279
           }
         }
       ]
@@ -68,16 +75,20 @@
             "sourceContracts": [
               {
                 "script": "contract-check.sh",
-                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts"
+                "status": 0,
+                "output": "contract-check: PASS source, provider, underlay, slider endpoints, transparent thumb, exact tab hit mapping, hash, source-locked geometry, alpha, press, drag, shared pixel-font, title, minimize, and recorded Figma v004 contracts",
+                "error": ""
               },
               {
                 "script": "remaining-window-contract.sh",
-                "output": "remaining-window-contract: PASS Qwen plates, 146 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams"
+                "status": 0,
+                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "error": ""
               }
             ],
             "donorPinkBoundary": 0,
             "maximumBoundaryPixels": 2,
-            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/equipment/trace.json/../default.png"
+            "defaultScreenshot": "artifacts/qa/correction-matrix-v003/equipment/default.png"
           }
         }
       ]
@@ -145,6 +156,18 @@
                   152
                 ],
                 [
+                  280,
+                  152
+                ],
+                [
+                  280,
+                  152
+                ],
+                [
+                  280,
+                  152
+                ],
+                [
                   272.3,
                   141.7
                 ],
@@ -195,21 +218,10 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             }
           }
         }
@@ -224,8 +236,15 @@
           "kind": "executed-browser-probe",
           "artifact": "artifacts/qa/correction-matrix-v003/equipment/trace.json",
           "metrics": {
-            "controlCount": 13,
-            "failures": []
+            "controlCount": 12,
+            "failures": [],
+            "controlCoverage": {
+              "total": 12,
+              "contracted": 12,
+              "contractPassed": 12,
+              "contractFailed": [],
+              "uncontracted": []
+            }
           }
         }
       ]
@@ -298,8 +317,15 @@
           "kind": "executed-browser-probe",
           "artifact": "artifacts/qa/correction-matrix-v003/equipment/trace.json",
           "metrics": {
-            "controlCount": 13,
+            "controlCount": 12,
             "failures": [],
+            "controlCoverage": {
+              "total": 12,
+              "contracted": 12,
+              "contractPassed": 12,
+              "contractFailed": [],
+              "uncontracted": []
+            },
             "consoleErrors": []
           }
         }
@@ -316,6 +342,18 @@
           "metrics": {
             "minimize": {
               "samples": [
+                [
+                  280,
+                  152
+                ],
+                [
+                  280,
+                  152
+                ],
+                [
+                  280,
+                  152
+                ],
                 [
                   280,
                   152
@@ -371,21 +409,10 @@
                 [
                   180,
                   18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
-                ],
-                [
-                  180,
-                  18
                 ]
               ],
-              "distinctGeometry": 14
+              "distinctGeometry": 14,
+              "gesture": "trusted Playwright pointer click"
             },
             "ranges": [],
             "discreteControlFailures": []

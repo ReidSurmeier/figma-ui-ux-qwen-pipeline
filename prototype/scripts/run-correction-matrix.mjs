@@ -9,6 +9,12 @@ import { correctionMatrixOutputConfig, selectedCorrectionMatrixWindows } from ".
 import { rangeGesturePoint } from "./range-gesture-geometry.mjs";
 import { executeSemanticInteractionContracts, semanticContractForControl } from "./semantic-interaction-contract.mjs";
 
+if (process.argv.includes("--help") || process.argv.includes("-h")) {
+  console.log("Usage: CORRECTION_MATRIX_WINDOW_IDS=party npm run qa:replay");
+  console.log("Set CORRECTION_MATRIX_RUN_ROOT to write evidence outside the committed QA directory.");
+  process.exit(0);
+}
+
 const prototypeDir = resolve(import.meta.dirname, "..");
 const repoDir = resolve(prototypeDir, "..");
 const baseUrl = process.env.CORRECTION_MATRIX_URL ?? "http://10.255.255.254:4174/";
@@ -47,6 +53,10 @@ const controlsForWindowSelector = (windowId) => controlsSelector.split(", ").fla
   `[data-window-id="${windowId}"] ${selector}`,
   `[data-control-owner="${windowId}"] ${selector}`,
 ]).join(", ");
+const componentsForWindowSelector = (windowId) => [
+  `[data-window-id="${windowId}"] [data-component-id]`,
+  `[data-control-owner="${windowId}"] [data-component-id]`,
+].join(", ");
 const reports = [];
 const titlelessWindows = new Set(["quickbar", "bottom-bar", "notification"]);
 const irregularWindows = new Set(["quickbar", "bottom-bar", "notification"]);
@@ -296,7 +306,7 @@ async function probeGeometry(page, windowId) {
   const defaultBox = await window.boundingBox();
   const title = window.locator('[data-component-id$="title-text"], .title-bar h1').first();
   const titleBox = await title.count() ? await title.boundingBox() : null;
-  const componentIds = await window.locator("[data-component-id]").evaluateAll((nodes) => nodes.map((node) => node.getAttribute("data-component-id")));
+  const componentIds = await page.locator(componentsForWindowSelector(windowId)).evaluateAll((nodes) => nodes.map((node) => node.getAttribute("data-component-id")));
   const corner = await page.evaluate(({ windowId }) => {
     const window = document.querySelector(`[data-window-id="${windowId}"]`);
     if (!(window instanceof HTMLElement)) return null;
