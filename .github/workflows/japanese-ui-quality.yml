@@ -40,20 +40,23 @@ jobs:
       - name: Run unit tests and build
         run: npm --prefix prototype test && npm --prefix prototype run build
 
-      - name: Start the executable prototype
+      - name: Enforce BGM and Effect fidelity floor
+        working-directory: prototype
+        env:
+          BGM_FIDELITY_URL: http://127.0.0.1:4174/
         run: |
-          npm --prefix prototype exec vite -- --host 127.0.0.1 --port 4174 > /tmp/japanese-ui-vite.log 2>&1 &
+          npx vite --host 0.0.0.0 --port 4174 > /tmp/japanese-ui-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
           for attempt in $(seq 1 30); do
-            curl --fail --silent http://127.0.0.1:4174/ >/dev/null && exit 0
+            if curl --fail --silent --show-error http://127.0.0.1:4174/ >/dev/null; then
+              npm run qa:bgm-fidelity
+              exit $?
+            fi
             sleep 1
           done
           sed -n '1,200p' /tmp/japanese-ui-vite.log
           exit 1
-
-      - name: Enforce BGM and Effect fidelity floor
-        env:
-          BGM_FIDELITY_URL: http://127.0.0.1:4174/
-        run: npm --prefix prototype run qa:bgm-fidelity
 
       - name: Upload fidelity evidence
         if: always()
