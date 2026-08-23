@@ -118,6 +118,28 @@ test("card scrollbar moves its visible source thumb between exact endpoints", as
   expect(maximum.equals(minimum)).toBe(false);
 });
 
+test("card scrolling moves the visible Japanese copy rather than only its thumb", async ({ page }) => {
+  await page.goto("/");
+  const card = page.getByRole("region", { name: "ソルジャースケルトンカード" });
+  const slider = card.getByRole("slider", { name: "カード情報スクロール" });
+  const bounds = await card.boundingBox();
+  if (!bounds) throw new Error("Card window geometry is unavailable");
+  const copyViewport = {
+    x: bounds.x + 90,
+    y: bounds.y + 20,
+    width: 155,
+    height: 92,
+  };
+
+  await slider.fill("0");
+  const copyAtTop = await page.screenshot({ clip: copyViewport });
+  await slider.fill("100");
+  await page.waitForTimeout(40);
+  const copyAtBottom = await page.screenshot({ clip: copyViewport });
+
+  expect(copyAtBottom.equals(copyAtTop), "the copy viewport stayed frozen while the thumb moved").toBe(false);
+});
+
 test("skills scrollbar moves its visible source thumb through more than four positions", async ({ page }) => {
   await page.goto("/");
   const skills = page.getByRole("region", { name: "スキルリスト" });

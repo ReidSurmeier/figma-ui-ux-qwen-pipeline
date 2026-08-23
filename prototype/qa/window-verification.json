@@ -1,140 +1,140 @@
 {
   "schema_version": "1.2",
   "reference": "benchmarks/japanese-rpg-options-v001/reference.png",
-  "invalidation_reason": "v003 executes every applicable correction prompt with window-specific browser evidence; no window is verified until runtime and hosted Figma passes are both green.",
+  "invalidation_reason": "The 2026-08-22 hands-on review reproduced visible content, clipping, hit-map, dropdown, window-ownership, and state-response failures that v003 falsely passed. All windows require new source-state and real-gesture evidence.",
   "windows": [
     {
       "id": "options",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/options/correction-replay-v003.json"
       }
     },
     {
       "id": "basic-info",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/basic-info/correction-replay-v003.json"
       }
     },
     {
       "id": "card",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/card/correction-replay-v003.json"
       }
     },
     {
       "id": "skills",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/skills/correction-replay-v003.json"
       }
     },
     {
       "id": "status",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/status/correction-replay-v003.json"
       }
     },
     {
       "id": "inventory",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/inventory/correction-replay-v003.json"
       }
     },
     {
       "id": "equipment",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/equipment/correction-replay-v003.json"
       }
     },
     {
       "id": "chat",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/chat/correction-replay-v003.json"
       }
     },
     {
       "id": "exchange",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/exchange/correction-replay-v003.json"
       }
     },
     {
       "id": "game-menu",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/game-menu/correction-replay-v003.json"
       }
     },
     {
       "id": "party",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/party/correction-replay-v003.json"
       }
     },
     {
       "id": "quickbar",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/quickbar/correction-replay-v003.json"
       }
     },
     {
       "id": "compact-info",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/compact-info/correction-replay-v003.json"
       }
     },
     {
       "id": "bottom-bar",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/bottom-bar/correction-replay-v003.json"
       }
     },
     {
       "id": "notification",
-      "status": "verified",
-      "deterministic_gates": "pass",
+      "status": "revision-required",
+      "deterministic_gates": "invalidated",
       "correction_replay": {
-        "status": "pass",
+        "status": "invalidated",
         "report": "artifacts/qa/notification/correction-replay-v003.json"
       }
     }
