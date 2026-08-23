@@ -37,6 +37,9 @@ jobs:
       - name: Install Chrome for Playwright
         run: npx --prefix prototype playwright install --with-deps chrome
 
+      - name: Install visual comparison tools
+        run: sudo apt-get update && sudo apt-get install --yes imagemagick
+
       - name: Run unit tests and build
         run: npm --prefix prototype test && npm --prefix prototype run build
 
