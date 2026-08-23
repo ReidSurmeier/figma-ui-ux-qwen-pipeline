@@ -13,6 +13,13 @@ web/playwright-report/
 web/test-results/
 .playwright-mcp/
 
+# Godot imports and web exports are reproducible from the tracked project.
+godot/.godot/
+godot/web/
+godot/**/*.import
+artifacts/qa/godot-options-v001/playwright/
+artifacts/qa/godot-options-v001/manual-debug*.png
+
 # Discovery screenshots are reproducible from the Figma board.
 artifacts/figma/candidates/
 artifacts/figma/uploaded-node-4-146.png

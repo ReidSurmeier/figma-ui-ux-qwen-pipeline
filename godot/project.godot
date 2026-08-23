@@ -1,0 +1,24 @@
+; Godot engine configuration for the source-locked Japanese UI tracer.
+; Edit this project with Godot 4.7.2 or later in the 4.x line.
+
+config_version=5
+
+[application]
+
+config/name="Japanese UI Reconstruction"
+run/main_scene="res://main.tscn"
+
+[display]
+
+window/size/viewport_width=849
+window/size/viewport_height=564
+window/size/window_width_override=849
+window/size/window_height_override=564
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=true
+textures/canvas_textures/default_texture_filter=0

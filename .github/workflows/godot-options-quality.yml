@@ -1,0 +1,92 @@
+name: Godot Japanese Options Quality Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/godot-options-quality.yml"
+      - "godot/**"
+      - "prototype/package-lock.json"
+      - "benchmarks/japanese-rpg-options-v001/**"
+  pull_request:
+    paths:
+      - ".github/workflows/godot-options-quality.yml"
+      - "godot/**"
+      - "prototype/package-lock.json"
+      - "benchmarks/japanese-rpg-options-v001/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  godot-options:
+    runs-on: ubuntu-latest
+    env:
+      GODOT_VERSION: 4.7.2
+      GODOT_BIN: /usr/local/bin/godot
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+
+      - name: Install browser and visual-test dependencies
+        run: |
+          npm ci --prefix prototype
+          npx --prefix prototype playwright install --with-deps chromium
+          sudo apt-get update
+          sudo apt-get install --yes imagemagick unzip
+
+      - name: Install source-locked Godot runtime and web templates
+        run: |
+          runtime_dir=$(mktemp -d)
+          template_dir="$HOME/.local/share/godot/export_templates/${GODOT_VERSION}.stable"
+          mkdir -p "$template_dir"
+          curl --fail --location --silent --show-error \
+            "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux.x86_64.zip" \
+            --output "$runtime_dir/godot.zip"
+          unzip -q "$runtime_dir/godot.zip" -d "$runtime_dir"
+          sudo install -m 0755 \
+            "$runtime_dir/Godot_v${GODOT_VERSION}-stable_linux.x86_64" \
+            "$GODOT_BIN"
+          curl --fail --location --silent --show-error \
+            "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" \
+            --output "$runtime_dir/templates.tpz"
+          unzip -q -j "$runtime_dir/templates.tpz" 'templates/*' -d "$template_dir"
+          "$GODOT_BIN" --version
+
+      - name: Run engine contract and export web build
+        run: godot/qa.sh
+
+      - name: Run exported-canvas interaction and fidelity gate
+        env:
+          GODOT_WEB_URL: http://127.0.0.1:4176/
+        run: |
+          prototype/node_modules/.bin/vite godot/web --host 127.0.0.1 --port 4176 --strictPort > /tmp/godot-vite.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --show-error "$GODOT_WEB_URL" >/dev/null; then
+              prototype/node_modules/.bin/playwright test --config godot/playwright.config.mjs
+              exit $?
+            fi
+            sleep 1
+          done
+          sed -n '1,200p' /tmp/godot-vite.log
+          exit 1
+
+      - name: Upload Godot web and QA evidence
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: godot-japanese-options-v001
+          path: |
+            godot/web
+            artifacts/qa/godot-options-v001
+          if-no-files-found: error
