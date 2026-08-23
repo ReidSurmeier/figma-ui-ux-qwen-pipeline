@@ -114,6 +114,11 @@ Use a layered QA system with one responsibility per layer:
     Missing or model-only inference fails closed even when the browser test and
     source hash pass. The report must keep source identity and behavior authority
     as separate evidence.
+28. Every continuous control declares its independent visual component. Test
+    the complete control inventory—not one representative—for intermediate
+    values, exact endpoints, invariant regions, and donor remainder. Every
+    minimize control likewise declares its generated endpoint and proves motion,
+    settled geometry, preserved title authority, and restoration.
 
 ## Consequences
 

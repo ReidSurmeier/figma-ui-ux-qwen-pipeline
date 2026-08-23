@@ -385,6 +385,17 @@ Info controls: exactly 8 contracted and passed, with only minimize, HP, and SP
 remaining uncontracted. The window correctly remains red, proving the new
 coverage does not promote adjacent controls by association.
 
+The same inventory pattern was applied to HP and SP rather than inheriting the
+older HP-only result. Both controls now declare independent visual thumbs,
+expose more than four real pointer values, reach exact source endpoints, leave
+no grey donor remainder, and preserve unrelated title/footer authority. Basic
+Info minimize now declares its generated compact plate, exposes more than four
+geometry steps, settles at 180 by 18, preserves title authority, and restores
+exactly to 280 by 120. A third isolated replay reports 11 enabled controls,
+11 contracted, 11 contract-passed, zero uncontracted, and no correction
+failures. This is browser/correction completion for Basic Info, not a waiver of
+the separate fresh Figma parity gate.
+
 The same full-coverage run found a correction-runner race at the Options close
 button: the control removed its window between visibility and screenshot calls.
 The runner now waits for activation repaint, retries transiently detached idle

@@ -99,3 +99,9 @@ contract manifest. Behavior that cannot be observed in the screenshot is
 eligible only with `user-authorized-inferred`; `model-inferred` is rejected.
 The correction runner may promote only the labels named by that passing locked
 contract, never adjacent controls in the same window.
+
+Ranges declare `data-visual-component`; minimize controls declare
+`data-minimize-endpoint`. Inventory tests fail when either mapping is absent,
+then execute every mapped control. This prevents one passing HP slider from
+granting SP by resemblance, and prevents a cropped transition from satisfying
+a generated compact-state requirement.

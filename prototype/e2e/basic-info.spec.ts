@@ -69,6 +69,109 @@ test("basic info HP slider is continuous and reaches both visual endpoints witho
   await expect(visual).toHaveCSS("background-image", /hp-thumb\.png/);
 });
 
+test("every Basic Info resource slider declares and drives its independent visual thumb", async ({ page }) => {
+  await page.goto("/");
+  const inventory = await page.getByRole("region", { name: "基本情報" }).getByRole("slider").evaluateAll((sliders) => sliders.map((slider) => ({
+    label: slider.getAttribute("aria-label"),
+    visual: (slider as HTMLElement).dataset.visualComponent ?? "",
+  })));
+  expect(inventory).toEqual([
+    { label: "HP", visual: "hp-thumb" },
+    { label: "SP", visual: "sp-thumb" },
+  ]);
+
+  for (const { label, visual: visualId } of inventory) {
+    await page.goto("/");
+    const basic = page.getByRole("region", { name: "基本情報" });
+    const slider = basic.getByRole("slider", { name: label!, exact: true });
+    const visual = basic.locator(`[data-component-id="${visualId}"]`);
+    const invariant = basic.locator('[data-component-id="title-icon"],[data-component-id="title-text"],[data-component-id="base-label"],[data-component-id="footer-text"]');
+    const invariantBefore = await invariant.evaluateAll((nodes) => nodes.map((node) => {
+      const bounds = node.getBoundingClientRect();
+      return { id: node.getAttribute("data-component-id"), bounds: [bounds.x, bounds.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
+    }));
+    const values = await slider.evaluate((element) => {
+      const samples: number[] = [];
+      element.addEventListener("input", (event) => samples.push(Number((event.currentTarget as HTMLInputElement).value)));
+      (element as HTMLInputElement & { __samples?: number[] }).__samples = samples;
+      return samples;
+    });
+    expect(values).toEqual([]);
+    const sliderBox = await slider.boundingBox();
+    if (!sliderBox) throw new Error(`${label} slider geometry is unavailable`);
+    await page.mouse.move(sliderBox.x + 2, sliderBox.y + sliderBox.height / 2);
+    await page.mouse.down();
+    await page.mouse.move(sliderBox.x + sliderBox.width - 2, sliderBox.y + sliderBox.height / 2, { steps: 14 });
+    await page.mouse.up();
+    const sampled = await slider.evaluate((element) => (element as HTMLInputElement & { __samples?: number[] }).__samples ?? []);
+    expect(new Set(sampled).size, `${label} exposed four or fewer values`).toBeGreaterThan(4);
+
+    await slider.focus();
+    await slider.press("Home");
+    await page.waitForTimeout(32);
+    const minimum = await visual.boundingBox();
+    await slider.press("End");
+    await page.waitForTimeout(32);
+    const maximum = await visual.boundingBox();
+    if (!minimum || !maximum) throw new Error(`${label} visual geometry is unavailable`);
+    expect(Math.round(minimum.x - sliderBox.x), `${label} minimum does not meet the source track`).toBe(0);
+    expect(Math.round(maximum.x + maximum.width - (sliderBox.x + sliderBox.width)), `${label} maximum leaves a grey donor block`).toBe(0);
+    await expect(visual).toHaveCSS("background-image", new RegExp(`${visualId}\\.png`));
+    const invariantAfter = await invariant.evaluateAll((nodes) => nodes.map((node) => {
+      const bounds = node.getBoundingClientRect();
+      return { id: node.getAttribute("data-component-id"), bounds: [bounds.x, bounds.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
+    }));
+    expect(invariantAfter, `${label} changed unrelated Basic Info authority`).toEqual(invariantBefore);
+  }
+});
+
+test("Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores", async ({ page }) => {
+  await page.goto("/");
+  const basic = page.getByRole("region", { name: "基本情報" });
+  const minimize = basic.getByRole("button", { name: "基本情報を最小化", exact: true });
+  await expect(minimize).toHaveAttribute("data-minimize-endpoint", "/assets/japanese-rpg-v001/basic-info/minimized-plate.png");
+  const before = await basic.boundingBox();
+  expect(before).toMatchObject({ width: 280, height: 120 });
+  const titleBefore = await basic.locator('[data-component-id="title-icon"],[data-component-id="title-text"]').evaluateAll((nodes) => nodes.map((node) => {
+    const bounds = node.getBoundingClientRect();
+    const root = node.closest('[data-window-id="basic-info"]')!.getBoundingClientRect();
+    return { id: node.getAttribute("data-component-id"), bounds: [bounds.x - root.x, bounds.y - root.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
+  }));
+
+  const motion = page.evaluate(async () => {
+    const window = document.querySelector<HTMLElement>('[data-window-id="basic-info"]');
+    if (!window) throw new Error("Basic Info is unavailable");
+    const samples: string[] = [];
+    const start = performance.now();
+    while (performance.now() - start < 260) {
+      await new Promise(requestAnimationFrame);
+      const bounds = window.getBoundingClientRect();
+      samples.push(`${Math.round(bounds.width * 10) / 10}x${Math.round(bounds.height * 10) / 10}`);
+    }
+    return samples;
+  });
+  await minimize.click();
+  const samples = await motion;
+  expect(new Set(samples).size).toBeGreaterThan(4);
+  await expect(basic).toHaveCSS("width", "180px");
+  await expect(basic).toHaveCSS("height", "18px");
+  await expect(basic.locator(".basic-info-components")).toHaveAttribute("aria-hidden", "true");
+  expect(await basic.evaluate((element) => getComputedStyle(element, "::before").backgroundImage)).toContain("minimized-plate.png");
+  const titleMinimized = await basic.locator('[data-component-id="title-icon"],[data-component-id="title-text"]').evaluateAll((nodes) => nodes.map((node) => {
+    const bounds = node.getBoundingClientRect();
+    const root = node.closest('[data-window-id="basic-info"]')!.getBoundingClientRect();
+    return { id: node.getAttribute("data-component-id"), bounds: [bounds.x - root.x, bounds.y - root.y, bounds.width, bounds.height], image: getComputedStyle(node).backgroundImage };
+  }));
+  expect(titleMinimized).toEqual(titleBefore);
+
+  await minimize.click();
+  await expect(basic).toHaveCSS("width", "280px");
+  await expect(basic).toHaveCSS("height", "120px");
+  await expect(basic.locator(".basic-info-components")).toHaveAttribute("aria-hidden", "false");
+  const restored = await basic.boundingBox();
+  expect(restored).toEqual(before);
+});
+
 test("basic info page buttons activate their corresponding independent source windows", async ({ page }) => {
   await page.goto("/");
   const window = page.getByRole("region", { name: "基本情報" });

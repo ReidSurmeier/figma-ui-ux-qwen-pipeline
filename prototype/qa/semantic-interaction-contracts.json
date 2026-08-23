@@ -63,7 +63,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info page control declares and reaches its source-approved destination",
-        "sha256": "b851a204b695a55c77a59299a952c92216255be0e7c0751487ffc40342207115"
+        "sha256": "9441248c4b4ff9722315d0e28541ef9e08b3b3a7eb181a8bfceffa6d20734f6e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -110,6 +110,96 @@
             "sp-thumb"
           ],
           "rule": "Basic Info title and meter geometry plus bitmap authority remain unchanged after every destination click"
+        }
+      ]
+    },
+    {
+      "id": "basic-info-resource-sliders-v001",
+      "window_id": "basic-info",
+      "control_labels": [
+        "HP",
+        "SP"
+      ],
+      "test": {
+        "file": "e2e/basic-info.spec.ts",
+        "title": "every Basic Info resource slider declares and drives its independent visual thumb",
+        "sha256": "9441248c4b4ff9722315d0e28541ef9e08b3b3a7eb181a8bfceffa6d20734f6e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          111,
+          22,
+          86,
+          32
+        ]
+      },
+      "gesture": "pointer drag with 14 intermediate steps followed by keyboard Home and End for both HP and SP",
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "hp-thumb",
+            "sp-thumb"
+          ],
+          "rule": "each independent visual thumb exposes more than four values and meets both exact source-track endpoints without a grey remainder"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "title-icon",
+            "title-text",
+            "base-label",
+            "footer-text"
+          ],
+          "rule": "title, experience label, and footer geometry plus bitmap authority remain unchanged after both slider gestures"
+        }
+      ]
+    },
+    {
+      "id": "basic-info-generated-minimize-v001",
+      "window_id": "basic-info",
+      "control_labels": [
+        "基本情報を最小化"
+      ],
+      "test": {
+        "file": "e2e/basic-info.spec.ts",
+        "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
+        "sha256": "9441248c4b4ff9722315d0e28541ef9e08b3b3a7eb181a8bfceffa6d20734f6e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          0,
+          280,
+          120
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores the complete window."
+        ]
+      },
+      "gesture": "trusted pointer click minimizes, samples the complete transition, and pointer click restores",
+      "expected_region_changes": [
+        {
+          "component_id": "basic-info-minimized-plate",
+          "rule": "the complete window exposes more than four geometry steps, settles at 180 by 18 with the generated endpoint, and restores to 280 by 120"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "title-icon",
+            "title-text"
+          ],
+          "rule": "title component geometry and bitmap authority remain unchanged in the compact endpoint"
         }
       ]
     }

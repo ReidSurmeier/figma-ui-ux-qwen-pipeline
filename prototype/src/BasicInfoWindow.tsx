@@ -63,7 +63,7 @@ export function BasicInfoWindow({ zIndex, onActivate, onNavigate }: BasicInfoWin
       >
         <Raster id="title-icon" style={{ left: 3, top: 3, width: 11, height: 11 }} />
         <Raster id="title-text" style={{ left: 15, top: 3, width: 40, height: 12 }} />
-        <button type="button" className="basic-info-window-button" aria-label="基本情報を最小化" aria-expanded={!minimized} onClick={() => setMinimized((value) => !value)}>
+        <button type="button" className="basic-info-window-button" aria-label="基本情報を最小化" aria-expanded={!minimized} data-minimize-endpoint="/assets/japanese-rpg-v001/basic-info/minimized-plate.png" onClick={() => setMinimized((value) => !value)}>
           <Raster id="window-button" style={{ left: 0, top: 0, width: 10, height: 11 }} />
         </button>
       </header>
@@ -77,10 +77,10 @@ export function BasicInfoWindow({ zIndex, onActivate, onNavigate }: BasicInfoWin
           <Raster id="sp-value" style={{ left: 125, top: 55, width: 71, height: 11 }} />
           <Raster id="hp-track" file="meter-track" style={{ left: 111, top: 22, width: 86, height: 11 }} />
           <Raster id="hp-thumb" style={{ left: 111 + (86 - 48) * hp / 100, top: 22, width: 48, height: 11 }} className="basic-info-thumb" />
-          <input className="basic-info-slider" aria-label="HP" type="range" min="0" max="100" step="1" value={hp} onInput={(event) => setHp(event.currentTarget.valueAsNumber)} onChange={(event) => setHp(event.currentTarget.valueAsNumber)} />
+          <input className="basic-info-slider" aria-label="HP" data-visual-component="hp-thumb" type="range" min="0" max="100" step="1" value={hp} onInput={(event) => setHp(event.currentTarget.valueAsNumber)} onChange={(event) => setHp(event.currentTarget.valueAsNumber)} />
           <Raster id="sp-track" file="meter-track" style={{ left: 111, top: 43, width: 86, height: 11 }} />
           <Raster id="sp-thumb" style={{ left: 111 + (86 - 34) * sp / 100, top: 43, width: 34, height: 11 }} className="basic-info-thumb" />
-          <input className="basic-info-slider basic-info-slider--sp" aria-label="SP" type="range" min="0" max="100" step="1" value={sp} onInput={(event) => setSp(event.currentTarget.valueAsNumber)} onChange={(event) => setSp(event.currentTarget.valueAsNumber)} />
+          <input className="basic-info-slider basic-info-slider--sp" aria-label="SP" data-visual-component="sp-thumb" type="range" min="0" max="100" step="1" value={sp} onInput={(event) => setSp(event.currentTarget.valueAsNumber)} onChange={(event) => setSp(event.currentTarget.valueAsNumber)} />
           {pages.map(([name, target, view, left, top]) => (
             <button
               key={name}
