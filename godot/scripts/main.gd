@@ -3,6 +3,7 @@ extends Control
 const VIEWPORT_SIZE := Vector2(849, 564)
 const SOURCE_PINK := Color("#ff00fe")
 const MANIFEST_PATH := "res://data/runtime-component-manifest.json"
+const EXPECTED_WINDOW_COUNT := 16
 
 var desktop_windows: Array = []
 var windows_by_id := {}
@@ -62,6 +63,8 @@ func _build_windows() -> void:
 			"exchange": window = preload("res://scripts/exchange_window.gd").new()
 			"game-menu": window = preload("res://scripts/game_menu_window.gd").new()
 			"party": window = preload("res://scripts/party_window.gd").new()
+			"quickbar": window = preload("res://scripts/quickbar_window.gd").new()
+			"bottom-bar": window = preload("res://scripts/bottom_bar_window.gd").new()
 			_: window = preload("res://scripts/source_window.gd").new()
 		window.configure(definition)
 		window.activated.connect(_activate_window)
@@ -121,7 +124,7 @@ func desktop_qa_state() -> Dictionary:
 			control_count += int(source_state.controls)
 			mapped_controls += int(source_state.mapped_controls)
 	return {
-		"ready": desktop_windows.size() == 15,
+		"ready": desktop_windows.size() == EXPECTED_WINDOW_COUNT and windows_by_id.size() == EXPECTED_WINDOW_COUNT,
 		"background": "#ff00fe",
 		"isolated_window": isolated_window_id,
 		"visible_window_ids": visible_window_ids,
@@ -139,6 +142,9 @@ func _publish_desktop_qa() -> void:
 	var state := desktop_qa_state()
 	var options_state: Dictionary = state.windows.options
 	for key in options_state.keys():
+		# Desktop readiness belongs to the complete scene. Copying Options' local
+		# readiness here previously hid missing or extra sibling windows.
+		if key == "ready": continue
 		state[key] = options_state[key]
 	if OS.has_feature("web"):
 		JavaScriptBridge.eval("window.godotQaState = " + JSON.stringify(state) + ";")

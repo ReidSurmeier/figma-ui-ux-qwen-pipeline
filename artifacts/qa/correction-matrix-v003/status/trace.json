@@ -4,11 +4,11 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787538483974",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787538483974",
     "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787529564046",
     "http://10.255.255.254:4174/src/styles.css?t=1787528810559",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
@@ -1105,7 +1105,7 @@
     {
       "script": "remaining-window-contract.sh",
       "status": 0,
-      "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+      "output": "remaining-window-contract: PASS active Qwen plates, 141 unique declared component assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
       "error": ""
     }
   ],

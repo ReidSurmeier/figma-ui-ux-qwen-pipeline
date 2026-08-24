@@ -1,0 +1,82 @@
+{
+  "acceptedBgmFloor": 0.03668,
+  "sourceWindows": 15,
+  "windows": [
+    {
+      "id": "basic-info",
+      "normalizedMae": 0.0000897137,
+      "status": "pass"
+    },
+    {
+      "id": "card",
+      "normalizedMae": 0.0116728,
+      "status": "pass"
+    },
+    {
+      "id": "skills",
+      "normalizedMae": 0.025988,
+      "status": "pass"
+    },
+    {
+      "id": "status",
+      "normalizedMae": 0.00345861,
+      "status": "pass"
+    },
+    {
+      "id": "inventory",
+      "normalizedMae": 0.00322456,
+      "status": "pass"
+    },
+    {
+      "id": "equipment",
+      "normalizedMae": 0.00288491,
+      "status": "pass"
+    },
+    {
+      "id": "options",
+      "normalizedMae": 0.0194981,
+      "status": "pass"
+    },
+    {
+      "id": "chat",
+      "normalizedMae": 0.0167292,
+      "status": "pass"
+    },
+    {
+      "id": "exchange",
+      "normalizedMae": 0.00106758,
+      "status": "pass"
+    },
+    {
+      "id": "game-menu",
+      "normalizedMae": 0.00330534,
+      "status": "pass"
+    },
+    {
+      "id": "compact-info",
+      "normalizedMae": 0,
+      "status": "pass"
+    },
+    {
+      "id": "party",
+      "normalizedMae": 0.00305477,
+      "status": "pass"
+    },
+    {
+      "id": "quickbar",
+      "normalizedMae": 0.00676652,
+      "status": "pass"
+    },
+    {
+      "id": "bottom-bar",
+      "normalizedMae": 0.000147837,
+      "status": "pass"
+    },
+    {
+      "id": "notification",
+      "normalizedMae": 0,
+      "status": "pass"
+    }
+  ],
+  "revisionRequired": []
+}

@@ -14,11 +14,11 @@
         "width": 280,
         "height": 120
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/basic-info/clean-plate-source-locked.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/basic-info/clean-plate-qwen-owned.png",
       "components": [
         {
           "id": "title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/title-icon.png",
           "geometry": {
             "x": 3,
             "y": 3,
@@ -29,7 +29,7 @@
         },
         {
           "id": "title-text",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/title-text.png",
           "geometry": {
             "x": 15,
             "y": 3,
@@ -40,7 +40,7 @@
         },
         {
           "id": "window-button",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/window-button.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/window-button.png",
           "geometry": {
             "x": 268,
             "y": 3,
@@ -51,7 +51,7 @@
         },
         {
           "id": "player-name",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/player-name.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/player-name.png",
           "geometry": {
             "x": 7,
             "y": 22,
@@ -62,7 +62,7 @@
         },
         {
           "id": "player-class",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/player-class.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/player-class.png",
           "geometry": {
             "x": 7,
             "y": 38,
@@ -73,7 +73,7 @@
         },
         {
           "id": "hp-label",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/hp-label.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/hp-label.png",
           "geometry": {
             "x": 95,
             "y": 28,
@@ -84,7 +84,7 @@
         },
         {
           "id": "sp-label",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/sp-label.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/sp-label.png",
           "geometry": {
             "x": 95,
             "y": 50,
@@ -95,7 +95,7 @@
         },
         {
           "id": "hp-value",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/hp-value.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/hp-value.png",
           "geometry": {
             "x": 125,
             "y": 33,
@@ -106,7 +106,7 @@
         },
         {
           "id": "sp-value",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/sp-value.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/sp-value.png",
           "geometry": {
             "x": 125,
             "y": 55,
@@ -117,7 +117,7 @@
         },
         {
           "id": "hp-track",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/meter-track.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/hp-track.png",
           "geometry": {
             "x": 111,
             "y": 22,
@@ -128,7 +128,7 @@
         },
         {
           "id": "hp-thumb",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/hp-thumb.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/hp-thumb.png",
           "geometry": {
             "x": 111,
             "y": 22,
@@ -139,7 +139,7 @@
         },
         {
           "id": "sp-track",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/meter-track.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/sp-track.png",
           "geometry": {
             "x": 111,
             "y": 43,
@@ -150,7 +150,7 @@
         },
         {
           "id": "sp-thumb",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/sp-thumb.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/sp-thumb.png",
           "geometry": {
             "x": 111,
             "y": 43,
@@ -161,7 +161,7 @@
         },
         {
           "id": "page-status",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-status.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-status.png",
           "geometry": {
             "x": 207,
             "y": 22,
@@ -172,7 +172,7 @@
         },
         {
           "id": "page-option",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-option.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-option.png",
           "geometry": {
             "x": 244,
             "y": 22,
@@ -183,7 +183,7 @@
         },
         {
           "id": "page-items",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-items.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-items.png",
           "geometry": {
             "x": 207,
             "y": 47,
@@ -194,7 +194,7 @@
         },
         {
           "id": "page-equip",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-equip.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-equip.png",
           "geometry": {
             "x": 244,
             "y": 47,
@@ -205,7 +205,7 @@
         },
         {
           "id": "page-skill",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-skill.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-skill.png",
           "geometry": {
             "x": 207,
             "y": 72,
@@ -216,7 +216,7 @@
         },
         {
           "id": "page-map",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-map.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-map.png",
           "geometry": {
             "x": 244,
             "y": 72,
@@ -227,7 +227,7 @@
         },
         {
           "id": "page-chat",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-chat.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-chat.png",
           "geometry": {
             "x": 207,
             "y": 97,
@@ -238,7 +238,7 @@
         },
         {
           "id": "page-friend",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/page-friend.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/page-friend.png",
           "geometry": {
             "x": 244,
             "y": 97,
@@ -249,7 +249,7 @@
         },
         {
           "id": "base-label",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/base-label.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/base-label.png",
           "geometry": {
             "x": 17,
             "y": 74,
@@ -260,7 +260,7 @@
         },
         {
           "id": "base-progress",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/base-progress.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/base-progress.png",
           "geometry": {
             "x": 86,
             "y": 76,
@@ -271,7 +271,7 @@
         },
         {
           "id": "job-label",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/job-label.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/job-label.png",
           "geometry": {
             "x": 17,
             "y": 86,
@@ -282,7 +282,7 @@
         },
         {
           "id": "job-progress",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/job-progress.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/job-progress.png",
           "geometry": {
             "x": 86,
             "y": 88,
@@ -293,7 +293,7 @@
         },
         {
           "id": "footer-text",
-          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/footer-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/basic-info/components/source-owned/footer-text.png",
           "geometry": {
             "x": 4,
             "y": 104,
@@ -1240,11 +1240,11 @@
         "width": 280,
         "height": 126
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/status/clean-plate.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/status/clean-plate-qwen-owned.png",
       "components": [
         {
           "id": "status-title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-title-icon.png",
           "geometry": {
             "x": 3,
             "y": 3,
@@ -1255,7 +1255,7 @@
         },
         {
           "id": "status-title-text",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-title-text.png",
           "geometry": {
             "x": 16,
             "y": 3,
@@ -1266,7 +1266,7 @@
         },
         {
           "id": "status-minimize",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/minimize.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-minimize.png",
           "geometry": {
             "x": 251,
             "y": 2,
@@ -1277,7 +1277,7 @@
         },
         {
           "id": "status-close",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/close.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-close.png",
           "geometry": {
             "x": 266,
             "y": 2,
@@ -1288,7 +1288,7 @@
         },
         {
           "id": "status-side-tabs",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/side-tabs.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-side-tabs.png",
           "geometry": {
             "x": 3,
             "y": 18,
@@ -1299,7 +1299,7 @@
         },
         {
           "id": "status-primary-row-0",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/primary-row-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-primary-row-0.png",
           "geometry": {
             "x": 20,
             "y": 18,
@@ -1310,7 +1310,7 @@
         },
         {
           "id": "status-derived-row-0",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-derived-row-0.png",
           "geometry": {
             "x": 100,
             "y": 18,
@@ -1321,7 +1321,7 @@
         },
         {
           "id": "status-increment-0",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/increment-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-increment-0.png",
           "geometry": {
             "x": 91,
             "y": 21,
@@ -1332,7 +1332,7 @@
         },
         {
           "id": "status-primary-row-1",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/primary-row-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-primary-row-1.png",
           "geometry": {
             "x": 20,
             "y": 36,
@@ -1343,7 +1343,7 @@
         },
         {
           "id": "status-derived-row-1",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-derived-row-1.png",
           "geometry": {
             "x": 100,
             "y": 36,
@@ -1354,7 +1354,7 @@
         },
         {
           "id": "status-increment-1",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/increment-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-increment-1.png",
           "geometry": {
             "x": 91,
             "y": 39,
@@ -1365,7 +1365,7 @@
         },
         {
           "id": "status-primary-row-2",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/primary-row-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-primary-row-2.png",
           "geometry": {
             "x": 20,
             "y": 54,
@@ -1376,7 +1376,7 @@
         },
         {
           "id": "status-derived-row-2",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-derived-row-2.png",
           "geometry": {
             "x": 100,
             "y": 54,
@@ -1387,7 +1387,7 @@
         },
         {
           "id": "status-increment-2",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/increment-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-increment-2.png",
           "geometry": {
             "x": 91,
             "y": 57,
@@ -1398,7 +1398,7 @@
         },
         {
           "id": "status-primary-row-3",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/primary-row-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-primary-row-3.png",
           "geometry": {
             "x": 20,
             "y": 72,
@@ -1409,7 +1409,7 @@
         },
         {
           "id": "status-derived-row-3",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/derived-row-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-derived-row-3.png",
           "geometry": {
             "x": 100,
             "y": 72,
@@ -1420,7 +1420,7 @@
         },
         {
           "id": "status-primary-row-4",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/primary-row-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-primary-row-4.png",
           "geometry": {
             "x": 20,
             "y": 90,
@@ -1431,7 +1431,7 @@
         },
         {
           "id": "status-derived-row-4",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-derived-row-4.png",
           "geometry": {
             "x": 100,
             "y": 90,
@@ -1442,7 +1442,7 @@
         },
         {
           "id": "status-increment-4",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/increment-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-increment-4.png",
           "geometry": {
             "x": 91,
             "y": 93,
@@ -1453,7 +1453,7 @@
         },
         {
           "id": "status-primary-row-5",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/primary-row-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-primary-row-5.png",
           "geometry": {
             "x": 20,
             "y": 108,
@@ -1464,7 +1464,7 @@
         },
         {
           "id": "status-derived-row-5",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-derived-row-5.png",
           "geometry": {
             "x": 100,
             "y": 108,
@@ -1475,7 +1475,7 @@
         },
         {
           "id": "status-increment-5",
-          "assetPath": "/assets/japanese-rpg-v001/status/components/increment-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/status/components/source-owned/status-increment-5.png",
           "geometry": {
             "x": 91,
             "y": 111,
@@ -1576,11 +1576,11 @@
         "width": 280,
         "height": 137
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/inventory/clean-plate.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/inventory/clean-plate-qwen-owned.png",
       "components": [
         {
           "id": "inventory-title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-title-icon.png",
           "geometry": {
             "x": 3,
             "y": 3,
@@ -1591,7 +1591,7 @@
         },
         {
           "id": "inventory-title-text",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-title-text.png",
           "geometry": {
             "x": 16,
             "y": 3,
@@ -1602,7 +1602,7 @@
         },
         {
           "id": "inventory-minimize",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/minimize.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-minimize.png",
           "geometry": {
             "x": 251,
             "y": 2,
@@ -1613,7 +1613,7 @@
         },
         {
           "id": "inventory-close",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/close.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-close.png",
           "geometry": {
             "x": 266,
             "y": 2,
@@ -1624,7 +1624,7 @@
         },
         {
           "id": "inventory-tab-item",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/tab-item.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-tab-item.png",
           "geometry": {
             "x": 5,
             "y": 18,
@@ -1635,7 +1635,7 @@
         },
         {
           "id": "inventory-tab-equip",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/tab-equip.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-tab-equip.png",
           "geometry": {
             "x": 5,
             "y": 53,
@@ -1646,7 +1646,7 @@
         },
         {
           "id": "inventory-tab-etc",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/tab-etc.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-tab-etc.png",
           "geometry": {
             "x": 5,
             "y": 88,
@@ -1657,7 +1657,7 @@
         },
         {
           "id": "inventory-cell-0-0",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-0-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-0-0.png",
           "geometry": {
             "x": 36,
             "y": 19,
@@ -1668,7 +1668,7 @@
         },
         {
           "id": "inventory-cell-0-1",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-0-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-0-1.png",
           "geometry": {
             "x": 70,
             "y": 19,
@@ -1679,7 +1679,7 @@
         },
         {
           "id": "inventory-cell-0-2",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-0-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-0-2.png",
           "geometry": {
             "x": 104,
             "y": 19,
@@ -1690,7 +1690,7 @@
         },
         {
           "id": "inventory-cell-0-3",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-0-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-0-3.png",
           "geometry": {
             "x": 138,
             "y": 19,
@@ -1701,7 +1701,7 @@
         },
         {
           "id": "inventory-cell-0-4",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-0-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-0-4.png",
           "geometry": {
             "x": 172,
             "y": 19,
@@ -1712,7 +1712,7 @@
         },
         {
           "id": "inventory-cell-0-5",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-0-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-0-5.png",
           "geometry": {
             "x": 206,
             "y": 19,
@@ -1723,7 +1723,7 @@
         },
         {
           "id": "inventory-cell-0-6",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-0-6.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-0-6.png",
           "geometry": {
             "x": 240,
             "y": 19,
@@ -1734,7 +1734,7 @@
         },
         {
           "id": "inventory-cell-1-0",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-1-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-1-0.png",
           "geometry": {
             "x": 36,
             "y": 53,
@@ -1745,7 +1745,7 @@
         },
         {
           "id": "inventory-cell-1-1",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-1-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-1-1.png",
           "geometry": {
             "x": 70,
             "y": 53,
@@ -1756,7 +1756,7 @@
         },
         {
           "id": "inventory-cell-1-2",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-1-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-1-2.png",
           "geometry": {
             "x": 104,
             "y": 53,
@@ -1767,7 +1767,7 @@
         },
         {
           "id": "inventory-cell-1-3",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-1-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-1-3.png",
           "geometry": {
             "x": 138,
             "y": 53,
@@ -1778,7 +1778,7 @@
         },
         {
           "id": "inventory-cell-1-4",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-1-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-1-4.png",
           "geometry": {
             "x": 172,
             "y": 53,
@@ -1789,7 +1789,7 @@
         },
         {
           "id": "inventory-cell-1-5",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-1-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-1-5.png",
           "geometry": {
             "x": 206,
             "y": 53,
@@ -1800,7 +1800,7 @@
         },
         {
           "id": "inventory-cell-1-6",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-1-6.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-1-6.png",
           "geometry": {
             "x": 240,
             "y": 53,
@@ -1811,7 +1811,7 @@
         },
         {
           "id": "inventory-cell-2-0",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-2-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-2-0.png",
           "geometry": {
             "x": 36,
             "y": 87,
@@ -1822,7 +1822,7 @@
         },
         {
           "id": "inventory-cell-2-1",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-2-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-2-1.png",
           "geometry": {
             "x": 70,
             "y": 87,
@@ -1833,7 +1833,7 @@
         },
         {
           "id": "inventory-cell-2-2",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-2-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-2-2.png",
           "geometry": {
             "x": 104,
             "y": 87,
@@ -1844,7 +1844,7 @@
         },
         {
           "id": "inventory-cell-2-3",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-2-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-2-3.png",
           "geometry": {
             "x": 138,
             "y": 87,
@@ -1855,7 +1855,7 @@
         },
         {
           "id": "inventory-cell-2-4",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-2-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-2-4.png",
           "geometry": {
             "x": 172,
             "y": 87,
@@ -1866,7 +1866,7 @@
         },
         {
           "id": "inventory-cell-2-5",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-2-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-2-5.png",
           "geometry": {
             "x": 206,
             "y": 87,
@@ -1877,7 +1877,7 @@
         },
         {
           "id": "inventory-cell-2-6",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/cell-2-6.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-cell-2-6.png",
           "geometry": {
             "x": 240,
             "y": 87,
@@ -1888,7 +1888,7 @@
         },
         {
           "id": "inventory-scroll-up",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/scroll-up.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-scroll-up.png",
           "geometry": {
             "x": 263,
             "y": 18,
@@ -1899,7 +1899,7 @@
         },
         {
           "id": "inventory-scroll-track",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/scroll-track.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-scroll-track.png",
           "geometry": {
             "x": 263,
             "y": 35,
@@ -1910,7 +1910,7 @@
         },
         {
           "id": "inventory-scroll-thumb",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/scroll-thumb.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-scroll-thumb.png",
           "geometry": {
             "x": 263,
             "y": 31,
@@ -1921,7 +1921,7 @@
         },
         {
           "id": "inventory-scroll-down",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/scroll-down.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-scroll-down.png",
           "geometry": {
             "x": 263,
             "y": 101,
@@ -1932,7 +1932,7 @@
         },
         {
           "id": "inventory-resize-grip",
-          "assetPath": "/assets/japanese-rpg-v001/inventory/components/resize-grip.png",
+          "assetPath": "/assets/japanese-rpg-v001/inventory/components/source-owned/inventory-resize-grip.png",
           "geometry": {
             "x": 263,
             "y": 119,
@@ -2253,11 +2253,11 @@
         "width": 280,
         "height": 152
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/equipment/clean-plate-source-locked.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/equipment/clean-plate-qwen-owned.png",
       "components": [
         {
           "id": "equipment-title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-title-icon.png",
           "geometry": {
             "x": 3,
             "y": 3,
@@ -2268,7 +2268,7 @@
         },
         {
           "id": "equipment-title-text",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-title-text.png",
           "geometry": {
             "x": 16,
             "y": 3,
@@ -2279,7 +2279,7 @@
         },
         {
           "id": "equipment-minimize",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/minimize.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-minimize.png",
           "geometry": {
             "x": 251,
             "y": 2,
@@ -2290,7 +2290,7 @@
         },
         {
           "id": "equipment-close",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/close.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-close.png",
           "geometry": {
             "x": 266,
             "y": 2,
@@ -2301,7 +2301,7 @@
         },
         {
           "id": "equipment-left-0",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/left-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-left-0.png",
           "geometry": {
             "x": 4,
             "y": 18,
@@ -2312,7 +2312,7 @@
         },
         {
           "id": "equipment-left-1",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/left-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-left-1.png",
           "geometry": {
             "x": 4,
             "y": 47,
@@ -2323,7 +2323,7 @@
         },
         {
           "id": "equipment-left-2",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/left-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-left-2.png",
           "geometry": {
             "x": 4,
             "y": 76,
@@ -2334,7 +2334,7 @@
         },
         {
           "id": "equipment-left-3",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/left-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-left-3.png",
           "geometry": {
             "x": 4,
             "y": 105,
@@ -2345,7 +2345,7 @@
         },
         {
           "id": "equipment-left-4",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/left-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-left-4.png",
           "geometry": {
             "x": 4,
             "y": 134,
@@ -2356,7 +2356,7 @@
         },
         {
           "id": "equipment-right-0",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/right-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-right-0.png",
           "geometry": {
             "x": 170,
             "y": 18,
@@ -2367,7 +2367,7 @@
         },
         {
           "id": "equipment-right-1",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/right-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-right-1.png",
           "geometry": {
             "x": 170,
             "y": 47,
@@ -2378,7 +2378,7 @@
         },
         {
           "id": "equipment-right-2",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/right-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-right-2.png",
           "geometry": {
             "x": 170,
             "y": 76,
@@ -2389,7 +2389,7 @@
         },
         {
           "id": "equipment-right-3",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/right-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-right-3.png",
           "geometry": {
             "x": 170,
             "y": 105,
@@ -2400,7 +2400,7 @@
         },
         {
           "id": "equipment-right-4",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/right-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-right-4.png",
           "geometry": {
             "x": 170,
             "y": 134,
@@ -2411,7 +2411,7 @@
         },
         {
           "id": "equipment-avatar",
-          "assetPath": "/assets/japanese-rpg-v001/equipment/components/avatar.png",
+          "assetPath": "/assets/japanese-rpg-v001/equipment/components/source-owned/equipment-avatar.png",
           "geometry": {
             "x": 109,
             "y": 18,
@@ -2791,11 +2791,11 @@
         "width": 280,
         "height": 120
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/exchange/clean-plate-source-locked.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/exchange/clean-plate-qwen-owned.png",
       "components": [
         {
           "id": "exchange-title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-title-icon.png",
           "geometry": {
             "x": 3,
             "y": 3,
@@ -2806,7 +2806,7 @@
         },
         {
           "id": "exchange-title-text",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-title-text.png",
           "geometry": {
             "x": 16,
             "y": 3,
@@ -2817,7 +2817,7 @@
         },
         {
           "id": "exchange-item-0-0",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-0.png",
           "geometry": {
             "x": 5,
             "y": 19,
@@ -2828,7 +2828,7 @@
         },
         {
           "id": "exchange-item-0-1",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-1.png",
           "geometry": {
             "x": 39,
             "y": 19,
@@ -2839,7 +2839,7 @@
         },
         {
           "id": "exchange-item-0-2",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-2.png",
           "geometry": {
             "x": 73,
             "y": 19,
@@ -2850,7 +2850,7 @@
         },
         {
           "id": "exchange-item-0-3",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-3.png",
           "geometry": {
             "x": 107,
             "y": 19,
@@ -2861,7 +2861,7 @@
         },
         {
           "id": "exchange-item-0-4",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-4.png",
           "geometry": {
             "x": 141,
             "y": 19,
@@ -2872,7 +2872,7 @@
         },
         {
           "id": "exchange-item-0-5",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-5.png",
           "geometry": {
             "x": 175,
             "y": 19,
@@ -2883,7 +2883,7 @@
         },
         {
           "id": "exchange-item-0-6",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-6.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-6.png",
           "geometry": {
             "x": 209,
             "y": 19,
@@ -2894,7 +2894,7 @@
         },
         {
           "id": "exchange-item-0-7",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-0-7.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-0-7.png",
           "geometry": {
             "x": 243,
             "y": 19,
@@ -2905,7 +2905,7 @@
         },
         {
           "id": "exchange-item-1-0",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-0.png",
           "geometry": {
             "x": 5,
             "y": 53,
@@ -2916,7 +2916,7 @@
         },
         {
           "id": "exchange-item-1-1",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-1.png",
           "geometry": {
             "x": 39,
             "y": 53,
@@ -2927,7 +2927,7 @@
         },
         {
           "id": "exchange-item-1-2",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-2.png",
           "geometry": {
             "x": 73,
             "y": 53,
@@ -2938,7 +2938,7 @@
         },
         {
           "id": "exchange-item-1-3",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-3.png",
           "geometry": {
             "x": 107,
             "y": 53,
@@ -2949,7 +2949,7 @@
         },
         {
           "id": "exchange-item-1-4",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-4.png",
           "geometry": {
             "x": 141,
             "y": 53,
@@ -2960,7 +2960,7 @@
         },
         {
           "id": "exchange-item-1-5",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-5.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-5.png",
           "geometry": {
             "x": 175,
             "y": 53,
@@ -2971,7 +2971,7 @@
         },
         {
           "id": "exchange-item-1-6",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-6.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-6.png",
           "geometry": {
             "x": 209,
             "y": 53,
@@ -2982,7 +2982,7 @@
         },
         {
           "id": "exchange-item-1-7",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/item-1-7.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-item-1-7.png",
           "geometry": {
             "x": 243,
             "y": 53,
@@ -2993,7 +2993,7 @@
         },
         {
           "id": "exchange-summary",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/summary.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-summary.png",
           "geometry": {
             "x": 4,
             "y": 87,
@@ -3004,7 +3004,7 @@
         },
         {
           "id": "exchange-ok",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/ok.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-ok.png",
           "geometry": {
             "x": 4,
             "y": 101,
@@ -3015,7 +3015,7 @@
         },
         {
           "id": "exchange-trade",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/trade.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-trade.png",
           "geometry": {
             "x": 121,
             "y": 101,
@@ -3026,7 +3026,7 @@
         },
         {
           "id": "exchange-cancel",
-          "assetPath": "/assets/japanese-rpg-v001/exchange/components/cancel.png",
+          "assetPath": "/assets/japanese-rpg-v001/exchange/components/source-owned/exchange-cancel.png",
           "geometry": {
             "x": 235,
             "y": 101,
@@ -3257,11 +3257,11 @@
         "width": 222,
         "height": 133
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/game-menu/clean-plate-source-locked.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/game-menu/clean-plate-qwen-owned.png",
       "components": [
         {
           "id": "game-menu-title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/source-owned/game-menu-title-icon.png",
           "geometry": {
             "x": 3,
             "y": 3,
@@ -3272,7 +3272,7 @@
         },
         {
           "id": "game-menu-title-text",
-          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/source-owned/game-menu-title-text.png",
           "geometry": {
             "x": 16,
             "y": 3,
@@ -3283,7 +3283,7 @@
         },
         {
           "id": "game-menu-action-0",
-          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/action-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/source-owned/game-menu-action-0.png",
           "geometry": {
             "x": 0,
             "y": 29,
@@ -3294,7 +3294,7 @@
         },
         {
           "id": "game-menu-action-1",
-          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/action-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/source-owned/game-menu-action-1.png",
           "geometry": {
             "x": 0,
             "y": 54,
@@ -3305,7 +3305,7 @@
         },
         {
           "id": "game-menu-action-2",
-          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/action-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/source-owned/game-menu-action-2.png",
           "geometry": {
             "x": 0,
             "y": 79,
@@ -3316,7 +3316,7 @@
         },
         {
           "id": "game-menu-action-3",
-          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/action-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/game-menu/components/source-owned/game-menu-action-3.png",
           "geometry": {
             "x": 0,
             "y": 104,
@@ -3382,11 +3382,11 @@
         "width": 160,
         "height": 157
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/party/clean-plate-source-locked.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/party/clean-plate-qwen-owned.png",
       "components": [
         {
           "id": "party-title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-title-icon.png",
           "geometry": {
             "x": 3,
             "y": 5,
@@ -3397,7 +3397,7 @@
         },
         {
           "id": "party-title-text",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-title-text.png",
           "geometry": {
             "x": 16,
             "y": 5,
@@ -3408,7 +3408,7 @@
         },
         {
           "id": "party-close",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/close.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-close.png",
           "geometry": {
             "x": 146,
             "y": 4,
@@ -3419,7 +3419,7 @@
         },
         {
           "id": "party-member-0",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/member-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-member-0.png",
           "geometry": {
             "x": 3,
             "y": 20,
@@ -3430,7 +3430,7 @@
         },
         {
           "id": "party-member-1",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/member-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-member-1.png",
           "geometry": {
             "x": 3,
             "y": 39,
@@ -3441,7 +3441,7 @@
         },
         {
           "id": "party-member-2",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/member-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-member-2.png",
           "geometry": {
             "x": 3,
             "y": 58,
@@ -3452,7 +3452,7 @@
         },
         {
           "id": "party-member-3",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/member-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-member-3.png",
           "geometry": {
             "x": 3,
             "y": 77,
@@ -3463,7 +3463,7 @@
         },
         {
           "id": "party-member-4",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/member-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-member-4.png",
           "geometry": {
             "x": 3,
             "y": 96,
@@ -3474,7 +3474,7 @@
         },
         {
           "id": "party-tool-0",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/tool-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-tool-0.png",
           "geometry": {
             "x": 4,
             "y": 116,
@@ -3485,7 +3485,7 @@
         },
         {
           "id": "party-tool-1",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/tool-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-tool-1.png",
           "geometry": {
             "x": 33,
             "y": 116,
@@ -3496,7 +3496,7 @@
         },
         {
           "id": "party-tool-2",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/tool-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-tool-2.png",
           "geometry": {
             "x": 62,
             "y": 116,
@@ -3507,7 +3507,7 @@
         },
         {
           "id": "party-tool-3",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/tool-3.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-tool-3.png",
           "geometry": {
             "x": 91,
             "y": 116,
@@ -3518,7 +3518,7 @@
         },
         {
           "id": "party-tool-4",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/tool-4.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-tool-4.png",
           "geometry": {
             "x": 120,
             "y": 116,
@@ -3529,7 +3529,7 @@
         },
         {
           "id": "party-friends",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/friends.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-friends.png",
           "geometry": {
             "x": 3,
             "y": 136,
@@ -3540,7 +3540,7 @@
         },
         {
           "id": "party-party-tab",
-          "assetPath": "/assets/japanese-rpg-v001/party/components/party-tab.png",
+          "assetPath": "/assets/japanese-rpg-v001/party/components/source-owned/party-party-tab.png",
           "geometry": {
             "x": 80,
             "y": 136,
@@ -3798,7 +3798,7 @@
         },
         {
           "id": "quickbar-slot-0",
-          "assetPath": "/assets/japanese-rpg-v001/quickbar/components/slot-0.png",
+          "assetPath": "/assets/japanese-rpg-v001/quickbar/components/slot-0-source-locked.png",
           "geometry": {
             "x": 2,
             "y": 2,
@@ -3809,7 +3809,7 @@
         },
         {
           "id": "quickbar-slot-1",
-          "assetPath": "/assets/japanese-rpg-v001/quickbar/components/slot-1.png",
+          "assetPath": "/assets/japanese-rpg-v001/quickbar/components/slot-1-source-locked.png",
           "geometry": {
             "x": 44,
             "y": 1,
@@ -3820,7 +3820,7 @@
         },
         {
           "id": "quickbar-slot-2",
-          "assetPath": "/assets/japanese-rpg-v001/quickbar/components/slot-2.png",
+          "assetPath": "/assets/japanese-rpg-v001/quickbar/components/slot-2-source-locked.png",
           "geometry": {
             "x": 2,
             "y": 50,
@@ -3875,11 +3875,11 @@
         "width": 281,
         "height": 35
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/compact-info/clean-plate.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/compact-info/clean-plate-source-locked.png",
       "components": [
         {
           "id": "compact-info-title-icon",
-          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/title-icon.png",
+          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/title-icon-source-locked.png",
           "geometry": {
             "x": 3,
             "y": 4,
@@ -3890,7 +3890,7 @@
         },
         {
           "id": "compact-info-title-text",
-          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/title-text.png",
+          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/title-text-source-locked.png",
           "geometry": {
             "x": 16,
             "y": 4,
@@ -3901,7 +3901,7 @@
         },
         {
           "id": "compact-levels",
-          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/levels.png",
+          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/levels-source-locked.png",
           "geometry": {
             "x": 116,
             "y": 4,
@@ -3912,7 +3912,7 @@
         },
         {
           "id": "compact-hp",
-          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/hp.png",
+          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/hp-source-locked.png",
           "geometry": {
             "x": 16,
             "y": 20,
@@ -3923,7 +3923,7 @@
         },
         {
           "id": "compact-sp",
-          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/sp.png",
+          "assetPath": "/assets/japanese-rpg-v001/compact-info/components/sp-source-locked.png",
           "geometry": {
             "x": 142,
             "y": 20,
@@ -4084,7 +4084,7 @@
         },
         {
           "id": "notification-bubble",
-          "assetPath": "/assets/japanese-rpg-v001/notification/components/bubble.png",
+          "assetPath": "/assets/japanese-rpg-v001/notification/components/bubble-source-locked.png",
           "geometry": {
             "x": 0,
             "y": 0,
@@ -4095,7 +4095,7 @@
         },
         {
           "id": "notification-upper",
-          "assetPath": "/assets/japanese-rpg-v001/notification/components/upper.png",
+          "assetPath": "/assets/japanese-rpg-v001/notification/components/upper-source-locked.png",
           "geometry": {
             "x": 143,
             "y": 0,
@@ -4106,7 +4106,7 @@
         },
         {
           "id": "notification-lower",
-          "assetPath": "/assets/japanese-rpg-v001/notification/components/lower.png",
+          "assetPath": "/assets/japanese-rpg-v001/notification/components/lower-source-locked.png",
           "geometry": {
             "x": 143,
             "y": 20,
@@ -4133,25 +4133,45 @@
         {
           "id": "map-title-icon",
           "assetPath": "/assets/japanese-rpg-v001/map/components/title-icon.png",
-          "geometry": { "x": 3, "y": 2, "width": 16, "height": 15 },
+          "geometry": {
+            "x": 3,
+            "y": 2,
+            "width": 16,
+            "height": 15
+          },
           "authority": "element-background"
         },
         {
           "id": "map-title-text",
           "assetPath": "/assets/japanese-rpg-v001/map/components/title-text.png",
-          "geometry": { "x": 23, "y": 3, "width": 57, "height": 13 },
+          "geometry": {
+            "x": 23,
+            "y": 3,
+            "width": 57,
+            "height": 13
+          },
           "authority": "element-background"
         },
         {
           "id": "map-close",
           "assetPath": "/assets/japanese-rpg-v001/map/components/close.png",
-          "geometry": { "x": 266, "y": 2, "width": 13, "height": 15 },
+          "geometry": {
+            "x": 266,
+            "y": 2,
+            "width": 13,
+            "height": 15
+          },
           "authority": "element-background"
         },
         {
           "id": "map-body",
           "assetPath": "/assets/japanese-rpg-v001/map/components/map-body.png",
-          "geometry": { "x": 16, "y": 29, "width": 248, "height": 113 },
+          "geometry": {
+            "x": 16,
+            "y": 29,
+            "width": 248,
+            "height": 113
+          },
           "authority": "element-background"
         }
       ],
@@ -4159,7 +4179,12 @@
         {
           "id": "マップを閉じる",
           "role": "button",
-          "geometry": { "x": 266, "y": 0, "width": 13, "height": 18 },
+          "geometry": {
+            "x": 266,
+            "y": 0,
+            "width": 13,
+            "height": 18
+          },
           "visualComponent": "map-close",
           "closeWindow": "map"
         }

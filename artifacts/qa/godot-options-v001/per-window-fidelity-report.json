@@ -1,6 +1,6 @@
 {
   "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
-  "runtimeSha256": "fae24e26e76bcb1d6beeeb56bdeac20ba0693e4c429405bc7bec7bf87a707de5",
+  "runtimeSha256": "43f3a26f3ec271a04ed49c102a63032e296bc48d643e550f5a828feb50316191",
   "acceptedBgmFloor": 0.03668,
   "windows": [
     {
@@ -11,8 +11,8 @@
         280,
         120
       ],
-      "normalizedMae": 0.0224551,
-      "assemblyNormalizedMae": 0.0224551,
+      "normalizedMae": 0.0000897137,
+      "assemblyNormalizedMae": 0.0000490196,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -26,7 +26,7 @@
         280,
         150
       ],
-      "normalizedMae": 0.0161623,
+      "normalizedMae": 0.0116728,
       "assemblyNormalizedMae": 0.0161623,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
@@ -41,7 +41,7 @@
         281,
         184
       ],
-      "normalizedMae": 0.0282225,
+      "normalizedMae": 0.0277502,
       "assemblyNormalizedMae": 0.0264601,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
@@ -56,8 +56,8 @@
         280,
         126
       ],
-      "normalizedMae": 0.0000132646,
-      "assemblyNormalizedMae": 0,
+      "normalizedMae": 0.00345861,
+      "assemblyNormalizedMae": 0.000826479,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -71,8 +71,8 @@
         280,
         137
       ],
-      "normalizedMae": 0.000126868,
-      "assemblyNormalizedMae": 0.000060725,
+      "normalizedMae": 0.00322456,
+      "assemblyNormalizedMae": 0.0000585441,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -86,8 +86,8 @@
         280,
         152
       ],
-      "normalizedMae": 0.0196246,
-      "assemblyNormalizedMae": 0.0196003,
+      "normalizedMae": 0.00288491,
+      "assemblyNormalizedMae": 0.0000144663,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -116,8 +116,8 @@
         280,
         120
       ],
-      "normalizedMae": 0.0175247,
-      "assemblyNormalizedMae": 0.0469129,
+      "normalizedMae": 0.0167292,
+      "assemblyNormalizedMae": 0.016715,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -131,8 +131,8 @@
         280,
         120
       ],
-      "normalizedMae": 0.0194484,
-      "assemblyNormalizedMae": 0.0194516,
+      "normalizedMae": 0.00106758,
+      "assemblyNormalizedMae": 0.00017009,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -146,8 +146,8 @@
         222,
         133
       ],
-      "normalizedMae": 0.00783831,
-      "assemblyNormalizedMae": 0.00475646,
+      "normalizedMae": 0.00330534,
+      "assemblyNormalizedMae": 0.00154834,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -161,8 +161,8 @@
         281,
         35
       ],
-      "normalizedMae": 0.0256668,
-      "assemblyNormalizedMae": 0.0253155,
+      "normalizedMae": 0,
+      "assemblyNormalizedMae": 0,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -176,8 +176,8 @@
         160,
         175
       ],
-      "normalizedMae": 0.00409206,
-      "assemblyNormalizedMae": 0.00143464,
+      "normalizedMae": 0.014216,
+      "assemblyNormalizedMae": 0.00431807,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -191,7 +191,7 @@
         112,
         94
       ],
-      "normalizedMae": 0.00643053,
+      "normalizedMae": 0.00676652,
       "assemblyNormalizedMae": 0.0200566,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",

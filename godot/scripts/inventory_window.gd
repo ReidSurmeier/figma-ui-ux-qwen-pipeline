@@ -101,6 +101,11 @@ func _activate_inventory_control(control: Dictionary) -> void:
 		return
 	if control_id in CATEGORY_ORDER:
 		_update_category(control_id)
+		# Category changes reset the scroll position internally. Publish the
+		# user's tab action after that reset so QA and assistive clients do not
+		# misreport the click as a scrollbar event.
+		last_action = control_id
+		state_changed.emit()
 		return
 	var index := _cell_index(control)
 	if index < 0 or index >= int(CATEGORY_COUNTS[category]): return

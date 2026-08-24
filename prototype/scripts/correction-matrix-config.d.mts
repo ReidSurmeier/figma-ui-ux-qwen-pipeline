@@ -18,3 +18,8 @@ export function selectedCorrectionMatrixWindows<T extends { id: string }>(
   windows: T[],
   requestedIds?: string,
 ): T[];
+
+export function registeredCorrectionMatrixWindows<T extends { id: string }>(
+  windows: T[],
+  registryWindows: Array<{ id: string }>,
+): T[];

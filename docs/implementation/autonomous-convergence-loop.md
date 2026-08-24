@@ -37,12 +37,14 @@ timeout cannot trigger an accidental duplicate paid request.
 
 ```text
 Reference authority
-  -> component and state manifest
+  -> canonical source-ownership masks
+  -> active component and state manifest
   -> RED contract
   -> Qwen Asset Pass or native editable implementation
-  -> deterministic assembly
-  -> focused deterministic gates
-  -> source-relative masked visual gate for every window and the full composition
+  -> deterministic source-ownership finishing
+  -> Stage 1 active-asset and ownership contract
+  -> Stage 2 isolated source-owned fidelity and semantic journey per window
+  -> Stage 3 assembled overlap, z-order, and correction replay
   -> correction replay bundle
   -> finding?
        yes -> minimise -> add reproducible RED test -> revise -> restart focused gates
@@ -76,7 +78,9 @@ filter or hidden status string from promoting an otherwise dead control.
   z-order, destination drag/close/reopen behavior where applicable, and an
   activated-state screenshot even when the destination is absent at startup;
 - local visual comparisons rather than only a whole-window score;
-- source-relative per-window comparisons that mask only donor-magenta pixels and retain original chrome, text, and semantic artwork;
+- source-relative per-window comparisons using the canonical ownership mask;
+  masking donor-magenta alone is insufficient when a neighboring window
+  overlaps the raw crop;
 - one-to-three-pixel corner evidence proving cleanup retained stepped window rounding instead of deleting the complete perimeter ring;
 - runtime and Figma stable-ID, geometry, and reaction parity;
 - correction-replay report listing every applicable prompt, evidence inspected, verdict, and promoted regression test.
@@ -92,6 +96,17 @@ filter or hidden status string from promoting an otherwise dead control.
 Adding a new correction invalidates every existing `verified` window to which the prompt applies. Promotion back to `verified` requires a report containing that exact prompt ID and fresh browser and Figma evidence. Historical green status never waives a newly learned failure class.
 
 The executable WSL prototype remains the interaction authority. Figma Design is the editable review and verification layer. Neither is allowed to infer the other's verdict.
+
+Historical versioned siblings are provenance, not active runtime authorities.
+Asset gates enumerate only paths declared by the active manifest, require those
+paths to exist and be unique, and reject donor seams on their owned boundaries.
+They do not fail because a deliberately retained older candidate is present in
+the same directory.
+
+The inferred Map destination is part of the 16-window Godot runtime and has its
+own open, move, close, and reopen journey. It is not present in the source
+verification registry, so it does not expand or dilute the 15-window learned
+correction matrix.
 
 ## Executable promotion sequence
 

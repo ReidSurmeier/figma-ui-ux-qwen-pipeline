@@ -5,25 +5,25 @@ Date: 2026-08-23
 ## Outcome
 
 The Godot 4.7.2 web prototype now reconstructs the complete 849x564 Japanese
-Reference Screen over its original `#ff00fe` pink desktop. All 15 visible
-windows are assembled from the existing source-locked runtime manifest rather
-than a full-screen screenshot underlay.
+Reference Screen over its original `#ff00fe` pink desktop. Fifteen
+screenshot-derived windows and one inferred Map destination are assembled from
+the source-locked runtime manifest rather than a full-screen screenshot
+underlay.
 
 The scene exposes:
 
-- 15 independently movable windows;
-- 263 independent visual authorities, including Qwen clean plates and isolated
+- 16 independently movable windows;
+- 275 independent visual authorities, including Qwen clean plates and isolated
   source-derived labels, icons, rows, buttons, and thumbs;
-- 150 mapped interaction surfaces; and
+- 151 mapped interaction surfaces; and
 - the accepted 33-authority, 18-control Options implementation unchanged as
   the canonical BGM/Effect quality floor.
 
-The browser evidence is retained in
-`artifacts/qa/godot-options-v001/full-desktop-report.json`. The initial full
-composition passed the bounded integration gate at normalized MAE `0.0513851`
-and high-error pixel rate `0.1571247776`. Options independently retained MAE
-`0.033354`, high-error pixel rate `0.1248243560`, and largest high-error
-component rate `0.0640807963`.
+The current browser evidence is retained in
+`artifacts/qa/godot-options-v001/full-desktop-report.json`. The full composition
+passes at normalized MAE `0.0239729` and high-error pixel rate
+`0.0756918862`. The isolated Options window retains source-owned MAE
+`0.0194981`, below the accepted BGM/Effect ceiling of `0.03668`.
 
 ## Failure found by gesture replay
 
@@ -55,20 +55,21 @@ the 13 geometry steps and return to exact expanded coordinates. The engine
 contract checks Basic Info, Status, Inventory, and Equipment, while Stagehand
 drives the public Basic Info gesture and retains the 180 by 18 settled frame.
 
-The Web gate now emits `per-window-fidelity-report.json`. It compares every
-source-relative window crop to the accepted Options/BGM normalized-MAE floor
-of `0.03668`, then repeats the comparison against an offline clean-plate plus
-component assembly. Basic Info, Status, Inventory, Game Menu, Compact Info, and
-Party fail before Godot and are routed to `qwen-asset-pass`; this prevents an
-asset-generation defect from being misreported as a Web or engine-rendering
-bug.
+The Web gate now emits `isolated-window-fidelity-report.json`. It compares each
+of the 15 screenshot-derived windows to the accepted Options/BGM normalized-MAE
+ceiling of `0.03668`. The comparison uses the canonical source-ownership mask:
+raw source rectangles are invalid authorities when they contain donor-magenta
+or pixels owned by an overlapping neighbor. All 15 windows currently pass and
+`revisionRequired` is empty; the worst result is Skills at `0.025988`.
 
-The first routed repair ran two OpenRouter Qwen Image 3 Pro candidates at an
-exact recorded cost of `$0.083`. Candidate 01 reduced the Basic Info title
-background MAE from `0.177466` to `0.0399834`; only its bounded title surface
-entered deterministic assembly. The repaired live Godot window now measures
-`0.0226557`, passing the BGM floor, and the remaining generation queue is
-Status, Inventory, Game Menu, Compact Info, and Party.
+The final repair does not accept a complete screenshot crop as a movable
+window. `build-qwen-structural-clean-plates.mjs` derives blank structural chrome
+from the repository's actual Qwen Image 3 Pro runs, and
+`build-qwen-owned-window-assets.mjs` restores only canonical source-owned pixels
+through each component's declared alpha footprint. The deterministic ownership
+pass is recorded separately from generation. This removed baked Japanese copy,
+duplicate rows, donor-magenta borders, and neighboring-window pixels without
+pretending that deterministic assembly was Qwen output.
 
 That repair also exposed stale engine asset copies: the offline assembly passed
 while the exported runtime remained unchanged. `scripts/sync_godot_window_assets.sh`
@@ -77,19 +78,22 @@ manifest before every engine test/export. A detected Qwen fix therefore cannot
 be stranded in the prototype asset tree while Godot silently packages an older
 copy.
 
-The correction replay also passed all 15 windows with zero uncontracted
-controls. After the Qwen title repair, owner-derived control mapping, and fresh
-11-of-11 Basic Info replay, Basic Info is the first sibling promoted to
-`verified`; Options remains `quality-benchmark`, and the other 13 siblings
-remain `revision-required` in `prototype/qa/window-verification.json`. The
-complete Godot desktop is therefore an executable integration ready for review,
-not a claim that every sibling has already earned final visual acceptance.
+The final Godot Web suite passes 25 tests. It includes all 16 isolated runtime
+journeys, the 15-window fidelity matrix, full assembly, move and z-order
+gestures, minimize/restore, scroll, tabs, dropdowns, reversible checkboxes,
+continuous slider endpoints, and hidden Map close/reopen. The learned
+correction replay separately passes 15/15 source windows and 139/139 contracted
+source controls with zero uncontracted controls. A fresh hosted Figma parity
+audit was not part of this run, so this is an executable Godot verification and
+not a new claim about hosted Figma state.
 
 ## Provenance boundary
 
-The pink desktop is native Godot color, not a crop. Qwen Image 3 Pro clean
-plates and component assets are synchronized into the engine project with the
-runtime manifest hash preserved. The Basic Info title repair is retained with
-the exact prompt, provider response metadata, output hashes, reference hash,
-charged cost, and bounded assembly rule; no generated output is represented as
-deterministic code or SVG.
+The pink desktop is native Godot color, not a crop. Qwen Image 3 Pro structural
+plates and source-owned component assets are synchronized into the engine
+project with the runtime manifest hash preserved. The structural inputs are
+the recorded `japanese-status-clean-plate-v001` and
+`japanese-status-derived-stats-v004` Qwen runs. Their deterministic ownership
+finishing, source-mask inputs, and affected windows are recorded in
+`artifacts/runs/japanese-godot-qwen-owned-plates-v001/selection.json`; no
+generated output is represented as deterministic code or SVG.

@@ -82,7 +82,7 @@
               {
                 "script": "remaining-window-contract.sh",
                 "status": 0,
-                "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "output": "remaining-window-contract: PASS active Qwen plates, 141 unique declared component assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
                 "error": ""
               }
             ],

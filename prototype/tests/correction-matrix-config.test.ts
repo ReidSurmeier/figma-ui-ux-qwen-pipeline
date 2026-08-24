@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { correctionMatrixOutputConfig, selectedCorrectionMatrixWindows } from "../scripts/correction-matrix-config.mjs";
+import { correctionMatrixOutputConfig, registeredCorrectionMatrixWindows, selectedCorrectionMatrixWindows } from "../scripts/correction-matrix-config.mjs";
 
 describe("correction matrix output isolation", () => {
   const repoDir = "/workspace/repo";
@@ -43,5 +43,12 @@ describe("correction matrix window selection", () => {
 
   it("fails closed for unknown window ids", () => {
     expect(() => selectedCorrectionMatrixWindows(windows, "card,missing")).toThrow("Unknown correction-matrix windows: missing");
+  });
+
+  it("keeps inferred hidden destinations out of the source-window replay", () => {
+    expect(registeredCorrectionMatrixWindows(
+      [...windows, { id: "map" }],
+      windows,
+    )).toEqual(windows);
   });
 });

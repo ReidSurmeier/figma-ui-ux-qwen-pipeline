@@ -197,6 +197,26 @@ Use a layered QA system with one responsibility per layer:
 48. Source-raster authority additionally awaits explicit decode of every
     computed CSS background in the target window. Two identical early frames can
     precede delayed background decode under parallel browser pressure.
+49. A raw screenshot rectangle is not a valid isolated-window oracle when it
+    contains donor background or pixels semantically owned by another window.
+    Every isolated and assembled comparison uses the same canonical
+    source-ownership mask.
+50. The active runtime manifest, not directory contents, defines the promoted
+    asset set. Versioned Qwen candidates and rejected predecessors remain for
+    provenance without being counted as duplicate active controls or donor
+    failures.
+51. Reconstruction promotion has three ordered gates: active asset and ownership
+    integrity; isolated source-owned fidelity plus a complete semantic journey
+    for each window; and assembled overlap, z-order, and learned-correction
+    replay. A green assembled screenshot cannot waive a failed isolated window.
+52. Qwen structural generation and deterministic ownership finishing are
+    distinct provenance stages. The finishing stage may restore exact
+    source-owned pixels, clear baked duplicates, and enforce alpha boundaries,
+    but it must name the Qwen inputs and must not describe its output as a new
+    model generation.
+53. Runtime-only inferred destinations receive engine journeys but do not enter
+    the source-window correction registry. This keeps screenshot-derived claims
+    bounded to what the reference can actually prove.
 
 ## Consequences
 

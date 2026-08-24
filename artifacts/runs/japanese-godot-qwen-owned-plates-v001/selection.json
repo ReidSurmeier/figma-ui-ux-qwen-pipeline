@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.0",
+  "createdAt": "2026-08-23",
+  "model": "qwen/qwen-image-3-pro",
+  "representation": "Qwen structural chrome plus source-owned exact components",
+  "generationInputs": [
+    "artifacts/runs/japanese-status-clean-plate-v001/image-01.png",
+    "artifacts/runs/japanese-status-derived-stats-v004/image-01.png"
+  ],
+  "deterministicFinishing": [
+    "prototype/scripts/build-qwen-structural-clean-plates.mjs",
+    "prototype/scripts/build-qwen-owned-window-assets.mjs",
+    "prototype/scripts/source-lock-quickbar-slots.mjs",
+    "prototype/scripts/source-lock-static-readouts.mjs"
+  ],
+  "sourceOwnershipMaskPattern": "artifacts/qa/standalone-windows-v001/<window-id>/source-surface-mask.png",
+  "affectedWindows": [
+    "basic-info",
+    "status",
+    "inventory",
+    "equipment",
+    "exchange",
+    "game-menu",
+    "party"
+  ],
+  "policy": {
+    "qwenStage": "provides blank structural chrome derived from recorded Qwen Image 3 Pro runs",
+    "finishingStage": "removes component-owned pixels from the plate and restores only canonical source-owned pixels through declared component alpha footprints",
+    "excludedClaims": [
+      "No new paid generation was submitted for this selection",
+      "Deterministic finishing is not represented as Qwen output",
+      "No SVG or Python-rendered substitute is represented as model output"
+    ]
+  },
+  "verification": {
+    "godotWebTests": 25,
+    "godotWebStatus": "pass",
+    "sourceWindows": 15,
+    "isolatedFidelityStatus": "15/15 pass",
+    "revisionRequired": [],
+    "acceptedBgmFloor": 0.03668,
+    "correctionReplay": "15/15 windows and 139/139 contracted controls pass"
+  }
+}

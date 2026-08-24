@@ -6,7 +6,7 @@ import { chromium } from "playwright";
 
 import { runBgmFidelityGate } from "./bgm-fidelity-gate.mjs";
 import { classifyInteractionProbe } from "./classify-interaction-probe.mjs";
-import { correctionMatrixOutputConfig, selectedCorrectionMatrixWindows } from "./correction-matrix-config.mjs";
+import { correctionMatrixOutputConfig, registeredCorrectionMatrixWindows, selectedCorrectionMatrixWindows } from "./correction-matrix-config.mjs";
 import { rangeGesturePoint } from "./range-gesture-geometry.mjs";
 import { executeSemanticInteractionContracts, semanticContractForControl } from "./semantic-interaction-contract.mjs";
 import { promotionStatus } from "./window-promotion.mjs";
@@ -26,9 +26,13 @@ const registryInputPath = resolve(prototypeDir, "qa/window-verification.json");
 const registry = JSON.parse(await readFile(registryInputPath, "utf8"));
 const manifest = JSON.parse(await readFile(resolve(repoDir, "artifacts/qa/runtime-component-manifest.json"), "utf8"));
 const requestedWindowIds = process.env.CORRECTION_MATRIX_WINDOW_IDS;
-const windowDefinitions = selectedCorrectionMatrixWindows(manifest.windows, requestedWindowIds);
+// This runner promotes screenshot-derived windows in the source verification
+// registry. Inferred, hidden destinations such as Map have their own Godot
+// journey and must not silently expand or block the 15-window source replay.
+const sourceWindowDefinitions = registeredCorrectionMatrixWindows(manifest.windows, registry.windows);
+const windowDefinitions = selectedCorrectionMatrixWindows(sourceWindowDefinitions, requestedWindowIds);
 const selectedWindowIds = new Set(windowDefinitions.map(({ id }) => id));
-const focusedRun = selectedWindowIds.size < manifest.windows.length;
+const focusedRun = selectedWindowIds.size < sourceWindowDefinitions.length;
 const semanticManifest = JSON.parse(await readFile(resolve(prototypeDir, "qa/semantic-interaction-contracts.json"), "utf8"));
 const semanticContracts = semanticManifest.contracts.filter(({ window_id }) => selectedWindowIds.has(window_id));
 const figmaMarker = resolve(repoDir, "artifacts/qa/figma-correction-matrix-v003.json");

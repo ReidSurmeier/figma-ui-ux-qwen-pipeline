@@ -18,7 +18,7 @@ export function Desktop({ onlyWindowId }: { onlyWindowId?: string } = {}) {
     equipment: true,
     skills: true,
     party: true,
-    map: false,
+    map: onlyWindowId === "map",
   });
   const activate = (id: string) => setOrder((current) => [...current.filter((item) => item !== id), id]);
   const navigate = (id: string, view?: string) => {

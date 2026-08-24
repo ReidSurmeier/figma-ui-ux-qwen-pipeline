@@ -25,3 +25,8 @@ export function selectedCorrectionMatrixWindows(windows, requestedIds) {
   if (missing.length) throw new Error(`Unknown correction-matrix windows: ${missing.join(", ")}`);
   return ids.map((id) => byId.get(id));
 }
+
+export function registeredCorrectionMatrixWindows(windows, registryWindows) {
+  const registeredIds = new Set(registryWindows.map(({ id }) => id));
+  return windows.filter(({ id }) => registeredIds.has(id));
+}
