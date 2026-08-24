@@ -61,6 +61,7 @@ func _build_windows() -> void:
 			"equipment": window = preload("res://scripts/equipment_window.gd").new()
 			"exchange": window = preload("res://scripts/exchange_window.gd").new()
 			"game-menu": window = preload("res://scripts/game_menu_window.gd").new()
+			"party": window = preload("res://scripts/party_window.gd").new()
 			_: window = preload("res://scripts/source_window.gd").new()
 		window.configure(definition)
 		window.activated.connect(_activate_window)

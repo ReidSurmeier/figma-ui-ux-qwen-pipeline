@@ -34,6 +34,7 @@ const sourceGameMenu = resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/regions/game-menu/reference.png",
 );
+const sourceParty = resolve(projectRoot, "benchmarks/japanese-rpg-options-v001/regions/party/reference.png");
 const windowRegistry = JSON.parse(readFileSync(resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/windows.json",
@@ -808,6 +809,55 @@ test("isolated Game Menu transfers one real action and toggles back to its exact
     .toMatchObject({ selected: -1, selected_indices: [], feedback: "menu ready" });
   const resetFrame = await page.screenshot({ path: resolve(evidenceDir, "godot-game-menu-reset.png"), clip: windowClip });
   expect(resetFrame.equals(idleFrame), "Game Menu did not restore its exact ready pixels").toBe(true);
+});
+
+test("isolated Party reverses member tools, switches tabs, and leaves satellite actions anchored", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try { await page.goto("?isolate=party", { waitUntil: "commit", timeout: 15_000 }); }
+  catch (error) { if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error; }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page)).toMatchObject({
+    isolated_window: "party", visible_window_ids: ["party"],
+    windows: { party: { party_state: { selected_member: -1, selected_tool: -1, view: "party", page: 1 } } },
+  });
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const party = { x: 568, y: 349 };
+  const windowClip = canvasClip(bounds, party.x, party.y, 160, 157);
+  const idlePath = resolve(evidenceDir, "godot-party-idle.png");
+  await page.screenshot({ path: idlePath, clip: windowClip });
+  expect(Number(imageMagick("compare", ["-metric", "MAE", `${sourceParty}[160x157+0+0]`, idlePath, "null:"]).match(/\(([^)]+)\)/)?.[1] ?? "0")).toBeLessThanOrEqual(0.01);
+  const titleAuthority = await page.screenshot({ clip: canvasClip(bounds, party.x, party.y, 160, 20) });
+  for (let row = 0; row < 5; row += 1) {
+    await clickCanvas(page, bounds, party.x + 80, party.y + 29 + row * 19);
+    await expect.poll(async () => (await state(page)).windows.party.party_state.selected_member).toBe(row);
+  }
+  await clickCanvas(page, bounds, party.x + 80, party.y + 105);
+  await expect.poll(async () => (await state(page)).windows.party.party_state.selected_member).toBe(-1);
+  for (let tool = 0; tool < 5; tool += 1) {
+    await clickCanvas(page, bounds, party.x + 18 + tool * 29, party.y + 126);
+    await expect.poll(async () => (await state(page)).windows.party.party_state.selected_tool).toBe(tool);
+  }
+  await clickCanvas(page, bounds, party.x + 134, party.y + 126);
+  await expect.poll(async () => (await state(page)).windows.party.party_state.selected_tool).toBe(-1);
+  await clickCanvas(page, bounds, party.x + 41, party.y + 146);
+  await expect.poll(async () => (await state(page)).windows.party.party_state.view).toBe("friends");
+  await clickCanvas(page, bounds, party.x + 118, party.y + 146);
+  await expect.poll(async () => (await state(page)).windows.party.party_state.view).toBe("party");
+  expect((await page.screenshot({ clip: canvasClip(bounds, party.x, party.y, 160, 20) })).equals(titleAuthority)).toBe(true);
+
+  const satellitesBefore = (await state(page)).windows.party.party_state.satellite_global_positions;
+  const drag = canvasPoint(bounds, party.x + 80, party.y + 9);
+  await page.mouse.move(drag.x, drag.y); await page.mouse.down();
+  await page.mouse.move(drag.x + 30, drag.y + 20, { steps: 8 }); await page.mouse.up();
+  await expect.poll(async () => (await state(page)).windows.party.position).toEqual([598, 369]);
+  expect((await state(page)).windows.party.party_state.satellite_global_positions).toEqual(satellitesBefore);
+  await clickCanvas(page, bounds, satellitesBefore[1][0] + 20, satellitesBefore[1][1] + 10);
+  await expect.poll(async () => (await state(page)).windows.party.party_state.page).toBe(2);
+  await clickCanvas(page, bounds, satellitesBefore[0][0] + 20, satellitesBefore[0][1] + 10);
+  await expect.poll(async () => (await state(page)).windows.party.party_state.page).toBe(1);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-party-moved.png"), clip: canvasClip(bounds, 568, 349, 241, 195) });
 });
 
 test("Godot composes all independent windows over the original pink desktop", async ({ page }) => {
