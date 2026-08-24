@@ -26,6 +26,14 @@ const sourceBasicInfo = resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/regions/basic-info/reference.png",
 );
+const sourceExchange = resolve(
+  projectRoot,
+  "benchmarks/japanese-rpg-options-v001/regions/exchange/reference.png",
+);
+const sourceGameMenu = resolve(
+  projectRoot,
+  "benchmarks/japanese-rpg-options-v001/regions/game-menu/reference.png",
+);
 const windowRegistry = JSON.parse(readFileSync(resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/windows.json",
@@ -680,6 +688,126 @@ test("isolated Basic Info drives both complete sliders and every real destinatio
   await expect.poll(async () => (await state(page)).windows["basic-info"].minimized).toBe(false);
   await expect.poll(async () => (await state(page)).windows["basic-info"].size).toEqual([280, 120]);
   await page.screenshot({ path: resolve(evidenceDir, "godot-basic-info-restored-v2.png"), clip: windowClip });
+});
+
+test("isolated Exchange owns all sixteen cells and a complete confirm trade cancel transaction", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=exchange", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    isolated_window: "exchange",
+    visible_window_ids: ["exchange"],
+    windows: { exchange: { exchange_state: { selected: -1, selected_indices: [], confirmed: false, trade_enabled: false, feedback: "" } } },
+  });
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const exchange = { x: 285, y: 399 };
+  const windowClip = canvasClip(bounds, exchange.x, exchange.y, 280, 120);
+  const titleClip = canvasClip(bounds, exchange.x, exchange.y, 280, 18);
+  const summaryClip = canvasClip(bounds, exchange.x + 4, exchange.y + 87, 272, 14);
+  const idlePath = resolve(evidenceDir, "godot-exchange-idle.png");
+  const idleFrame = await page.screenshot({ path: idlePath, clip: windowClip });
+  expect(Number(imageMagick("compare", ["-metric", "MAE", sourceExchange, idlePath, "null:"]).match(/\(([^)]+)\)/)?.[1] ?? "0"))
+    .toBeLessThanOrEqual(0.01);
+  const titleAuthority = await page.screenshot({ clip: titleClip });
+  const summaryAuthority = await page.screenshot({ clip: summaryClip });
+
+  let priorClip = null;
+  let priorAuthority = null;
+  for (let index = 0; index < 16; index += 1) {
+    const row = Math.floor(index / 8);
+    const column = index % 8;
+    const cellClip = canvasClip(bounds, exchange.x + 5 + column * 34, exchange.y + 19 + row * 34, 34, 34);
+    const cellAuthority = await page.screenshot({ clip: cellClip });
+    await clickCanvas(page, bounds, exchange.x + 22 + column * 34, exchange.y + 36 + row * 34);
+    await expect.poll(async () => (await state(page)).windows.exchange.exchange_state)
+      .toMatchObject({ selected: index, selected_indices: [index], confirmed: false, trade_enabled: false });
+    expect((await page.screenshot({ clip: cellClip })).equals(cellAuthority), `Exchange cell ${index + 1} did not visibly own selection`).toBe(false);
+    if (priorClip && priorAuthority) {
+      expect((await page.screenshot({ clip: priorClip })).equals(priorAuthority), `Exchange cell ${index + 1} left the prior cell selected`).toBe(true);
+    }
+    expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `Exchange cell ${index + 1} changed title pixels`).toBe(true);
+    expect((await page.screenshot({ clip: summaryClip })).equals(summaryAuthority), `Exchange cell ${index + 1} changed summary pixels`).toBe(true);
+    priorClip = cellClip;
+    priorAuthority = cellAuthority;
+  }
+  await page.screenshot({ path: resolve(evidenceDir, "godot-exchange-selected.png"), clip: windowClip });
+
+  const tradeClip = canvasClip(bounds, exchange.x + 121, exchange.y + 101, 42, 18);
+  const tradeDisabled = await page.screenshot({ clip: tradeClip });
+  await clickCanvas(page, bounds, exchange.x + 24, exchange.y + 110);
+  await expect.poll(async () => (await state(page)).windows.exchange.exchange_state)
+    .toMatchObject({ selected: 15, confirmed: true, trade_enabled: true, feedback: "交換内容を確認しました" });
+  const tradeEnabled = await page.screenshot({ path: resolve(evidenceDir, "godot-exchange-confirmed.png"), clip: windowClip });
+  expect((await page.screenshot({ clip: tradeClip })).equals(tradeDisabled), "Trade enabled semantically without visual feedback").toBe(false);
+
+  await clickCanvas(page, bounds, exchange.x + 142, exchange.y + 110);
+  await expect.poll(async () => (await state(page)).windows.exchange.exchange_state)
+    .toMatchObject({ selected: -1, selected_indices: [], confirmed: false, trade_enabled: false, feedback: "交換しました" });
+  const tradedFrame = await page.screenshot({ path: resolve(evidenceDir, "godot-exchange-traded.png"), clip: windowClip });
+  expect(tradedFrame.equals(idleFrame), "Trade did not restore the exact clean transaction pixels").toBe(true);
+  expect(tradeEnabled.equals(idleFrame), "Confirm did not visibly change the Exchange state").toBe(false);
+
+  await clickCanvas(page, bounds, exchange.x + 22, exchange.y + 36);
+  await clickCanvas(page, bounds, exchange.x + 255, exchange.y + 110);
+  await expect.poll(async () => (await state(page)).windows.exchange.exchange_state)
+    .toMatchObject({ selected: -1, selected_indices: [], confirmed: false, trade_enabled: false, feedback: "交換をキャンセルしました" });
+  const cancelledFrame = await page.screenshot({ path: resolve(evidenceDir, "godot-exchange-cancelled.png"), clip: windowClip });
+  expect(cancelledFrame.equals(idleFrame), "Cancel did not restore the exact clean transaction pixels").toBe(true);
+});
+
+test("isolated Game Menu transfers one real action and toggles back to its exact ready state", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=game-menu", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    isolated_window: "game-menu",
+    visible_window_ids: ["game-menu"],
+    windows: { "game-menu": { game_menu_state: { selected: -1, selected_indices: [], feedback: "menu ready" } } },
+  });
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const menu = { x: 626, y: 182 };
+  const windowClip = canvasClip(bounds, menu.x, menu.y, 222, 133);
+  const titleClip = canvasClip(bounds, menu.x, menu.y, 222, 18);
+  const idlePath = resolve(evidenceDir, "godot-game-menu-idle.png");
+  const idleFrame = await page.screenshot({ path: idlePath, clip: windowClip });
+  expect(Number(imageMagick("compare", ["-metric", "MAE", sourceGameMenu, idlePath, "null:"]).match(/\(([^)]+)\)/)?.[1] ?? "0"))
+    .toBeLessThanOrEqual(0.01);
+  const titleAuthority = await page.screenshot({ clip: titleClip });
+  const labels = ["Return to last save point", "Character Select", "Exit to Windows", "Return to game"];
+  let priorClip = null;
+  let priorAuthority = null;
+  for (let row = 0; row < labels.length; row += 1) {
+    const rowClip = canvasClip(bounds, menu.x, menu.y + 29 + row * 25, 193, 22);
+    const rowAuthority = await page.screenshot({ clip: rowClip });
+    await clickCanvas(page, bounds, menu.x + 96, menu.y + 40 + row * 25);
+    await expect.poll(async () => (await state(page)).windows["game-menu"].game_menu_state)
+      .toMatchObject({ selected: row, selected_indices: [row], feedback: labels[row] });
+    expect((await page.screenshot({ clip: rowClip })).equals(rowAuthority), `Game Menu row ${row} did not visibly own selection`).toBe(false);
+    if (priorClip && priorAuthority) {
+      expect((await page.screenshot({ clip: priorClip })).equals(priorAuthority), `Game Menu row ${row} left its predecessor selected`).toBe(true);
+    }
+    expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `Game Menu row ${row} changed its Japanese title`).toBe(true);
+    priorClip = rowClip;
+    priorAuthority = rowAuthority;
+  }
+  await page.screenshot({ path: resolve(evidenceDir, "godot-game-menu-selected.png"), clip: windowClip });
+  await clickCanvas(page, bounds, menu.x + 96, menu.y + 115);
+  await expect.poll(async () => (await state(page)).windows["game-menu"].game_menu_state)
+    .toMatchObject({ selected: -1, selected_indices: [], feedback: "menu ready" });
+  const resetFrame = await page.screenshot({ path: resolve(evidenceDir, "godot-game-menu-reset.png"), clip: windowClip });
+  expect(resetFrame.equals(idleFrame), "Game Menu did not restore its exact ready pixels").toBe(true);
 });
 
 test("Godot composes all independent windows over the original pink desktop", async ({ page }) => {

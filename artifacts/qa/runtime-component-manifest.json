@@ -2791,7 +2791,7 @@
         "width": 280,
         "height": 120
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/exchange/clean-plate.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/exchange/clean-plate-source-locked.png",
       "components": [
         {
           "id": "exchange-title-icon",
@@ -3257,7 +3257,7 @@
         "width": 222,
         "height": 133
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/game-menu/clean-plate.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/game-menu/clean-plate-source-locked.png",
       "components": [
         {
           "id": "game-menu-title-icon",
