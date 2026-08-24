@@ -52,17 +52,20 @@ func _build_windows() -> void:
 		if str(definition.id) == "options": continue
 		var window: Control
 		match str(definition.id):
+			"basic-info": window = preload("res://scripts/basic_info_window.gd").new()
 			"chat": window = preload("res://scripts/chat_window.gd").new()
 			"card": window = preload("res://scripts/card_window.gd").new()
 			"skills": window = preload("res://scripts/skills_window.gd").new()
 			"status": window = preload("res://scripts/status_window.gd").new()
 			"inventory": window = preload("res://scripts/inventory_window.gd").new()
+			"equipment": window = preload("res://scripts/equipment_window.gd").new()
 			_: window = preload("res://scripts/source_window.gd").new()
 		window.configure(definition)
 		window.activated.connect(_activate_window)
 		window.state_changed.connect(_publish_desktop_qa)
 		window.navigation_requested.connect(_navigate_to_window)
 		windows_layer.add_child(window)
+		window.visible = bool(definition.get("initiallyVisible", true))
 		desktop_windows.append(window)
 		windows_by_id[window.window_id] = window
 

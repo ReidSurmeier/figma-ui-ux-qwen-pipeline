@@ -14,7 +14,7 @@
         "width": 280,
         "height": 120
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/basic-info/clean-plate.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/basic-info/clean-plate-source-locked.png",
       "components": [
         {
           "id": "title-icon",
@@ -2253,7 +2253,7 @@
         "width": 280,
         "height": 152
       },
-      "cleanPlate": "/assets/japanese-rpg-v001/equipment/clean-plate.png",
+      "cleanPlate": "/assets/japanese-rpg-v001/equipment/clean-plate-source-locked.png",
       "components": [
         {
           "id": "equipment-title-icon",
@@ -4117,6 +4117,53 @@
         }
       ],
       "controls": []
+    },
+    {
+      "id": "map",
+      "ariaLabel": "マップ",
+      "initiallyVisible": false,
+      "geometry": {
+        "x": 285,
+        "y": 150,
+        "width": 280,
+        "height": 150
+      },
+      "cleanPlate": "/assets/japanese-rpg-v001/map/clean-plate.png",
+      "components": [
+        {
+          "id": "map-title-icon",
+          "assetPath": "/assets/japanese-rpg-v001/map/components/title-icon.png",
+          "geometry": { "x": 3, "y": 2, "width": 16, "height": 15 },
+          "authority": "element-background"
+        },
+        {
+          "id": "map-title-text",
+          "assetPath": "/assets/japanese-rpg-v001/map/components/title-text.png",
+          "geometry": { "x": 23, "y": 3, "width": 57, "height": 13 },
+          "authority": "element-background"
+        },
+        {
+          "id": "map-close",
+          "assetPath": "/assets/japanese-rpg-v001/map/components/close.png",
+          "geometry": { "x": 266, "y": 2, "width": 13, "height": 15 },
+          "authority": "element-background"
+        },
+        {
+          "id": "map-body",
+          "assetPath": "/assets/japanese-rpg-v001/map/components/map-body.png",
+          "geometry": { "x": 16, "y": 29, "width": 248, "height": 113 },
+          "authority": "element-background"
+        }
+      ],
+      "controls": [
+        {
+          "id": "マップを閉じる",
+          "role": "button",
+          "geometry": { "x": 266, "y": 0, "width": 13, "height": 18 },
+          "visualComponent": "map-close",
+          "closeWindow": "map"
+        }
+      ]
     },
     {
       "id": "options",

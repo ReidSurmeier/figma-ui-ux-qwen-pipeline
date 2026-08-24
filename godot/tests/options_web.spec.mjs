@@ -18,6 +18,14 @@ const sourceInventory = resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/regions/inventory/reference.png",
 );
+const sourceEquipment = resolve(
+  projectRoot,
+  "benchmarks/japanese-rpg-options-v001/regions/equipment/reference.png",
+);
+const sourceBasicInfo = resolve(
+  projectRoot,
+  "benchmarks/japanese-rpg-options-v001/regions/basic-info/reference.png",
+);
 const windowRegistry = JSON.parse(readFileSync(resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/windows.json",
@@ -514,6 +522,164 @@ test("isolated Inventory clips every scroll state, owns categories, and restores
   await page.screenshot({ path: resolve(evidenceDir, "godot-inventory-restored.png"), clip: windowClip });
   await clickCanvas(page, bounds, inventory.x + 272, inventory.y + 9);
   await expect.poll(async () => (await state(page)).windows.inventory.visible).toBe(false);
+});
+
+test("isolated Equipment gives every row exclusive ownership without changing its avatar or title", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=equipment", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    isolated_window: "equipment",
+    visible_window_ids: ["equipment"],
+    windows: { equipment: { equipment_state: { selected: "", selected_indices: [] } } },
+  });
+
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const equipment = { x: 0, y: 385 };
+  const windowClip = canvasClip(bounds, equipment.x, equipment.y, 280, 152);
+  const titleClip = canvasClip(bounds, equipment.x, equipment.y, 280, 18);
+  const avatarClip = canvasClip(bounds, equipment.x + 109, equipment.y + 18, 61, 134);
+  const idlePath = resolve(evidenceDir, "godot-equipment-idle.png");
+  await page.screenshot({ path: idlePath, clip: windowClip });
+  expect(Number(imageMagick("compare", ["-metric", "MAE", sourceEquipment, idlePath, "null:"]).match(/\(([^)]+)\)/)?.[1] ?? "0"))
+    .toBeLessThanOrEqual(0.01);
+  const titleAuthority = await page.screenshot({ clip: titleClip });
+  const avatarAuthority = await page.screenshot({ clip: avatarClip });
+
+  let priorRow = null;
+  let priorAuthority = null;
+  for (const [side, x] of [["left", 50], ["right", 220]]) {
+    for (let row = 0; row < 5; row += 1) {
+      const rowHeight = row === 4 ? 18 : 29;
+      const rowClip = canvasClip(bounds, equipment.x + (side === "left" ? 4 : 170), equipment.y + 18 + row * 29, side === "left" ? 105 : 106, rowHeight);
+      const rowAuthority = await page.screenshot({ clip: rowClip });
+      await clickCanvas(page, bounds, equipment.x + x, equipment.y + 18 + row * 29 + rowHeight / 2);
+      const expected = `${side}-${row}`;
+      await expect.poll(async () => (await state(page)).windows.equipment.equipment_state)
+        .toMatchObject({ selected: expected, selected_indices: [expected] });
+      expect((await page.screenshot({ clip: rowClip })).equals(rowAuthority), `${expected} did not visibly own selection`).toBe(false);
+      if (priorRow && priorAuthority) {
+        expect((await page.screenshot({ clip: priorRow })).equals(priorAuthority), `${expected} left the prior row selected`).toBe(true);
+      }
+      expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `${expected} changed Equipment title pixels`).toBe(true);
+      expect((await page.screenshot({ clip: avatarClip })).equals(avatarAuthority), `${expected} changed Equipment avatar pixels`).toBe(true);
+      priorRow = rowClip;
+      priorAuthority = rowAuthority;
+    }
+  }
+  const selectedFrame = await page.screenshot({ path: resolve(evidenceDir, "godot-equipment-selected.png"), clip: windowClip });
+
+  await clickCanvas(page, bounds, equipment.x + 258, equipment.y + 9);
+  await expect.poll(async () => (await state(page)).windows.equipment.minimized).toBe(true);
+  const minimized = (await state(page)).windows.equipment;
+  expect(minimized.size).toEqual([180, 18]);
+  expect(new Set(minimized.minimize_samples).size).toBeGreaterThan(4);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-equipment-minimized.png"), clip: canvasClip(bounds, equipment.x, equipment.y, 180, 18) });
+  await clickCanvas(page, bounds, equipment.x + 90, equipment.y + 9);
+  await expect.poll(async () => (await state(page)).windows.equipment.minimized).toBe(false);
+  await expect.poll(async () => (await state(page)).windows.equipment.size).toEqual([280, 152]);
+  const restoredFrame = await page.screenshot({ path: resolve(evidenceDir, "godot-equipment-restored.png"), clip: windowClip });
+  expect(restoredFrame.equals(selectedFrame), "Equipment minimize did not restore the exact selected state").toBe(true);
+  await clickCanvas(page, bounds, equipment.x + 272, equipment.y + 9);
+  await expect.poll(async () => (await state(page)).windows.equipment.visible).toBe(false);
+});
+
+test("isolated Basic Info drives both complete sliders and every real destination", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=basic-info", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    isolated_window: "basic-info",
+    visible_window_ids: ["basic-info"],
+    windows: { "basic-info": { basic_info_state: { ranges: { HP: 0, SP: 0 }, active_page: "" } } },
+  });
+
+  let bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const basic = { x: 0, y: 0 };
+  const windowClip = canvasClip(bounds, basic.x, basic.y, 280, 120);
+  const titleClip = canvasClip(bounds, basic.x, basic.y, 280, 18);
+  const pagesClip = canvasClip(bounds, basic.x + 207, basic.y + 18, 71, 101);
+  const idlePath = resolve(evidenceDir, "godot-basic-info-idle-v2.png");
+  await page.screenshot({ path: idlePath, clip: windowClip });
+  expect(Number(imageMagick("compare", ["-metric", "MAE", sourceBasicInfo, idlePath, "null:"]).match(/\(([^)]+)\)/)?.[1] ?? "0"))
+    .toBeLessThanOrEqual(0.01);
+  const titleAuthority = await page.screenshot({ clip: titleClip });
+  const pagesAuthority = await page.screenshot({ clip: pagesClip });
+
+  for (const [name, y] of [["HP", 27], ["SP", 48]]) {
+    const visualStates = new Set();
+    for (let step = 0; step <= 10; step += 1) {
+      await clickCanvas(page, bounds, basic.x + 111 + 85 * (step / 10), basic.y + y);
+      const rangeValue = (await state(page)).windows["basic-info"].basic_info_state.ranges[name];
+      visualStates.add((await page.screenshot({ clip: canvasClip(bounds, basic.x + 111, basic.y + y - 5, 86, 11) })).toString("base64"));
+      expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `${name} changed Basic Info title pixels`).toBe(true);
+      expect((await page.screenshot({ clip: pagesClip })).equals(pagesAuthority), `${name} changed Basic Info page buttons`).toBe(true);
+      if (step === 0) expect(rangeValue).toBe(0);
+      if (step === 10) expect(rangeValue).toBe(100);
+    }
+    expect(visualStates.size, `${name} exposed four or fewer visual positions`).toBeGreaterThan(4);
+  }
+  await page.screenshot({ path: resolve(evidenceDir, "godot-basic-info-sliders-end.png"), clip: windowClip });
+
+  const destinations = [
+    ["status", "status", 223, 32], ["option", "options", 260, 32],
+    ["items", "inventory", 223, 57], ["equip", "equipment", 260, 57],
+    ["skill", "skills", 223, 82], ["map", "map", 260, 82],
+    ["chat", "chat", 223, 107], ["friend", "party", 260, 107],
+  ];
+  const destinationFrames = new Set();
+  for (const [pageName, destination, x, y] of destinations) {
+    try {
+      await page.goto("?isolate=basic-info", { waitUntil: "commit", timeout: 15_000 });
+    } catch (error) {
+      if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+    }
+    await canvas.waitFor({ state: "visible" });
+    await expect.poll(() => state(page)).toMatchObject({ isolated_window: "basic-info", visible_window_ids: ["basic-info"] });
+    bounds = await canvas.boundingBox();
+    if (!bounds) throw new Error("Godot canvas lost geometry");
+    const pageTitleAuthority = await page.screenshot({ clip: canvasClip(bounds, 0, 0, 280, 18) });
+    const pageButtonBefore = await page.screenshot({ clip: canvasClip(bounds, x - 16, y - 10, 33, 20) });
+    await clickCanvas(page, bounds, x, y);
+    await expect.poll(async () => (await state(page)).windows["basic-info"].basic_info_state.active_page).toBe(pageName);
+    await expect.poll(async () => (await state(page)).visible_window_ids).toEqual(expect.arrayContaining(["basic-info", destination]));
+    expect((await page.screenshot({ clip: canvasClip(bounds, 0, 0, 280, 18) })).equals(pageTitleAuthority), `${pageName} changed Basic Info title pixels`).toBe(true);
+    const pageButtonAfter = await page.screenshot({ clip: canvasClip(bounds, x - 16, y - 10, 33, 20) });
+    expect(pageButtonAfter.equals(pageButtonBefore), `${pageName} had no settled visual feedback`).toBe(false);
+    destinationFrames.add(pageButtonAfter.toString("base64"));
+  }
+  expect(destinationFrames.size, "Basic Info page buttons did not retain independent visual ownership").toBe(8);
+
+  try {
+    await page.goto("?isolate=basic-info", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  await canvas.waitFor({ state: "visible" });
+  bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas lost geometry before minimize");
+  await clickCanvas(page, bounds, basic.x + 273, basic.y + 8);
+  await expect.poll(async () => (await state(page)).windows["basic-info"].minimized).toBe(true);
+  const minimized = (await state(page)).windows["basic-info"];
+  expect(minimized.size).toEqual([180, 18]);
+  expect(new Set(minimized.minimize_samples).size).toBeGreaterThan(4);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-basic-info-minimized-v2.png"), clip: canvasClip(bounds, 0, 0, 180, 18) });
+  await clickCanvas(page, bounds, 90, 9);
+  await expect.poll(async () => (await state(page)).windows["basic-info"].minimized).toBe(false);
+  await expect.poll(async () => (await state(page)).windows["basic-info"].size).toEqual([280, 120]);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-basic-info-restored-v2.png"), clip: windowClip });
 });
 
 test("Godot composes all independent windows over the original pink desktop", async ({ page }) => {
