@@ -1,0 +1,29 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "prompt_id": "80b0031c-744b-918c-a00b-884dff9d077c",
+  "charged_cost": "not-returned-by-provider",
+  "accepted_generated_candidate": null,
+  "candidate_verdicts": [
+    {
+      "file": "image-01.png",
+      "sha256": "358d5769acf48f26ff236cdcc41c650866c8bc8fbf55b8211b131c0f07be0e62",
+      "verdict": "rejected",
+      "reason": "The card was enlarged and recentered, violating source coordinates, scale, and exact identity constraints."
+    },
+    {
+      "file": "image-02.png",
+      "sha256": "ad783523409fc319308c6575299c7b4709082e4344ca1e0dd70747b72f49d4ed",
+      "verdict": "rejected",
+      "reason": "The card was enlarged and recentered, with a larger altered shadow, violating the immutable source geometry."
+    }
+  ],
+  "final_route": {
+    "kind": "source-locked-deterministic-alpha-finishing",
+    "source_asset": "prototype/public/assets/japanese-rpg-v001/card/components/art.png",
+    "script": "prototype/scripts/isolate-card-structural-assets.mjs",
+    "final_asset": "godot/assets/windows/japanese-rpg-v001/card/components/art-isolated-source-locked.png",
+    "final_sha256": "547df2e6055c5f37282a2b95092a4178056a829d2686c48f7354027bfbd1cc3f",
+    "note": "The Qwen pass proved semantic isolation but was not used as final RGB authority. Exact source pixels were retained and only alpha plus the empty flat panel were constructed deterministically."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "objective": "Isolate the exact Soldier Skeleton card illustration and its soft cast shadow as one independent raster animation layer. Remove the white illustration cell, bevel, title bar, Japanese copy, scrollbar, footer strip, icons, and every other UI pixel. This is source-component isolation, not a redraw or redesign.",
+  "reference_role": "Reference image 1 is the immutable 280 by 150 Card window and fixes the exact identity, scale, angle, palette, grain, eye symbol, and shadow of the card artwork. Reference image 2 is the current 82 by 96 source crop and provides a closer view of the same authority; its white panel and border are not part of the desired isolated object.",
+  "preservation_invariants": [
+    "Keep the exact brown card identity, eye artwork, existing perspective angle, source-scale dimensions, pixel density, texture, and lower-right shadow.",
+    "Do not rotate, straighten, enlarge, shrink, recrop, relight, sharpen, smooth, repaint, restyle, or reinterpret the card.",
+    "The card and shadow must remain together as one movable layer with no UI border or white rectangular donor attached."
+  ],
+  "canvas": [
+    "Return an 1120 by 600 canvas, exactly four times the 280 by 150 reference.",
+    "Place the isolated card and shadow at the same 4x coordinates occupied in Reference image 1.",
+    "Fill every pixel outside the isolated card and shadow with one perfectly flat saturated green chroma field #00FF00, with no texture, gradient, UI remnants, text, border, or extra object."
+  ],
+  "regions": [
+    {
+      "name": "card illustration and cast shadow",
+      "change": "Retain only the complete brown card illustration, eye symbol, and the soft gray shadow beneath and to its right. Replace its surrounding white cell and every other source element with the declared flat green chroma field.",
+      "preserve": [
+        "card identity and exact source pose",
+        "eye symbol",
+        "brown paper texture",
+        "complete soft cast shadow"
+      ]
+    }
+  ],
+  "exact_copy": [],
+  "style": [
+    "Exact source-matched late-1990s Japanese RPG raster artwork.",
+    "Hard source-scale object pixels with the original soft shadow; no contemporary illustration treatment."
+  ],
+  "asset_rules": [
+    "Exactly one source-identical card plus its shadow on a flat green chroma field.",
+    "No readable text, pseudo-text, window chrome, panel, scrollbar, button, item slot, border, white rectangle, or neighboring UI."
+  ],
+  "negative_constraints": [
+    "No new card, alternate eye, changed texture, corrected perspective, extra shadow, glow, outline, sticker edge, green spill, white halo, transparency checkerboard, or decorative background.",
+    "No full UI screenshot, no duplicated card, and no invented animation frame."
+  ],
+  "quality_checks": [
+    "At source scale the isolated card silhouette, eye, brown texture, and shadow align with Reference image 1.",
+    "The surrounding field is uniform #00FF00 and can be removed deterministically without a rectangular donor.",
+    "No UI line, title glyph, Japanese copy, scrollbar pixel, or footer icon remains."
+  ],
+  "output": {
+    "size": "1120*600",
+    "aspect_ratio": "source",
+    "resolution": "1K",
+    "count": 2,
+    "seed": 22083441
+  }
+}

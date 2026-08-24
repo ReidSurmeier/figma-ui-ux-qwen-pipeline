@@ -14,6 +14,10 @@ const sourceDesktop = resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/reference.png",
 );
+const sourceInventory = resolve(
+  projectRoot,
+  "benchmarks/japanese-rpg-options-v001/regions/inventory/reference.png",
+);
 const windowRegistry = JSON.parse(readFileSync(resolve(
   projectRoot,
   "benchmarks/japanese-rpg-options-v001/windows.json",
@@ -47,6 +51,16 @@ function canvasPoint(canvas, localX, localY) {
   };
 }
 
+function canvasClip(canvas, localX, localY, width, height) {
+  const point = canvasPoint(canvas, localX, localY);
+  return {
+    x: point.x,
+    y: point.y,
+    width: (width / 849) * canvas.width,
+    height: (height / 564) * canvas.height,
+  };
+}
+
 function imageMagick(command, args) {
   const result = spawnSync(command, args, { encoding: "utf8" });
   if (result.error) throw result.error;
@@ -62,6 +76,14 @@ async function clickCanvas(page, canvas, x, y) {
   await page.mouse.click(point.x, point.y);
 }
 
+async function settleRenderedFrames(page, count = 3) {
+  await page.evaluate(async (frameCount) => {
+    for (let index = 0; index < frameCount; index += 1) {
+      await new Promise(requestAnimationFrame);
+    }
+  }, count);
+}
+
 test.beforeEach(async ({ page }) => {
   // Godot replaces the initial document while bootstrapping the Web export.
   // Waiting for the browser's final `load` event makes that intentional frame
@@ -74,6 +96,424 @@ test.beforeEach(async ({ page }) => {
   }
   await page.locator("canvas").waitFor({ state: "visible" });
   await expect.poll(() => state(page)).toMatchObject({ ready: true });
+});
+
+test("isolated Options boots on the final Godot surface before desktop assembly", async ({ page }) => {
+  try {
+    await page.goto("?isolate=options", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    ready: true,
+    background: "#ff00fe",
+    isolated_window: "options",
+    visible_window_ids: ["options"],
+  });
+
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const sourcePinkPoint = canvasPoint(bounds, 300, 160);
+  const pixelPath = resolve(evidenceDir, "godot-options-isolated-source-pink.png");
+  await page.screenshot({
+    path: pixelPath,
+    clip: { x: sourcePinkPoint.x, y: sourcePinkPoint.y, width: 1, height: 1 },
+  });
+  expect(imageMagick("convert", [pixelPath, "-format", "%[hex:p{0,0}]", "info:"])).toBe("FF00FE");
+});
+
+test("isolated Chat owns its complete form state on the final Godot surface", async ({ page }) => {
+	// This is a state-filmstrip gate, not only a semantic state assertion. It
+	// catches the native-editor overflow that previously covered the Room row.
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=chat", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page)).toMatchObject({
+    isolated_window: "chat",
+    visible_window_ids: ["chat"],
+    windows: {
+      chat: {
+        chat_form: {
+          topic: "",
+          room: "チャット・ルーム",
+          privacy: "公開",
+          room_menu_open: false,
+          feedback: "",
+        },
+      },
+    },
+  });
+
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const chat = { x: 285, y: 279 };
+  const windowClip = canvasClip(bounds, chat.x, chat.y, 280, 120);
+  const titleClip = canvasClip(bounds, chat.x, chat.y, 280, 18);
+  const topicClip = canvasClip(bounds, chat.x + 44, chat.y + 26, 232, 19);
+  const privacyClip = canvasClip(bounds, chat.x + 40, chat.y + 65, 61, 20);
+  const initialWindow = await page.screenshot({
+    path: resolve(evidenceDir, "godot-chat-idle.png"),
+    clip: windowClip,
+  });
+  const initialTitle = await page.screenshot({ clip: titleClip });
+  const initialTopic = await page.screenshot({ clip: topicClip });
+  const initialPrivacy = await page.screenshot({ clip: privacyClip });
+
+  await clickCanvas(page, bounds, chat.x + 100, chat.y + 35);
+  await expect(page.locator("#godot-chat-topic")).toBeFocused({ timeout: 3_000 });
+  await page.keyboard.insertText("内部テスト");
+  await expect(page.locator("#godot-chat-topic")).toHaveValue("内部テスト");
+  await expect.poll(async () => (await state(page)).windows.chat.chat_form.topic, { timeout: 5_000 }).toBe("内部テスト");
+  const typedTopic = await page.screenshot({
+    path: resolve(evidenceDir, "godot-chat-typed.png"),
+    clip: topicClip,
+  });
+  expect(typedTopic.equals(initialTopic), "Japanese topic text did not visibly change its source field").toBe(false);
+  expect((await page.screenshot({ clip: titleClip })).equals(initialTitle), "topic entry changed Chat title pixels").toBe(true);
+
+  await clickCanvas(page, bounds, chat.x + 225, chat.y + 55);
+  await expect.poll(async () => (await state(page)).windows.chat.chat_form.room_menu_open, { timeout: 3_000 }).toBe(true);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-chat-room-menu.png"), clip: windowClip });
+  await clickCanvas(page, bounds, chat.x + 220, chat.y + 91);
+  await expect.poll(async () => (await state(page)).windows.chat.chat_form.room).toBe("パーティー");
+
+  await clickCanvas(page, bounds, chat.x + 90, chat.y + 75);
+  await expect.poll(async () => (await state(page)).windows.chat.chat_form.privacy).toBe("非公開");
+  const privateState = await page.screenshot({
+    path: resolve(evidenceDir, "godot-chat-private.png"),
+    clip: privacyClip,
+  });
+  expect(privateState.equals(initialPrivacy), "privacy ownership changed semantically but not visually").toBe(false);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-chat-settled.png"), clip: windowClip });
+  await clickCanvas(page, bounds, chat.x + 211, chat.y + 108);
+  await expect.poll(async () => (await state(page)).windows.chat.chat_form.feedback)
+    .toBe("非公開 パーティー「内部テスト」を作成しました");
+
+  await clickCanvas(page, bounds, chat.x + 255, chat.y + 108);
+  await expect.poll(async () => (await state(page)).windows.chat.chat_form).toEqual({
+    topic: "",
+    room: "チャット・ルーム",
+    privacy: "公開",
+    room_menu_open: false,
+    feedback: "キャンセルしました",
+  });
+  const resetWindow = await page.screenshot({
+    path: resolve(evidenceDir, "godot-chat-reset.png"),
+    clip: windowClip,
+  });
+  expect(resetWindow.equals(initialWindow), "cancel did not restore the complete Chat visual state").toBe(true);
+});
+
+test("isolated Card animates, scrolls real copy, and restores exact pixels on final Godot", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=card", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page)).toMatchObject({
+    isolated_window: "card",
+    visible_window_ids: ["card"],
+    windows: {
+      card: {
+        card_state: { rotated: false, scroll: 0, slot_active: false },
+      },
+    },
+  });
+
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const card = { x: 285, y: 0 };
+  const windowClip = canvasClip(bounds, card.x, card.y, 280, 150);
+  const titleClip = canvasClip(bounds, card.x, card.y, 280, 18);
+  const artClip = canvasClip(bounds, card.x + 5, card.y + 18, 82, 96);
+  const copyClip = canvasClip(bounds, card.x + 90, card.y + 20, 155, 92);
+  const titleAuthority = await page.screenshot({ clip: titleClip });
+  const artAuthority = await page.screenshot({ clip: artClip });
+  const copyAuthority = await page.screenshot({ clip: copyClip });
+  await page.screenshot({ path: resolve(evidenceDir, "godot-card-idle.png"), clip: windowClip });
+
+  const dragStart = canvasPoint(bounds, card.x + 150, card.y + 9);
+  await page.mouse.move(dragStart.x, dragStart.y);
+  await page.mouse.down();
+  await page.mouse.move(dragStart.x + 10, dragStart.y + 10, { steps: 5 });
+  await page.mouse.up();
+  await expect.poll(async () => (await state(page)).windows.card.position).toEqual([295, 10]);
+  const movedStart = canvasPoint(bounds, card.x + 160, card.y + 19);
+  await page.mouse.move(movedStart.x, movedStart.y);
+  await page.mouse.down();
+  await page.mouse.move(movedStart.x - 10, movedStart.y - 10, { steps: 5 });
+  await page.mouse.up();
+  await expect.poll(async () => (await state(page)).windows.card.position).toEqual([285, 0]);
+  expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), "Card drag/restore changed title pixels").toBe(true);
+
+  await clickCanvas(page, bounds, card.x + 46, card.y + 66);
+  await expect.poll(async () => (await state(page)).windows.card.card_state.rotated).toBe(true);
+  expect((await page.screenshot({ clip: artClip })).equals(artAuthority), "Card art did not visibly animate").toBe(false);
+  expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), "Card animation changed title pixels").toBe(true);
+  expect((await page.screenshot({ clip: copyClip })).equals(copyAuthority), "Card animation changed copy pixels").toBe(true);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-card-rotated.png"), clip: windowClip });
+  await clickCanvas(page, bounds, card.x + 46, card.y + 66);
+  await expect.poll(async () => (await state(page)).windows.card.card_state.rotated).toBe(false);
+  expect((await page.screenshot({ clip: artClip })).equals(artAuthority), "Card art did not restore exactly").toBe(true);
+
+  const copyStates = new Set();
+  for (let step = 1; step < 10; step += 1) {
+    await clickCanvas(page, bounds, card.x + 262, card.y + 34 + 79 * (step / 10));
+    copyStates.add((await page.screenshot({ clip: copyClip })).toString("base64"));
+    expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `Card scroll step ${step} entered title`).toBe(true);
+    expect((await page.screenshot({ clip: artClip })).equals(artAuthority), `Card scroll step ${step} changed art`).toBe(true);
+    if (step === 5) await page.screenshot({ path: resolve(evidenceDir, "godot-card-scroll-mid.png"), clip: windowClip });
+  }
+  expect(copyStates.size, "Card scroll exposed four or fewer copy states").toBeGreaterThan(4);
+
+  await clickCanvas(page, bounds, card.x + 150, card.y + 134);
+  await expect.poll(async () => (await state(page)).windows.card.card_state).toMatchObject({ scroll: 70, slot_active: true });
+  await page.screenshot({ path: resolve(evidenceDir, "godot-card-slot-active.png"), clip: windowClip });
+  await clickCanvas(page, bounds, card.x + 150, card.y + 134);
+  await expect.poll(async () => (await state(page)).windows.card.card_state).toMatchObject({ scroll: 30, slot_active: false });
+  await clickCanvas(page, bounds, card.x + 272, card.y + 9);
+  await expect.poll(async () => (await state(page)).windows.card.visible).toBe(false);
+  await expect.poll(async () => (await state(page)).visible_window_ids).toEqual([]);
+});
+
+test("isolated Skills exposes both clipped pages and every real control on final Godot", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=skills", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    isolated_window: "skills",
+    visible_window_ids: ["skills"],
+    windows: {
+      skills: {
+        skills_state: { scroll: 34, selected_index: 0, leveled_indices: [], feedback: "" },
+      },
+    },
+  });
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const skills = { x: 568, y: 0 };
+  const windowClip = canvasClip(bounds, skills.x, skills.y, 281, 184);
+  const titleClip = canvasClip(bounds, skills.x, skills.y, 281, 18);
+  const listClip = canvasClip(bounds, skills.x + 2, skills.y + 18, 261, 144);
+  const footerClip = canvasClip(bounds, skills.x, skills.y + 162, 281, 22);
+  const titleAuthority = await page.screenshot({ clip: titleClip });
+  const footerAuthority = await page.screenshot({ clip: footerClip });
+  const listStates = new Set();
+  await page.screenshot({ path: resolve(evidenceDir, "godot-skills-idle.png"), clip: windowClip });
+
+  for (let step = 1; step < 10; step += 1) {
+    await clickCanvas(page, bounds, skills.x + 271, skills.y + 18 + 143 * (step / 10));
+    listStates.add((await page.screenshot({ clip: listClip })).toString("base64"));
+    expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `Skills scroll ${step} entered title`).toBe(true);
+    expect((await page.screenshot({ clip: footerClip })).equals(footerAuthority), `Skills scroll ${step} entered footer`).toBe(true);
+    if (step === 5) await page.screenshot({ path: resolve(evidenceDir, "godot-skills-scroll-mid.png"), clip: windowClip });
+  }
+  expect(listStates.size, "Skills exposed four or fewer list states").toBeGreaterThan(4);
+
+  const names = ["ディバインプロテクション", "ワープポータル", "ニューマ", "ヒール", "エンジェラス", "ブレッシング", "速度増加", "ルアフ"];
+  for (const pageStart of [0, 4]) {
+    const targetScroll = pageStart === 0 ? 34 : 100;
+    const scrollY = skills.y + 18 + 143 * (targetScroll / 100);
+    await clickCanvas(page, bounds, skills.x + 271, scrollY);
+    await expect.poll(async () => (await state(page)).windows.skills.skills_state.scroll).toBe(targetScroll);
+    for (let visibleRow = 0; visibleRow < 4; visibleRow += 1) {
+      const index = pageStart + visibleRow;
+      const rowY = skills.y + 18 + visibleRow * 36 + 18;
+      await clickCanvas(page, bounds, skills.x + 190, rowY);
+      await expect.poll(async () => (await state(page)).windows.skills.skills_state.selected_index).toBe(index);
+      await clickCanvas(page, bounds, skills.x + 89, rowY);
+      await expect.poll(async () => (await state(page)).windows.skills.skills_state.leveled_indices).toContain(index);
+      await clickCanvas(page, bounds, skills.x + 89, rowY);
+      await expect.poll(async () => (await state(page)).windows.skills.skills_state.leveled_indices).not.toContain(index);
+    }
+  }
+  await page.screenshot({ path: resolve(evidenceDir, "godot-skills-page-two.png"), clip: windowClip });
+  await clickCanvas(page, bounds, skills.x + 196, skills.y + 174);
+  await expect.poll(async () => (await state(page)).windows.skills.skills_state.feedback).toBe(`use ${names[7]}`);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-skills-use.png"), clip: windowClip });
+  expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), "Skills actions changed title pixels").toBe(true);
+  expect((await page.screenshot({ clip: footerClip })).equals(footerAuthority), "Skills actions changed footer pixels").toBe(false);
+  await clickCanvas(page, bounds, skills.x + 241, skills.y + 174);
+  await expect.poll(async () => (await state(page)).windows.skills.visible).toBe(false);
+});
+
+test("isolated Status changes only local values and uses its generated minimize endpoint", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=status", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    isolated_window: "status",
+    visible_window_ids: ["status"],
+    windows: { status: { status_state: { values: [1, 1, 1, 0, 1, 1] } } },
+  });
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const statusWindow = { x: 0, y: 120 };
+  const windowClip = canvasClip(bounds, statusWindow.x, statusWindow.y, 280, 126);
+  const rows = [0, 1, 2, 4, 5];
+  await settleRenderedFrames(page);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-status-idle.png"), clip: windowClip });
+  const rowAuthorities = new Map();
+  for (const row of rows) {
+    const authority = await page.screenshot({ clip: canvasClip(bounds, statusWindow.x + 20, statusWindow.y + 18 + row * 18, 258, 18) });
+    rowAuthorities.set(row, authority);
+    writeFileSync(resolve(evidenceDir, `godot-status-row-${row}-authority.png`), authority);
+  }
+  for (const row of rows) {
+    const labelClip = canvasClip(bounds, statusWindow.x + 20, statusWindow.y + 18 + row * 18, 30, 18);
+    const valueClip = canvasClip(bounds, statusWindow.x + 50, statusWindow.y + 18 + row * 18, 52, 18);
+    const derivedClip = canvasClip(bounds, statusWindow.x + 102, statusWindow.y + 18 + row * 18, 176, 18);
+    const labelBefore = await page.screenshot({ clip: labelClip });
+    const valueBefore = await page.screenshot({ clip: valueClip });
+    const derivedBefore = await page.screenshot({ clip: derivedClip });
+    await clickCanvas(page, bounds, statusWindow.x + 96, statusWindow.y + 26 + row * 18);
+    await expect.poll(async () => (await state(page)).windows.status.status_state.values[row]).toBe(2);
+    await settleRenderedFrames(page);
+    expect((await page.screenshot({ clip: labelClip })).equals(labelBefore), `Status row ${row} changed its label`).toBe(true);
+    expect((await page.screenshot({ clip: valueClip })).equals(valueBefore), `Status row ${row} did not visibly change its value`).toBe(false);
+    expect((await page.screenshot({ clip: derivedClip })).equals(derivedBefore), `Status row ${row} changed its derived value`).toBe(true);
+    for (const other of rows.filter((candidate) => candidate !== row)) {
+      const otherClip = canvasClip(bounds, statusWindow.x + 20, statusWindow.y + 18 + other * 18, 258, 18);
+      if ((await state(page)).windows.status.status_state.values[other] === 1) {
+        const otherAfter = await page.screenshot({ clip: otherClip });
+        if (!otherAfter.equals(rowAuthorities.get(other))) {
+          const afterPath = resolve(evidenceDir, `godot-status-row-${other}-after-row-${row}.png`);
+          writeFileSync(afterPath, otherAfter);
+          const errorPixels = Number(imageMagick("compare", [
+            "-metric", "AE",
+            resolve(evidenceDir, `godot-status-row-${other}-authority.png`),
+            afterPath,
+            "null:",
+          ]).match(/\d+/)?.[0]);
+          expect(errorPixels, `Status row ${row} visibly changed row ${other}`).toBeLessThanOrEqual(4);
+        }
+      }
+    }
+  }
+  await page.screenshot({ path: resolve(evidenceDir, "godot-status-incremented.png"), clip: windowClip });
+
+  await clickCanvas(page, bounds, statusWindow.x + 258, statusWindow.y + 9);
+  await expect.poll(async () => (await state(page)).windows.status.minimized).toBe(true);
+  const minimizedState = (await state(page)).windows.status;
+  expect(minimizedState.size).toEqual([180, 18]);
+  expect(new Set(minimizedState.minimize_samples).size).toBeGreaterThan(4);
+  await page.screenshot({
+    path: resolve(evidenceDir, "godot-status-minimized.png"),
+    clip: canvasClip(bounds, statusWindow.x, statusWindow.y, 180, 18),
+  });
+  await clickCanvas(page, bounds, statusWindow.x + 90, statusWindow.y + 9);
+  await expect.poll(async () => (await state(page)).windows.status.minimized).toBe(false);
+  await expect.poll(async () => (await state(page)).windows.status.size).toEqual([280, 126]);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-status-restored.png"), clip: windowClip });
+  await clickCanvas(page, bounds, statusWindow.x + 272, statusWindow.y + 9);
+  await expect.poll(async () => (await state(page)).windows.status.visible).toBe(false);
+});
+
+test("isolated Inventory clips every scroll state, owns categories, and restores its generated endpoint", async ({ page }) => {
+  mkdirSync(evidenceDir, { recursive: true });
+  try {
+    await page.goto("?isolate=inventory", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
+  const canvas = page.locator("canvas");
+  await canvas.waitFor({ state: "visible" });
+  await expect.poll(() => state(page), { timeout: 5_000 }).toMatchObject({
+    isolated_window: "inventory",
+    visible_window_ids: ["inventory"],
+    windows: {
+      inventory: {
+        inventory_state: {
+          category: "item",
+          visible_cells: 21,
+          selected_cells: { item: -1, equip: -1, etc: -1 },
+          scroll: 0,
+        },
+      },
+    },
+  });
+
+  const bounds = await canvas.boundingBox();
+  if (!bounds) throw new Error("Godot canvas has no geometry");
+  const inventory = { x: 0, y: 247 };
+  const windowClip = canvasClip(bounds, inventory.x, inventory.y, 280, 137);
+  const titleClip = canvasClip(bounds, inventory.x, inventory.y, 263, 18);
+  const bodyClip = canvasClip(bounds, inventory.x + 36, inventory.y + 18, 227, 103);
+  const scrollbarClip = canvasClip(bounds, inventory.x + 263, inventory.y + 18, 17, 101);
+  const idlePath = resolve(evidenceDir, "godot-inventory-idle.png");
+  const idle = await page.screenshot({ path: idlePath, clip: windowClip });
+  expect(Number(imageMagick("compare", ["-metric", "MAE", sourceInventory, idlePath, "null:"]).match(/\(([^)]+)\)/)?.[1] ?? "0"))
+    .toBeLessThanOrEqual(0.01);
+  const titleAuthority = await page.screenshot({ clip: titleClip });
+
+  const categoryStates = new Set();
+  for (const [category, y, count] of [["equip", 70, 14], ["etc", 105, 7], ["item", 35, 21]]) {
+    await clickCanvas(page, bounds, inventory.x + 19, inventory.y + y);
+    await expect.poll(async () => (await state(page)).windows.inventory.inventory_state)
+      .toMatchObject({ category, visible_cells: count });
+    expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `${category} tab changed Inventory title pixels`).toBe(true);
+    const categoryFrame = await page.screenshot({
+      path: resolve(evidenceDir, `godot-inventory-${category}.png`),
+      clip: windowClip,
+    });
+    categoryStates.add(categoryFrame.toString("base64"));
+  }
+  expect(categoryStates.size, "Inventory categories did not own three visually distinct settled states").toBe(3);
+
+  await clickCanvas(page, bounds, inventory.x + 53, inventory.y + 36);
+  await expect.poll(async () => (await state(page)).windows.inventory.inventory_state.selected_cells.item).toBe(0);
+  await clickCanvas(page, bounds, inventory.x + 87, inventory.y + 36);
+  await expect.poll(async () => (await state(page)).windows.inventory.inventory_state.selected_cells.item).toBe(1);
+  await expect.poll(async () => (await state(page)).windows.inventory.inventory_state.selected_visible_indices).toEqual([1]);
+
+  const bodyStates = new Set();
+  const scrollbarStates = new Set();
+  for (let step = 1; step < 10; step += 1) {
+    await clickCanvas(page, bounds, inventory.x + 271, inventory.y + 18 + 101 * (step / 10));
+    const inventoryState = (await state(page)).windows.inventory.inventory_state;
+    bodyStates.add((await page.screenshot({ clip: bodyClip })).toString("base64"));
+    scrollbarStates.add((await page.screenshot({ clip: scrollbarClip })).toString("base64"));
+    expect((await page.screenshot({ clip: titleClip })).equals(titleAuthority), `Inventory scroll ${inventoryState.scroll} leaked into the title`).toBe(true);
+  }
+  expect(bodyStates.size, "Inventory exposed four or fewer body states").toBeGreaterThan(4);
+  expect(scrollbarStates.size, "Inventory thumb exposed four or fewer positions").toBeGreaterThan(4);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-inventory-scroll-end.png"), clip: windowClip });
+
+  await clickCanvas(page, bounds, inventory.x + 258, inventory.y + 9);
+  await expect.poll(async () => (await state(page)).windows.inventory.minimized).toBe(true);
+  const minimized = (await state(page)).windows.inventory;
+  expect(minimized.size).toEqual([180, 18]);
+  expect(new Set(minimized.minimize_samples).size).toBeGreaterThan(4);
+  await page.screenshot({
+    path: resolve(evidenceDir, "godot-inventory-minimized.png"),
+    clip: canvasClip(bounds, inventory.x, inventory.y, 180, 18),
+  });
+  await clickCanvas(page, bounds, inventory.x + 90, inventory.y + 9);
+  await expect.poll(async () => (await state(page)).windows.inventory.minimized).toBe(false);
+  await expect.poll(async () => (await state(page)).windows.inventory.size).toEqual([280, 137]);
+  await page.screenshot({ path: resolve(evidenceDir, "godot-inventory-restored.png"), clip: windowClip });
+  await clickCanvas(page, bounds, inventory.x + 272, inventory.y + 9);
+  await expect.poll(async () => (await state(page)).windows.inventory.visible).toBe(false);
 });
 
 test("Godot composes all independent windows over the original pink desktop", async ({ page }) => {

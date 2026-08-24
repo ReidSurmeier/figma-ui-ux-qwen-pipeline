@@ -1,0 +1,29 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nIsolate the exact Soldier Skeleton card illustration and its soft cast shadow as one independent raster animation layer. Remove the white illustration cell, bevel, title bar, Japanese copy, scrollbar, footer strip, icons, and every other UI pixel. This is source-component isolation, not a redraw or redesign.\n\n[REFERENCE ROLE]\nReference image 1 is the immutable 280 by 150 Card window and fixes the exact identity, scale, angle, palette, grain, eye symbol, and shadow of the card artwork. Reference image 2 is the current 82 by 96 source crop and provides a closer view of the same authority; its white panel and border are not part of the desired isolated object.\n\n[PRESERVATION INVARIANTS]\n- Keep the exact brown card identity, eye artwork, existing perspective angle, source-scale dimensions, pixel density, texture, and lower-right shadow.\n- Do not rotate, straighten, enlarge, shrink, recrop, relight, sharpen, smooth, repaint, restyle, or reinterpret the card.\n- The card and shadow must remain together as one movable layer with no UI border or white rectangular donor attached.\n\n[CANVAS AND LAYOUT]\n- Return an 1120 by 600 canvas, exactly four times the 280 by 150 reference.\n- Place the isolated card and shadow at the same 4x coordinates occupied in Reference image 1.\n- Fill every pixel outside the isolated card and shadow with one perfectly flat saturated green chroma field #00FF00, with no texture, gradient, UI remnants, text, border, or extra object.\n\n[REGION EDITS]\n- REGION: card illustration and cast shadow\n  CHANGE: Retain only the complete brown card illustration, eye symbol, and the soft gray shadow beneath and to its right. Replace its surrounding white cell and every other source element with the declared flat green chroma field.\n  PRESERVE: card identity and exact source pose; eye symbol; brown paper texture; complete soft cast shadow\n\n[STYLE SYSTEM]\n- Exact source-matched late-1990s Japanese RPG raster artwork.\n- Hard source-scale object pixels with the original soft shadow; no contemporary illustration treatment.\n\n[ASSET RULES]\n- Exactly one source-identical card plus its shadow on a flat green chroma field.\n- No readable text, pseudo-text, window chrome, panel, scrollbar, button, item slot, border, white rectangle, or neighboring UI.\n\n[NEGATIVE CONSTRAINTS]\n- No new card, alternate eye, changed texture, corrected perspective, extra shadow, glow, outline, sticker edge, green spill, white halo, transparency checkerboard, or decorative background.\n- No full UI screenshot, no duplicated card, and no invented animation frame.\n\n[QUALITY GATE]\n- At source scale the isolated card silhouette, eye, brown texture, and shadow align with Reference image 1.\n- The surrounding field is uniform #00FF00 and can be removed deterministically without a rectangular donor.\n- No UI line, title glyph, Japanese copy, scrollbar pixel, or footer icon remains."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 2,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083441,
+    "size": "1120*600",
+    "watermark": false
+  }
+}

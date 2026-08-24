@@ -114,7 +114,7 @@ func _build_hits() -> void:
 		var visual := _resolve_visual(control)
 		if visual != null:
 			hit_visuals[str(control.id)] = visual
-		if str(control.role) == "input" and control.has("visualComponent"):
+		if _is_range(control):
 			range_values[str(control.id)] = _initial_range_value(str(control.id))
 
 func _build_drag_surface() -> void:

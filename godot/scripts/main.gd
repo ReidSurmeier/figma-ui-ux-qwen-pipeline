@@ -1,31 +1,39 @@
 extends Control
 
 const VIEWPORT_SIZE := Vector2(849, 564)
+const SOURCE_PINK := Color("#ff00fe")
 const MANIFEST_PATH := "res://data/runtime-component-manifest.json"
-const BACKGROUND_PATH := "res://assets/windows/japanese-rpg-v001/desktop/background.png"
 
 var desktop_windows: Array = []
 var windows_by_id := {}
 var windows_layer: Control
 var options_window: Control
+var isolated_window_id := ""
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	isolated_window_id = _requested_isolated_window()
 	_build_background()
 	_build_windows()
+	_apply_isolation()
 	_publish_desktop_qa()
 
 func _build_background() -> void:
-	var background := TextureRect.new()
+	var background := ColorRect.new()
 	background.name = "DesktopBackground"
-	background.texture = load(BACKGROUND_PATH)
+	background.color = SOURCE_PINK
 	background.position = Vector2.ZERO
 	background.size = VIEWPORT_SIZE
-	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-	background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	background.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(background)
+
+func _requested_isolated_window() -> String:
+	if not OS.has_feature("web"):
+		return ""
+	return str(JavaScriptBridge.eval(
+		"new URLSearchParams(window.location.search).get('isolate') || ''",
+		true,
+	))
 
 func _build_windows() -> void:
 	windows_layer = Control.new()
@@ -42,7 +50,14 @@ func _build_windows() -> void:
 	var manifest: Dictionary = JSON.parse_string(file.get_as_text())
 	for definition in manifest.windows:
 		if str(definition.id) == "options": continue
-		var window := preload("res://scripts/source_window.gd").new()
+		var window: Control
+		match str(definition.id):
+			"chat": window = preload("res://scripts/chat_window.gd").new()
+			"card": window = preload("res://scripts/card_window.gd").new()
+			"skills": window = preload("res://scripts/skills_window.gd").new()
+			"status": window = preload("res://scripts/status_window.gd").new()
+			"inventory": window = preload("res://scripts/inventory_window.gd").new()
+			_: window = preload("res://scripts/source_window.gd").new()
 		window.configure(definition)
 		window.activated.connect(_activate_window)
 		window.state_changed.connect(_publish_desktop_qa)
@@ -57,6 +72,13 @@ func _build_windows() -> void:
 	windows_layer.add_child(options_window)
 	desktop_windows.append(options_window)
 	windows_by_id.options = options_window
+
+func _apply_isolation() -> void:
+	if isolated_window_id == "" or not windows_by_id.has(isolated_window_id):
+		isolated_window_id = ""
+		return
+	for window in desktop_windows:
+		window.visible = str(window.name) == isolated_window_id
 
 func _activate_window(window_id: String) -> void:
 	if not windows_by_id.has(window_id): return
@@ -73,10 +95,13 @@ func _navigate_to_window(window_id: String) -> void:
 
 func desktop_qa_state() -> Dictionary:
 	var window_states := {}
+	var visible_window_ids: Array[String] = []
 	var component_count := 0
 	var control_count := 0
 	var mapped_controls := 0
 	for window in desktop_windows:
+		if window.visible:
+			visible_window_ids.append(str(window.name))
 		if window == options_window:
 			var options_state: Dictionary = options_window._qa_state()
 			window_states.options = options_state
@@ -91,8 +116,9 @@ func desktop_qa_state() -> Dictionary:
 			mapped_controls += int(source_state.mapped_controls)
 	return {
 		"ready": desktop_windows.size() == 15,
-		"background": "qwen-image-3-pro",
-		"background_asset": BACKGROUND_PATH,
+		"background": "#ff00fe",
+		"isolated_window": isolated_window_id,
+		"visible_window_ids": visible_window_ids,
 		"window_count": desktop_windows.size(),
 		"window_ids": windows_by_id.keys(),
 		"component_count": component_count,
