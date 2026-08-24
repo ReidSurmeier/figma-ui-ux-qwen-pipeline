@@ -23,11 +23,11 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
   width: 849px;
   height: 564px;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(42, 59, 82, 0.96), rgba(17, 26, 40, 0.98)),
-    repeating-linear-gradient(0deg, transparent 0 15px, rgba(255,255,255,0.025) 15px 16px);
+  background: url("/assets/japanese-rpg-v001/desktop/background.png") 0 0 / 849px 564px no-repeat;
   image-rendering: pixelated;
 }
+
+.rpg-desktop--isolated { background: #111827; }
 
 .pixel-window {
   position: absolute;
@@ -147,12 +147,12 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .chat-source-privacy { top: 66px; width: 16px; height: 18px; margin: 0; }
 .chat-source-privacy--public { left: 43px; }
 .chat-source-privacy--private { left: 82px; }
-.chat-source-topic { left: 44px; top: 27px; box-sizing: border-box; width: 228px; height: 17px; padding: 1px 3px; border: 0; outline: 0; background: transparent; color: #173a61; font-family: DotGothic16, "WenQuanYi Zen Hei Mono", monospace; font-size: 9px; line-height: 15px; opacity: 1; }
-.chat-source-room-control { position: absolute; z-index: 10; left: 181px; top: 47px; width: 92px; height: 16px; }
-.chat-source-room-button { position: relative; width: 92px; height: 16px; padding: 0 15px 0 3px; border: 1px solid #aebccc; border-radius: 0; background: #fff; color: #173a61; font-family: DotGothic16, "WenQuanYi Zen Hei Mono", monospace; font-size: 9px; line-height: 14px; text-align: left; white-space: nowrap; }
-.chat-source-room-button::after { content: ""; position: absolute; right: 2px; top: 4px; border-top: 6px solid #6f96c8; border-right: 5px solid transparent; border-left: 5px solid transparent; }
+.chat-source-topic { left: 44px; top: 26px; box-sizing: border-box; width: 232px; height: 19px; padding: 2px 4px; border: 0; outline: 0; background: transparent; color: #173a61; font-family: DotGothic16, "WenQuanYi Zen Hei Mono", monospace; font-size: 9px; line-height: 15px; opacity: 1; }
+.chat-source-room-control { position: absolute; z-index: 10; left: 181px; top: 45px; width: 95px; height: 20px; }
+.chat-source-room-button { position: relative; width: 95px; height: 20px; padding: 0; border: 0; border-radius: 0; background: transparent; color: #173a61; font-family: DotGothic16, "WenQuanYi Zen Hei Mono", monospace; font-size: 9px; line-height: 18px; text-align: left; white-space: nowrap; }
+.chat-source-room-value { position: absolute; left: 4px; top: 1px; z-index: 2; padding-right: 15px; background: white; }
 .chat-source-room-button[aria-expanded="true"] { filter: brightness(0.88); }
-.chat-source-room-listbox { position: absolute; left: 0; top: 16px; z-index: 12; width: 102px; padding: 1px; border: 1px solid #70869e; background: #f7fbff; box-shadow: 1px 1px #49637d; }
+.chat-source-room-listbox { position: absolute; left: 0; top: 20px; z-index: 12; width: 102px; padding: 1px; border: 1px solid #70869e; background: #f7fbff; box-shadow: 1px 1px #49637d; }
 .chat-source-room-listbox button { display: block; width: 100%; height: 16px; padding: 0 3px; border: 0; background: transparent; color: #173a61; font-family: DotGothic16, "WenQuanYi Zen Hei Mono", monospace; font-size: 9px; line-height: 16px; text-align: left; }
 .chat-source-room-listbox button[aria-selected="true"], .chat-source-room-listbox button:hover, .chat-source-room-listbox button:focus { background: #78a9d7; color: #fff; outline: 0; }
 .chat-source-private { left: 72px; top: 67px; width: 62px; height: 16px; }
@@ -180,9 +180,9 @@ html, body { width: 100%; min-width: 849px; height: 100%; min-height: 564px; mar
 .party-source-external-actions { position: absolute; left: 738px; top: 350px; width: 41px; height: 66px; }
 .party-source-action { position: absolute; z-index: 5; left: 0; width: 41px; height: 20px; padding: 0; border: 0; background: transparent; }
 .party-source-action[aria-pressed="true"] .source-raster { filter: brightness(0.7); }
-.party-source-tool { position: absolute; z-index: 5; top: 115px; width: 29px; height: 20px; padding: 0; border: 0; background: transparent; }
+.party-source-tool { position: absolute; z-index: 5; top: 116px; width: 29px; height: 20px; padding: 0; border: 0; background: transparent; }
 .party-source-tool[aria-pressed="true"] { outline: 1px solid #5989b3; outline-offset: -1px; filter: brightness(0.78); }
-.party-source-tab { position: absolute; z-index: 5; top: 135px; height: 20px; padding: 0; border: 0; background: transparent; }
+.party-source-tab { position: absolute; z-index: 5; top: 136px; height: 20px; padding: 0; border: 0; background: transparent; }
 .party-source-tab { pointer-events: auto; }
 .party-source-tab--friends { left: 3px; width: 76px; }
 .party-source-tab--party { left: 80px; width: 77px; }

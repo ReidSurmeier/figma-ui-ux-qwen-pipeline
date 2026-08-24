@@ -11,7 +11,7 @@ async function activateWindow(window: Locator) {
 }
 
 test("Chat visibly edits Japanese topic and submits one application-owned form without invented tabs", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=chat");
   const chat = page.getByRole("region", { name: "チャットルーム" });
   await activateWindow(chat);
   await expect(chat.getByRole("tab")).toHaveCount(0);
@@ -31,7 +31,7 @@ test("Chat visibly edits Japanese topic and submits one application-owned form w
   expect((await page.screenshot({ clip: topicClip })).equals(topicIdle), "typed Japanese topic remained invisible").toBe(false);
 
   const room = chat.getByRole("combobox", { name: "ルーム" });
-  await expect(room).toHaveAttribute("data-visual-component", "chat-room");
+  await expect(room.locator('[data-component-id="chat-room-select"]')).toBeVisible();
   await room.click();
   const listbox = chat.getByRole("listbox", { name: "ルーム" });
   await expect(listbox.getByRole("option")).toHaveCount(2);
@@ -50,7 +50,7 @@ test("Chat visibly edits Japanese topic and submits one application-owned form w
 });
 
 test("Chat cancel restores the complete default form instead of only clearing topic", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=chat");
   const chat = page.getByRole("region", { name: "チャットルーム" });
   const topic = chat.getByRole("textbox", { name: "トピック" });
   const room = chat.getByRole("combobox", { name: "ルーム" });

@@ -168,7 +168,9 @@ transparent_component chat close 13 18
 crop chat topic-label 3 26 41 19
 crop chat topic-field 44 26 232 19
 crop chat people 3 45 133 20
-crop chat room 136 45 140 20
+rm -f "$OUTPUT/chat/components/room.png"
+crop chat room-label 136 45 45 20
+crop chat room-select 181 45 95 20
 crop chat security 3 65 131 20
 crop chat password 135 65 141 20
 # The source depicts 公開 selected and 非公開 unselected. Keep the Japanese
@@ -209,20 +211,78 @@ transparent_component game-menu minimize 14 18
 transparent_component game-menu close 13 18
 for row in 0 1 2 3; do crop game-menu "action-$row" 0 "$((29 + row * 25))" 193 22; done
 
-plate party 210 154
-convert "$OUTPUT/party/clean-plate.png" -alpha set -channel A -fx 'i>=160?0:a' "$WORK_DIR/party-alpha.png"
-mv "$WORK_DIR/party-alpha.png" "$OUTPUT/party/clean-plate.png"
-crop party title-icon 3 39 13 13
-crop party title-text 16 39 125 13
+# Keep every source-visible Game Menu pixel exact. Qwen owns only the pixels
+# hidden by the overlapping Skills window, the magenta desktop holes, and the
+# semantic action footprints beneath their independent rasters.
+cp "$OUTPUT/game-menu/clean-plate.png" "$WORK_DIR/game-menu-qwen-donor.png"
+cp "$REGIONS/game-menu/reference.png" "$WORK_DIR/game-menu-source.png"
+convert "$WORK_DIR/game-menu-source.png" -alpha off \
+  -fx '((j<2)||((r>0.45)&&(b>0.45)&&(g<0.95)&&(r-g)>0.04&&(b-g)>0.04))?1:0' "$WORK_DIR/game-menu-hidden-mask.png"
+convert "$WORK_DIR/game-menu-qwen-donor.png" "$WORK_DIR/game-menu-hidden-mask.png" -alpha off -compose CopyOpacity -composite "$WORK_DIR/game-menu-hidden-patch.png"
+composite "$WORK_DIR/game-menu-hidden-patch.png" "$WORK_DIR/game-menu-source.png" "$WORK_DIR/game-menu-owned-00.png"
+game_menu_index=0
+for row in 0 1 2 3; do
+  next=$((game_menu_index + 1))
+  component="$OUTPUT/game-menu/components/action-$row.png"
+  convert "$component" -alpha extract "$WORK_DIR/game-menu-mask-$next.png"
+  convert "$WORK_DIR/game-menu-qwen-donor.png" -crop "193x22+0+$((29 + row * 25))" +repage "$WORK_DIR/game-menu-donor-$next.png"
+  convert "$WORK_DIR/game-menu-donor-$next.png" "$WORK_DIR/game-menu-mask-$next.png" -alpha off -compose CopyOpacity -composite "$WORK_DIR/game-menu-patch-$next.png"
+  composite -geometry "+0+$((29 + row * 25))" "$WORK_DIR/game-menu-patch-$next.png" "$WORK_DIR/game-menu-owned-$(printf '%02d' "$game_menu_index").png" "$WORK_DIR/game-menu-owned-$(printf '%02d' "$next").png"
+  game_menu_index=$next
+done
+convert "$WORK_DIR/game-menu-owned-$(printf '%02d' "$game_menu_index").png" -alpha set -channel A \
+  -fx '((((j<1||j>=h-1)&&(i<5||i>=w-5))||((j<2||j>=h-2)&&(i<4||i>=w-4))||((j<4||j>=h-4)&&(i<2||i>=w-2))||((j<6||j>=h-6)&&(i<1||i>=w-1)))||((r>0.35)&&(b>0.35)&&(g<0.48)&&(r-g)>0.12&&(b-g)>0.12))?0:a' "$OUTPUT/game-menu/clean-plate.png"
+
+plate party 160 175
+crop party title-icon 3 5 13 13
+crop party title-text 16 5 125 13
 transparent_component party minimize 14 18
-crop party close 143 38 13 15
-crop party summary 3 54 154 19
-for row in 0 1 2 3 4; do crop party "member-$row" 3 "$((54 + row * 19))" 154 19; done
+crop party close 143 4 13 15
+crop party summary 3 20 154 19
+for row in 0 1 2 3 4; do crop party "member-$row" 3 "$((20 + row * 19))" 154 19; done
 for row in 0 1 2; do crop_full party "action-$row" 738 "$((350 + row * 23))" 41 20; done
 for file in "$OUTPUT/party/components"/action-*.png; do remove_magenta "$file"; done
-for column in 0 1 2 3 4; do crop party "tool-$column" "$((4 + column * 29))" 150 29 20; done
-crop party friends 3 170 76 20
-crop party party-tab 80 170 77 20
+for column in 0 1 2 3 4; do crop party "tool-$column" "$((4 + column * 29))" 116 29 20; done
+crop party friends 3 136 76 20
+crop party party-tab 80 136 77 20
+
+# Preserve the exact complete 160x175 Party shell and use the Qwen plate only
+# beneath independently owned foreground components.
+cp "$OUTPUT/party/clean-plate.png" "$WORK_DIR/party-qwen-donor.png"
+cp "$REGIONS/party/reference.png" "$WORK_DIR/party-source.png"
+party_index=0
+cp "$WORK_DIR/party-source.png" "$WORK_DIR/party-owned-00.png"
+party_donor() {
+  local component=$1 x=$2 y=$3
+  local file="$OUTPUT/party/components/$component.png"
+  local width height next
+  read -r width height < <(identify -format '%w %h\n' "$file")
+  next=$((party_index + 1))
+  convert "$WORK_DIR/party-qwen-donor.png" -crop "${width}x${height}+${x}+${y}" +repage "$WORK_DIR/party-donor-$next.png"
+  convert "$file" -alpha extract "$WORK_DIR/party-mask-$next.png"
+  convert "$WORK_DIR/party-donor-$next.png" "$WORK_DIR/party-mask-$next.png" -alpha off -compose CopyOpacity -composite "$WORK_DIR/party-patch-$next.png"
+  composite -geometry "+${x}+${y}" "$WORK_DIR/party-patch-$next.png" "$WORK_DIR/party-owned-$(printf '%02d' "$party_index").png" "$WORK_DIR/party-owned-$(printf '%02d' "$next").png"
+  party_index=$next
+}
+while read -r component x y; do party_donor "$component" "$x" "$y"; done <<'EOF'
+title-icon 3 5
+title-text 16 5
+close 143 4
+member-0 3 20
+member-1 3 39
+member-2 3 58
+member-3 3 77
+member-4 3 96
+tool-0 4 116
+tool-1 33 116
+tool-2 62 116
+tool-3 91 116
+tool-4 120 116
+friends 3 136
+party-tab 80 136
+EOF
+convert "$WORK_DIR/party-owned-$(printf '%02d' "$party_index").png" -alpha set -channel A \
+  -fx '((r>0.35)&&(b>0.35)&&(g<0.48)&&(r-g)>0.12&&(b-g)>0.12)?0:a' "$OUTPUT/party/clean-plate.png"
 
 mkdir -p "$OUTPUT/quickbar/components"
 convert -size 112x94 xc:none "$OUTPUT/quickbar/clean-plate.png"

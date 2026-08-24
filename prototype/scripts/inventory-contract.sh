@@ -11,7 +11,7 @@ RUNTIME_SOURCE="${PROTOTYPE_DIR}/src/InventorySourceWindow.tsx"
 [[ "$(identify -format '%wx%h' "${ASSET_ROOT}/clean-plate.png")" == "280x137" ]]
 [[ "$(identify -format '%wx%h' "${ASSET_ROOT}/minimized-plate.png")" == "180x18" ]]
 [[ "$(convert "${ASSET_ROOT}/clean-plate.png" -alpha extract -crop 1x1+0+0 -format '%[fx:mean]' info:)" == "0" ]]
-awk -v alpha="$(convert "${ASSET_ROOT}/clean-plate.png" -alpha extract -crop 1x1+140+0 -format '%[fx:mean]' info:)" 'BEGIN { exit !(alpha > 0.9) }'
+awk -v alpha="$(convert "${ASSET_ROOT}/clean-plate.png" -alpha extract -crop 1x1+140+6 -format '%[fx:mean]' info:)" 'BEGIN { exit !(alpha > 0.9) }'
 ! rg -q 'reference\.png|benchmarks/' "${RUNTIME_SOURCE}"
 rg -Fq 'japanese-status-derived-stats-v004/image-01.png' "${REPO_DIR}/scripts/assemble_japanese_inventory_assets.sh"
 rg -Fq 'japanese-status-clean-plate-v001/image-01.png' "${REPO_DIR}/scripts/assemble_japanese_inventory_assets.sh"

@@ -1,8 +1,8 @@
 extends Control
 
 const VIEWPORT_SIZE := Vector2(849, 564)
-const SOURCE_PINK := Color("#ff00fe")
 const MANIFEST_PATH := "res://data/runtime-component-manifest.json"
+const BACKGROUND_PATH := "res://assets/windows/japanese-rpg-v001/desktop/background.png"
 
 var desktop_windows: Array = []
 var windows_by_id := {}
@@ -16,11 +16,14 @@ func _ready() -> void:
 	_publish_desktop_qa()
 
 func _build_background() -> void:
-	var background := ColorRect.new()
+	var background := TextureRect.new()
 	background.name = "DesktopBackground"
-	background.color = SOURCE_PINK
+	background.texture = load(BACKGROUND_PATH)
 	background.position = Vector2.ZERO
 	background.size = VIEWPORT_SIZE
+	background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	background.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	background.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(background)
 
@@ -88,7 +91,8 @@ func desktop_qa_state() -> Dictionary:
 			mapped_controls += int(source_state.mapped_controls)
 	return {
 		"ready": desktop_windows.size() == 15,
-		"background": "#ff00fe",
+		"background": "qwen-image-3-pro",
+		"background_asset": BACKGROUND_PATH,
 		"window_count": desktop_windows.size(),
 		"window_ids": windows_by_id.keys(),
 		"component_count": component_count,

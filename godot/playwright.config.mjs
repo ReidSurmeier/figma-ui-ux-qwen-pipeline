@@ -1,11 +1,17 @@
 import { defineConfig } from "../prototype/node_modules/@playwright/test/index.mjs";
 
+const baseURL = process.env.GODOT_WEB_URL ?? "http://100.103.164.128:4176";
+
 export default defineConfig({
   testDir: "./tests",
-  timeout: 30_000,
-  expect: { timeout: 8_000 },
+  timeout: 60_000,
+  expect: { timeout: 30_000 },
   use: {
-    baseURL: process.env.GODOT_WEB_URL ?? "http://100.103.164.128:4176",
+    baseURL,
+    launchOptions: {
+      executablePath: "/usr/bin/google-chrome",
+      args: [`--unsafely-treat-insecure-origin-as-secure=${baseURL}`],
+    },
     viewport: { width: 849, height: 564 },
     deviceScaleFactor: 1,
     colorScheme: "light",

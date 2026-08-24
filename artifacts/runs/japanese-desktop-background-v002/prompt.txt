@@ -1,0 +1,35 @@
+[TASK]
+Generate a completely empty full-frame magenta pixel-texture background for a late-1990s Japanese PC RPG desktop. This is a new background asset, not a screenshot edit.
+
+[REFERENCE ROLE]
+No reference image is provided. The measured source palette is the authority: dominant #F507F5 with sparse one-pixel variation through #C845BD, #B233B3, and rare #FA9CFA highlights.
+
+[PRESERVATION INVARIANTS]
+- The entire canvas is one uninterrupted magenta field.
+- Keep source-scale hard pixel noise subtle and sparse.
+- The dominant color remains #F507F5 across at least ninety percent of the image.
+
+[CANVAS AND LAYOUT]
+- Fill the complete 3:2 canvas edge to edge.
+- No transparent pixels, margins, frames, objects, panels, silhouettes, or empty holes.
+
+[REGION EDITS]
+- REGION: continuous desktop field
+  CHANGE: Render only the measured magenta pixel field with extremely subtle source-scale color noise.
+  PRESERVE: uniform continuity; hard pixel scale; measured palette
+
+[STYLE SYSTEM]
+- Minimal flat neon-magenta late-1990s PC game desktop texture.
+- Almost solid #F507F5, sparse single-pixel chroma noise, no lighting or depth.
+
+[ASSET RULES]
+- Background texture only.
+- Zero text, pseudo-text, glyphs, icons, windows, controls, characters, bars, or recognizable objects.
+
+[NEGATIVE CONSTRAINTS]
+- No UI, screenshot, software window, game art, text, symbols, shapes, panels, borders, checkerboard, gradient, vignette, shadow, glow, blur, illustration, scenery, or subject.
+
+[QUALITY GATE]
+- The image contains no connected object or readable mark.
+- The complete frame is magenta and visually seamless.
+- Point reduction to 849 by 564 retains subtle pixel texture without banding.

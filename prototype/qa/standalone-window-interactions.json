@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "windows": [
+    { "id": "basic-info", "status": "pass", "evidence": ["prototype/e2e/basic-info.spec.ts"] },
+    { "id": "card", "status": "pass", "evidence": ["prototype/e2e/card-source.spec.ts"] },
+    { "id": "skills", "status": "pass", "evidence": ["prototype/e2e/skills-source.spec.ts"] },
+    { "id": "status", "status": "pass", "evidence": ["prototype/e2e/status-source.spec.ts", "prototype/e2e/runtime-manifest.spec.ts"] },
+    { "id": "inventory", "status": "pass", "evidence": ["prototype/e2e/inventory-source.spec.ts"] },
+    { "id": "equipment", "status": "pass", "evidence": ["prototype/e2e/equipment-source.spec.ts"] },
+    { "id": "options", "status": "pass", "evidence": ["prototype/e2e/options-window.spec.ts", "prototype/e2e/options-semantic.spec.ts"] },
+    { "id": "chat", "status": "pass", "evidence": ["prototype/e2e/chat-source.spec.ts"] },
+    { "id": "exchange", "status": "pass", "evidence": ["prototype/e2e/exchange-source.spec.ts"] },
+    { "id": "game-menu", "status": "pass", "evidence": ["prototype/e2e/game-menu-source.spec.ts"] },
+    { "id": "compact-info", "status": "pass", "evidence": ["no interactive controls in source authority"] },
+    { "id": "party", "status": "pass", "evidence": ["prototype/e2e/party-source.spec.ts"] },
+    { "id": "quickbar", "status": "pass", "evidence": ["prototype/e2e/quickbar-source.spec.ts"] },
+    { "id": "bottom-bar", "status": "pass", "evidence": ["prototype/e2e/bottom-bar-source.spec.ts"] },
+    { "id": "notification", "status": "pass", "evidence": ["no interactive controls in source authority"] }
+  ]
+}

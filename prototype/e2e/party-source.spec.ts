@@ -12,7 +12,7 @@ async function activateWindow(window: Locator) {
 }
 
 test("Every Party member is a reachable listbox option with exclusive reversible selection", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=party");
   const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
   await activateWindow(party);
   const listbox = party.getByRole("listbox", { name: "パーティーメンバー" });
@@ -34,7 +34,7 @@ test("Every Party member is a reachable listbox option with exclusive reversible
 });
 
 test("Party tools and source tabs transfer state and support keyboard traversal", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=party");
   const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
   for (let column = 0; column < 5; column += 1) {
     const tool = party.getByRole("button", { name: `パーティーツール ${column + 1}`, exact: true });
@@ -60,7 +60,7 @@ test("Party tools and source tabs transfer state and support keyboard traversal"
 });
 
 test("Party satellite actions stay fixed while Party moves and expose exact ownership", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=party");
   const party = page.getByRole("region", { name: "パーティー (Riri-Soft)" });
   const satellites = page.getByRole("group", { name: "パーティー外部操作" });
   await expect(satellites).toHaveAttribute("data-control-owner", "party");

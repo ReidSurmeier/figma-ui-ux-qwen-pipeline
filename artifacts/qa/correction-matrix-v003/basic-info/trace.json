@@ -4,24 +4,25 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787510080775",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787529564046",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787510080773",
-    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787510080773",
-    "http://10.255.255.254:4174/src/styles.css?t=1787510080775",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/styles.css?t=1787528810559",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
     "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
     "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787465313587",
     "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787468367758",
-    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787470702058",
+    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787527971154",
     "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787466360012",
     "http://10.255.255.254:4174/src/MapSourceWindow.tsx?t=1787465870814",
-    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787465870814",
+    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787527441898",
     "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787465870814",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/desktop/background.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
@@ -105,16 +106,21 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/side-tabs.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-4.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-4.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-5.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-5.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-icon.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-text.png",
@@ -171,11 +177,12 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-label.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-field.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/people.png",
-    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room-label.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/security.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-on.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-off.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/password.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room-select.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/ok.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/cancel.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/clean-plate.png",
@@ -364,9 +371,9 @@
       "label": "基本情報を最小化",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "9d34971478a449e36e3136e4f13ce49e3f61ebdec4dd64761376fbc77215aece",
-      "settledHash": "3f5989dd7f390a6a49fe75861ac5318ef76630f0ee691b59524ab473674bae2c",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "9797544eda4c5a2264561e88681ecd2631930838c5ac4292d88a416956bf65da",
+      "settledHash": "df5fb3310f550426eabbece7dca1ceb6a668b1fe738bcf6feb6db25f5a0ff345",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -381,7 +388,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -442,9 +449,9 @@
       "label": "HP",
       "tag": "input",
       "type": "range",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "settledHash": "74e611f61205ca887843e409752eb10ac9d15410f7e8286c20c64cccc62810ca",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "settledHash": "9e4bec9255bd8d6977f48c5928ee98ec86028898cba758a5612333894b1543c1",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -460,7 +467,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -522,9 +529,9 @@
       "label": "SP",
       "tag": "input",
       "type": "range",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "settledHash": "40267b2c382ed5347c6689bebf1e35c5111637964fae3a889a350872476b08b2",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "settledHash": "47d42d8d34bd8aa70e072de9f478bc96699ee21018c4d0dcfd43b390af141f11",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -540,7 +547,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -602,9 +609,9 @@
       "label": "status",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "95b60a7c555a297193b49429b40089eb743d2250bf82e08cf315d46ae3e3a117",
-      "settledHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "85143bd37255fa74c73ff8c501be73c61913a9cc8bc9bb44fdcf4c534abb59c0",
+      "settledHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
       "visualDown": true,
       "visualSettled": false,
       "stateChanged": false,
@@ -626,7 +633,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -688,9 +695,9 @@
       "label": "option",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "a6e0fe1e7a91f67bef4fc0fe773c72e4cfaf5138daccd0fd31331f78e0e95ab1",
-      "settledHash": "88362652e65b161fad2ee609a1782f0b8204f2cbfd2d39859314f8469edef634",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "ed3c6e4b7defaeecbd923cdd872d455bbe4265b63c6f3d77f8f865fb96060751",
+      "settledHash": "a24b2d92ec15897256b745a02f8f3e3a6a38b755c26e51a6c14a14ce749b243e",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -712,7 +719,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -774,9 +781,9 @@
       "label": "items",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "90ea97747a51f36433b99562bea6ea5570470eedb4d56faaede29ba9ea0c1164",
-      "settledHash": "2c5483ee63667e79995e890e27bb856ca52273480ae5c4e7ffab3d0059b18ce6",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "c78bc934508dcdffcff523a50c0df8d80f4854fdf419855b9de6a8bb0f71379a",
+      "settledHash": "fd5159506fbf3ba3d2331602e4b7c48aa3965420c476ffdd068e9f74714e431b",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -798,7 +805,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -860,9 +867,9 @@
       "label": "equip",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "0bb9a6d755e2e9c566f93c06a1e59c96df4fc599824ff8c19a4f2d54c70fe89f",
-      "settledHash": "08345d83a213c75d2f63843a9446dc9e6a908399262f1f0209bac5217608fa12",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "a0c214c782101338ce3a1b1d5e9eec04ee6597a29bfb3f8c5cda22fd01e17057",
+      "settledHash": "6c3d97b0b4fe877f19e6761a019ed17fdc0b83bb77f4ebe06691a622dc7442ce",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -884,7 +891,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -946,9 +953,9 @@
       "label": "skill",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "0a18896cebccfd1f4ed91b10d77b9663c8709b12de6fa4926dc173650887377f",
-      "settledHash": "77bd05e53011fb15755857c00374e7c592a4a171e7daeea458e773b17c3a32db",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "a8fa9d68bdfd95839d63558b26bda08eb5c10a4d74a880a8148fe9f20e588a37",
+      "settledHash": "28212caf9301bb81cede68f1b0726f27a9add492c6b054c5b3a695a5f6591daa",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -970,7 +977,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1032,9 +1039,9 @@
       "label": "map",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "a6ef89bea706338d4498e63569d77499293646a3255b89b2df56c012e17bebf4",
-      "settledHash": "bf7b55ff56adaa544885e5b4b6917c7e9b9a843a173e1ddd67ec7f39fae9484c",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "2ec9b69939005cde93e5fe21c9636fe2d9dc55567fa096e86034b390f14b14f8",
+      "settledHash": "2b9b8ed5b99240b64ccbc364b1484f0f6c628bb9e0d679b59acaef747f54b724",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1056,7 +1063,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1118,9 +1125,9 @@
       "label": "chat",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "82c0b32af53bd9a6b8d6abaee1b41cbb09dcc7285f828f9d0763fd51f1733588",
-      "settledHash": "ea42aa005f45b919f7dd556add77d227c871365c4649980e88772477b68239f6",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "3bb4553188f9c991ea94a09b51ddbba7420a7cf3caa1509a14740ef6433ca32f",
+      "settledHash": "54e937debbb2b4c8fa3cea04e87873f3360d8bc9f7ce41e3bad98cdc4dc97900",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1142,7 +1149,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1204,9 +1211,9 @@
       "label": "friend",
       "tag": "button",
       "type": "",
-      "idleHash": "63d123ed15d8adf63bad5f6a4a4fb2fd4b516a2503c419099b563841d52bf2c6",
-      "downHash": "d1570f3ad173ac1a88e9aa08f72b1128d16a780bdc9b9ceef2eea2f7cf7d497d",
-      "settledHash": "ea8badca7b9f46aa28b8fbb283cfb81db68a56ac5aa5f8f6d61e838e74822b0a",
+      "idleHash": "9bbfd557ae22b8b7c79e6e9075c5c38bb0d82555d781babafe1f0771aa1977d2",
+      "downHash": "7ff11c4eacfad9a33d1ad9ed92b2d2a5cc88b9e8a4621de064c478462eb63827",
+      "settledHash": "bb8c7648102a4c7b2518d005ec20a01b4853d0feca1fc2ea09c74f3ea97efed2",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1228,7 +1235,7 @@
         "test": {
           "file": "e2e/basic-info.spec.ts",
           "title": "every Basic Info page control declares and reaches its source-approved destination",
-          "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+          "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1345,18 +1352,6 @@
         120
       ],
       [
-        280,
-        120
-      ],
-      [
-        280,
-        120
-      ],
-      [
-        280,
-        120
-      ],
-      [
         272.3,
         112.1
       ],
@@ -1395,9 +1390,25 @@
       [
         203.1,
         41.5
+      ],
+      [
+        195.4,
+        33.7
+      ],
+      [
+        187.7,
+        25.8
+      ],
+      [
+        180,
+        18
+      ],
+      [
+        180,
+        18
       ]
     ],
-    "distinctGeometry": 11,
+    "distinctGeometry": 14,
     "gesture": "trusted Playwright pointer click",
     "titleAuthority": {
       "expanded": {
@@ -1508,7 +1519,7 @@
     {
       "script": "remaining-window-contract.sh",
       "status": 0,
-      "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+      "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
       "error": ""
     }
   ],
@@ -1525,14 +1536,64 @@
     "command": [
       "/home/reidsurmeier/figma-ui-ux-qwen-pipeline/prototype/node_modules/.bin/playwright",
       "test",
+      "e2e/bottom-bar-source.spec.ts",
       "e2e/basic-info.spec.ts",
+      "e2e/status-source.spec.ts",
+      "e2e/inventory-source.spec.ts",
+      "e2e/card-source.spec.ts",
+      "e2e/skills-source.spec.ts",
+      "e2e/equipment-source.spec.ts",
+      "e2e/chat-source.spec.ts",
+      "e2e/exchange-source.spec.ts",
+      "e2e/game-menu-source.spec.ts",
+      "e2e/party-source.spec.ts",
+      "e2e/quickbar-source.spec.ts",
+      "e2e/options-semantic.spec.ts",
       "--grep",
-      "(?:every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores)",
+      "(?:Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag|every Basic Info page control declares and reaches its source-approved destination|every Basic Info resource slider declares and drives its independent visual thumb|Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores|every source-visible Status increment owns its exact hitbox and changes only its local value field|status minimize uses a generated compact endpoint through complete motion and restores the full source geometry|status close removes the window and Basic Info restores the same independent destination|every Inventory category is a reachable tab with its complete selectable cell inventory|every reachable Inventory cell independently owns selection in all three categories|Inventory real scroll gestures keep one visual thumb and every sampled body state below the header|Inventory minimize uses a generated compact endpoint through complete motion and restores|Inventory close removes the window and Basic Info restores its exact componentized destination|Card art rotation is reversible and leaves title plus copy pixels invariant|Card real scroll gestures move copy and one visual thumb without entering title or art|Card slot controls the Card scroll state without changing title or art|Card close target removes exactly the Card window|Every Skills row and level control is pointer-reachable on its settled page and owns only its state|Skills real scroll gestures keep one thumb and the clipped list outside title and footer|Skills use acts on selection and both close controls support Basic Info recovery|Every Equipment row owns its exact source column and transfers exclusive selection|Equipment minimize uses its generated compact endpoint through complete motion and restores|Equipment close removes the window and Basic Info restores its complete destination|Bottom Bar previous and next controls are reversible and leave slider plus title invariant|Chat visibly edits Japanese topic and submits one application-owned form without invented tabs|Chat cancel restores the complete default form instead of only clearing topic|Every Exchange item owns its exact grid cell and transfers exclusive selection|Exchange confirm enables Trade and Trade or cancel restore a clean transaction|Every Game Menu action owns its source row, transfers selection, and toggles back to ready|Every Party member is a reachable listbox option with exclusive reversible selection|Party tools and source tabs transfer state and support keyboard traversal|Party satellite actions stay fixed while Party moves and expose exact ownership|Party close removes satellites and Basic Info friend restores the complete destination|Every Quickbar slot owns its exact raster and reverses independently to neutral|Options generated minimize and close complete their reversible desktop lifecycle|Options tabs own exact source strips and reverse to the original option panel|Options BGM controls own one continuous reversible row|Options Effect controls own one continuous reversible row|Options Skin is application-owned and keyboard reversible|Every Options footer checkbox changes only itself and restores cleanly)",
       "--reporter=json"
     ],
     "report": "artifacts/qa/correction-matrix-v003/semantic-contract-playwright.json"
   },
   "semanticContracts": [
+    {
+      "id": "bottom-bar-slider-real-drag-v001",
+      "windowId": "bottom-bar",
+      "controlLabels": [
+        "クイックスロット位置"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/bottom-bar-source.spec.ts",
+        "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          538,
+          600,
+          21
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
     {
       "id": "basic-info-destination-inventory-v001",
       "windowId": "basic-info",
@@ -1550,7 +1611,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info page control declares and reaches its source-approved destination",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1593,7 +1654,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1631,7 +1692,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1652,6 +1713,1535 @@
         "scope": [
           "The source-visible minimize control transitions to the separately generated compact endpoint and restores the complete window."
         ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "status-complete-increment-inventory-v001",
+      "windowId": "status",
+      "controlLabels": [
+        "Strを上げる",
+        "Agiを上げる",
+        "Vitを上げる",
+        "Dexを上げる",
+        "Lukを上げる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "status-generated-minimize-v001",
+      "windowId": "status",
+      "controlLabels": [
+        "ステータスを最小化"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores the complete Status window."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "status-close-and-reopen-v001",
+      "windowId": "status",
+      "controlLabels": [
+        "ステータスを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/status-source.spec.ts",
+        "title": "status close removes the window and Basic Info restores the same independent destination",
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          120,
+          280,
+          126
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-complete-tab-inventory-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "item",
+        "equip",
+        "etc"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-all-cell-selection-v001",
+      "windowId": "inventory",
+      "controlLabels": [],
+      "controlLabelPatterns": [
+        "^(?:item|equip|etc) item \\d+$"
+      ],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "every reachable Inventory cell independently owns selection in all three categories",
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          36,
+          266,
+          227,
+          102
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-real-scroll-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "所持品スクロール"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          36,
+          265,
+          244,
+          103
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-generated-minimize-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "所持アイテムを最小化"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores Inventory."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "inventory-close-and-reopen-v001",
+      "windowId": "inventory",
+      "controlLabels": [
+        "所持アイテムを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/inventory-source.spec.ts",
+        "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-reversible-art-rotation-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "カードを回転"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card art rotation is reversible and leaves title plus copy pixels invariant",
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The independent Card art can animate without crossing into the Japanese title or copy regions and restores exactly."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-real-scroll-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "カード情報スクロール"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card real scroll gestures move copy and one visual thumb without entering title or art",
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-slot-scroll-control-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "カードスロット"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card slot controls the Card scroll state without changing title or art",
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-themed Card slot controls two settled Card copy positions and exposes that relationship to interaction QA."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "card-close-v001",
+      "windowId": "card",
+      "controlLabels": [
+        "ソルジャースケルトンカードを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/card-source.spec.ts",
+        "title": "Card close target removes exactly the Card window",
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-every-row-selection-v001",
+      "windowId": "skills",
+      "controlLabelPatterns": [
+        "^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ) Lv (5|4|9|10|1)$"
+      ],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Every extracted Japanese skill row is selectable through a real pointer target after navigating to its settled clipped page."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-every-level-control-v001",
+      "windowId": "skills",
+      "controlLabelPatterns": [
+        "^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ)をレベルアップ$"
+      ],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each source-visible LV UP target independently toggles only its associated skill state and reports the Japanese skill name."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-real-scroll-v001",
+      "windowId": "skills",
+      "controlLabels": [
+        "スキルスクロール"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills real scroll gestures keep one thumb and the clipped list outside title and footer",
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-use-selected-row-v001",
+      "windowId": "skills",
+      "controlLabels": [
+        "use"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills use acts on selection and both close controls support Basic Info recovery",
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible use control acts on the currently selected Japanese skill and exposes settled feedback."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "skills-close-and-reopen-v001",
+      "windowId": "skills",
+      "controlLabels": [
+        "スキルリストを閉じる",
+        "close"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/skills-source.spec.ts",
+        "title": "Skills use acts on selection and both close controls support Basic Info recovery",
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "equipment-every-row-selection-v001",
+      "windowId": "equipment",
+      "controlLabelPatterns": [
+        "^(左|右)装備 [1-5]$"
+      ],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each extracted left and right Equipment row is independently selectable through its exact source column without claiming the avatar gap."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "equipment-generated-minimize-v001",
+      "windowId": "equipment",
+      "controlLabels": [
+        "装備アイテムを最小化"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact Equipment endpoint and restores exactly."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "equipment-close-and-reopen-v001",
+      "windowId": "equipment",
+      "controlLabels": [
+        "装備アイテムを閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/equipment-source.spec.ts",
+        "title": "Equipment close removes the window and Basic Info restores its complete destination",
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "bottom-bar-reversible-navigation-v001",
+      "windowId": "bottom-bar",
+      "controlLabels": [
+        "前のスロット",
+        "次のスロット"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/bottom-bar-source.spec.ts",
+        "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          0,
+          538,
+          600,
+          21
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source-visible previous and next controls traverse slot state reversibly while preserving the independent slider and Japanese title."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "chat-complete-application-form-v001",
+      "windowId": "chat",
+      "controlLabels": [
+        "トピック",
+        "ルーム",
+        "公開",
+        "非公開",
+        "OK"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/chat-source.spec.ts",
+        "title": "Chat visibly edits Japanese topic and submits one application-owned form without invented tabs",
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          279,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The single source-themed Chat form visibly accepts Japanese topic text, uses an application-owned room list, selects privacy, and submits exact settled feedback without invented tabs."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "chat-complete-cancel-reset-v001",
+      "windowId": "chat",
+      "controlLabels": [
+        "cancel"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/chat-source.spec.ts",
+        "title": "Chat cancel restores the complete default form instead of only clearing topic",
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          279,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Cancel reverses every pending Chat form edit and restores the screenshot-consistent default state."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "exchange-every-item-selection-v001",
+      "windowId": "exchange",
+      "controlLabelPatterns": [
+        "^交換アイテム (?:[1-9]|1[0-6])$"
+      ],
+      "test": {
+        "file": "e2e/exchange-source.spec.ts",
+        "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          399,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each of the 16 extracted Exchange cells is independently selectable through its exact source grid target."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "exchange-confirm-trade-cancel-v001",
+      "windowId": "exchange",
+      "controlLabels": [
+        "OK",
+        "trade",
+        "cancel"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/exchange-source.spec.ts",
+        "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          285,
+          399,
+          280,
+          120
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "OK requires an item, Trade requires confirmation, and both Trade and cancel restore a clean reversible Exchange transaction."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "game-menu-reversible-actions-v001",
+      "windowId": "game-menu",
+      "controlLabelPatterns": [
+        "^(Return to last save point|Character Select|Exit to Windows|Return to game)$"
+      ],
+      "test": {
+        "file": "e2e/game-menu-source.spec.ts",
+        "title": "Every Game Menu action owns its source row, transfers selection, and toggles back to ready",
+        "sha256": "543e2f9a9bdacd1b6faea56ce055490dfbfafa96f9b16b83dcf14123a88b4b88"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          626,
+          182,
+          222,
+          133
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each source-visible Game Menu action owns its extracted row, transfers exclusive selection, and can be toggled back to the ready state without inventing external side effects."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-member-selection-v001",
+      "windowId": "party",
+      "controlLabelPatterns": [
+        "^(SakumaRiri|Sebas'|ANRI\\(砂漠の都市モロク\\)|Show_A|Ayanalshizuka)$"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Every Party member is a reachable listbox option with exclusive reversible selection",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Every source Party member is a listbox option with exclusive selection and same-member reversal."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-tools-reversible-v001",
+      "windowId": "party",
+      "controlLabelPatterns": [
+        "^パーティーツール [1-5]$"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party tools and source tabs transfer state and support keyboard traversal",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "All five source tool targets transfer one selected state and toggle back to neutral."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-view-tabs-v001",
+      "windowId": "party",
+      "controlLabels": [
+        "友達",
+        "パーティー"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party tools and source tabs transfer state and support keyboard traversal",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source Friends and Party controls expose real tab semantics with horizontal keyboard traversal."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-satellite-actions-v001",
+      "windowId": "party",
+      "controlLabels": [
+        "back",
+        "next",
+        "sell"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party satellite actions stay fixed while Party moves and expose exact ownership",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          350,
+          211,
+          174
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The fixed back, next, and sell strip belongs to Party QA while remaining anchored outside the movable window."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "party-close-and-reopen-v001",
+      "windowId": "party",
+      "controlLabels": [
+        "パーティー (Riri-Soft)を閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party close removes satellites and Basic Info friend restores the complete destination",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          350,
+          211,
+          174
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "quickbar-reversible-slots-v001",
+      "windowId": "quickbar",
+      "controlLabelPatterns": [
+        "^クイックスロット [1-3]$"
+      ],
+      "test": {
+        "file": "e2e/quickbar-source.spec.ts",
+        "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
+        "sha256": "02842a0bcb01dc3f1bd5c75ff6c1d84ccdc69688a76f92d9a8d89e1a8967e2aa"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          736,
+          430,
+          112,
+          94
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each source-visible Quickbar slot owns only its extracted raster, transfers exclusive selection, and can return independently to the source-neutral state."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-minimize-close-lifecycle-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "最小化",
+        "閉じる"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options generated minimize and close complete their reversible desktop lifecycle",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Options uses its recorded generated compact endpoint and the Basic Info option action restores the complete closed destination."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-tabs-reversible-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "option",
+        "info"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options tabs own exact source strips and reverse to the original option panel",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-bgm-row-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "BGMを下げる",
+        "BGM",
+        "BGMを上げる",
+        "BGM on"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options BGM controls own one continuous reversible row",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-effect-row-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "Effectを下げる",
+        "Effect",
+        "Effectを上げる",
+        "Effect on"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options Effect controls own one continuous reversible row",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-skin-application-menu-v001",
+      "windowId": "options",
+      "controlLabels": [
+        "Skin"
+      ],
+      "controlLabelPatterns": [],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options Skin is application-owned and keyboard reversible",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Skin uses the application-owned pixel menu rather than a host-native dropdown."
+        ]
+      },
+      "behaviorApproved": true,
+      "requirements": {
+        "realGesture": true,
+        "expectedRegionChanged": true,
+        "invariantRegionsStable": true,
+        "sourceApproved": true
+      },
+      "passed": true
+    },
+    {
+      "id": "options-footer-checkbox-family-v001",
+      "windowId": "options",
+      "controlLabelPatterns": [
+        "^(opaque|attack|skill|item)$"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Every Options footer checkbox changes only itself and restores cleanly",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "browserPassed": true,
+      "testLocked": true,
+      "sourceLocked": true,
+      "behaviorAuthority": {
+        "approval": "source-visible"
       },
       "behaviorApproved": true,
       "requirements": {

@@ -406,7 +406,17 @@ try {
     await page.goto(baseUrl, { waitUntil: "networkidle" });
     const activeWindow = await activateWindow(page, windowId);
     const defaultScreenshotPath = resolve(windowDir, "default.png");
-    await activeWindow.screenshot({ path: defaultScreenshotPath });
+    // Audit donor-pink on the window by itself. On the composed desktop the
+    // intended Qwen background is visible through transparent stepped corners;
+    // counting those pixels as part of the window produces a systematic false
+    // positive for every correctly rounded asset.
+    const isolatedPage = await browser.newPage({ viewport: { width: 849, height: 564 }, deviceScaleFactor: 1 });
+    const isolatedUrl = new URL(baseUrl);
+    isolatedUrl.searchParams.set("isolate", windowId);
+    await isolatedPage.goto(isolatedUrl.href, { waitUntil: "networkidle" });
+    await screenshotStable(isolatedPage.locator(`[data-window-id="${windowId}"]`));
+    await isolatedPage.locator(`[data-window-id="${windowId}"]`).screenshot({ path: defaultScreenshotPath });
+    await isolatedPage.close();
     const donorPinkBoundary = donorPinkBoundaryPixels(defaultScreenshotPath);
 
     const geometry = await probeGeometry(page, windowId);

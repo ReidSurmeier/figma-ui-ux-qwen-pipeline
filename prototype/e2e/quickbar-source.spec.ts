@@ -11,7 +11,7 @@ async function activateWindow(window: Locator) {
 }
 
 test("Every Quickbar slot owns its exact raster and reverses independently to neutral", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=quickbar");
   const quickbar = page.getByRole("region", { name: "クイックスロット", exact: true });
   await activateWindow(quickbar);
   const bounds = await quickbar.boundingBox();
@@ -53,7 +53,7 @@ test("Every Quickbar slot owns its exact raster and reverses independently to ne
 });
 
 test("Quickbar keyboard activation and drag preserve exact selection ownership", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=quickbar");
   const quickbar = page.getByRole("region", { name: "クイックスロット", exact: true });
   await activateWindow(quickbar);
   const third = quickbar.getByRole("button", { name: "クイックスロット 3", exact: true });

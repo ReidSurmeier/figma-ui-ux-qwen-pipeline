@@ -49,3 +49,17 @@ test("every Basic Info navigation control retains its source visual in the runti
       .map((control) => control.id),
   ).toEqual([]);
 });
+
+test("every Status control retains its source visual in the runtime manifest", async ({ page }) => {
+  await page.goto("/");
+  const captured = await captureRuntimeComponentManifest(page);
+  const status = captured.windows.find((window) => window.id === "status");
+  if (!status) throw new Error("Status is absent from the runtime manifest");
+
+  const componentIds = new Set(status.components.map((component) => component.id));
+  expect(
+    status.controls
+      .filter((control) => !control.visualComponent || !componentIds.has(control.visualComponent))
+      .map((control) => control.id),
+  ).toEqual([]);
+});

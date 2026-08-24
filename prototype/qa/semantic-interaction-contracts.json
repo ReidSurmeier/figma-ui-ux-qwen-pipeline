@@ -10,7 +10,7 @@
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
-        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -63,7 +63,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info page control declares and reaches its source-approved destination",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -123,7 +123,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -167,7 +167,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -216,7 +216,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -265,7 +265,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -310,7 +310,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status close removes the window and Basic Info restores the same independent destination",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -342,28 +342,47 @@
     {
       "id": "inventory-complete-tab-inventory-v001",
       "window_id": "inventory",
-      "control_labels": ["item", "equip", "etc"],
+      "control_labels": [
+        "item",
+        "equip",
+        "etc"
+      ],
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [0, 247, 280, 137]
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
       },
       "gesture": "trusted pointer click activates each source-visible category tab and its labeled tabpanel",
       "expected_region_changes": [
         {
-          "component_ids": ["inventory-tab-item", "inventory-tab-equip", "inventory-tab-etc"],
+          "component_ids": [
+            "inventory-tab-item",
+            "inventory-tab-equip",
+            "inventory-tab-etc"
+          ],
           "rule": "selection transfers among all three tabs and exposes complete 21, 14, and 7 cell inventories"
         }
       ],
       "invariant_regions": [
         {
-          "component_ids": ["inventory-title-icon", "inventory-title-text", "inventory-scroll-up", "inventory-scroll-track", "inventory-scroll-down"],
+          "component_ids": [
+            "inventory-title-icon",
+            "inventory-title-text",
+            "inventory-scroll-up",
+            "inventory-scroll-track",
+            "inventory-scroll-down"
+          ],
           "rule": "window title and scroll chrome remain independent and unchanged across tab visits"
         }
       ]
@@ -372,21 +391,30 @@
       "id": "inventory-all-cell-selection-v001",
       "window_id": "inventory",
       "control_labels": [],
-      "control_label_patterns": ["^(?:item|equip|etc) item \\d+$"],
+      "control_label_patterns": [
+        "^(?:item|equip|etc) item \\d+$"
+      ],
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "every reachable Inventory cell independently owns selection in all three categories",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [36, 266, 227, 102]
+        "region": [
+          36,
+          266,
+          227,
+          102
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."]
+        "scope": [
+          "Every visible source item cell is independently selectable in each category while preserving the Japanese source theme."
+        ]
       },
       "gesture": "trusted pointer click visits every one of the 42 reachable cells across item, equip, and etc",
       "expected_region_changes": [
@@ -397,7 +425,9 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["all non-selected inventory cells"],
+          "component_ids": [
+            "all non-selected inventory cells"
+          ],
           "rule": "no adjacent or prior cell retains semantic selection"
         }
       ]
@@ -405,17 +435,24 @@
     {
       "id": "inventory-real-scroll-v001",
       "window_id": "inventory",
-      "control_labels": ["所持品スクロール"],
+      "control_labels": [
+        "所持品スクロール"
+      ],
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [36, 265, 244, 103]
+        "region": [
+          36,
+          265,
+          244,
+          103
+        ]
       },
       "gesture": "keyboard Home, nine real vertical pointer positions, and keyboard End",
       "expected_region_changes": [
@@ -426,7 +463,10 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["inventory-title-icon", "inventory-title-text"],
+          "component_ids": [
+            "inventory-title-icon",
+            "inventory-title-text"
+          ],
           "rule": "the complete 263 by 18 header remains byte-identical at every sampled scroll value"
         }
       ]
@@ -434,21 +474,30 @@
     {
       "id": "inventory-generated-minimize-v001",
       "window_id": "inventory",
-      "control_labels": ["所持アイテムを最小化"],
+      "control_labels": [
+        "所持アイテムを最小化"
+      ],
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [0, 247, 280, 137]
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["The source-visible minimize control transitions to the separately generated compact endpoint and restores Inventory."]
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact endpoint and restores Inventory."
+        ]
       },
       "gesture": "trusted pointer click minimizes with complete transition sampling and a second pointer click restores",
       "expected_region_changes": [
@@ -459,7 +508,10 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["inventory-title-icon", "inventory-title-text"],
+          "component_ids": [
+            "inventory-title-icon",
+            "inventory-title-text"
+          ],
           "rule": "title geometry and bitmap authority remain unchanged in the compact endpoint"
         }
       ]
@@ -467,17 +519,24 @@
     {
       "id": "inventory-close-and-reopen-v001",
       "window_id": "inventory",
-      "control_labels": ["所持アイテムを閉じる"],
+      "control_labels": [
+        "所持アイテムを閉じる"
+      ],
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [0, 247, 280, 137]
+        "region": [
+          0,
+          247,
+          280,
+          137
+        ]
       },
       "gesture": "trusted pointer click closes Inventory and a trusted Basic Info items click restores it without reload",
       "expected_region_changes": [
@@ -488,7 +547,9 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["all inventory runtime components"],
+          "component_ids": [
+            "all inventory runtime components"
+          ],
           "rule": "the restored window has exact pre-close geometry and ordered independent component inventory"
         }
       ]
@@ -496,21 +557,30 @@
     {
       "id": "card-reversible-art-rotation-v001",
       "window_id": "card",
-      "control_labels": ["カードを回転"],
+      "control_labels": [
+        "カードを回転"
+      ],
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card art rotation is reversible and leaves title plus copy pixels invariant",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 0, 280, 150]
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["The independent Card art can animate without crossing into the Japanese title or copy regions and restores exactly."]
+        "scope": [
+          "The independent Card art can animate without crossing into the Japanese title or copy regions and restores exactly."
+        ]
       },
       "gesture": "trusted pointer click rotates the art and a second pointer click restores its exact idle pixels",
       "expected_region_changes": [
@@ -521,7 +591,15 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["card-title-icon", "card-title-text", "card-copy-0", "card-copy-1", "card-copy-2", "card-copy-3", "card-copy-4"],
+          "component_ids": [
+            "card-title-icon",
+            "card-title-text",
+            "card-copy-0",
+            "card-copy-1",
+            "card-copy-2",
+            "card-copy-3",
+            "card-copy-4"
+          ],
           "rule": "title and Japanese copy pixels remain byte-identical throughout rotation"
         }
       ]
@@ -529,17 +607,24 @@
     {
       "id": "card-real-scroll-v001",
       "window_id": "card",
-      "control_labels": ["カード情報スクロール"],
+      "control_labels": [
+        "カード情報スクロール"
+      ],
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card real scroll gestures move copy and one visual thumb without entering title or art",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 0, 280, 150]
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
       },
       "gesture": "keyboard Home, nine real vertical pointer positions, and keyboard End",
       "expected_region_changes": [
@@ -550,7 +635,11 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["card-title-icon", "card-title-text", "card-art"],
+          "component_ids": [
+            "card-title-icon",
+            "card-title-text",
+            "card-art"
+          ],
           "rule": "title and art pixels remain byte-identical at every sampled scroll value"
         }
       ]
@@ -558,21 +647,30 @@
     {
       "id": "card-slot-scroll-control-v001",
       "window_id": "card",
-      "control_labels": ["カードスロット"],
+      "control_labels": [
+        "カードスロット"
+      ],
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card slot controls the Card scroll state without changing title or art",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 0, 280, 150]
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["The source-themed Card slot controls two settled Card copy positions and exposes that relationship to interaction QA."]
+        "scope": [
+          "The source-themed Card slot controls two settled Card copy positions and exposes that relationship to interaction QA."
+        ]
       },
       "gesture": "two trusted pointer clicks toggle the related Card scrollbar between the expanded and settled positions",
       "expected_region_changes": [
@@ -583,7 +681,11 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["card-title-icon", "card-title-text", "card-art"],
+          "component_ids": [
+            "card-title-icon",
+            "card-title-text",
+            "card-art"
+          ],
           "rule": "title and art pixels remain byte-identical through both slot transitions"
         }
       ]
@@ -591,17 +693,24 @@
     {
       "id": "card-close-v001",
       "window_id": "card",
-      "control_labels": ["ソルジャースケルトンカードを閉じる"],
+      "control_labels": [
+        "ソルジャースケルトンカードを閉じる"
+      ],
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card close target removes exactly the Card window",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 0, 280, 150]
+        "region": [
+          285,
+          0,
+          280,
+          150
+        ]
       },
       "gesture": "trusted pointer click activates the source-visible close target",
       "expected_region_changes": [
@@ -612,7 +721,9 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["all non-Card runtime components"],
+          "component_ids": [
+            "all non-Card runtime components"
+          ],
           "rule": "exactly one runtime window is removed"
         }
       ]
@@ -620,21 +731,30 @@
     {
       "id": "skills-every-row-selection-v001",
       "window_id": "skills",
-      "control_label_patterns": ["^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ) Lv (5|4|9|10|1)$"],
+      "control_label_patterns": [
+        "^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ) Lv (5|4|9|10|1)$"
+      ],
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [568, 0, 281, 184]
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Every extracted Japanese skill row is selectable through a real pointer target after navigating to its settled clipped page."]
+        "scope": [
+          "Every extracted Japanese skill row is selectable through a real pointer target after navigating to its settled clipped page."
+        ]
       },
       "gesture": "trusted pointer clicks visit every skill row on its settled page",
       "expected_region_changes": [
@@ -645,7 +765,13 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["skills-title-icon", "skills-title-text", "skills-points", "skills-use", "skills-close-action"],
+          "component_ids": [
+            "skills-title-icon",
+            "skills-title-text",
+            "skills-points",
+            "skills-use",
+            "skills-close-action"
+          ],
           "rule": "the title and footer remain byte-identical throughout every row selection"
         }
       ]
@@ -653,21 +779,30 @@
     {
       "id": "skills-every-level-control-v001",
       "window_id": "skills",
-      "control_label_patterns": ["^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ)をレベルアップ$"],
+      "control_label_patterns": [
+        "^(ディバインプロテクション|ワープポータル|ニューマ|ヒール|エンジェラス|ブレッシング|速度増加|ルアフ)をレベルアップ$"
+      ],
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [568, 0, 281, 184]
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Each source-visible LV UP target independently toggles only its associated skill state and reports the Japanese skill name."]
+        "scope": [
+          "Each source-visible LV UP target independently toggles only its associated skill state and reports the Japanese skill name."
+        ]
       },
       "gesture": "two trusted pointer clicks toggle and restore each of the eight level controls",
       "expected_region_changes": [
@@ -678,7 +813,12 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["all other skill level controls", "skills-title-icon", "skills-title-text", "skills-points"],
+          "component_ids": [
+            "all other skill level controls",
+            "skills-title-icon",
+            "skills-title-text",
+            "skills-points"
+          ],
           "rule": "no sibling level state, title pixel, or footer pixel changes"
         }
       ]
@@ -686,17 +826,24 @@
     {
       "id": "skills-real-scroll-v001",
       "window_id": "skills",
-      "control_labels": ["スキルスクロール"],
+      "control_labels": [
+        "スキルスクロール"
+      ],
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills real scroll gestures keep one thumb and the clipped list outside title and footer",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [568, 0, 281, 184]
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
       },
       "gesture": "keyboard Home, nine real vertical pointer positions, and keyboard End",
       "expected_region_changes": [
@@ -707,7 +854,13 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["skills-title-icon", "skills-title-text", "skills-points", "skills-use", "skills-close-action"],
+          "component_ids": [
+            "skills-title-icon",
+            "skills-title-text",
+            "skills-points",
+            "skills-use",
+            "skills-close-action"
+          ],
           "rule": "the Japanese title and complete footer remain byte-identical at every sampled value"
         }
       ]
@@ -715,21 +868,30 @@
     {
       "id": "skills-use-selected-row-v001",
       "window_id": "skills",
-      "control_labels": ["use"],
+      "control_labels": [
+        "use"
+      ],
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills use acts on selection and both close controls support Basic Info recovery",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [568, 0, 281, 184]
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["The source-visible use control acts on the currently selected Japanese skill and exposes settled feedback."]
+        "scope": [
+          "The source-visible use control acts on the currently selected Japanese skill and exposes settled feedback."
+        ]
       },
       "gesture": "keyboard selection followed by a trusted pointer click on use",
       "expected_region_changes": [
@@ -740,7 +902,11 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["skills-title-icon", "skills-title-text", "all non-selected skill rows"],
+          "component_ids": [
+            "skills-title-icon",
+            "skills-title-text",
+            "all non-selected skill rows"
+          ],
           "rule": "using the selected skill does not change title or selection ownership"
         }
       ]
@@ -748,17 +914,25 @@
     {
       "id": "skills-close-and-reopen-v001",
       "window_id": "skills",
-      "control_labels": ["スキルリストを閉じる", "close"],
+      "control_labels": [
+        "スキルリストを閉じる",
+        "close"
+      ],
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills use acts on selection and both close controls support Basic Info recovery",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [568, 0, 281, 184]
+        "region": [
+          568,
+          0,
+          281,
+          184
+        ]
       },
       "gesture": "trusted pointer clicks close through each source-visible target and the Basic Info skill control reopens after each",
       "expected_region_changes": [
@@ -769,7 +943,9 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["all skills runtime components"],
+          "component_ids": [
+            "all skills runtime components"
+          ],
           "rule": "each restored Skills window has the complete independent component inventory"
         }
       ]
@@ -777,21 +953,30 @@
     {
       "id": "equipment-every-row-selection-v001",
       "window_id": "equipment",
-      "control_label_patterns": ["^(左|右)装備 [1-5]$"],
+      "control_label_patterns": [
+        "^(左|右)装備 [1-5]$"
+      ],
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [0, 385, 280, 152]
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Each extracted left and right Equipment row is independently selectable through its exact source column without claiming the avatar gap."]
+        "scope": [
+          "Each extracted left and right Equipment row is independently selectable through its exact source column without claiming the avatar gap."
+        ]
       },
       "gesture": "trusted pointer clicks visit all ten exact Equipment row targets",
       "expected_region_changes": [
@@ -802,7 +987,11 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["equipment-title-icon", "equipment-title-text", "equipment-avatar"],
+          "component_ids": [
+            "equipment-title-icon",
+            "equipment-title-text",
+            "equipment-avatar"
+          ],
           "rule": "the Japanese title and non-interactive avatar remain byte-identical throughout selection"
         }
       ]
@@ -810,21 +999,30 @@
     {
       "id": "equipment-generated-minimize-v001",
       "window_id": "equipment",
-      "control_labels": ["装備アイテムを最小化"],
+      "control_labels": [
+        "装備アイテムを最小化"
+      ],
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [0, 385, 280, 152]
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["The source-visible minimize control transitions to the separately generated compact Equipment endpoint and restores exactly."]
+        "scope": [
+          "The source-visible minimize control transitions to the separately generated compact Equipment endpoint and restores exactly."
+        ]
       },
       "gesture": "trusted pointer click minimizes with complete transition sampling and a second pointer click restores",
       "expected_region_changes": [
@@ -835,7 +1033,10 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["equipment-title-icon", "equipment-title-text"],
+          "component_ids": [
+            "equipment-title-icon",
+            "equipment-title-text"
+          ],
           "rule": "the generated compact state preserves the Japanese title authority"
         }
       ]
@@ -843,17 +1044,24 @@
     {
       "id": "equipment-close-and-reopen-v001",
       "window_id": "equipment",
-      "control_labels": ["装備アイテムを閉じる"],
+      "control_labels": [
+        "装備アイテムを閉じる"
+      ],
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment close removes the window and Basic Info restores its complete destination",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [0, 385, 280, 152]
+        "region": [
+          0,
+          385,
+          280,
+          152
+        ]
       },
       "gesture": "trusted pointer click closes Equipment and a trusted Basic Info equip click restores it without reload",
       "expected_region_changes": [
@@ -864,7 +1072,9 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["all equipment runtime components"],
+          "component_ids": [
+            "all equipment runtime components"
+          ],
           "rule": "the restored window has exact 280 by 152 geometry and all 15 independent components"
         }
       ]
@@ -872,32 +1082,50 @@
     {
       "id": "bottom-bar-reversible-navigation-v001",
       "window_id": "bottom-bar",
-      "control_labels": ["前のスロット", "次のスロット"],
+      "control_labels": [
+        "前のスロット",
+        "次のスロット"
+      ],
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
-        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [0, 538, 600, 21]
+        "region": [
+          0,
+          538,
+          600,
+          21
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["The source-visible previous and next controls traverse slot state reversibly while preserving the independent slider and Japanese title."]
+        "scope": [
+          "The source-visible previous and next controls traverse slot state reversibly while preserving the independent slider and Japanese title."
+        ]
       },
       "gesture": "trusted pointer clicks run previous to next and next to previous reversal journeys",
       "expected_region_changes": [
         {
-          "component_ids": ["bottom-bar-previous", "bottom-bar-next"],
+          "component_ids": [
+            "bottom-bar-previous",
+            "bottom-bar-next"
+          ],
           "rule": "only the directional control for the current signed slot owns settled pressed feedback and both routes return to neutral"
         }
       ],
       "invariant_regions": [
         {
-          "component_ids": ["bottom-bar-title-icon", "bottom-bar-title-text", "bottom-bar-rail", "bottom-bar-thumb"],
+          "component_ids": [
+            "bottom-bar-title-icon",
+            "bottom-bar-title-text",
+            "bottom-bar-rail",
+            "bottom-bar-thumb"
+          ],
           "rule": "the complete first 580 pixels remain byte-identical after both reversal journeys"
         }
       ]
@@ -905,32 +1133,54 @@
     {
       "id": "chat-complete-application-form-v001",
       "window_id": "chat",
-      "control_labels": ["トピック", "ルーム", "公開", "非公開", "OK"],
+      "control_labels": [
+        "トピック",
+        "ルーム",
+        "公開",
+        "非公開",
+        "OK"
+      ],
       "test": {
         "file": "e2e/chat-source.spec.ts",
         "title": "Chat visibly edits Japanese topic and submits one application-owned form without invented tabs",
-        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 279, 280, 120]
+        "region": [
+          285,
+          279,
+          280,
+          120
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["The single source-themed Chat form visibly accepts Japanese topic text, uses an application-owned room list, selects privacy, and submits exact settled feedback without invented tabs."]
+        "scope": [
+          "The single source-themed Chat form visibly accepts Japanese topic text, uses an application-owned room list, selects privacy, and submits exact settled feedback without invented tabs."
+        ]
       },
       "gesture": "keyboard Japanese text entry plus trusted pointer clicks select the application-owned room, privacy, and OK",
       "expected_region_changes": [
         {
-          "component_ids": ["chat-topic-field", "chat-room", "chat-privacy-public", "chat-privacy-private", "chat-ok"],
+          "component_ids": [
+            "chat-topic-field",
+            "chat-room",
+            "chat-privacy-public",
+            "chat-privacy-private",
+            "chat-ok"
+          ],
           "rule": "typed Japanese text is visible, the two-option list settles to Party, privacy transfers to private, and OK reports the exact complete form"
         }
       ],
       "invariant_regions": [
         {
-          "component_ids": ["chat-title-icon", "chat-title-text"],
+          "component_ids": [
+            "chat-title-icon",
+            "chat-title-text"
+          ],
           "rule": "the Japanese title remains byte-identical and no tab control is introduced"
         }
       ]
@@ -938,32 +1188,51 @@
     {
       "id": "chat-complete-cancel-reset-v001",
       "window_id": "chat",
-      "control_labels": ["cancel"],
+      "control_labels": [
+        "cancel"
+      ],
       "test": {
         "file": "e2e/chat-source.spec.ts",
         "title": "Chat cancel restores the complete default form instead of only clearing topic",
-        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 279, 280, 120]
+        "region": [
+          285,
+          279,
+          280,
+          120
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Cancel reverses every pending Chat form edit and restores the screenshot-consistent default state."]
+        "scope": [
+          "Cancel reverses every pending Chat form edit and restores the screenshot-consistent default state."
+        ]
       },
       "gesture": "keyboard and trusted pointer interactions dirty every form field before a trusted cancel click",
       "expected_region_changes": [
         {
-          "component_ids": ["chat-topic-field", "chat-room", "chat-privacy-public", "chat-privacy-private", "chat-cancel"],
+          "component_ids": [
+            "chat-topic-field",
+            "chat-room",
+            "chat-privacy-public",
+            "chat-privacy-private",
+            "chat-cancel"
+          ],
           "rule": "topic clears, room returns to Chat Room, privacy returns to public, the listbox closes, and cancellation feedback settles"
         }
       ],
       "invariant_regions": [
         {
-          "component_ids": ["chat-title-icon", "chat-title-text", "chat-ok"],
+          "component_ids": [
+            "chat-title-icon",
+            "chat-title-text",
+            "chat-ok"
+          ],
           "rule": "cancel restores form state without changing the Japanese title or submit control"
         }
       ]
@@ -971,21 +1240,30 @@
     {
       "id": "exchange-every-item-selection-v001",
       "window_id": "exchange",
-      "control_label_patterns": ["^交換アイテム (?:[1-9]|1[0-6])$"],
+      "control_label_patterns": [
+        "^交換アイテム (?:[1-9]|1[0-6])$"
+      ],
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
-        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 399, 280, 120]
+        "region": [
+          285,
+          399,
+          280,
+          120
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Each of the 16 extracted Exchange cells is independently selectable through its exact source grid target."]
+        "scope": [
+          "Each of the 16 extracted Exchange cells is independently selectable through its exact source grid target."
+        ]
       },
       "gesture": "trusted pointer clicks visit all 16 Exchange item cells",
       "expected_region_changes": [
@@ -996,7 +1274,11 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["exchange-title-icon", "exchange-title-text", "exchange-summary"],
+          "component_ids": [
+            "exchange-title-icon",
+            "exchange-title-text",
+            "exchange-summary"
+          ],
           "rule": "the title and complete summary bars remain byte-identical through all 16 selections"
         }
       ]
@@ -1004,32 +1286,51 @@
     {
       "id": "exchange-confirm-trade-cancel-v001",
       "window_id": "exchange",
-      "control_labels": ["OK", "trade", "cancel"],
+      "control_labels": [
+        "OK",
+        "trade",
+        "cancel"
+      ],
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
-        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [285, 399, 280, 120]
+        "region": [
+          285,
+          399,
+          280,
+          120
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["OK requires an item, Trade requires confirmation, and both Trade and cancel restore a clean reversible Exchange transaction."]
+        "scope": [
+          "OK requires an item, Trade requires confirmation, and both Trade and cancel restore a clean reversible Exchange transaction."
+        ]
       },
       "gesture": "trusted pointer clicks execute select to OK to Trade and select to OK to cancel journeys",
       "expected_region_changes": [
         {
-          "component_ids": ["exchange-ok", "exchange-trade", "exchange-cancel"],
+          "component_ids": [
+            "exchange-ok",
+            "exchange-trade",
+            "exchange-cancel"
+          ],
           "rule": "selection enables OK, confirmation enables Trade, and Trade or cancel clears selection plus disables both gated actions"
         }
       ],
       "invariant_regions": [
         {
-          "component_ids": ["exchange-title-icon", "exchange-title-text", "exchange-summary"],
+          "component_ids": [
+            "exchange-title-icon",
+            "exchange-title-text",
+            "exchange-summary"
+          ],
           "rule": "transaction actions do not replace the source title or summary bars"
         }
       ]
@@ -1037,21 +1338,30 @@
     {
       "id": "game-menu-reversible-actions-v001",
       "window_id": "game-menu",
-      "control_label_patterns": ["^(Return to last save point|Character Select|Exit to Windows|Return to game)$"],
+      "control_label_patterns": [
+        "^(Return to last save point|Character Select|Exit to Windows|Return to game)$"
+      ],
       "test": {
         "file": "e2e/game-menu-source.spec.ts",
         "title": "Every Game Menu action owns its source row, transfers selection, and toggles back to ready",
-        "sha256": "2c478098d71f214538961b29911160291b1cc3e7f2a1a05a6191209dd6e8f040"
+        "sha256": "543e2f9a9bdacd1b6faea56ce055490dfbfafa96f9b16b83dcf14123a88b4b88"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [626, 182, 222, 133]
+        "region": [
+          626,
+          182,
+          222,
+          133
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Each source-visible Game Menu action owns its extracted row, transfers exclusive selection, and can be toggled back to the ready state without inventing external side effects."]
+        "scope": [
+          "Each source-visible Game Menu action owns its extracted row, transfers exclusive selection, and can be toggled back to the ready state without inventing external side effects."
+        ]
       },
       "gesture": "trusted pointer clicks visit all four actions and a second click clears the selected final action",
       "expected_region_changes": [
@@ -1062,7 +1372,10 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["game-menu-title-icon", "game-menu-title-text"],
+          "component_ids": [
+            "game-menu-title-icon",
+            "game-menu-title-text"
+          ],
           "rule": "the Japanese title remains byte-identical through every action transition"
         }
       ]
@@ -1070,79 +1383,256 @@
     {
       "id": "party-member-selection-v001",
       "window_id": "party",
-      "control_label_patterns": ["^(SakumaRiri|Sebas'|ANRI\\(砂漠の都市モロク\\)|Show_A|Ayanalshizuka)$"],
+      "control_label_patterns": [
+        "^(SakumaRiri|Sebas'|ANRI\\(砂漠の都市モロク\\)|Show_A|Ayanalshizuka)$"
+      ],
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Every Party member is a reachable listbox option with exclusive reversible selection",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
-      },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 370, 160, 154] },
-      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["Every source Party member is a listbox option with exclusive selection and same-member reversal."] },
-      "gesture": "trusted pointer clicks visit every member and clear the selected member",
-      "expected_region_changes": [{ "component_id_pattern": "party-member-*", "rule": "exactly one member owns selection or the list returns to no selection" }],
-      "invariant_regions": [{ "component_ids": ["party-title-icon", "party-title-text"], "rule": "the Japanese title remains unchanged" }]
-    },
-    {
-      "id": "party-tools-reversible-v001",
-      "window_id": "party",
-      "control_label_patterns": ["^パーティーツール [1-5]$"],
-      "test": { "file": "e2e/party-source.spec.ts", "title": "Party tools and source tabs transfer state and support keyboard traversal", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 370, 160, 154] },
-      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["All five source tool targets transfer one selected state and toggle back to neutral."] },
-      "gesture": "trusted pointer clicks visit all five tools and clear the final tool",
-      "expected_region_changes": [{ "component_id_pattern": "party-tool-*", "rule": "only the current tool owns pressed state and can return to neutral" }],
-      "invariant_regions": [{ "component_ids": ["all party member rows"], "rule": "tool state does not change member selection" }]
-    },
-    {
-      "id": "party-view-tabs-v001",
-      "window_id": "party",
-      "control_labels": ["友達", "パーティー"],
-      "test": { "file": "e2e/party-source.spec.ts", "title": "Party tools and source tabs transfer state and support keyboard traversal", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 370, 160, 154] },
-      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["The source Friends and Party controls expose real tab semantics with horizontal keyboard traversal."] },
-      "gesture": "keyboard ArrowLeft and ArrowRight transfer the selected tab",
-      "expected_region_changes": [{ "component_ids": ["party-friends", "party-party-tab"], "rule": "exactly one source tab owns aria-selected" }],
-      "invariant_regions": [{ "component_ids": ["party-title-icon", "party-title-text"], "rule": "tab traversal preserves the title" }]
-    },
-    {
-      "id": "party-satellite-actions-v001",
-      "window_id": "party",
-      "control_labels": ["back", "next", "sell"],
-      "test": { "file": "e2e/party-source.spec.ts", "title": "Party satellite actions stay fixed while Party moves and expose exact ownership", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 350, 211, 174] },
-      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["The fixed back, next, and sell strip belongs to Party QA while remaining anchored outside the movable window."] },
-      "gesture": "trusted pointer drag moves Party followed by trusted next and back clicks",
-      "expected_region_changes": [{ "component_ids": ["party-action-0", "party-action-1", "party-action-2"], "rule": "satellites report exact page or selected-member actions" }],
-      "invariant_regions": [{ "component_ids": ["party external action group"], "rule": "the complete satellite group bounding box remains fixed during Party drag" }]
-    },
-    {
-      "id": "party-close-and-reopen-v001",
-      "window_id": "party",
-      "control_labels": ["パーティー (Riri-Soft)を閉じる"],
-      "test": { "file": "e2e/party-source.spec.ts", "title": "Party close removes satellites and Basic Info friend restores the complete destination", "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [568, 350, 211, 174] },
-      "gesture": "trusted pointer close removes Party and satellites, then Basic Info friend restores both",
-      "expected_region_changes": [{ "window_id": "party", "rule": "the main window and owned satellite controls close and reopen together" }],
-      "invariant_regions": [{ "component_ids": ["all Party and satellite components"], "rule": "reopen restores the complete owned destination" }]
-    },
-    {
-      "id": "quickbar-reversible-slots-v001",
-      "window_id": "quickbar",
-      "control_label_patterns": ["^クイックスロット [1-3]$"],
-      "test": {
-        "file": "e2e/quickbar-source.spec.ts",
-        "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
-        "sha256": "44c23059158bbe2630825c2c980cc8294e58f441d9513e2726716ffe4f03e32f"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
         "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
         "approval": "immutable-user-owned-source",
-        "region": [736, 430, 112, 94]
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
       },
       "behavior_authority": {
         "approval": "user-authorized-inferred",
-        "scope": ["Each source-visible Quickbar slot owns only its extracted raster, transfers exclusive selection, and can return independently to the source-neutral state."]
+        "scope": [
+          "Every source Party member is a listbox option with exclusive selection and same-member reversal."
+        ]
+      },
+      "gesture": "trusted pointer clicks visit every member and clear the selected member",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "party-member-*",
+          "rule": "exactly one member owns selection or the list returns to no selection"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "party-title-icon",
+            "party-title-text"
+          ],
+          "rule": "the Japanese title remains unchanged"
+        }
+      ]
+    },
+    {
+      "id": "party-tools-reversible-v001",
+      "window_id": "party",
+      "control_label_patterns": [
+        "^パーティーツール [1-5]$"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party tools and source tabs transfer state and support keyboard traversal",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "All five source tool targets transfer one selected state and toggle back to neutral."
+        ]
+      },
+      "gesture": "trusted pointer clicks visit all five tools and clear the final tool",
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "party-tool-*",
+          "rule": "only the current tool owns pressed state and can return to neutral"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "all party member rows"
+          ],
+          "rule": "tool state does not change member selection"
+        }
+      ]
+    },
+    {
+      "id": "party-view-tabs-v001",
+      "window_id": "party",
+      "control_labels": [
+        "友達",
+        "パーティー"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party tools and source tabs transfer state and support keyboard traversal",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          370,
+          160,
+          154
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The source Friends and Party controls expose real tab semantics with horizontal keyboard traversal."
+        ]
+      },
+      "gesture": "keyboard ArrowLeft and ArrowRight transfer the selected tab",
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "party-friends",
+            "party-party-tab"
+          ],
+          "rule": "exactly one source tab owns aria-selected"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "party-title-icon",
+            "party-title-text"
+          ],
+          "rule": "tab traversal preserves the title"
+        }
+      ]
+    },
+    {
+      "id": "party-satellite-actions-v001",
+      "window_id": "party",
+      "control_labels": [
+        "back",
+        "next",
+        "sell"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party satellite actions stay fixed while Party moves and expose exact ownership",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          350,
+          211,
+          174
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "The fixed back, next, and sell strip belongs to Party QA while remaining anchored outside the movable window."
+        ]
+      },
+      "gesture": "trusted pointer drag moves Party followed by trusted next and back clicks",
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "party-action-0",
+            "party-action-1",
+            "party-action-2"
+          ],
+          "rule": "satellites report exact page or selected-member actions"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "party external action group"
+          ],
+          "rule": "the complete satellite group bounding box remains fixed during Party drag"
+        }
+      ]
+    },
+    {
+      "id": "party-close-and-reopen-v001",
+      "window_id": "party",
+      "control_labels": [
+        "パーティー (Riri-Soft)を閉じる"
+      ],
+      "test": {
+        "file": "e2e/party-source.spec.ts",
+        "title": "Party close removes satellites and Basic Info friend restores the complete destination",
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          568,
+          350,
+          211,
+          174
+        ]
+      },
+      "gesture": "trusted pointer close removes Party and satellites, then Basic Info friend restores both",
+      "expected_region_changes": [
+        {
+          "window_id": "party",
+          "rule": "the main window and owned satellite controls close and reopen together"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "all Party and satellite components"
+          ],
+          "rule": "reopen restores the complete owned destination"
+        }
+      ]
+    },
+    {
+      "id": "quickbar-reversible-slots-v001",
+      "window_id": "quickbar",
+      "control_label_patterns": [
+        "^クイックスロット [1-3]$"
+      ],
+      "test": {
+        "file": "e2e/quickbar-source.spec.ts",
+        "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
+        "sha256": "02842a0bcb01dc3f1bd5c75ff6c1d84ccdc69688a76f92d9a8d89e1a8967e2aa"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          736,
+          430,
+          112,
+          94
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Each source-visible Quickbar slot owns only its extracted raster, transfers exclusive selection, and can return independently to the source-neutral state."
+        ]
       },
       "gesture": "trusted pointer clicks visit and reverse every slot; keyboard activation and a real drag preserve ownership",
       "expected_region_changes": [
@@ -1153,7 +1643,9 @@
       ],
       "invariant_regions": [
         {
-          "component_ids": ["the two inactive quickbar slots"],
+          "component_ids": [
+            "the two inactive quickbar slots"
+          ],
           "rule": "inactive slot pixels remain byte-identical through every isolated selection and reversal"
         }
       ]
@@ -1161,64 +1653,268 @@
     {
       "id": "options-minimize-close-lifecycle-v001",
       "window_id": "options",
-      "control_labels": ["最小化", "閉じる"],
-      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options generated minimize and close complete their reversible desktop lifecycle", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
-      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["Options uses its recorded generated compact endpoint and the Basic Info option action restores the complete closed destination."] },
+      "control_labels": [
+        "最小化",
+        "閉じる"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options generated minimize and close complete their reversible desktop lifecycle",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Options uses its recorded generated compact endpoint and the Basic Info option action restores the complete closed destination."
+        ]
+      },
       "gesture": "trusted pointer clicks minimize, restore, close, and reopen Options from Basic Info",
-      "expected_region_changes": [{ "component_ids": ["options-minimize", "options-close"], "rule": "minimize traverses more than four geometry states to 180 by 18, restores exact pixels, and close/reopen restores the full destination" }],
-      "invariant_regions": [{ "component_ids": ["generated Options compact plate and complete expanded panel"], "rule": "both lifecycle endpoints match their locked authorities" }]
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "options-minimize",
+            "options-close"
+          ],
+          "rule": "minimize traverses more than four geometry states to 180 by 18, restores exact pixels, and close/reopen restores the full destination"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "generated Options compact plate and complete expanded panel"
+          ],
+          "rule": "both lifecycle endpoints match their locked authorities"
+        }
+      ]
     },
     {
       "id": "options-tabs-reversible-v001",
       "window_id": "options",
-      "control_labels": ["option", "info"],
-      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options tabs own exact source strips and reverse to the original option panel", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "control_labels": [
+        "option",
+        "info"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options tabs own exact source strips and reverse to the original option panel",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
       "gesture": "trusted pointer clicks transfer from option to info and back",
-      "expected_region_changes": [{ "component_ids": ["options-tab-option", "options-tab-info"], "rule": "the exact non-overlapping source tab strips transfer selected state and expose the Japanese info panel" }],
-      "invariant_regions": [{ "component_ids": ["complete Options option panel"], "rule": "returning to option restores the exact source screenshot" }]
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "options-tab-option",
+            "options-tab-info"
+          ],
+          "rule": "the exact non-overlapping source tab strips transfer selected state and expose the Japanese info panel"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "complete Options option panel"
+          ],
+          "rule": "returning to option restores the exact source screenshot"
+        }
+      ]
     },
     {
       "id": "options-bgm-row-v001",
       "window_id": "options",
-      "control_labels": ["BGMを下げる", "BGM", "BGMを上げる", "BGM on"],
-      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options BGM controls own one continuous reversible row", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "control_labels": [
+        "BGMを下げる",
+        "BGM",
+        "BGMを上げる",
+        "BGM on"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options BGM controls own one continuous reversible row",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
       "gesture": "trusted pointer arrow and checkbox clicks plus a 24-step slider drag and keyboard endpoints",
-      "expected_region_changes": [{ "component_ids": ["options-bgm-down", "options-bgm-thumb", "options-bgm-up", "options-bgm-on"], "rule": "the BGM row decrements, increments, toggles reversibly, samples more than four values, and reaches 0 and 100" }],
-      "invariant_regions": [{ "component_ids": ["complete Effect row"], "rule": "every BGM gesture leaves Effect byte-identical" }]
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "options-bgm-down",
+            "options-bgm-thumb",
+            "options-bgm-up",
+            "options-bgm-on"
+          ],
+          "rule": "the BGM row decrements, increments, toggles reversibly, samples more than four values, and reaches 0 and 100"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "complete Effect row"
+          ],
+          "rule": "every BGM gesture leaves Effect byte-identical"
+        }
+      ]
     },
     {
       "id": "options-effect-row-v001",
       "window_id": "options",
-      "control_labels": ["Effectを下げる", "Effect", "Effectを上げる", "Effect on"],
-      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options Effect controls own one continuous reversible row", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "control_labels": [
+        "Effectを下げる",
+        "Effect",
+        "Effectを上げる",
+        "Effect on"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options Effect controls own one continuous reversible row",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
       "gesture": "trusted pointer arrow and checkbox clicks plus a 24-step slider drag and keyboard endpoints",
-      "expected_region_changes": [{ "component_ids": ["options-effect-down", "options-effect-thumb", "options-effect-up", "options-effect-on"], "rule": "the Effect row decrements, increments, toggles reversibly, samples more than four values, and reaches 0 and 100" }],
-      "invariant_regions": [{ "component_ids": ["complete BGM row"], "rule": "every Effect gesture leaves BGM byte-identical" }]
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "options-effect-down",
+            "options-effect-thumb",
+            "options-effect-up",
+            "options-effect-on"
+          ],
+          "rule": "the Effect row decrements, increments, toggles reversibly, samples more than four values, and reaches 0 and 100"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "complete BGM row"
+          ],
+          "rule": "every Effect gesture leaves BGM byte-identical"
+        }
+      ]
     },
     {
       "id": "options-skin-application-menu-v001",
       "window_id": "options",
-      "control_labels": ["Skin"],
-      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Options Skin is application-owned and keyboard reversible", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
-      "behavior_authority": { "approval": "user-authorized-inferred", "scope": ["Skin uses the application-owned pixel menu rather than a host-native dropdown."] },
+      "control_labels": [
+        "Skin"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Options Skin is application-owned and keyboard reversible",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
+      "behavior_authority": {
+        "approval": "user-authorized-inferred",
+        "scope": [
+          "Skin uses the application-owned pixel menu rather than a host-native dropdown."
+        ]
+      },
       "gesture": "trusted pointer selection plus keyboard ArrowDown, ArrowUp, and Escape",
-      "expected_region_changes": [{ "component_ids": ["options-skin"], "rule": "the application listbox opens, selects Japanese choices, reverses keyboard selection, and closes" }],
-      "invariant_regions": [{ "component_ids": ["Options title and volume rows"], "rule": "Skin interaction stays within its owned menu region" }]
+      "expected_region_changes": [
+        {
+          "component_ids": [
+            "options-skin"
+          ],
+          "rule": "the application listbox opens, selects Japanese choices, reverses keyboard selection, and closes"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "Options title and volume rows"
+          ],
+          "rule": "Skin interaction stays within its owned menu region"
+        }
+      ]
     },
     {
       "id": "options-footer-checkbox-family-v001",
       "window_id": "options",
-      "control_label_patterns": ["^(opaque|attack|skill|item)$"],
-      "test": { "file": "e2e/options-semantic.spec.ts", "title": "Every Options footer checkbox changes only itself and restores cleanly", "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184" },
-      "source": { "path": "benchmarks/japanese-rpg-options-v001/reference.png", "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308", "approval": "immutable-user-owned-source", "region": [345, 182, 280, 122] },
+      "control_label_patterns": [
+        "^(opaque|attack|skill|item)$"
+      ],
+      "test": {
+        "file": "e2e/options-semantic.spec.ts",
+        "title": "Every Options footer checkbox changes only itself and restores cleanly",
+        "sha256": "f16e77c0537d45f04c74df2f6b66aebdacb2a21151a422fb84ed809663896184"
+      },
+      "source": {
+        "path": "benchmarks/japanese-rpg-options-v001/reference.png",
+        "sha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+        "approval": "immutable-user-owned-source",
+        "region": [
+          345,
+          182,
+          280,
+          122
+        ]
+      },
       "gesture": "trusted pointer clicks toggle and restore all four footer checkboxes independently",
-      "expected_region_changes": [{ "component_id_pattern": "options-footer-*", "rule": "only the clicked checkbox changes and the second click restores its exact neutral pixels" }],
-      "invariant_regions": [{ "component_ids": ["the three inactive footer checkboxes"], "rule": "inactive siblings remain byte-identical for every family member" }]
+      "expected_region_changes": [
+        {
+          "component_id_pattern": "options-footer-*",
+          "rule": "only the clicked checkbox changes and the second click restores its exact neutral pixels"
+        }
+      ],
+      "invariant_regions": [
+        {
+          "component_ids": [
+            "the three inactive footer checkboxes"
+          ],
+          "rule": "inactive siblings remain byte-identical for every family member"
+        }
+      ]
     }
   ]
 }

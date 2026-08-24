@@ -130,8 +130,8 @@ export function OptionsWindow({ initialPosition = { x: 0, y: 0 }, zIndex, onActi
           dragOrigin.current = null;
         }}
       >
-        <span className="title-icon" aria-hidden="true" />
-        <h1>オプション</h1>
+        <span className="title-icon" aria-hidden="true" data-component-id="options-title-icon" />
+        <h1 data-component-id="options-title-text">オプション</h1>
         <button
           type="button"
           className="window-button window-button--minimize"

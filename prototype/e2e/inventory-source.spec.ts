@@ -17,7 +17,7 @@ function mae(reference: string, actual: string) {
 }
 
 test("inventory is thirty-three independent assets over a Qwen-derived clean plate", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   await expect(window).toHaveAttribute("data-clean-plate", "/assets/japanese-rpg-v001/inventory/clean-plate.png");
   await expect(window.locator("[data-component-id]")).toHaveCount(33);
@@ -35,7 +35,7 @@ test("inventory is thirty-three independent assets over a Qwen-derived clean pla
 });
 
 test("inventory category tabs own distinct settled views", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   await expect(window.locator(".inventory-source-cell")).toHaveCount(21);
   await window.getByRole("tab", { name: "equip", exact: true }).click();
@@ -46,7 +46,7 @@ test("inventory category tabs own distinct settled views", async ({ page }) => {
 });
 
 test("every Inventory category is a reachable tab with its complete selectable cell inventory", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   const tablist = window.getByRole("tablist", { name: "所持品カテゴリ" });
   await expect(tablist).toBeVisible();
@@ -69,7 +69,7 @@ test("every Inventory category is a reachable tab with its complete selectable c
 });
 
 test("Inventory category tabs support vertical keyboard traversal and wrapped selection", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const tabs = page.getByRole("region", { name: "所持アイテム" }).getByRole("tablist", { name: "所持品カテゴリ" });
   const item = tabs.getByRole("tab", { name: "item", exact: true });
   const equip = tabs.getByRole("tab", { name: "equip", exact: true });
@@ -91,7 +91,7 @@ test("Inventory category tabs support vertical keyboard traversal and wrapped se
 });
 
 test("every reachable Inventory cell independently owns selection in all three categories", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   const expected = { item: 21, equip: 14, etc: 7 } as const;
 
@@ -109,7 +109,7 @@ test("every reachable Inventory cell independently owns selection in all three c
 });
 
 test("inventory cells select independently and scrolling is continuous", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   const cell = window.getByRole("button", { name: "item item 9" });
   await cell.click();
@@ -135,7 +135,7 @@ test("inventory cells select independently and scrolling is continuous", async (
 });
 
 test("inventory scrolling changes only the clipped body and never enters the header", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   const slider = window.getByRole("slider", { name: "所持品スクロール" });
   const bounds = await window.boundingBox();
@@ -156,7 +156,7 @@ test("inventory scrolling changes only the clipped body and never enters the hea
 });
 
 test("Inventory real scroll gestures keep one visual thumb and every sampled body state below the header", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   const slider = window.getByRole("slider", { name: "所持品スクロール" });
   await expect(slider).toHaveAttribute("data-visual-component", "inventory-scroll-thumb");
@@ -195,7 +195,7 @@ test("Inventory real scroll gestures keep one visual thumb and every sampled bod
 });
 
 test("Inventory minimize uses a generated compact endpoint through complete motion and restores", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=inventory");
   const window = page.getByRole("region", { name: "所持アイテム" });
   const minimize = window.getByRole("button", { name: "所持アイテムを最小化" });
   await expect(minimize).toHaveAttribute("data-minimize-endpoint", "/assets/japanese-rpg-v001/inventory/minimized-plate.png");

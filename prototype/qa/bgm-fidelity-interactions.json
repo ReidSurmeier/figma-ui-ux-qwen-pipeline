@@ -19,18 +19,18 @@
         "godot/tests/options_web.spec.mjs"
       ]
     },
-    { "id": "card", "status": "pending-benchmark-replay" },
-    { "id": "skills", "status": "pending-benchmark-replay" },
-    { "id": "status", "status": "pending-benchmark-replay" },
-    { "id": "inventory", "status": "pending-benchmark-replay" },
-    { "id": "equipment", "status": "pending-benchmark-replay" },
-    { "id": "chat", "status": "pending-benchmark-replay" },
-    { "id": "exchange", "status": "pending-benchmark-replay" },
-    { "id": "game-menu", "status": "pending-benchmark-replay" },
-    { "id": "compact-info", "status": "pending-benchmark-replay" },
-    { "id": "party", "status": "pending-benchmark-replay" },
-    { "id": "quickbar", "status": "pending-benchmark-replay" },
-    { "id": "bottom-bar", "status": "pending-benchmark-replay" },
-    { "id": "notification", "status": "pending-benchmark-replay" }
+    { "id": "card", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/card-source.spec.ts"] },
+    { "id": "skills", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/skills-source.spec.ts"] },
+    { "id": "status", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/status-source.spec.ts"] },
+    { "id": "inventory", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/inventory-source.spec.ts"] },
+    { "id": "equipment", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/equipment-source.spec.ts"] },
+    { "id": "chat", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/chat-source.spec.ts"] },
+    { "id": "exchange", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/exchange-source.spec.ts"] },
+    { "id": "game-menu", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/game-menu-source.spec.ts"] },
+    { "id": "compact-info", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json"] },
+    { "id": "party", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/party-source.spec.ts"] },
+    { "id": "quickbar", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/quickbar-source.spec.ts"] },
+    { "id": "bottom-bar", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json", "prototype/e2e/bottom-bar-source.spec.ts"] },
+    { "id": "notification", "status": "benchmark-pass", "evidence": ["artifacts/qa/standalone-windows-v001/report.json"] }
   ]
 }

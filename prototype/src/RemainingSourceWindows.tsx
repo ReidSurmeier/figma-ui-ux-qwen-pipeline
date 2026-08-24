@@ -116,14 +116,17 @@ export function ChatSourceWindow({ zIndex, onActivate }: WindowProps) {
     <SourceWindow id="chat" title="チャットルーム" initialPosition={{ x: 285, y: 279 }} width={280} height={120} titleWidth={45} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closable={false} dragHandleStyle={{ width: 60 }}>
       <div>
         <SourceRaster id="chat-topic-label" file={`${assetRoot}/components/topic-label`} style={{ left: 3, top: 26, width: 41, height: 19 }} /><SourceRaster id="chat-topic-field" file={`${assetRoot}/components/topic-field`} style={{ left: 44, top: 26, width: 232, height: 19 }} />
-        <SourceRaster id="chat-people" file={`${assetRoot}/components/people`} style={{ left: 3, top: 45, width: 133, height: 20 }} /><SourceRaster id="chat-room" file={`${assetRoot}/components/room`} style={{ left: 136, top: 45, width: 140, height: 20 }} />
+        <SourceRaster id="chat-people" file={`${assetRoot}/components/people`} style={{ left: 3, top: 45, width: 133, height: 20 }} /><SourceRaster id="chat-room-label" file={`${assetRoot}/components/room-label`} style={{ left: 136, top: 45, width: 45, height: 20 }} />
         <SourceRaster id="chat-security" file={`${assetRoot}/components/security`} style={{ left: 3, top: 65, width: 131, height: 20 }} />
         <SourceRaster id="chat-privacy-public" file={`${assetRoot}/components/privacy-${privacy === "公開" ? "on" : "off"}`} style={{ left: 43, top: 66, width: 16, height: 18 }} />
         <SourceRaster id="chat-privacy-private" file={`${assetRoot}/components/privacy-${privacy === "非公開" ? "on" : "off"}`} style={{ left: 82, top: 66, width: 16, height: 18 }} />
         <SourceRaster id="chat-password" file={`${assetRoot}/components/password`} style={{ left: 135, top: 65, width: 141, height: 20 }} />
         <input className="chat-source-topic" aria-label="トピック" data-visual-component="chat-topic-field" value={topic} onChange={(event) => setTopic(event.currentTarget.value)} />
         <div className="chat-source-room-control" onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setRoomOpen(false); }}>
-          <button type="button" className="chat-source-room-button" role="combobox" aria-label="ルーム" aria-expanded={roomOpen} aria-controls="chat-room-options" aria-haspopup="listbox" data-visual-component="chat-room" onClick={() => setRoomOpen((value) => !value)}>{room}</button>
+          <button type="button" className="chat-source-room-button" role="combobox" aria-label="ルーム" aria-expanded={roomOpen} aria-controls="chat-room-options" aria-haspopup="listbox" onClick={() => setRoomOpen((value) => !value)}>
+            <SourceRaster id="chat-room-select" file={`${assetRoot}/components/room-select`} style={{ inset: 0 }} />
+            <span className={room === "チャットルーム" ? "sr-only" : "chat-source-room-value"}>{room}</span>
+          </button>
           {roomOpen && <div id="chat-room-options" className="chat-source-room-listbox" role="listbox" aria-label="ルーム">
             {["チャットルーム", "パーティー"].map((option) => <button key={option} type="button" role="option" aria-selected={room === option} onClick={() => { setRoom(option); setRoomOpen(false); }}>{option}</button>)}
           </div>}
@@ -177,7 +180,7 @@ export function PartySourceWindow({ zIndex, onActivate, open, onClose, tab, onTa
     setStatus(`${names[next]} を選択`);
   };
   return <>
-    <SourceWindow id="party" title="パーティー (Riri-Soft)" initialPosition={{ x: 568, y: 370 }} width={160} height={154} titleWidth={125} titleTop={4} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closeRight={1} closeTop={3} open={open} onClose={onClose}>
+    <SourceWindow id="party" title="パーティー (Riri-Soft)" initialPosition={{ x: 568, y: 349 }} width={160} height={175} titleWidth={125} titleTop={5} assetRoot={assetRoot} zIndex={zIndex} onActivate={onActivate} minimizable={false} closeRight={1} closeTop={4} open={open} onClose={onClose}>
       <div id="party-member-list" className="party-source-member-list" role="listbox" aria-label="パーティーメンバー" aria-activedescendant={member === null ? undefined : `party-member-option-${member}`} tabIndex={0} onKeyDown={moveMember}>{names.map((name, row) => {
         const selected = member === row;
         const rowFile = row === 0 && !selected
@@ -185,7 +188,7 @@ export function PartySourceWindow({ zIndex, onActivate, open, onClose, tab, onTa
           : row !== 0 && selected
             ? `${assetRoot}/components/member-row-${row}-selected`
             : `${assetRoot}/components/member-${row}`;
-        return <button key={name} id={`party-member-option-${row}`} type="button" role="option" tabIndex={-1} className="party-source-member" aria-label={name} aria-selected={selected} data-visual-component={`party-member-${row}`} style={{ top: 19 + row * 19 }} onClick={() => { const next = selected ? null : row; setMember(next); setStatus(next === null ? `${name} の選択を解除` : `${name} を選択`); }}>
+        return <button key={name} id={`party-member-option-${row}`} type="button" role="option" tabIndex={-1} className="party-source-member" aria-label={name} aria-selected={selected} data-visual-component={`party-member-${row}`} style={{ top: 20 + row * 19 }} onClick={() => { const next = selected ? null : row; setMember(next); setStatus(next === null ? `${name} の選択を解除` : `${name} を選択`); }}>
           <SourceRaster id={`party-member-${row}`} file={rowFile} style={{ inset: 0 }} />
         </button>;
       })}</div>

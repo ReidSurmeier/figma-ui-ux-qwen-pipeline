@@ -1,0 +1,26 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "image": "[recorded separately]"
+          },
+          {
+            "text": "[TASK]\nRemove every UI window, control, icon, label, character fragment, notification, bar, and game-world fragment from the Japanese RPG desktop reference. Reconstruct one uninterrupted source-matched magenta pixel-texture desktop field across the complete canvas.\n\n[REFERENCE ROLE]\nReference image 1 is a 3:2 preparation of the immutable 849 by 564 source screenshot. The exposed magenta pixels between windows are the only background authority. UI content is removal evidence and must never be copied into the output.\n\n[PRESERVATION INVARIANTS]\n- Keep the exact 849 by 564 desktop extent and late-1990s source-scale raster character.\n- Match the exposed magenta field's hue range, subtle pixel noise, and brightness variation.\n- The background must remain a single continuous layer with no panels, seams, shadows, or window silhouettes.\n\n[CANVAS AND LAYOUT]\n- Return a 3:2 1K canvas; the final deterministic crop is 849 by 564.\n- Fill every pixel with the reconstructed magenta desktop texture.\n- No transparent area, margin, border, frame, or non-magenta region.\n\n[REGION EDITS]\n- REGION: complete desktop cleanup\n  CHANGE: Erase all foreground application and game content and continue the exposed magenta pixel field through every removed region.\n  PRESERVE: exposed magenta palette samples; source-scale pixel noise; continuous field\n\n[STYLE SYSTEM]\n- Exact source-matched magenta late-1990s Japanese PC game desktop texture.\n- Hard source-scale pixels with restrained analog color noise, not a smooth modern gradient.\n\n[ASSET RULES]\n- Background asset only; every UI element is owned by a separate sealed window.\n- No readable or pseudo text, icons, window chrome, controls, characters, bars, notification bubbles, or dark game scene.\n\n[NEGATIVE CONSTRAINTS]\n- No interface fragments, white panels, blue chrome, grey buttons, black scene, figures, text, symbols, borders, checkerboards, empty holes, blur, glow, modern gradient, or vignette.\n\n[QUALITY GATE]\n- Every connected non-magenta foreground region is absent.\n- Exposed source background samples and the output agree in hue and brightness at source scale.\n- The final 849 by 564 crop tiles behind all sealed windows without revealing a seam or retained screenshot fragment."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 2,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083141,
+    "size": "1248*832",
+    "watermark": false
+  }
+}

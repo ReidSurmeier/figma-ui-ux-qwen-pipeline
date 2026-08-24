@@ -1,0 +1,23 @@
+{
+  "input": {
+    "messages": [
+      {
+        "content": [
+          {
+            "text": "[TASK]\nGenerate a completely empty full-frame magenta pixel-texture background for a late-1990s Japanese PC RPG desktop. This is a new background asset, not a screenshot edit.\n\n[REFERENCE ROLE]\nNo reference image is provided. The measured source palette is the authority: dominant #F507F5 with sparse one-pixel variation through #C845BD, #B233B3, and rare #FA9CFA highlights.\n\n[PRESERVATION INVARIANTS]\n- The entire canvas is one uninterrupted magenta field.\n- Keep source-scale hard pixel noise subtle and sparse.\n- The dominant color remains #F507F5 across at least ninety percent of the image.\n\n[CANVAS AND LAYOUT]\n- Fill the complete 3:2 canvas edge to edge.\n- No transparent pixels, margins, frames, objects, panels, silhouettes, or empty holes.\n\n[REGION EDITS]\n- REGION: continuous desktop field\n  CHANGE: Render only the measured magenta pixel field with extremely subtle source-scale color noise.\n  PRESERVE: uniform continuity; hard pixel scale; measured palette\n\n[STYLE SYSTEM]\n- Minimal flat neon-magenta late-1990s PC game desktop texture.\n- Almost solid #F507F5, sparse single-pixel chroma noise, no lighting or depth.\n\n[ASSET RULES]\n- Background texture only.\n- Zero text, pseudo-text, glyphs, icons, windows, controls, characters, bars, or recognizable objects.\n\n[NEGATIVE CONSTRAINTS]\n- No UI, screenshot, software window, game art, text, symbols, shapes, panels, borders, checkerboard, gradient, vignette, shadow, glow, blur, illustration, scenery, or subject.\n\n[QUALITY GATE]\n- The image contains no connected object or readable mark.\n- The complete frame is magenta and visually seamless.\n- Point reduction to 849 by 564 retains subtle pixel texture without banding."
+          }
+        ],
+        "role": "user"
+      }
+    ]
+  },
+  "model": "qwen-image-3.0-pro",
+  "parameters": {
+    "n": 2,
+    "prompt_extend": true,
+    "prompt_extend_mode": "direct",
+    "seed": 22083142,
+    "size": "1248*832",
+    "watermark": false
+  }
+}

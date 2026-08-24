@@ -32,7 +32,7 @@ async function stableClip(page: Page, clip: { x: number; y: number; width: numbe
 }
 
 test("Every Equipment row owns its exact source column and transfers exclusive selection", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=equipment");
   const equipment = page.getByRole("region", { name: "装備アイテム" });
   await activateWindow(equipment);
   const bounds = await equipment.boundingBox();
@@ -65,7 +65,7 @@ test("Every Equipment row owns its exact source column and transfers exclusive s
 });
 
 test("Equipment minimize uses its generated compact endpoint through complete motion and restores", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=equipment");
   const equipment = page.getByRole("region", { name: "装備アイテム" });
   const minimize = equipment.getByRole("button", { name: "装備アイテムを最小化", exact: true });
   await expect(minimize).toHaveAttribute("data-minimize-endpoint", "/assets/japanese-rpg-v001/equipment/minimized-plate.png");

@@ -492,10 +492,10 @@ test("Party member selection can clear and moves only the source-local indicator
   const bounds = await party.boundingBox();
   if (!bounds) throw new Error("Party member-state geometry is unavailable");
 
-  const firstIndicator = { x: bounds.x + 3, y: bounds.y + 19, width: 18, height: 19 };
-  const firstLabel = { x: bounds.x + 21, y: bounds.y + 19, width: 136, height: 19 };
-  const secondIndicator = { x: bounds.x + 3, y: bounds.y + 38, width: 18, height: 19 };
-  const secondLabel = { x: bounds.x + 21, y: bounds.y + 38, width: 136, height: 19 };
+  const firstIndicator = { x: bounds.x + 3, y: bounds.y + 20, width: 18, height: 19 };
+  const firstLabel = { x: bounds.x + 21, y: bounds.y + 20, width: 136, height: 19 };
+  const secondIndicator = { x: bounds.x + 3, y: bounds.y + 39, width: 18, height: 19 };
+  const secondLabel = { x: bounds.x + 21, y: bounds.y + 39, width: 136, height: 19 };
   const partyAssets = join(process.cwd(), "public/assets/japanese-rpg-v001/party/components");
   const firstSourceGlyphs = sourceGlyphMaskSignature(join(partyAssets, "member-0.png"), "136x19+18+0");
   const secondSourceGlyphs = sourceGlyphMaskSignature(join(partyAssets, "member-1.png"), "136x19+18+0");

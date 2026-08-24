@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.0",
+  "status": "pass",
+  "model": "qwen/qwen-image-3-pro",
+  "provider": "alibaba",
+  "sourceAuthority": "benchmarks/japanese-rpg-options-v001/reference.png",
+  "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
+  "rejectedRun": {
+    "path": "artifacts/runs/japanese-desktop-background-v001",
+    "reason": "Reference-conditioned generation copied foreground UI instead of returning a clean background field.",
+    "candidates": [
+      {
+        "candidate": 1,
+        "input": "artifacts/runs/japanese-desktop-background-v001/image-01.png",
+        "sha256": "60b4355df9603cc98d1d91da9371b9a86bdc25b410209521816b825fa3a03c42",
+        "flatFieldStandardDeviation": 0.263316,
+        "exposedSourceNormalizedMae": 0.0166592
+      },
+      {
+        "candidate": 2,
+        "input": "artifacts/runs/japanese-desktop-background-v001/image-02.png",
+        "sha256": "b62941e22c0c0c0db892cc83d5ef5928d37553dac6b6e83448a03683e6f031a0",
+        "flatFieldStandardDeviation": 0.261151,
+        "exposedSourceNormalizedMae": 0.0211405
+      }
+    ]
+  },
+  "acceptedRun": {
+    "path": "artifacts/runs/japanese-desktop-background-v002",
+    "promptId": "5719385a-8e94-9e4e-9827-cfa8d8fb6299",
+    "selectedCandidate": 1,
+    "candidates": [
+      {
+        "candidate": 1,
+        "input": "artifacts/runs/japanese-desktop-background-v002/image-01.png",
+        "sha256": "8163250553e60c75ae6234f854626993388f5cfea7460eafe77d2de68103301f",
+        "flatFieldStandardDeviation": 0.0113249,
+        "exposedSourceNormalizedMae": 0.0140135
+      },
+      {
+        "candidate": 2,
+        "input": "artifacts/runs/japanese-desktop-background-v002/image-02.png",
+        "sha256": "0b24aae5c6b72ee0798d63c0fc59e56bc047cccb1e4c1d370e655a550ef80aab",
+        "flatFieldStandardDeviation": 0.0130377,
+        "exposedSourceNormalizedMae": 0.0144573
+      }
+    ]
+  },
+  "productionAsset": "prototype/public/assets/japanese-rpg-v001/desktop/background.png",
+  "productionSha256": "0728c5b5ad810ec6f86df6dbb4532116cc80c9f3bf5d224358a1384ac0465b54"
+}

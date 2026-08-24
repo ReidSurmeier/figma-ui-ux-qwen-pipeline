@@ -1,0 +1,50 @@
+{
+  "asset_rules": [
+    "Background asset only; every UI element is owned by a separate sealed window.",
+    "No readable or pseudo text, icons, window chrome, controls, characters, bars, notification bubbles, or dark game scene."
+  ],
+  "canvas": [
+    "Return a 3:2 1K canvas; the final deterministic crop is 849 by 564.",
+    "Fill every pixel with the reconstructed magenta desktop texture.",
+    "No transparent area, margin, border, frame, or non-magenta region."
+  ],
+  "exact_copy": [],
+  "model": "qwen/qwen-image-3-pro",
+  "negative_constraints": [
+    "No interface fragments, white panels, blue chrome, grey buttons, black scene, figures, text, symbols, borders, checkerboards, empty holes, blur, glow, modern gradient, or vignette."
+  ],
+  "objective": "Remove every UI window, control, icon, label, character fragment, notification, bar, and game-world fragment from the Japanese RPG desktop reference. Reconstruct one uninterrupted source-matched magenta pixel-texture desktop field across the complete canvas.",
+  "output": {
+    "aspect_ratio": "3:2",
+    "count": 2,
+    "resolution": "1K",
+    "seed": 22083141
+  },
+  "preservation_invariants": [
+    "Keep the exact 849 by 564 desktop extent and late-1990s source-scale raster character.",
+    "Match the exposed magenta field's hue range, subtle pixel noise, and brightness variation.",
+    "The background must remain a single continuous layer with no panels, seams, shadows, or window silhouettes."
+  ],
+  "provider": "alibaba",
+  "quality_checks": [
+    "Every connected non-magenta foreground region is absent.",
+    "Exposed source background samples and the output agree in hue and brightness at source scale.",
+    "The final 849 by 564 crop tiles behind all sealed windows without revealing a seam or retained screenshot fragment."
+  ],
+  "reference_role": "Reference image 1 is a 3:2 preparation of the immutable 849 by 564 source screenshot. The exposed magenta pixels between windows are the only background authority. UI content is removal evidence and must never be copied into the output.",
+  "regions": [
+    {
+      "change": "Erase all foreground application and game content and continue the exposed magenta pixel field through every removed region.",
+      "name": "complete desktop cleanup",
+      "preserve": [
+        "exposed magenta palette samples",
+        "source-scale pixel noise",
+        "continuous field"
+      ]
+    }
+  ],
+  "style": [
+    "Exact source-matched magenta late-1990s Japanese PC game desktop texture.",
+    "Hard source-scale pixels with restrained analog color noise, not a smooth modern gradient."
+  ]
+}

@@ -17,9 +17,11 @@
     "prepare:figma-build": "node ../scripts/generate_figma_japanese_desktop_v001_build.mjs",
     "qa:replay": "node scripts/run-correction-matrix.mjs",
     "qa:bgm-fidelity": "node scripts/bgm-fidelity-gate.mjs",
+    "qa:standalone": "node scripts/standalone-window-gate.mjs",
+    "qa:desktop-background": "node scripts/select-desktop-background.mjs",
     "test:contracts": "bash scripts/contract-check.sh && bash scripts/basic-info-contract.sh && bash scripts/status-contract.sh && bash scripts/inventory-contract.sh && bash scripts/remaining-window-contract.sh && bash scripts/map-contract.sh",
     "test:figma-live": "bash scripts/figma-live-check.sh && bash scripts/figma-basic-info-live-check.sh && bash scripts/figma-status-live-check.sh && bash scripts/figma-desktop-live-check.sh",
-    "test:all": "npm test && npm run build && npm run test:contracts && npm run test:e2e && npm run test:visual && npm run test:visual:source && npm run qa:bgm-fidelity",
+    "test:all": "npm test && npm run build && npm run test:contracts && npm run test:e2e && npm run test:visual && npm run test:visual:source && npm run qa:desktop-background && npm run qa:standalone && npm run qa:bgm-fidelity",
     "test:all:live": "npm run test:all && npm run test:figma-live"
   },
   "dependencies": {

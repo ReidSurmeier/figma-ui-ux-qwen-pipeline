@@ -4,24 +4,25 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787510080775",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787529564046",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787510080773",
-    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787510080773",
-    "http://10.255.255.254:4174/src/styles.css?t=1787510080775",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/styles.css?t=1787528810559",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
     "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
     "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787465313587",
     "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787468367758",
-    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787470702058",
+    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787527971154",
     "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787466360012",
     "http://10.255.255.254:4174/src/MapSourceWindow.tsx?t=1787465870814",
-    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787465870814",
+    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787527441898",
     "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787465870814",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/desktop/background.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
@@ -105,16 +106,21 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/side-tabs.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-4.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-4.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-5.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-5.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-icon.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-text.png",
@@ -171,11 +177,12 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-label.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-field.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/people.png",
-    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room-label.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/security.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-on.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-off.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/password.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room-select.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/ok.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/cancel.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/clean-plate.png",
@@ -349,9 +356,9 @@
       "label": "装備アイテムを最小化",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "3589d5a1b5cd1a3620913572b58acda68e7d67ca5e84d4afece7acccd6a3f36e",
-      "settledHash": "30045909b136cb3109cc9996b970e0826c3506bd6c5f49e6ebdb8bf0ef46a3a0",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "4f2be120ba3152b227496a87a4880e3fa8eee382811f3acc785bf94071df35ca",
+      "settledHash": "e14a3dc4519d2c122fd01542c5ab27f089cb6ef2f17a674f31bfe0da58c9509d",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -366,7 +373,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -425,9 +432,9 @@
       "label": "装備アイテムを閉じる",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "a8b8ce72cfcc3fe7a6ec1a856f85967500962a7b878f8d4ef3be282a7ef6f0f2",
-      "settledHash": "00f6e0c4c3a9d55fde269d5ea3f9c4fbdcb9bb1bac575f75511de57593754f3f",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "03100f7fb1b3f83811ae456add5c73b79b23cee9928f71fefc09092994c877c4",
+      "settledHash": "30ba3683b581e794f25ce9595f5c74869b45c98e538d5dd81b63fb93a1e2334c",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -442,7 +449,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Equipment close removes the window and Basic Info restores its complete destination",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -494,9 +501,9 @@
       "label": "左装備 1",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "a703dfa3574baa6f77c39cf05587278f4fdcfb5ac16290b673f3e60f0bb68ff1",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "4991308ab2b88deaf95ca3bd8222b5694286718fade3a61fe8b5f48e517548d5",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -510,7 +517,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -571,9 +578,9 @@
       "label": "左装備 2",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "35a6bc3bb6ba82f310b24bd97e7d71baef5f5813c7365d53bddcaf295887449a",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "0cdc63d5f0f22f7e1e84bac36ccfb5c7f078963ee91fd5d6bb82d34aaf28a50f",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -587,7 +594,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -648,9 +655,9 @@
       "label": "左装備 3",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "b9509b4371f120c2224e8aac6baee2fdf8e807d6d355e3e171090abdb3fe2385",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "e17e533fdc68f7a892ec13a7fccf1d037f5f8225b8015bd1c222223f371c650b",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -664,7 +671,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -725,9 +732,9 @@
       "label": "左装備 4",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "b1461b527f45bcc76d958be37e8bc31c6f23cf9f9ab926569ba6bdc33ede6761",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "6ae9a0266e18fec1519f433aec2e2b60c09a004c4eb4a6509d8942e687461e78",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -741,7 +748,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -802,9 +809,9 @@
       "label": "左装備 5",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "8e47caecf7b4bacf98b88d41635e2da4275fb95e8e97c35492a4f32face6c9e7",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "787e986c27034be9bbdd840316b0054bd88964e8428630ee8d64e63bdc3b8952",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -818,7 +825,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -879,9 +886,9 @@
       "label": "右装備 1",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "79a22dc1be6eb73acdc672976d5399057f5caa479937e9589d691aa46b5937b1",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "bdb6cb264fe22926192410be88e10375291ed772de4f1294f13d2eaf9c089494",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -895,7 +902,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -956,9 +963,9 @@
       "label": "右装備 2",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "44f7047c59dbb52147b6fd340bfd1fbefaf8d3a17ba46d238d7e4b76ab2fe80e",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "420ac1425af35d47ea7791375ef9f4ab27ad30e8574d8287de214fc6b0594c83",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -972,7 +979,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1033,9 +1040,9 @@
       "label": "右装備 3",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "a4ac95d6e831943cb6cb57a7615c2c41c337deaadc1fea3bada4f188cdfcf757",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "abf0ce74ed6c292c921bab59f69202d50f6a04ab85b7c6789cafb5419c0101db",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -1049,7 +1056,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1110,9 +1117,9 @@
       "label": "右装備 4",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "8e1adbdbec3c99381e3942e3a4fba66a6b0382cc8aee8063b8b1f45e2ade12a1",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "9262bfe803bd05a8126a5783378b4d76f3ac16e15d8eaf8a45c960e7b4c0ccb5",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -1126,7 +1133,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1187,9 +1194,9 @@
       "label": "右装備 5",
       "tag": "button",
       "type": "",
-      "idleHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "downHash": "c980b31c41b931d16d2162a696a8355fc12f1f326261bc7032fdac5fa45e2f16",
-      "settledHash": "81c81b3733a615e2929119a8e26e36d131d4e666a37bb3dace2f86a24d252240",
+      "idleHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "downHash": "97cb4e26aa93fc6efa0ca7eb77bdce0b7052bf44529a41e210e504793cddb626",
+      "settledHash": "7d4601fb04f7047a6d4da524e6bb92ce0be8cb5014982fba10996ffca427755f",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -1203,7 +1210,7 @@
         "test": {
           "file": "e2e/equipment-source.spec.ts",
           "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-          "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+          "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1276,10 +1283,6 @@
         152
       ],
       [
-        280,
-        152
-      ],
-      [
         272.3,
         141.7
       ],
@@ -1330,10 +1333,128 @@
       [
         180,
         18
+      ],
+      [
+        180,
+        18
       ]
     ],
     "distinctGeometry": 14,
-    "gesture": "trusted Playwright pointer click"
+    "gesture": "trusted Playwright pointer click",
+    "titleAuthority": {
+      "expanded": {
+        "windowBox": {
+          "x": 0,
+          "y": 385,
+          "width": 280,
+          "height": 152
+        },
+        "titleBoxes": [
+          {
+            "x": 3,
+            "y": 388,
+            "width": 13,
+            "height": 13
+          },
+          {
+            "x": 16,
+            "y": 388,
+            "width": 110,
+            "height": 13
+          }
+        ],
+        "controlBoxes": [
+          {
+            "x": 251,
+            "y": 385,
+            "width": 14,
+            "height": 18
+          },
+          {
+            "x": 266,
+            "y": 385,
+            "width": 13,
+            "height": 18
+          }
+        ],
+        "withinWindow": true
+      },
+      "settled": {
+        "windowBox": {
+          "x": 0,
+          "y": 385,
+          "width": 180,
+          "height": 18
+        },
+        "titleBoxes": [
+          {
+            "x": 3,
+            "y": 388,
+            "width": 13,
+            "height": 13
+          },
+          {
+            "x": 16,
+            "y": 388,
+            "width": 110,
+            "height": 13
+          }
+        ],
+        "controlBoxes": [
+          {
+            "x": 151,
+            "y": 385,
+            "width": 14,
+            "height": 18
+          },
+          {
+            "x": 166,
+            "y": 385,
+            "width": 13,
+            "height": 18
+          }
+        ],
+        "withinWindow": true
+      },
+      "restored": {
+        "windowBox": {
+          "x": 0,
+          "y": 385,
+          "width": 280,
+          "height": 152
+        },
+        "titleBoxes": [
+          {
+            "x": 3,
+            "y": 388,
+            "width": 13,
+            "height": 13
+          },
+          {
+            "x": 16,
+            "y": 388,
+            "width": 110,
+            "height": 13
+          }
+        ],
+        "controlBoxes": [
+          {
+            "x": 251,
+            "y": 385,
+            "width": 14,
+            "height": 18
+          },
+          {
+            "x": 266,
+            "y": 385,
+            "width": 13,
+            "height": 18
+          }
+        ],
+        "withinWindow": true
+      },
+      "pass": true
+    }
   },
   "checkboxes": [],
   "donorPinkBoundary": 0,
@@ -1347,7 +1468,7 @@
     {
       "script": "remaining-window-contract.sh",
       "status": 0,
-      "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+      "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
       "error": ""
     }
   ],
@@ -1394,7 +1515,7 @@
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
-        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1439,7 +1560,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info page control declares and reaches its source-approved destination",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1482,7 +1603,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1520,7 +1641,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1565,7 +1686,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1603,7 +1724,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1644,7 +1765,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status close removes the window and Basic Info restores the same independent destination",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1684,7 +1805,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1722,7 +1843,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "every reachable Inventory cell independently owns selection in all three categories",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1763,7 +1884,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1801,7 +1922,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1842,7 +1963,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1880,7 +2001,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card art rotation is reversible and leaves title plus copy pixels invariant",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1921,7 +2042,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card real scroll gestures move copy and one visual thumb without entering title or art",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1959,7 +2080,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card slot controls the Card scroll state without changing title or art",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2000,7 +2121,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card close target removes exactly the Card window",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2037,7 +2158,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2077,7 +2198,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2118,7 +2239,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills real scroll gestures keep one thumb and the clipped list outside title and footer",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2156,7 +2277,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills use acts on selection and both close controls support Basic Info recovery",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2198,7 +2319,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills use acts on selection and both close controls support Basic Info recovery",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2235,7 +2356,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2276,7 +2397,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2317,7 +2438,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment close removes the window and Basic Info restores its complete destination",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2356,7 +2477,7 @@
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
-        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2401,7 +2522,7 @@
       "test": {
         "file": "e2e/chat-source.spec.ts",
         "title": "Chat visibly edits Japanese topic and submits one application-owned form without invented tabs",
-        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2442,7 +2563,7 @@
       "test": {
         "file": "e2e/chat-source.spec.ts",
         "title": "Chat cancel restores the complete default form instead of only clearing topic",
-        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2482,7 +2603,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
-        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2525,7 +2646,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
-        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2565,7 +2686,7 @@
       "test": {
         "file": "e2e/game-menu-source.spec.ts",
         "title": "Every Game Menu action owns its source row, transfers selection, and toggles back to ready",
-        "sha256": "2c478098d71f214538961b29911160291b1cc3e7f2a1a05a6191209dd6e8f040"
+        "sha256": "543e2f9a9bdacd1b6faea56ce055490dfbfafa96f9b16b83dcf14123a88b4b88"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2605,7 +2726,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Every Party member is a reachable listbox option with exclusive reversible selection",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2645,7 +2766,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party tools and source tabs transfer state and support keyboard traversal",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2687,7 +2808,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party tools and source tabs transfer state and support keyboard traversal",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2730,7 +2851,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party satellite actions stay fixed while Party moves and expose exact ownership",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2771,7 +2892,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party close removes satellites and Basic Info friend restores the complete destination",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2808,7 +2929,7 @@
       "test": {
         "file": "e2e/quickbar-source.spec.ts",
         "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
-        "sha256": "44c23059158bbe2630825c2c980cc8294e58f441d9513e2726716ffe4f03e32f"
+        "sha256": "02842a0bcb01dc3f1bd5c75ff6c1d84ccdc69688a76f92d9a8d89e1a8967e2aa"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",

@@ -27,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 279
+            "requestedResources": 286
           }
         }
       ]
@@ -82,7 +82,7 @@
               {
                 "script": "remaining-window-contract.sh",
                 "status": 0,
-                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
                 "error": ""
               }
             ],
@@ -221,8 +221,247 @@
                 ]
               ],
               "distinctGeometry": 14,
-              "gesture": "trusted Playwright pointer click"
+              "gesture": "trusted Playwright pointer click",
+              "titleAuthority": {
+                "expanded": {
+                  "windowBox": {
+                    "x": 0,
+                    "y": 247,
+                    "width": 280,
+                    "height": 137
+                  },
+                  "titleBoxes": [
+                    {
+                      "x": 3,
+                      "y": 250,
+                      "width": 13,
+                      "height": 13
+                    },
+                    {
+                      "x": 16,
+                      "y": 250,
+                      "width": 120,
+                      "height": 13
+                    }
+                  ],
+                  "controlBoxes": [
+                    {
+                      "x": 251,
+                      "y": 247,
+                      "width": 14,
+                      "height": 18
+                    },
+                    {
+                      "x": 266,
+                      "y": 247,
+                      "width": 13,
+                      "height": 18
+                    }
+                  ],
+                  "withinWindow": true
+                },
+                "settled": {
+                  "windowBox": {
+                    "x": 0,
+                    "y": 247,
+                    "width": 180,
+                    "height": 18
+                  },
+                  "titleBoxes": [
+                    {
+                      "x": 3,
+                      "y": 250,
+                      "width": 13,
+                      "height": 13
+                    },
+                    {
+                      "x": 16,
+                      "y": 250,
+                      "width": 120,
+                      "height": 13
+                    }
+                  ],
+                  "controlBoxes": [
+                    {
+                      "x": 151,
+                      "y": 247,
+                      "width": 14,
+                      "height": 18
+                    },
+                    {
+                      "x": 166,
+                      "y": 247,
+                      "width": 13,
+                      "height": 18
+                    }
+                  ],
+                  "withinWindow": true
+                },
+                "restored": {
+                  "windowBox": {
+                    "x": 0,
+                    "y": 247,
+                    "width": 280,
+                    "height": 137
+                  },
+                  "titleBoxes": [
+                    {
+                      "x": 3,
+                      "y": 250,
+                      "width": 13,
+                      "height": 13
+                    },
+                    {
+                      "x": 16,
+                      "y": 250,
+                      "width": 120,
+                      "height": 13
+                    }
+                  ],
+                  "controlBoxes": [
+                    {
+                      "x": 251,
+                      "y": 247,
+                      "width": 14,
+                      "height": 18
+                    },
+                    {
+                      "x": 266,
+                      "y": 247,
+                      "width": 13,
+                      "height": 18
+                    }
+                  ],
+                  "withinWindow": true
+                },
+                "pass": true
+              }
             }
+          }
+        }
+      ]
+    },
+    {
+      "prompt_id": "minimized-title-authority-continuity",
+      "verdict": "pass",
+      "note": "Executed window-specific probe passed.",
+      "evidence": [
+        {
+          "kind": "executed-browser-probe",
+          "artifact": "artifacts/qa/correction-matrix-v003/inventory/trace.json",
+          "metrics": {
+            "expanded": {
+              "windowBox": {
+                "x": 0,
+                "y": 247,
+                "width": 280,
+                "height": 137
+              },
+              "titleBoxes": [
+                {
+                  "x": 3,
+                  "y": 250,
+                  "width": 13,
+                  "height": 13
+                },
+                {
+                  "x": 16,
+                  "y": 250,
+                  "width": 120,
+                  "height": 13
+                }
+              ],
+              "controlBoxes": [
+                {
+                  "x": 251,
+                  "y": 247,
+                  "width": 14,
+                  "height": 18
+                },
+                {
+                  "x": 266,
+                  "y": 247,
+                  "width": 13,
+                  "height": 18
+                }
+              ],
+              "withinWindow": true
+            },
+            "settled": {
+              "windowBox": {
+                "x": 0,
+                "y": 247,
+                "width": 180,
+                "height": 18
+              },
+              "titleBoxes": [
+                {
+                  "x": 3,
+                  "y": 250,
+                  "width": 13,
+                  "height": 13
+                },
+                {
+                  "x": 16,
+                  "y": 250,
+                  "width": 120,
+                  "height": 13
+                }
+              ],
+              "controlBoxes": [
+                {
+                  "x": 151,
+                  "y": 247,
+                  "width": 14,
+                  "height": 18
+                },
+                {
+                  "x": 166,
+                  "y": 247,
+                  "width": 13,
+                  "height": 18
+                }
+              ],
+              "withinWindow": true
+            },
+            "restored": {
+              "windowBox": {
+                "x": 0,
+                "y": 247,
+                "width": 280,
+                "height": 137
+              },
+              "titleBoxes": [
+                {
+                  "x": 3,
+                  "y": 250,
+                  "width": 13,
+                  "height": 13
+                },
+                {
+                  "x": 16,
+                  "y": 250,
+                  "width": 120,
+                  "height": 13
+                }
+              ],
+              "controlBoxes": [
+                {
+                  "x": 251,
+                  "y": 247,
+                  "width": 14,
+                  "height": 18
+                },
+                {
+                  "x": 266,
+                  "y": 247,
+                  "width": 13,
+                  "height": 18
+                }
+              ],
+              "withinWindow": true
+            },
+            "pass": true
           }
         }
       ]
@@ -498,7 +737,121 @@
                 ]
               ],
               "distinctGeometry": 14,
-              "gesture": "trusted Playwright pointer click"
+              "gesture": "trusted Playwright pointer click",
+              "titleAuthority": {
+                "expanded": {
+                  "windowBox": {
+                    "x": 0,
+                    "y": 247,
+                    "width": 280,
+                    "height": 137
+                  },
+                  "titleBoxes": [
+                    {
+                      "x": 3,
+                      "y": 250,
+                      "width": 13,
+                      "height": 13
+                    },
+                    {
+                      "x": 16,
+                      "y": 250,
+                      "width": 120,
+                      "height": 13
+                    }
+                  ],
+                  "controlBoxes": [
+                    {
+                      "x": 251,
+                      "y": 247,
+                      "width": 14,
+                      "height": 18
+                    },
+                    {
+                      "x": 266,
+                      "y": 247,
+                      "width": 13,
+                      "height": 18
+                    }
+                  ],
+                  "withinWindow": true
+                },
+                "settled": {
+                  "windowBox": {
+                    "x": 0,
+                    "y": 247,
+                    "width": 180,
+                    "height": 18
+                  },
+                  "titleBoxes": [
+                    {
+                      "x": 3,
+                      "y": 250,
+                      "width": 13,
+                      "height": 13
+                    },
+                    {
+                      "x": 16,
+                      "y": 250,
+                      "width": 120,
+                      "height": 13
+                    }
+                  ],
+                  "controlBoxes": [
+                    {
+                      "x": 151,
+                      "y": 247,
+                      "width": 14,
+                      "height": 18
+                    },
+                    {
+                      "x": 166,
+                      "y": 247,
+                      "width": 13,
+                      "height": 18
+                    }
+                  ],
+                  "withinWindow": true
+                },
+                "restored": {
+                  "windowBox": {
+                    "x": 0,
+                    "y": 247,
+                    "width": 280,
+                    "height": 137
+                  },
+                  "titleBoxes": [
+                    {
+                      "x": 3,
+                      "y": 250,
+                      "width": 13,
+                      "height": 13
+                    },
+                    {
+                      "x": 16,
+                      "y": 250,
+                      "width": 120,
+                      "height": 13
+                    }
+                  ],
+                  "controlBoxes": [
+                    {
+                      "x": 251,
+                      "y": 247,
+                      "width": 14,
+                      "height": 18
+                    },
+                    {
+                      "x": 266,
+                      "y": 247,
+                      "width": 13,
+                      "height": 18
+                    }
+                  ],
+                  "withinWindow": true
+                },
+                "pass": true
+              }
             },
             "ranges": [
               {

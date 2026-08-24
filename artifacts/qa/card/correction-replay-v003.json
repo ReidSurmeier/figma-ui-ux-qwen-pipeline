@@ -27,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/card/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 278
+            "requestedResources": 285
           }
         }
       ]
@@ -82,7 +82,7 @@
               {
                 "script": "remaining-window-contract.sh",
                 "status": 0,
-                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
                 "error": ""
               }
             ],

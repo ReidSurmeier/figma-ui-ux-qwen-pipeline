@@ -130,8 +130,21 @@ async function captureHitMap(page) {
     const failures = [];
     for (const control of controls) {
       const bounds = control.getBoundingClientRect();
-      const xs = [bounds.left + bounds.width * 0.25, bounds.left + bounds.width * 0.5, bounds.left + bounds.width * 0.75];
-      const ys = [bounds.top + bounds.height * 0.25, bounds.top + bounds.height * 0.5, bounds.top + bounds.height * 0.75];
+      const visible = { left: bounds.left, top: bounds.top, right: bounds.right, bottom: bounds.bottom };
+      for (let ancestor = control.parentElement; ancestor && ancestor !== document.documentElement; ancestor = ancestor.parentElement) {
+        const style = getComputedStyle(ancestor);
+        if (![style.overflow, style.overflowX, style.overflowY].some((value) => ["hidden", "scroll", "auto", "clip"].includes(value))) continue;
+        const clip = ancestor.getBoundingClientRect();
+        visible.left = Math.max(visible.left, clip.left);
+        visible.top = Math.max(visible.top, clip.top);
+        visible.right = Math.min(visible.right, clip.right);
+        visible.bottom = Math.min(visible.bottom, clip.bottom);
+      }
+      if (visible.left >= visible.right || visible.top >= visible.bottom) continue;
+      const width = visible.right - visible.left;
+      const height = visible.bottom - visible.top;
+      const xs = [visible.left + width * 0.25, visible.left + width * 0.5, visible.left + width * 0.75];
+      const ys = [visible.top + height * 0.25, visible.top + height * 0.5, visible.top + height * 0.75];
       for (const x of xs) for (const y of ys) {
         const hit = document.elementFromPoint(x, y);
         const associatedLabelOwnsHit = hit?.closest("label")?.control === control;
@@ -176,21 +189,31 @@ export async function runBgmFidelityGate({
       const [x, y, width, height] = windowAuthority.bounds;
       const referenceCrop = resolve(workDir, `${windowAuthority.id}-reference.png`);
       const actualCrop = resolve(workDir, `${windowAuthority.id}-actual.png`);
+      const sourceSurfaceMask = resolve(workDir, `${windowAuthority.id}-source-surface-mask.png`);
+      const referenceMasked = resolve(workDir, `${windowAuthority.id}-reference-masked.png`);
+      const actualMasked = resolve(workDir, `${windowAuthority.id}-actual-masked.png`);
       runImageMagick("convert", [referencePath, "-crop", `${width}x${height}+${x}+${y}`, "+repage", referenceCrop]);
       runImageMagick("convert", [screenshotPath, "-crop", `${width}x${height}+${x}+${y}`, "+repage", actualCrop]);
+      // The independently generated Qwen desktop is verified by its own source-palette gate.
+      // Window fidelity must score the foreground window, not background pixels visible
+      // through stepped corners and intentional holes in the source crop.
+      runImageMagick("convert", [referenceCrop, "-alpha", "off", "-fx", "((r>0.45)&&(b>0.45)&&(g<0.95)&&(r-g)>0.04&&(b-g)>0.04)?0:1", sourceSurfaceMask]);
+      for (const [input, output] of [[referenceCrop, referenceMasked], [actualCrop, actualMasked]]) {
+        runImageMagick("convert", [input, sourceSurfaceMask, "-alpha", "off", "-compose", "CopyOpacity", "-composite", "-background", "black", "-alpha", "remove", output]);
+      }
 
       const runtimeWindow = manifest.windows.find((window) => window.id === windowAuthority.id);
       if (!runtimeWindow) throw new Error(`Runtime window missing: ${windowAuthority.id}`);
       const componentIds = new Set(runtimeWindow.components.map((component) => component.id));
       const mappedControls = runtimeWindow.controls.filter((control) => control.visualComponent && componentIds.has(control.visualComponent));
-      const highErrorCount = highErrorPixels(referenceCrop, actualCrop, contract.visual.highErrorFuzzPercent);
-      const largestComponent = largestHighErrorComponent(referenceCrop, actualCrop, contract.visual.highErrorFuzzPercent);
+      const highErrorCount = highErrorPixels(referenceMasked, actualMasked, contract.visual.highErrorFuzzPercent);
+      const largestComponent = largestHighErrorComponent(referenceMasked, actualMasked, contract.visual.highErrorFuzzPercent);
       const area = width * height;
       const geometryMismatches = visualGeometryMismatches(runtimeWindow);
       const interaction = interactionAuthority.windows.find((entry) => entry.id === windowAuthority.id);
       const metrics = {
         windowId: windowAuthority.id,
-        normalizedMae: normalizedMae(referenceCrop, actualCrop),
+        normalizedMae: normalizedMae(referenceMasked, actualMasked),
         highErrorPixelRate: highErrorCount / area,
         largestHighErrorComponentRate: largestComponent / area,
         controls: runtimeWindow.controls.length,

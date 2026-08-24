@@ -63,7 +63,15 @@ async function clickCanvas(page, canvas, x, y) {
 }
 
 test.beforeEach(async ({ page }) => {
-  await page.goto("./");
+  // Godot replaces the initial document while bootstrapping the Web export.
+  // Waiting for the browser's final `load` event makes that intentional frame
+  // replacement look like a failed navigation. Commit the response, then use
+  // the engine-owned canvas and QA state as the real readiness authorities.
+  try {
+    await page.goto("./", { waitUntil: "commit", timeout: 15_000 });
+  } catch (error) {
+    if (!/ERR_ABORTED|frame was detached/i.test(String(error))) throw error;
+  }
   await page.locator("canvas").waitFor({ state: "visible" });
   await expect.poll(() => state(page)).toMatchObject({ ready: true });
 });
@@ -71,9 +79,10 @@ test.beforeEach(async ({ page }) => {
 test("Godot composes all independent windows over the original pink desktop", async ({ page }) => {
   mkdirSync(evidenceDir, { recursive: true });
   await expect.poll(() => state(page)).toMatchObject({
-    background: "#ff00fe",
+    background: "qwen-image-3-pro",
+    background_asset: "res://assets/windows/japanese-rpg-v001/desktop/background.png",
     window_count: 15,
-    component_count: 263,
+    component_count: 269,
     control_count: 150,
     desktop_mapped_controls: 150,
     movable_windows: 15,
@@ -97,7 +106,7 @@ test("Godot composes all independent windows over the original pink desktop", as
     normalizedMae,
     highErrorPixelRate: highErrorCount / (849 * 564),
     windows: 15,
-    components: 263,
+    components: 269,
     controls: 150,
   };
   writeFileSync(resolve(evidenceDir, "full-desktop-report.json"), `${JSON.stringify(report, null, 2)}\n`);
@@ -112,10 +121,17 @@ test("Godot composes all independent windows over the original pink desktop", as
     const [x, y, width, height] = window.bounds;
     const sourceCrop = resolve(perWindowDir, `${window.id}-source.png`);
     const runtimeCrop = resolve(perWindowDir, `${window.id}-runtime.png`);
+    const sourceMask = resolve(perWindowDir, `${window.id}-source-surface-mask.png`);
+    const sourceMasked = resolve(perWindowDir, `${window.id}-source-masked.png`);
+    const runtimeMasked = resolve(perWindowDir, `${window.id}-runtime-masked.png`);
     for (const [input, output] of [[sourceDesktop, sourceCrop], [screenshot, runtimeCrop]]) {
       execFileSync("convert", [input, "-crop", `${width}x${height}+${x}+${y}`, "+repage", output]);
     }
-    const comparison = spawnSync("compare", ["-metric", "MAE", sourceCrop, runtimeCrop, "null:"], {
+    execFileSync("convert", [sourceCrop, "-alpha", "off", "-fx", "((r>0.45)&&(b>0.45)&&(g<0.95)&&(r-g)>0.04&&(b-g)>0.04)?0:1", sourceMask]);
+    for (const [input, output] of [[sourceCrop, sourceMasked], [runtimeCrop, runtimeMasked]]) {
+      execFileSync("convert", [input, sourceMask, "-alpha", "off", "-compose", "CopyOpacity", "-composite", "-background", "black", "-alpha", "remove", output]);
+    }
+    const comparison = spawnSync("compare", ["-metric", "MAE", sourceMasked, runtimeMasked, "null:"], {
       encoding: "utf8",
     });
     expect([0, 1]).toContain(comparison.status);
@@ -138,9 +154,11 @@ test("Godot composes all independent windows over the original pink desktop", as
           assembly,
         ]);
       }
+      const assemblyMasked = resolve(perWindowDir, `${window.id}-offline-assembly-masked.png`);
+      execFileSync("convert", [assembly, sourceMask, "-alpha", "off", "-compose", "CopyOpacity", "-composite", "-background", "black", "-alpha", "remove", assemblyMasked]);
       const assemblyComparison = spawnSync(
         "compare",
-        ["-metric", "MAE", sourceCrop, assembly, "null:"],
+        ["-metric", "MAE", sourceMasked, assemblyMasked, "null:"],
         { encoding: "utf8" },
       );
       expect([0, 1]).toContain(assemblyComparison.status);
@@ -168,7 +186,7 @@ test("Godot composes all independent windows over the original pink desktop", as
   };
   writeFileSync(resolve(evidenceDir, "per-window-fidelity-report.json"), `${JSON.stringify(perWindowReport, null, 2)}\n`);
   expect(windowMetrics).toHaveLength(15);
-  for (const metric of windowMetrics.filter(({ verificationStatus }) => verificationStatus === "quality-benchmark")) {
+  for (const metric of windowMetrics) {
     expect(metric.normalizedMae, `${metric.id} fell below the accepted BGM fidelity floor`).toBeLessThanOrEqual(acceptedBgmFloor);
   }
 });

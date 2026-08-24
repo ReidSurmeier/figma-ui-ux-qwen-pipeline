@@ -44,10 +44,10 @@ function opaquePinkPixelCount(path: string) {
 }
 
 test("status is a Qwen clean plate plus independent source-locked raster groups", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=status");
   const window = page.getByRole("region", { name: "ステータス" });
   await expect(window).toHaveAttribute("data-clean-plate", "/assets/japanese-rpg-v001/status/clean-plate.png");
-  await expect(window.locator("[data-component-id]")).toHaveCount(17);
+  await expect(window.locator("[data-component-id]")).toHaveCount(22);
 
   const requested = await page.evaluate(() => performance.getEntriesByType("resource").map((entry) => entry.name));
   expect(requested.filter((url) => /regions\/status\/reference\.png|benchmarks\//.test(url))).toEqual([]);
@@ -63,7 +63,7 @@ test("status is a Qwen clean plate plus independent source-locked raster groups"
 });
 
 test("status increment visibly changes only the source value field", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=status");
   const window = page.getByRole("region", { name: "ステータス" });
   await activateWindow(window);
   const button = window.getByRole("button", { name: "Strを上げる" });
@@ -103,7 +103,7 @@ test("every source-visible Status increment owns its exact hitbox and changes on
     { label: "Dexを上げる", row: 4, component: "status-primary-row-4" },
     { label: "Lukを上げる", row: 5, component: "status-primary-row-5" },
   ];
-  await page.goto("/");
+  await page.goto("/?isolate=status");
   const status = page.getByRole("region", { name: "ステータス" });
   const inventory = await status.getByRole("button", { name: /を上げる$/ }).evaluateAll((buttons) => buttons.map((button) => ({
     label: button.getAttribute("aria-label"),
@@ -113,7 +113,7 @@ test("every source-visible Status increment owns its exact hitbox and changes on
   expect(inventory).toEqual(expected);
 
   for (const { label, row } of expected) {
-    await page.goto("/");
+    await page.goto("/?isolate=status");
     const window = page.getByRole("region", { name: "ステータス" });
     const windowBounds = await window.boundingBox();
     if (!windowBounds) throw new Error("Status geometry is unavailable");
@@ -144,7 +144,7 @@ test("every source-visible Status increment owns its exact hitbox and changes on
 });
 
 test("status does not invent an alternate tab over the source-only STATUS label", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=status");
   const window = page.getByRole("region", { name: "ステータス" });
   await expect(window.getByRole("button", { name: /^(stats|info)$/ })).toHaveCount(0);
   await expect(window.getByRole("tabpanel")).toHaveCount(0);
@@ -153,7 +153,7 @@ test("status does not invent an alternate tab over the source-only STATUS label"
 });
 
 test("status minimize uses a generated compact endpoint through complete motion and restores the full source geometry", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=status");
   const window = page.getByRole("region", { name: "ステータス" });
   const minimize = window.getByRole("button", { name: "ステータスを最小化" });
   await expect(minimize).toHaveAttribute("data-minimize-endpoint", "/assets/japanese-rpg-v001/status/minimized-plate.png");

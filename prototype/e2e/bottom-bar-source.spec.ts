@@ -11,7 +11,7 @@ async function activateWindow(window: Locator) {
 }
 
 test("Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=bottom-bar");
   const bottomBar = page.getByRole("region", { name: "クイックスロットバー" });
   const slider = bottomBar.getByRole("slider", { name: "クイックスロット位置" });
   await expect(slider).toHaveAttribute("data-visual-component", "bottom-bar-thumb");
@@ -47,7 +47,7 @@ test("Bottom Bar slider owns its complete visible thumb and reaches both endpoin
 });
 
 test("Bottom Bar previous and next controls are reversible and leave slider plus title invariant", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=bottom-bar");
   const bottomBar = page.getByRole("region", { name: "クイックスロットバー" });
   const previous = bottomBar.getByRole("button", { name: "前のスロット", exact: true });
   const next = bottomBar.getByRole("button", { name: "次のスロット", exact: true });

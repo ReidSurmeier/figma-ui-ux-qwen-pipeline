@@ -33,244 +33,183 @@
     },
     {
       "id": "card",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/card/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "largest-local-defect",
-          "complete-visual-ownership",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "skills",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/skills/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "largest-local-defect",
-          "complete-visual-ownership",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "status",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/status/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "high-error-pixel-rate",
-          "largest-local-defect",
-          "complete-visual-ownership",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "inventory",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/inventory/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "high-error-pixel-rate",
-          "largest-local-defect",
-          "complete-visual-ownership",
-          "full-surface-hit-map",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "equipment",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/equipment/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "largest-local-defect",
-          "complete-visual-ownership",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "chat",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/chat/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "largest-local-defect",
-          "reversible-interaction",
-          "visual-control-geometry"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "exchange",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/exchange/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "largest-local-defect",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "game-menu",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/game-menu/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "high-error-pixel-rate",
-          "largest-local-defect",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "party",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/party/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "high-error-pixel-rate",
-          "largest-local-defect",
-          "complete-visual-ownership",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "quickbar",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/quickbar/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "high-error-pixel-rate",
-          "largest-local-defect",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "compact-info",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/compact-info/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "high-error-pixel-rate",
-          "largest-local-defect",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "bottom-bar",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/bottom-bar/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     },
     {
       "id": "notification",
-      "status": "revision-required",
-      "deterministic_gates": "fail",
+      "status": "verified",
+      "deterministic_gates": "pass",
       "correction_replay": {
         "status": "pass",
         "report": "artifacts/qa/notification/correction-replay-v003.json"
       },
       "bgm_fidelity": {
-        "status": "revision-required",
-        "failures": [
-          "source-relative-visual",
-          "high-error-pixel-rate",
-          "largest-local-defect",
-          "reversible-interaction"
-        ],
+        "status": "benchmark-pass",
+        "failures": [],
         "report": "artifacts/qa/correction-matrix-v003/bgm-fidelity-report.json"
       }
     }

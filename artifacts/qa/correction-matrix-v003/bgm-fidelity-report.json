@@ -4,9 +4,9 @@
   "sourceAuthority": "benchmarks/japanese-rpg-options-v001/reference.png",
   "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
   "runtimeUrl": "http://10.255.255.254:4174/",
-  "runtimeSha256": "fdd00663c999d0d1d66adca211f787e643a8151fc4f4b2fc4b88372a7fa23422",
-  "generatedAt": "2026-08-23T23:01:07.585Z",
-  "overall": "revision-required",
+  "runtimeSha256": "66b49e285c1150754b6187166bcaae09721c9944e86aed0526e0133801f4d075",
+  "generatedAt": "2026-08-24T00:01:09.095Z",
+  "overall": "pass",
   "verdicts": [
     {
       "windowId": "basic-info",
@@ -14,8 +14,8 @@
       "failures": [],
       "metrics": {
         "windowId": "basic-info",
-        "normalizedMae": 0.022909,
-        "highErrorPixelRate": 0.05574404761904762,
+        "normalizedMae": 0.0228174,
+        "highErrorPixelRate": 0.05520833333333333,
         "largestHighErrorComponentRate": 0.014553571428571428,
         "controls": 11,
         "controlsWithVisualAuthority": 11,
@@ -41,20 +41,17 @@
     },
     {
       "windowId": "card",
-      "status": "revision-required",
-      "failures": [
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "card",
-        "normalizedMae": 0.0351131,
-        "highErrorPixelRate": 0.11688095238095238,
-        "largestHighErrorComponentRate": 0.10483333333333333,
+        "normalizedMae": 0.0161623,
+        "highErrorPixelRate": 0.05516666666666667,
+        "largestHighErrorComponentRate": 0.04580952380952381,
         "controls": 4,
         "controlsWithVisualAuthority": 4,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -65,25 +62,26 @@
       },
       "interactionAuthority": {
         "id": "card",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/card-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "skills",
-      "status": "revision-required",
-      "failures": [
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "skills",
-        "normalizedMae": 0.0310148,
-        "highErrorPixelRate": 0.11532956831192945,
-        "largestHighErrorComponentRate": 0.07227680643663933,
+        "normalizedMae": 0.0277683,
+        "highErrorPixelRate": 0.10246789416679561,
+        "largestHighErrorComponentRate": 0.043845737273711896,
         "controls": 20,
         "controlsWithVisualAuthority": 20,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -94,30 +92,28 @@
       },
       "interactionAuthority": {
         "id": "skills",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/skills-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "status",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "high-error-pixel-rate",
-        "largest-local-defect",
-        "complete-visual-ownership",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "status",
-        "normalizedMae": 0.0642526,
-        "highErrorPixelRate": 0.21947278911564627,
-        "largestHighErrorComponentRate": 0.0691609977324263,
+        "normalizedMae": 0.0000132646,
+        "highErrorPixelRate": 0.00002834467120181406,
+        "largestHighErrorComponentRate": 0.00002834467120181406,
         "controls": 7,
-        "controlsWithVisualAuthority": 2,
+        "controlsWithVisualAuthority": 7,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
-        "visualAuthorityCoverage": 0.2857142857142857
+        "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {
@@ -126,130 +122,56 @@
       },
       "interactionAuthority": {
         "id": "status",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/status-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "inventory",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "high-error-pixel-rate",
-        "largest-local-defect",
-        "full-surface-hit-map",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "inventory",
-        "normalizedMae": 0.0470875,
-        "highErrorPixelRate": 0.15461418143899897,
-        "largestHighErrorComponentRate": 0.11942127215849843,
+        "normalizedMae": 0.00603652,
+        "highErrorPixelRate": 0.027632950990615225,
+        "largestHighErrorComponentRate": 0.02716371220020855,
         "controls": 27,
         "controlsWithVisualAuthority": 27,
-        "hitMapFailures": 9,
-        "irreversibleInteractions": null,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
       "geometryMismatches": [],
       "hitMap": {
         "windowId": "inventory",
-        "failures": [
-          {
-            "control": "item item 7",
-            "point": {
-              "x": 265.5,
-              "y": 274.5
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 7",
-            "point": {
-              "x": 265.5,
-              "y": 283
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 7",
-            "point": {
-              "x": 265.5,
-              "y": 291.5
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 14",
-            "point": {
-              "x": 265.5,
-              "y": 308.5
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 14",
-            "point": {
-              "x": 265.5,
-              "y": 317
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 14",
-            "point": {
-              "x": 265.5,
-              "y": 325.5
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 21",
-            "point": {
-              "x": 265.5,
-              "y": 342.5
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 21",
-            "point": {
-              "x": 265.5,
-              "y": 351
-            },
-            "received": "所持品スクロール"
-          },
-          {
-            "control": "item item 21",
-            "point": {
-              "x": 265.5,
-              "y": 359.5
-            },
-            "received": "所持品スクロール"
-          }
-        ]
+        "failures": []
       },
       "interactionAuthority": {
         "id": "inventory",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/inventory-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "equipment",
-      "status": "revision-required",
-      "failures": [
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "equipment",
-        "normalizedMae": 0.0313384,
-        "highErrorPixelRate": 0.09565319548872181,
-        "largestHighErrorComponentRate": 0.07159304511278196,
+        "normalizedMae": 0.0196448,
+        "highErrorPixelRate": 0.062100563909774434,
+        "largestHighErrorComponentRate": 0.02586936090225564,
         "controls": 12,
         "controlsWithVisualAuthority": 12,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -260,7 +182,11 @@
       },
       "interactionAuthority": {
         "id": "equipment",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/equipment-source.spec.ts"
+        ]
       }
     },
     {
@@ -269,8 +195,8 @@
       "failures": [],
       "metrics": {
         "windowId": "options",
-        "normalizedMae": 0.0353391,
-        "highErrorPixelRate": 0.12646370023419204,
+        "normalizedMae": 0.0212716,
+        "highErrorPixelRate": 0.08562646370023419,
         "largestHighErrorComponentRate": 0.0640807962529274,
         "controls": 17,
         "controlsWithVisualAuthority": 17,
@@ -295,84 +221,47 @@
     },
     {
       "windowId": "chat",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "largest-local-defect",
-        "reversible-interaction",
-        "visual-control-geometry"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "chat",
-        "normalizedMae": 0.0398134,
-        "highErrorPixelRate": 0.10056547619047619,
-        "largestHighErrorComponentRate": 0.07258928571428572,
+        "normalizedMae": 0.018175,
+        "highErrorPixelRate": 0.03166666666666667,
+        "largestHighErrorComponentRate": 0.012083333333333333,
         "controls": 6,
         "controlsWithVisualAuthority": 6,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
-        "visualGeometryMismatches": 2,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
-      "geometryMismatches": [
-        {
-          "control": "トピック",
-          "visualComponent": "chat-topic-field",
-          "hit": {
-            "x": 44,
-            "y": 27,
-            "width": 228,
-            "height": 17
-          },
-          "visual": {
-            "x": 44,
-            "y": 26,
-            "width": 232,
-            "height": 19
-          }
-        },
-        {
-          "control": "ルーム",
-          "visualComponent": "chat-room",
-          "hit": {
-            "x": 181,
-            "y": 55,
-            "width": 92,
-            "height": 16
-          },
-          "visual": {
-            "x": 136,
-            "y": 45,
-            "width": 140,
-            "height": 20
-          }
-        }
-      ],
+      "geometryMismatches": [],
       "hitMap": {
         "windowId": "chat",
         "failures": []
       },
       "interactionAuthority": {
         "id": "chat",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/chat-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "exchange",
-      "status": "revision-required",
-      "failures": [
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "exchange",
-        "normalizedMae": 0.033484,
-        "highErrorPixelRate": 0.10571428571428572,
-        "largestHighErrorComponentRate": 0.078125,
+        "normalizedMae": 0.0207236,
+        "highErrorPixelRate": 0.07255952380952381,
+        "largestHighErrorComponentRate": 0.031517857142857146,
         "controls": 19,
         "controlsWithVisualAuthority": 19,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -383,27 +272,26 @@
       },
       "interactionAuthority": {
         "id": "exchange",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/exchange-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "game-menu",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "high-error-pixel-rate",
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "game-menu",
-        "normalizedMae": 0.0734947,
-        "highErrorPixelRate": 0.2666802140486351,
-        "largestHighErrorComponentRate": 0.20151730678046467,
+        "normalizedMae": 0.00784097,
+        "highErrorPixelRate": 0.022319311792996004,
+        "largestHighErrorComponentRate": 0.007688139267086636,
         "controls": 4,
         "controlsWithVisualAuthority": 4,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -414,27 +302,26 @@
       },
       "interactionAuthority": {
         "id": "game-menu",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/game-menu-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "compact-info",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "high-error-pixel-rate",
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "compact-info",
-        "normalizedMae": 0.063524,
-        "highErrorPixelRate": 0.1708185053380783,
-        "largestHighErrorComponentRate": 0.15709201830198272,
+        "normalizedMae": 0.0256668,
+        "highErrorPixelRate": 0.07473309608540925,
+        "largestHighErrorComponentRate": 0.05988815455007626,
         "controls": 0,
         "controlsWithVisualAuthority": 0,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -445,27 +332,25 @@
       },
       "interactionAuthority": {
         "id": "compact-info",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json"
+        ]
       }
     },
     {
       "windowId": "party",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "high-error-pixel-rate",
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "party",
-        "normalizedMae": 0.236078,
-        "highErrorPixelRate": 0.5342938311688312,
-        "largestHighErrorComponentRate": 0.37666396103896105,
+        "normalizedMae": 0.011181,
+        "highErrorPixelRate": 0.05882142857142857,
+        "largestHighErrorComponentRate": 0.044071428571428574,
         "controls": 16,
         "controlsWithVisualAuthority": 16,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -476,27 +361,26 @@
       },
       "interactionAuthority": {
         "id": "party",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/party-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "quickbar",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "high-error-pixel-rate",
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "quickbar",
-        "normalizedMae": 0.246913,
-        "highErrorPixelRate": 0.39447188449848025,
-        "largestHighErrorComponentRate": 0.39447188449848025,
+        "normalizedMae": 0.00643053,
+        "highErrorPixelRate": 0.02023176291793313,
+        "largestHighErrorComponentRate": 0.0199468085106383,
         "controls": 3,
         "controlsWithVisualAuthority": 3,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -507,15 +391,17 @@
       },
       "interactionAuthority": {
         "id": "quickbar",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/quickbar-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "bottom-bar",
-      "status": "revision-required",
-      "failures": [
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "bottom-bar",
         "normalizedMae": 0.000147837,
@@ -524,7 +410,7 @@
         "controls": 3,
         "controlsWithVisualAuthority": 3,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -535,27 +421,26 @@
       },
       "interactionAuthority": {
         "id": "bottom-bar",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json",
+          "prototype/e2e/bottom-bar-source.spec.ts"
+        ]
       }
     },
     {
       "windowId": "notification",
-      "status": "revision-required",
-      "failures": [
-        "source-relative-visual",
-        "high-error-pixel-rate",
-        "largest-local-defect",
-        "reversible-interaction"
-      ],
+      "status": "benchmark-pass",
+      "failures": [],
       "metrics": {
         "windowId": "notification",
-        "normalizedMae": 0.159175,
-        "highErrorPixelRate": 0.2812344449975112,
-        "largestHighErrorComponentRate": 0.2812344449975112,
+        "normalizedMae": 0,
+        "highErrorPixelRate": 0,
+        "largestHighErrorComponentRate": 0,
         "controls": 0,
         "controlsWithVisualAuthority": 0,
         "hitMapFailures": 0,
-        "irreversibleInteractions": null,
+        "irreversibleInteractions": 0,
         "visualGeometryMismatches": 0,
         "visualAuthorityCoverage": 1
       },
@@ -566,7 +451,10 @@
       },
       "interactionAuthority": {
         "id": "notification",
-        "status": "pending-benchmark-replay"
+        "status": "benchmark-pass",
+        "evidence": [
+          "artifacts/qa/standalone-windows-v001/report.json"
+        ]
       }
     }
   ]

@@ -13,7 +13,7 @@ async function activateWindow(window: Locator) {
 }
 
 test("Every Game Menu action owns its source row, transfers selection, and toggles back to ready", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=game-menu");
   const menu = page.getByRole("region", { name: "ゲームメニュー" });
   await activateWindow(menu);
   const bounds = await menu.boundingBox();

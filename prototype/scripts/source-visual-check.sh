@@ -36,9 +36,7 @@ masked_mae chat "$WORK_DIR/chat-source.png" "$EVIDENCE/chat.png" 0.030
 masked_mae exchange "$REPO_DIR/benchmarks/japanese-rpg-options-v001/regions/exchange/reference.png" "$EVIDENCE/exchange.png" 0.030
 masked_mae game-menu "$REPO_DIR/benchmarks/japanese-rpg-options-v001/regions/game-menu/reference.png" "$EVIDENCE/game-menu.png" 0.055
 masked_mae quickbar "$REPO_DIR/benchmarks/japanese-rpg-options-v001/regions/quickbar/reference.png" "$EVIDENCE/quickbar.png" 0.045
-convert "$REPO_DIR/benchmarks/japanese-rpg-options-v001/regions/party/reference.png" -crop 160x154+0+35 +repage "$WORK_DIR/party-source.png"
-convert "$EVIDENCE/party.png" -crop 160x154+0+0 +repage "$WORK_DIR/party-actual.png"
-masked_mae party "$WORK_DIR/party-source.png" "$WORK_DIR/party-actual.png" 0.055
+masked_mae party "$REPO_DIR/benchmarks/japanese-rpg-options-v001/regions/party/reference.png" "$EVIDENCE/party.png" 0.055
 convert "$REFERENCE" -crop 281x35+568+314 +repage "$WORK_DIR/compact-source.png"
 masked_mae compact-info "$WORK_DIR/compact-source.png" "$EVIDENCE/compact-info.png" 0.050
 convert "$REFERENCE" -crop 600x21+0+538 +repage "$WORK_DIR/bottom-source.png"

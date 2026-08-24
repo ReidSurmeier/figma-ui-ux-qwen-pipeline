@@ -41,7 +41,9 @@ export function StatusSourceWindow({ zIndex, onActivate, open, onClose }: Status
                 <span aria-hidden="true" />
               </output>
             )}
-            {index !== 3 && <button type="button" aria-label={`${name}を上げる`} aria-pressed={changed} data-status-row={index} data-value-component={`status-primary-row-${index}`} onClick={() => setIncrements((current) => ({ ...current, [name]: 1 }))} />}
+            {index !== 3 && <button type="button" aria-label={`${name}を上げる`} aria-pressed={changed} data-status-row={index} data-value-component={`status-primary-row-${index}`} onClick={() => setIncrements((current) => ({ ...current, [name]: 1 }))}>
+              <SourceRaster id={`status-increment-${index}`} file={`${assetRoot}/components/increment-${index}`} style={{ inset: 0 }} />
+            </button>}
           </div>
         );
       })}

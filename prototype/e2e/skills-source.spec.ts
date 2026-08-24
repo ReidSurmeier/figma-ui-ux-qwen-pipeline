@@ -4,7 +4,7 @@ const skillNames = ["ディバインプロテクション", "ワープポータ�
 const skillLevels = [5, 4, 4, 9, 5, 10, 10, 1];
 
 test("Skills exposes one keyboard-traversable listbox across both visible pages", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=skills");
   const skills = page.getByRole("region", { name: "スキルリスト" });
   const listbox = skills.getByRole("listbox", { name: "スキル" });
   await expect(listbox).toHaveCount(1);
@@ -20,7 +20,7 @@ test("Skills exposes one keyboard-traversable listbox across both visible pages"
 });
 
 test("Skills real scroll gestures keep one thumb and the clipped list outside title and footer", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=skills");
   const skills = page.getByRole("region", { name: "スキルリスト" });
   const slider = skills.getByRole("slider", { name: "スキルスクロール" });
   await expect(slider).toHaveAttribute("data-visual-component", "skills-scrollbar-thumb");
@@ -88,7 +88,7 @@ test("Skills use acts on selection and both close controls support Basic Info re
 });
 
 test("Every Skills row and level control is pointer-reachable on its settled page and owns only its state", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=skills");
   const skills = page.getByRole("region", { name: "スキルリスト" });
   const slider = skills.getByRole("slider", { name: "スキルスクロール" });
   const listbox = skills.getByRole("listbox", { name: "スキル" });

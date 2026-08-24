@@ -27,7 +27,7 @@
           "artifact": "artifacts/qa/correction-matrix-v003/basic-info/trace.json",
           "metrics": {
             "noUnderlay": true,
-            "requestedResources": 283
+            "requestedResources": 290
           }
         }
       ]
@@ -82,7 +82,7 @@
               {
                 "script": "remaining-window-contract.sh",
                 "status": 0,
-                "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+                "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
                 "error": ""
               }
             ],
@@ -164,18 +164,6 @@
                   120
                 ],
                 [
-                  280,
-                  120
-                ],
-                [
-                  280,
-                  120
-                ],
-                [
-                  280,
-                  120
-                ],
-                [
                   272.3,
                   112.1
                 ],
@@ -214,9 +202,25 @@
                 [
                   203.1,
                   41.5
+                ],
+                [
+                  195.4,
+                  33.7
+                ],
+                [
+                  187.7,
+                  25.8
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
                 ]
               ],
-              "distinctGeometry": 11,
+              "distinctGeometry": 14,
               "gesture": "trusted Playwright pointer click",
               "titleAuthority": {
                 "expanded": {
@@ -668,18 +672,6 @@
                   120
                 ],
                 [
-                  280,
-                  120
-                ],
-                [
-                  280,
-                  120
-                ],
-                [
-                  280,
-                  120
-                ],
-                [
                   272.3,
                   112.1
                 ],
@@ -718,9 +710,25 @@
                 [
                   203.1,
                   41.5
+                ],
+                [
+                  195.4,
+                  33.7
+                ],
+                [
+                  187.7,
+                  25.8
+                ],
+                [
+                  180,
+                  18
+                ],
+                [
+                  180,
+                  18
                 ]
               ],
-              "distinctGeometry": 11,
+              "distinctGeometry": 14,
               "gesture": "trusted Playwright pointer click",
               "titleAuthority": {
                 "expanded": {

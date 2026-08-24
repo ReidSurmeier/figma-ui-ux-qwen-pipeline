@@ -1,7 +1,7 @@
 import { expect, test } from "@playwright/test";
 
 test("Card art rotation is reversible and leaves title plus copy pixels invariant", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=card");
   const card = page.getByRole("region", { name: "ソルジャースケルトンカード" });
   const rotate = card.getByRole("button", { name: "カードを回転", exact: true });
   await expect(rotate).toHaveAttribute("data-visual-component", "card-art");
@@ -30,7 +30,7 @@ test("Card art rotation is reversible and leaves title plus copy pixels invarian
 });
 
 test("Card real scroll gestures move copy and one visual thumb without entering title or art", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=card");
   const card = page.getByRole("region", { name: "ソルジャースケルトンカード" });
   const slider = card.getByRole("slider", { name: "カード情報スクロール" });
   await expect(slider).toHaveAttribute("data-visual-component", "card-scrollbar-thumb");
@@ -69,7 +69,7 @@ test("Card real scroll gestures move copy and one visual thumb without entering 
 });
 
 test("Card slot controls the Card scroll state without changing title or art", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=card");
   const card = page.getByRole("region", { name: "ソルジャースケルトンカード" });
   const slider = card.getByRole("slider", { name: "カード情報スクロール" });
   const slot = card.getByRole("button", { name: "カードスロット", exact: true });

@@ -4,24 +4,25 @@
     "http://10.255.255.254:4174/",
     "http://10.255.255.254:4174/@vite/client",
     "https://mcp.figma.com/mcp/html-to-design/capture.js",
-    "http://10.255.255.254:4174/src/main.tsx?t=1787510080775",
+    "http://10.255.255.254:4174/src/main.tsx?t=1787529564046",
     "http://10.255.255.254:4174/@react-refresh",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom_client.js?v=4e59ef8f",
-    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787510080773",
-    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787510080773",
-    "http://10.255.255.254:4174/src/styles.css?t=1787510080775",
+    "http://10.255.255.254:4174/src/Desktop.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/OptionsWindow.tsx?t=1787529564046",
+    "http://10.255.255.254:4174/src/styles.css?t=1787528810559",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=4e59ef8f",
     "http://10.255.255.254:4174/node_modules/vite/dist/client/env.mjs",
     "http://10.255.255.254:4174/node_modules/.vite/deps/rolldown-runtime-BvCyGRYZ.js?v=4e59ef8f",
     "http://10.255.255.254:4174/src/BasicInfoWindow.tsx?t=1787465313587",
     "http://10.255.255.254:4174/src/AdditionalSourceWindows.tsx?t=1787468367758",
-    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787470702058",
+    "http://10.255.255.254:4174/src/RemainingSourceWindows.tsx?t=1787527971154",
     "http://10.255.255.254:4174/src/InventorySourceWindow.tsx?t=1787466360012",
     "http://10.255.255.254:4174/src/MapSourceWindow.tsx?t=1787465870814",
-    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787465870814",
+    "http://10.255.255.254:4174/src/StatusSourceWindow.tsx?t=1787527441898",
     "http://10.255.255.254:4174/src/SourceWindow.tsx?t=1787465870814",
     "http://10.255.255.254:4174/node_modules/.vite/deps/react-dom.js?v=4e59ef8f",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/desktop/background.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/minimized-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/basic-info/components/title-icon.png",
@@ -105,16 +106,21 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/side-tabs.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-0.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-0.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-1.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-1.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-2.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-2.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-3.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-4.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-4.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-4.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/primary-row-5.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/derived-row-5.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/status/components/increment-5.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/clean-plate.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-icon.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/inventory/components/title-text.png",
@@ -171,11 +177,12 @@
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-label.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/topic-field.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/people.png",
-    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room-label.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/security.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-on.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/privacy-off.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/password.png",
+    "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/room-select.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/ok.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/chat/components/cancel.png",
     "http://10.255.255.254:4174/assets/japanese-rpg-v001/exchange/clean-plate.png",
@@ -367,9 +374,9 @@
       "label": "所持アイテムを最小化",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "77909c5515097cb2d9e6cd4579e9a0e05d76383ab1d34a6042be8ce93b7c9f7d",
-      "settledHash": "b2b0ff2fe08005577a3abb32c2d7a5d92221e2e4b232d5213701d0b7e381f0e1",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "729e574fdc00cff1a6fb1dcb98310d7bf305423220949846d526f80ed87e56ac",
+      "settledHash": "2b04bb8f6f5dcfa25b7e1de1b38f902a986f1962d81ceacdf6aaa9a3aab84963",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -384,7 +391,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -443,9 +450,9 @@
       "label": "所持アイテムを閉じる",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "4ca0c30ec93e48c90fd6cee8c6d7e07478058a761a5b85fbed4ee6f599ac82d1",
-      "settledHash": "6afd035ed99ee348192ff6ed44e4c432054132cff1ab8fe50fa9b78f70bec88d",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "ce82816f81a1df12a7969171b90d672dd5e45b2f00102da1415ea412a5d6f232",
+      "settledHash": "a00b9040332f5b4939c47b23c43a52c916615a48df0d3642c9ce55413f9bb3b9",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -460,7 +467,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -512,9 +519,9 @@
       "label": "item",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "28ca9976f03e06a7267fc122a8d2e628d02feeec6097ee94ca83f7487cb7d06c",
-      "settledHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "7d5103da0c344a3d44c9a4141200b0cb362ded1abac56e18f06e185844bbc144",
+      "settledHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
       "visualDown": true,
       "visualSettled": false,
       "stateChanged": false,
@@ -531,7 +538,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -589,9 +596,9 @@
       "label": "equip",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "9e181d9c3d0d77e29222b2ee939db2e4e1573d2896516e6def98d12a2fe927c0",
-      "settledHash": "a07f07c90386bf95a5a9ba0d83d9697ea5b0d126a1cddb60484e5542add6766c",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "315eeb4e40459e30ddbd3d10e7bc0c45a5ad4b003bf3d13d748268073b373274",
+      "settledHash": "d534d6e5d41dd4cc5e9e3920e1bc1fe6b1cb79139afaf4196ae9aef608d631af",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -608,7 +615,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -666,9 +673,9 @@
       "label": "etc",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "48fe2e4705d924f58443b5ad0324dcfd477010c5c7df62a92f960ef7f698a66a",
-      "settledHash": "cb47c251128e9b36e7db70c1ef9c55af15909f2ade3f1968d9718cb5ca99e93b",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "eaf65fbbc320c8e29850e594b10f67dcfa3a97c9742397af9c94233125db1591",
+      "settledHash": "d863e91d593091458628c285b574d365823a41ac635b5ec191dff962722461e7",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -685,7 +692,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -743,9 +750,9 @@
       "label": "item item 1",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "0646188e6fda4e70ec4d98630208ee25fa2b79cfa9c87f69c0b41b6f965d4760",
-      "settledHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "ab74bc43871bf00dcd5c6354fea02ddaa96180e8cda999dfaee9b65c0fd51d5d",
+      "settledHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
       "visualDown": true,
       "visualSettled": false,
       "stateChanged": false,
@@ -760,7 +767,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -821,9 +828,9 @@
       "label": "item item 2",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "d5c593c5369bf4986e7ecda479f92ad0b3e89199f2c789e2a05774f6896e663a",
-      "settledHash": "1beabdcaa28735b74cbd66f3da3ad474b0e6f20b69eca2916b85258b1992faf2",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "bf95238408058ccef6c5b04f4c4965b9ebe2b7b9710b01979129e42d13cc1921",
+      "settledHash": "5f658dee4637f9f14ceeb5492310b89ad72e441b50e4587b3b51752c3c9e4dcd",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -838,7 +845,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -899,9 +906,9 @@
       "label": "item item 3",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "1dd711970d1d35fadbde8d66ec6be5f99ecb0814cb37fa589982f25026392197",
-      "settledHash": "dbb5b9a9a2c649cf59a211391a282f484ec8f995e60b074195d42a279a78c935",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "4b1f14b4e2801cc4e00471940e5d9230e4987f89468c8a9524086658fbe89f88",
+      "settledHash": "34c6bc351eedf3726fdf5a6f86d52ca42f9c20139695068d8b73734150476e8b",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -916,7 +923,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -977,9 +984,9 @@
       "label": "item item 4",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "64c0da329f46bdde277ff1c028587e2ad2fde2f634f3e239459cefa57fbd79fb",
-      "settledHash": "b3b6db2364bdbf79b5df8f40776e130ee0a95c41b10a3309100d1f9e53f4f8b8",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "23a269b66d91e4c497a99d186b0088204da8ca99786c29415eab880310eabb5a",
+      "settledHash": "32b1aa75a090d0339ddd74111f43e4449a898c1d00af0cace5fd1b1413615f05",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -994,7 +1001,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1055,9 +1062,9 @@
       "label": "item item 5",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "41bb4d7f68ab6cd1c8e006899f1f7785c12c4a0577c272751d592b72b92f0c0c",
-      "settledHash": "8a8f752c404721fd1bda931dc7a0b989693c0be72131e93f819ac13467c56834",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "e939be83ded5b22818ee095c1c323f623a8cbfe641be6dfde709bb05f45d2d6a",
+      "settledHash": "b07f1bd6131d3f36b172717d8f54705e3f8ea8d5b4aec0351fcac23cb6bedcb7",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1072,7 +1079,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1133,9 +1140,9 @@
       "label": "item item 6",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "56989e25fdfb82f65e81c68e94310244dc96d86ad6762ff8c866c7b25957c35f",
-      "settledHash": "7e1345b1abeb9565ad1e168f3b8b08acc96056f84159054da3ae30d80d69ba37",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "2b7fc85c96666b4f6abaaf36b5cd2c0a01c7abebbb1bb082f9a9646cac503786",
+      "settledHash": "a87183b12b00f7f101914ddadcbdf4f0272a29c6874ae391b472f50ca8af5439",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1150,7 +1157,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1211,9 +1218,9 @@
       "label": "item item 7",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "9e6bc325a3c06917e65f9737ed498913fc8cd9d9bab8a2bd3dc4ae71f845f1f1",
-      "settledHash": "cc0aaad11f5931d40d6481d3e7d9d70720466e491b710c532239bfdc5830734a",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "acb82c404049c16838cb5838fe2fe3cdbd6b43aa70a5c667ffdf19c814d5cda4",
+      "settledHash": "eb59d287fa84fa4ce4d62309b9ee6fdb96e3b1fe24b0dcf7f02663e1a7bbe8f9",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1228,7 +1235,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1289,9 +1296,9 @@
       "label": "item item 8",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "6558eb6551d578cb9459fabc98b7f00b6d326f3ea407f7d463c8d8c974c81f10",
-      "settledHash": "97cfa8fc7de424ccb4820c376bc8b2c3500e6c1a9f0c12cd6728ceb050d01bd2",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "8b24c9b412ee8ebee3d764861a2caf2ca79052bdd893aec6c2afdda7b876bf95",
+      "settledHash": "83f1399d34f1c00fe4a412fb1ceabb676a9508f3df6bac4f0e164de4a34b59ab",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1306,7 +1313,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1367,9 +1374,9 @@
       "label": "item item 9",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "641057f7cf0dad6f3eb76970ec049f71b19ef8f3cb586d3c7ef97e6ad0adefc1",
-      "settledHash": "7270035b117c982ac4fcb4f66cab932fa1078d050fbae63eb7eb0d93b215fef1",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "3879b722c8ca6578063e6aa5fb0b30310ed85cc9eaefb48caea47b272deb65d8",
+      "settledHash": "5885e186f89d37b5dfcb3cd7a625aa571bcfa6aae508a8bd39d18169110a3f55",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1384,7 +1391,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1445,9 +1452,9 @@
       "label": "item item 10",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "4ab6ce7ada38b8595c241aecf4cc547b7729439014dcaaf1d533320cec90e4ad",
-      "settledHash": "2b673299a1527c48d41ceaabb7aca7bc3234f00c7398603a6ec3bbba464c33f4",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "dacf430e5da0bbc61bbc31004a325bc92e3fb6fb137388efc885e95fa7f97c72",
+      "settledHash": "cd50245f21f92991b22dc8615ff43f00f23fe841f3023a7b5f217916a2351a66",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1462,7 +1469,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1523,9 +1530,9 @@
       "label": "item item 11",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "ca3c4229d5fb41e4a67480143e79e67ae63f66eab0a36ca86138d179d3340118",
-      "settledHash": "2885668692e29f1e656f61d0e6c50e2c73539cdb8f02f4ada153d1c25e409d8f",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "3d2341f5189e1e0ac1fcca7aaa504d6263ea298ed9e31faadb9caa7f67010d11",
+      "settledHash": "32d0a2fcf5566a7411b0ab70481477385450c62fa2b511625275c0887e6170ab",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1540,7 +1547,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1601,9 +1608,9 @@
       "label": "item item 12",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "d4e8c0ffa001cc0b23eb358f89394bbd8ef480537864015e1d9ffb8d8320447d",
-      "settledHash": "58ae1b316fc68b9214ba616932894f910b4b71a525f7c9ebfd8e63c05ed59c98",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "c99d54aa6f6aad8e70c07b944e25499876deea6e45a36d297335505d96e29bca",
+      "settledHash": "084d4c585694ce329af6831eac838fd59ea0269cfd18bcaf2199735ed0d80204",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1618,7 +1625,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1679,9 +1686,9 @@
       "label": "item item 13",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "fb07b6ffdaea74c758980d04c657dc3340a77f339ff0c5b73c37c493dccbf07f",
-      "settledHash": "7da16b2d3b13b82557ebb3a06db9c44faf3c0370d18e4723c933ea80e58d531f",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "0f7a97e65f06658817cd6d0071befa624f7555caeb04731dc07def7660f37964",
+      "settledHash": "914f7dc63cab1695b3a9758f11c56bd9f4d76a950d7c6a6f03762fb2f2f39183",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1696,7 +1703,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1757,9 +1764,9 @@
       "label": "item item 14",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "eac2d9cf182c9acb96ed38a7d8c6148e2650f632d055c739634ed44985b4ad87",
-      "settledHash": "be88ed719778ab57df9148611d486b0455dfb49a2d3b1fafc0d9dc64d81f202b",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "87f5efefe46d0b97170fc36f227676e6f4bff46f5d30edc1b34e1091dcb2c719",
+      "settledHash": "4fcbda03845943d3f52f24d37044eb0990b5631258a31f567e863e13a898c218",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1774,7 +1781,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1835,9 +1842,9 @@
       "label": "item item 15",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "f87dd845b7b79be411df316e16d9ed13061caada31b9f741ac8d5c5236efffb0",
-      "settledHash": "f1086fa3a4be330fb42d940aadb028547d892f69c911bd79298be4e66b08e997",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "14537c8d682dc589070fffaa8aefd26fff8a60bd1b4d5386a203842d190e9835",
+      "settledHash": "9483bb6aab06d5014f0b1072e932c20c77fb0fe6f0bbfd82df9b3d15cc21e39a",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1852,7 +1859,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1913,9 +1920,9 @@
       "label": "item item 16",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "9c4df8a1a8083ff6c0979ad560e73ec4df8ba438a9df2434f2dd64500ab758c0",
-      "settledHash": "e51f5163c8664099ca3fa917f8e86e0defb8a986239465a5387ac61e99d54031",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "35f3109b34bb00783b68a6188c81f92bce01c784049f3d6be09d1505d0e410fe",
+      "settledHash": "3109ecbfb10d3bd554916de1608dc10d84ebd517d9cef6eed81fb984ff8741f0",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -1930,7 +1937,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -1991,9 +1998,9 @@
       "label": "item item 17",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "f93111c90bb204b26ab1f7d5e4642756abe8336e162fd37b5bff45026f633c1a",
-      "settledHash": "e7db1bb90a1b2339a007bdfcbe8157eeae117a5b2e8e50729096c585a914b1e9",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "f0053c598ac29247bc4d3e035fbc4f94a51f04774418a93cba5bbb41b123ed5f",
+      "settledHash": "d364f0f6db0dc30fccfd44fd9dd3ec8113def7cccc0fd3646c3d24c02db95fbd",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -2008,7 +2015,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2069,9 +2076,9 @@
       "label": "item item 18",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "7249ad6da6263996aa6a7aff267dbf4fff5a36b94734faba42b8c3227bc9bfe9",
-      "settledHash": "396c59528445db09d775d9dcd70cd6760b0e91186321d8437faaaf36d47ae721",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "f29746cc961e6e7c12778d62c90f77daa91089b168e0bb9c0ccfd7feb4e1c4e0",
+      "settledHash": "1a293182a6a6a2d77050624fb1437f387dad4d0ad0d30fd0f76dd31936bf835c",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -2086,7 +2093,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2147,9 +2154,9 @@
       "label": "item item 19",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "e93db734403eede4d0505b83d7f05dbec6c7e15a5a2701c72bdfa343e1734243",
-      "settledHash": "e6b45c1cefb0b3efd81c191ee58dd1935a11c91e44dd4dbb78f939a0629f7bde",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "69e6eed0fe7c3864917b67dfa48501455313259db9c451096a4f2e0593d4daea",
+      "settledHash": "391f4b19019bff4fdce3c835b8cde20070322a49c28f7e3f3e55db4eed0305b7",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -2164,7 +2171,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2225,9 +2232,9 @@
       "label": "item item 20",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "69c8e8d3362d34899a1437d2d056eccdcfe63ae4c5a04d6bf14a9bfa069bab67",
-      "settledHash": "0430f3ebbed947d4687ac0eb7716a79d9f6972fcdf9c13628ac27cd568de8c32",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "c7570f6b94ab60d56899128b86217afdddc4b4449476012098b2e63a7332740d",
+      "settledHash": "2bf05d6fd12c53433984de450e8ccb19ac2e96b83e2d2d32c1338d1a15e5e087",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -2242,7 +2249,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2303,9 +2310,9 @@
       "label": "item item 21",
       "tag": "button",
       "type": "",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "66176ab12cc17b2aaa99713af6cea107645b3d822ae615db9f83f6b6c11cf1d8",
-      "settledHash": "800e9cdb18677d7914b9c84b06d8b33e5aa7d2f96ca9323ce944743663376e02",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "e785ff8697ecf189834cc1150f3c246fcfbc779e9bc5577db67c50b6fbda3139",
+      "settledHash": "74e76a4c48aa5b5299005f3b2629ac6963351cce9c1592d6c8da2238987d70d5",
       "visualDown": true,
       "visualSettled": true,
       "stateChanged": true,
@@ -2320,7 +2327,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "every reachable Inventory cell independently owns selection in all three categories",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2381,9 +2388,9 @@
       "label": "所持品スクロール",
       "tag": "input",
       "type": "range",
-      "idleHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "downHash": "3cf0534e64a3c49647320c3c70f624b624cb561df647cb176ba2be1e07efbcfd",
-      "settledHash": "90cf978345e29f31744840defa30bb373e2d2fc7920461dfd424b61e2c1b9038",
+      "idleHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "downHash": "a5a49611f02f2ef769943cef724eda1feca645754f9f626464a7207e6a239933",
+      "settledHash": "f94ae4c24dcf10659d6c663049f2b8695c1c1810a963b2b8d0bd8f36b50493b9",
       "visualDown": false,
       "visualSettled": true,
       "stateChanged": true,
@@ -2398,7 +2405,7 @@
         "test": {
           "file": "e2e/inventory-source.spec.ts",
           "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
-          "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+          "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
         },
         "source": {
           "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2551,7 +2558,121 @@
       ]
     ],
     "distinctGeometry": 14,
-    "gesture": "trusted Playwright pointer click"
+    "gesture": "trusted Playwright pointer click",
+    "titleAuthority": {
+      "expanded": {
+        "windowBox": {
+          "x": 0,
+          "y": 247,
+          "width": 280,
+          "height": 137
+        },
+        "titleBoxes": [
+          {
+            "x": 3,
+            "y": 250,
+            "width": 13,
+            "height": 13
+          },
+          {
+            "x": 16,
+            "y": 250,
+            "width": 120,
+            "height": 13
+          }
+        ],
+        "controlBoxes": [
+          {
+            "x": 251,
+            "y": 247,
+            "width": 14,
+            "height": 18
+          },
+          {
+            "x": 266,
+            "y": 247,
+            "width": 13,
+            "height": 18
+          }
+        ],
+        "withinWindow": true
+      },
+      "settled": {
+        "windowBox": {
+          "x": 0,
+          "y": 247,
+          "width": 180,
+          "height": 18
+        },
+        "titleBoxes": [
+          {
+            "x": 3,
+            "y": 250,
+            "width": 13,
+            "height": 13
+          },
+          {
+            "x": 16,
+            "y": 250,
+            "width": 120,
+            "height": 13
+          }
+        ],
+        "controlBoxes": [
+          {
+            "x": 151,
+            "y": 247,
+            "width": 14,
+            "height": 18
+          },
+          {
+            "x": 166,
+            "y": 247,
+            "width": 13,
+            "height": 18
+          }
+        ],
+        "withinWindow": true
+      },
+      "restored": {
+        "windowBox": {
+          "x": 0,
+          "y": 247,
+          "width": 280,
+          "height": 137
+        },
+        "titleBoxes": [
+          {
+            "x": 3,
+            "y": 250,
+            "width": 13,
+            "height": 13
+          },
+          {
+            "x": 16,
+            "y": 250,
+            "width": 120,
+            "height": 13
+          }
+        ],
+        "controlBoxes": [
+          {
+            "x": 251,
+            "y": 247,
+            "width": 14,
+            "height": 18
+          },
+          {
+            "x": 266,
+            "y": 247,
+            "width": 13,
+            "height": 18
+          }
+        ],
+        "withinWindow": true
+      },
+      "pass": true
+    }
   },
   "checkboxes": [],
   "donorPinkBoundary": 0,
@@ -2565,7 +2686,7 @@
     {
       "script": "remaining-window-contract.sh",
       "status": 0,
-      "output": "remaining-window-contract: PASS Qwen plates, 165 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
+      "output": "remaining-window-contract: PASS Qwen plates, 166 independent assets, movable source scroll thumbs, rounded pixel corners, no runtime underlay, and no donor-pink component seams",
       "error": ""
     }
   ],
@@ -2612,7 +2733,7 @@
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar slider owns its complete visible thumb and reaches both endpoints by drag",
-        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2657,7 +2778,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info page control declares and reaches its source-approved destination",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2700,7 +2821,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "every Basic Info resource slider declares and drives its independent visual thumb",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2738,7 +2859,7 @@
       "test": {
         "file": "e2e/basic-info.spec.ts",
         "title": "Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores",
-        "sha256": "6ab00c949d70710d027ad68e8c190dce00f99371e5dc7ed41206cc37c5b71fc9"
+        "sha256": "7f8882c4d01a77ca9cd427ace0388496bc8a750cb9bcf0e83f8cc7b6967c5779"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2783,7 +2904,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "every source-visible Status increment owns its exact hitbox and changes only its local value field",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2821,7 +2942,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status minimize uses a generated compact endpoint through complete motion and restores the full source geometry",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2862,7 +2983,7 @@
       "test": {
         "file": "e2e/status-source.spec.ts",
         "title": "status close removes the window and Basic Info restores the same independent destination",
-        "sha256": "c25d2c93831841aadc445e2640cc76703ab083441fbb87f9d4f2561145c9081c"
+        "sha256": "74964f9a67625788b99d24b1f479f167138fb0d5f31ff10ac46eb3a719bc5f34"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2902,7 +3023,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "every Inventory category is a reachable tab with its complete selectable cell inventory",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2940,7 +3061,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "every reachable Inventory cell independently owns selection in all three categories",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -2981,7 +3102,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory real scroll gestures keep one visual thumb and every sampled body state below the header",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3019,7 +3140,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory minimize uses a generated compact endpoint through complete motion and restores",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3060,7 +3181,7 @@
       "test": {
         "file": "e2e/inventory-source.spec.ts",
         "title": "Inventory close removes the window and Basic Info restores its exact componentized destination",
-        "sha256": "e443a694a73fa37d3470bdd532cc816dc5977f55f9b93a8f315224a91314c44c"
+        "sha256": "2aa2fae5edb00e05cfa25c69f78da370fe15ea96ecf67a7be0b48e45c8b41942"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3098,7 +3219,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card art rotation is reversible and leaves title plus copy pixels invariant",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3139,7 +3260,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card real scroll gestures move copy and one visual thumb without entering title or art",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3177,7 +3298,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card slot controls the Card scroll state without changing title or art",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3218,7 +3339,7 @@
       "test": {
         "file": "e2e/card-source.spec.ts",
         "title": "Card close target removes exactly the Card window",
-        "sha256": "8efe0d38974c9885c8c04a7081e72d4d6a7f197c06b9d16e2e6156eb1cd4086e"
+        "sha256": "2dc5f361bb36f67e886d253d69324e070415dc76540db6653e01ff6c46b35c35"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3255,7 +3376,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3295,7 +3416,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Every Skills row and level control is pointer-reachable on its settled page and owns only its state",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3336,7 +3457,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills real scroll gestures keep one thumb and the clipped list outside title and footer",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3374,7 +3495,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills use acts on selection and both close controls support Basic Info recovery",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3416,7 +3537,7 @@
       "test": {
         "file": "e2e/skills-source.spec.ts",
         "title": "Skills use acts on selection and both close controls support Basic Info recovery",
-        "sha256": "913efe1284320e70748ecb6ebcbf5249119b69c7a55158fba7de5d3dd1342965"
+        "sha256": "1d507d4a090f362f3d4c6dd4815702729d03108965d47cb294fd47a1f70b8345"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3453,7 +3574,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Every Equipment row owns its exact source column and transfers exclusive selection",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3494,7 +3615,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment minimize uses its generated compact endpoint through complete motion and restores",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3535,7 +3656,7 @@
       "test": {
         "file": "e2e/equipment-source.spec.ts",
         "title": "Equipment close removes the window and Basic Info restores its complete destination",
-        "sha256": "f364035fcb07ffad0b9dd068e82ec3304c01d083773e48d9ae03ac73099ec81a"
+        "sha256": "4824668c3e7bdde8ca1ea686857b7fba4c4e9db7e2c1f76af13500e1bdbcd29e"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3574,7 +3695,7 @@
       "test": {
         "file": "e2e/bottom-bar-source.spec.ts",
         "title": "Bottom Bar previous and next controls are reversible and leave slider plus title invariant",
-        "sha256": "65cc2719da8594a8bb21a1062211d059a332dbd6caba5680be176a721c537b48"
+        "sha256": "cb34ae716225180c51762cbc45208235b24a5f1b0c99cc711923f33b0202b54a"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3619,7 +3740,7 @@
       "test": {
         "file": "e2e/chat-source.spec.ts",
         "title": "Chat visibly edits Japanese topic and submits one application-owned form without invented tabs",
-        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3660,7 +3781,7 @@
       "test": {
         "file": "e2e/chat-source.spec.ts",
         "title": "Chat cancel restores the complete default form instead of only clearing topic",
-        "sha256": "1a80f7ab7a7e181474256aa7ce21269786e8559cb00e6a76a4abef92e4d48e11"
+        "sha256": "61125981cf935d106d60a8a773379589b41838008d2a6953ec10f667b0dce3dc"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3700,7 +3821,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Every Exchange item owns its exact grid cell and transfers exclusive selection",
-        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3743,7 +3864,7 @@
       "test": {
         "file": "e2e/exchange-source.spec.ts",
         "title": "Exchange confirm enables Trade and Trade or cancel restore a clean transaction",
-        "sha256": "1d9fe1395363fe9b261b2012477b30abd9ad9769806d53d1a13ba0b1fecf1aa7"
+        "sha256": "f18b769265e714ffa0715a791bccfd3c2fe5072c676bf4e7a90e0d2de243cd5d"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3783,7 +3904,7 @@
       "test": {
         "file": "e2e/game-menu-source.spec.ts",
         "title": "Every Game Menu action owns its source row, transfers selection, and toggles back to ready",
-        "sha256": "2c478098d71f214538961b29911160291b1cc3e7f2a1a05a6191209dd6e8f040"
+        "sha256": "543e2f9a9bdacd1b6faea56ce055490dfbfafa96f9b16b83dcf14123a88b4b88"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3823,7 +3944,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Every Party member is a reachable listbox option with exclusive reversible selection",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3863,7 +3984,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party tools and source tabs transfer state and support keyboard traversal",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3905,7 +4026,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party tools and source tabs transfer state and support keyboard traversal",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3948,7 +4069,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party satellite actions stay fixed while Party moves and expose exact ownership",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -3989,7 +4110,7 @@
       "test": {
         "file": "e2e/party-source.spec.ts",
         "title": "Party close removes satellites and Basic Info friend restores the complete destination",
-        "sha256": "0a672bcd40061e5c45b29abea157ebb2122babdbd49bcac5363901ca4bbdedcd"
+        "sha256": "adf542df076aaf613e556eeb37ddf2ff53dfc119b3eae973c15bf01feac3a8c1"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",
@@ -4026,7 +4147,7 @@
       "test": {
         "file": "e2e/quickbar-source.spec.ts",
         "title": "Every Quickbar slot owns its exact raster and reverses independently to neutral",
-        "sha256": "44c23059158bbe2630825c2c980cc8294e58f441d9513e2726716ffe4f03e32f"
+        "sha256": "02842a0bcb01dc3f1bd5c75ff6c1d84ccdc69688a76f92d9a8d89e1a8967e2aa"
       },
       "source": {
         "path": "benchmarks/japanese-rpg-options-v001/reference.png",

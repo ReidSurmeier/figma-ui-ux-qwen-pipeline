@@ -32,7 +32,7 @@ async function stableClip(page: Page, clip: { x: number; y: number; width: numbe
 }
 
 test("Every Exchange item owns its exact grid cell and transfers exclusive selection", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=exchange");
   const exchange = page.getByRole("region", { name: "交換ウィンドウ: ANRI" });
   await activateWindow(exchange);
   const bounds = await exchange.boundingBox();
@@ -59,7 +59,7 @@ test("Every Exchange item owns its exact grid cell and transfers exclusive selec
 });
 
 test("Exchange confirm enables Trade and Trade or cancel restore a clean transaction", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=exchange");
   const exchange = page.getByRole("region", { name: "交換ウィンドウ: ANRI" });
   const ok = exchange.getByRole("button", { name: "OK", exact: true });
   const trade = exchange.getByRole("button", { name: "trade", exact: true });

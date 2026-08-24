@@ -1,0 +1,400 @@
+{
+  "schemaVersion": "1.0",
+  "mode": "isolated-window-before-desktop-assembly",
+  "generatedAt": "2026-08-24T00:18:40.039Z",
+  "overall": "pass",
+  "verdicts": [
+    {
+      "windowId": "basic-info",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "basic-info",
+        "normalizedMae": 0.0227367,
+        "highErrorPixelRate": 0.055119047619047616,
+        "largestHighErrorComponentRate": 0.014553571428571428,
+        "controls": 11,
+        "controlsWithVisualAuthority": 11,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "basic-info",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/basic-info.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "card",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "card",
+        "normalizedMae": 0.0161623,
+        "highErrorPixelRate": 0.05516666666666667,
+        "largestHighErrorComponentRate": 0.04580952380952381,
+        "controls": 4,
+        "controlsWithVisualAuthority": 4,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "card",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/card-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "skills",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "skills",
+        "normalizedMae": 0.0260117,
+        "highErrorPixelRate": 0.09834829026767755,
+        "largestHighErrorComponentRate": 0.043845737273711896,
+        "controls": 20,
+        "controlsWithVisualAuthority": 20,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "skills",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/skills-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "status",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "status",
+        "normalizedMae": 0.00000841077,
+        "highErrorPixelRate": 0.00002834467120181406,
+        "largestHighErrorComponentRate": 0.00002834467120181406,
+        "controls": 7,
+        "controlsWithVisualAuthority": 7,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "status",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/status-source.spec.ts",
+          "prototype/e2e/runtime-manifest.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "inventory",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "inventory",
+        "normalizedMae": 0.00600622,
+        "highErrorPixelRate": 0.027632950990615225,
+        "largestHighErrorComponentRate": 0.02716371220020855,
+        "controls": 27,
+        "controlsWithVisualAuthority": 27,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "inventory",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/inventory-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "equipment",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "equipment",
+        "normalizedMae": 0.0196168,
+        "highErrorPixelRate": 0.062100563909774434,
+        "largestHighErrorComponentRate": 0.025845864661654134,
+        "controls": 12,
+        "controlsWithVisualAuthority": 12,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "equipment",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/equipment-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "options",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "options",
+        "normalizedMae": 0.0211807,
+        "highErrorPixelRate": 0.08562646370023419,
+        "largestHighErrorComponentRate": 0.0640807962529274,
+        "controls": 17,
+        "controlsWithVisualAuthority": 17,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "options",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/options-window.spec.ts",
+          "prototype/e2e/options-semantic.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "chat",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "chat",
+        "normalizedMae": 0.0155481,
+        "highErrorPixelRate": 0.026220238095238095,
+        "largestHighErrorComponentRate": 0.012083333333333333,
+        "controls": 6,
+        "controlsWithVisualAuthority": 6,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "chat",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/chat-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "exchange",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "exchange",
+        "normalizedMae": 0.0208594,
+        "highErrorPixelRate": 0.07255952380952381,
+        "largestHighErrorComponentRate": 0.031517857142857146,
+        "controls": 19,
+        "controlsWithVisualAuthority": 19,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "exchange",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/exchange-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "game-menu",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "game-menu",
+        "normalizedMae": 0.00196583,
+        "highErrorPixelRate": 0.007925218451534242,
+        "largestHighErrorComponentRate": 0.00734945471787577,
+        "controls": 4,
+        "controlsWithVisualAuthority": 4,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "game-menu",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/game-menu-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "compact-info",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "compact-info",
+        "normalizedMae": 0.0261714,
+        "highErrorPixelRate": 0.07473309608540925,
+        "largestHighErrorComponentRate": 0.05988815455007626,
+        "controls": 0,
+        "controlsWithVisualAuthority": 0,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "compact-info",
+        "status": "pass",
+        "evidence": [
+          "no interactive controls in source authority"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "party",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "party",
+        "normalizedMae": 0.00990948,
+        "highErrorPixelRate": 0.05875,
+        "largestHighErrorComponentRate": 0.044071428571428574,
+        "controls": 16,
+        "controlsWithVisualAuthority": 16,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "party",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/party-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "quickbar",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "quickbar",
+        "normalizedMae": 0.0179495,
+        "highErrorPixelRate": 0.02023176291793313,
+        "largestHighErrorComponentRate": 0.0199468085106383,
+        "controls": 3,
+        "controlsWithVisualAuthority": 3,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "quickbar",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/quickbar-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "bottom-bar",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "bottom-bar",
+        "normalizedMae": 0.000147837,
+        "highErrorPixelRate": 0.0007142857142857143,
+        "largestHighErrorComponentRate": 0.00007936507936507937,
+        "controls": 3,
+        "controlsWithVisualAuthority": 3,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "bottom-bar",
+        "status": "pass",
+        "evidence": [
+          "prototype/e2e/bottom-bar-source.spec.ts"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    },
+    {
+      "windowId": "notification",
+      "status": "benchmark-pass",
+      "failures": [],
+      "metrics": {
+        "windowId": "notification",
+        "normalizedMae": 0,
+        "highErrorPixelRate": 0,
+        "largestHighErrorComponentRate": 0,
+        "controls": 0,
+        "controlsWithVisualAuthority": 0,
+        "hitMapFailures": 0,
+        "irreversibleInteractions": 0,
+        "visualGeometryMismatches": 0,
+        "visualAuthorityCoverage": 1
+      },
+      "interaction": {
+        "id": "notification",
+        "status": "pass",
+        "evidence": [
+          "no interactive controls in source authority"
+        ]
+      },
+      "hitMapFailures": [],
+      "geometryMismatches": []
+    }
+  ]
+}

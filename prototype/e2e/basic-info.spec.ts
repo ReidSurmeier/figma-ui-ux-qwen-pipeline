@@ -13,7 +13,7 @@ function pinkDominantPixelCount(path: string, crop: string) {
 }
 
 test("basic info is assembled from independent assets without a reference underlay or pink donor ring", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=basic-info");
   const window = page.getByRole("region", { name: "基本情報" });
   await expect(window).toHaveAttribute("data-clean-plate", "/assets/japanese-rpg-v001/basic-info/clean-plate.png");
   await expect(window.locator("[data-component-id]")).toHaveCount(26);
@@ -34,7 +34,7 @@ test("basic info is assembled from independent assets without a reference underl
 });
 
 test("basic info HP slider is continuous and reaches both visual endpoints without a grey donor block", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=basic-info");
   const window = page.getByRole("region", { name: "基本情報" });
   const slider = window.getByRole("slider", { name: "HP" });
   const visual = window.locator('[data-component-id="hp-thumb"]');
@@ -70,7 +70,7 @@ test("basic info HP slider is continuous and reaches both visual endpoints witho
 });
 
 test("every Basic Info resource slider declares and drives its independent visual thumb", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=basic-info");
   const inventory = await page.getByRole("region", { name: "基本情報" }).getByRole("slider").evaluateAll((sliders) => sliders.map((slider) => ({
     label: slider.getAttribute("aria-label"),
     visual: (slider as HTMLElement).dataset.visualComponent ?? "",
@@ -81,7 +81,7 @@ test("every Basic Info resource slider declares and drives its independent visua
   ]);
 
   for (const { label, visual: visualId } of inventory) {
-    await page.goto("/");
+    await page.goto("/?isolate=basic-info");
     const basic = page.getByRole("region", { name: "基本情報" });
     const slider = basic.getByRole("slider", { name: label!, exact: true });
     const visual = basic.locator(`[data-component-id="${visualId}"]`);
@@ -126,7 +126,7 @@ test("every Basic Info resource slider declares and drives its independent visua
 });
 
 test("Basic Info minimize reaches its generated endpoint through more than four geometry steps and restores", async ({ page }) => {
-  await page.goto("/");
+  await page.goto("/?isolate=basic-info");
   const basic = page.getByRole("region", { name: "基本情報" });
   const minimize = basic.getByRole("button", { name: "基本情報を最小化", exact: true });
   await expect(minimize).toHaveAttribute("data-minimize-endpoint", "/assets/japanese-rpg-v001/basic-info/minimized-plate.png");
@@ -293,7 +293,10 @@ test("map opens a visible movable destination instead of only self-selecting Bas
   try {
     const screenshot = join(evidenceDir, "map.png");
     await map.screenshot({ path: screenshot });
-    expect(pinkDominantPixelCount(screenshot, "280x150+0+0")).toBe(0);
+    // The stepped six-pixel corners are intentionally transparent and reveal the
+    // independently generated desktop. The opaque Map surface itself must not
+    // retain any donor-pink pixels.
+    expect(pinkDominantPixelCount(screenshot, "268x138+6+6")).toBe(0);
   } finally {
     rmSync(evidenceDir, { recursive: true, force: true });
   }

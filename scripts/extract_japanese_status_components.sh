@@ -33,6 +33,12 @@ for index in 0 1 2 3 4 5; do
   y=$((18 + index * 18))
   extract_semantic "primary-row-$index" 20 "$y" 90 18 0.70
   extract_semantic "derived-row-$index" 100 "$y" 180 18 0.70
+  if [[ "$index" != "3" ]]; then
+    extract_crop "increment-$index" 91 "$((y + 3))" 11 11
+    convert "$OUTPUT_DIR/primary-row-$index.png" -alpha set -channel A \
+      -fx '(i>=71&&i<82&&j>=3&&j<14)?0:a' "$WORK_DIR/primary-row-$index-without-increment.png"
+    mv "$WORK_DIR/primary-row-$index-without-increment.png" "$OUTPUT_DIR/primary-row-$index.png"
+  fi
 done
 
 for asset in "$OUTPUT_DIR"/*.png; do

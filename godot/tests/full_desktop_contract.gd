@@ -24,8 +24,12 @@ func _run_contract() -> void:
 	await process_frame
 	await process_frame
 
-	var background: ColorRect = scene.get_node("DesktopBackground")
-	_check(background.color == Color("#ff00fe"), "Desktop must restore the source pink background")
+	var background: TextureRect = scene.get_node("DesktopBackground")
+	_check(background.texture != null, "Desktop must load the selected Qwen background asset")
+	_check(
+		background.texture.resource_path == "res://assets/windows/japanese-rpg-v001/desktop/background.png",
+		"Desktop must use the provenance-locked Qwen background asset",
+	)
 
 	var windows: Array = scene.get("desktop_windows")
 	_check(windows.size() == EXPECTED_WINDOWS.size(), "Desktop must expose all 15 source windows")
@@ -33,8 +37,15 @@ func _run_contract() -> void:
 		_check(scene.has_node("Windows/%s" % window_id), "Missing independent window: %s" % window_id)
 
 	var qa_state: Dictionary = scene.call("desktop_qa_state")
+	_check(
+		qa_state.get("background_asset", "") == "res://assets/windows/japanese-rpg-v001/desktop/background.png",
+		"QA state must publish the exact desktop background authority",
+	)
 	_check(qa_state.get("window_count", 0) == 15, "QA state must report all source windows")
-	_check(qa_state.get("component_count", 0) == 263, "Desktop must retain the exact independent visual inventory")
+	_check(
+		qa_state.get("component_count", 0) == 269,
+		"Desktop must retain the exact independent visual inventory (received %s)" % qa_state.get("component_count", 0),
+	)
 	_check(qa_state.get("control_count", 0) == 150, "Desktop must expose the exact mapped interaction inventory")
 	_check(qa_state.get("movable_windows", 0) == 15, "Every source window must be movable")
 

@@ -19,7 +19,18 @@ fi
 mkdir -p "$godot_dir/web"
 "$godot_bin" --headless --path "$godot_dir" --export-release Web web/index.html
 
-if [[ -n "${GODOT_WEB_URL:-}" ]]; then
-  GODOT_WEB_URL="$GODOT_WEB_URL" \
-    "$repo_dir/prototype/node_modules/.bin/playwright" test --config "$godot_dir/playwright.config.mjs"
+web_server_pid=""
+if [[ -z "${GODOT_WEB_URL:-}" ]]; then
+  GODOT_WEB_URL="http://10.255.255.254:4176"
+  node "$godot_dir/serve-web.mjs" >"$godot_dir/web/server.log" 2>&1 &
+  web_server_pid=$!
+  trap 'if [[ -n "$web_server_pid" ]]; then kill "$web_server_pid" 2>/dev/null || true; fi' EXIT
+  for _attempt in {1..50}; do
+    if curl --fail --silent --show-error "$GODOT_WEB_URL/index.html" >/dev/null; then break; fi
+    sleep 0.1
+  done
+  curl --fail --silent --show-error "$GODOT_WEB_URL/index.html" >/dev/null
 fi
+
+GODOT_WEB_URL="$GODOT_WEB_URL" \
+  "$repo_dir/prototype/node_modules/.bin/playwright" test --config "$godot_dir/playwright.config.mjs"

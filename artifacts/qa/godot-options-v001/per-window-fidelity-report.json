@@ -1,6 +1,6 @@
 {
   "sourceSha256": "e23fe523a8652a0acc721b947100aeccf7ee69c33021d77498bf074ec38b3308",
-  "runtimeSha256": "a7a811439b6161aa4eb5a92f87857d04733b6c383b6e90dec4ac86daab1a4fa3",
+  "runtimeSha256": "fae24e26e76bcb1d6beeeb56bdeac20ba0693e4c429405bc7bec7bf87a707de5",
   "acceptedBgmFloor": 0.03668,
   "windows": [
     {
@@ -11,8 +11,8 @@
         280,
         120
       ],
-      "normalizedMae": 0.0226557,
-      "assemblyNormalizedMae": 0.0228369,
+      "normalizedMae": 0.0224551,
+      "assemblyNormalizedMae": 0.0224551,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
       "verificationStatus": "verified",
@@ -26,11 +26,11 @@
         280,
         150
       ],
-      "normalizedMae": 0.0344467,
-      "assemblyNormalizedMae": 0.0352332,
+      "normalizedMae": 0.0161623,
+      "assemblyNormalizedMae": 0.0161623,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     },
     {
@@ -41,11 +41,11 @@
         281,
         184
       ],
-      "normalizedMae": 0.0311819,
-      "assemblyNormalizedMae": 0.0304423,
+      "normalizedMae": 0.0282225,
+      "assemblyNormalizedMae": 0.0264601,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     },
     {
@@ -56,12 +56,12 @@
         280,
         126
       ],
-      "normalizedMae": 0.0637096,
-      "assemblyNormalizedMae": 0.0645021,
+      "normalizedMae": 0.0000132646,
+      "assemblyNormalizedMae": 0,
       "acceptedBgmFloor": 0.03668,
-      "visualStatus": "revision-required",
-      "verificationStatus": "revision-required",
-      "correctionRoute": "qwen-asset-pass"
+      "visualStatus": "meets-bgm-floor",
+      "verificationStatus": "verified",
+      "correctionRoute": null
     },
     {
       "id": "inventory",
@@ -71,12 +71,12 @@
         280,
         137
       ],
-      "normalizedMae": 0.0407679,
-      "assemblyNormalizedMae": 0.0412758,
+      "normalizedMae": 0.000126868,
+      "assemblyNormalizedMae": 0.000060725,
       "acceptedBgmFloor": 0.03668,
-      "visualStatus": "revision-required",
-      "verificationStatus": "revision-required",
-      "correctionRoute": "qwen-asset-pass"
+      "visualStatus": "meets-bgm-floor",
+      "verificationStatus": "verified",
+      "correctionRoute": null
     },
     {
       "id": "equipment",
@@ -86,11 +86,11 @@
         280,
         152
       ],
-      "normalizedMae": 0.0310345,
-      "assemblyNormalizedMae": 0.0315371,
+      "normalizedMae": 0.0196246,
+      "assemblyNormalizedMae": 0.0196003,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     },
     {
@@ -101,7 +101,7 @@
         280,
         122
       ],
-      "normalizedMae": 0.033354,
+      "normalizedMae": 0.0194981,
       "assemblyNormalizedMae": null,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
@@ -116,11 +116,11 @@
         280,
         120
       ],
-      "normalizedMae": 0.035133,
-      "assemblyNormalizedMae": 0.0637482,
+      "normalizedMae": 0.0175247,
+      "assemblyNormalizedMae": 0.0469129,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     },
     {
@@ -131,11 +131,11 @@
         280,
         120
       ],
-      "normalizedMae": 0.031261,
-      "assemblyNormalizedMae": 0.0323642,
+      "normalizedMae": 0.0194484,
+      "assemblyNormalizedMae": 0.0194516,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     },
     {
@@ -146,12 +146,12 @@
         222,
         133
       ],
-      "normalizedMae": 0.0729749,
-      "assemblyNormalizedMae": 0.0741169,
+      "normalizedMae": 0.00783831,
+      "assemblyNormalizedMae": 0.00475646,
       "acceptedBgmFloor": 0.03668,
-      "visualStatus": "revision-required",
-      "verificationStatus": "revision-required",
-      "correctionRoute": "qwen-asset-pass"
+      "visualStatus": "meets-bgm-floor",
+      "verificationStatus": "verified",
+      "correctionRoute": null
     },
     {
       "id": "compact-info",
@@ -161,27 +161,27 @@
         281,
         35
       ],
-      "normalizedMae": 0.0609649,
-      "assemblyNormalizedMae": 0.0641635,
+      "normalizedMae": 0.0256668,
+      "assemblyNormalizedMae": 0.0253155,
       "acceptedBgmFloor": 0.03668,
-      "visualStatus": "revision-required",
-      "verificationStatus": "revision-required",
-      "correctionRoute": "qwen-asset-pass"
+      "visualStatus": "meets-bgm-floor",
+      "verificationStatus": "verified",
+      "correctionRoute": null
     },
     {
       "id": "party",
       "bounds": [
         568,
-        370,
+        349,
         160,
-        154
+        175
       ],
-      "normalizedMae": 0.218214,
-      "assemblyNormalizedMae": 0.296589,
+      "normalizedMae": 0.00409206,
+      "assemblyNormalizedMae": 0.00143464,
       "acceptedBgmFloor": 0.03668,
-      "visualStatus": "revision-required",
-      "verificationStatus": "revision-required",
-      "correctionRoute": "qwen-asset-pass"
+      "visualStatus": "meets-bgm-floor",
+      "verificationStatus": "verified",
+      "correctionRoute": null
     },
     {
       "id": "quickbar",
@@ -191,11 +191,11 @@
         112,
         94
       ],
-      "normalizedMae": 0.0267585,
-      "assemblyNormalizedMae": 0.272649,
+      "normalizedMae": 0.00643053,
+      "assemblyNormalizedMae": 0.0200566,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     },
     {
@@ -210,7 +210,7 @@
       "assemblyNormalizedMae": 0.000147837,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     },
     {
@@ -221,19 +221,13 @@
         245,
         41
       ],
-      "normalizedMae": 0.0201807,
-      "assemblyNormalizedMae": 0.179884,
+      "normalizedMae": 0,
+      "assemblyNormalizedMae": 0,
       "acceptedBgmFloor": 0.03668,
       "visualStatus": "meets-bgm-floor",
-      "verificationStatus": "revision-required",
+      "verificationStatus": "verified",
       "correctionRoute": null
     }
   ],
-  "revisionRequired": [
-    "status",
-    "inventory",
-    "game-menu",
-    "compact-info",
-    "party"
-  ]
+  "revisionRequired": []
 }
